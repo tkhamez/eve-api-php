@@ -1,0 +1,1999 @@
+Subject: [PATCH] Generate from specification from 2025-07-26 with OpenAPI Generator 7.14.0.
+Adjust README.md.
+---
+Index: lib/Api/DogmaApi.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/Api/DogmaApi.php b/lib/Api/DogmaApi.php
+--- a/lib/Api/DogmaApi.php	(revision 862d19140f6dfadf699d463e53be4d16b5fe2e72)
++++ b/lib/Api/DogmaApi.php	(date 1753533459106)
+@@ -383,7 +383,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -703,7 +703,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -1043,7 +1043,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -1367,7 +1367,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -1687,7 +1687,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+Index: lib/Api/UserInterfaceApi.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/Api/UserInterfaceApi.php b/lib/Api/UserInterfaceApi.php
+--- a/lib/Api/UserInterfaceApi.php	(revision 862d19140f6dfadf699d463e53be4d16b5fe2e72)
++++ b/lib/Api/UserInterfaceApi.php	(date 1753533459089)
+@@ -446,7 +446,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -779,7 +779,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -1112,7 +1112,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -1445,7 +1445,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -1763,7 +1763,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+Index: lib/Api/CorporationApi.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/Api/CorporationApi.php b/lib/Api/CorporationApi.php
+--- a/lib/Api/CorporationApi.php	(revision 862d19140f6dfadf699d463e53be4d16b5fe2e72)
++++ b/lib/Api/CorporationApi.php	(date 1753533459180)
+@@ -446,7 +446,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -774,7 +774,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -1120,7 +1120,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -1470,7 +1470,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -1802,7 +1802,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -2134,7 +2134,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -2466,7 +2466,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -2812,7 +2812,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -3162,7 +3162,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -3494,7 +3494,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -3826,7 +3826,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -4158,7 +4158,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -4490,7 +4490,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -4822,7 +4822,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -5172,7 +5172,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -5522,7 +5522,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -5872,7 +5872,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -6222,7 +6222,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -6587,7 +6587,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -6945,7 +6945,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -7277,7 +7277,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -7597,7 +7597,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+Index: lib/Api/KillmailsApi.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/Api/KillmailsApi.php b/lib/Api/KillmailsApi.php
+--- a/lib/Api/KillmailsApi.php	(revision 862d19140f6dfadf699d463e53be4d16b5fe2e72)
++++ b/lib/Api/KillmailsApi.php	(date 1753533459245)
+@@ -407,7 +407,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -757,7 +757,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -1101,7 +1101,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+Index: lib/Api/ContactsApi.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/Api/ContactsApi.php b/lib/Api/ContactsApi.php
+--- a/lib/Api/ContactsApi.php	(revision 862d19140f6dfadf699d463e53be4d16b5fe2e72)
++++ b/lib/Api/ContactsApi.php	(date 1753533459124)
+@@ -434,7 +434,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -784,7 +784,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -1116,7 +1116,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -1466,7 +1466,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -1798,7 +1798,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -2148,7 +2148,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -2480,7 +2480,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -2878,7 +2878,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -3283,7 +3283,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+Index: lib/Api/MarketApi.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/Api/MarketApi.php b/lib/Api/MarketApi.php
+--- a/lib/Api/MarketApi.php	(revision 862d19140f6dfadf699d463e53be4d16b5fe2e72)
++++ b/lib/Api/MarketApi.php	(date 1753533459323)
+@@ -413,7 +413,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -763,7 +763,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -1113,7 +1113,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -1463,7 +1463,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -1783,7 +1783,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -2103,7 +2103,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -2419,7 +2419,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -2760,7 +2760,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -3142,7 +3142,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -3488,7 +3488,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -3834,7 +3834,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+Index: lib/Api/CalendarApi.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/Api/CalendarApi.php b/lib/Api/CalendarApi.php
+--- a/lib/Api/CalendarApi.php	(revision 862d19140f6dfadf699d463e53be4d16b5fe2e72)
++++ b/lib/Api/CalendarApi.php	(date 1753533459157)
+@@ -407,7 +407,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -751,7 +751,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -1103,7 +1103,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -1461,7 +1461,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+Index: lib/Api/CharacterApi.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/Api/CharacterApi.php b/lib/Api/CharacterApi.php
+--- a/lib/Api/CharacterApi.php	(revision 862d19140f6dfadf699d463e53be4d16b5fe2e72)
++++ b/lib/Api/CharacterApi.php	(date 1753533459345)
+@@ -422,7 +422,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -750,7 +750,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -1100,7 +1100,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -1432,7 +1432,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -1760,7 +1760,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -2092,7 +2092,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -2424,7 +2424,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -2756,7 +2756,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -3088,7 +3088,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -3416,7 +3416,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -3748,7 +3748,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -4080,7 +4080,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -4412,7 +4412,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -4751,7 +4751,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+Index: lib/Api/ClonesApi.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/Api/ClonesApi.php b/lib/Api/ClonesApi.php
+--- a/lib/Api/ClonesApi.php	(revision 862d19140f6dfadf699d463e53be4d16b5fe2e72)
++++ b/lib/Api/ClonesApi.php	(date 1753533459073)
+@@ -386,7 +386,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -718,7 +718,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+Index: lib/Api/MailApi.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/Api/MailApi.php b/lib/Api/MailApi.php
+--- a/lib/Api/MailApi.php	(revision 862d19140f6dfadf699d463e53be4d16b5fe2e72)
++++ b/lib/Api/MailApi.php	(date 1753533459221)
+@@ -419,7 +419,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -771,7 +771,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -1147,7 +1147,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -1479,7 +1479,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -1811,7 +1811,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -2155,7 +2155,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -2501,7 +2501,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -2846,7 +2846,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -3203,7 +3203,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+Index: lib/Api/FleetsApi.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/Api/FleetsApi.php b/lib/Api/FleetsApi.php
+--- a/lib/Api/FleetsApi.php	(revision 862d19140f6dfadf699d463e53be4d16b5fe2e72)
++++ b/lib/Api/FleetsApi.php	(date 1753533459306)
+@@ -434,7 +434,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -786,7 +786,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -1138,7 +1138,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -1478,7 +1478,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -1810,7 +1810,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -2142,7 +2142,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -2474,7 +2474,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -2812,7 +2812,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -3151,7 +3151,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -3495,7 +3495,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -3841,7 +3841,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -4198,7 +4198,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -4563,7 +4563,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -4928,7 +4928,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+Index: lib/Api/SkillsApi.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/Api/SkillsApi.php b/lib/Api/SkillsApi.php
+--- a/lib/Api/SkillsApi.php	(revision 862d19140f6dfadf699d463e53be4d16b5fe2e72)
++++ b/lib/Api/SkillsApi.php	(date 1753533459203)
+@@ -389,7 +389,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -721,7 +721,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -1053,7 +1053,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+Index: lib/Api/IncursionsApi.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/Api/IncursionsApi.php b/lib/Api/IncursionsApi.php
+--- a/lib/Api/IncursionsApi.php	(revision 862d19140f6dfadf699d463e53be4d16b5fe2e72)
++++ b/lib/Api/IncursionsApi.php	(date 1753533459391)
+@@ -371,7 +371,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+Index: lib/Api/SovereigntyApi.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/Api/SovereigntyApi.php b/lib/Api/SovereigntyApi.php
+--- a/lib/Api/SovereigntyApi.php	(revision 862d19140f6dfadf699d463e53be4d16b5fe2e72)
++++ b/lib/Api/SovereigntyApi.php	(date 1753533459165)
+@@ -377,7 +377,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -685,7 +685,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -993,7 +993,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+Index: lib/Api/UniverseApi.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/Api/UniverseApi.php b/lib/Api/UniverseApi.php
+--- a/lib/Api/UniverseApi.php	(revision 862d19140f6dfadf699d463e53be4d16b5fe2e72)
++++ b/lib/Api/UniverseApi.php	(date 1753533459139)
+@@ -458,7 +458,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -778,7 +778,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -1094,7 +1094,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -1402,7 +1402,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -1722,7 +1722,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -2038,7 +2038,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -2358,7 +2358,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -2674,7 +2674,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -2982,7 +2982,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -3302,7 +3302,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -3636,7 +3636,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -3956,7 +3956,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -4284,7 +4284,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -4612,7 +4612,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -4928,7 +4928,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -5236,7 +5236,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -5556,7 +5556,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -5884,7 +5884,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -6212,7 +6212,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -6540,7 +6540,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -6871,7 +6871,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -7191,7 +7191,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -7511,7 +7511,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -7819,7 +7819,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -8127,7 +8127,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -8447,7 +8447,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -8781,7 +8781,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -9101,7 +9101,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -9429,7 +9429,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -9756,7 +9756,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+Index: lib/Api/FittingsApi.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/Api/FittingsApi.php b/lib/Api/FittingsApi.php
+--- a/lib/Api/FittingsApi.php	(revision 862d19140f6dfadf699d463e53be4d16b5fe2e72)
++++ b/lib/Api/FittingsApi.php	(date 1753533459260)
+@@ -401,7 +401,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -741,7 +741,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -1079,7 +1079,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+Index: lib/Api/SearchApi.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/Api/SearchApi.php b/lib/Api/SearchApi.php
+--- a/lib/Api/SearchApi.php	(revision 862d19140f6dfadf699d463e53be4d16b5fe2e72)
++++ b/lib/Api/SearchApi.php	(date 1753533459050)
+@@ -446,7 +446,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+Index: lib/Api/WarsApi.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/Api/WarsApi.php b/lib/Api/WarsApi.php
+--- a/lib/Api/WarsApi.php	(revision 862d19140f6dfadf699d463e53be4d16b5fe2e72)
++++ b/lib/Api/WarsApi.php	(date 1753533459384)
+@@ -392,7 +392,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -712,7 +712,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -1058,7 +1058,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+Index: lib/Api/StatusApi.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/Api/StatusApi.php b/lib/Api/StatusApi.php
+--- a/lib/Api/StatusApi.php	(revision 862d19140f6dfadf699d463e53be4d16b5fe2e72)
++++ b/lib/Api/StatusApi.php	(date 1753533459210)
+@@ -371,7 +371,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+Index: lib/Api/IndustryApi.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/Api/IndustryApi.php b/lib/Api/IndustryApi.php
+--- a/lib/Api/IndustryApi.php	(revision 862d19140f6dfadf699d463e53be4d16b5fe2e72)
++++ b/lib/Api/IndustryApi.php	(date 1753533459357)
+@@ -419,7 +419,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -769,7 +769,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -1119,7 +1119,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -1469,7 +1469,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -1831,7 +1831,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -2204,7 +2204,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -2524,7 +2524,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -2832,7 +2832,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+Index: lib/Api/FactionWarfareApi.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/Api/FactionWarfareApi.php b/lib/Api/FactionWarfareApi.php
+--- a/lib/Api/FactionWarfareApi.php	(revision 862d19140f6dfadf699d463e53be4d16b5fe2e72)
++++ b/lib/Api/FactionWarfareApi.php	(date 1753533459370)
+@@ -404,7 +404,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -736,7 +736,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -1056,7 +1056,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -1364,7 +1364,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -1672,7 +1672,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -1980,7 +1980,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -2288,7 +2288,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -2596,7 +2596,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+Index: lib/Api/AllianceApi.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/Api/AllianceApi.php b/lib/Api/AllianceApi.php
+--- a/lib/Api/AllianceApi.php	(revision 862d19140f6dfadf699d463e53be4d16b5fe2e72)
++++ b/lib/Api/AllianceApi.php	(date 1753533459150)
+@@ -380,7 +380,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -700,7 +700,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -1028,7 +1028,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -1356,7 +1356,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+Index: lib/Api/ContractsApi.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/Api/ContractsApi.php b/lib/Api/ContractsApi.php
+--- a/lib/Api/ContractsApi.php	(revision 862d19140f6dfadf699d463e53be4d16b5fe2e72)
++++ b/lib/Api/ContractsApi.php	(date 1753533459063)
+@@ -425,7 +425,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -769,7 +769,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -1121,7 +1121,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -1479,7 +1479,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -1825,7 +1825,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -2171,7 +2171,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -2517,7 +2517,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -2879,7 +2879,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -3231,7 +3231,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+Index: lib/Api/RoutesApi.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/Api/RoutesApi.php b/lib/Api/RoutesApi.php
+--- a/lib/Api/RoutesApi.php	(revision 862d19140f6dfadf699d463e53be4d16b5fe2e72)
++++ b/lib/Api/RoutesApi.php	(date 1753533459289)
+@@ -446,7 +446,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+Index: lib/Api/AssetsApi.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/Api/AssetsApi.php b/lib/Api/AssetsApi.php
+--- a/lib/Api/AssetsApi.php	(revision 862d19140f6dfadf699d463e53be4d16b5fe2e72)
++++ b/lib/Api/AssetsApi.php	(date 1753533459333)
+@@ -416,7 +416,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -766,7 +766,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -1110,7 +1110,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -1461,7 +1461,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -1812,7 +1812,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -2163,7 +2163,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+Index: lib/Api/InsuranceApi.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/Api/InsuranceApi.php b/lib/Api/InsuranceApi.php
+--- a/lib/Api/InsuranceApi.php	(revision 862d19140f6dfadf699d463e53be4d16b5fe2e72)
++++ b/lib/Api/InsuranceApi.php	(date 1753533459266)
+@@ -371,7 +371,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+Index: lib/Api/WalletApi.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/Api/WalletApi.php b/lib/Api/WalletApi.php
+--- a/lib/Api/WalletApi.php	(revision 862d19140f6dfadf699d463e53be4d16b5fe2e72)
++++ b/lib/Api/WalletApi.php	(date 1753533459282)
+@@ -398,7 +398,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -748,7 +748,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -1095,7 +1095,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -1427,7 +1427,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -1789,7 +1789,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -2156,7 +2156,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+Index: lib/Api/LoyaltyApi.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/Api/LoyaltyApi.php b/lib/Api/LoyaltyApi.php
+--- a/lib/Api/LoyaltyApi.php	(revision 862d19140f6dfadf699d463e53be4d16b5fe2e72)
++++ b/lib/Api/LoyaltyApi.php	(date 1753533459273)
+@@ -386,7 +386,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -718,7 +718,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+Index: lib/Api/PlanetaryInteractionApi.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/Api/PlanetaryInteractionApi.php b/lib/Api/PlanetaryInteractionApi.php
+--- a/lib/Api/PlanetaryInteractionApi.php	(revision 862d19140f6dfadf699d463e53be4d16b5fe2e72)
++++ b/lib/Api/PlanetaryInteractionApi.php	(date 1753533459114)
+@@ -392,7 +392,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -736,7 +736,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -1094,7 +1094,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -1426,7 +1426,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+Index: lib/Api/LocationApi.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/Api/LocationApi.php b/lib/Api/LocationApi.php
+--- a/lib/Api/LocationApi.php	(revision 862d19140f6dfadf699d463e53be4d16b5fe2e72)
++++ b/lib/Api/LocationApi.php	(date 1753533459231)
+@@ -389,7 +389,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -721,7 +721,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+@@ -1053,7 +1053,7 @@
+         }
+         // header params
+         if ($x_compatibility_date !== null) {
+-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
++            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+         }
+         // header params
+         if ($x_tenant !== null) {
+
