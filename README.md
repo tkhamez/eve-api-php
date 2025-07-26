@@ -6,6 +6,10 @@ For more information, please visit [https://developers.eveonline.com/docs/suppor
 
 This client is generated from https://esi.evetech.net/meta/openapi.yaml (OpenAPI version 3.1).
 
+It contains a patch to fix the format of the X-Compatibility-Date header (the generator ignores the 
+specified format "date" and uses a string that includes the time, which will lead to 400 errors from
+the API).
+
 ### Versioning scheme
 
 * Patch: Generated from an updated specification file and/or generated with a new patch version of 
@@ -22,10 +26,11 @@ for generator library changes see
 
 #### Notable changes other than API updates:
 
-1.0.0 (not yet released)
+1.0.0
 
 - Forked from [tkhamez/swagger-eve-php](https://github.com/tkhamez/swagger-eve-php).
 - Generated from the new OpenAPI 3.1 specification.
+- Added a patch for the format of the compatibility date.
 
 ## Installation & Usage
 
@@ -39,14 +44,8 @@ To install the bindings via [Composer](https://getcomposer.org/), add the follow
 
 ```json
 {
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/tkhamez/eve-api-php.git"
-    }
-  ],
   "require": {
-    "tkhamez/eve-api-php": "*@dev"
+    "tkhamez/eve-api-php": "~1.0.0"
   }
 }
 ```
