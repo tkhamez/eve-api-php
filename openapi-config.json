@@ -1,7 +1,7 @@
 {
-    "invokerPackage" : "Swagger\\Client\\Eve",
+    "invokerPackage" : "Tkhamez\\Eve\\API",
     "gitUserId" : "tkhamez",
-    "gitRepoId" : "swagger-eve-php",
+    "gitRepoId" : "eve-api-php",
     "disallowAdditionalPropertiesIfNotPresent" : false,
     "enumUnknownDefaultCase" : true,
     "licenseName" : "MIT"
