@@ -1,4 +1,4 @@
-[![Packagist Downloads](https://img.shields.io/packagist/dt/tkhamez/eve-api-php)](https://packagist.org/packages/tkhamez/eve-api-php)
+[![Packagist Downloads](https://img.shields.io/packagist/dt/tkhamez/eve-api)](https://packagist.org/packages/tkhamez/eve-api)
 
 # OpenAPIClient-php
 
@@ -47,7 +47,7 @@ To install the bindings via [Composer](https://getcomposer.org/), add the follow
 ```json
 {
   "require": {
-    "tkhamez/eve-api-php": "~1.0.0"
+    "tkhamez/eve-api": "~1.0.0"
   }
 }
 ```
