@@ -1,23 +1,23 @@
-# Swagger\Client\Eve\SovereigntyApi
+# Tkhamez\Eve\API\SovereigntyApi
 
-All URIs are relative to https://esi.evetech.net/latest, except if the operation defines another base path.
+All URIs are relative to https://esi.evetech.net, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**getSovereigntyCampaigns()**](SovereigntyApi.md#getSovereigntyCampaigns) | **GET** /sovereignty/campaigns/ | List sovereignty campaigns |
-| [**getSovereigntyMap()**](SovereigntyApi.md#getSovereigntyMap) | **GET** /sovereignty/map/ | List sovereignty of systems |
-| [**getSovereigntyStructures()**](SovereigntyApi.md#getSovereigntyStructures) | **GET** /sovereignty/structures/ | List sovereignty structures |
+| [**getSovereigntyCampaigns()**](SovereigntyApi.md#getSovereigntyCampaigns) | **GET** /sovereignty/campaigns | List sovereignty campaigns |
+| [**getSovereigntyMap()**](SovereigntyApi.md#getSovereigntyMap) | **GET** /sovereignty/map | List sovereignty of systems |
+| [**getSovereigntyStructures()**](SovereigntyApi.md#getSovereigntyStructures) | **GET** /sovereignty/structures | List sovereignty structures |
 
 
 ## `getSovereigntyCampaigns()`
 
 ```php
-getSovereigntyCampaigns($datasource, $if_none_match): \Swagger\Client\Eve\Model\GetSovereigntyCampaigns200Ok[]
+getSovereigntyCampaigns($x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\SovereigntyCampaignsGetInner[]
 ```
 
 List sovereignty campaigns
 
-Shows sovereignty data for campaigns.  --- Alternate route: `/dev/sovereignty/campaigns/`  Alternate route: `/legacy/sovereignty/campaigns/`  Alternate route: `/v1/sovereignty/campaigns/`  --- This route is cached for up to 5 seconds
+Shows sovereignty data for campaigns.
 
 ### Example
 
@@ -27,16 +27,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new Swagger\Client\Eve\Api\SovereigntyApi(
+$apiInstance = new Tkhamez\Eve\API\Api\SovereigntyApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getSovereigntyCampaigns($datasource, $if_none_match);
+    $result = $apiInstance->getSovereigntyCampaigns($x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SovereigntyApi->getSovereigntyCampaigns: ', $e->getMessage(), PHP_EOL;
@@ -47,12 +49,14 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetSovereigntyCampaigns200Ok[]**](../Model/GetSovereigntyCampaigns200Ok.md)
+[**\Tkhamez\Eve\API\Model\SovereigntyCampaignsGetInner[]**](../Model/SovereigntyCampaignsGetInner.md)
 
 ### Authorization
 
@@ -70,12 +74,12 @@ No authorization required
 ## `getSovereigntyMap()`
 
 ```php
-getSovereigntyMap($datasource, $if_none_match): \Swagger\Client\Eve\Model\GetSovereigntyMap200Ok[]
+getSovereigntyMap($x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\SovereigntyMapGetInner[]
 ```
 
 List sovereignty of systems
 
-Shows sovereignty information for solar systems  --- Alternate route: `/dev/sovereignty/map/`  Alternate route: `/legacy/sovereignty/map/`  Alternate route: `/v1/sovereignty/map/`  --- This route is cached for up to 3600 seconds
+Shows sovereignty information for solar systems
 
 ### Example
 
@@ -85,16 +89,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new Swagger\Client\Eve\Api\SovereigntyApi(
+$apiInstance = new Tkhamez\Eve\API\Api\SovereigntyApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getSovereigntyMap($datasource, $if_none_match);
+    $result = $apiInstance->getSovereigntyMap($x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SovereigntyApi->getSovereigntyMap: ', $e->getMessage(), PHP_EOL;
@@ -105,12 +111,14 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetSovereigntyMap200Ok[]**](../Model/GetSovereigntyMap200Ok.md)
+[**\Tkhamez\Eve\API\Model\SovereigntyMapGetInner[]**](../Model/SovereigntyMapGetInner.md)
 
 ### Authorization
 
@@ -128,12 +136,12 @@ No authorization required
 ## `getSovereigntyStructures()`
 
 ```php
-getSovereigntyStructures($datasource, $if_none_match): \Swagger\Client\Eve\Model\GetSovereigntyStructures200Ok[]
+getSovereigntyStructures($x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\SovereigntyStructuresGetInner[]
 ```
 
 List sovereignty structures
 
-Shows sovereignty data for structures.  --- Alternate route: `/dev/sovereignty/structures/`  Alternate route: `/legacy/sovereignty/structures/`  Alternate route: `/v1/sovereignty/structures/`  --- This route is cached for up to 120 seconds
+Shows sovereignty data for structures.
 
 ### Example
 
@@ -143,16 +151,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new Swagger\Client\Eve\Api\SovereigntyApi(
+$apiInstance = new Tkhamez\Eve\API\Api\SovereigntyApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getSovereigntyStructures($datasource, $if_none_match);
+    $result = $apiInstance->getSovereigntyStructures($x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SovereigntyApi->getSovereigntyStructures: ', $e->getMessage(), PHP_EOL;
@@ -163,12 +173,14 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetSovereigntyStructures200Ok[]**](../Model/GetSovereigntyStructures200Ok.md)
+[**\Tkhamez\Eve\API\Model\SovereigntyStructuresGetInner[]**](../Model/SovereigntyStructuresGetInner.md)
 
 ### Authorization
 

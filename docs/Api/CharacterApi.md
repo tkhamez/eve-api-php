@@ -1,34 +1,34 @@
-# Swagger\Client\Eve\CharacterApi
+# Tkhamez\Eve\API\CharacterApi
 
-All URIs are relative to https://esi.evetech.net/latest, except if the operation defines another base path.
+All URIs are relative to https://esi.evetech.net, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**getCharactersCharacterId()**](CharacterApi.md#getCharactersCharacterId) | **GET** /characters/{character_id}/ | Get character&#39;s public information |
-| [**getCharactersCharacterIdAgentsResearch()**](CharacterApi.md#getCharactersCharacterIdAgentsResearch) | **GET** /characters/{character_id}/agents_research/ | Get agents research |
-| [**getCharactersCharacterIdBlueprints()**](CharacterApi.md#getCharactersCharacterIdBlueprints) | **GET** /characters/{character_id}/blueprints/ | Get blueprints |
-| [**getCharactersCharacterIdCorporationhistory()**](CharacterApi.md#getCharactersCharacterIdCorporationhistory) | **GET** /characters/{character_id}/corporationhistory/ | Get corporation history |
-| [**getCharactersCharacterIdFatigue()**](CharacterApi.md#getCharactersCharacterIdFatigue) | **GET** /characters/{character_id}/fatigue/ | Get jump fatigue |
-| [**getCharactersCharacterIdMedals()**](CharacterApi.md#getCharactersCharacterIdMedals) | **GET** /characters/{character_id}/medals/ | Get medals |
-| [**getCharactersCharacterIdNotifications()**](CharacterApi.md#getCharactersCharacterIdNotifications) | **GET** /characters/{character_id}/notifications/ | Get character notifications |
-| [**getCharactersCharacterIdNotificationsContacts()**](CharacterApi.md#getCharactersCharacterIdNotificationsContacts) | **GET** /characters/{character_id}/notifications/contacts/ | Get new contact notifications |
-| [**getCharactersCharacterIdPortrait()**](CharacterApi.md#getCharactersCharacterIdPortrait) | **GET** /characters/{character_id}/portrait/ | Get character portraits |
-| [**getCharactersCharacterIdRoles()**](CharacterApi.md#getCharactersCharacterIdRoles) | **GET** /characters/{character_id}/roles/ | Get character corporation roles |
-| [**getCharactersCharacterIdStandings()**](CharacterApi.md#getCharactersCharacterIdStandings) | **GET** /characters/{character_id}/standings/ | Get standings |
-| [**getCharactersCharacterIdTitles()**](CharacterApi.md#getCharactersCharacterIdTitles) | **GET** /characters/{character_id}/titles/ | Get character corporation titles |
-| [**postCharactersAffiliation()**](CharacterApi.md#postCharactersAffiliation) | **POST** /characters/affiliation/ | Character affiliation |
-| [**postCharactersCharacterIdCspa()**](CharacterApi.md#postCharactersCharacterIdCspa) | **POST** /characters/{character_id}/cspa/ | Calculate a CSPA charge cost |
+| [**getCharactersCharacterId()**](CharacterApi.md#getCharactersCharacterId) | **GET** /characters/{character_id} | Get character&#39;s public information |
+| [**getCharactersCharacterIdAgentsResearch()**](CharacterApi.md#getCharactersCharacterIdAgentsResearch) | **GET** /characters/{character_id}/agents_research | Get agents research |
+| [**getCharactersCharacterIdBlueprints()**](CharacterApi.md#getCharactersCharacterIdBlueprints) | **GET** /characters/{character_id}/blueprints | Get blueprints |
+| [**getCharactersCharacterIdCorporationhistory()**](CharacterApi.md#getCharactersCharacterIdCorporationhistory) | **GET** /characters/{character_id}/corporationhistory | Get corporation history |
+| [**getCharactersCharacterIdFatigue()**](CharacterApi.md#getCharactersCharacterIdFatigue) | **GET** /characters/{character_id}/fatigue | Get jump fatigue |
+| [**getCharactersCharacterIdMedals()**](CharacterApi.md#getCharactersCharacterIdMedals) | **GET** /characters/{character_id}/medals | Get medals |
+| [**getCharactersCharacterIdNotifications()**](CharacterApi.md#getCharactersCharacterIdNotifications) | **GET** /characters/{character_id}/notifications | Get character notifications |
+| [**getCharactersCharacterIdNotificationsContacts()**](CharacterApi.md#getCharactersCharacterIdNotificationsContacts) | **GET** /characters/{character_id}/notifications/contacts | Get new contact notifications |
+| [**getCharactersCharacterIdPortrait()**](CharacterApi.md#getCharactersCharacterIdPortrait) | **GET** /characters/{character_id}/portrait | Get character portraits |
+| [**getCharactersCharacterIdRoles()**](CharacterApi.md#getCharactersCharacterIdRoles) | **GET** /characters/{character_id}/roles | Get character corporation roles |
+| [**getCharactersCharacterIdStandings()**](CharacterApi.md#getCharactersCharacterIdStandings) | **GET** /characters/{character_id}/standings | Get standings |
+| [**getCharactersCharacterIdTitles()**](CharacterApi.md#getCharactersCharacterIdTitles) | **GET** /characters/{character_id}/titles | Get character corporation titles |
+| [**postCharactersAffiliation()**](CharacterApi.md#postCharactersAffiliation) | **POST** /characters/affiliation | Character affiliation |
+| [**postCharactersCharacterIdCspa()**](CharacterApi.md#postCharactersCharacterIdCspa) | **POST** /characters/{character_id}/cspa | Calculate a CSPA charge cost |
 
 
 ## `getCharactersCharacterId()`
 
 ```php
-getCharactersCharacterId($character_id, $datasource, $if_none_match): \Swagger\Client\Eve\Model\GetCharactersCharacterIdOk
+getCharactersCharacterId($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdGet
 ```
 
 Get character's public information
 
-Public information about a character  --- Alternate route: `/dev/characters/{character_id}/`  Alternate route: `/legacy/characters/{character_id}/`  Alternate route: `/v5/characters/{character_id}/`  --- This route is cached for up to 604800 seconds
+Public information about a character
 
 ### Example
 
@@ -38,17 +38,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new Swagger\Client\Eve\Api\CharacterApi(
+$apiInstance = new Tkhamez\Eve\API\Api\CharacterApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$character_id = 56; // int | An EVE character ID
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
+$character_id = 56; // int | The ID of the character
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getCharactersCharacterId($character_id, $datasource, $if_none_match);
+    $result = $apiInstance->getCharactersCharacterId($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CharacterApi->getCharactersCharacterId: ', $e->getMessage(), PHP_EOL;
@@ -59,13 +61,15 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **character_id** | **int**| An EVE character ID | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
+| **character_id** | **int**| The ID of the character | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetCharactersCharacterIdOk**](../Model/GetCharactersCharacterIdOk.md)
+[**\Tkhamez\Eve\API\Model\CharactersCharacterIdGet**](../Model/CharactersCharacterIdGet.md)
 
 ### Authorization
 
@@ -83,12 +87,12 @@ No authorization required
 ## `getCharactersCharacterIdAgentsResearch()`
 
 ```php
-getCharactersCharacterIdAgentsResearch($character_id, $datasource, $if_none_match, $token): \Swagger\Client\Eve\Model\GetCharactersCharacterIdAgentsResearch200Ok[]
+getCharactersCharacterIdAgentsResearch($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdAgentsResearchGetInner[]
 ```
 
 Get agents research
 
-Return a list of agents research information for a character. The formula for finding the current research points with an agent is: currentPoints = remainderPoints + pointsPerDay * days(currentTime - researchStartDate)  --- Alternate route: `/dev/characters/{character_id}/agents_research/`  Alternate route: `/legacy/characters/{character_id}/agents_research/`  Alternate route: `/v1/characters/{character_id}/agents_research/`  Alternate route: `/v2/characters/{character_id}/agents_research/`  --- This route is cached for up to 3600 seconds
+Return a list of agents research information for a character. The formula for finding the current research points with an agent is: currentPoints = remainderPoints + pointsPerDay * days(currentTime - researchStartDate)
 
 ### Example
 
@@ -97,23 +101,24 @@ Return a list of agents research information for a character. The formula for fi
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\CharacterApi(
+$apiInstance = new Tkhamez\Eve\API\Api\CharacterApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$character_id = 56; // int | An EVE character ID
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$character_id = 56; // int | The ID of the character
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getCharactersCharacterIdAgentsResearch($character_id, $datasource, $if_none_match, $token);
+    $result = $apiInstance->getCharactersCharacterIdAgentsResearch($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CharacterApi->getCharactersCharacterIdAgentsResearch: ', $e->getMessage(), PHP_EOL;
@@ -124,18 +129,19 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **character_id** | **int**| An EVE character ID | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **character_id** | **int**| The ID of the character | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetCharactersCharacterIdAgentsResearch200Ok[]**](../Model/GetCharactersCharacterIdAgentsResearch200Ok.md)
+[**\Tkhamez\Eve\API\Model\CharactersCharacterIdAgentsResearchGetInner[]**](../Model/CharactersCharacterIdAgentsResearchGetInner.md)
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -149,12 +155,12 @@ try {
 ## `getCharactersCharacterIdBlueprints()`
 
 ```php
-getCharactersCharacterIdBlueprints($character_id, $datasource, $if_none_match, $page, $token): \Swagger\Client\Eve\Model\GetCharactersCharacterIdBlueprints200Ok[]
+getCharactersCharacterIdBlueprints($character_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdBlueprintsGetInner[]
 ```
 
 Get blueprints
 
-Return a list of blueprints the character owns  --- Alternate route: `/dev/characters/{character_id}/blueprints/`  Alternate route: `/legacy/characters/{character_id}/blueprints/`  Alternate route: `/v2/characters/{character_id}/blueprints/`  Alternate route: `/v3/characters/{character_id}/blueprints/`  --- This route is cached for up to 3600 seconds
+Return a list of blueprints the character owns
 
 ### Example
 
@@ -163,24 +169,25 @@ Return a list of blueprints the character owns  --- Alternate route: `/dev/chara
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\CharacterApi(
+$apiInstance = new Tkhamez\Eve\API\Api\CharacterApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$character_id = 56; // int | An EVE character ID
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
-$page = 1; // int | Which page of results to return
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$character_id = 56; // int | The ID of the character
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$page = 56; // int
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getCharactersCharacterIdBlueprints($character_id, $datasource, $if_none_match, $page, $token);
+    $result = $apiInstance->getCharactersCharacterIdBlueprints($character_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CharacterApi->getCharactersCharacterIdBlueprints: ', $e->getMessage(), PHP_EOL;
@@ -191,19 +198,20 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **character_id** | **int**| An EVE character ID | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
-| **page** | **int**| Which page of results to return | [optional] [default to 1] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **character_id** | **int**| The ID of the character | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **page** | **int**|  | [optional] |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetCharactersCharacterIdBlueprints200Ok[]**](../Model/GetCharactersCharacterIdBlueprints200Ok.md)
+[**\Tkhamez\Eve\API\Model\CharactersCharacterIdBlueprintsGetInner[]**](../Model/CharactersCharacterIdBlueprintsGetInner.md)
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -217,12 +225,12 @@ try {
 ## `getCharactersCharacterIdCorporationhistory()`
 
 ```php
-getCharactersCharacterIdCorporationhistory($character_id, $datasource, $if_none_match): \Swagger\Client\Eve\Model\GetCharactersCharacterIdCorporationhistory200Ok[]
+getCharactersCharacterIdCorporationhistory($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdCorporationhistoryGetInner[]
 ```
 
 Get corporation history
 
-Get a list of all the corporations a character has been a member of  --- Alternate route: `/dev/characters/{character_id}/corporationhistory/`  Alternate route: `/legacy/characters/{character_id}/corporationhistory/`  Alternate route: `/v1/characters/{character_id}/corporationhistory/`  Alternate route: `/v2/characters/{character_id}/corporationhistory/`  --- This route is cached for up to 86400 seconds
+Get a list of all the corporations a character has been a member of
 
 ### Example
 
@@ -232,17 +240,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new Swagger\Client\Eve\Api\CharacterApi(
+$apiInstance = new Tkhamez\Eve\API\Api\CharacterApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$character_id = 56; // int | An EVE character ID
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
+$character_id = 56; // int | The ID of the character
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getCharactersCharacterIdCorporationhistory($character_id, $datasource, $if_none_match);
+    $result = $apiInstance->getCharactersCharacterIdCorporationhistory($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CharacterApi->getCharactersCharacterIdCorporationhistory: ', $e->getMessage(), PHP_EOL;
@@ -253,13 +263,15 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **character_id** | **int**| An EVE character ID | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
+| **character_id** | **int**| The ID of the character | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetCharactersCharacterIdCorporationhistory200Ok[]**](../Model/GetCharactersCharacterIdCorporationhistory200Ok.md)
+[**\Tkhamez\Eve\API\Model\CharactersCharacterIdCorporationhistoryGetInner[]**](../Model/CharactersCharacterIdCorporationhistoryGetInner.md)
 
 ### Authorization
 
@@ -277,12 +289,12 @@ No authorization required
 ## `getCharactersCharacterIdFatigue()`
 
 ```php
-getCharactersCharacterIdFatigue($character_id, $datasource, $if_none_match, $token): \Swagger\Client\Eve\Model\GetCharactersCharacterIdFatigueOk
+getCharactersCharacterIdFatigue($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdFatigueGet
 ```
 
 Get jump fatigue
 
-Return a character's jump activation and fatigue information  --- Alternate route: `/dev/characters/{character_id}/fatigue/`  Alternate route: `/legacy/characters/{character_id}/fatigue/`  Alternate route: `/v1/characters/{character_id}/fatigue/`  Alternate route: `/v2/characters/{character_id}/fatigue/`  --- This route is cached for up to 300 seconds
+Return a character's jump activation and fatigue information
 
 ### Example
 
@@ -291,23 +303,24 @@ Return a character's jump activation and fatigue information  --- Alternate rout
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\CharacterApi(
+$apiInstance = new Tkhamez\Eve\API\Api\CharacterApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$character_id = 56; // int | An EVE character ID
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$character_id = 56; // int | The ID of the character
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getCharactersCharacterIdFatigue($character_id, $datasource, $if_none_match, $token);
+    $result = $apiInstance->getCharactersCharacterIdFatigue($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CharacterApi->getCharactersCharacterIdFatigue: ', $e->getMessage(), PHP_EOL;
@@ -318,18 +331,19 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **character_id** | **int**| An EVE character ID | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **character_id** | **int**| The ID of the character | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetCharactersCharacterIdFatigueOk**](../Model/GetCharactersCharacterIdFatigueOk.md)
+[**\Tkhamez\Eve\API\Model\CharactersCharacterIdFatigueGet**](../Model/CharactersCharacterIdFatigueGet.md)
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -343,12 +357,12 @@ try {
 ## `getCharactersCharacterIdMedals()`
 
 ```php
-getCharactersCharacterIdMedals($character_id, $datasource, $if_none_match, $token): \Swagger\Client\Eve\Model\GetCharactersCharacterIdMedals200Ok[]
+getCharactersCharacterIdMedals($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdMedalsGetInner[]
 ```
 
 Get medals
 
-Return a list of medals the character has  --- Alternate route: `/dev/characters/{character_id}/medals/`  Alternate route: `/legacy/characters/{character_id}/medals/`  Alternate route: `/v1/characters/{character_id}/medals/`  Alternate route: `/v2/characters/{character_id}/medals/`  --- This route is cached for up to 3600 seconds
+Return a list of medals the character has
 
 ### Example
 
@@ -357,23 +371,24 @@ Return a list of medals the character has  --- Alternate route: `/dev/characters
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\CharacterApi(
+$apiInstance = new Tkhamez\Eve\API\Api\CharacterApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$character_id = 56; // int | An EVE character ID
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$character_id = 56; // int | The ID of the character
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getCharactersCharacterIdMedals($character_id, $datasource, $if_none_match, $token);
+    $result = $apiInstance->getCharactersCharacterIdMedals($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CharacterApi->getCharactersCharacterIdMedals: ', $e->getMessage(), PHP_EOL;
@@ -384,18 +399,19 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **character_id** | **int**| An EVE character ID | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **character_id** | **int**| The ID of the character | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetCharactersCharacterIdMedals200Ok[]**](../Model/GetCharactersCharacterIdMedals200Ok.md)
+[**\Tkhamez\Eve\API\Model\CharactersCharacterIdMedalsGetInner[]**](../Model/CharactersCharacterIdMedalsGetInner.md)
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -409,12 +425,12 @@ try {
 ## `getCharactersCharacterIdNotifications()`
 
 ```php
-getCharactersCharacterIdNotifications($character_id, $datasource, $if_none_match, $token): \Swagger\Client\Eve\Model\GetCharactersCharacterIdNotifications200Ok[]
+getCharactersCharacterIdNotifications($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdNotificationsGetInner[]
 ```
 
 Get character notifications
 
-Return character notifications  --- Alternate route: `/dev/characters/{character_id}/notifications/`  Alternate route: `/legacy/characters/{character_id}/notifications/`  Alternate route: `/v4/characters/{character_id}/notifications/`  Alternate route: `/v5/characters/{character_id}/notifications/`  Alternate route: `/v6/characters/{character_id}/notifications/`  --- This route is cached for up to 600 seconds
+Return character notifications
 
 ### Example
 
@@ -423,23 +439,24 @@ Return character notifications  --- Alternate route: `/dev/characters/{character
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\CharacterApi(
+$apiInstance = new Tkhamez\Eve\API\Api\CharacterApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$character_id = 56; // int | An EVE character ID
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$character_id = 56; // int | The ID of the character
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getCharactersCharacterIdNotifications($character_id, $datasource, $if_none_match, $token);
+    $result = $apiInstance->getCharactersCharacterIdNotifications($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CharacterApi->getCharactersCharacterIdNotifications: ', $e->getMessage(), PHP_EOL;
@@ -450,18 +467,19 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **character_id** | **int**| An EVE character ID | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **character_id** | **int**| The ID of the character | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetCharactersCharacterIdNotifications200Ok[]**](../Model/GetCharactersCharacterIdNotifications200Ok.md)
+[**\Tkhamez\Eve\API\Model\CharactersCharacterIdNotificationsGetInner[]**](../Model/CharactersCharacterIdNotificationsGetInner.md)
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -475,12 +493,12 @@ try {
 ## `getCharactersCharacterIdNotificationsContacts()`
 
 ```php
-getCharactersCharacterIdNotificationsContacts($character_id, $datasource, $if_none_match, $token): \Swagger\Client\Eve\Model\GetCharactersCharacterIdNotificationsContacts200Ok[]
+getCharactersCharacterIdNotificationsContacts($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdNotificationsContactsGetInner[]
 ```
 
 Get new contact notifications
 
-Return notifications about having been added to someone's contact list  --- Alternate route: `/dev/characters/{character_id}/notifications/contacts/`  Alternate route: `/legacy/characters/{character_id}/notifications/contacts/`  Alternate route: `/v1/characters/{character_id}/notifications/contacts/`  Alternate route: `/v2/characters/{character_id}/notifications/contacts/`  --- This route is cached for up to 600 seconds
+Return notifications about having been added to someone's contact list
 
 ### Example
 
@@ -489,23 +507,24 @@ Return notifications about having been added to someone's contact list  --- Alte
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\CharacterApi(
+$apiInstance = new Tkhamez\Eve\API\Api\CharacterApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$character_id = 56; // int | An EVE character ID
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$character_id = 56; // int | The ID of the character
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getCharactersCharacterIdNotificationsContacts($character_id, $datasource, $if_none_match, $token);
+    $result = $apiInstance->getCharactersCharacterIdNotificationsContacts($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CharacterApi->getCharactersCharacterIdNotificationsContacts: ', $e->getMessage(), PHP_EOL;
@@ -516,18 +535,19 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **character_id** | **int**| An EVE character ID | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **character_id** | **int**| The ID of the character | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetCharactersCharacterIdNotificationsContacts200Ok[]**](../Model/GetCharactersCharacterIdNotificationsContacts200Ok.md)
+[**\Tkhamez\Eve\API\Model\CharactersCharacterIdNotificationsContactsGetInner[]**](../Model/CharactersCharacterIdNotificationsContactsGetInner.md)
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -541,12 +561,12 @@ try {
 ## `getCharactersCharacterIdPortrait()`
 
 ```php
-getCharactersCharacterIdPortrait($character_id, $datasource, $if_none_match): \Swagger\Client\Eve\Model\GetCharactersCharacterIdPortraitOk
+getCharactersCharacterIdPortrait($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdPortraitGet
 ```
 
 Get character portraits
 
-Get portrait urls for a character  --- Alternate route: `/dev/characters/{character_id}/portrait/`  Alternate route: `/v2/characters/{character_id}/portrait/`  Alternate route: `/v3/characters/{character_id}/portrait/`  --- This route expires daily at 11:05
+Get portrait urls for a character  This route expires daily at 11:05
 
 ### Example
 
@@ -556,17 +576,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new Swagger\Client\Eve\Api\CharacterApi(
+$apiInstance = new Tkhamez\Eve\API\Api\CharacterApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$character_id = 56; // int | An EVE character ID
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
+$character_id = 56; // int | The ID of the character
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getCharactersCharacterIdPortrait($character_id, $datasource, $if_none_match);
+    $result = $apiInstance->getCharactersCharacterIdPortrait($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CharacterApi->getCharactersCharacterIdPortrait: ', $e->getMessage(), PHP_EOL;
@@ -577,13 +599,15 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **character_id** | **int**| An EVE character ID | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
+| **character_id** | **int**| The ID of the character | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetCharactersCharacterIdPortraitOk**](../Model/GetCharactersCharacterIdPortraitOk.md)
+[**\Tkhamez\Eve\API\Model\CharactersCharacterIdPortraitGet**](../Model/CharactersCharacterIdPortraitGet.md)
 
 ### Authorization
 
@@ -601,12 +625,12 @@ No authorization required
 ## `getCharactersCharacterIdRoles()`
 
 ```php
-getCharactersCharacterIdRoles($character_id, $datasource, $if_none_match, $token): \Swagger\Client\Eve\Model\GetCharactersCharacterIdRolesOk
+getCharactersCharacterIdRoles($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdRolesGet
 ```
 
 Get character corporation roles
 
-Returns a character's corporation roles  --- Alternate route: `/dev/characters/{character_id}/roles/`  Alternate route: `/legacy/characters/{character_id}/roles/`  Alternate route: `/v2/characters/{character_id}/roles/`  Alternate route: `/v3/characters/{character_id}/roles/`  --- This route is cached for up to 3600 seconds
+Returns a character's corporation roles
 
 ### Example
 
@@ -615,23 +639,24 @@ Returns a character's corporation roles  --- Alternate route: `/dev/characters/{
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\CharacterApi(
+$apiInstance = new Tkhamez\Eve\API\Api\CharacterApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$character_id = 56; // int | An EVE character ID
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$character_id = 56; // int | The ID of the character
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getCharactersCharacterIdRoles($character_id, $datasource, $if_none_match, $token);
+    $result = $apiInstance->getCharactersCharacterIdRoles($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CharacterApi->getCharactersCharacterIdRoles: ', $e->getMessage(), PHP_EOL;
@@ -642,18 +667,19 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **character_id** | **int**| An EVE character ID | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **character_id** | **int**| The ID of the character | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetCharactersCharacterIdRolesOk**](../Model/GetCharactersCharacterIdRolesOk.md)
+[**\Tkhamez\Eve\API\Model\CharactersCharacterIdRolesGet**](../Model/CharactersCharacterIdRolesGet.md)
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -667,12 +693,12 @@ try {
 ## `getCharactersCharacterIdStandings()`
 
 ```php
-getCharactersCharacterIdStandings($character_id, $datasource, $if_none_match, $token): \Swagger\Client\Eve\Model\GetCharactersCharacterIdStandings200Ok[]
+getCharactersCharacterIdStandings($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdStandingsGetInner[]
 ```
 
 Get standings
 
-Return character standings from agents, NPC corporations, and factions  --- Alternate route: `/dev/characters/{character_id}/standings/`  Alternate route: `/legacy/characters/{character_id}/standings/`  Alternate route: `/v1/characters/{character_id}/standings/`  Alternate route: `/v2/characters/{character_id}/standings/`  --- This route is cached for up to 3600 seconds
+Return character standings from agents, NPC corporations, and factions
 
 ### Example
 
@@ -681,23 +707,24 @@ Return character standings from agents, NPC corporations, and factions  --- Alte
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\CharacterApi(
+$apiInstance = new Tkhamez\Eve\API\Api\CharacterApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$character_id = 56; // int | An EVE character ID
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$character_id = 56; // int | The ID of the character
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getCharactersCharacterIdStandings($character_id, $datasource, $if_none_match, $token);
+    $result = $apiInstance->getCharactersCharacterIdStandings($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CharacterApi->getCharactersCharacterIdStandings: ', $e->getMessage(), PHP_EOL;
@@ -708,18 +735,19 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **character_id** | **int**| An EVE character ID | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **character_id** | **int**| The ID of the character | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetCharactersCharacterIdStandings200Ok[]**](../Model/GetCharactersCharacterIdStandings200Ok.md)
+[**\Tkhamez\Eve\API\Model\CharactersCharacterIdStandingsGetInner[]**](../Model/CharactersCharacterIdStandingsGetInner.md)
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -733,12 +761,12 @@ try {
 ## `getCharactersCharacterIdTitles()`
 
 ```php
-getCharactersCharacterIdTitles($character_id, $datasource, $if_none_match, $token): \Swagger\Client\Eve\Model\GetCharactersCharacterIdTitles200Ok[]
+getCharactersCharacterIdTitles($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdTitlesGetInner[]
 ```
 
 Get character corporation titles
 
-Returns a character's titles  --- Alternate route: `/dev/characters/{character_id}/titles/`  Alternate route: `/legacy/characters/{character_id}/titles/`  Alternate route: `/v1/characters/{character_id}/titles/`  Alternate route: `/v2/characters/{character_id}/titles/`  --- This route is cached for up to 3600 seconds
+Returns a character's titles
 
 ### Example
 
@@ -747,23 +775,24 @@ Returns a character's titles  --- Alternate route: `/dev/characters/{character_i
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\CharacterApi(
+$apiInstance = new Tkhamez\Eve\API\Api\CharacterApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$character_id = 56; // int | An EVE character ID
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$character_id = 56; // int | The ID of the character
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getCharactersCharacterIdTitles($character_id, $datasource, $if_none_match, $token);
+    $result = $apiInstance->getCharactersCharacterIdTitles($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CharacterApi->getCharactersCharacterIdTitles: ', $e->getMessage(), PHP_EOL;
@@ -774,18 +803,19 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **character_id** | **int**| An EVE character ID | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **character_id** | **int**| The ID of the character | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetCharactersCharacterIdTitles200Ok[]**](../Model/GetCharactersCharacterIdTitles200Ok.md)
+[**\Tkhamez\Eve\API\Model\CharactersCharacterIdTitlesGetInner[]**](../Model/CharactersCharacterIdTitlesGetInner.md)
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -799,12 +829,12 @@ try {
 ## `postCharactersAffiliation()`
 
 ```php
-postCharactersAffiliation($characters, $datasource): \Swagger\Client\Eve\Model\PostCharactersAffiliation200Ok[]
+postCharactersAffiliation($x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $request_body): \Tkhamez\Eve\API\Model\CharactersAffiliationPostInner[]
 ```
 
 Character affiliation
 
-Bulk lookup of character IDs to corporation, alliance and faction  --- Alternate route: `/dev/characters/affiliation/`  Alternate route: `/legacy/characters/affiliation/`  Alternate route: `/v1/characters/affiliation/`  Alternate route: `/v2/characters/affiliation/`  --- This route is cached for up to 3600 seconds
+Bulk lookup of character IDs to corporation, alliance and faction
 
 ### Example
 
@@ -814,16 +844,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new Swagger\Client\Eve\Api\CharacterApi(
+$apiInstance = new Tkhamez\Eve\API\Api\CharacterApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$characters = array(56); // int[] | The character IDs to fetch affiliations for. All characters must exist, or none will be returned
-$datasource = 'tranquility'; // string | The server name you would like data from
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$request_body = array(56); // int[]
 
 try {
-    $result = $apiInstance->postCharactersAffiliation($characters, $datasource);
+    $result = $apiInstance->postCharactersAffiliation($x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $request_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CharacterApi->postCharactersAffiliation: ', $e->getMessage(), PHP_EOL;
@@ -834,12 +867,15 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **characters** | [**int[]**](../Model/int.md)| The character IDs to fetch affiliations for. All characters must exist, or none will be returned | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **request_body** | [**int[]**](../Model/int.md)|  | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\PostCharactersAffiliation200Ok[]**](../Model/PostCharactersAffiliation200Ok.md)
+[**\Tkhamez\Eve\API\Model\CharactersAffiliationPostInner[]**](../Model/CharactersAffiliationPostInner.md)
 
 ### Authorization
 
@@ -857,12 +893,12 @@ No authorization required
 ## `postCharactersCharacterIdCspa()`
 
 ```php
-postCharactersCharacterIdCspa($character_id, $characters, $datasource, $token): float
+postCharactersCharacterIdCspa($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $request_body): float
 ```
 
 Calculate a CSPA charge cost
 
-Takes a source character ID in the url and a set of target character ID's in the body, returns a CSPA charge cost  --- Alternate route: `/dev/characters/{character_id}/cspa/`  Alternate route: `/legacy/characters/{character_id}/cspa/`  Alternate route: `/v4/characters/{character_id}/cspa/`  Alternate route: `/v5/characters/{character_id}/cspa/`
+Takes a source character ID in the url and a set of target character ID's in the body, returns a CSPA charge cost
 
 ### Example
 
@@ -871,23 +907,25 @@ Takes a source character ID in the url and a set of target character ID's in the
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\CharacterApi(
+$apiInstance = new Tkhamez\Eve\API\Api\CharacterApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$character_id = 56; // int | An EVE character ID
-$characters = array(56); // int[] | The target characters to calculate the charge for
-$datasource = 'tranquility'; // string | The server name you would like data from
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$character_id = 56; // int | The ID of the character
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$request_body = array(56); // int[]
 
 try {
-    $result = $apiInstance->postCharactersCharacterIdCspa($character_id, $characters, $datasource, $token);
+    $result = $apiInstance->postCharactersCharacterIdCspa($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $request_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CharacterApi->postCharactersCharacterIdCspa: ', $e->getMessage(), PHP_EOL;
@@ -898,10 +936,12 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **character_id** | **int**| An EVE character ID | |
-| **characters** | [**int[]**](../Model/int.md)| The target characters to calculate the charge for | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **character_id** | **int**| The ID of the character | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **request_body** | [**int[]**](../Model/int.md)|  | [optional] |
 
 ### Return type
 
@@ -909,7 +949,7 @@ try {
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 

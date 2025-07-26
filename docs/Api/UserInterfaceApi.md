@@ -1,25 +1,25 @@
-# Swagger\Client\Eve\UserInterfaceApi
+# Tkhamez\Eve\API\UserInterfaceApi
 
-All URIs are relative to https://esi.evetech.net/latest, except if the operation defines another base path.
+All URIs are relative to https://esi.evetech.net, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**postUiAutopilotWaypoint()**](UserInterfaceApi.md#postUiAutopilotWaypoint) | **POST** /ui/autopilot/waypoint/ | Set Autopilot Waypoint |
-| [**postUiOpenwindowContract()**](UserInterfaceApi.md#postUiOpenwindowContract) | **POST** /ui/openwindow/contract/ | Open Contract Window |
-| [**postUiOpenwindowInformation()**](UserInterfaceApi.md#postUiOpenwindowInformation) | **POST** /ui/openwindow/information/ | Open Information Window |
-| [**postUiOpenwindowMarketdetails()**](UserInterfaceApi.md#postUiOpenwindowMarketdetails) | **POST** /ui/openwindow/marketdetails/ | Open Market Details |
-| [**postUiOpenwindowNewmail()**](UserInterfaceApi.md#postUiOpenwindowNewmail) | **POST** /ui/openwindow/newmail/ | Open New Mail Window |
+| [**postUiAutopilotWaypoint()**](UserInterfaceApi.md#postUiAutopilotWaypoint) | **POST** /ui/autopilot/waypoint | Set Autopilot Waypoint |
+| [**postUiOpenwindowContract()**](UserInterfaceApi.md#postUiOpenwindowContract) | **POST** /ui/openwindow/contract | Open Contract Window |
+| [**postUiOpenwindowInformation()**](UserInterfaceApi.md#postUiOpenwindowInformation) | **POST** /ui/openwindow/information | Open Information Window |
+| [**postUiOpenwindowMarketdetails()**](UserInterfaceApi.md#postUiOpenwindowMarketdetails) | **POST** /ui/openwindow/marketdetails | Open Market Details |
+| [**postUiOpenwindowNewmail()**](UserInterfaceApi.md#postUiOpenwindowNewmail) | **POST** /ui/openwindow/newmail | Open New Mail Window |
 
 
 ## `postUiAutopilotWaypoint()`
 
 ```php
-postUiAutopilotWaypoint($add_to_beginning, $clear_other_waypoints, $destination_id, $datasource, $token)
+postUiAutopilotWaypoint($add_to_beginning, $clear_other_waypoints, $destination_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): mixed
 ```
 
 Set Autopilot Waypoint
 
-Set a solar system as autopilot waypoint  --- Alternate route: `/dev/ui/autopilot/waypoint/`  Alternate route: `/legacy/ui/autopilot/waypoint/`  Alternate route: `/v2/ui/autopilot/waypoint/`
+Set a solar system as autopilot waypoint
 
 ### Example
 
@@ -28,24 +28,27 @@ Set a solar system as autopilot waypoint  --- Alternate route: `/dev/ui/autopilo
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\UserInterfaceApi(
+$apiInstance = new Tkhamez\Eve\API\Api\UserInterfaceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$add_to_beginning = false; // bool | Whether this solar system should be added to the beginning of all waypoints
-$clear_other_waypoints = false; // bool | Whether clean other waypoints beforing adding this one
-$destination_id = 56; // int | The destination to travel to, can be solar system, station or structure's id
-$datasource = 'tranquility'; // string | The server name you would like data from
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$add_to_beginning = false; // bool
+$clear_other_waypoints = false; // bool
+$destination_id = 56; // int
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $apiInstance->postUiAutopilotWaypoint($add_to_beginning, $clear_other_waypoints, $destination_id, $datasource, $token);
+    $result = $apiInstance->postUiAutopilotWaypoint($add_to_beginning, $clear_other_waypoints, $destination_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UserInterfaceApi->postUiAutopilotWaypoint: ', $e->getMessage(), PHP_EOL;
 }
@@ -55,19 +58,21 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **add_to_beginning** | **bool**| Whether this solar system should be added to the beginning of all waypoints | [default to false] |
-| **clear_other_waypoints** | **bool**| Whether clean other waypoints beforing adding this one | [default to false] |
-| **destination_id** | **int**| The destination to travel to, can be solar system, station or structure&#39;s id | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **add_to_beginning** | **bool**|  | [default to false] |
+| **clear_other_waypoints** | **bool**|  | [default to false] |
+| **destination_id** | **int**|  | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-void (empty response body)
+**mixed**
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -81,12 +86,12 @@ void (empty response body)
 ## `postUiOpenwindowContract()`
 
 ```php
-postUiOpenwindowContract($contract_id, $datasource, $token)
+postUiOpenwindowContract($contract_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): mixed
 ```
 
 Open Contract Window
 
-Open the contract window inside the client  --- Alternate route: `/dev/ui/openwindow/contract/`  Alternate route: `/legacy/ui/openwindow/contract/`  Alternate route: `/v1/ui/openwindow/contract/`
+Open the contract window inside the client
 
 ### Example
 
@@ -95,22 +100,25 @@ Open the contract window inside the client  --- Alternate route: `/dev/ui/openwi
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\UserInterfaceApi(
+$apiInstance = new Tkhamez\Eve\API\Api\UserInterfaceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$contract_id = 56; // int | The contract to open
-$datasource = 'tranquility'; // string | The server name you would like data from
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$contract_id = 56; // int
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $apiInstance->postUiOpenwindowContract($contract_id, $datasource, $token);
+    $result = $apiInstance->postUiOpenwindowContract($contract_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UserInterfaceApi->postUiOpenwindowContract: ', $e->getMessage(), PHP_EOL;
 }
@@ -120,17 +128,19 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **contract_id** | **int**| The contract to open | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **contract_id** | **int**|  | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-void (empty response body)
+**mixed**
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -144,12 +154,12 @@ void (empty response body)
 ## `postUiOpenwindowInformation()`
 
 ```php
-postUiOpenwindowInformation($target_id, $datasource, $token)
+postUiOpenwindowInformation($target_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): mixed
 ```
 
 Open Information Window
 
-Open the information window for a character, corporation or alliance inside the client  --- Alternate route: `/dev/ui/openwindow/information/`  Alternate route: `/legacy/ui/openwindow/information/`  Alternate route: `/v1/ui/openwindow/information/`
+Open the information window for a character, corporation or alliance inside the client
 
 ### Example
 
@@ -158,22 +168,25 @@ Open the information window for a character, corporation or alliance inside the 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\UserInterfaceApi(
+$apiInstance = new Tkhamez\Eve\API\Api\UserInterfaceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$target_id = 56; // int | The target to open
-$datasource = 'tranquility'; // string | The server name you would like data from
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$target_id = 56; // int
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $apiInstance->postUiOpenwindowInformation($target_id, $datasource, $token);
+    $result = $apiInstance->postUiOpenwindowInformation($target_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UserInterfaceApi->postUiOpenwindowInformation: ', $e->getMessage(), PHP_EOL;
 }
@@ -183,17 +196,19 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **target_id** | **int**| The target to open | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **target_id** | **int**|  | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-void (empty response body)
+**mixed**
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -207,12 +222,12 @@ void (empty response body)
 ## `postUiOpenwindowMarketdetails()`
 
 ```php
-postUiOpenwindowMarketdetails($type_id, $datasource, $token)
+postUiOpenwindowMarketdetails($type_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): mixed
 ```
 
 Open Market Details
 
-Open the market details window for a specific typeID inside the client  --- Alternate route: `/dev/ui/openwindow/marketdetails/`  Alternate route: `/legacy/ui/openwindow/marketdetails/`  Alternate route: `/v1/ui/openwindow/marketdetails/`
+Open the market details window for a specific typeID inside the client
 
 ### Example
 
@@ -221,22 +236,25 @@ Open the market details window for a specific typeID inside the client  --- Alte
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\UserInterfaceApi(
+$apiInstance = new Tkhamez\Eve\API\Api\UserInterfaceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$type_id = 56; // int | The item type to open in market window
-$datasource = 'tranquility'; // string | The server name you would like data from
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$type_id = 56; // int
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $apiInstance->postUiOpenwindowMarketdetails($type_id, $datasource, $token);
+    $result = $apiInstance->postUiOpenwindowMarketdetails($type_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UserInterfaceApi->postUiOpenwindowMarketdetails: ', $e->getMessage(), PHP_EOL;
 }
@@ -246,17 +264,19 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **type_id** | **int**| The item type to open in market window | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **type_id** | **int**|  | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-void (empty response body)
+**mixed**
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -270,12 +290,12 @@ void (empty response body)
 ## `postUiOpenwindowNewmail()`
 
 ```php
-postUiOpenwindowNewmail($new_mail, $datasource, $token)
+postUiOpenwindowNewmail($x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $post_ui_openwindow_newmail_request): mixed
 ```
 
 Open New Mail Window
 
-Open the New Mail window, according to settings from the request if applicable  --- Alternate route: `/dev/ui/openwindow/newmail/`  Alternate route: `/legacy/ui/openwindow/newmail/`  Alternate route: `/v1/ui/openwindow/newmail/`
+Open the New Mail window, according to settings from the request if applicable
 
 ### Example
 
@@ -284,22 +304,25 @@ Open the New Mail window, according to settings from the request if applicable  
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\UserInterfaceApi(
+$apiInstance = new Tkhamez\Eve\API\Api\UserInterfaceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$new_mail = new \Swagger\Client\Eve\Model\PostUiOpenwindowNewmailNewMail(); // \Swagger\Client\Eve\Model\PostUiOpenwindowNewmailNewMail | The details of mail to create
-$datasource = 'tranquility'; // string | The server name you would like data from
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$post_ui_openwindow_newmail_request = new \Tkhamez\Eve\API\Model\PostUiOpenwindowNewmailRequest(); // \Tkhamez\Eve\API\Model\PostUiOpenwindowNewmailRequest
 
 try {
-    $apiInstance->postUiOpenwindowNewmail($new_mail, $datasource, $token);
+    $result = $apiInstance->postUiOpenwindowNewmail($x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $post_ui_openwindow_newmail_request);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UserInterfaceApi->postUiOpenwindowNewmail: ', $e->getMessage(), PHP_EOL;
 }
@@ -309,17 +332,19 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **new_mail** | [**\Swagger\Client\Eve\Model\PostUiOpenwindowNewmailNewMail**](../Model/PostUiOpenwindowNewmailNewMail.md)| The details of mail to create | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **post_ui_openwindow_newmail_request** | [**\Tkhamez\Eve\API\Model\PostUiOpenwindowNewmailRequest**](../Model/PostUiOpenwindowNewmailRequest.md)|  | [optional] |
 
 ### Return type
 
-void (empty response body)
+**mixed**
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 

@@ -1,28 +1,28 @@
-# Swagger\Client\Eve\IndustryApi
+# Tkhamez\Eve\API\IndustryApi
 
-All URIs are relative to https://esi.evetech.net/latest, except if the operation defines another base path.
+All URIs are relative to https://esi.evetech.net, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**getCharactersCharacterIdIndustryJobs()**](IndustryApi.md#getCharactersCharacterIdIndustryJobs) | **GET** /characters/{character_id}/industry/jobs/ | List character industry jobs |
-| [**getCharactersCharacterIdMining()**](IndustryApi.md#getCharactersCharacterIdMining) | **GET** /characters/{character_id}/mining/ | Character mining ledger |
-| [**getCorporationCorporationIdMiningExtractions()**](IndustryApi.md#getCorporationCorporationIdMiningExtractions) | **GET** /corporation/{corporation_id}/mining/extractions/ | Moon extraction timers |
-| [**getCorporationCorporationIdMiningObservers()**](IndustryApi.md#getCorporationCorporationIdMiningObservers) | **GET** /corporation/{corporation_id}/mining/observers/ | Corporation mining observers |
-| [**getCorporationCorporationIdMiningObserversObserverId()**](IndustryApi.md#getCorporationCorporationIdMiningObserversObserverId) | **GET** /corporation/{corporation_id}/mining/observers/{observer_id}/ | Observed corporation mining |
-| [**getCorporationsCorporationIdIndustryJobs()**](IndustryApi.md#getCorporationsCorporationIdIndustryJobs) | **GET** /corporations/{corporation_id}/industry/jobs/ | List corporation industry jobs |
-| [**getIndustryFacilities()**](IndustryApi.md#getIndustryFacilities) | **GET** /industry/facilities/ | List industry facilities |
-| [**getIndustrySystems()**](IndustryApi.md#getIndustrySystems) | **GET** /industry/systems/ | List solar system cost indices |
+| [**getCharactersCharacterIdIndustryJobs()**](IndustryApi.md#getCharactersCharacterIdIndustryJobs) | **GET** /characters/{character_id}/industry/jobs | List character industry jobs |
+| [**getCharactersCharacterIdMining()**](IndustryApi.md#getCharactersCharacterIdMining) | **GET** /characters/{character_id}/mining | Character mining ledger |
+| [**getCorporationCorporationIdMiningExtractions()**](IndustryApi.md#getCorporationCorporationIdMiningExtractions) | **GET** /corporation/{corporation_id}/mining/extractions | Moon extraction timers |
+| [**getCorporationCorporationIdMiningObservers()**](IndustryApi.md#getCorporationCorporationIdMiningObservers) | **GET** /corporation/{corporation_id}/mining/observers | Corporation mining observers |
+| [**getCorporationCorporationIdMiningObserversObserverId()**](IndustryApi.md#getCorporationCorporationIdMiningObserversObserverId) | **GET** /corporation/{corporation_id}/mining/observers/{observer_id} | Observed corporation mining |
+| [**getCorporationsCorporationIdIndustryJobs()**](IndustryApi.md#getCorporationsCorporationIdIndustryJobs) | **GET** /corporations/{corporation_id}/industry/jobs | List corporation industry jobs |
+| [**getIndustryFacilities()**](IndustryApi.md#getIndustryFacilities) | **GET** /industry/facilities | List industry facilities |
+| [**getIndustrySystems()**](IndustryApi.md#getIndustrySystems) | **GET** /industry/systems | List solar system cost indices |
 
 
 ## `getCharactersCharacterIdIndustryJobs()`
 
 ```php
-getCharactersCharacterIdIndustryJobs($character_id, $datasource, $if_none_match, $include_completed, $token): \Swagger\Client\Eve\Model\GetCharactersCharacterIdIndustryJobs200Ok[]
+getCharactersCharacterIdIndustryJobs($character_id, $x_compatibility_date, $include_completed, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdIndustryJobsGetInner[]
 ```
 
 List character industry jobs
 
-List industry jobs placed by a character  --- Alternate route: `/dev/characters/{character_id}/industry/jobs/`  Alternate route: `/legacy/characters/{character_id}/industry/jobs/`  Alternate route: `/v1/characters/{character_id}/industry/jobs/`  --- This route is cached for up to 300 seconds
+List industry jobs placed by a character
 
 ### Example
 
@@ -31,24 +31,25 @@ List industry jobs placed by a character  --- Alternate route: `/dev/characters/
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\IndustryApi(
+$apiInstance = new Tkhamez\Eve\API\Api\IndustryApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$character_id = 56; // int | An EVE character ID
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
-$include_completed = True; // bool | Whether to retrieve completed character industry jobs. Only includes jobs from the past 90 days
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$character_id = 56; // int | The ID of the character
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$include_completed = True; // bool
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getCharactersCharacterIdIndustryJobs($character_id, $datasource, $if_none_match, $include_completed, $token);
+    $result = $apiInstance->getCharactersCharacterIdIndustryJobs($character_id, $x_compatibility_date, $include_completed, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling IndustryApi->getCharactersCharacterIdIndustryJobs: ', $e->getMessage(), PHP_EOL;
@@ -59,19 +60,20 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **character_id** | **int**| An EVE character ID | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
-| **include_completed** | **bool**| Whether to retrieve completed character industry jobs. Only includes jobs from the past 90 days | [optional] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **character_id** | **int**| The ID of the character | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **include_completed** | **bool**|  | [optional] |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetCharactersCharacterIdIndustryJobs200Ok[]**](../Model/GetCharactersCharacterIdIndustryJobs200Ok.md)
+[**\Tkhamez\Eve\API\Model\CharactersCharacterIdIndustryJobsGetInner[]**](../Model/CharactersCharacterIdIndustryJobsGetInner.md)
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -85,12 +87,12 @@ try {
 ## `getCharactersCharacterIdMining()`
 
 ```php
-getCharactersCharacterIdMining($character_id, $datasource, $if_none_match, $page, $token): \Swagger\Client\Eve\Model\GetCharactersCharacterIdMining200Ok[]
+getCharactersCharacterIdMining($character_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdMiningGetInner[]
 ```
 
 Character mining ledger
 
-Paginated record of all mining done by a character for the past 30 days   --- Alternate route: `/dev/characters/{character_id}/mining/`  Alternate route: `/legacy/characters/{character_id}/mining/`  Alternate route: `/v1/characters/{character_id}/mining/`  --- This route is cached for up to 600 seconds
+Paginated record of all mining done by a character for the past 30 days
 
 ### Example
 
@@ -99,24 +101,25 @@ Paginated record of all mining done by a character for the past 30 days   --- Al
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\IndustryApi(
+$apiInstance = new Tkhamez\Eve\API\Api\IndustryApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$character_id = 56; // int | An EVE character ID
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
-$page = 1; // int | Which page of results to return
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$character_id = 56; // int | The ID of the character
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$page = 56; // int
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getCharactersCharacterIdMining($character_id, $datasource, $if_none_match, $page, $token);
+    $result = $apiInstance->getCharactersCharacterIdMining($character_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling IndustryApi->getCharactersCharacterIdMining: ', $e->getMessage(), PHP_EOL;
@@ -127,19 +130,20 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **character_id** | **int**| An EVE character ID | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
-| **page** | **int**| Which page of results to return | [optional] [default to 1] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **character_id** | **int**| The ID of the character | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **page** | **int**|  | [optional] |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetCharactersCharacterIdMining200Ok[]**](../Model/GetCharactersCharacterIdMining200Ok.md)
+[**\Tkhamez\Eve\API\Model\CharactersCharacterIdMiningGetInner[]**](../Model/CharactersCharacterIdMiningGetInner.md)
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -153,12 +157,12 @@ try {
 ## `getCorporationCorporationIdMiningExtractions()`
 
 ```php
-getCorporationCorporationIdMiningExtractions($corporation_id, $datasource, $if_none_match, $page, $token): \Swagger\Client\Eve\Model\GetCorporationCorporationIdMiningExtractions200Ok[]
+getCorporationCorporationIdMiningExtractions($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CorporationCorporationIdMiningExtractionsGetInner[]
 ```
 
 Moon extraction timers
 
-Extraction timers for all moon chunks being extracted by refineries belonging to a corporation.   --- Alternate route: `/dev/corporation/{corporation_id}/mining/extractions/`  Alternate route: `/legacy/corporation/{corporation_id}/mining/extractions/`  Alternate route: `/v1/corporation/{corporation_id}/mining/extractions/`  --- This route is cached for up to 1800 seconds  --- Requires one of the following EVE corporation role(s): Station_Manager
+Extraction timers for all moon chunks being extracted by refineries belonging to a corporation.  Requires one of the following EVE corporation role(s): Station_Manager
 
 ### Example
 
@@ -167,24 +171,25 @@ Extraction timers for all moon chunks being extracted by refineries belonging to
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\IndustryApi(
+$apiInstance = new Tkhamez\Eve\API\Api\IndustryApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$corporation_id = 56; // int | An EVE corporation ID
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
-$page = 1; // int | Which page of results to return
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$corporation_id = 56; // int | The ID of the corporation
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$page = 56; // int
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getCorporationCorporationIdMiningExtractions($corporation_id, $datasource, $if_none_match, $page, $token);
+    $result = $apiInstance->getCorporationCorporationIdMiningExtractions($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling IndustryApi->getCorporationCorporationIdMiningExtractions: ', $e->getMessage(), PHP_EOL;
@@ -195,19 +200,20 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **corporation_id** | **int**| An EVE corporation ID | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
-| **page** | **int**| Which page of results to return | [optional] [default to 1] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **corporation_id** | **int**| The ID of the corporation | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **page** | **int**|  | [optional] |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetCorporationCorporationIdMiningExtractions200Ok[]**](../Model/GetCorporationCorporationIdMiningExtractions200Ok.md)
+[**\Tkhamez\Eve\API\Model\CorporationCorporationIdMiningExtractionsGetInner[]**](../Model/CorporationCorporationIdMiningExtractionsGetInner.md)
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -221,12 +227,12 @@ try {
 ## `getCorporationCorporationIdMiningObservers()`
 
 ```php
-getCorporationCorporationIdMiningObservers($corporation_id, $datasource, $if_none_match, $page, $token): \Swagger\Client\Eve\Model\GetCorporationCorporationIdMiningObservers200Ok[]
+getCorporationCorporationIdMiningObservers($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CorporationCorporationIdMiningObserversGetInner[]
 ```
 
 Corporation mining observers
 
-Paginated list of all entities capable of observing and recording mining for a corporation   --- Alternate route: `/dev/corporation/{corporation_id}/mining/observers/`  Alternate route: `/legacy/corporation/{corporation_id}/mining/observers/`  Alternate route: `/v1/corporation/{corporation_id}/mining/observers/`  --- This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Accountant
+Paginated list of all entities capable of observing and recording mining for a corporation  Requires one of the following EVE corporation role(s): Accountant
 
 ### Example
 
@@ -235,24 +241,25 @@ Paginated list of all entities capable of observing and recording mining for a c
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\IndustryApi(
+$apiInstance = new Tkhamez\Eve\API\Api\IndustryApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$corporation_id = 56; // int | An EVE corporation ID
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
-$page = 1; // int | Which page of results to return
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$corporation_id = 56; // int | The ID of the corporation
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$page = 56; // int
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getCorporationCorporationIdMiningObservers($corporation_id, $datasource, $if_none_match, $page, $token);
+    $result = $apiInstance->getCorporationCorporationIdMiningObservers($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling IndustryApi->getCorporationCorporationIdMiningObservers: ', $e->getMessage(), PHP_EOL;
@@ -263,19 +270,20 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **corporation_id** | **int**| An EVE corporation ID | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
-| **page** | **int**| Which page of results to return | [optional] [default to 1] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **corporation_id** | **int**| The ID of the corporation | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **page** | **int**|  | [optional] |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetCorporationCorporationIdMiningObservers200Ok[]**](../Model/GetCorporationCorporationIdMiningObservers200Ok.md)
+[**\Tkhamez\Eve\API\Model\CorporationCorporationIdMiningObserversGetInner[]**](../Model/CorporationCorporationIdMiningObserversGetInner.md)
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -289,12 +297,12 @@ try {
 ## `getCorporationCorporationIdMiningObserversObserverId()`
 
 ```php
-getCorporationCorporationIdMiningObserversObserverId($corporation_id, $observer_id, $datasource, $if_none_match, $page, $token): \Swagger\Client\Eve\Model\GetCorporationCorporationIdMiningObserversObserverId200Ok[]
+getCorporationCorporationIdMiningObserversObserverId($corporation_id, $observer_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CorporationCorporationIdMiningObserversObserverIdGetInner[]
 ```
 
 Observed corporation mining
 
-Paginated record of all mining seen by an observer   --- Alternate route: `/dev/corporation/{corporation_id}/mining/observers/{observer_id}/`  Alternate route: `/legacy/corporation/{corporation_id}/mining/observers/{observer_id}/`  Alternate route: `/v1/corporation/{corporation_id}/mining/observers/{observer_id}/`  --- This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Accountant
+Paginated record of all mining seen by an observer  Requires one of the following EVE corporation role(s): Accountant
 
 ### Example
 
@@ -303,25 +311,26 @@ Paginated record of all mining seen by an observer   --- Alternate route: `/dev/
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\IndustryApi(
+$apiInstance = new Tkhamez\Eve\API\Api\IndustryApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$corporation_id = 56; // int | An EVE corporation ID
-$observer_id = 56; // int | A mining observer id
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
-$page = 1; // int | Which page of results to return
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$corporation_id = 56; // int | The ID of the corporation
+$observer_id = 56; // int
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$page = 56; // int
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getCorporationCorporationIdMiningObserversObserverId($corporation_id, $observer_id, $datasource, $if_none_match, $page, $token);
+    $result = $apiInstance->getCorporationCorporationIdMiningObserversObserverId($corporation_id, $observer_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling IndustryApi->getCorporationCorporationIdMiningObserversObserverId: ', $e->getMessage(), PHP_EOL;
@@ -332,20 +341,21 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **corporation_id** | **int**| An EVE corporation ID | |
-| **observer_id** | **int**| A mining observer id | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
-| **page** | **int**| Which page of results to return | [optional] [default to 1] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **corporation_id** | **int**| The ID of the corporation | |
+| **observer_id** | **int**|  | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **page** | **int**|  | [optional] |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetCorporationCorporationIdMiningObserversObserverId200Ok[]**](../Model/GetCorporationCorporationIdMiningObserversObserverId200Ok.md)
+[**\Tkhamez\Eve\API\Model\CorporationCorporationIdMiningObserversObserverIdGetInner[]**](../Model/CorporationCorporationIdMiningObserversObserverIdGetInner.md)
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -359,12 +369,12 @@ try {
 ## `getCorporationsCorporationIdIndustryJobs()`
 
 ```php
-getCorporationsCorporationIdIndustryJobs($corporation_id, $datasource, $if_none_match, $include_completed, $page, $token): \Swagger\Client\Eve\Model\GetCorporationsCorporationIdIndustryJobs200Ok[]
+getCorporationsCorporationIdIndustryJobs($corporation_id, $x_compatibility_date, $include_completed, $page, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdIndustryJobsGetInner[]
 ```
 
 List corporation industry jobs
 
-List industry jobs run by a corporation  --- Alternate route: `/dev/corporations/{corporation_id}/industry/jobs/`  Alternate route: `/legacy/corporations/{corporation_id}/industry/jobs/`  Alternate route: `/v1/corporations/{corporation_id}/industry/jobs/`  --- This route is cached for up to 300 seconds  --- Requires one of the following EVE corporation role(s): Factory_Manager
+List industry jobs run by a corporation  Requires one of the following EVE corporation role(s): Factory_Manager
 
 ### Example
 
@@ -373,25 +383,26 @@ List industry jobs run by a corporation  --- Alternate route: `/dev/corporations
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\IndustryApi(
+$apiInstance = new Tkhamez\Eve\API\Api\IndustryApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$corporation_id = 56; // int | An EVE corporation ID
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
-$include_completed = false; // bool | Whether to retrieve completed corporation industry jobs. Only includes jobs from the past 90 days
-$page = 1; // int | Which page of results to return
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$corporation_id = 56; // int | The ID of the corporation
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$include_completed = false; // bool
+$page = 56; // int
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getCorporationsCorporationIdIndustryJobs($corporation_id, $datasource, $if_none_match, $include_completed, $page, $token);
+    $result = $apiInstance->getCorporationsCorporationIdIndustryJobs($corporation_id, $x_compatibility_date, $include_completed, $page, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling IndustryApi->getCorporationsCorporationIdIndustryJobs: ', $e->getMessage(), PHP_EOL;
@@ -402,20 +413,21 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **corporation_id** | **int**| An EVE corporation ID | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
-| **include_completed** | **bool**| Whether to retrieve completed corporation industry jobs. Only includes jobs from the past 90 days | [optional] [default to false] |
-| **page** | **int**| Which page of results to return | [optional] [default to 1] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **corporation_id** | **int**| The ID of the corporation | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **include_completed** | **bool**|  | [optional] [default to false] |
+| **page** | **int**|  | [optional] |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetCorporationsCorporationIdIndustryJobs200Ok[]**](../Model/GetCorporationsCorporationIdIndustryJobs200Ok.md)
+[**\Tkhamez\Eve\API\Model\CorporationsCorporationIdIndustryJobsGetInner[]**](../Model/CorporationsCorporationIdIndustryJobsGetInner.md)
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -429,12 +441,12 @@ try {
 ## `getIndustryFacilities()`
 
 ```php
-getIndustryFacilities($datasource, $if_none_match): \Swagger\Client\Eve\Model\GetIndustryFacilities200Ok[]
+getIndustryFacilities($x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\IndustryFacilitiesGetInner[]
 ```
 
 List industry facilities
 
-Return a list of industry facilities  --- Alternate route: `/dev/industry/facilities/`  Alternate route: `/legacy/industry/facilities/`  Alternate route: `/v1/industry/facilities/`  --- This route is cached for up to 3600 seconds
+Return a list of industry facilities
 
 ### Example
 
@@ -444,16 +456,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new Swagger\Client\Eve\Api\IndustryApi(
+$apiInstance = new Tkhamez\Eve\API\Api\IndustryApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getIndustryFacilities($datasource, $if_none_match);
+    $result = $apiInstance->getIndustryFacilities($x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling IndustryApi->getIndustryFacilities: ', $e->getMessage(), PHP_EOL;
@@ -464,12 +478,14 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetIndustryFacilities200Ok[]**](../Model/GetIndustryFacilities200Ok.md)
+[**\Tkhamez\Eve\API\Model\IndustryFacilitiesGetInner[]**](../Model/IndustryFacilitiesGetInner.md)
 
 ### Authorization
 
@@ -487,12 +503,12 @@ No authorization required
 ## `getIndustrySystems()`
 
 ```php
-getIndustrySystems($datasource, $if_none_match): \Swagger\Client\Eve\Model\GetIndustrySystems200Ok[]
+getIndustrySystems($x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\IndustrySystemsGetInner[]
 ```
 
 List solar system cost indices
 
-Return cost indices for solar systems  --- Alternate route: `/dev/industry/systems/`  Alternate route: `/legacy/industry/systems/`  Alternate route: `/v1/industry/systems/`  --- This route is cached for up to 3600 seconds
+Return cost indices for solar systems
 
 ### Example
 
@@ -502,16 +518,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new Swagger\Client\Eve\Api\IndustryApi(
+$apiInstance = new Tkhamez\Eve\API\Api\IndustryApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getIndustrySystems($datasource, $if_none_match);
+    $result = $apiInstance->getIndustrySystems($x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling IndustryApi->getIndustrySystems: ', $e->getMessage(), PHP_EOL;
@@ -522,12 +540,14 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetIndustrySystems200Ok[]**](../Model/GetIndustrySystems200Ok.md)
+[**\Tkhamez\Eve\API\Model\IndustrySystemsGetInner[]**](../Model/IndustrySystemsGetInner.md)
 
 ### Authorization
 

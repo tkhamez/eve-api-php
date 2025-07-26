@@ -1,42 +1,42 @@
-# Swagger\Client\Eve\CorporationApi
+# Tkhamez\Eve\API\CorporationApi
 
-All URIs are relative to https://esi.evetech.net/latest, except if the operation defines another base path.
+All URIs are relative to https://esi.evetech.net, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**getCorporationsCorporationId()**](CorporationApi.md#getCorporationsCorporationId) | **GET** /corporations/{corporation_id}/ | Get corporation information |
-| [**getCorporationsCorporationIdAlliancehistory()**](CorporationApi.md#getCorporationsCorporationIdAlliancehistory) | **GET** /corporations/{corporation_id}/alliancehistory/ | Get alliance history |
-| [**getCorporationsCorporationIdBlueprints()**](CorporationApi.md#getCorporationsCorporationIdBlueprints) | **GET** /corporations/{corporation_id}/blueprints/ | Get corporation blueprints |
-| [**getCorporationsCorporationIdContainersLogs()**](CorporationApi.md#getCorporationsCorporationIdContainersLogs) | **GET** /corporations/{corporation_id}/containers/logs/ | Get all corporation ALSC logs |
-| [**getCorporationsCorporationIdDivisions()**](CorporationApi.md#getCorporationsCorporationIdDivisions) | **GET** /corporations/{corporation_id}/divisions/ | Get corporation divisions |
-| [**getCorporationsCorporationIdFacilities()**](CorporationApi.md#getCorporationsCorporationIdFacilities) | **GET** /corporations/{corporation_id}/facilities/ | Get corporation facilities |
-| [**getCorporationsCorporationIdIcons()**](CorporationApi.md#getCorporationsCorporationIdIcons) | **GET** /corporations/{corporation_id}/icons/ | Get corporation icon |
-| [**getCorporationsCorporationIdMedals()**](CorporationApi.md#getCorporationsCorporationIdMedals) | **GET** /corporations/{corporation_id}/medals/ | Get corporation medals |
-| [**getCorporationsCorporationIdMedalsIssued()**](CorporationApi.md#getCorporationsCorporationIdMedalsIssued) | **GET** /corporations/{corporation_id}/medals/issued/ | Get corporation issued medals |
-| [**getCorporationsCorporationIdMembers()**](CorporationApi.md#getCorporationsCorporationIdMembers) | **GET** /corporations/{corporation_id}/members/ | Get corporation members |
-| [**getCorporationsCorporationIdMembersLimit()**](CorporationApi.md#getCorporationsCorporationIdMembersLimit) | **GET** /corporations/{corporation_id}/members/limit/ | Get corporation member limit |
-| [**getCorporationsCorporationIdMembersTitles()**](CorporationApi.md#getCorporationsCorporationIdMembersTitles) | **GET** /corporations/{corporation_id}/members/titles/ | Get corporation&#39;s members&#39; titles |
-| [**getCorporationsCorporationIdMembertracking()**](CorporationApi.md#getCorporationsCorporationIdMembertracking) | **GET** /corporations/{corporation_id}/membertracking/ | Track corporation members |
-| [**getCorporationsCorporationIdRoles()**](CorporationApi.md#getCorporationsCorporationIdRoles) | **GET** /corporations/{corporation_id}/roles/ | Get corporation member roles |
-| [**getCorporationsCorporationIdRolesHistory()**](CorporationApi.md#getCorporationsCorporationIdRolesHistory) | **GET** /corporations/{corporation_id}/roles/history/ | Get corporation member roles history |
-| [**getCorporationsCorporationIdShareholders()**](CorporationApi.md#getCorporationsCorporationIdShareholders) | **GET** /corporations/{corporation_id}/shareholders/ | Get corporation shareholders |
-| [**getCorporationsCorporationIdStandings()**](CorporationApi.md#getCorporationsCorporationIdStandings) | **GET** /corporations/{corporation_id}/standings/ | Get corporation standings |
-| [**getCorporationsCorporationIdStarbases()**](CorporationApi.md#getCorporationsCorporationIdStarbases) | **GET** /corporations/{corporation_id}/starbases/ | Get corporation starbases (POSes) |
-| [**getCorporationsCorporationIdStarbasesStarbaseId()**](CorporationApi.md#getCorporationsCorporationIdStarbasesStarbaseId) | **GET** /corporations/{corporation_id}/starbases/{starbase_id}/ | Get starbase (POS) detail |
-| [**getCorporationsCorporationIdStructures()**](CorporationApi.md#getCorporationsCorporationIdStructures) | **GET** /corporations/{corporation_id}/structures/ | Get corporation structures |
-| [**getCorporationsCorporationIdTitles()**](CorporationApi.md#getCorporationsCorporationIdTitles) | **GET** /corporations/{corporation_id}/titles/ | Get corporation titles |
-| [**getCorporationsNpccorps()**](CorporationApi.md#getCorporationsNpccorps) | **GET** /corporations/npccorps/ | Get npc corporations |
+| [**getCorporationsCorporationId()**](CorporationApi.md#getCorporationsCorporationId) | **GET** /corporations/{corporation_id} | Get corporation information |
+| [**getCorporationsCorporationIdAlliancehistory()**](CorporationApi.md#getCorporationsCorporationIdAlliancehistory) | **GET** /corporations/{corporation_id}/alliancehistory | Get alliance history |
+| [**getCorporationsCorporationIdBlueprints()**](CorporationApi.md#getCorporationsCorporationIdBlueprints) | **GET** /corporations/{corporation_id}/blueprints | Get corporation blueprints |
+| [**getCorporationsCorporationIdContainersLogs()**](CorporationApi.md#getCorporationsCorporationIdContainersLogs) | **GET** /corporations/{corporation_id}/containers/logs | Get all corporation ALSC logs |
+| [**getCorporationsCorporationIdDivisions()**](CorporationApi.md#getCorporationsCorporationIdDivisions) | **GET** /corporations/{corporation_id}/divisions | Get corporation divisions |
+| [**getCorporationsCorporationIdFacilities()**](CorporationApi.md#getCorporationsCorporationIdFacilities) | **GET** /corporations/{corporation_id}/facilities | Get corporation facilities |
+| [**getCorporationsCorporationIdIcons()**](CorporationApi.md#getCorporationsCorporationIdIcons) | **GET** /corporations/{corporation_id}/icons | Get corporation icon |
+| [**getCorporationsCorporationIdMedals()**](CorporationApi.md#getCorporationsCorporationIdMedals) | **GET** /corporations/{corporation_id}/medals | Get corporation medals |
+| [**getCorporationsCorporationIdMedalsIssued()**](CorporationApi.md#getCorporationsCorporationIdMedalsIssued) | **GET** /corporations/{corporation_id}/medals/issued | Get corporation issued medals |
+| [**getCorporationsCorporationIdMembers()**](CorporationApi.md#getCorporationsCorporationIdMembers) | **GET** /corporations/{corporation_id}/members | Get corporation members |
+| [**getCorporationsCorporationIdMembersLimit()**](CorporationApi.md#getCorporationsCorporationIdMembersLimit) | **GET** /corporations/{corporation_id}/members/limit | Get corporation member limit |
+| [**getCorporationsCorporationIdMembersTitles()**](CorporationApi.md#getCorporationsCorporationIdMembersTitles) | **GET** /corporations/{corporation_id}/members/titles | Get corporation&#39;s members&#39; titles |
+| [**getCorporationsCorporationIdMembertracking()**](CorporationApi.md#getCorporationsCorporationIdMembertracking) | **GET** /corporations/{corporation_id}/membertracking | Track corporation members |
+| [**getCorporationsCorporationIdRoles()**](CorporationApi.md#getCorporationsCorporationIdRoles) | **GET** /corporations/{corporation_id}/roles | Get corporation member roles |
+| [**getCorporationsCorporationIdRolesHistory()**](CorporationApi.md#getCorporationsCorporationIdRolesHistory) | **GET** /corporations/{corporation_id}/roles/history | Get corporation member roles history |
+| [**getCorporationsCorporationIdShareholders()**](CorporationApi.md#getCorporationsCorporationIdShareholders) | **GET** /corporations/{corporation_id}/shareholders | Get corporation shareholders |
+| [**getCorporationsCorporationIdStandings()**](CorporationApi.md#getCorporationsCorporationIdStandings) | **GET** /corporations/{corporation_id}/standings | Get corporation standings |
+| [**getCorporationsCorporationIdStarbases()**](CorporationApi.md#getCorporationsCorporationIdStarbases) | **GET** /corporations/{corporation_id}/starbases | Get corporation starbases (POSes) |
+| [**getCorporationsCorporationIdStarbasesStarbaseId()**](CorporationApi.md#getCorporationsCorporationIdStarbasesStarbaseId) | **GET** /corporations/{corporation_id}/starbases/{starbase_id} | Get starbase (POS) detail |
+| [**getCorporationsCorporationIdStructures()**](CorporationApi.md#getCorporationsCorporationIdStructures) | **GET** /corporations/{corporation_id}/structures | Get corporation structures |
+| [**getCorporationsCorporationIdTitles()**](CorporationApi.md#getCorporationsCorporationIdTitles) | **GET** /corporations/{corporation_id}/titles | Get corporation titles |
+| [**getCorporationsNpccorps()**](CorporationApi.md#getCorporationsNpccorps) | **GET** /corporations/npccorps | Get npc corporations |
 
 
 ## `getCorporationsCorporationId()`
 
 ```php
-getCorporationsCorporationId($corporation_id, $datasource, $if_none_match): \Swagger\Client\Eve\Model\GetCorporationsCorporationIdOk
+getCorporationsCorporationId($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdGet
 ```
 
 Get corporation information
 
-Public information about a corporation  --- Alternate route: `/dev/corporations/{corporation_id}/`  Alternate route: `/legacy/corporations/{corporation_id}/`  Alternate route: `/v4/corporations/{corporation_id}/`  Alternate route: `/v5/corporations/{corporation_id}/`  --- This route is cached for up to 3600 seconds
+Public information about a corporation
 
 ### Example
 
@@ -46,17 +46,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new Swagger\Client\Eve\Api\CorporationApi(
+$apiInstance = new Tkhamez\Eve\API\Api\CorporationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$corporation_id = 56; // int | An EVE corporation ID
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
+$corporation_id = 56; // int | The ID of the corporation
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getCorporationsCorporationId($corporation_id, $datasource, $if_none_match);
+    $result = $apiInstance->getCorporationsCorporationId($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CorporationApi->getCorporationsCorporationId: ', $e->getMessage(), PHP_EOL;
@@ -67,13 +69,15 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **corporation_id** | **int**| An EVE corporation ID | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
+| **corporation_id** | **int**| The ID of the corporation | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetCorporationsCorporationIdOk**](../Model/GetCorporationsCorporationIdOk.md)
+[**\Tkhamez\Eve\API\Model\CorporationsCorporationIdGet**](../Model/CorporationsCorporationIdGet.md)
 
 ### Authorization
 
@@ -91,12 +95,12 @@ No authorization required
 ## `getCorporationsCorporationIdAlliancehistory()`
 
 ```php
-getCorporationsCorporationIdAlliancehistory($corporation_id, $datasource, $if_none_match): \Swagger\Client\Eve\Model\GetCorporationsCorporationIdAlliancehistory200Ok[]
+getCorporationsCorporationIdAlliancehistory($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdAlliancehistoryGetInner[]
 ```
 
 Get alliance history
 
-Get a list of all the alliances a corporation has been a member of  --- Alternate route: `/dev/corporations/{corporation_id}/alliancehistory/`  Alternate route: `/legacy/corporations/{corporation_id}/alliancehistory/`  Alternate route: `/v2/corporations/{corporation_id}/alliancehistory/`  Alternate route: `/v3/corporations/{corporation_id}/alliancehistory/`  --- This route is cached for up to 3600 seconds
+Get a list of all the alliances a corporation has been a member of
 
 ### Example
 
@@ -106,17 +110,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new Swagger\Client\Eve\Api\CorporationApi(
+$apiInstance = new Tkhamez\Eve\API\Api\CorporationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$corporation_id = 56; // int | An EVE corporation ID
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
+$corporation_id = 56; // int | The ID of the corporation
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getCorporationsCorporationIdAlliancehistory($corporation_id, $datasource, $if_none_match);
+    $result = $apiInstance->getCorporationsCorporationIdAlliancehistory($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CorporationApi->getCorporationsCorporationIdAlliancehistory: ', $e->getMessage(), PHP_EOL;
@@ -127,13 +133,15 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **corporation_id** | **int**| An EVE corporation ID | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
+| **corporation_id** | **int**| The ID of the corporation | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetCorporationsCorporationIdAlliancehistory200Ok[]**](../Model/GetCorporationsCorporationIdAlliancehistory200Ok.md)
+[**\Tkhamez\Eve\API\Model\CorporationsCorporationIdAlliancehistoryGetInner[]**](../Model/CorporationsCorporationIdAlliancehistoryGetInner.md)
 
 ### Authorization
 
@@ -151,12 +159,12 @@ No authorization required
 ## `getCorporationsCorporationIdBlueprints()`
 
 ```php
-getCorporationsCorporationIdBlueprints($corporation_id, $datasource, $if_none_match, $page, $token): \Swagger\Client\Eve\Model\GetCorporationsCorporationIdBlueprints200Ok[]
+getCorporationsCorporationIdBlueprints($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdBlueprintsGetInner[]
 ```
 
 Get corporation blueprints
 
-Returns a list of blueprints the corporation owns  --- Alternate route: `/dev/corporations/{corporation_id}/blueprints/`  Alternate route: `/legacy/corporations/{corporation_id}/blueprints/`  Alternate route: `/v2/corporations/{corporation_id}/blueprints/`  Alternate route: `/v3/corporations/{corporation_id}/blueprints/`  --- This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Director
+Returns a list of blueprints the corporation owns  Requires one of the following EVE corporation role(s): Director
 
 ### Example
 
@@ -165,24 +173,25 @@ Returns a list of blueprints the corporation owns  --- Alternate route: `/dev/co
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\CorporationApi(
+$apiInstance = new Tkhamez\Eve\API\Api\CorporationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$corporation_id = 56; // int | An EVE corporation ID
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
-$page = 1; // int | Which page of results to return
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$corporation_id = 56; // int | The ID of the corporation
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$page = 56; // int
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getCorporationsCorporationIdBlueprints($corporation_id, $datasource, $if_none_match, $page, $token);
+    $result = $apiInstance->getCorporationsCorporationIdBlueprints($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CorporationApi->getCorporationsCorporationIdBlueprints: ', $e->getMessage(), PHP_EOL;
@@ -193,19 +202,20 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **corporation_id** | **int**| An EVE corporation ID | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
-| **page** | **int**| Which page of results to return | [optional] [default to 1] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **corporation_id** | **int**| The ID of the corporation | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **page** | **int**|  | [optional] |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetCorporationsCorporationIdBlueprints200Ok[]**](../Model/GetCorporationsCorporationIdBlueprints200Ok.md)
+[**\Tkhamez\Eve\API\Model\CorporationsCorporationIdBlueprintsGetInner[]**](../Model/CorporationsCorporationIdBlueprintsGetInner.md)
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -219,12 +229,12 @@ try {
 ## `getCorporationsCorporationIdContainersLogs()`
 
 ```php
-getCorporationsCorporationIdContainersLogs($corporation_id, $datasource, $if_none_match, $page, $token): \Swagger\Client\Eve\Model\GetCorporationsCorporationIdContainersLogs200Ok[]
+getCorporationsCorporationIdContainersLogs($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdContainersLogsGetInner[]
 ```
 
 Get all corporation ALSC logs
 
-Returns logs recorded in the past seven days from all audit log secure containers (ALSC) owned by a given corporation  --- Alternate route: `/dev/corporations/{corporation_id}/containers/logs/`  Alternate route: `/legacy/corporations/{corporation_id}/containers/logs/`  Alternate route: `/v2/corporations/{corporation_id}/containers/logs/`  Alternate route: `/v3/corporations/{corporation_id}/containers/logs/`  --- This route is cached for up to 600 seconds  --- Requires one of the following EVE corporation role(s): Director
+Returns logs recorded in the past seven days from all audit log secure containers (ALSC) owned by a given corporation  Requires one of the following EVE corporation role(s): Director
 
 ### Example
 
@@ -233,24 +243,25 @@ Returns logs recorded in the past seven days from all audit log secure container
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\CorporationApi(
+$apiInstance = new Tkhamez\Eve\API\Api\CorporationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$corporation_id = 56; // int | An EVE corporation ID
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
-$page = 1; // int | Which page of results to return
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$corporation_id = 56; // int | The ID of the corporation
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$page = 56; // int
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getCorporationsCorporationIdContainersLogs($corporation_id, $datasource, $if_none_match, $page, $token);
+    $result = $apiInstance->getCorporationsCorporationIdContainersLogs($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CorporationApi->getCorporationsCorporationIdContainersLogs: ', $e->getMessage(), PHP_EOL;
@@ -261,19 +272,20 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **corporation_id** | **int**| An EVE corporation ID | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
-| **page** | **int**| Which page of results to return | [optional] [default to 1] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **corporation_id** | **int**| The ID of the corporation | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **page** | **int**|  | [optional] |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetCorporationsCorporationIdContainersLogs200Ok[]**](../Model/GetCorporationsCorporationIdContainersLogs200Ok.md)
+[**\Tkhamez\Eve\API\Model\CorporationsCorporationIdContainersLogsGetInner[]**](../Model/CorporationsCorporationIdContainersLogsGetInner.md)
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -287,12 +299,12 @@ try {
 ## `getCorporationsCorporationIdDivisions()`
 
 ```php
-getCorporationsCorporationIdDivisions($corporation_id, $datasource, $if_none_match, $token): \Swagger\Client\Eve\Model\GetCorporationsCorporationIdDivisionsOk
+getCorporationsCorporationIdDivisions($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdDivisionsGet
 ```
 
 Get corporation divisions
 
-Return corporation hangar and wallet division names, only show if a division is not using the default name  --- Alternate route: `/dev/corporations/{corporation_id}/divisions/`  Alternate route: `/legacy/corporations/{corporation_id}/divisions/`  Alternate route: `/v1/corporations/{corporation_id}/divisions/`  Alternate route: `/v2/corporations/{corporation_id}/divisions/`  --- This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Director
+Return corporation hangar and wallet division names, only show if a division is not using the default name  Requires one of the following EVE corporation role(s): Director
 
 ### Example
 
@@ -301,23 +313,24 @@ Return corporation hangar and wallet division names, only show if a division is 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\CorporationApi(
+$apiInstance = new Tkhamez\Eve\API\Api\CorporationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$corporation_id = 56; // int | An EVE corporation ID
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$corporation_id = 56; // int | The ID of the corporation
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getCorporationsCorporationIdDivisions($corporation_id, $datasource, $if_none_match, $token);
+    $result = $apiInstance->getCorporationsCorporationIdDivisions($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CorporationApi->getCorporationsCorporationIdDivisions: ', $e->getMessage(), PHP_EOL;
@@ -328,18 +341,19 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **corporation_id** | **int**| An EVE corporation ID | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **corporation_id** | **int**| The ID of the corporation | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetCorporationsCorporationIdDivisionsOk**](../Model/GetCorporationsCorporationIdDivisionsOk.md)
+[**\Tkhamez\Eve\API\Model\CorporationsCorporationIdDivisionsGet**](../Model/CorporationsCorporationIdDivisionsGet.md)
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -353,12 +367,12 @@ try {
 ## `getCorporationsCorporationIdFacilities()`
 
 ```php
-getCorporationsCorporationIdFacilities($corporation_id, $datasource, $if_none_match, $token): \Swagger\Client\Eve\Model\GetCorporationsCorporationIdFacilities200Ok[]
+getCorporationsCorporationIdFacilities($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdFacilitiesGetInner[]
 ```
 
 Get corporation facilities
 
-Return a corporation's facilities  --- Alternate route: `/dev/corporations/{corporation_id}/facilities/`  Alternate route: `/legacy/corporations/{corporation_id}/facilities/`  Alternate route: `/v1/corporations/{corporation_id}/facilities/`  Alternate route: `/v2/corporations/{corporation_id}/facilities/`  --- This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Factory_Manager
+Return a corporation's facilities  Requires one of the following EVE corporation role(s): Factory_Manager
 
 ### Example
 
@@ -367,23 +381,24 @@ Return a corporation's facilities  --- Alternate route: `/dev/corporations/{corp
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\CorporationApi(
+$apiInstance = new Tkhamez\Eve\API\Api\CorporationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$corporation_id = 56; // int | An EVE corporation ID
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$corporation_id = 56; // int | The ID of the corporation
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getCorporationsCorporationIdFacilities($corporation_id, $datasource, $if_none_match, $token);
+    $result = $apiInstance->getCorporationsCorporationIdFacilities($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CorporationApi->getCorporationsCorporationIdFacilities: ', $e->getMessage(), PHP_EOL;
@@ -394,18 +409,19 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **corporation_id** | **int**| An EVE corporation ID | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **corporation_id** | **int**| The ID of the corporation | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetCorporationsCorporationIdFacilities200Ok[]**](../Model/GetCorporationsCorporationIdFacilities200Ok.md)
+[**\Tkhamez\Eve\API\Model\CorporationsCorporationIdFacilitiesGetInner[]**](../Model/CorporationsCorporationIdFacilitiesGetInner.md)
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -419,12 +435,12 @@ try {
 ## `getCorporationsCorporationIdIcons()`
 
 ```php
-getCorporationsCorporationIdIcons($corporation_id, $datasource, $if_none_match): \Swagger\Client\Eve\Model\GetCorporationsCorporationIdIconsOk
+getCorporationsCorporationIdIcons($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdIconsGet
 ```
 
 Get corporation icon
 
-Get the icon urls for a corporation  --- Alternate route: `/dev/corporations/{corporation_id}/icons/`  Alternate route: `/legacy/corporations/{corporation_id}/icons/`  Alternate route: `/v1/corporations/{corporation_id}/icons/`  Alternate route: `/v2/corporations/{corporation_id}/icons/`  --- This route is cached for up to 3600 seconds
+Get the icon urls for a corporation
 
 ### Example
 
@@ -434,17 +450,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new Swagger\Client\Eve\Api\CorporationApi(
+$apiInstance = new Tkhamez\Eve\API\Api\CorporationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$corporation_id = 56; // int | An EVE corporation ID
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
+$corporation_id = 56; // int | The ID of the corporation
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getCorporationsCorporationIdIcons($corporation_id, $datasource, $if_none_match);
+    $result = $apiInstance->getCorporationsCorporationIdIcons($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CorporationApi->getCorporationsCorporationIdIcons: ', $e->getMessage(), PHP_EOL;
@@ -455,13 +473,15 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **corporation_id** | **int**| An EVE corporation ID | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
+| **corporation_id** | **int**| The ID of the corporation | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetCorporationsCorporationIdIconsOk**](../Model/GetCorporationsCorporationIdIconsOk.md)
+[**\Tkhamez\Eve\API\Model\CorporationsCorporationIdIconsGet**](../Model/CorporationsCorporationIdIconsGet.md)
 
 ### Authorization
 
@@ -479,12 +499,12 @@ No authorization required
 ## `getCorporationsCorporationIdMedals()`
 
 ```php
-getCorporationsCorporationIdMedals($corporation_id, $datasource, $if_none_match, $page, $token): \Swagger\Client\Eve\Model\GetCorporationsCorporationIdMedals200Ok[]
+getCorporationsCorporationIdMedals($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdMedalsGetInner[]
 ```
 
 Get corporation medals
 
-Returns a corporation's medals  --- Alternate route: `/dev/corporations/{corporation_id}/medals/`  Alternate route: `/legacy/corporations/{corporation_id}/medals/`  Alternate route: `/v1/corporations/{corporation_id}/medals/`  Alternate route: `/v2/corporations/{corporation_id}/medals/`  --- This route is cached for up to 3600 seconds
+Returns a corporation's medals
 
 ### Example
 
@@ -493,24 +513,25 @@ Returns a corporation's medals  --- Alternate route: `/dev/corporations/{corpora
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\CorporationApi(
+$apiInstance = new Tkhamez\Eve\API\Api\CorporationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$corporation_id = 56; // int | An EVE corporation ID
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
-$page = 1; // int | Which page of results to return
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$corporation_id = 56; // int | The ID of the corporation
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$page = 56; // int
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getCorporationsCorporationIdMedals($corporation_id, $datasource, $if_none_match, $page, $token);
+    $result = $apiInstance->getCorporationsCorporationIdMedals($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CorporationApi->getCorporationsCorporationIdMedals: ', $e->getMessage(), PHP_EOL;
@@ -521,19 +542,20 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **corporation_id** | **int**| An EVE corporation ID | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
-| **page** | **int**| Which page of results to return | [optional] [default to 1] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **corporation_id** | **int**| The ID of the corporation | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **page** | **int**|  | [optional] |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetCorporationsCorporationIdMedals200Ok[]**](../Model/GetCorporationsCorporationIdMedals200Ok.md)
+[**\Tkhamez\Eve\API\Model\CorporationsCorporationIdMedalsGetInner[]**](../Model/CorporationsCorporationIdMedalsGetInner.md)
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -547,12 +569,12 @@ try {
 ## `getCorporationsCorporationIdMedalsIssued()`
 
 ```php
-getCorporationsCorporationIdMedalsIssued($corporation_id, $datasource, $if_none_match, $page, $token): \Swagger\Client\Eve\Model\GetCorporationsCorporationIdMedalsIssued200Ok[]
+getCorporationsCorporationIdMedalsIssued($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdMedalsIssuedGetInner[]
 ```
 
 Get corporation issued medals
 
-Returns medals issued by a corporation  --- Alternate route: `/dev/corporations/{corporation_id}/medals/issued/`  Alternate route: `/legacy/corporations/{corporation_id}/medals/issued/`  Alternate route: `/v1/corporations/{corporation_id}/medals/issued/`  Alternate route: `/v2/corporations/{corporation_id}/medals/issued/`  --- This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Director
+Returns medals issued by a corporation  Requires one of the following EVE corporation role(s): Director
 
 ### Example
 
@@ -561,24 +583,25 @@ Returns medals issued by a corporation  --- Alternate route: `/dev/corporations/
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\CorporationApi(
+$apiInstance = new Tkhamez\Eve\API\Api\CorporationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$corporation_id = 56; // int | An EVE corporation ID
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
-$page = 1; // int | Which page of results to return
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$corporation_id = 56; // int | The ID of the corporation
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$page = 56; // int
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getCorporationsCorporationIdMedalsIssued($corporation_id, $datasource, $if_none_match, $page, $token);
+    $result = $apiInstance->getCorporationsCorporationIdMedalsIssued($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CorporationApi->getCorporationsCorporationIdMedalsIssued: ', $e->getMessage(), PHP_EOL;
@@ -589,19 +612,20 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **corporation_id** | **int**| An EVE corporation ID | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
-| **page** | **int**| Which page of results to return | [optional] [default to 1] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **corporation_id** | **int**| The ID of the corporation | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **page** | **int**|  | [optional] |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetCorporationsCorporationIdMedalsIssued200Ok[]**](../Model/GetCorporationsCorporationIdMedalsIssued200Ok.md)
+[**\Tkhamez\Eve\API\Model\CorporationsCorporationIdMedalsIssuedGetInner[]**](../Model/CorporationsCorporationIdMedalsIssuedGetInner.md)
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -615,12 +639,12 @@ try {
 ## `getCorporationsCorporationIdMembers()`
 
 ```php
-getCorporationsCorporationIdMembers($corporation_id, $datasource, $if_none_match, $token): int[]
+getCorporationsCorporationIdMembers($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): int[]
 ```
 
 Get corporation members
 
-Return the current member list of a corporation, the token's character need to be a member of the corporation.  --- Alternate route: `/dev/corporations/{corporation_id}/members/`  Alternate route: `/legacy/corporations/{corporation_id}/members/`  Alternate route: `/v3/corporations/{corporation_id}/members/`  Alternate route: `/v4/corporations/{corporation_id}/members/`  --- This route is cached for up to 3600 seconds
+Return the current member list of a corporation, the token's character need to be a member of the corporation.
 
 ### Example
 
@@ -629,23 +653,24 @@ Return the current member list of a corporation, the token's character need to b
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\CorporationApi(
+$apiInstance = new Tkhamez\Eve\API\Api\CorporationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$corporation_id = 56; // int | An EVE corporation ID
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$corporation_id = 56; // int | The ID of the corporation
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getCorporationsCorporationIdMembers($corporation_id, $datasource, $if_none_match, $token);
+    $result = $apiInstance->getCorporationsCorporationIdMembers($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CorporationApi->getCorporationsCorporationIdMembers: ', $e->getMessage(), PHP_EOL;
@@ -656,10 +681,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **corporation_id** | **int**| An EVE corporation ID | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **corporation_id** | **int**| The ID of the corporation | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
@@ -667,7 +693,7 @@ try {
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -681,12 +707,12 @@ try {
 ## `getCorporationsCorporationIdMembersLimit()`
 
 ```php
-getCorporationsCorporationIdMembersLimit($corporation_id, $datasource, $if_none_match, $token): int
+getCorporationsCorporationIdMembersLimit($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): int
 ```
 
 Get corporation member limit
 
-Return a corporation's member limit, not including CEO himself  --- Alternate route: `/dev/corporations/{corporation_id}/members/limit/`  Alternate route: `/legacy/corporations/{corporation_id}/members/limit/`  Alternate route: `/v1/corporations/{corporation_id}/members/limit/`  Alternate route: `/v2/corporations/{corporation_id}/members/limit/`  --- This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Director
+Return a corporation's member limit, not including CEO himself  Requires one of the following EVE corporation role(s): Director
 
 ### Example
 
@@ -695,23 +721,24 @@ Return a corporation's member limit, not including CEO himself  --- Alternate ro
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\CorporationApi(
+$apiInstance = new Tkhamez\Eve\API\Api\CorporationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$corporation_id = 56; // int | An EVE corporation ID
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$corporation_id = 56; // int | The ID of the corporation
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getCorporationsCorporationIdMembersLimit($corporation_id, $datasource, $if_none_match, $token);
+    $result = $apiInstance->getCorporationsCorporationIdMembersLimit($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CorporationApi->getCorporationsCorporationIdMembersLimit: ', $e->getMessage(), PHP_EOL;
@@ -722,10 +749,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **corporation_id** | **int**| An EVE corporation ID | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **corporation_id** | **int**| The ID of the corporation | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
@@ -733,7 +761,7 @@ try {
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -747,12 +775,12 @@ try {
 ## `getCorporationsCorporationIdMembersTitles()`
 
 ```php
-getCorporationsCorporationIdMembersTitles($corporation_id, $datasource, $if_none_match, $token): \Swagger\Client\Eve\Model\GetCorporationsCorporationIdMembersTitles200Ok[]
+getCorporationsCorporationIdMembersTitles($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdMembersTitlesGetInner[]
 ```
 
 Get corporation's members' titles
 
-Returns a corporation's members' titles  --- Alternate route: `/dev/corporations/{corporation_id}/members/titles/`  Alternate route: `/legacy/corporations/{corporation_id}/members/titles/`  Alternate route: `/v1/corporations/{corporation_id}/members/titles/`  Alternate route: `/v2/corporations/{corporation_id}/members/titles/`  --- This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Director
+Returns a corporation's members' titles  Requires one of the following EVE corporation role(s): Director
 
 ### Example
 
@@ -761,23 +789,24 @@ Returns a corporation's members' titles  --- Alternate route: `/dev/corporations
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\CorporationApi(
+$apiInstance = new Tkhamez\Eve\API\Api\CorporationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$corporation_id = 56; // int | An EVE corporation ID
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$corporation_id = 56; // int | The ID of the corporation
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getCorporationsCorporationIdMembersTitles($corporation_id, $datasource, $if_none_match, $token);
+    $result = $apiInstance->getCorporationsCorporationIdMembersTitles($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CorporationApi->getCorporationsCorporationIdMembersTitles: ', $e->getMessage(), PHP_EOL;
@@ -788,18 +817,19 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **corporation_id** | **int**| An EVE corporation ID | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **corporation_id** | **int**| The ID of the corporation | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetCorporationsCorporationIdMembersTitles200Ok[]**](../Model/GetCorporationsCorporationIdMembersTitles200Ok.md)
+[**\Tkhamez\Eve\API\Model\CorporationsCorporationIdMembersTitlesGetInner[]**](../Model/CorporationsCorporationIdMembersTitlesGetInner.md)
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -813,12 +843,12 @@ try {
 ## `getCorporationsCorporationIdMembertracking()`
 
 ```php
-getCorporationsCorporationIdMembertracking($corporation_id, $datasource, $if_none_match, $token): \Swagger\Client\Eve\Model\GetCorporationsCorporationIdMembertracking200Ok[]
+getCorporationsCorporationIdMembertracking($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdMembertrackingGetInner[]
 ```
 
 Track corporation members
 
-Returns additional information about a corporation's members which helps tracking their activities  --- Alternate route: `/dev/corporations/{corporation_id}/membertracking/`  Alternate route: `/legacy/corporations/{corporation_id}/membertracking/`  Alternate route: `/v1/corporations/{corporation_id}/membertracking/`  Alternate route: `/v2/corporations/{corporation_id}/membertracking/`  --- This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Director
+Returns additional information about a corporation's members which helps tracking their activities  Requires one of the following EVE corporation role(s): Director
 
 ### Example
 
@@ -827,23 +857,24 @@ Returns additional information about a corporation's members which helps trackin
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\CorporationApi(
+$apiInstance = new Tkhamez\Eve\API\Api\CorporationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$corporation_id = 56; // int | An EVE corporation ID
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$corporation_id = 56; // int | The ID of the corporation
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getCorporationsCorporationIdMembertracking($corporation_id, $datasource, $if_none_match, $token);
+    $result = $apiInstance->getCorporationsCorporationIdMembertracking($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CorporationApi->getCorporationsCorporationIdMembertracking: ', $e->getMessage(), PHP_EOL;
@@ -854,18 +885,19 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **corporation_id** | **int**| An EVE corporation ID | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **corporation_id** | **int**| The ID of the corporation | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetCorporationsCorporationIdMembertracking200Ok[]**](../Model/GetCorporationsCorporationIdMembertracking200Ok.md)
+[**\Tkhamez\Eve\API\Model\CorporationsCorporationIdMembertrackingGetInner[]**](../Model/CorporationsCorporationIdMembertrackingGetInner.md)
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -879,12 +911,12 @@ try {
 ## `getCorporationsCorporationIdRoles()`
 
 ```php
-getCorporationsCorporationIdRoles($corporation_id, $datasource, $if_none_match, $token): \Swagger\Client\Eve\Model\GetCorporationsCorporationIdRoles200Ok[]
+getCorporationsCorporationIdRoles($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdRolesGetInner[]
 ```
 
 Get corporation member roles
 
-Return the roles of all members if the character has the personnel manager role or any grantable role.  --- Alternate route: `/dev/corporations/{corporation_id}/roles/`  Alternate route: `/legacy/corporations/{corporation_id}/roles/`  Alternate route: `/v1/corporations/{corporation_id}/roles/`  Alternate route: `/v2/corporations/{corporation_id}/roles/`  --- This route is cached for up to 3600 seconds
+Return the roles of all members if the character has the personnel manager role or any grantable role.
 
 ### Example
 
@@ -893,23 +925,24 @@ Return the roles of all members if the character has the personnel manager role 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\CorporationApi(
+$apiInstance = new Tkhamez\Eve\API\Api\CorporationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$corporation_id = 56; // int | An EVE corporation ID
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$corporation_id = 56; // int | The ID of the corporation
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getCorporationsCorporationIdRoles($corporation_id, $datasource, $if_none_match, $token);
+    $result = $apiInstance->getCorporationsCorporationIdRoles($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CorporationApi->getCorporationsCorporationIdRoles: ', $e->getMessage(), PHP_EOL;
@@ -920,18 +953,19 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **corporation_id** | **int**| An EVE corporation ID | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **corporation_id** | **int**| The ID of the corporation | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetCorporationsCorporationIdRoles200Ok[]**](../Model/GetCorporationsCorporationIdRoles200Ok.md)
+[**\Tkhamez\Eve\API\Model\CorporationsCorporationIdRolesGetInner[]**](../Model/CorporationsCorporationIdRolesGetInner.md)
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -945,12 +979,12 @@ try {
 ## `getCorporationsCorporationIdRolesHistory()`
 
 ```php
-getCorporationsCorporationIdRolesHistory($corporation_id, $datasource, $if_none_match, $page, $token): \Swagger\Client\Eve\Model\GetCorporationsCorporationIdRolesHistory200Ok[]
+getCorporationsCorporationIdRolesHistory($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdRolesHistoryGetInner[]
 ```
 
 Get corporation member roles history
 
-Return how roles have changed for a coporation's members, up to a month  --- Alternate route: `/dev/corporations/{corporation_id}/roles/history/`  Alternate route: `/legacy/corporations/{corporation_id}/roles/history/`  Alternate route: `/v1/corporations/{corporation_id}/roles/history/`  Alternate route: `/v2/corporations/{corporation_id}/roles/history/`  --- This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Director
+Return how roles have changed for a coporation's members, up to a month  Requires one of the following EVE corporation role(s): Director
 
 ### Example
 
@@ -959,24 +993,25 @@ Return how roles have changed for a coporation's members, up to a month  --- Alt
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\CorporationApi(
+$apiInstance = new Tkhamez\Eve\API\Api\CorporationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$corporation_id = 56; // int | An EVE corporation ID
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
-$page = 1; // int | Which page of results to return
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$corporation_id = 56; // int | The ID of the corporation
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$page = 56; // int
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getCorporationsCorporationIdRolesHistory($corporation_id, $datasource, $if_none_match, $page, $token);
+    $result = $apiInstance->getCorporationsCorporationIdRolesHistory($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CorporationApi->getCorporationsCorporationIdRolesHistory: ', $e->getMessage(), PHP_EOL;
@@ -987,19 +1022,20 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **corporation_id** | **int**| An EVE corporation ID | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
-| **page** | **int**| Which page of results to return | [optional] [default to 1] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **corporation_id** | **int**| The ID of the corporation | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **page** | **int**|  | [optional] |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetCorporationsCorporationIdRolesHistory200Ok[]**](../Model/GetCorporationsCorporationIdRolesHistory200Ok.md)
+[**\Tkhamez\Eve\API\Model\CorporationsCorporationIdRolesHistoryGetInner[]**](../Model/CorporationsCorporationIdRolesHistoryGetInner.md)
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -1013,12 +1049,12 @@ try {
 ## `getCorporationsCorporationIdShareholders()`
 
 ```php
-getCorporationsCorporationIdShareholders($corporation_id, $datasource, $if_none_match, $page, $token): \Swagger\Client\Eve\Model\GetCorporationsCorporationIdShareholders200Ok[]
+getCorporationsCorporationIdShareholders($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdShareholdersGetInner[]
 ```
 
 Get corporation shareholders
 
-Return the current shareholders of a corporation.  --- Alternate route: `/dev/corporations/{corporation_id}/shareholders/`  Alternate route: `/legacy/corporations/{corporation_id}/shareholders/`  Alternate route: `/v1/corporations/{corporation_id}/shareholders/`  --- This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Director
+Return the current shareholders of a corporation.  Requires one of the following EVE corporation role(s): Director
 
 ### Example
 
@@ -1027,24 +1063,25 @@ Return the current shareholders of a corporation.  --- Alternate route: `/dev/co
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\CorporationApi(
+$apiInstance = new Tkhamez\Eve\API\Api\CorporationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$corporation_id = 56; // int | An EVE corporation ID
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
-$page = 1; // int | Which page of results to return
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$corporation_id = 56; // int | The ID of the corporation
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$page = 56; // int
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getCorporationsCorporationIdShareholders($corporation_id, $datasource, $if_none_match, $page, $token);
+    $result = $apiInstance->getCorporationsCorporationIdShareholders($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CorporationApi->getCorporationsCorporationIdShareholders: ', $e->getMessage(), PHP_EOL;
@@ -1055,19 +1092,20 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **corporation_id** | **int**| An EVE corporation ID | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
-| **page** | **int**| Which page of results to return | [optional] [default to 1] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **corporation_id** | **int**| The ID of the corporation | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **page** | **int**|  | [optional] |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetCorporationsCorporationIdShareholders200Ok[]**](../Model/GetCorporationsCorporationIdShareholders200Ok.md)
+[**\Tkhamez\Eve\API\Model\CorporationsCorporationIdShareholdersGetInner[]**](../Model/CorporationsCorporationIdShareholdersGetInner.md)
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -1081,12 +1119,12 @@ try {
 ## `getCorporationsCorporationIdStandings()`
 
 ```php
-getCorporationsCorporationIdStandings($corporation_id, $datasource, $if_none_match, $page, $token): \Swagger\Client\Eve\Model\GetCorporationsCorporationIdStandings200Ok[]
+getCorporationsCorporationIdStandings($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdStandingsGetInner[]
 ```
 
 Get corporation standings
 
-Return corporation standings from agents, NPC corporations, and factions  --- Alternate route: `/dev/corporations/{corporation_id}/standings/`  Alternate route: `/legacy/corporations/{corporation_id}/standings/`  Alternate route: `/v1/corporations/{corporation_id}/standings/`  Alternate route: `/v2/corporations/{corporation_id}/standings/`  --- This route is cached for up to 3600 seconds
+Return corporation standings from agents, NPC corporations, and factions
 
 ### Example
 
@@ -1095,24 +1133,25 @@ Return corporation standings from agents, NPC corporations, and factions  --- Al
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\CorporationApi(
+$apiInstance = new Tkhamez\Eve\API\Api\CorporationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$corporation_id = 56; // int | An EVE corporation ID
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
-$page = 1; // int | Which page of results to return
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$corporation_id = 56; // int | The ID of the corporation
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$page = 56; // int
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getCorporationsCorporationIdStandings($corporation_id, $datasource, $if_none_match, $page, $token);
+    $result = $apiInstance->getCorporationsCorporationIdStandings($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CorporationApi->getCorporationsCorporationIdStandings: ', $e->getMessage(), PHP_EOL;
@@ -1123,19 +1162,20 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **corporation_id** | **int**| An EVE corporation ID | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
-| **page** | **int**| Which page of results to return | [optional] [default to 1] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **corporation_id** | **int**| The ID of the corporation | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **page** | **int**|  | [optional] |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetCorporationsCorporationIdStandings200Ok[]**](../Model/GetCorporationsCorporationIdStandings200Ok.md)
+[**\Tkhamez\Eve\API\Model\CharactersCharacterIdStandingsGetInner[]**](../Model/CharactersCharacterIdStandingsGetInner.md)
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -1149,12 +1189,12 @@ try {
 ## `getCorporationsCorporationIdStarbases()`
 
 ```php
-getCorporationsCorporationIdStarbases($corporation_id, $datasource, $if_none_match, $page, $token): \Swagger\Client\Eve\Model\GetCorporationsCorporationIdStarbases200Ok[]
+getCorporationsCorporationIdStarbases($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdStarbasesGetInner[]
 ```
 
 Get corporation starbases (POSes)
 
-Returns list of corporation starbases (POSes)  --- Alternate route: `/dev/corporations/{corporation_id}/starbases/`  Alternate route: `/legacy/corporations/{corporation_id}/starbases/`  Alternate route: `/v1/corporations/{corporation_id}/starbases/`  Alternate route: `/v2/corporations/{corporation_id}/starbases/`  --- This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Director
+Returns list of corporation starbases (POSes)  Requires one of the following EVE corporation role(s): Director
 
 ### Example
 
@@ -1163,24 +1203,25 @@ Returns list of corporation starbases (POSes)  --- Alternate route: `/dev/corpor
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\CorporationApi(
+$apiInstance = new Tkhamez\Eve\API\Api\CorporationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$corporation_id = 56; // int | An EVE corporation ID
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
-$page = 1; // int | Which page of results to return
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$corporation_id = 56; // int | The ID of the corporation
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$page = 56; // int
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getCorporationsCorporationIdStarbases($corporation_id, $datasource, $if_none_match, $page, $token);
+    $result = $apiInstance->getCorporationsCorporationIdStarbases($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CorporationApi->getCorporationsCorporationIdStarbases: ', $e->getMessage(), PHP_EOL;
@@ -1191,19 +1232,20 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **corporation_id** | **int**| An EVE corporation ID | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
-| **page** | **int**| Which page of results to return | [optional] [default to 1] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **corporation_id** | **int**| The ID of the corporation | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **page** | **int**|  | [optional] |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetCorporationsCorporationIdStarbases200Ok[]**](../Model/GetCorporationsCorporationIdStarbases200Ok.md)
+[**\Tkhamez\Eve\API\Model\CorporationsCorporationIdStarbasesGetInner[]**](../Model/CorporationsCorporationIdStarbasesGetInner.md)
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -1217,12 +1259,12 @@ try {
 ## `getCorporationsCorporationIdStarbasesStarbaseId()`
 
 ```php
-getCorporationsCorporationIdStarbasesStarbaseId($corporation_id, $starbase_id, $system_id, $datasource, $if_none_match, $token): \Swagger\Client\Eve\Model\GetCorporationsCorporationIdStarbasesStarbaseIdOk
+getCorporationsCorporationIdStarbasesStarbaseId($corporation_id, $starbase_id, $system_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdStarbasesStarbaseIdGet
 ```
 
 Get starbase (POS) detail
 
-Returns various settings and fuels of a starbase (POS)  --- Alternate route: `/dev/corporations/{corporation_id}/starbases/{starbase_id}/`  Alternate route: `/legacy/corporations/{corporation_id}/starbases/{starbase_id}/`  Alternate route: `/v1/corporations/{corporation_id}/starbases/{starbase_id}/`  Alternate route: `/v2/corporations/{corporation_id}/starbases/{starbase_id}/`  --- This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Director
+Returns various settings and fuels of a starbase (POS)  Requires one of the following EVE corporation role(s): Director
 
 ### Example
 
@@ -1231,25 +1273,26 @@ Returns various settings and fuels of a starbase (POS)  --- Alternate route: `/d
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\CorporationApi(
+$apiInstance = new Tkhamez\Eve\API\Api\CorporationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$corporation_id = 56; // int | An EVE corporation ID
-$starbase_id = 56; // int | An EVE starbase (POS) ID
-$system_id = 56; // int | The solar system this starbase (POS) is located in,
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$corporation_id = 56; // int | The ID of the corporation
+$starbase_id = 56; // int
+$system_id = 56; // int
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getCorporationsCorporationIdStarbasesStarbaseId($corporation_id, $starbase_id, $system_id, $datasource, $if_none_match, $token);
+    $result = $apiInstance->getCorporationsCorporationIdStarbasesStarbaseId($corporation_id, $starbase_id, $system_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CorporationApi->getCorporationsCorporationIdStarbasesStarbaseId: ', $e->getMessage(), PHP_EOL;
@@ -1260,20 +1303,21 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **corporation_id** | **int**| An EVE corporation ID | |
-| **starbase_id** | **int**| An EVE starbase (POS) ID | |
-| **system_id** | **int**| The solar system this starbase (POS) is located in, | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **corporation_id** | **int**| The ID of the corporation | |
+| **starbase_id** | **int**|  | |
+| **system_id** | **int**|  | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetCorporationsCorporationIdStarbasesStarbaseIdOk**](../Model/GetCorporationsCorporationIdStarbasesStarbaseIdOk.md)
+[**\Tkhamez\Eve\API\Model\CorporationsCorporationIdStarbasesStarbaseIdGet**](../Model/CorporationsCorporationIdStarbasesStarbaseIdGet.md)
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -1287,12 +1331,12 @@ try {
 ## `getCorporationsCorporationIdStructures()`
 
 ```php
-getCorporationsCorporationIdStructures($corporation_id, $accept_language, $datasource, $if_none_match, $language, $page, $token): \Swagger\Client\Eve\Model\GetCorporationsCorporationIdStructures200Ok[]
+getCorporationsCorporationIdStructures($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdStructuresGetInner[]
 ```
 
 Get corporation structures
 
-Get a list of corporation structures. This route's version includes the changes to structures detailed in this blog: https://www.eveonline.com/article/upwell-2.0-structures-changes-coming-on-february-13th  --- Alternate route: `/dev/corporations/{corporation_id}/structures/`  Alternate route: `/v4/corporations/{corporation_id}/structures/`  --- This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Station_Manager
+Get a list of corporation structures. This route's version includes the changes to structures detailed in this blog: https://www.eveonline.com/article/upwell-2.0-structures-changes-coming-on-february-13th  Requires one of the following EVE corporation role(s): Station_Manager
 
 ### Example
 
@@ -1301,26 +1345,25 @@ Get a list of corporation structures. This route's version includes the changes 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\CorporationApi(
+$apiInstance = new Tkhamez\Eve\API\Api\CorporationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$corporation_id = 56; // int | An EVE corporation ID
-$accept_language = 'en'; // string | Language to use in the response
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
-$language = 'en'; // string | Language to use in the response, takes precedence over Accept-Language
-$page = 1; // int | Which page of results to return
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$corporation_id = 56; // int | The ID of the corporation
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$page = 56; // int
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getCorporationsCorporationIdStructures($corporation_id, $accept_language, $datasource, $if_none_match, $language, $page, $token);
+    $result = $apiInstance->getCorporationsCorporationIdStructures($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CorporationApi->getCorporationsCorporationIdStructures: ', $e->getMessage(), PHP_EOL;
@@ -1331,21 +1374,20 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **corporation_id** | **int**| An EVE corporation ID | |
-| **accept_language** | **string**| Language to use in the response | [optional] [default to &#39;en&#39;] |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
-| **language** | **string**| Language to use in the response, takes precedence over Accept-Language | [optional] [default to &#39;en&#39;] |
-| **page** | **int**| Which page of results to return | [optional] [default to 1] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **corporation_id** | **int**| The ID of the corporation | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **page** | **int**|  | [optional] |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetCorporationsCorporationIdStructures200Ok[]**](../Model/GetCorporationsCorporationIdStructures200Ok.md)
+[**\Tkhamez\Eve\API\Model\CorporationsCorporationIdStructuresGetInner[]**](../Model/CorporationsCorporationIdStructuresGetInner.md)
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -1359,12 +1401,12 @@ try {
 ## `getCorporationsCorporationIdTitles()`
 
 ```php
-getCorporationsCorporationIdTitles($corporation_id, $datasource, $if_none_match, $token): \Swagger\Client\Eve\Model\GetCorporationsCorporationIdTitles200Ok[]
+getCorporationsCorporationIdTitles($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdTitlesGetInner[]
 ```
 
 Get corporation titles
 
-Returns a corporation's titles  --- Alternate route: `/dev/corporations/{corporation_id}/titles/`  Alternate route: `/legacy/corporations/{corporation_id}/titles/`  Alternate route: `/v1/corporations/{corporation_id}/titles/`  Alternate route: `/v2/corporations/{corporation_id}/titles/`  --- This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Director
+Returns a corporation's titles  Requires one of the following EVE corporation role(s): Director
 
 ### Example
 
@@ -1373,23 +1415,24 @@ Returns a corporation's titles  --- Alternate route: `/dev/corporations/{corpora
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\CorporationApi(
+$apiInstance = new Tkhamez\Eve\API\Api\CorporationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$corporation_id = 56; // int | An EVE corporation ID
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$corporation_id = 56; // int | The ID of the corporation
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getCorporationsCorporationIdTitles($corporation_id, $datasource, $if_none_match, $token);
+    $result = $apiInstance->getCorporationsCorporationIdTitles($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CorporationApi->getCorporationsCorporationIdTitles: ', $e->getMessage(), PHP_EOL;
@@ -1400,18 +1443,19 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **corporation_id** | **int**| An EVE corporation ID | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **corporation_id** | **int**| The ID of the corporation | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetCorporationsCorporationIdTitles200Ok[]**](../Model/GetCorporationsCorporationIdTitles200Ok.md)
+[**\Tkhamez\Eve\API\Model\CorporationsCorporationIdTitlesGetInner[]**](../Model/CorporationsCorporationIdTitlesGetInner.md)
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -1425,12 +1469,12 @@ try {
 ## `getCorporationsNpccorps()`
 
 ```php
-getCorporationsNpccorps($datasource, $if_none_match): int[]
+getCorporationsNpccorps($x_compatibility_date, $accept_language, $if_none_match, $x_tenant): int[]
 ```
 
 Get npc corporations
 
-Get a list of npc corporations  --- Alternate route: `/dev/corporations/npccorps/`  Alternate route: `/legacy/corporations/npccorps/`  Alternate route: `/v1/corporations/npccorps/`  Alternate route: `/v2/corporations/npccorps/`  --- This route expires daily at 11:05
+Get a list of npc corporations  This route expires daily at 11:05
 
 ### Example
 
@@ -1440,16 +1484,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new Swagger\Client\Eve\Api\CorporationApi(
+$apiInstance = new Tkhamez\Eve\API\Api\CorporationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getCorporationsNpccorps($datasource, $if_none_match);
+    $result = $apiInstance->getCorporationsNpccorps($x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CorporationApi->getCorporationsNpccorps: ', $e->getMessage(), PHP_EOL;
@@ -1460,8 +1506,10 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 

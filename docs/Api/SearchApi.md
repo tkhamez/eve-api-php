@@ -1,21 +1,21 @@
-# Swagger\Client\Eve\SearchApi
+# Tkhamez\Eve\API\SearchApi
 
-All URIs are relative to https://esi.evetech.net/latest, except if the operation defines another base path.
+All URIs are relative to https://esi.evetech.net, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**getCharactersCharacterIdSearch()**](SearchApi.md#getCharactersCharacterIdSearch) | **GET** /characters/{character_id}/search/ | Search on a string |
+| [**getCharactersCharacterIdSearch()**](SearchApi.md#getCharactersCharacterIdSearch) | **GET** /characters/{character_id}/search | Search on a string |
 
 
 ## `getCharactersCharacterIdSearch()`
 
 ```php
-getCharactersCharacterIdSearch($categories, $character_id, $search, $accept_language, $datasource, $if_none_match, $language, $strict, $token): \Swagger\Client\Eve\Model\GetCharactersCharacterIdSearchOk
+getCharactersCharacterIdSearch($categories, $character_id, $search, $x_compatibility_date, $strict, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdSearchGet
 ```
 
 Search on a string
 
-Search for entities that match a given sub-string.  --- Alternate route: `/dev/characters/{character_id}/search/`  Alternate route: `/legacy/characters/{character_id}/search/`  Alternate route: `/v3/characters/{character_id}/search/`  --- This route is cached for up to 3600 seconds
+Search for entities that match a given sub-string.
 
 ### Example
 
@@ -24,28 +24,27 @@ Search for entities that match a given sub-string.  --- Alternate route: `/dev/c
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\SearchApi(
+$apiInstance = new Tkhamez\Eve\API\Api\SearchApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$categories = array('categories_example'); // string[] | Type of entities to search for
-$character_id = 56; // int | An EVE character ID
-$search = 'search_example'; // string | The string to search on
-$accept_language = 'en'; // string | Language to use in the response
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
-$language = 'en'; // string | Language to use in the response, takes precedence over Accept-Language
-$strict = false; // bool | Whether the search should be a strict match
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$categories = array('categories_example'); // string[]
+$character_id = 56; // int | The ID of the character
+$search = 'search_example'; // string
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$strict = false; // bool
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getCharactersCharacterIdSearch($categories, $character_id, $search, $accept_language, $datasource, $if_none_match, $language, $strict, $token);
+    $result = $apiInstance->getCharactersCharacterIdSearch($categories, $character_id, $search, $x_compatibility_date, $strict, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SearchApi->getCharactersCharacterIdSearch: ', $e->getMessage(), PHP_EOL;
@@ -56,23 +55,22 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **categories** | [**string[]**](../Model/string.md)| Type of entities to search for | |
-| **character_id** | **int**| An EVE character ID | |
-| **search** | **string**| The string to search on | |
-| **accept_language** | **string**| Language to use in the response | [optional] [default to &#39;en&#39;] |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
-| **language** | **string**| Language to use in the response, takes precedence over Accept-Language | [optional] [default to &#39;en&#39;] |
-| **strict** | **bool**| Whether the search should be a strict match | [optional] [default to false] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **categories** | [**string[]**](../Model/string.md)|  | |
+| **character_id** | **int**| The ID of the character | |
+| **search** | **string**|  | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **strict** | **bool**|  | [optional] [default to false] |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetCharactersCharacterIdSearchOk**](../Model/GetCharactersCharacterIdSearchOk.md)
+[**\Tkhamez\Eve\API\Model\CharactersCharacterIdSearchGet**](../Model/CharactersCharacterIdSearchGet.md)
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 

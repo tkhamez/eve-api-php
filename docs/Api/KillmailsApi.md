@@ -1,23 +1,23 @@
-# Swagger\Client\Eve\KillmailsApi
+# Tkhamez\Eve\API\KillmailsApi
 
-All URIs are relative to https://esi.evetech.net/latest, except if the operation defines another base path.
+All URIs are relative to https://esi.evetech.net, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**getCharactersCharacterIdKillmailsRecent()**](KillmailsApi.md#getCharactersCharacterIdKillmailsRecent) | **GET** /characters/{character_id}/killmails/recent/ | Get a character&#39;s recent kills and losses |
-| [**getCorporationsCorporationIdKillmailsRecent()**](KillmailsApi.md#getCorporationsCorporationIdKillmailsRecent) | **GET** /corporations/{corporation_id}/killmails/recent/ | Get a corporation&#39;s recent kills and losses |
-| [**getKillmailsKillmailIdKillmailHash()**](KillmailsApi.md#getKillmailsKillmailIdKillmailHash) | **GET** /killmails/{killmail_id}/{killmail_hash}/ | Get a single killmail |
+| [**getCharactersCharacterIdKillmailsRecent()**](KillmailsApi.md#getCharactersCharacterIdKillmailsRecent) | **GET** /characters/{character_id}/killmails/recent | Get a character&#39;s recent kills and losses |
+| [**getCorporationsCorporationIdKillmailsRecent()**](KillmailsApi.md#getCorporationsCorporationIdKillmailsRecent) | **GET** /corporations/{corporation_id}/killmails/recent | Get a corporation&#39;s recent kills and losses |
+| [**getKillmailsKillmailIdKillmailHash()**](KillmailsApi.md#getKillmailsKillmailIdKillmailHash) | **GET** /killmails/{killmail_id}/{killmail_hash} | Get a single killmail |
 
 
 ## `getCharactersCharacterIdKillmailsRecent()`
 
 ```php
-getCharactersCharacterIdKillmailsRecent($character_id, $datasource, $if_none_match, $page, $token): \Swagger\Client\Eve\Model\GetCharactersCharacterIdKillmailsRecent200Ok[]
+getCharactersCharacterIdKillmailsRecent($character_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdKillmailsRecentGetInner[]
 ```
 
 Get a character's recent kills and losses
 
-Return a list of a character's kills and losses going back 90 days  --- Alternate route: `/dev/characters/{character_id}/killmails/recent/`  Alternate route: `/legacy/characters/{character_id}/killmails/recent/`  Alternate route: `/v1/characters/{character_id}/killmails/recent/`  --- This route is cached for up to 300 seconds
+Return a list of a character's kills and losses going back 90 days
 
 ### Example
 
@@ -26,24 +26,25 @@ Return a list of a character's kills and losses going back 90 days  --- Alternat
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\KillmailsApi(
+$apiInstance = new Tkhamez\Eve\API\Api\KillmailsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$character_id = 56; // int | An EVE character ID
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
-$page = 1; // int | Which page of results to return
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$character_id = 56; // int | The ID of the character
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$page = 56; // int
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getCharactersCharacterIdKillmailsRecent($character_id, $datasource, $if_none_match, $page, $token);
+    $result = $apiInstance->getCharactersCharacterIdKillmailsRecent($character_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling KillmailsApi->getCharactersCharacterIdKillmailsRecent: ', $e->getMessage(), PHP_EOL;
@@ -54,19 +55,20 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **character_id** | **int**| An EVE character ID | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
-| **page** | **int**| Which page of results to return | [optional] [default to 1] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **character_id** | **int**| The ID of the character | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **page** | **int**|  | [optional] |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetCharactersCharacterIdKillmailsRecent200Ok[]**](../Model/GetCharactersCharacterIdKillmailsRecent200Ok.md)
+[**\Tkhamez\Eve\API\Model\CharactersCharacterIdKillmailsRecentGetInner[]**](../Model/CharactersCharacterIdKillmailsRecentGetInner.md)
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -80,12 +82,12 @@ try {
 ## `getCorporationsCorporationIdKillmailsRecent()`
 
 ```php
-getCorporationsCorporationIdKillmailsRecent($corporation_id, $datasource, $if_none_match, $page, $token): \Swagger\Client\Eve\Model\GetCorporationsCorporationIdKillmailsRecent200Ok[]
+getCorporationsCorporationIdKillmailsRecent($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdKillmailsRecentGetInner[]
 ```
 
 Get a corporation's recent kills and losses
 
-Get a list of a corporation's kills and losses going back 90 days  --- Alternate route: `/dev/corporations/{corporation_id}/killmails/recent/`  Alternate route: `/legacy/corporations/{corporation_id}/killmails/recent/`  Alternate route: `/v1/corporations/{corporation_id}/killmails/recent/`  --- This route is cached for up to 300 seconds  --- Requires one of the following EVE corporation role(s): Director
+Get a list of a corporation's kills and losses going back 90 days  Requires one of the following EVE corporation role(s): Director
 
 ### Example
 
@@ -94,24 +96,25 @@ Get a list of a corporation's kills and losses going back 90 days  --- Alternate
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\KillmailsApi(
+$apiInstance = new Tkhamez\Eve\API\Api\KillmailsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$corporation_id = 56; // int | An EVE corporation ID
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
-$page = 1; // int | Which page of results to return
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$corporation_id = 56; // int | The ID of the corporation
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$page = 56; // int
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getCorporationsCorporationIdKillmailsRecent($corporation_id, $datasource, $if_none_match, $page, $token);
+    $result = $apiInstance->getCorporationsCorporationIdKillmailsRecent($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling KillmailsApi->getCorporationsCorporationIdKillmailsRecent: ', $e->getMessage(), PHP_EOL;
@@ -122,19 +125,20 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **corporation_id** | **int**| An EVE corporation ID | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
-| **page** | **int**| Which page of results to return | [optional] [default to 1] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **corporation_id** | **int**| The ID of the corporation | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **page** | **int**|  | [optional] |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetCorporationsCorporationIdKillmailsRecent200Ok[]**](../Model/GetCorporationsCorporationIdKillmailsRecent200Ok.md)
+[**\Tkhamez\Eve\API\Model\CharactersCharacterIdKillmailsRecentGetInner[]**](../Model/CharactersCharacterIdKillmailsRecentGetInner.md)
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -148,12 +152,12 @@ try {
 ## `getKillmailsKillmailIdKillmailHash()`
 
 ```php
-getKillmailsKillmailIdKillmailHash($killmail_hash, $killmail_id, $datasource, $if_none_match): \Swagger\Client\Eve\Model\GetKillmailsKillmailIdKillmailHashOk
+getKillmailsKillmailIdKillmailHash($killmail_hash, $killmail_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\KillmailsKillmailIdKillmailHashGet
 ```
 
 Get a single killmail
 
-Return a single killmail from its ID and hash  --- Alternate route: `/dev/killmails/{killmail_id}/{killmail_hash}/`  Alternate route: `/legacy/killmails/{killmail_id}/{killmail_hash}/`  Alternate route: `/v1/killmails/{killmail_id}/{killmail_hash}/`  --- This route is cached for up to 30758400 seconds
+Return a single killmail from its ID and hash
 
 ### Example
 
@@ -163,18 +167,20 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new Swagger\Client\Eve\Api\KillmailsApi(
+$apiInstance = new Tkhamez\Eve\API\Api\KillmailsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$killmail_hash = 'killmail_hash_example'; // string | The killmail hash for verification
-$killmail_id = 56; // int | The killmail ID to be queried
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
+$killmail_hash = 'killmail_hash_example'; // string
+$killmail_id = 56; // int
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getKillmailsKillmailIdKillmailHash($killmail_hash, $killmail_id, $datasource, $if_none_match);
+    $result = $apiInstance->getKillmailsKillmailIdKillmailHash($killmail_hash, $killmail_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling KillmailsApi->getKillmailsKillmailIdKillmailHash: ', $e->getMessage(), PHP_EOL;
@@ -185,14 +191,16 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **killmail_hash** | **string**| The killmail hash for verification | |
-| **killmail_id** | **int**| The killmail ID to be queried | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
+| **killmail_hash** | **string**|  | |
+| **killmail_id** | **int**|  | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetKillmailsKillmailIdKillmailHashOk**](../Model/GetKillmailsKillmailIdKillmailHashOk.md)
+[**\Tkhamez\Eve\API\Model\KillmailsKillmailIdKillmailHashGet**](../Model/KillmailsKillmailIdKillmailHashGet.md)
 
 ### Authorization
 

@@ -1,29 +1,29 @@
-# Swagger\Client\Eve\MailApi
+# Tkhamez\Eve\API\MailApi
 
-All URIs are relative to https://esi.evetech.net/latest, except if the operation defines another base path.
+All URIs are relative to https://esi.evetech.net, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**deleteCharactersCharacterIdMailLabelsLabelId()**](MailApi.md#deleteCharactersCharacterIdMailLabelsLabelId) | **DELETE** /characters/{character_id}/mail/labels/{label_id}/ | Delete a mail label |
-| [**deleteCharactersCharacterIdMailMailId()**](MailApi.md#deleteCharactersCharacterIdMailMailId) | **DELETE** /characters/{character_id}/mail/{mail_id}/ | Delete a mail |
-| [**getCharactersCharacterIdMail()**](MailApi.md#getCharactersCharacterIdMail) | **GET** /characters/{character_id}/mail/ | Return mail headers |
-| [**getCharactersCharacterIdMailLabels()**](MailApi.md#getCharactersCharacterIdMailLabels) | **GET** /characters/{character_id}/mail/labels/ | Get mail labels and unread counts |
-| [**getCharactersCharacterIdMailLists()**](MailApi.md#getCharactersCharacterIdMailLists) | **GET** /characters/{character_id}/mail/lists/ | Return mailing list subscriptions |
-| [**getCharactersCharacterIdMailMailId()**](MailApi.md#getCharactersCharacterIdMailMailId) | **GET** /characters/{character_id}/mail/{mail_id}/ | Return a mail |
-| [**postCharactersCharacterIdMail()**](MailApi.md#postCharactersCharacterIdMail) | **POST** /characters/{character_id}/mail/ | Send a new mail |
-| [**postCharactersCharacterIdMailLabels()**](MailApi.md#postCharactersCharacterIdMailLabels) | **POST** /characters/{character_id}/mail/labels/ | Create a mail label |
-| [**putCharactersCharacterIdMailMailId()**](MailApi.md#putCharactersCharacterIdMailMailId) | **PUT** /characters/{character_id}/mail/{mail_id}/ | Update metadata about a mail |
+| [**deleteCharactersCharacterIdMailLabelsLabelId()**](MailApi.md#deleteCharactersCharacterIdMailLabelsLabelId) | **DELETE** /characters/{character_id}/mail/labels/{label_id} | Delete a mail label |
+| [**deleteCharactersCharacterIdMailMailId()**](MailApi.md#deleteCharactersCharacterIdMailMailId) | **DELETE** /characters/{character_id}/mail/{mail_id} | Delete a mail |
+| [**getCharactersCharacterIdMail()**](MailApi.md#getCharactersCharacterIdMail) | **GET** /characters/{character_id}/mail | Return mail headers |
+| [**getCharactersCharacterIdMailLabels()**](MailApi.md#getCharactersCharacterIdMailLabels) | **GET** /characters/{character_id}/mail/labels | Get mail labels and unread counts |
+| [**getCharactersCharacterIdMailLists()**](MailApi.md#getCharactersCharacterIdMailLists) | **GET** /characters/{character_id}/mail/lists | Return mailing list subscriptions |
+| [**getCharactersCharacterIdMailMailId()**](MailApi.md#getCharactersCharacterIdMailMailId) | **GET** /characters/{character_id}/mail/{mail_id} | Return a mail |
+| [**postCharactersCharacterIdMail()**](MailApi.md#postCharactersCharacterIdMail) | **POST** /characters/{character_id}/mail | Send a new mail |
+| [**postCharactersCharacterIdMailLabels()**](MailApi.md#postCharactersCharacterIdMailLabels) | **POST** /characters/{character_id}/mail/labels | Create a mail label |
+| [**putCharactersCharacterIdMailMailId()**](MailApi.md#putCharactersCharacterIdMailMailId) | **PUT** /characters/{character_id}/mail/{mail_id} | Update metadata about a mail |
 
 
 ## `deleteCharactersCharacterIdMailLabelsLabelId()`
 
 ```php
-deleteCharactersCharacterIdMailLabelsLabelId($character_id, $label_id, $datasource, $token)
+deleteCharactersCharacterIdMailLabelsLabelId($character_id, $label_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): mixed
 ```
 
 Delete a mail label
 
-Delete a mail label  --- Alternate route: `/dev/characters/{character_id}/mail/labels/{label_id}/`  Alternate route: `/legacy/characters/{character_id}/mail/labels/{label_id}/`  Alternate route: `/v1/characters/{character_id}/mail/labels/{label_id}/`
+Delete a mail label
 
 ### Example
 
@@ -32,23 +32,26 @@ Delete a mail label  --- Alternate route: `/dev/characters/{character_id}/mail/l
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\MailApi(
+$apiInstance = new Tkhamez\Eve\API\Api\MailApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$character_id = 56; // int | An EVE character ID
-$label_id = 56; // int | An EVE label id
-$datasource = 'tranquility'; // string | The server name you would like data from
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$character_id = 56; // int | The ID of the character
+$label_id = 56; // int
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $apiInstance->deleteCharactersCharacterIdMailLabelsLabelId($character_id, $label_id, $datasource, $token);
+    $result = $apiInstance->deleteCharactersCharacterIdMailLabelsLabelId($character_id, $label_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MailApi->deleteCharactersCharacterIdMailLabelsLabelId: ', $e->getMessage(), PHP_EOL;
 }
@@ -58,18 +61,20 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **character_id** | **int**| An EVE character ID | |
-| **label_id** | **int**| An EVE label id | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **character_id** | **int**| The ID of the character | |
+| **label_id** | **int**|  | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-void (empty response body)
+**mixed**
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -83,12 +88,12 @@ void (empty response body)
 ## `deleteCharactersCharacterIdMailMailId()`
 
 ```php
-deleteCharactersCharacterIdMailMailId($character_id, $mail_id, $datasource, $token)
+deleteCharactersCharacterIdMailMailId($character_id, $mail_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): mixed
 ```
 
 Delete a mail
 
-Delete a mail  --- Alternate route: `/dev/characters/{character_id}/mail/{mail_id}/`  Alternate route: `/legacy/characters/{character_id}/mail/{mail_id}/`  Alternate route: `/v1/characters/{character_id}/mail/{mail_id}/`
+Delete a mail
 
 ### Example
 
@@ -97,23 +102,26 @@ Delete a mail  --- Alternate route: `/dev/characters/{character_id}/mail/{mail_i
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\MailApi(
+$apiInstance = new Tkhamez\Eve\API\Api\MailApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$character_id = 56; // int | An EVE character ID
-$mail_id = 56; // int | An EVE mail ID
-$datasource = 'tranquility'; // string | The server name you would like data from
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$character_id = 56; // int | The ID of the character
+$mail_id = 56; // int
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $apiInstance->deleteCharactersCharacterIdMailMailId($character_id, $mail_id, $datasource, $token);
+    $result = $apiInstance->deleteCharactersCharacterIdMailMailId($character_id, $mail_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MailApi->deleteCharactersCharacterIdMailMailId: ', $e->getMessage(), PHP_EOL;
 }
@@ -123,18 +131,20 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **character_id** | **int**| An EVE character ID | |
-| **mail_id** | **int**| An EVE mail ID | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **character_id** | **int**| The ID of the character | |
+| **mail_id** | **int**|  | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-void (empty response body)
+**mixed**
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -148,12 +158,12 @@ void (empty response body)
 ## `getCharactersCharacterIdMail()`
 
 ```php
-getCharactersCharacterIdMail($character_id, $datasource, $if_none_match, $labels, $last_mail_id, $token): \Swagger\Client\Eve\Model\GetCharactersCharacterIdMail200Ok[]
+getCharactersCharacterIdMail($character_id, $x_compatibility_date, $labels, $last_mail_id, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdMailGetInner[]
 ```
 
 Return mail headers
 
-Return the 50 most recent mail headers belonging to the character that match the query criteria. Queries can be filtered by label, and last_mail_id can be used to paginate backwards  --- Alternate route: `/dev/characters/{character_id}/mail/`  Alternate route: `/legacy/characters/{character_id}/mail/`  Alternate route: `/v1/characters/{character_id}/mail/`  --- This route is cached for up to 30 seconds
+Return the 50 most recent mail headers belonging to the character that match the query criteria. Queries can be filtered by label, and last_mail_id can be used to paginate backwards
 
 ### Example
 
@@ -162,25 +172,26 @@ Return the 50 most recent mail headers belonging to the character that match the
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\MailApi(
+$apiInstance = new Tkhamez\Eve\API\Api\MailApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$character_id = 56; // int | An EVE character ID
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
-$labels = array(56); // int[] | Fetch only mails that match one or more of the given labels
-$last_mail_id = 56; // int | List only mail with an ID lower than the given ID, if present
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$character_id = 56; // int | The ID of the character
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$labels = array(56); // int[]
+$last_mail_id = 56; // int
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getCharactersCharacterIdMail($character_id, $datasource, $if_none_match, $labels, $last_mail_id, $token);
+    $result = $apiInstance->getCharactersCharacterIdMail($character_id, $x_compatibility_date, $labels, $last_mail_id, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MailApi->getCharactersCharacterIdMail: ', $e->getMessage(), PHP_EOL;
@@ -191,20 +202,21 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **character_id** | **int**| An EVE character ID | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
-| **labels** | [**int[]**](../Model/int.md)| Fetch only mails that match one or more of the given labels | [optional] |
-| **last_mail_id** | **int**| List only mail with an ID lower than the given ID, if present | [optional] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **character_id** | **int**| The ID of the character | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **labels** | [**int[]**](../Model/int.md)|  | [optional] |
+| **last_mail_id** | **int**|  | [optional] |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetCharactersCharacterIdMail200Ok[]**](../Model/GetCharactersCharacterIdMail200Ok.md)
+[**\Tkhamez\Eve\API\Model\CharactersCharacterIdMailGetInner[]**](../Model/CharactersCharacterIdMailGetInner.md)
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -218,12 +230,12 @@ try {
 ## `getCharactersCharacterIdMailLabels()`
 
 ```php
-getCharactersCharacterIdMailLabels($character_id, $datasource, $if_none_match, $token): \Swagger\Client\Eve\Model\GetCharactersCharacterIdMailLabelsOk
+getCharactersCharacterIdMailLabels($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdMailLabelsGet
 ```
 
 Get mail labels and unread counts
 
-Return a list of the users mail labels, unread counts for each label and a total unread count.  --- Alternate route: `/dev/characters/{character_id}/mail/labels/`  Alternate route: `/v3/characters/{character_id}/mail/labels/`  --- This route is cached for up to 30 seconds
+Return a list of the users mail labels, unread counts for each label and a total unread count.
 
 ### Example
 
@@ -232,23 +244,24 @@ Return a list of the users mail labels, unread counts for each label and a total
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\MailApi(
+$apiInstance = new Tkhamez\Eve\API\Api\MailApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$character_id = 56; // int | An EVE character ID
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$character_id = 56; // int | The ID of the character
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getCharactersCharacterIdMailLabels($character_id, $datasource, $if_none_match, $token);
+    $result = $apiInstance->getCharactersCharacterIdMailLabels($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MailApi->getCharactersCharacterIdMailLabels: ', $e->getMessage(), PHP_EOL;
@@ -259,18 +272,19 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **character_id** | **int**| An EVE character ID | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **character_id** | **int**| The ID of the character | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetCharactersCharacterIdMailLabelsOk**](../Model/GetCharactersCharacterIdMailLabelsOk.md)
+[**\Tkhamez\Eve\API\Model\CharactersCharacterIdMailLabelsGet**](../Model/CharactersCharacterIdMailLabelsGet.md)
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -284,12 +298,12 @@ try {
 ## `getCharactersCharacterIdMailLists()`
 
 ```php
-getCharactersCharacterIdMailLists($character_id, $datasource, $if_none_match, $token): \Swagger\Client\Eve\Model\GetCharactersCharacterIdMailLists200Ok[]
+getCharactersCharacterIdMailLists($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdMailListsGetInner[]
 ```
 
 Return mailing list subscriptions
 
-Return all mailing lists that the character is subscribed to  --- Alternate route: `/dev/characters/{character_id}/mail/lists/`  Alternate route: `/legacy/characters/{character_id}/mail/lists/`  Alternate route: `/v1/characters/{character_id}/mail/lists/`  --- This route is cached for up to 120 seconds
+Return all mailing lists that the character is subscribed to
 
 ### Example
 
@@ -298,23 +312,24 @@ Return all mailing lists that the character is subscribed to  --- Alternate rout
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\MailApi(
+$apiInstance = new Tkhamez\Eve\API\Api\MailApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$character_id = 56; // int | An EVE character ID
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$character_id = 56; // int | The ID of the character
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getCharactersCharacterIdMailLists($character_id, $datasource, $if_none_match, $token);
+    $result = $apiInstance->getCharactersCharacterIdMailLists($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MailApi->getCharactersCharacterIdMailLists: ', $e->getMessage(), PHP_EOL;
@@ -325,18 +340,19 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **character_id** | **int**| An EVE character ID | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **character_id** | **int**| The ID of the character | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetCharactersCharacterIdMailLists200Ok[]**](../Model/GetCharactersCharacterIdMailLists200Ok.md)
+[**\Tkhamez\Eve\API\Model\CharactersCharacterIdMailListsGetInner[]**](../Model/CharactersCharacterIdMailListsGetInner.md)
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -350,12 +366,12 @@ try {
 ## `getCharactersCharacterIdMailMailId()`
 
 ```php
-getCharactersCharacterIdMailMailId($character_id, $mail_id, $datasource, $if_none_match, $token): \Swagger\Client\Eve\Model\GetCharactersCharacterIdMailMailIdOk
+getCharactersCharacterIdMailMailId($character_id, $mail_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdMailMailIdGet
 ```
 
 Return a mail
 
-Return the contents of an EVE mail  --- Alternate route: `/dev/characters/{character_id}/mail/{mail_id}/`  Alternate route: `/legacy/characters/{character_id}/mail/{mail_id}/`  Alternate route: `/v1/characters/{character_id}/mail/{mail_id}/`  --- This route is cached for up to 30 seconds
+Return the contents of an EVE mail
 
 ### Example
 
@@ -364,24 +380,25 @@ Return the contents of an EVE mail  --- Alternate route: `/dev/characters/{chara
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\MailApi(
+$apiInstance = new Tkhamez\Eve\API\Api\MailApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$character_id = 56; // int | An EVE character ID
-$mail_id = 56; // int | An EVE mail ID
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$character_id = 56; // int | The ID of the character
+$mail_id = 56; // int
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getCharactersCharacterIdMailMailId($character_id, $mail_id, $datasource, $if_none_match, $token);
+    $result = $apiInstance->getCharactersCharacterIdMailMailId($character_id, $mail_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MailApi->getCharactersCharacterIdMailMailId: ', $e->getMessage(), PHP_EOL;
@@ -392,19 +409,20 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **character_id** | **int**| An EVE character ID | |
-| **mail_id** | **int**| An EVE mail ID | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **character_id** | **int**| The ID of the character | |
+| **mail_id** | **int**|  | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetCharactersCharacterIdMailMailIdOk**](../Model/GetCharactersCharacterIdMailMailIdOk.md)
+[**\Tkhamez\Eve\API\Model\CharactersCharacterIdMailMailIdGet**](../Model/CharactersCharacterIdMailMailIdGet.md)
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -418,12 +436,12 @@ try {
 ## `postCharactersCharacterIdMail()`
 
 ```php
-postCharactersCharacterIdMail($character_id, $mail, $datasource, $token): int
+postCharactersCharacterIdMail($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $post_characters_character_id_mail_request): int
 ```
 
 Send a new mail
 
-Create and send a new mail  --- Alternate route: `/dev/characters/{character_id}/mail/`  Alternate route: `/legacy/characters/{character_id}/mail/`  Alternate route: `/v1/characters/{character_id}/mail/`
+Create and send a new mail
 
 ### Example
 
@@ -432,23 +450,25 @@ Create and send a new mail  --- Alternate route: `/dev/characters/{character_id}
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\MailApi(
+$apiInstance = new Tkhamez\Eve\API\Api\MailApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$character_id = 56; // int | An EVE character ID
-$mail = new \Swagger\Client\Eve\Model\PostCharactersCharacterIdMailMail(); // \Swagger\Client\Eve\Model\PostCharactersCharacterIdMailMail | The mail to send
-$datasource = 'tranquility'; // string | The server name you would like data from
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$character_id = 56; // int | The ID of the character
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$post_characters_character_id_mail_request = new \Tkhamez\Eve\API\Model\PostCharactersCharacterIdMailRequest(); // \Tkhamez\Eve\API\Model\PostCharactersCharacterIdMailRequest
 
 try {
-    $result = $apiInstance->postCharactersCharacterIdMail($character_id, $mail, $datasource, $token);
+    $result = $apiInstance->postCharactersCharacterIdMail($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $post_characters_character_id_mail_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MailApi->postCharactersCharacterIdMail: ', $e->getMessage(), PHP_EOL;
@@ -459,10 +479,12 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **character_id** | **int**| An EVE character ID | |
-| **mail** | [**\Swagger\Client\Eve\Model\PostCharactersCharacterIdMailMail**](../Model/PostCharactersCharacterIdMailMail.md)| The mail to send | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **character_id** | **int**| The ID of the character | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **post_characters_character_id_mail_request** | [**\Tkhamez\Eve\API\Model\PostCharactersCharacterIdMailRequest**](../Model/PostCharactersCharacterIdMailRequest.md)|  | [optional] |
 
 ### Return type
 
@@ -470,7 +492,7 @@ try {
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -484,12 +506,12 @@ try {
 ## `postCharactersCharacterIdMailLabels()`
 
 ```php
-postCharactersCharacterIdMailLabels($character_id, $label, $datasource, $token): int
+postCharactersCharacterIdMailLabels($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $post_characters_character_id_mail_labels_request): int
 ```
 
 Create a mail label
 
-Create a mail label  --- Alternate route: `/dev/characters/{character_id}/mail/labels/`  Alternate route: `/legacy/characters/{character_id}/mail/labels/`  Alternate route: `/v2/characters/{character_id}/mail/labels/`
+Create a mail label
 
 ### Example
 
@@ -498,23 +520,25 @@ Create a mail label  --- Alternate route: `/dev/characters/{character_id}/mail/l
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\MailApi(
+$apiInstance = new Tkhamez\Eve\API\Api\MailApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$character_id = 56; // int | An EVE character ID
-$label = new \Swagger\Client\Eve\Model\PostCharactersCharacterIdMailLabelsLabel(); // \Swagger\Client\Eve\Model\PostCharactersCharacterIdMailLabelsLabel | Label to create
-$datasource = 'tranquility'; // string | The server name you would like data from
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$character_id = 56; // int | The ID of the character
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$post_characters_character_id_mail_labels_request = new \Tkhamez\Eve\API\Model\PostCharactersCharacterIdMailLabelsRequest(); // \Tkhamez\Eve\API\Model\PostCharactersCharacterIdMailLabelsRequest
 
 try {
-    $result = $apiInstance->postCharactersCharacterIdMailLabels($character_id, $label, $datasource, $token);
+    $result = $apiInstance->postCharactersCharacterIdMailLabels($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $post_characters_character_id_mail_labels_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MailApi->postCharactersCharacterIdMailLabels: ', $e->getMessage(), PHP_EOL;
@@ -525,10 +549,12 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **character_id** | **int**| An EVE character ID | |
-| **label** | [**\Swagger\Client\Eve\Model\PostCharactersCharacterIdMailLabelsLabel**](../Model/PostCharactersCharacterIdMailLabelsLabel.md)| Label to create | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **character_id** | **int**| The ID of the character | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **post_characters_character_id_mail_labels_request** | [**\Tkhamez\Eve\API\Model\PostCharactersCharacterIdMailLabelsRequest**](../Model/PostCharactersCharacterIdMailLabelsRequest.md)|  | [optional] |
 
 ### Return type
 
@@ -536,7 +562,7 @@ try {
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -550,12 +576,12 @@ try {
 ## `putCharactersCharacterIdMailMailId()`
 
 ```php
-putCharactersCharacterIdMailMailId($character_id, $mail_id, $contents, $datasource, $token)
+putCharactersCharacterIdMailMailId($character_id, $mail_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $put_characters_character_id_mail_mail_id_request): mixed
 ```
 
 Update metadata about a mail
 
-Update metadata about a mail  --- Alternate route: `/dev/characters/{character_id}/mail/{mail_id}/`  Alternate route: `/legacy/characters/{character_id}/mail/{mail_id}/`  Alternate route: `/v1/characters/{character_id}/mail/{mail_id}/`
+Update metadata about a mail
 
 ### Example
 
@@ -564,24 +590,27 @@ Update metadata about a mail  --- Alternate route: `/dev/characters/{character_i
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\MailApi(
+$apiInstance = new Tkhamez\Eve\API\Api\MailApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$character_id = 56; // int | An EVE character ID
-$mail_id = 56; // int | An EVE mail ID
-$contents = new \Swagger\Client\Eve\Model\PutCharactersCharacterIdMailMailIdContents(); // \Swagger\Client\Eve\Model\PutCharactersCharacterIdMailMailIdContents | Data used to update the mail
-$datasource = 'tranquility'; // string | The server name you would like data from
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$character_id = 56; // int | The ID of the character
+$mail_id = 56; // int
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$put_characters_character_id_mail_mail_id_request = new \Tkhamez\Eve\API\Model\PutCharactersCharacterIdMailMailIdRequest(); // \Tkhamez\Eve\API\Model\PutCharactersCharacterIdMailMailIdRequest
 
 try {
-    $apiInstance->putCharactersCharacterIdMailMailId($character_id, $mail_id, $contents, $datasource, $token);
+    $result = $apiInstance->putCharactersCharacterIdMailMailId($character_id, $mail_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $put_characters_character_id_mail_mail_id_request);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MailApi->putCharactersCharacterIdMailMailId: ', $e->getMessage(), PHP_EOL;
 }
@@ -591,19 +620,21 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **character_id** | **int**| An EVE character ID | |
-| **mail_id** | **int**| An EVE mail ID | |
-| **contents** | [**\Swagger\Client\Eve\Model\PutCharactersCharacterIdMailMailIdContents**](../Model/PutCharactersCharacterIdMailMailIdContents.md)| Data used to update the mail | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **character_id** | **int**| The ID of the character | |
+| **mail_id** | **int**|  | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **put_characters_character_id_mail_mail_id_request** | [**\Tkhamez\Eve\API\Model\PutCharactersCharacterIdMailMailIdRequest**](../Model/PutCharactersCharacterIdMailMailIdRequest.md)|  | [optional] |
 
 ### Return type
 
-void (empty response body)
+**mixed**
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 

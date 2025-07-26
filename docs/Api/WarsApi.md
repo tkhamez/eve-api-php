@@ -1,23 +1,23 @@
-# Swagger\Client\Eve\WarsApi
+# Tkhamez\Eve\API\WarsApi
 
-All URIs are relative to https://esi.evetech.net/latest, except if the operation defines another base path.
+All URIs are relative to https://esi.evetech.net, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**getWars()**](WarsApi.md#getWars) | **GET** /wars/ | List wars |
-| [**getWarsWarId()**](WarsApi.md#getWarsWarId) | **GET** /wars/{war_id}/ | Get war information |
-| [**getWarsWarIdKillmails()**](WarsApi.md#getWarsWarIdKillmails) | **GET** /wars/{war_id}/killmails/ | List kills for a war |
+| [**getWars()**](WarsApi.md#getWars) | **GET** /wars | List wars |
+| [**getWarsWarId()**](WarsApi.md#getWarsWarId) | **GET** /wars/{war_id} | Get war information |
+| [**getWarsWarIdKillmails()**](WarsApi.md#getWarsWarIdKillmails) | **GET** /wars/{war_id}/killmails | List kills for a war |
 
 
 ## `getWars()`
 
 ```php
-getWars($datasource, $if_none_match, $max_war_id): int[]
+getWars($x_compatibility_date, $max_war_id, $accept_language, $if_none_match, $x_tenant): int[]
 ```
 
 List wars
 
-Return a list of wars  --- Alternate route: `/dev/wars/`  Alternate route: `/legacy/wars/`  Alternate route: `/v1/wars/`  --- This route is cached for up to 3600 seconds
+Return a list of wars
 
 ### Example
 
@@ -27,17 +27,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new Swagger\Client\Eve\Api\WarsApi(
+$apiInstance = new Tkhamez\Eve\API\Api\WarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
-$max_war_id = 56; // int | Only return wars with ID smaller than this
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$max_war_id = 56; // int
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getWars($datasource, $if_none_match, $max_war_id);
+    $result = $apiInstance->getWars($x_compatibility_date, $max_war_id, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WarsApi->getWars: ', $e->getMessage(), PHP_EOL;
@@ -48,9 +50,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
-| **max_war_id** | **int**| Only return wars with ID smaller than this | [optional] |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **max_war_id** | **int**|  | [optional] |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
@@ -72,12 +76,12 @@ No authorization required
 ## `getWarsWarId()`
 
 ```php
-getWarsWarId($war_id, $datasource, $if_none_match): \Swagger\Client\Eve\Model\GetWarsWarIdOk
+getWarsWarId($war_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\WarsWarIdGet
 ```
 
 Get war information
 
-Return details about a war  --- Alternate route: `/dev/wars/{war_id}/`  Alternate route: `/legacy/wars/{war_id}/`  Alternate route: `/v1/wars/{war_id}/`  --- This route is cached for up to 3600 seconds
+Return details about a war
 
 ### Example
 
@@ -87,17 +91,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new Swagger\Client\Eve\Api\WarsApi(
+$apiInstance = new Tkhamez\Eve\API\Api\WarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$war_id = 56; // int | ID for a war
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
+$war_id = 56; // int
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getWarsWarId($war_id, $datasource, $if_none_match);
+    $result = $apiInstance->getWarsWarId($war_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WarsApi->getWarsWarId: ', $e->getMessage(), PHP_EOL;
@@ -108,13 +114,15 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **war_id** | **int**| ID for a war | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
+| **war_id** | **int**|  | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetWarsWarIdOk**](../Model/GetWarsWarIdOk.md)
+[**\Tkhamez\Eve\API\Model\WarsWarIdGet**](../Model/WarsWarIdGet.md)
 
 ### Authorization
 
@@ -132,12 +140,12 @@ No authorization required
 ## `getWarsWarIdKillmails()`
 
 ```php
-getWarsWarIdKillmails($war_id, $datasource, $if_none_match, $page): \Swagger\Client\Eve\Model\GetWarsWarIdKillmails200Ok[]
+getWarsWarIdKillmails($war_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdKillmailsRecentGetInner[]
 ```
 
 List kills for a war
 
-Return a list of kills related to a war  --- Alternate route: `/dev/wars/{war_id}/killmails/`  Alternate route: `/legacy/wars/{war_id}/killmails/`  Alternate route: `/v1/wars/{war_id}/killmails/`  --- This route is cached for up to 3600 seconds
+Return a list of kills related to a war
 
 ### Example
 
@@ -147,18 +155,20 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new Swagger\Client\Eve\Api\WarsApi(
+$apiInstance = new Tkhamez\Eve\API\Api\WarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$war_id = 56; // int | A valid war ID
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
-$page = 1; // int | Which page of results to return
+$war_id = 56; // int
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$page = 56; // int
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getWarsWarIdKillmails($war_id, $datasource, $if_none_match, $page);
+    $result = $apiInstance->getWarsWarIdKillmails($war_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WarsApi->getWarsWarIdKillmails: ', $e->getMessage(), PHP_EOL;
@@ -169,14 +179,16 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **war_id** | **int**| A valid war ID | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
-| **page** | **int**| Which page of results to return | [optional] [default to 1] |
+| **war_id** | **int**|  | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **page** | **int**|  | [optional] |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetWarsWarIdKillmails200Ok[]**](../Model/GetWarsWarIdKillmails200Ok.md)
+[**\Tkhamez\Eve\API\Model\CharactersCharacterIdKillmailsRecentGetInner[]**](../Model/CharactersCharacterIdKillmailsRecentGetInner.md)
 
 ### Authorization
 

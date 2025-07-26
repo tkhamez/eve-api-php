@@ -1,23 +1,23 @@
-# Swagger\Client\Eve\FittingsApi
+# Tkhamez\Eve\API\FittingsApi
 
-All URIs are relative to https://esi.evetech.net/latest, except if the operation defines another base path.
+All URIs are relative to https://esi.evetech.net, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**deleteCharactersCharacterIdFittingsFittingId()**](FittingsApi.md#deleteCharactersCharacterIdFittingsFittingId) | **DELETE** /characters/{character_id}/fittings/{fitting_id}/ | Delete fitting |
-| [**getCharactersCharacterIdFittings()**](FittingsApi.md#getCharactersCharacterIdFittings) | **GET** /characters/{character_id}/fittings/ | Get fittings |
-| [**postCharactersCharacterIdFittings()**](FittingsApi.md#postCharactersCharacterIdFittings) | **POST** /characters/{character_id}/fittings/ | Create fitting |
+| [**deleteCharactersCharacterIdFittingsFittingId()**](FittingsApi.md#deleteCharactersCharacterIdFittingsFittingId) | **DELETE** /characters/{character_id}/fittings/{fitting_id} | Delete fitting |
+| [**getCharactersCharacterIdFittings()**](FittingsApi.md#getCharactersCharacterIdFittings) | **GET** /characters/{character_id}/fittings | Get fittings |
+| [**postCharactersCharacterIdFittings()**](FittingsApi.md#postCharactersCharacterIdFittings) | **POST** /characters/{character_id}/fittings | Create fitting |
 
 
 ## `deleteCharactersCharacterIdFittingsFittingId()`
 
 ```php
-deleteCharactersCharacterIdFittingsFittingId($character_id, $fitting_id, $datasource, $token)
+deleteCharactersCharacterIdFittingsFittingId($character_id, $fitting_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): mixed
 ```
 
 Delete fitting
 
-Delete a fitting from a character  --- Alternate route: `/dev/characters/{character_id}/fittings/{fitting_id}/`  Alternate route: `/legacy/characters/{character_id}/fittings/{fitting_id}/`  Alternate route: `/v1/characters/{character_id}/fittings/{fitting_id}/`
+Delete a fitting from a character
 
 ### Example
 
@@ -26,23 +26,26 @@ Delete a fitting from a character  --- Alternate route: `/dev/characters/{charac
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\FittingsApi(
+$apiInstance = new Tkhamez\Eve\API\Api\FittingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$character_id = 56; // int | An EVE character ID
-$fitting_id = 56; // int | ID for a fitting of this character
-$datasource = 'tranquility'; // string | The server name you would like data from
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$character_id = 56; // int | The ID of the character
+$fitting_id = 56; // int
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $apiInstance->deleteCharactersCharacterIdFittingsFittingId($character_id, $fitting_id, $datasource, $token);
+    $result = $apiInstance->deleteCharactersCharacterIdFittingsFittingId($character_id, $fitting_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FittingsApi->deleteCharactersCharacterIdFittingsFittingId: ', $e->getMessage(), PHP_EOL;
 }
@@ -52,18 +55,20 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **character_id** | **int**| An EVE character ID | |
-| **fitting_id** | **int**| ID for a fitting of this character | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **character_id** | **int**| The ID of the character | |
+| **fitting_id** | **int**|  | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-void (empty response body)
+**mixed**
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -77,12 +82,12 @@ void (empty response body)
 ## `getCharactersCharacterIdFittings()`
 
 ```php
-getCharactersCharacterIdFittings($character_id, $datasource, $if_none_match, $token): \Swagger\Client\Eve\Model\GetCharactersCharacterIdFittings200Ok[]
+getCharactersCharacterIdFittings($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdFittingsGetInner[]
 ```
 
 Get fittings
 
-Return fittings of a character  --- Alternate route: `/dev/characters/{character_id}/fittings/`  Alternate route: `/v2/characters/{character_id}/fittings/`  --- This route is cached for up to 300 seconds
+Return fittings of a character
 
 ### Example
 
@@ -91,23 +96,24 @@ Return fittings of a character  --- Alternate route: `/dev/characters/{character
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\FittingsApi(
+$apiInstance = new Tkhamez\Eve\API\Api\FittingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$character_id = 56; // int | An EVE character ID
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$character_id = 56; // int | The ID of the character
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getCharactersCharacterIdFittings($character_id, $datasource, $if_none_match, $token);
+    $result = $apiInstance->getCharactersCharacterIdFittings($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FittingsApi->getCharactersCharacterIdFittings: ', $e->getMessage(), PHP_EOL;
@@ -118,18 +124,19 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **character_id** | **int**| An EVE character ID | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **character_id** | **int**| The ID of the character | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetCharactersCharacterIdFittings200Ok[]**](../Model/GetCharactersCharacterIdFittings200Ok.md)
+[**\Tkhamez\Eve\API\Model\CharactersCharacterIdFittingsGetInner[]**](../Model/CharactersCharacterIdFittingsGetInner.md)
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -143,12 +150,12 @@ try {
 ## `postCharactersCharacterIdFittings()`
 
 ```php
-postCharactersCharacterIdFittings($character_id, $fitting, $datasource, $token): \Swagger\Client\Eve\Model\PostCharactersCharacterIdFittingsCreated
+postCharactersCharacterIdFittings($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $post_characters_character_id_fittings_request): \Tkhamez\Eve\API\Model\CharactersCharacterIdFittingsPost
 ```
 
 Create fitting
 
-Save a new fitting for a character  --- Alternate route: `/dev/characters/{character_id}/fittings/`  Alternate route: `/legacy/characters/{character_id}/fittings/`  Alternate route: `/v1/characters/{character_id}/fittings/`  Alternate route: `/v2/characters/{character_id}/fittings/`
+Save a new fitting for a character
 
 ### Example
 
@@ -157,23 +164,25 @@ Save a new fitting for a character  --- Alternate route: `/dev/characters/{chara
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\FittingsApi(
+$apiInstance = new Tkhamez\Eve\API\Api\FittingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$character_id = 56; // int | An EVE character ID
-$fitting = new \Swagger\Client\Eve\Model\PostCharactersCharacterIdFittingsFitting(); // \Swagger\Client\Eve\Model\PostCharactersCharacterIdFittingsFitting | Details about the new fitting
-$datasource = 'tranquility'; // string | The server name you would like data from
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$character_id = 56; // int | The ID of the character
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$post_characters_character_id_fittings_request = new \Tkhamez\Eve\API\Model\PostCharactersCharacterIdFittingsRequest(); // \Tkhamez\Eve\API\Model\PostCharactersCharacterIdFittingsRequest
 
 try {
-    $result = $apiInstance->postCharactersCharacterIdFittings($character_id, $fitting, $datasource, $token);
+    $result = $apiInstance->postCharactersCharacterIdFittings($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $post_characters_character_id_fittings_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FittingsApi->postCharactersCharacterIdFittings: ', $e->getMessage(), PHP_EOL;
@@ -184,18 +193,20 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **character_id** | **int**| An EVE character ID | |
-| **fitting** | [**\Swagger\Client\Eve\Model\PostCharactersCharacterIdFittingsFitting**](../Model/PostCharactersCharacterIdFittingsFitting.md)| Details about the new fitting | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **character_id** | **int**| The ID of the character | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **post_characters_character_id_fittings_request** | [**\Tkhamez\Eve\API\Model\PostCharactersCharacterIdFittingsRequest**](../Model/PostCharactersCharacterIdFittingsRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\PostCharactersCharacterIdFittingsCreated**](../Model/PostCharactersCharacterIdFittingsCreated.md)
+[**\Tkhamez\Eve\API\Model\CharactersCharacterIdFittingsPost**](../Model/CharactersCharacterIdFittingsPost.md)
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 

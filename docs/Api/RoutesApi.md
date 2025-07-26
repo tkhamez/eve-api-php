@@ -1,21 +1,21 @@
-# Swagger\Client\Eve\RoutesApi
+# Tkhamez\Eve\API\RoutesApi
 
-All URIs are relative to https://esi.evetech.net/latest, except if the operation defines another base path.
+All URIs are relative to https://esi.evetech.net, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**getRouteOriginDestination()**](RoutesApi.md#getRouteOriginDestination) | **GET** /route/{origin}/{destination}/ | Get route |
+| [**getRouteOriginDestination()**](RoutesApi.md#getRouteOriginDestination) | **GET** /route/{origin}/{destination} | Get route |
 
 
 ## `getRouteOriginDestination()`
 
 ```php
-getRouteOriginDestination($destination, $origin, $avoid, $connections, $datasource, $flag, $if_none_match): int[]
+getRouteOriginDestination($destination, $origin, $x_compatibility_date, $avoid, $connections, $flag, $accept_language, $if_none_match, $x_tenant): int[]
 ```
 
 Get route
 
-Get the systems between origin and destination  --- Alternate route: `/dev/route/{origin}/{destination}/`  Alternate route: `/legacy/route/{origin}/{destination}/`  Alternate route: `/v1/route/{origin}/{destination}/`  --- This route is cached for up to 86400 seconds
+Get the systems between origin and destination
 
 ### Example
 
@@ -25,21 +25,23 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new Swagger\Client\Eve\Api\RoutesApi(
+$apiInstance = new Tkhamez\Eve\API\Api\RoutesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$destination = 56; // int | destination solar system ID
-$origin = 56; // int | origin solar system ID
-$avoid = array(56); // int[] | avoid solar system ID(s)
-$connections = array(new \Swagger\Client\Eve\Model\int[]()); // int[][] | connected solar system pairs
-$datasource = 'tranquility'; // string | The server name you would like data from
-$flag = 'shortest'; // string | route security preference
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
+$destination = 56; // int
+$origin = 56; // int
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$avoid = array(56); // int[]
+$connections = array(new \Tkhamez\Eve\API\Model\int[]()); // int[][]
+$flag = 'shortest'; // string
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getRouteOriginDestination($destination, $origin, $avoid, $connections, $datasource, $flag, $if_none_match);
+    $result = $apiInstance->getRouteOriginDestination($destination, $origin, $x_compatibility_date, $avoid, $connections, $flag, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RoutesApi->getRouteOriginDestination: ', $e->getMessage(), PHP_EOL;
@@ -50,13 +52,15 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **destination** | **int**| destination solar system ID | |
-| **origin** | **int**| origin solar system ID | |
-| **avoid** | [**int[]**](../Model/int.md)| avoid solar system ID(s) | [optional] |
-| **connections** | [**int[][]**](../Model/int[].md)| connected solar system pairs | [optional] |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **flag** | **string**| route security preference | [optional] [default to &#39;shortest&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
+| **destination** | **int**|  | |
+| **origin** | **int**|  | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **avoid** | [**int[]**](../Model/int.md)|  | [optional] |
+| **connections** | [**int[][]**](../Model/int[].md)|  | [optional] |
+| **flag** | **string**|  | [optional] [default to &#39;shortest&#39;] |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 

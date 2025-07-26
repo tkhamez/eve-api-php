@@ -1,21 +1,21 @@
-# Swagger\Client\Eve\InsuranceApi
+# Tkhamez\Eve\API\InsuranceApi
 
-All URIs are relative to https://esi.evetech.net/latest, except if the operation defines another base path.
+All URIs are relative to https://esi.evetech.net, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**getInsurancePrices()**](InsuranceApi.md#getInsurancePrices) | **GET** /insurance/prices/ | List insurance levels |
+| [**getInsurancePrices()**](InsuranceApi.md#getInsurancePrices) | **GET** /insurance/prices | List insurance levels |
 
 
 ## `getInsurancePrices()`
 
 ```php
-getInsurancePrices($accept_language, $datasource, $if_none_match, $language): \Swagger\Client\Eve\Model\GetInsurancePrices200Ok[]
+getInsurancePrices($x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\InsurancePricesGetInner[]
 ```
 
 List insurance levels
 
-Return available insurance levels for all ship types  --- Alternate route: `/dev/insurance/prices/`  Alternate route: `/legacy/insurance/prices/`  Alternate route: `/v1/insurance/prices/`  --- This route is cached for up to 3600 seconds
+Return available insurance levels for all ship types
 
 ### Example
 
@@ -25,18 +25,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new Swagger\Client\Eve\Api\InsuranceApi(
+$apiInstance = new Tkhamez\Eve\API\Api\InsuranceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$accept_language = 'en'; // string | Language to use in the response
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
-$language = 'en'; // string | Language to use in the response, takes precedence over Accept-Language
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getInsurancePrices($accept_language, $datasource, $if_none_match, $language);
+    $result = $apiInstance->getInsurancePrices($x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling InsuranceApi->getInsurancePrices: ', $e->getMessage(), PHP_EOL;
@@ -47,14 +47,14 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **accept_language** | **string**| Language to use in the response | [optional] [default to &#39;en&#39;] |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
-| **language** | **string**| Language to use in the response, takes precedence over Accept-Language | [optional] [default to &#39;en&#39;] |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetInsurancePrices200Ok[]**](../Model/GetInsurancePrices200Ok.md)
+[**\Tkhamez\Eve\API\Model\InsurancePricesGetInner[]**](../Model/InsurancePricesGetInner.md)
 
 ### Authorization
 

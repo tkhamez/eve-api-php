@@ -1,34 +1,34 @@
-# Swagger\Client\Eve\FleetsApi
+# Tkhamez\Eve\API\FleetsApi
 
-All URIs are relative to https://esi.evetech.net/latest, except if the operation defines another base path.
+All URIs are relative to https://esi.evetech.net, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**deleteFleetsFleetIdMembersMemberId()**](FleetsApi.md#deleteFleetsFleetIdMembersMemberId) | **DELETE** /fleets/{fleet_id}/members/{member_id}/ | Kick fleet member |
-| [**deleteFleetsFleetIdSquadsSquadId()**](FleetsApi.md#deleteFleetsFleetIdSquadsSquadId) | **DELETE** /fleets/{fleet_id}/squads/{squad_id}/ | Delete fleet squad |
-| [**deleteFleetsFleetIdWingsWingId()**](FleetsApi.md#deleteFleetsFleetIdWingsWingId) | **DELETE** /fleets/{fleet_id}/wings/{wing_id}/ | Delete fleet wing |
-| [**getCharactersCharacterIdFleet()**](FleetsApi.md#getCharactersCharacterIdFleet) | **GET** /characters/{character_id}/fleet/ | Get character fleet info |
-| [**getFleetsFleetId()**](FleetsApi.md#getFleetsFleetId) | **GET** /fleets/{fleet_id}/ | Get fleet information |
-| [**getFleetsFleetIdMembers()**](FleetsApi.md#getFleetsFleetIdMembers) | **GET** /fleets/{fleet_id}/members/ | Get fleet members |
-| [**getFleetsFleetIdWings()**](FleetsApi.md#getFleetsFleetIdWings) | **GET** /fleets/{fleet_id}/wings/ | Get fleet wings |
-| [**postFleetsFleetIdMembers()**](FleetsApi.md#postFleetsFleetIdMembers) | **POST** /fleets/{fleet_id}/members/ | Create fleet invitation |
-| [**postFleetsFleetIdWings()**](FleetsApi.md#postFleetsFleetIdWings) | **POST** /fleets/{fleet_id}/wings/ | Create fleet wing |
-| [**postFleetsFleetIdWingsWingIdSquads()**](FleetsApi.md#postFleetsFleetIdWingsWingIdSquads) | **POST** /fleets/{fleet_id}/wings/{wing_id}/squads/ | Create fleet squad |
-| [**putFleetsFleetId()**](FleetsApi.md#putFleetsFleetId) | **PUT** /fleets/{fleet_id}/ | Update fleet |
-| [**putFleetsFleetIdMembersMemberId()**](FleetsApi.md#putFleetsFleetIdMembersMemberId) | **PUT** /fleets/{fleet_id}/members/{member_id}/ | Move fleet member |
-| [**putFleetsFleetIdSquadsSquadId()**](FleetsApi.md#putFleetsFleetIdSquadsSquadId) | **PUT** /fleets/{fleet_id}/squads/{squad_id}/ | Rename fleet squad |
-| [**putFleetsFleetIdWingsWingId()**](FleetsApi.md#putFleetsFleetIdWingsWingId) | **PUT** /fleets/{fleet_id}/wings/{wing_id}/ | Rename fleet wing |
+| [**deleteFleetsFleetIdMembersMemberId()**](FleetsApi.md#deleteFleetsFleetIdMembersMemberId) | **DELETE** /fleets/{fleet_id}/members/{member_id} | Kick fleet member |
+| [**deleteFleetsFleetIdSquadsSquadId()**](FleetsApi.md#deleteFleetsFleetIdSquadsSquadId) | **DELETE** /fleets/{fleet_id}/squads/{squad_id} | Delete fleet squad |
+| [**deleteFleetsFleetIdWingsWingId()**](FleetsApi.md#deleteFleetsFleetIdWingsWingId) | **DELETE** /fleets/{fleet_id}/wings/{wing_id} | Delete fleet wing |
+| [**getCharactersCharacterIdFleet()**](FleetsApi.md#getCharactersCharacterIdFleet) | **GET** /characters/{character_id}/fleet | Get character fleet info |
+| [**getFleetsFleetId()**](FleetsApi.md#getFleetsFleetId) | **GET** /fleets/{fleet_id} | Get fleet information |
+| [**getFleetsFleetIdMembers()**](FleetsApi.md#getFleetsFleetIdMembers) | **GET** /fleets/{fleet_id}/members | Get fleet members |
+| [**getFleetsFleetIdWings()**](FleetsApi.md#getFleetsFleetIdWings) | **GET** /fleets/{fleet_id}/wings | Get fleet wings |
+| [**postFleetsFleetIdMembers()**](FleetsApi.md#postFleetsFleetIdMembers) | **POST** /fleets/{fleet_id}/members | Create fleet invitation |
+| [**postFleetsFleetIdWings()**](FleetsApi.md#postFleetsFleetIdWings) | **POST** /fleets/{fleet_id}/wings | Create fleet wing |
+| [**postFleetsFleetIdWingsWingIdSquads()**](FleetsApi.md#postFleetsFleetIdWingsWingIdSquads) | **POST** /fleets/{fleet_id}/wings/{wing_id}/squads | Create fleet squad |
+| [**putFleetsFleetId()**](FleetsApi.md#putFleetsFleetId) | **PUT** /fleets/{fleet_id} | Update fleet |
+| [**putFleetsFleetIdMembersMemberId()**](FleetsApi.md#putFleetsFleetIdMembersMemberId) | **PUT** /fleets/{fleet_id}/members/{member_id} | Move fleet member |
+| [**putFleetsFleetIdSquadsSquadId()**](FleetsApi.md#putFleetsFleetIdSquadsSquadId) | **PUT** /fleets/{fleet_id}/squads/{squad_id} | Rename fleet squad |
+| [**putFleetsFleetIdWingsWingId()**](FleetsApi.md#putFleetsFleetIdWingsWingId) | **PUT** /fleets/{fleet_id}/wings/{wing_id} | Rename fleet wing |
 
 
 ## `deleteFleetsFleetIdMembersMemberId()`
 
 ```php
-deleteFleetsFleetIdMembersMemberId($fleet_id, $member_id, $datasource, $token)
+deleteFleetsFleetIdMembersMemberId($fleet_id, $member_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): mixed
 ```
 
 Kick fleet member
 
-Kick a fleet member  --- Alternate route: `/dev/fleets/{fleet_id}/members/{member_id}/`  Alternate route: `/legacy/fleets/{fleet_id}/members/{member_id}/`  Alternate route: `/v1/fleets/{fleet_id}/members/{member_id}/`
+Kick a fleet member
 
 ### Example
 
@@ -37,23 +37,26 @@ Kick a fleet member  --- Alternate route: `/dev/fleets/{fleet_id}/members/{membe
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\FleetsApi(
+$apiInstance = new Tkhamez\Eve\API\Api\FleetsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$fleet_id = 56; // int | ID for a fleet
-$member_id = 56; // int | The character ID of a member in this fleet
-$datasource = 'tranquility'; // string | The server name you would like data from
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$fleet_id = 56; // int
+$member_id = 56; // int
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $apiInstance->deleteFleetsFleetIdMembersMemberId($fleet_id, $member_id, $datasource, $token);
+    $result = $apiInstance->deleteFleetsFleetIdMembersMemberId($fleet_id, $member_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->deleteFleetsFleetIdMembersMemberId: ', $e->getMessage(), PHP_EOL;
 }
@@ -63,18 +66,20 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **fleet_id** | **int**| ID for a fleet | |
-| **member_id** | **int**| The character ID of a member in this fleet | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **fleet_id** | **int**|  | |
+| **member_id** | **int**|  | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-void (empty response body)
+**mixed**
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -88,12 +93,12 @@ void (empty response body)
 ## `deleteFleetsFleetIdSquadsSquadId()`
 
 ```php
-deleteFleetsFleetIdSquadsSquadId($fleet_id, $squad_id, $datasource, $token)
+deleteFleetsFleetIdSquadsSquadId($fleet_id, $squad_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): mixed
 ```
 
 Delete fleet squad
 
-Delete a fleet squad, only empty squads can be deleted  --- Alternate route: `/dev/fleets/{fleet_id}/squads/{squad_id}/`  Alternate route: `/legacy/fleets/{fleet_id}/squads/{squad_id}/`  Alternate route: `/v1/fleets/{fleet_id}/squads/{squad_id}/`
+Delete a fleet squad, only empty squads can be deleted
 
 ### Example
 
@@ -102,23 +107,26 @@ Delete a fleet squad, only empty squads can be deleted  --- Alternate route: `/d
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\FleetsApi(
+$apiInstance = new Tkhamez\Eve\API\Api\FleetsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$fleet_id = 56; // int | ID for a fleet
-$squad_id = 56; // int | The squad to delete
-$datasource = 'tranquility'; // string | The server name you would like data from
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$fleet_id = 56; // int
+$squad_id = 56; // int
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $apiInstance->deleteFleetsFleetIdSquadsSquadId($fleet_id, $squad_id, $datasource, $token);
+    $result = $apiInstance->deleteFleetsFleetIdSquadsSquadId($fleet_id, $squad_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->deleteFleetsFleetIdSquadsSquadId: ', $e->getMessage(), PHP_EOL;
 }
@@ -128,18 +136,20 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **fleet_id** | **int**| ID for a fleet | |
-| **squad_id** | **int**| The squad to delete | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **fleet_id** | **int**|  | |
+| **squad_id** | **int**|  | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-void (empty response body)
+**mixed**
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -153,12 +163,12 @@ void (empty response body)
 ## `deleteFleetsFleetIdWingsWingId()`
 
 ```php
-deleteFleetsFleetIdWingsWingId($fleet_id, $wing_id, $datasource, $token)
+deleteFleetsFleetIdWingsWingId($fleet_id, $wing_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): mixed
 ```
 
 Delete fleet wing
 
-Delete a fleet wing, only empty wings can be deleted. The wing may contain squads, but the squads must be empty  --- Alternate route: `/dev/fleets/{fleet_id}/wings/{wing_id}/`  Alternate route: `/legacy/fleets/{fleet_id}/wings/{wing_id}/`  Alternate route: `/v1/fleets/{fleet_id}/wings/{wing_id}/`
+Delete a fleet wing, only empty wings can be deleted. The wing may contain squads, but the squads must be empty
 
 ### Example
 
@@ -167,23 +177,26 @@ Delete a fleet wing, only empty wings can be deleted. The wing may contain squad
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\FleetsApi(
+$apiInstance = new Tkhamez\Eve\API\Api\FleetsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$fleet_id = 56; // int | ID for a fleet
-$wing_id = 56; // int | The wing to delete
-$datasource = 'tranquility'; // string | The server name you would like data from
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$fleet_id = 56; // int
+$wing_id = 56; // int
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $apiInstance->deleteFleetsFleetIdWingsWingId($fleet_id, $wing_id, $datasource, $token);
+    $result = $apiInstance->deleteFleetsFleetIdWingsWingId($fleet_id, $wing_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->deleteFleetsFleetIdWingsWingId: ', $e->getMessage(), PHP_EOL;
 }
@@ -193,18 +206,20 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **fleet_id** | **int**| ID for a fleet | |
-| **wing_id** | **int**| The wing to delete | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **fleet_id** | **int**|  | |
+| **wing_id** | **int**|  | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-void (empty response body)
+**mixed**
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -218,12 +233,12 @@ void (empty response body)
 ## `getCharactersCharacterIdFleet()`
 
 ```php
-getCharactersCharacterIdFleet($character_id, $datasource, $if_none_match, $token): \Swagger\Client\Eve\Model\GetCharactersCharacterIdFleetOk
+getCharactersCharacterIdFleet($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdFleetGet
 ```
 
 Get character fleet info
 
-Return the fleet ID the character is in, if any.  --- Alternate route: `/dev/characters/{character_id}/fleet/`  Alternate route: `/legacy/characters/{character_id}/fleet/`  Alternate route: `/v1/characters/{character_id}/fleet/`  Alternate route: `/v2/characters/{character_id}/fleet/`  --- This route is cached for up to 60 seconds
+Return the fleet ID the character is in, if any.
 
 ### Example
 
@@ -232,23 +247,24 @@ Return the fleet ID the character is in, if any.  --- Alternate route: `/dev/cha
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\FleetsApi(
+$apiInstance = new Tkhamez\Eve\API\Api\FleetsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$character_id = 56; // int | An EVE character ID
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$character_id = 56; // int | The ID of the character
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getCharactersCharacterIdFleet($character_id, $datasource, $if_none_match, $token);
+    $result = $apiInstance->getCharactersCharacterIdFleet($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->getCharactersCharacterIdFleet: ', $e->getMessage(), PHP_EOL;
@@ -259,18 +275,19 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **character_id** | **int**| An EVE character ID | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **character_id** | **int**| The ID of the character | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetCharactersCharacterIdFleetOk**](../Model/GetCharactersCharacterIdFleetOk.md)
+[**\Tkhamez\Eve\API\Model\CharactersCharacterIdFleetGet**](../Model/CharactersCharacterIdFleetGet.md)
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -284,12 +301,12 @@ try {
 ## `getFleetsFleetId()`
 
 ```php
-getFleetsFleetId($fleet_id, $datasource, $if_none_match, $token): \Swagger\Client\Eve\Model\GetFleetsFleetIdOk
+getFleetsFleetId($fleet_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\FleetsFleetIdGet
 ```
 
 Get fleet information
 
-Return details about a fleet  --- Alternate route: `/dev/fleets/{fleet_id}/`  Alternate route: `/legacy/fleets/{fleet_id}/`  Alternate route: `/v1/fleets/{fleet_id}/`  --- This route is cached for up to 5 seconds
+Return details about a fleet
 
 ### Example
 
@@ -298,23 +315,24 @@ Return details about a fleet  --- Alternate route: `/dev/fleets/{fleet_id}/`  Al
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\FleetsApi(
+$apiInstance = new Tkhamez\Eve\API\Api\FleetsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$fleet_id = 56; // int | ID for a fleet
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$fleet_id = 56; // int
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getFleetsFleetId($fleet_id, $datasource, $if_none_match, $token);
+    $result = $apiInstance->getFleetsFleetId($fleet_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->getFleetsFleetId: ', $e->getMessage(), PHP_EOL;
@@ -325,18 +343,19 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **fleet_id** | **int**| ID for a fleet | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **fleet_id** | **int**|  | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetFleetsFleetIdOk**](../Model/GetFleetsFleetIdOk.md)
+[**\Tkhamez\Eve\API\Model\FleetsFleetIdGet**](../Model/FleetsFleetIdGet.md)
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -350,12 +369,12 @@ try {
 ## `getFleetsFleetIdMembers()`
 
 ```php
-getFleetsFleetIdMembers($fleet_id, $accept_language, $datasource, $if_none_match, $language, $token): \Swagger\Client\Eve\Model\GetFleetsFleetIdMembers200Ok[]
+getFleetsFleetIdMembers($fleet_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\FleetsFleetIdMembersGetInner[]
 ```
 
 Get fleet members
 
-Return information about fleet members  --- Alternate route: `/dev/fleets/{fleet_id}/members/`  Alternate route: `/legacy/fleets/{fleet_id}/members/`  Alternate route: `/v1/fleets/{fleet_id}/members/`  --- This route is cached for up to 5 seconds
+Return information about fleet members
 
 ### Example
 
@@ -364,25 +383,24 @@ Return information about fleet members  --- Alternate route: `/dev/fleets/{fleet
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\FleetsApi(
+$apiInstance = new Tkhamez\Eve\API\Api\FleetsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$fleet_id = 56; // int | ID for a fleet
-$accept_language = 'en'; // string | Language to use in the response
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
-$language = 'en'; // string | Language to use in the response, takes precedence over Accept-Language
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$fleet_id = 56; // int
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getFleetsFleetIdMembers($fleet_id, $accept_language, $datasource, $if_none_match, $language, $token);
+    $result = $apiInstance->getFleetsFleetIdMembers($fleet_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->getFleetsFleetIdMembers: ', $e->getMessage(), PHP_EOL;
@@ -393,20 +411,19 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **fleet_id** | **int**| ID for a fleet | |
-| **accept_language** | **string**| Language to use in the response | [optional] [default to &#39;en&#39;] |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
-| **language** | **string**| Language to use in the response, takes precedence over Accept-Language | [optional] [default to &#39;en&#39;] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **fleet_id** | **int**|  | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetFleetsFleetIdMembers200Ok[]**](../Model/GetFleetsFleetIdMembers200Ok.md)
+[**\Tkhamez\Eve\API\Model\FleetsFleetIdMembersGetInner[]**](../Model/FleetsFleetIdMembersGetInner.md)
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -420,12 +437,12 @@ try {
 ## `getFleetsFleetIdWings()`
 
 ```php
-getFleetsFleetIdWings($fleet_id, $accept_language, $datasource, $if_none_match, $language, $token): \Swagger\Client\Eve\Model\GetFleetsFleetIdWings200Ok[]
+getFleetsFleetIdWings($fleet_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\FleetsFleetIdWingsGetInner[]
 ```
 
 Get fleet wings
 
-Return information about wings in a fleet  --- Alternate route: `/dev/fleets/{fleet_id}/wings/`  Alternate route: `/legacy/fleets/{fleet_id}/wings/`  Alternate route: `/v1/fleets/{fleet_id}/wings/`  --- This route is cached for up to 5 seconds
+Return information about wings in a fleet
 
 ### Example
 
@@ -434,25 +451,24 @@ Return information about wings in a fleet  --- Alternate route: `/dev/fleets/{fl
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\FleetsApi(
+$apiInstance = new Tkhamez\Eve\API\Api\FleetsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$fleet_id = 56; // int | ID for a fleet
-$accept_language = 'en'; // string | Language to use in the response
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
-$language = 'en'; // string | Language to use in the response, takes precedence over Accept-Language
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$fleet_id = 56; // int
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getFleetsFleetIdWings($fleet_id, $accept_language, $datasource, $if_none_match, $language, $token);
+    $result = $apiInstance->getFleetsFleetIdWings($fleet_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->getFleetsFleetIdWings: ', $e->getMessage(), PHP_EOL;
@@ -463,20 +479,19 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **fleet_id** | **int**| ID for a fleet | |
-| **accept_language** | **string**| Language to use in the response | [optional] [default to &#39;en&#39;] |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
-| **language** | **string**| Language to use in the response, takes precedence over Accept-Language | [optional] [default to &#39;en&#39;] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **fleet_id** | **int**|  | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetFleetsFleetIdWings200Ok[]**](../Model/GetFleetsFleetIdWings200Ok.md)
+[**\Tkhamez\Eve\API\Model\FleetsFleetIdWingsGetInner[]**](../Model/FleetsFleetIdWingsGetInner.md)
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -490,12 +505,12 @@ try {
 ## `postFleetsFleetIdMembers()`
 
 ```php
-postFleetsFleetIdMembers($fleet_id, $invitation, $datasource, $token)
+postFleetsFleetIdMembers($fleet_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $post_fleets_fleet_id_members_request): mixed
 ```
 
 Create fleet invitation
 
-Invite a character into the fleet. If a character has a CSPA charge set it is not possible to invite them to the fleet using ESI  --- Alternate route: `/dev/fleets/{fleet_id}/members/`  Alternate route: `/legacy/fleets/{fleet_id}/members/`  Alternate route: `/v1/fleets/{fleet_id}/members/`
+Invite a character into the fleet. If a character has a CSPA charge set it is not possible to invite them to the fleet using ESI
 
 ### Example
 
@@ -504,23 +519,26 @@ Invite a character into the fleet. If a character has a CSPA charge set it is no
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\FleetsApi(
+$apiInstance = new Tkhamez\Eve\API\Api\FleetsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$fleet_id = 56; // int | ID for a fleet
-$invitation = new \Swagger\Client\Eve\Model\PostFleetsFleetIdMembersInvitation(); // \Swagger\Client\Eve\Model\PostFleetsFleetIdMembersInvitation | Details of the invitation
-$datasource = 'tranquility'; // string | The server name you would like data from
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$fleet_id = 56; // int
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$post_fleets_fleet_id_members_request = new \Tkhamez\Eve\API\Model\PostFleetsFleetIdMembersRequest(); // \Tkhamez\Eve\API\Model\PostFleetsFleetIdMembersRequest
 
 try {
-    $apiInstance->postFleetsFleetIdMembers($fleet_id, $invitation, $datasource, $token);
+    $result = $apiInstance->postFleetsFleetIdMembers($fleet_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $post_fleets_fleet_id_members_request);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->postFleetsFleetIdMembers: ', $e->getMessage(), PHP_EOL;
 }
@@ -530,18 +548,20 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **fleet_id** | **int**| ID for a fleet | |
-| **invitation** | [**\Swagger\Client\Eve\Model\PostFleetsFleetIdMembersInvitation**](../Model/PostFleetsFleetIdMembersInvitation.md)| Details of the invitation | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **fleet_id** | **int**|  | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **post_fleets_fleet_id_members_request** | [**\Tkhamez\Eve\API\Model\PostFleetsFleetIdMembersRequest**](../Model/PostFleetsFleetIdMembersRequest.md)|  | [optional] |
 
 ### Return type
 
-void (empty response body)
+**mixed**
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -555,12 +575,12 @@ void (empty response body)
 ## `postFleetsFleetIdWings()`
 
 ```php
-postFleetsFleetIdWings($fleet_id, $datasource, $token): \Swagger\Client\Eve\Model\PostFleetsFleetIdWingsCreated
+postFleetsFleetIdWings($fleet_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\FleetsFleetIdWingsPost
 ```
 
 Create fleet wing
 
-Create a new wing in a fleet  --- Alternate route: `/dev/fleets/{fleet_id}/wings/`  Alternate route: `/legacy/fleets/{fleet_id}/wings/`  Alternate route: `/v1/fleets/{fleet_id}/wings/`
+Create a new wing in a fleet
 
 ### Example
 
@@ -569,22 +589,24 @@ Create a new wing in a fleet  --- Alternate route: `/dev/fleets/{fleet_id}/wings
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\FleetsApi(
+$apiInstance = new Tkhamez\Eve\API\Api\FleetsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$fleet_id = 56; // int | ID for a fleet
-$datasource = 'tranquility'; // string | The server name you would like data from
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$fleet_id = 56; // int
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->postFleetsFleetIdWings($fleet_id, $datasource, $token);
+    $result = $apiInstance->postFleetsFleetIdWings($fleet_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->postFleetsFleetIdWings: ', $e->getMessage(), PHP_EOL;
@@ -595,17 +617,19 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **fleet_id** | **int**| ID for a fleet | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **fleet_id** | **int**|  | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\PostFleetsFleetIdWingsCreated**](../Model/PostFleetsFleetIdWingsCreated.md)
+[**\Tkhamez\Eve\API\Model\FleetsFleetIdWingsPost**](../Model/FleetsFleetIdWingsPost.md)
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -619,12 +643,12 @@ try {
 ## `postFleetsFleetIdWingsWingIdSquads()`
 
 ```php
-postFleetsFleetIdWingsWingIdSquads($fleet_id, $wing_id, $datasource, $token): \Swagger\Client\Eve\Model\PostFleetsFleetIdWingsWingIdSquadsCreated
+postFleetsFleetIdWingsWingIdSquads($fleet_id, $wing_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\FleetsFleetIdWingsWingIdSquadsPost
 ```
 
 Create fleet squad
 
-Create a new squad in a fleet  --- Alternate route: `/dev/fleets/{fleet_id}/wings/{wing_id}/squads/`  Alternate route: `/legacy/fleets/{fleet_id}/wings/{wing_id}/squads/`  Alternate route: `/v1/fleets/{fleet_id}/wings/{wing_id}/squads/`
+Create a new squad in a fleet
 
 ### Example
 
@@ -633,23 +657,25 @@ Create a new squad in a fleet  --- Alternate route: `/dev/fleets/{fleet_id}/wing
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\FleetsApi(
+$apiInstance = new Tkhamez\Eve\API\Api\FleetsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$fleet_id = 56; // int | ID for a fleet
-$wing_id = 56; // int | The wing_id to create squad in
-$datasource = 'tranquility'; // string | The server name you would like data from
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$fleet_id = 56; // int
+$wing_id = 56; // int
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->postFleetsFleetIdWingsWingIdSquads($fleet_id, $wing_id, $datasource, $token);
+    $result = $apiInstance->postFleetsFleetIdWingsWingIdSquads($fleet_id, $wing_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->postFleetsFleetIdWingsWingIdSquads: ', $e->getMessage(), PHP_EOL;
@@ -660,18 +686,20 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **fleet_id** | **int**| ID for a fleet | |
-| **wing_id** | **int**| The wing_id to create squad in | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **fleet_id** | **int**|  | |
+| **wing_id** | **int**|  | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\PostFleetsFleetIdWingsWingIdSquadsCreated**](../Model/PostFleetsFleetIdWingsWingIdSquadsCreated.md)
+[**\Tkhamez\Eve\API\Model\FleetsFleetIdWingsWingIdSquadsPost**](../Model/FleetsFleetIdWingsWingIdSquadsPost.md)
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -685,12 +713,12 @@ try {
 ## `putFleetsFleetId()`
 
 ```php
-putFleetsFleetId($fleet_id, $new_settings, $datasource, $token)
+putFleetsFleetId($fleet_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $put_fleets_fleet_id_request): mixed
 ```
 
 Update fleet
 
-Update settings about a fleet  --- Alternate route: `/dev/fleets/{fleet_id}/`  Alternate route: `/legacy/fleets/{fleet_id}/`  Alternate route: `/v1/fleets/{fleet_id}/`
+Update settings about a fleet
 
 ### Example
 
@@ -699,23 +727,26 @@ Update settings about a fleet  --- Alternate route: `/dev/fleets/{fleet_id}/`  A
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\FleetsApi(
+$apiInstance = new Tkhamez\Eve\API\Api\FleetsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$fleet_id = 56; // int | ID for a fleet
-$new_settings = new \Swagger\Client\Eve\Model\PutFleetsFleetIdNewSettings(); // \Swagger\Client\Eve\Model\PutFleetsFleetIdNewSettings | What to update for this fleet
-$datasource = 'tranquility'; // string | The server name you would like data from
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$fleet_id = 56; // int
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$put_fleets_fleet_id_request = new \Tkhamez\Eve\API\Model\PutFleetsFleetIdRequest(); // \Tkhamez\Eve\API\Model\PutFleetsFleetIdRequest
 
 try {
-    $apiInstance->putFleetsFleetId($fleet_id, $new_settings, $datasource, $token);
+    $result = $apiInstance->putFleetsFleetId($fleet_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $put_fleets_fleet_id_request);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->putFleetsFleetId: ', $e->getMessage(), PHP_EOL;
 }
@@ -725,18 +756,20 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **fleet_id** | **int**| ID for a fleet | |
-| **new_settings** | [**\Swagger\Client\Eve\Model\PutFleetsFleetIdNewSettings**](../Model/PutFleetsFleetIdNewSettings.md)| What to update for this fleet | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **fleet_id** | **int**|  | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **put_fleets_fleet_id_request** | [**\Tkhamez\Eve\API\Model\PutFleetsFleetIdRequest**](../Model/PutFleetsFleetIdRequest.md)|  | [optional] |
 
 ### Return type
 
-void (empty response body)
+**mixed**
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -750,12 +783,12 @@ void (empty response body)
 ## `putFleetsFleetIdMembersMemberId()`
 
 ```php
-putFleetsFleetIdMembersMemberId($fleet_id, $member_id, $movement, $datasource, $token)
+putFleetsFleetIdMembersMemberId($fleet_id, $member_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $put_fleets_fleet_id_members_member_id_request): mixed
 ```
 
 Move fleet member
 
-Move a fleet member around  --- Alternate route: `/dev/fleets/{fleet_id}/members/{member_id}/`  Alternate route: `/legacy/fleets/{fleet_id}/members/{member_id}/`  Alternate route: `/v1/fleets/{fleet_id}/members/{member_id}/`
+Move a fleet member around
 
 ### Example
 
@@ -764,24 +797,27 @@ Move a fleet member around  --- Alternate route: `/dev/fleets/{fleet_id}/members
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\FleetsApi(
+$apiInstance = new Tkhamez\Eve\API\Api\FleetsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$fleet_id = 56; // int | ID for a fleet
-$member_id = 56; // int | The character ID of a member in this fleet
-$movement = new \Swagger\Client\Eve\Model\PutFleetsFleetIdMembersMemberIdMovement(); // \Swagger\Client\Eve\Model\PutFleetsFleetIdMembersMemberIdMovement | Details of the invitation
-$datasource = 'tranquility'; // string | The server name you would like data from
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$fleet_id = 56; // int
+$member_id = 56; // int
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$put_fleets_fleet_id_members_member_id_request = new \Tkhamez\Eve\API\Model\PutFleetsFleetIdMembersMemberIdRequest(); // \Tkhamez\Eve\API\Model\PutFleetsFleetIdMembersMemberIdRequest
 
 try {
-    $apiInstance->putFleetsFleetIdMembersMemberId($fleet_id, $member_id, $movement, $datasource, $token);
+    $result = $apiInstance->putFleetsFleetIdMembersMemberId($fleet_id, $member_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $put_fleets_fleet_id_members_member_id_request);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->putFleetsFleetIdMembersMemberId: ', $e->getMessage(), PHP_EOL;
 }
@@ -791,19 +827,21 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **fleet_id** | **int**| ID for a fleet | |
-| **member_id** | **int**| The character ID of a member in this fleet | |
-| **movement** | [**\Swagger\Client\Eve\Model\PutFleetsFleetIdMembersMemberIdMovement**](../Model/PutFleetsFleetIdMembersMemberIdMovement.md)| Details of the invitation | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **fleet_id** | **int**|  | |
+| **member_id** | **int**|  | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **put_fleets_fleet_id_members_member_id_request** | [**\Tkhamez\Eve\API\Model\PutFleetsFleetIdMembersMemberIdRequest**](../Model/PutFleetsFleetIdMembersMemberIdRequest.md)|  | [optional] |
 
 ### Return type
 
-void (empty response body)
+**mixed**
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -817,12 +855,12 @@ void (empty response body)
 ## `putFleetsFleetIdSquadsSquadId()`
 
 ```php
-putFleetsFleetIdSquadsSquadId($fleet_id, $squad_id, $naming, $datasource, $token)
+putFleetsFleetIdSquadsSquadId($fleet_id, $squad_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $put_fleets_fleet_id_squads_squad_id_request): mixed
 ```
 
 Rename fleet squad
 
-Rename a fleet squad  --- Alternate route: `/dev/fleets/{fleet_id}/squads/{squad_id}/`  Alternate route: `/legacy/fleets/{fleet_id}/squads/{squad_id}/`  Alternate route: `/v1/fleets/{fleet_id}/squads/{squad_id}/`
+Rename a fleet squad
 
 ### Example
 
@@ -831,24 +869,27 @@ Rename a fleet squad  --- Alternate route: `/dev/fleets/{fleet_id}/squads/{squad
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\FleetsApi(
+$apiInstance = new Tkhamez\Eve\API\Api\FleetsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$fleet_id = 56; // int | ID for a fleet
-$squad_id = 56; // int | The squad to rename
-$naming = new \Swagger\Client\Eve\Model\PutFleetsFleetIdSquadsSquadIdNaming(); // \Swagger\Client\Eve\Model\PutFleetsFleetIdSquadsSquadIdNaming | New name of the squad
-$datasource = 'tranquility'; // string | The server name you would like data from
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$fleet_id = 56; // int
+$squad_id = 56; // int
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$put_fleets_fleet_id_squads_squad_id_request = new \Tkhamez\Eve\API\Model\PutFleetsFleetIdSquadsSquadIdRequest(); // \Tkhamez\Eve\API\Model\PutFleetsFleetIdSquadsSquadIdRequest
 
 try {
-    $apiInstance->putFleetsFleetIdSquadsSquadId($fleet_id, $squad_id, $naming, $datasource, $token);
+    $result = $apiInstance->putFleetsFleetIdSquadsSquadId($fleet_id, $squad_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $put_fleets_fleet_id_squads_squad_id_request);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->putFleetsFleetIdSquadsSquadId: ', $e->getMessage(), PHP_EOL;
 }
@@ -858,19 +899,21 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **fleet_id** | **int**| ID for a fleet | |
-| **squad_id** | **int**| The squad to rename | |
-| **naming** | [**\Swagger\Client\Eve\Model\PutFleetsFleetIdSquadsSquadIdNaming**](../Model/PutFleetsFleetIdSquadsSquadIdNaming.md)| New name of the squad | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **fleet_id** | **int**|  | |
+| **squad_id** | **int**|  | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **put_fleets_fleet_id_squads_squad_id_request** | [**\Tkhamez\Eve\API\Model\PutFleetsFleetIdSquadsSquadIdRequest**](../Model/PutFleetsFleetIdSquadsSquadIdRequest.md)|  | [optional] |
 
 ### Return type
 
-void (empty response body)
+**mixed**
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 
@@ -884,12 +927,12 @@ void (empty response body)
 ## `putFleetsFleetIdWingsWingId()`
 
 ```php
-putFleetsFleetIdWingsWingId($fleet_id, $wing_id, $naming, $datasource, $token)
+putFleetsFleetIdWingsWingId($fleet_id, $wing_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $put_fleets_fleet_id_squads_squad_id_request): mixed
 ```
 
 Rename fleet wing
 
-Rename a fleet wing  --- Alternate route: `/dev/fleets/{fleet_id}/wings/{wing_id}/`  Alternate route: `/legacy/fleets/{fleet_id}/wings/{wing_id}/`  Alternate route: `/v1/fleets/{fleet_id}/wings/{wing_id}/`
+Rename a fleet wing
 
 ### Example
 
@@ -898,24 +941,27 @@ Rename a fleet wing  --- Alternate route: `/dev/fleets/{fleet_id}/wings/{wing_id
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: evesso
-$config = Swagger\Client\Eve\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Eve\Api\FleetsApi(
+$apiInstance = new Tkhamez\Eve\API\Api\FleetsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$fleet_id = 56; // int | ID for a fleet
-$wing_id = 56; // int | The wing to rename
-$naming = new \Swagger\Client\Eve\Model\PutFleetsFleetIdWingsWingIdNaming(); // \Swagger\Client\Eve\Model\PutFleetsFleetIdWingsWingIdNaming | New name of the wing
-$datasource = 'tranquility'; // string | The server name you would like data from
-$token = 'token_example'; // string | Access token to use if unable to set a header
+$fleet_id = 56; // int
+$wing_id = 56; // int
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$put_fleets_fleet_id_squads_squad_id_request = new \Tkhamez\Eve\API\Model\PutFleetsFleetIdSquadsSquadIdRequest(); // \Tkhamez\Eve\API\Model\PutFleetsFleetIdSquadsSquadIdRequest
 
 try {
-    $apiInstance->putFleetsFleetIdWingsWingId($fleet_id, $wing_id, $naming, $datasource, $token);
+    $result = $apiInstance->putFleetsFleetIdWingsWingId($fleet_id, $wing_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $put_fleets_fleet_id_squads_squad_id_request);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->putFleetsFleetIdWingsWingId: ', $e->getMessage(), PHP_EOL;
 }
@@ -925,19 +971,21 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **fleet_id** | **int**| ID for a fleet | |
-| **wing_id** | **int**| The wing to rename | |
-| **naming** | [**\Swagger\Client\Eve\Model\PutFleetsFleetIdWingsWingIdNaming**](../Model/PutFleetsFleetIdWingsWingIdNaming.md)| New name of the wing | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **token** | **string**| Access token to use if unable to set a header | [optional] |
+| **fleet_id** | **int**|  | |
+| **wing_id** | **int**|  | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **put_fleets_fleet_id_squads_squad_id_request** | [**\Tkhamez\Eve\API\Model\PutFleetsFleetIdSquadsSquadIdRequest**](../Model/PutFleetsFleetIdSquadsSquadIdRequest.md)|  | [optional] |
 
 ### Return type
 
-void (empty response body)
+**mixed**
 
 ### Authorization
 
-[evesso](../../README.md#evesso)
+[OAuth2](../../README.md#OAuth2)
 
 ### HTTP request headers
 

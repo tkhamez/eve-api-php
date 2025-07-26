@@ -1,25 +1,25 @@
-# Swagger\Client\Eve\DogmaApi
+# Tkhamez\Eve\API\DogmaApi
 
-All URIs are relative to https://esi.evetech.net/latest, except if the operation defines another base path.
+All URIs are relative to https://esi.evetech.net, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**getDogmaAttributes()**](DogmaApi.md#getDogmaAttributes) | **GET** /dogma/attributes/ | Get attributes |
-| [**getDogmaAttributesAttributeId()**](DogmaApi.md#getDogmaAttributesAttributeId) | **GET** /dogma/attributes/{attribute_id}/ | Get attribute information |
-| [**getDogmaDynamicItemsTypeIdItemId()**](DogmaApi.md#getDogmaDynamicItemsTypeIdItemId) | **GET** /dogma/dynamic/items/{type_id}/{item_id}/ | Get dynamic item information |
-| [**getDogmaEffects()**](DogmaApi.md#getDogmaEffects) | **GET** /dogma/effects/ | Get effects |
-| [**getDogmaEffectsEffectId()**](DogmaApi.md#getDogmaEffectsEffectId) | **GET** /dogma/effects/{effect_id}/ | Get effect information |
+| [**getDogmaAttributes()**](DogmaApi.md#getDogmaAttributes) | **GET** /dogma/attributes | Get attributes |
+| [**getDogmaAttributesAttributeId()**](DogmaApi.md#getDogmaAttributesAttributeId) | **GET** /dogma/attributes/{attribute_id} | Get attribute information |
+| [**getDogmaDynamicItemsTypeIdItemId()**](DogmaApi.md#getDogmaDynamicItemsTypeIdItemId) | **GET** /dogma/dynamic/items/{type_id}/{item_id} | Get dynamic item information |
+| [**getDogmaEffects()**](DogmaApi.md#getDogmaEffects) | **GET** /dogma/effects | Get effects |
+| [**getDogmaEffectsEffectId()**](DogmaApi.md#getDogmaEffectsEffectId) | **GET** /dogma/effects/{effect_id} | Get effect information |
 
 
 ## `getDogmaAttributes()`
 
 ```php
-getDogmaAttributes($datasource, $if_none_match): int[]
+getDogmaAttributes($x_compatibility_date, $accept_language, $if_none_match, $x_tenant): int[]
 ```
 
 Get attributes
 
-Get a list of dogma attribute ids  --- Alternate route: `/dev/dogma/attributes/`  Alternate route: `/legacy/dogma/attributes/`  Alternate route: `/v1/dogma/attributes/`  --- This route expires daily at 11:05
+Get a list of dogma attribute ids  This route expires daily at 11:05
 
 ### Example
 
@@ -29,16 +29,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new Swagger\Client\Eve\Api\DogmaApi(
+$apiInstance = new Tkhamez\Eve\API\Api\DogmaApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getDogmaAttributes($datasource, $if_none_match);
+    $result = $apiInstance->getDogmaAttributes($x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DogmaApi->getDogmaAttributes: ', $e->getMessage(), PHP_EOL;
@@ -49,8 +51,10 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
@@ -72,12 +76,12 @@ No authorization required
 ## `getDogmaAttributesAttributeId()`
 
 ```php
-getDogmaAttributesAttributeId($attribute_id, $datasource, $if_none_match): \Swagger\Client\Eve\Model\GetDogmaAttributesAttributeIdOk
+getDogmaAttributesAttributeId($attribute_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\DogmaAttributesAttributeIdGet
 ```
 
 Get attribute information
 
-Get information on a dogma attribute  --- Alternate route: `/dev/dogma/attributes/{attribute_id}/`  Alternate route: `/legacy/dogma/attributes/{attribute_id}/`  Alternate route: `/v1/dogma/attributes/{attribute_id}/`  --- This route expires daily at 11:05
+Get information on a dogma attribute  This route expires daily at 11:05
 
 ### Example
 
@@ -87,17 +91,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new Swagger\Client\Eve\Api\DogmaApi(
+$apiInstance = new Tkhamez\Eve\API\Api\DogmaApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$attribute_id = 56; // int | A dogma attribute ID
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
+$attribute_id = 56; // int
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getDogmaAttributesAttributeId($attribute_id, $datasource, $if_none_match);
+    $result = $apiInstance->getDogmaAttributesAttributeId($attribute_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DogmaApi->getDogmaAttributesAttributeId: ', $e->getMessage(), PHP_EOL;
@@ -108,13 +114,15 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **attribute_id** | **int**| A dogma attribute ID | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
+| **attribute_id** | **int**|  | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetDogmaAttributesAttributeIdOk**](../Model/GetDogmaAttributesAttributeIdOk.md)
+[**\Tkhamez\Eve\API\Model\DogmaAttributesAttributeIdGet**](../Model/DogmaAttributesAttributeIdGet.md)
 
 ### Authorization
 
@@ -132,12 +140,12 @@ No authorization required
 ## `getDogmaDynamicItemsTypeIdItemId()`
 
 ```php
-getDogmaDynamicItemsTypeIdItemId($item_id, $type_id, $datasource, $if_none_match): \Swagger\Client\Eve\Model\GetDogmaDynamicItemsTypeIdItemIdOk
+getDogmaDynamicItemsTypeIdItemId($item_id, $type_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\DogmaDynamicItemsTypeIdItemIdGet
 ```
 
 Get dynamic item information
 
-Returns info about a dynamic item resulting from mutation with a mutaplasmid.  --- Alternate route: `/dev/dogma/dynamic/items/{type_id}/{item_id}/`  Alternate route: `/legacy/dogma/dynamic/items/{type_id}/{item_id}/`  Alternate route: `/v1/dogma/dynamic/items/{type_id}/{item_id}/`  --- This route expires daily at 11:05
+Returns info about a dynamic item resulting from mutation with a mutaplasmid.  This route expires daily at 11:05
 
 ### Example
 
@@ -147,18 +155,20 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new Swagger\Client\Eve\Api\DogmaApi(
+$apiInstance = new Tkhamez\Eve\API\Api\DogmaApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$item_id = 56; // int | item_id integer
-$type_id = 56; // int | type_id integer
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
+$item_id = 56; // int
+$type_id = 56; // int
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getDogmaDynamicItemsTypeIdItemId($item_id, $type_id, $datasource, $if_none_match);
+    $result = $apiInstance->getDogmaDynamicItemsTypeIdItemId($item_id, $type_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DogmaApi->getDogmaDynamicItemsTypeIdItemId: ', $e->getMessage(), PHP_EOL;
@@ -169,14 +179,16 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **item_id** | **int**| item_id integer | |
-| **type_id** | **int**| type_id integer | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
+| **item_id** | **int**|  | |
+| **type_id** | **int**|  | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetDogmaDynamicItemsTypeIdItemIdOk**](../Model/GetDogmaDynamicItemsTypeIdItemIdOk.md)
+[**\Tkhamez\Eve\API\Model\DogmaDynamicItemsTypeIdItemIdGet**](../Model/DogmaDynamicItemsTypeIdItemIdGet.md)
 
 ### Authorization
 
@@ -194,12 +206,12 @@ No authorization required
 ## `getDogmaEffects()`
 
 ```php
-getDogmaEffects($datasource, $if_none_match): int[]
+getDogmaEffects($x_compatibility_date, $accept_language, $if_none_match, $x_tenant): int[]
 ```
 
 Get effects
 
-Get a list of dogma effect ids  --- Alternate route: `/dev/dogma/effects/`  Alternate route: `/legacy/dogma/effects/`  Alternate route: `/v1/dogma/effects/`  --- This route expires daily at 11:05
+Get a list of dogma effect ids  This route expires daily at 11:05
 
 ### Example
 
@@ -209,16 +221,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new Swagger\Client\Eve\Api\DogmaApi(
+$apiInstance = new Tkhamez\Eve\API\Api\DogmaApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getDogmaEffects($datasource, $if_none_match);
+    $result = $apiInstance->getDogmaEffects($x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DogmaApi->getDogmaEffects: ', $e->getMessage(), PHP_EOL;
@@ -229,8 +243,10 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
@@ -252,12 +268,12 @@ No authorization required
 ## `getDogmaEffectsEffectId()`
 
 ```php
-getDogmaEffectsEffectId($effect_id, $datasource, $if_none_match): \Swagger\Client\Eve\Model\GetDogmaEffectsEffectIdOk
+getDogmaEffectsEffectId($effect_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\DogmaEffectsEffectIdGet
 ```
 
 Get effect information
 
-Get information on a dogma effect  --- Alternate route: `/dev/dogma/effects/{effect_id}/`  Alternate route: `/v2/dogma/effects/{effect_id}/`  --- This route expires daily at 11:05
+Get information on a dogma effect  This route expires daily at 11:05
 
 ### Example
 
@@ -267,17 +283,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new Swagger\Client\Eve\Api\DogmaApi(
+$apiInstance = new Tkhamez\Eve\API\Api\DogmaApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$effect_id = 56; // int | A dogma effect ID
-$datasource = 'tranquility'; // string | The server name you would like data from
-$if_none_match = 'if_none_match_example'; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
+$effect_id = 56; // int
+$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
 
 try {
-    $result = $apiInstance->getDogmaEffectsEffectId($effect_id, $datasource, $if_none_match);
+    $result = $apiInstance->getDogmaEffectsEffectId($effect_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DogmaApi->getDogmaEffectsEffectId: ', $e->getMessage(), PHP_EOL;
@@ -288,13 +306,15 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **effect_id** | **int**| A dogma effect ID | |
-| **datasource** | **string**| The server name you would like data from | [optional] [default to &#39;tranquility&#39;] |
-| **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] |
+| **effect_id** | **int**|  | |
+| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
+| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
 
 ### Return type
 
-[**\Swagger\Client\Eve\Model\GetDogmaEffectsEffectIdOk**](../Model/GetDogmaEffectsEffectIdOk.md)
+[**\Tkhamez\Eve\API\Model\DogmaEffectsEffectIdGet**](../Model/DogmaEffectsEffectIdGet.md)
 
 ### Authorization
 
