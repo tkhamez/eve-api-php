@@ -13,7 +13,7 @@ This client is generated from https://esi.evetech.net/meta/openapi.yaml (OpenAPI
 It is generated for a specific compatibility date, which is the only date that must be used
 for the X-Compatibility-Date header. This date is included in the version number.
 
-**Please note that the ESI OpenAPI 3 specification is still in beta status, so things can change!**
+_**Please note that the ESI OpenAPI 3 specification is still in beta status, so things can change!**_
 
 This client contains a patch to fix the format of the X-Compatibility-Date header (the generator
 ignores the specified format "date" and uses a string that includes the time, which will lead to
@@ -35,22 +35,21 @@ for generator library changes see
 
 ### Notable changes other than API updates
 
-**2.20250802.0**
+#### 2.20250802.0
 
 - Switched to the new versioning scheme.
 
-**1.0.0**
-
-Please note that the ESI OpenAPI 3 specification is still in beta status, so things can change!
+#### 1.0.0
 
 - Forked from [tkhamez/swagger-eve-php](https://github.com/tkhamez/swagger-eve-php).
 - Generated from the new OpenAPI 3.1 specification.
 - Added a patch for the format of the compatibility date.
 
-In addition to the change in the PHP namespace, the biggest changes are that many model classes have 
-been renamed and each API method now requires the $x_compatibility_date parameter.
+_Please note that the ESI OpenAPI 3 specification is still in beta status, so things can change!_
 
-You can see all the changes between swagger-eve-php and eve-api in
+In addition to the change in the PHP namespace, the biggest changes between `swagger-eve-php` and 
+`eve-api` are that many model classes have been renamed and each API method now requires the 
+`$x_compatibility_date` parameter. You can see all the changes in
 [this commit](https://github.com/tkhamez/eve-api-php/commit/862d19140f6dfadf699d463e53be4d16b5fe2e72).
 
 ## Installation & Usage
