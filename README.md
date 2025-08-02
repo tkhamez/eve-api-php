@@ -35,7 +35,7 @@ for generator library changes see
 
 ### Notable changes other than API updates
 
-**1.20250726.0**
+**2.20250802.0**
 
 - Switched to the new versioning scheme.
 
@@ -66,7 +66,7 @@ To install the bindings via [Composer](https://getcomposer.org/), add the follow
 ```json
 {
   "require": {
-    "tkhamez/eve-api": "^1.0.0"
+    "tkhamez/eve-api": "^2.0.0"
   }
 }
 ```
