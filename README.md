@@ -3,35 +3,45 @@
 [![License](http://poser.pugx.org/tkhamez/eve-api/license)](https://packagist.org/packages/tkhamez/eve-api) 
 [![PHP Version Require](http://poser.pugx.org/tkhamez/eve-api/require/php)](https://packagist.org/packages/tkhamez/eve-api)
 
-# OpenAPIClient-php
+# EVE API
 
 An OpenAPI Client Library for EVE Online (ESI).
 
 For more information, please visit [https://developers.eveonline.com/docs/support/](https://developers.eveonline.com/docs/support/).
 
 This client is generated from https://esi.evetech.net/meta/openapi.yaml (OpenAPI version 3.1).
+It is generated for a specific compatibility date, which is the only date that must be used
+for the X-Compatibility-Date header. This date is included in the version number.
 
-It contains a patch to fix the format of the X-Compatibility-Date header (the generator ignores the 
-specified format "date" and uses a string that includes the time, which will lead to 400 errors from
-the API).
+**Please note that the ESI OpenAPI 3 specification is still in beta status, so things can change!**
 
-### Versioning scheme
+This client contains a patch to fix the format of the X-Compatibility-Date header (the generator
+ignores the specified format "date" and uses a string that includes the time, which will lead to
+400 errors from the API).
 
-* Patch: Generated from an updated specification file and/or generated with a new patch version of 
-  the generator library.
-* Minor: Switched to a new minor version of the generator library.
-* Major: Switched to a new major version of the generator library, switched to another generator 
-  library or another breaking change.
+## Versioning scheme
 
-### Changelog
+* Major: This number is increased everytime when the client was generated from an updated 
+  OpenAPI specification file or any other breaking change.
+* Minor: The compatibility date for which the API was generated in the format YYYYMMDD.
+* Patch: Increased when the client was regenerated with a new minor or patch version of the
+  generator library from the same OpenAPI specification file.
+
+## Changelog
 
 For API changes see [esi-issues/changelog.md](https://github.com/esi/esi-issues/blob/master/changelog.md),
 for generator library changes see 
 [OpenAPITools/openapi-generator/releases](https://github.com/OpenAPITools/openapi-generator/releases).
 
-#### Notable changes other than API updates
+### Notable changes other than API updates
+
+**1.20250726.0**
+
+- Switched to the new versioning scheme.
 
 **1.0.0**
+
+Please note that the ESI OpenAPI 3 specification is still in beta status, so things can change!
 
 - Forked from [tkhamez/swagger-eve-php](https://github.com/tkhamez/swagger-eve-php).
 - Generated from the new OpenAPI 3.1 specification.
@@ -56,7 +66,7 @@ To install the bindings via [Composer](https://getcomposer.org/), add the follow
 ```json
 {
   "require": {
-    "tkhamez/eve-api": "~1.0.0"
+    "tkhamez/eve-api": "^1.0.0"
   }
 }
 ```
