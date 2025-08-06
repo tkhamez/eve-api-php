@@ -133,10 +133,10 @@ class SearchApi
      * @param  string[] $categories categories (required)
      * @param  int $character_id The ID of the character (required)
      * @param  string $search search (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  bool|null $strict strict (optional, default to false)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdSearch'] to see the possible values for this operation
      *
@@ -144,9 +144,9 @@ class SearchApi
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\CharactersCharacterIdSearchGet|\Tkhamez\Eve\API\Model\Error
      */
-    public function getCharactersCharacterIdSearch($categories, $character_id, $search, $x_compatibility_date, $strict = false, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdSearch'][0])
+    public function getCharactersCharacterIdSearch($categories, $character_id, $search, $strict = false, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdSearch'][0])
     {
-        list($response) = $this->getCharactersCharacterIdSearchWithHttpInfo($categories, $character_id, $search, $x_compatibility_date, $strict, $accept_language, $if_none_match, $x_tenant, $contentType);
+        list($response) = $this->getCharactersCharacterIdSearchWithHttpInfo($categories, $character_id, $search, $strict, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
         return $response;
     }
 
@@ -158,10 +158,10 @@ class SearchApi
      * @param  string[] $categories (required)
      * @param  int $character_id The ID of the character (required)
      * @param  string $search (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  bool|null $strict (optional, default to false)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdSearch'] to see the possible values for this operation
      *
@@ -169,9 +169,9 @@ class SearchApi
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\CharactersCharacterIdSearchGet|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCharactersCharacterIdSearchWithHttpInfo($categories, $character_id, $search, $x_compatibility_date, $strict = false, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdSearch'][0])
+    public function getCharactersCharacterIdSearchWithHttpInfo($categories, $character_id, $search, $strict = false, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdSearch'][0])
     {
-        $request = $this->getCharactersCharacterIdSearchRequest($categories, $character_id, $search, $x_compatibility_date, $strict, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getCharactersCharacterIdSearchRequest($categories, $character_id, $search, $strict, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -264,19 +264,19 @@ class SearchApi
      * @param  string[] $categories (required)
      * @param  int $character_id The ID of the character (required)
      * @param  string $search (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  bool|null $strict (optional, default to false)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdSearch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCharactersCharacterIdSearchAsync($categories, $character_id, $search, $x_compatibility_date, $strict = false, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdSearch'][0])
+    public function getCharactersCharacterIdSearchAsync($categories, $character_id, $search, $strict = false, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdSearch'][0])
     {
-        return $this->getCharactersCharacterIdSearchAsyncWithHttpInfo($categories, $character_id, $search, $x_compatibility_date, $strict, $accept_language, $if_none_match, $x_tenant, $contentType)
+        return $this->getCharactersCharacterIdSearchAsyncWithHttpInfo($categories, $character_id, $search, $strict, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -292,20 +292,20 @@ class SearchApi
      * @param  string[] $categories (required)
      * @param  int $character_id The ID of the character (required)
      * @param  string $search (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  bool|null $strict (optional, default to false)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdSearch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCharactersCharacterIdSearchAsyncWithHttpInfo($categories, $character_id, $search, $x_compatibility_date, $strict = false, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdSearch'][0])
+    public function getCharactersCharacterIdSearchAsyncWithHttpInfo($categories, $character_id, $search, $strict = false, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdSearch'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\CharactersCharacterIdSearchGet';
-        $request = $this->getCharactersCharacterIdSearchRequest($categories, $character_id, $search, $x_compatibility_date, $strict, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getCharactersCharacterIdSearchRequest($categories, $character_id, $search, $strict, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -349,17 +349,17 @@ class SearchApi
      * @param  string[] $categories (required)
      * @param  int $character_id The ID of the character (required)
      * @param  string $search (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  bool|null $strict (optional, default to false)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdSearch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getCharactersCharacterIdSearchRequest($categories, $character_id, $search, $x_compatibility_date, $strict = false, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdSearch'][0])
+    public function getCharactersCharacterIdSearchRequest($categories, $character_id, $search, $strict = false, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdSearch'][0])
     {
 
         // verify the required parameter 'categories' is set
@@ -389,12 +389,6 @@ class SearchApi
             );
         }
 
-        // verify the required parameter 'x_compatibility_date' is set
-        if ($x_compatibility_date === null || (is_array($x_compatibility_date) && count($x_compatibility_date) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $x_compatibility_date when calling getCharactersCharacterIdSearch'
-            );
-        }
 
 
 
@@ -446,7 +440,7 @@ class SearchApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {

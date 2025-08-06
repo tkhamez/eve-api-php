@@ -10,7 +10,7 @@ All URIs are relative to https://esi.evetech.net, except if the operation define
 ## `getCharactersCharacterIdSearch()`
 
 ```php
-getCharactersCharacterIdSearch($categories, $character_id, $search, $x_compatibility_date, $strict, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdSearchGet
+getCharactersCharacterIdSearch($categories, $character_id, $search, $strict, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdSearchGet
 ```
 
 Search on a string
@@ -37,14 +37,14 @@ $apiInstance = new Tkhamez\Eve\API\Api\SearchApi(
 $categories = array('categories_example'); // string[]
 $character_id = 56; // int | The ID of the character
 $search = 'search_example'; // string
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $strict = false; // bool
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->getCharactersCharacterIdSearch($categories, $character_id, $search, $x_compatibility_date, $strict, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->getCharactersCharacterIdSearch($categories, $character_id, $search, $strict, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SearchApi->getCharactersCharacterIdSearch: ', $e->getMessage(), PHP_EOL;
@@ -58,10 +58,10 @@ try {
 | **categories** | [**string[]**](../Model/string.md)|  | |
 | **character_id** | **int**| The ID of the character | |
 | **search** | **string**|  | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **strict** | **bool**|  | [optional] [default to false] |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type

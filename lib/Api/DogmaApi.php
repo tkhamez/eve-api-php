@@ -142,9 +142,9 @@ class DogmaApi
      *
      * Get attributes
      *
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDogmaAttributes'] to see the possible values for this operation
      *
@@ -152,9 +152,9 @@ class DogmaApi
      * @throws \InvalidArgumentException
      * @return int[]|\Tkhamez\Eve\API\Model\Error
      */
-    public function getDogmaAttributes($x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getDogmaAttributes'][0])
+    public function getDogmaAttributes($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getDogmaAttributes'][0])
     {
-        list($response) = $this->getDogmaAttributesWithHttpInfo($x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        list($response) = $this->getDogmaAttributesWithHttpInfo($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
         return $response;
     }
 
@@ -163,9 +163,9 @@ class DogmaApi
      *
      * Get attributes
      *
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDogmaAttributes'] to see the possible values for this operation
      *
@@ -173,9 +173,9 @@ class DogmaApi
      * @throws \InvalidArgumentException
      * @return array of int[]|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getDogmaAttributesWithHttpInfo($x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getDogmaAttributes'][0])
+    public function getDogmaAttributesWithHttpInfo($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getDogmaAttributes'][0])
     {
-        $request = $this->getDogmaAttributesRequest($x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getDogmaAttributesRequest($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -265,18 +265,18 @@ class DogmaApi
      *
      * Get attributes
      *
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDogmaAttributes'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getDogmaAttributesAsync($x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getDogmaAttributes'][0])
+    public function getDogmaAttributesAsync($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getDogmaAttributes'][0])
     {
-        return $this->getDogmaAttributesAsyncWithHttpInfo($x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType)
+        return $this->getDogmaAttributesAsyncWithHttpInfo($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -289,19 +289,19 @@ class DogmaApi
      *
      * Get attributes
      *
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDogmaAttributes'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getDogmaAttributesAsyncWithHttpInfo($x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getDogmaAttributes'][0])
+    public function getDogmaAttributesAsyncWithHttpInfo($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getDogmaAttributes'][0])
     {
         $returnType = 'int[]';
-        $request = $this->getDogmaAttributesRequest($x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getDogmaAttributesRequest($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -342,24 +342,18 @@ class DogmaApi
     /**
      * Create request for operation 'getDogmaAttributes'
      *
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDogmaAttributes'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getDogmaAttributesRequest($x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getDogmaAttributes'][0])
+    public function getDogmaAttributesRequest($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getDogmaAttributes'][0])
     {
 
-        // verify the required parameter 'x_compatibility_date' is set
-        if ($x_compatibility_date === null || (is_array($x_compatibility_date) && count($x_compatibility_date) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $x_compatibility_date when calling getDogmaAttributes'
-            );
-        }
 
 
 
@@ -383,7 +377,7 @@ class DogmaApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -451,9 +445,9 @@ class DogmaApi
      * Get attribute information
      *
      * @param  int $attribute_id attribute_id (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDogmaAttributesAttributeId'] to see the possible values for this operation
      *
@@ -461,9 +455,9 @@ class DogmaApi
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\DogmaAttributesAttributeIdGet|\Tkhamez\Eve\API\Model\Error
      */
-    public function getDogmaAttributesAttributeId($attribute_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getDogmaAttributesAttributeId'][0])
+    public function getDogmaAttributesAttributeId($attribute_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getDogmaAttributesAttributeId'][0])
     {
-        list($response) = $this->getDogmaAttributesAttributeIdWithHttpInfo($attribute_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        list($response) = $this->getDogmaAttributesAttributeIdWithHttpInfo($attribute_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
         return $response;
     }
 
@@ -473,9 +467,9 @@ class DogmaApi
      * Get attribute information
      *
      * @param  int $attribute_id (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDogmaAttributesAttributeId'] to see the possible values for this operation
      *
@@ -483,9 +477,9 @@ class DogmaApi
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\DogmaAttributesAttributeIdGet|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getDogmaAttributesAttributeIdWithHttpInfo($attribute_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getDogmaAttributesAttributeId'][0])
+    public function getDogmaAttributesAttributeIdWithHttpInfo($attribute_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getDogmaAttributesAttributeId'][0])
     {
-        $request = $this->getDogmaAttributesAttributeIdRequest($attribute_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getDogmaAttributesAttributeIdRequest($attribute_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -576,18 +570,18 @@ class DogmaApi
      * Get attribute information
      *
      * @param  int $attribute_id (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDogmaAttributesAttributeId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getDogmaAttributesAttributeIdAsync($attribute_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getDogmaAttributesAttributeId'][0])
+    public function getDogmaAttributesAttributeIdAsync($attribute_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getDogmaAttributesAttributeId'][0])
     {
-        return $this->getDogmaAttributesAttributeIdAsyncWithHttpInfo($attribute_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType)
+        return $this->getDogmaAttributesAttributeIdAsyncWithHttpInfo($attribute_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -601,19 +595,19 @@ class DogmaApi
      * Get attribute information
      *
      * @param  int $attribute_id (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDogmaAttributesAttributeId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getDogmaAttributesAttributeIdAsyncWithHttpInfo($attribute_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getDogmaAttributesAttributeId'][0])
+    public function getDogmaAttributesAttributeIdAsyncWithHttpInfo($attribute_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getDogmaAttributesAttributeId'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\DogmaAttributesAttributeIdGet';
-        $request = $this->getDogmaAttributesAttributeIdRequest($attribute_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getDogmaAttributesAttributeIdRequest($attribute_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -655,16 +649,16 @@ class DogmaApi
      * Create request for operation 'getDogmaAttributesAttributeId'
      *
      * @param  int $attribute_id (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDogmaAttributesAttributeId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getDogmaAttributesAttributeIdRequest($attribute_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getDogmaAttributesAttributeId'][0])
+    public function getDogmaAttributesAttributeIdRequest($attribute_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getDogmaAttributesAttributeId'][0])
     {
 
         // verify the required parameter 'attribute_id' is set
@@ -674,12 +668,6 @@ class DogmaApi
             );
         }
 
-        // verify the required parameter 'x_compatibility_date' is set
-        if ($x_compatibility_date === null || (is_array($x_compatibility_date) && count($x_compatibility_date) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $x_compatibility_date when calling getDogmaAttributesAttributeId'
-            );
-        }
 
 
 
@@ -703,7 +691,7 @@ class DogmaApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -780,9 +768,9 @@ class DogmaApi
      *
      * @param  int $item_id item_id (required)
      * @param  int $type_id type_id (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDogmaDynamicItemsTypeIdItemId'] to see the possible values for this operation
      *
@@ -790,9 +778,9 @@ class DogmaApi
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\DogmaDynamicItemsTypeIdItemIdGet|\Tkhamez\Eve\API\Model\Error
      */
-    public function getDogmaDynamicItemsTypeIdItemId($item_id, $type_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getDogmaDynamicItemsTypeIdItemId'][0])
+    public function getDogmaDynamicItemsTypeIdItemId($item_id, $type_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getDogmaDynamicItemsTypeIdItemId'][0])
     {
-        list($response) = $this->getDogmaDynamicItemsTypeIdItemIdWithHttpInfo($item_id, $type_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        list($response) = $this->getDogmaDynamicItemsTypeIdItemIdWithHttpInfo($item_id, $type_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
         return $response;
     }
 
@@ -803,9 +791,9 @@ class DogmaApi
      *
      * @param  int $item_id (required)
      * @param  int $type_id (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDogmaDynamicItemsTypeIdItemId'] to see the possible values for this operation
      *
@@ -813,9 +801,9 @@ class DogmaApi
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\DogmaDynamicItemsTypeIdItemIdGet|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getDogmaDynamicItemsTypeIdItemIdWithHttpInfo($item_id, $type_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getDogmaDynamicItemsTypeIdItemId'][0])
+    public function getDogmaDynamicItemsTypeIdItemIdWithHttpInfo($item_id, $type_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getDogmaDynamicItemsTypeIdItemId'][0])
     {
-        $request = $this->getDogmaDynamicItemsTypeIdItemIdRequest($item_id, $type_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getDogmaDynamicItemsTypeIdItemIdRequest($item_id, $type_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -907,18 +895,18 @@ class DogmaApi
      *
      * @param  int $item_id (required)
      * @param  int $type_id (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDogmaDynamicItemsTypeIdItemId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getDogmaDynamicItemsTypeIdItemIdAsync($item_id, $type_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getDogmaDynamicItemsTypeIdItemId'][0])
+    public function getDogmaDynamicItemsTypeIdItemIdAsync($item_id, $type_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getDogmaDynamicItemsTypeIdItemId'][0])
     {
-        return $this->getDogmaDynamicItemsTypeIdItemIdAsyncWithHttpInfo($item_id, $type_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType)
+        return $this->getDogmaDynamicItemsTypeIdItemIdAsyncWithHttpInfo($item_id, $type_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -933,19 +921,19 @@ class DogmaApi
      *
      * @param  int $item_id (required)
      * @param  int $type_id (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDogmaDynamicItemsTypeIdItemId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getDogmaDynamicItemsTypeIdItemIdAsyncWithHttpInfo($item_id, $type_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getDogmaDynamicItemsTypeIdItemId'][0])
+    public function getDogmaDynamicItemsTypeIdItemIdAsyncWithHttpInfo($item_id, $type_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getDogmaDynamicItemsTypeIdItemId'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\DogmaDynamicItemsTypeIdItemIdGet';
-        $request = $this->getDogmaDynamicItemsTypeIdItemIdRequest($item_id, $type_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getDogmaDynamicItemsTypeIdItemIdRequest($item_id, $type_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -988,16 +976,16 @@ class DogmaApi
      *
      * @param  int $item_id (required)
      * @param  int $type_id (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDogmaDynamicItemsTypeIdItemId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getDogmaDynamicItemsTypeIdItemIdRequest($item_id, $type_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getDogmaDynamicItemsTypeIdItemId'][0])
+    public function getDogmaDynamicItemsTypeIdItemIdRequest($item_id, $type_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getDogmaDynamicItemsTypeIdItemId'][0])
     {
 
         // verify the required parameter 'item_id' is set
@@ -1014,12 +1002,6 @@ class DogmaApi
             );
         }
 
-        // verify the required parameter 'x_compatibility_date' is set
-        if ($x_compatibility_date === null || (is_array($x_compatibility_date) && count($x_compatibility_date) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $x_compatibility_date when calling getDogmaDynamicItemsTypeIdItemId'
-            );
-        }
 
 
 
@@ -1043,7 +1025,7 @@ class DogmaApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -1126,9 +1108,9 @@ class DogmaApi
      *
      * Get effects
      *
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDogmaEffects'] to see the possible values for this operation
      *
@@ -1136,9 +1118,9 @@ class DogmaApi
      * @throws \InvalidArgumentException
      * @return int[]|\Tkhamez\Eve\API\Model\Error
      */
-    public function getDogmaEffects($x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getDogmaEffects'][0])
+    public function getDogmaEffects($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getDogmaEffects'][0])
     {
-        list($response) = $this->getDogmaEffectsWithHttpInfo($x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        list($response) = $this->getDogmaEffectsWithHttpInfo($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
         return $response;
     }
 
@@ -1147,9 +1129,9 @@ class DogmaApi
      *
      * Get effects
      *
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDogmaEffects'] to see the possible values for this operation
      *
@@ -1157,9 +1139,9 @@ class DogmaApi
      * @throws \InvalidArgumentException
      * @return array of int[]|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getDogmaEffectsWithHttpInfo($x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getDogmaEffects'][0])
+    public function getDogmaEffectsWithHttpInfo($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getDogmaEffects'][0])
     {
-        $request = $this->getDogmaEffectsRequest($x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getDogmaEffectsRequest($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1249,18 +1231,18 @@ class DogmaApi
      *
      * Get effects
      *
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDogmaEffects'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getDogmaEffectsAsync($x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getDogmaEffects'][0])
+    public function getDogmaEffectsAsync($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getDogmaEffects'][0])
     {
-        return $this->getDogmaEffectsAsyncWithHttpInfo($x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType)
+        return $this->getDogmaEffectsAsyncWithHttpInfo($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1273,19 +1255,19 @@ class DogmaApi
      *
      * Get effects
      *
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDogmaEffects'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getDogmaEffectsAsyncWithHttpInfo($x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getDogmaEffects'][0])
+    public function getDogmaEffectsAsyncWithHttpInfo($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getDogmaEffects'][0])
     {
         $returnType = 'int[]';
-        $request = $this->getDogmaEffectsRequest($x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getDogmaEffectsRequest($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1326,24 +1308,18 @@ class DogmaApi
     /**
      * Create request for operation 'getDogmaEffects'
      *
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDogmaEffects'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getDogmaEffectsRequest($x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getDogmaEffects'][0])
+    public function getDogmaEffectsRequest($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getDogmaEffects'][0])
     {
 
-        // verify the required parameter 'x_compatibility_date' is set
-        if ($x_compatibility_date === null || (is_array($x_compatibility_date) && count($x_compatibility_date) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $x_compatibility_date when calling getDogmaEffects'
-            );
-        }
 
 
 
@@ -1367,7 +1343,7 @@ class DogmaApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -1435,9 +1411,9 @@ class DogmaApi
      * Get effect information
      *
      * @param  int $effect_id effect_id (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDogmaEffectsEffectId'] to see the possible values for this operation
      *
@@ -1445,9 +1421,9 @@ class DogmaApi
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\DogmaEffectsEffectIdGet|\Tkhamez\Eve\API\Model\Error
      */
-    public function getDogmaEffectsEffectId($effect_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getDogmaEffectsEffectId'][0])
+    public function getDogmaEffectsEffectId($effect_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getDogmaEffectsEffectId'][0])
     {
-        list($response) = $this->getDogmaEffectsEffectIdWithHttpInfo($effect_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        list($response) = $this->getDogmaEffectsEffectIdWithHttpInfo($effect_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
         return $response;
     }
 
@@ -1457,9 +1433,9 @@ class DogmaApi
      * Get effect information
      *
      * @param  int $effect_id (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDogmaEffectsEffectId'] to see the possible values for this operation
      *
@@ -1467,9 +1443,9 @@ class DogmaApi
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\DogmaEffectsEffectIdGet|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getDogmaEffectsEffectIdWithHttpInfo($effect_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getDogmaEffectsEffectId'][0])
+    public function getDogmaEffectsEffectIdWithHttpInfo($effect_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getDogmaEffectsEffectId'][0])
     {
-        $request = $this->getDogmaEffectsEffectIdRequest($effect_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getDogmaEffectsEffectIdRequest($effect_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1560,18 +1536,18 @@ class DogmaApi
      * Get effect information
      *
      * @param  int $effect_id (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDogmaEffectsEffectId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getDogmaEffectsEffectIdAsync($effect_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getDogmaEffectsEffectId'][0])
+    public function getDogmaEffectsEffectIdAsync($effect_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getDogmaEffectsEffectId'][0])
     {
-        return $this->getDogmaEffectsEffectIdAsyncWithHttpInfo($effect_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType)
+        return $this->getDogmaEffectsEffectIdAsyncWithHttpInfo($effect_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1585,19 +1561,19 @@ class DogmaApi
      * Get effect information
      *
      * @param  int $effect_id (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDogmaEffectsEffectId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getDogmaEffectsEffectIdAsyncWithHttpInfo($effect_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getDogmaEffectsEffectId'][0])
+    public function getDogmaEffectsEffectIdAsyncWithHttpInfo($effect_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getDogmaEffectsEffectId'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\DogmaEffectsEffectIdGet';
-        $request = $this->getDogmaEffectsEffectIdRequest($effect_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getDogmaEffectsEffectIdRequest($effect_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1639,16 +1615,16 @@ class DogmaApi
      * Create request for operation 'getDogmaEffectsEffectId'
      *
      * @param  int $effect_id (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDogmaEffectsEffectId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getDogmaEffectsEffectIdRequest($effect_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getDogmaEffectsEffectId'][0])
+    public function getDogmaEffectsEffectIdRequest($effect_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getDogmaEffectsEffectId'][0])
     {
 
         // verify the required parameter 'effect_id' is set
@@ -1658,12 +1634,6 @@ class DogmaApi
             );
         }
 
-        // verify the required parameter 'x_compatibility_date' is set
-        if ($x_compatibility_date === null || (is_array($x_compatibility_date) && count($x_compatibility_date) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $x_compatibility_date when calling getDogmaEffectsEffectId'
-            );
-        }
 
 
 
@@ -1687,7 +1657,7 @@ class DogmaApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {

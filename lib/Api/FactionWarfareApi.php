@@ -152,9 +152,9 @@ class FactionWarfareApi
      * Overview of a character involved in faction warfare
      *
      * @param  int $character_id The ID of the character (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdFwStats'] to see the possible values for this operation
      *
@@ -162,9 +162,9 @@ class FactionWarfareApi
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\CharactersCharacterIdFwStatsGet|\Tkhamez\Eve\API\Model\Error
      */
-    public function getCharactersCharacterIdFwStats($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdFwStats'][0])
+    public function getCharactersCharacterIdFwStats($character_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdFwStats'][0])
     {
-        list($response) = $this->getCharactersCharacterIdFwStatsWithHttpInfo($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        list($response) = $this->getCharactersCharacterIdFwStatsWithHttpInfo($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
         return $response;
     }
 
@@ -174,9 +174,9 @@ class FactionWarfareApi
      * Overview of a character involved in faction warfare
      *
      * @param  int $character_id The ID of the character (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdFwStats'] to see the possible values for this operation
      *
@@ -184,9 +184,9 @@ class FactionWarfareApi
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\CharactersCharacterIdFwStatsGet|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCharactersCharacterIdFwStatsWithHttpInfo($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdFwStats'][0])
+    public function getCharactersCharacterIdFwStatsWithHttpInfo($character_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdFwStats'][0])
     {
-        $request = $this->getCharactersCharacterIdFwStatsRequest($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getCharactersCharacterIdFwStatsRequest($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -277,18 +277,18 @@ class FactionWarfareApi
      * Overview of a character involved in faction warfare
      *
      * @param  int $character_id The ID of the character (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdFwStats'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCharactersCharacterIdFwStatsAsync($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdFwStats'][0])
+    public function getCharactersCharacterIdFwStatsAsync($character_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdFwStats'][0])
     {
-        return $this->getCharactersCharacterIdFwStatsAsyncWithHttpInfo($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType)
+        return $this->getCharactersCharacterIdFwStatsAsyncWithHttpInfo($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -302,19 +302,19 @@ class FactionWarfareApi
      * Overview of a character involved in faction warfare
      *
      * @param  int $character_id The ID of the character (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdFwStats'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCharactersCharacterIdFwStatsAsyncWithHttpInfo($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdFwStats'][0])
+    public function getCharactersCharacterIdFwStatsAsyncWithHttpInfo($character_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdFwStats'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\CharactersCharacterIdFwStatsGet';
-        $request = $this->getCharactersCharacterIdFwStatsRequest($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getCharactersCharacterIdFwStatsRequest($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -356,16 +356,16 @@ class FactionWarfareApi
      * Create request for operation 'getCharactersCharacterIdFwStats'
      *
      * @param  int $character_id The ID of the character (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdFwStats'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getCharactersCharacterIdFwStatsRequest($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdFwStats'][0])
+    public function getCharactersCharacterIdFwStatsRequest($character_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdFwStats'][0])
     {
 
         // verify the required parameter 'character_id' is set
@@ -375,12 +375,6 @@ class FactionWarfareApi
             );
         }
 
-        // verify the required parameter 'x_compatibility_date' is set
-        if ($x_compatibility_date === null || (is_array($x_compatibility_date) && count($x_compatibility_date) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $x_compatibility_date when calling getCharactersCharacterIdFwStats'
-            );
-        }
 
 
 
@@ -404,7 +398,7 @@ class FactionWarfareApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -484,9 +478,9 @@ class FactionWarfareApi
      * Overview of a corporation involved in faction warfare
      *
      * @param  int $corporation_id The ID of the corporation (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCorporationsCorporationIdFwStats'] to see the possible values for this operation
      *
@@ -494,9 +488,9 @@ class FactionWarfareApi
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\CorporationsCorporationIdFwStatsGet|\Tkhamez\Eve\API\Model\Error
      */
-    public function getCorporationsCorporationIdFwStats($corporation_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationsCorporationIdFwStats'][0])
+    public function getCorporationsCorporationIdFwStats($corporation_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationsCorporationIdFwStats'][0])
     {
-        list($response) = $this->getCorporationsCorporationIdFwStatsWithHttpInfo($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        list($response) = $this->getCorporationsCorporationIdFwStatsWithHttpInfo($corporation_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
         return $response;
     }
 
@@ -506,9 +500,9 @@ class FactionWarfareApi
      * Overview of a corporation involved in faction warfare
      *
      * @param  int $corporation_id The ID of the corporation (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCorporationsCorporationIdFwStats'] to see the possible values for this operation
      *
@@ -516,9 +510,9 @@ class FactionWarfareApi
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\CorporationsCorporationIdFwStatsGet|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCorporationsCorporationIdFwStatsWithHttpInfo($corporation_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationsCorporationIdFwStats'][0])
+    public function getCorporationsCorporationIdFwStatsWithHttpInfo($corporation_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationsCorporationIdFwStats'][0])
     {
-        $request = $this->getCorporationsCorporationIdFwStatsRequest($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getCorporationsCorporationIdFwStatsRequest($corporation_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -609,18 +603,18 @@ class FactionWarfareApi
      * Overview of a corporation involved in faction warfare
      *
      * @param  int $corporation_id The ID of the corporation (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCorporationsCorporationIdFwStats'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCorporationsCorporationIdFwStatsAsync($corporation_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationsCorporationIdFwStats'][0])
+    public function getCorporationsCorporationIdFwStatsAsync($corporation_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationsCorporationIdFwStats'][0])
     {
-        return $this->getCorporationsCorporationIdFwStatsAsyncWithHttpInfo($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType)
+        return $this->getCorporationsCorporationIdFwStatsAsyncWithHttpInfo($corporation_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -634,19 +628,19 @@ class FactionWarfareApi
      * Overview of a corporation involved in faction warfare
      *
      * @param  int $corporation_id The ID of the corporation (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCorporationsCorporationIdFwStats'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCorporationsCorporationIdFwStatsAsyncWithHttpInfo($corporation_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationsCorporationIdFwStats'][0])
+    public function getCorporationsCorporationIdFwStatsAsyncWithHttpInfo($corporation_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationsCorporationIdFwStats'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\CorporationsCorporationIdFwStatsGet';
-        $request = $this->getCorporationsCorporationIdFwStatsRequest($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getCorporationsCorporationIdFwStatsRequest($corporation_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -688,16 +682,16 @@ class FactionWarfareApi
      * Create request for operation 'getCorporationsCorporationIdFwStats'
      *
      * @param  int $corporation_id The ID of the corporation (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCorporationsCorporationIdFwStats'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getCorporationsCorporationIdFwStatsRequest($corporation_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationsCorporationIdFwStats'][0])
+    public function getCorporationsCorporationIdFwStatsRequest($corporation_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationsCorporationIdFwStats'][0])
     {
 
         // verify the required parameter 'corporation_id' is set
@@ -707,12 +701,6 @@ class FactionWarfareApi
             );
         }
 
-        // verify the required parameter 'x_compatibility_date' is set
-        if ($x_compatibility_date === null || (is_array($x_compatibility_date) && count($x_compatibility_date) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $x_compatibility_date when calling getCorporationsCorporationIdFwStats'
-            );
-        }
 
 
 
@@ -736,7 +724,7 @@ class FactionWarfareApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -815,9 +803,9 @@ class FactionWarfareApi
      *
      * List of the top factions in faction warfare
      *
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFwLeaderboards'] to see the possible values for this operation
      *
@@ -825,9 +813,9 @@ class FactionWarfareApi
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\FwLeaderboardsGet|\Tkhamez\Eve\API\Model\Error
      */
-    public function getFwLeaderboards($x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwLeaderboards'][0])
+    public function getFwLeaderboards($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwLeaderboards'][0])
     {
-        list($response) = $this->getFwLeaderboardsWithHttpInfo($x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        list($response) = $this->getFwLeaderboardsWithHttpInfo($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
         return $response;
     }
 
@@ -836,9 +824,9 @@ class FactionWarfareApi
      *
      * List of the top factions in faction warfare
      *
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFwLeaderboards'] to see the possible values for this operation
      *
@@ -846,9 +834,9 @@ class FactionWarfareApi
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\FwLeaderboardsGet|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getFwLeaderboardsWithHttpInfo($x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwLeaderboards'][0])
+    public function getFwLeaderboardsWithHttpInfo($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwLeaderboards'][0])
     {
-        $request = $this->getFwLeaderboardsRequest($x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getFwLeaderboardsRequest($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -938,18 +926,18 @@ class FactionWarfareApi
      *
      * List of the top factions in faction warfare
      *
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFwLeaderboards'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getFwLeaderboardsAsync($x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwLeaderboards'][0])
+    public function getFwLeaderboardsAsync($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwLeaderboards'][0])
     {
-        return $this->getFwLeaderboardsAsyncWithHttpInfo($x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType)
+        return $this->getFwLeaderboardsAsyncWithHttpInfo($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -962,19 +950,19 @@ class FactionWarfareApi
      *
      * List of the top factions in faction warfare
      *
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFwLeaderboards'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getFwLeaderboardsAsyncWithHttpInfo($x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwLeaderboards'][0])
+    public function getFwLeaderboardsAsyncWithHttpInfo($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwLeaderboards'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\FwLeaderboardsGet';
-        $request = $this->getFwLeaderboardsRequest($x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getFwLeaderboardsRequest($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1015,24 +1003,18 @@ class FactionWarfareApi
     /**
      * Create request for operation 'getFwLeaderboards'
      *
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFwLeaderboards'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getFwLeaderboardsRequest($x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwLeaderboards'][0])
+    public function getFwLeaderboardsRequest($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwLeaderboards'][0])
     {
 
-        // verify the required parameter 'x_compatibility_date' is set
-        if ($x_compatibility_date === null || (is_array($x_compatibility_date) && count($x_compatibility_date) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $x_compatibility_date when calling getFwLeaderboards'
-            );
-        }
 
 
 
@@ -1056,7 +1038,7 @@ class FactionWarfareApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -1123,9 +1105,9 @@ class FactionWarfareApi
      *
      * List of the top pilots in faction warfare
      *
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFwLeaderboardsCharacters'] to see the possible values for this operation
      *
@@ -1133,9 +1115,9 @@ class FactionWarfareApi
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\FwLeaderboardsCharactersGet|\Tkhamez\Eve\API\Model\Error
      */
-    public function getFwLeaderboardsCharacters($x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwLeaderboardsCharacters'][0])
+    public function getFwLeaderboardsCharacters($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwLeaderboardsCharacters'][0])
     {
-        list($response) = $this->getFwLeaderboardsCharactersWithHttpInfo($x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        list($response) = $this->getFwLeaderboardsCharactersWithHttpInfo($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
         return $response;
     }
 
@@ -1144,9 +1126,9 @@ class FactionWarfareApi
      *
      * List of the top pilots in faction warfare
      *
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFwLeaderboardsCharacters'] to see the possible values for this operation
      *
@@ -1154,9 +1136,9 @@ class FactionWarfareApi
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\FwLeaderboardsCharactersGet|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getFwLeaderboardsCharactersWithHttpInfo($x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwLeaderboardsCharacters'][0])
+    public function getFwLeaderboardsCharactersWithHttpInfo($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwLeaderboardsCharacters'][0])
     {
-        $request = $this->getFwLeaderboardsCharactersRequest($x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getFwLeaderboardsCharactersRequest($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1246,18 +1228,18 @@ class FactionWarfareApi
      *
      * List of the top pilots in faction warfare
      *
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFwLeaderboardsCharacters'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getFwLeaderboardsCharactersAsync($x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwLeaderboardsCharacters'][0])
+    public function getFwLeaderboardsCharactersAsync($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwLeaderboardsCharacters'][0])
     {
-        return $this->getFwLeaderboardsCharactersAsyncWithHttpInfo($x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType)
+        return $this->getFwLeaderboardsCharactersAsyncWithHttpInfo($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1270,19 +1252,19 @@ class FactionWarfareApi
      *
      * List of the top pilots in faction warfare
      *
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFwLeaderboardsCharacters'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getFwLeaderboardsCharactersAsyncWithHttpInfo($x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwLeaderboardsCharacters'][0])
+    public function getFwLeaderboardsCharactersAsyncWithHttpInfo($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwLeaderboardsCharacters'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\FwLeaderboardsCharactersGet';
-        $request = $this->getFwLeaderboardsCharactersRequest($x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getFwLeaderboardsCharactersRequest($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1323,24 +1305,18 @@ class FactionWarfareApi
     /**
      * Create request for operation 'getFwLeaderboardsCharacters'
      *
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFwLeaderboardsCharacters'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getFwLeaderboardsCharactersRequest($x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwLeaderboardsCharacters'][0])
+    public function getFwLeaderboardsCharactersRequest($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwLeaderboardsCharacters'][0])
     {
 
-        // verify the required parameter 'x_compatibility_date' is set
-        if ($x_compatibility_date === null || (is_array($x_compatibility_date) && count($x_compatibility_date) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $x_compatibility_date when calling getFwLeaderboardsCharacters'
-            );
-        }
 
 
 
@@ -1364,7 +1340,7 @@ class FactionWarfareApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -1431,9 +1407,9 @@ class FactionWarfareApi
      *
      * List of the top corporations in faction warfare
      *
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFwLeaderboardsCorporations'] to see the possible values for this operation
      *
@@ -1441,9 +1417,9 @@ class FactionWarfareApi
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\FwLeaderboardsCorporationsGet|\Tkhamez\Eve\API\Model\Error
      */
-    public function getFwLeaderboardsCorporations($x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwLeaderboardsCorporations'][0])
+    public function getFwLeaderboardsCorporations($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwLeaderboardsCorporations'][0])
     {
-        list($response) = $this->getFwLeaderboardsCorporationsWithHttpInfo($x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        list($response) = $this->getFwLeaderboardsCorporationsWithHttpInfo($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
         return $response;
     }
 
@@ -1452,9 +1428,9 @@ class FactionWarfareApi
      *
      * List of the top corporations in faction warfare
      *
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFwLeaderboardsCorporations'] to see the possible values for this operation
      *
@@ -1462,9 +1438,9 @@ class FactionWarfareApi
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\FwLeaderboardsCorporationsGet|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getFwLeaderboardsCorporationsWithHttpInfo($x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwLeaderboardsCorporations'][0])
+    public function getFwLeaderboardsCorporationsWithHttpInfo($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwLeaderboardsCorporations'][0])
     {
-        $request = $this->getFwLeaderboardsCorporationsRequest($x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getFwLeaderboardsCorporationsRequest($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1554,18 +1530,18 @@ class FactionWarfareApi
      *
      * List of the top corporations in faction warfare
      *
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFwLeaderboardsCorporations'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getFwLeaderboardsCorporationsAsync($x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwLeaderboardsCorporations'][0])
+    public function getFwLeaderboardsCorporationsAsync($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwLeaderboardsCorporations'][0])
     {
-        return $this->getFwLeaderboardsCorporationsAsyncWithHttpInfo($x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType)
+        return $this->getFwLeaderboardsCorporationsAsyncWithHttpInfo($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1578,19 +1554,19 @@ class FactionWarfareApi
      *
      * List of the top corporations in faction warfare
      *
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFwLeaderboardsCorporations'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getFwLeaderboardsCorporationsAsyncWithHttpInfo($x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwLeaderboardsCorporations'][0])
+    public function getFwLeaderboardsCorporationsAsyncWithHttpInfo($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwLeaderboardsCorporations'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\FwLeaderboardsCorporationsGet';
-        $request = $this->getFwLeaderboardsCorporationsRequest($x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getFwLeaderboardsCorporationsRequest($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1631,24 +1607,18 @@ class FactionWarfareApi
     /**
      * Create request for operation 'getFwLeaderboardsCorporations'
      *
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFwLeaderboardsCorporations'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getFwLeaderboardsCorporationsRequest($x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwLeaderboardsCorporations'][0])
+    public function getFwLeaderboardsCorporationsRequest($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwLeaderboardsCorporations'][0])
     {
 
-        // verify the required parameter 'x_compatibility_date' is set
-        if ($x_compatibility_date === null || (is_array($x_compatibility_date) && count($x_compatibility_date) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $x_compatibility_date when calling getFwLeaderboardsCorporations'
-            );
-        }
 
 
 
@@ -1672,7 +1642,7 @@ class FactionWarfareApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -1739,9 +1709,9 @@ class FactionWarfareApi
      *
      * An overview of statistics about factions involved in faction warfare
      *
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFwStats'] to see the possible values for this operation
      *
@@ -1749,9 +1719,9 @@ class FactionWarfareApi
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\FwStatsGetInner[]|\Tkhamez\Eve\API\Model\Error
      */
-    public function getFwStats($x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwStats'][0])
+    public function getFwStats($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwStats'][0])
     {
-        list($response) = $this->getFwStatsWithHttpInfo($x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        list($response) = $this->getFwStatsWithHttpInfo($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
         return $response;
     }
 
@@ -1760,9 +1730,9 @@ class FactionWarfareApi
      *
      * An overview of statistics about factions involved in faction warfare
      *
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFwStats'] to see the possible values for this operation
      *
@@ -1770,9 +1740,9 @@ class FactionWarfareApi
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\FwStatsGetInner[]|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getFwStatsWithHttpInfo($x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwStats'][0])
+    public function getFwStatsWithHttpInfo($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwStats'][0])
     {
-        $request = $this->getFwStatsRequest($x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getFwStatsRequest($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1862,18 +1832,18 @@ class FactionWarfareApi
      *
      * An overview of statistics about factions involved in faction warfare
      *
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFwStats'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getFwStatsAsync($x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwStats'][0])
+    public function getFwStatsAsync($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwStats'][0])
     {
-        return $this->getFwStatsAsyncWithHttpInfo($x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType)
+        return $this->getFwStatsAsyncWithHttpInfo($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1886,19 +1856,19 @@ class FactionWarfareApi
      *
      * An overview of statistics about factions involved in faction warfare
      *
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFwStats'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getFwStatsAsyncWithHttpInfo($x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwStats'][0])
+    public function getFwStatsAsyncWithHttpInfo($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwStats'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\FwStatsGetInner[]';
-        $request = $this->getFwStatsRequest($x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getFwStatsRequest($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1939,24 +1909,18 @@ class FactionWarfareApi
     /**
      * Create request for operation 'getFwStats'
      *
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFwStats'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getFwStatsRequest($x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwStats'][0])
+    public function getFwStatsRequest($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwStats'][0])
     {
 
-        // verify the required parameter 'x_compatibility_date' is set
-        if ($x_compatibility_date === null || (is_array($x_compatibility_date) && count($x_compatibility_date) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $x_compatibility_date when calling getFwStats'
-            );
-        }
 
 
 
@@ -1980,7 +1944,7 @@ class FactionWarfareApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -2047,9 +2011,9 @@ class FactionWarfareApi
      *
      * Ownership of faction warfare systems
      *
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFwSystems'] to see the possible values for this operation
      *
@@ -2057,9 +2021,9 @@ class FactionWarfareApi
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\FwSystemsGetInner[]|\Tkhamez\Eve\API\Model\Error
      */
-    public function getFwSystems($x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwSystems'][0])
+    public function getFwSystems($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwSystems'][0])
     {
-        list($response) = $this->getFwSystemsWithHttpInfo($x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        list($response) = $this->getFwSystemsWithHttpInfo($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
         return $response;
     }
 
@@ -2068,9 +2032,9 @@ class FactionWarfareApi
      *
      * Ownership of faction warfare systems
      *
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFwSystems'] to see the possible values for this operation
      *
@@ -2078,9 +2042,9 @@ class FactionWarfareApi
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\FwSystemsGetInner[]|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getFwSystemsWithHttpInfo($x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwSystems'][0])
+    public function getFwSystemsWithHttpInfo($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwSystems'][0])
     {
-        $request = $this->getFwSystemsRequest($x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getFwSystemsRequest($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2170,18 +2134,18 @@ class FactionWarfareApi
      *
      * Ownership of faction warfare systems
      *
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFwSystems'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getFwSystemsAsync($x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwSystems'][0])
+    public function getFwSystemsAsync($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwSystems'][0])
     {
-        return $this->getFwSystemsAsyncWithHttpInfo($x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType)
+        return $this->getFwSystemsAsyncWithHttpInfo($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2194,19 +2158,19 @@ class FactionWarfareApi
      *
      * Ownership of faction warfare systems
      *
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFwSystems'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getFwSystemsAsyncWithHttpInfo($x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwSystems'][0])
+    public function getFwSystemsAsyncWithHttpInfo($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwSystems'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\FwSystemsGetInner[]';
-        $request = $this->getFwSystemsRequest($x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getFwSystemsRequest($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2247,24 +2211,18 @@ class FactionWarfareApi
     /**
      * Create request for operation 'getFwSystems'
      *
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFwSystems'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getFwSystemsRequest($x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwSystems'][0])
+    public function getFwSystemsRequest($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwSystems'][0])
     {
 
-        // verify the required parameter 'x_compatibility_date' is set
-        if ($x_compatibility_date === null || (is_array($x_compatibility_date) && count($x_compatibility_date) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $x_compatibility_date when calling getFwSystems'
-            );
-        }
 
 
 
@@ -2288,7 +2246,7 @@ class FactionWarfareApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -2355,9 +2313,9 @@ class FactionWarfareApi
      *
      * Data about which NPC factions are at war
      *
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFwWars'] to see the possible values for this operation
      *
@@ -2365,9 +2323,9 @@ class FactionWarfareApi
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\FwWarsGetInner[]|\Tkhamez\Eve\API\Model\Error
      */
-    public function getFwWars($x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwWars'][0])
+    public function getFwWars($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwWars'][0])
     {
-        list($response) = $this->getFwWarsWithHttpInfo($x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        list($response) = $this->getFwWarsWithHttpInfo($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
         return $response;
     }
 
@@ -2376,9 +2334,9 @@ class FactionWarfareApi
      *
      * Data about which NPC factions are at war
      *
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFwWars'] to see the possible values for this operation
      *
@@ -2386,9 +2344,9 @@ class FactionWarfareApi
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\FwWarsGetInner[]|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getFwWarsWithHttpInfo($x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwWars'][0])
+    public function getFwWarsWithHttpInfo($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwWars'][0])
     {
-        $request = $this->getFwWarsRequest($x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getFwWarsRequest($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2478,18 +2436,18 @@ class FactionWarfareApi
      *
      * Data about which NPC factions are at war
      *
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFwWars'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getFwWarsAsync($x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwWars'][0])
+    public function getFwWarsAsync($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwWars'][0])
     {
-        return $this->getFwWarsAsyncWithHttpInfo($x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType)
+        return $this->getFwWarsAsyncWithHttpInfo($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2502,19 +2460,19 @@ class FactionWarfareApi
      *
      * Data about which NPC factions are at war
      *
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFwWars'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getFwWarsAsyncWithHttpInfo($x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwWars'][0])
+    public function getFwWarsAsyncWithHttpInfo($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwWars'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\FwWarsGetInner[]';
-        $request = $this->getFwWarsRequest($x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getFwWarsRequest($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2555,24 +2513,18 @@ class FactionWarfareApi
     /**
      * Create request for operation 'getFwWars'
      *
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFwWars'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getFwWarsRequest($x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwWars'][0])
+    public function getFwWarsRequest($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFwWars'][0])
     {
 
-        // verify the required parameter 'x_compatibility_date' is set
-        if ($x_compatibility_date === null || (is_array($x_compatibility_date) && count($x_compatibility_date) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $x_compatibility_date when calling getFwWars'
-            );
-        }
 
 
 
@@ -2596,7 +2548,7 @@ class FactionWarfareApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {

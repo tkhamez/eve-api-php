@@ -138,9 +138,9 @@ class FittingsApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  int $fitting_id fitting_id (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteCharactersCharacterIdFittingsFittingId'] to see the possible values for this operation
      *
@@ -148,9 +148,9 @@ class FittingsApi
      * @throws \InvalidArgumentException
      * @return mixed|\Tkhamez\Eve\API\Model\Error
      */
-    public function deleteCharactersCharacterIdFittingsFittingId($character_id, $fitting_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteCharactersCharacterIdFittingsFittingId'][0])
+    public function deleteCharactersCharacterIdFittingsFittingId($character_id, $fitting_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteCharactersCharacterIdFittingsFittingId'][0])
     {
-        list($response) = $this->deleteCharactersCharacterIdFittingsFittingIdWithHttpInfo($character_id, $fitting_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        list($response) = $this->deleteCharactersCharacterIdFittingsFittingIdWithHttpInfo($character_id, $fitting_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
         return $response;
     }
 
@@ -161,9 +161,9 @@ class FittingsApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  int $fitting_id (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteCharactersCharacterIdFittingsFittingId'] to see the possible values for this operation
      *
@@ -171,9 +171,9 @@ class FittingsApi
      * @throws \InvalidArgumentException
      * @return array of mixed|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteCharactersCharacterIdFittingsFittingIdWithHttpInfo($character_id, $fitting_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteCharactersCharacterIdFittingsFittingId'][0])
+    public function deleteCharactersCharacterIdFittingsFittingIdWithHttpInfo($character_id, $fitting_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteCharactersCharacterIdFittingsFittingId'][0])
     {
-        $request = $this->deleteCharactersCharacterIdFittingsFittingIdRequest($character_id, $fitting_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->deleteCharactersCharacterIdFittingsFittingIdRequest($character_id, $fitting_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -265,18 +265,18 @@ class FittingsApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  int $fitting_id (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteCharactersCharacterIdFittingsFittingId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteCharactersCharacterIdFittingsFittingIdAsync($character_id, $fitting_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteCharactersCharacterIdFittingsFittingId'][0])
+    public function deleteCharactersCharacterIdFittingsFittingIdAsync($character_id, $fitting_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteCharactersCharacterIdFittingsFittingId'][0])
     {
-        return $this->deleteCharactersCharacterIdFittingsFittingIdAsyncWithHttpInfo($character_id, $fitting_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType)
+        return $this->deleteCharactersCharacterIdFittingsFittingIdAsyncWithHttpInfo($character_id, $fitting_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -291,19 +291,19 @@ class FittingsApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  int $fitting_id (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteCharactersCharacterIdFittingsFittingId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteCharactersCharacterIdFittingsFittingIdAsyncWithHttpInfo($character_id, $fitting_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteCharactersCharacterIdFittingsFittingId'][0])
+    public function deleteCharactersCharacterIdFittingsFittingIdAsyncWithHttpInfo($character_id, $fitting_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteCharactersCharacterIdFittingsFittingId'][0])
     {
         $returnType = 'mixed';
-        $request = $this->deleteCharactersCharacterIdFittingsFittingIdRequest($character_id, $fitting_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->deleteCharactersCharacterIdFittingsFittingIdRequest($character_id, $fitting_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -346,16 +346,16 @@ class FittingsApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  int $fitting_id (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteCharactersCharacterIdFittingsFittingId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function deleteCharactersCharacterIdFittingsFittingIdRequest($character_id, $fitting_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteCharactersCharacterIdFittingsFittingId'][0])
+    public function deleteCharactersCharacterIdFittingsFittingIdRequest($character_id, $fitting_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteCharactersCharacterIdFittingsFittingId'][0])
     {
 
         // verify the required parameter 'character_id' is set
@@ -372,12 +372,6 @@ class FittingsApi
             );
         }
 
-        // verify the required parameter 'x_compatibility_date' is set
-        if ($x_compatibility_date === null || (is_array($x_compatibility_date) && count($x_compatibility_date) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $x_compatibility_date when calling deleteCharactersCharacterIdFittingsFittingId'
-            );
-        }
 
 
 
@@ -401,7 +395,7 @@ class FittingsApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -489,9 +483,9 @@ class FittingsApi
      * Get fittings
      *
      * @param  int $character_id The ID of the character (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdFittings'] to see the possible values for this operation
      *
@@ -499,9 +493,9 @@ class FittingsApi
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\CharactersCharacterIdFittingsGetInner[]|\Tkhamez\Eve\API\Model\Error
      */
-    public function getCharactersCharacterIdFittings($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdFittings'][0])
+    public function getCharactersCharacterIdFittings($character_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdFittings'][0])
     {
-        list($response) = $this->getCharactersCharacterIdFittingsWithHttpInfo($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        list($response) = $this->getCharactersCharacterIdFittingsWithHttpInfo($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
         return $response;
     }
 
@@ -511,9 +505,9 @@ class FittingsApi
      * Get fittings
      *
      * @param  int $character_id The ID of the character (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdFittings'] to see the possible values for this operation
      *
@@ -521,9 +515,9 @@ class FittingsApi
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\CharactersCharacterIdFittingsGetInner[]|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCharactersCharacterIdFittingsWithHttpInfo($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdFittings'][0])
+    public function getCharactersCharacterIdFittingsWithHttpInfo($character_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdFittings'][0])
     {
-        $request = $this->getCharactersCharacterIdFittingsRequest($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getCharactersCharacterIdFittingsRequest($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -614,18 +608,18 @@ class FittingsApi
      * Get fittings
      *
      * @param  int $character_id The ID of the character (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdFittings'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCharactersCharacterIdFittingsAsync($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdFittings'][0])
+    public function getCharactersCharacterIdFittingsAsync($character_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdFittings'][0])
     {
-        return $this->getCharactersCharacterIdFittingsAsyncWithHttpInfo($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType)
+        return $this->getCharactersCharacterIdFittingsAsyncWithHttpInfo($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -639,19 +633,19 @@ class FittingsApi
      * Get fittings
      *
      * @param  int $character_id The ID of the character (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdFittings'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCharactersCharacterIdFittingsAsyncWithHttpInfo($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdFittings'][0])
+    public function getCharactersCharacterIdFittingsAsyncWithHttpInfo($character_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdFittings'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\CharactersCharacterIdFittingsGetInner[]';
-        $request = $this->getCharactersCharacterIdFittingsRequest($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getCharactersCharacterIdFittingsRequest($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -693,16 +687,16 @@ class FittingsApi
      * Create request for operation 'getCharactersCharacterIdFittings'
      *
      * @param  int $character_id The ID of the character (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdFittings'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getCharactersCharacterIdFittingsRequest($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdFittings'][0])
+    public function getCharactersCharacterIdFittingsRequest($character_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdFittings'][0])
     {
 
         // verify the required parameter 'character_id' is set
@@ -712,12 +706,6 @@ class FittingsApi
             );
         }
 
-        // verify the required parameter 'x_compatibility_date' is set
-        if ($x_compatibility_date === null || (is_array($x_compatibility_date) && count($x_compatibility_date) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $x_compatibility_date when calling getCharactersCharacterIdFittings'
-            );
-        }
 
 
 
@@ -741,7 +729,7 @@ class FittingsApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -821,9 +809,9 @@ class FittingsApi
      * Create fitting
      *
      * @param  int $character_id The ID of the character (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  \Tkhamez\Eve\API\Model\PostCharactersCharacterIdFittingsRequest|null $post_characters_character_id_fittings_request post_characters_character_id_fittings_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCharactersCharacterIdFittings'] to see the possible values for this operation
@@ -832,9 +820,9 @@ class FittingsApi
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\CharactersCharacterIdFittingsPost|\Tkhamez\Eve\API\Model\Error
      */
-    public function postCharactersCharacterIdFittings($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $post_characters_character_id_fittings_request = null, string $contentType = self::contentTypes['postCharactersCharacterIdFittings'][0])
+    public function postCharactersCharacterIdFittings($character_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', $post_characters_character_id_fittings_request = null, string $contentType = self::contentTypes['postCharactersCharacterIdFittings'][0])
     {
-        list($response) = $this->postCharactersCharacterIdFittingsWithHttpInfo($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $post_characters_character_id_fittings_request, $contentType);
+        list($response) = $this->postCharactersCharacterIdFittingsWithHttpInfo($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $post_characters_character_id_fittings_request, $contentType);
         return $response;
     }
 
@@ -844,9 +832,9 @@ class FittingsApi
      * Create fitting
      *
      * @param  int $character_id The ID of the character (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  \Tkhamez\Eve\API\Model\PostCharactersCharacterIdFittingsRequest|null $post_characters_character_id_fittings_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCharactersCharacterIdFittings'] to see the possible values for this operation
@@ -855,9 +843,9 @@ class FittingsApi
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\CharactersCharacterIdFittingsPost|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function postCharactersCharacterIdFittingsWithHttpInfo($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $post_characters_character_id_fittings_request = null, string $contentType = self::contentTypes['postCharactersCharacterIdFittings'][0])
+    public function postCharactersCharacterIdFittingsWithHttpInfo($character_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', $post_characters_character_id_fittings_request = null, string $contentType = self::contentTypes['postCharactersCharacterIdFittings'][0])
     {
-        $request = $this->postCharactersCharacterIdFittingsRequest($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $post_characters_character_id_fittings_request, $contentType);
+        $request = $this->postCharactersCharacterIdFittingsRequest($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $post_characters_character_id_fittings_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -948,9 +936,9 @@ class FittingsApi
      * Create fitting
      *
      * @param  int $character_id The ID of the character (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  \Tkhamez\Eve\API\Model\PostCharactersCharacterIdFittingsRequest|null $post_characters_character_id_fittings_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCharactersCharacterIdFittings'] to see the possible values for this operation
@@ -958,9 +946,9 @@ class FittingsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postCharactersCharacterIdFittingsAsync($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $post_characters_character_id_fittings_request = null, string $contentType = self::contentTypes['postCharactersCharacterIdFittings'][0])
+    public function postCharactersCharacterIdFittingsAsync($character_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', $post_characters_character_id_fittings_request = null, string $contentType = self::contentTypes['postCharactersCharacterIdFittings'][0])
     {
-        return $this->postCharactersCharacterIdFittingsAsyncWithHttpInfo($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $post_characters_character_id_fittings_request, $contentType)
+        return $this->postCharactersCharacterIdFittingsAsyncWithHttpInfo($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $post_characters_character_id_fittings_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -974,9 +962,9 @@ class FittingsApi
      * Create fitting
      *
      * @param  int $character_id The ID of the character (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  \Tkhamez\Eve\API\Model\PostCharactersCharacterIdFittingsRequest|null $post_characters_character_id_fittings_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCharactersCharacterIdFittings'] to see the possible values for this operation
@@ -984,10 +972,10 @@ class FittingsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postCharactersCharacterIdFittingsAsyncWithHttpInfo($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $post_characters_character_id_fittings_request = null, string $contentType = self::contentTypes['postCharactersCharacterIdFittings'][0])
+    public function postCharactersCharacterIdFittingsAsyncWithHttpInfo($character_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', $post_characters_character_id_fittings_request = null, string $contentType = self::contentTypes['postCharactersCharacterIdFittings'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\CharactersCharacterIdFittingsPost';
-        $request = $this->postCharactersCharacterIdFittingsRequest($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $post_characters_character_id_fittings_request, $contentType);
+        $request = $this->postCharactersCharacterIdFittingsRequest($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $post_characters_character_id_fittings_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1029,9 +1017,9 @@ class FittingsApi
      * Create request for operation 'postCharactersCharacterIdFittings'
      *
      * @param  int $character_id The ID of the character (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  \Tkhamez\Eve\API\Model\PostCharactersCharacterIdFittingsRequest|null $post_characters_character_id_fittings_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCharactersCharacterIdFittings'] to see the possible values for this operation
@@ -1039,7 +1027,7 @@ class FittingsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function postCharactersCharacterIdFittingsRequest($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $post_characters_character_id_fittings_request = null, string $contentType = self::contentTypes['postCharactersCharacterIdFittings'][0])
+    public function postCharactersCharacterIdFittingsRequest($character_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', $post_characters_character_id_fittings_request = null, string $contentType = self::contentTypes['postCharactersCharacterIdFittings'][0])
     {
 
         // verify the required parameter 'character_id' is set
@@ -1049,12 +1037,6 @@ class FittingsApi
             );
         }
 
-        // verify the required parameter 'x_compatibility_date' is set
-        if ($x_compatibility_date === null || (is_array($x_compatibility_date) && count($x_compatibility_date) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $x_compatibility_date when calling postCharactersCharacterIdFittings'
-            );
-        }
 
 
 
@@ -1079,7 +1061,7 @@ class FittingsApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {

@@ -152,10 +152,10 @@ class IndustryApi
      * List character industry jobs
      *
      * @param  int $character_id The ID of the character (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  bool|null $include_completed include_completed (optional)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdIndustryJobs'] to see the possible values for this operation
      *
@@ -163,9 +163,9 @@ class IndustryApi
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\CharactersCharacterIdIndustryJobsGetInner[]|\Tkhamez\Eve\API\Model\Error
      */
-    public function getCharactersCharacterIdIndustryJobs($character_id, $x_compatibility_date, $include_completed = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdIndustryJobs'][0])
+    public function getCharactersCharacterIdIndustryJobs($character_id, $include_completed = null, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdIndustryJobs'][0])
     {
-        list($response) = $this->getCharactersCharacterIdIndustryJobsWithHttpInfo($character_id, $x_compatibility_date, $include_completed, $accept_language, $if_none_match, $x_tenant, $contentType);
+        list($response) = $this->getCharactersCharacterIdIndustryJobsWithHttpInfo($character_id, $include_completed, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
         return $response;
     }
 
@@ -175,10 +175,10 @@ class IndustryApi
      * List character industry jobs
      *
      * @param  int $character_id The ID of the character (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  bool|null $include_completed (optional)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdIndustryJobs'] to see the possible values for this operation
      *
@@ -186,9 +186,9 @@ class IndustryApi
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\CharactersCharacterIdIndustryJobsGetInner[]|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCharactersCharacterIdIndustryJobsWithHttpInfo($character_id, $x_compatibility_date, $include_completed = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdIndustryJobs'][0])
+    public function getCharactersCharacterIdIndustryJobsWithHttpInfo($character_id, $include_completed = null, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdIndustryJobs'][0])
     {
-        $request = $this->getCharactersCharacterIdIndustryJobsRequest($character_id, $x_compatibility_date, $include_completed, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getCharactersCharacterIdIndustryJobsRequest($character_id, $include_completed, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -279,19 +279,19 @@ class IndustryApi
      * List character industry jobs
      *
      * @param  int $character_id The ID of the character (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  bool|null $include_completed (optional)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdIndustryJobs'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCharactersCharacterIdIndustryJobsAsync($character_id, $x_compatibility_date, $include_completed = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdIndustryJobs'][0])
+    public function getCharactersCharacterIdIndustryJobsAsync($character_id, $include_completed = null, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdIndustryJobs'][0])
     {
-        return $this->getCharactersCharacterIdIndustryJobsAsyncWithHttpInfo($character_id, $x_compatibility_date, $include_completed, $accept_language, $if_none_match, $x_tenant, $contentType)
+        return $this->getCharactersCharacterIdIndustryJobsAsyncWithHttpInfo($character_id, $include_completed, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -305,20 +305,20 @@ class IndustryApi
      * List character industry jobs
      *
      * @param  int $character_id The ID of the character (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  bool|null $include_completed (optional)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdIndustryJobs'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCharactersCharacterIdIndustryJobsAsyncWithHttpInfo($character_id, $x_compatibility_date, $include_completed = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdIndustryJobs'][0])
+    public function getCharactersCharacterIdIndustryJobsAsyncWithHttpInfo($character_id, $include_completed = null, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdIndustryJobs'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\CharactersCharacterIdIndustryJobsGetInner[]';
-        $request = $this->getCharactersCharacterIdIndustryJobsRequest($character_id, $x_compatibility_date, $include_completed, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getCharactersCharacterIdIndustryJobsRequest($character_id, $include_completed, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -360,17 +360,17 @@ class IndustryApi
      * Create request for operation 'getCharactersCharacterIdIndustryJobs'
      *
      * @param  int $character_id The ID of the character (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  bool|null $include_completed (optional)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdIndustryJobs'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getCharactersCharacterIdIndustryJobsRequest($character_id, $x_compatibility_date, $include_completed = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdIndustryJobs'][0])
+    public function getCharactersCharacterIdIndustryJobsRequest($character_id, $include_completed = null, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdIndustryJobs'][0])
     {
 
         // verify the required parameter 'character_id' is set
@@ -380,12 +380,6 @@ class IndustryApi
             );
         }
 
-        // verify the required parameter 'x_compatibility_date' is set
-        if ($x_compatibility_date === null || (is_array($x_compatibility_date) && count($x_compatibility_date) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $x_compatibility_date when calling getCharactersCharacterIdIndustryJobs'
-            );
-        }
 
 
 
@@ -419,7 +413,7 @@ class IndustryApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -499,10 +493,10 @@ class IndustryApi
      * Character mining ledger
      *
      * @param  int $character_id The ID of the character (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $page page (optional)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdMining'] to see the possible values for this operation
      *
@@ -510,9 +504,9 @@ class IndustryApi
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\CharactersCharacterIdMiningGetInner[]|\Tkhamez\Eve\API\Model\Error
      */
-    public function getCharactersCharacterIdMining($character_id, $x_compatibility_date, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdMining'][0])
+    public function getCharactersCharacterIdMining($character_id, $page = null, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdMining'][0])
     {
-        list($response) = $this->getCharactersCharacterIdMiningWithHttpInfo($character_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant, $contentType);
+        list($response) = $this->getCharactersCharacterIdMiningWithHttpInfo($character_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
         return $response;
     }
 
@@ -522,10 +516,10 @@ class IndustryApi
      * Character mining ledger
      *
      * @param  int $character_id The ID of the character (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $page (optional)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdMining'] to see the possible values for this operation
      *
@@ -533,9 +527,9 @@ class IndustryApi
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\CharactersCharacterIdMiningGetInner[]|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCharactersCharacterIdMiningWithHttpInfo($character_id, $x_compatibility_date, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdMining'][0])
+    public function getCharactersCharacterIdMiningWithHttpInfo($character_id, $page = null, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdMining'][0])
     {
-        $request = $this->getCharactersCharacterIdMiningRequest($character_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getCharactersCharacterIdMiningRequest($character_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -626,19 +620,19 @@ class IndustryApi
      * Character mining ledger
      *
      * @param  int $character_id The ID of the character (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $page (optional)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdMining'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCharactersCharacterIdMiningAsync($character_id, $x_compatibility_date, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdMining'][0])
+    public function getCharactersCharacterIdMiningAsync($character_id, $page = null, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdMining'][0])
     {
-        return $this->getCharactersCharacterIdMiningAsyncWithHttpInfo($character_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant, $contentType)
+        return $this->getCharactersCharacterIdMiningAsyncWithHttpInfo($character_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -652,20 +646,20 @@ class IndustryApi
      * Character mining ledger
      *
      * @param  int $character_id The ID of the character (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $page (optional)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdMining'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCharactersCharacterIdMiningAsyncWithHttpInfo($character_id, $x_compatibility_date, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdMining'][0])
+    public function getCharactersCharacterIdMiningAsyncWithHttpInfo($character_id, $page = null, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdMining'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\CharactersCharacterIdMiningGetInner[]';
-        $request = $this->getCharactersCharacterIdMiningRequest($character_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getCharactersCharacterIdMiningRequest($character_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -707,17 +701,17 @@ class IndustryApi
      * Create request for operation 'getCharactersCharacterIdMining'
      *
      * @param  int $character_id The ID of the character (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $page (optional)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdMining'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getCharactersCharacterIdMiningRequest($character_id, $x_compatibility_date, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdMining'][0])
+    public function getCharactersCharacterIdMiningRequest($character_id, $page = null, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdMining'][0])
     {
 
         // verify the required parameter 'character_id' is set
@@ -727,17 +721,11 @@ class IndustryApi
             );
         }
 
-        // verify the required parameter 'x_compatibility_date' is set
-        if ($x_compatibility_date === null || (is_array($x_compatibility_date) && count($x_compatibility_date) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $x_compatibility_date when calling getCharactersCharacterIdMining'
-            );
-        }
-
         if ($page !== null && $page < 1) {
             throw new \InvalidArgumentException('invalid value for "$page" when calling IndustryApi.getCharactersCharacterIdMining, must be bigger than or equal to 1.');
         }
         
+
 
 
 
@@ -769,7 +757,7 @@ class IndustryApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -849,10 +837,10 @@ class IndustryApi
      * Moon extraction timers
      *
      * @param  int $corporation_id The ID of the corporation (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $page page (optional)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCorporationCorporationIdMiningExtractions'] to see the possible values for this operation
      *
@@ -860,9 +848,9 @@ class IndustryApi
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\CorporationCorporationIdMiningExtractionsGetInner[]|\Tkhamez\Eve\API\Model\Error
      */
-    public function getCorporationCorporationIdMiningExtractions($corporation_id, $x_compatibility_date, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationCorporationIdMiningExtractions'][0])
+    public function getCorporationCorporationIdMiningExtractions($corporation_id, $page = null, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationCorporationIdMiningExtractions'][0])
     {
-        list($response) = $this->getCorporationCorporationIdMiningExtractionsWithHttpInfo($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant, $contentType);
+        list($response) = $this->getCorporationCorporationIdMiningExtractionsWithHttpInfo($corporation_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
         return $response;
     }
 
@@ -872,10 +860,10 @@ class IndustryApi
      * Moon extraction timers
      *
      * @param  int $corporation_id The ID of the corporation (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $page (optional)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCorporationCorporationIdMiningExtractions'] to see the possible values for this operation
      *
@@ -883,9 +871,9 @@ class IndustryApi
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\CorporationCorporationIdMiningExtractionsGetInner[]|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCorporationCorporationIdMiningExtractionsWithHttpInfo($corporation_id, $x_compatibility_date, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationCorporationIdMiningExtractions'][0])
+    public function getCorporationCorporationIdMiningExtractionsWithHttpInfo($corporation_id, $page = null, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationCorporationIdMiningExtractions'][0])
     {
-        $request = $this->getCorporationCorporationIdMiningExtractionsRequest($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getCorporationCorporationIdMiningExtractionsRequest($corporation_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -976,19 +964,19 @@ class IndustryApi
      * Moon extraction timers
      *
      * @param  int $corporation_id The ID of the corporation (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $page (optional)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCorporationCorporationIdMiningExtractions'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCorporationCorporationIdMiningExtractionsAsync($corporation_id, $x_compatibility_date, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationCorporationIdMiningExtractions'][0])
+    public function getCorporationCorporationIdMiningExtractionsAsync($corporation_id, $page = null, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationCorporationIdMiningExtractions'][0])
     {
-        return $this->getCorporationCorporationIdMiningExtractionsAsyncWithHttpInfo($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant, $contentType)
+        return $this->getCorporationCorporationIdMiningExtractionsAsyncWithHttpInfo($corporation_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1002,20 +990,20 @@ class IndustryApi
      * Moon extraction timers
      *
      * @param  int $corporation_id The ID of the corporation (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $page (optional)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCorporationCorporationIdMiningExtractions'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCorporationCorporationIdMiningExtractionsAsyncWithHttpInfo($corporation_id, $x_compatibility_date, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationCorporationIdMiningExtractions'][0])
+    public function getCorporationCorporationIdMiningExtractionsAsyncWithHttpInfo($corporation_id, $page = null, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationCorporationIdMiningExtractions'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\CorporationCorporationIdMiningExtractionsGetInner[]';
-        $request = $this->getCorporationCorporationIdMiningExtractionsRequest($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getCorporationCorporationIdMiningExtractionsRequest($corporation_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1057,17 +1045,17 @@ class IndustryApi
      * Create request for operation 'getCorporationCorporationIdMiningExtractions'
      *
      * @param  int $corporation_id The ID of the corporation (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $page (optional)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCorporationCorporationIdMiningExtractions'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getCorporationCorporationIdMiningExtractionsRequest($corporation_id, $x_compatibility_date, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationCorporationIdMiningExtractions'][0])
+    public function getCorporationCorporationIdMiningExtractionsRequest($corporation_id, $page = null, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationCorporationIdMiningExtractions'][0])
     {
 
         // verify the required parameter 'corporation_id' is set
@@ -1077,17 +1065,11 @@ class IndustryApi
             );
         }
 
-        // verify the required parameter 'x_compatibility_date' is set
-        if ($x_compatibility_date === null || (is_array($x_compatibility_date) && count($x_compatibility_date) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $x_compatibility_date when calling getCorporationCorporationIdMiningExtractions'
-            );
-        }
-
         if ($page !== null && $page < 1) {
             throw new \InvalidArgumentException('invalid value for "$page" when calling IndustryApi.getCorporationCorporationIdMiningExtractions, must be bigger than or equal to 1.');
         }
         
+
 
 
 
@@ -1119,7 +1101,7 @@ class IndustryApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -1199,10 +1181,10 @@ class IndustryApi
      * Corporation mining observers
      *
      * @param  int $corporation_id The ID of the corporation (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $page page (optional)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCorporationCorporationIdMiningObservers'] to see the possible values for this operation
      *
@@ -1210,9 +1192,9 @@ class IndustryApi
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\CorporationCorporationIdMiningObserversGetInner[]|\Tkhamez\Eve\API\Model\Error
      */
-    public function getCorporationCorporationIdMiningObservers($corporation_id, $x_compatibility_date, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationCorporationIdMiningObservers'][0])
+    public function getCorporationCorporationIdMiningObservers($corporation_id, $page = null, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationCorporationIdMiningObservers'][0])
     {
-        list($response) = $this->getCorporationCorporationIdMiningObserversWithHttpInfo($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant, $contentType);
+        list($response) = $this->getCorporationCorporationIdMiningObserversWithHttpInfo($corporation_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
         return $response;
     }
 
@@ -1222,10 +1204,10 @@ class IndustryApi
      * Corporation mining observers
      *
      * @param  int $corporation_id The ID of the corporation (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $page (optional)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCorporationCorporationIdMiningObservers'] to see the possible values for this operation
      *
@@ -1233,9 +1215,9 @@ class IndustryApi
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\CorporationCorporationIdMiningObserversGetInner[]|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCorporationCorporationIdMiningObserversWithHttpInfo($corporation_id, $x_compatibility_date, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationCorporationIdMiningObservers'][0])
+    public function getCorporationCorporationIdMiningObserversWithHttpInfo($corporation_id, $page = null, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationCorporationIdMiningObservers'][0])
     {
-        $request = $this->getCorporationCorporationIdMiningObserversRequest($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getCorporationCorporationIdMiningObserversRequest($corporation_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1326,19 +1308,19 @@ class IndustryApi
      * Corporation mining observers
      *
      * @param  int $corporation_id The ID of the corporation (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $page (optional)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCorporationCorporationIdMiningObservers'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCorporationCorporationIdMiningObserversAsync($corporation_id, $x_compatibility_date, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationCorporationIdMiningObservers'][0])
+    public function getCorporationCorporationIdMiningObserversAsync($corporation_id, $page = null, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationCorporationIdMiningObservers'][0])
     {
-        return $this->getCorporationCorporationIdMiningObserversAsyncWithHttpInfo($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant, $contentType)
+        return $this->getCorporationCorporationIdMiningObserversAsyncWithHttpInfo($corporation_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1352,20 +1334,20 @@ class IndustryApi
      * Corporation mining observers
      *
      * @param  int $corporation_id The ID of the corporation (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $page (optional)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCorporationCorporationIdMiningObservers'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCorporationCorporationIdMiningObserversAsyncWithHttpInfo($corporation_id, $x_compatibility_date, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationCorporationIdMiningObservers'][0])
+    public function getCorporationCorporationIdMiningObserversAsyncWithHttpInfo($corporation_id, $page = null, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationCorporationIdMiningObservers'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\CorporationCorporationIdMiningObserversGetInner[]';
-        $request = $this->getCorporationCorporationIdMiningObserversRequest($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getCorporationCorporationIdMiningObserversRequest($corporation_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1407,17 +1389,17 @@ class IndustryApi
      * Create request for operation 'getCorporationCorporationIdMiningObservers'
      *
      * @param  int $corporation_id The ID of the corporation (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $page (optional)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCorporationCorporationIdMiningObservers'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getCorporationCorporationIdMiningObserversRequest($corporation_id, $x_compatibility_date, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationCorporationIdMiningObservers'][0])
+    public function getCorporationCorporationIdMiningObserversRequest($corporation_id, $page = null, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationCorporationIdMiningObservers'][0])
     {
 
         // verify the required parameter 'corporation_id' is set
@@ -1427,17 +1409,11 @@ class IndustryApi
             );
         }
 
-        // verify the required parameter 'x_compatibility_date' is set
-        if ($x_compatibility_date === null || (is_array($x_compatibility_date) && count($x_compatibility_date) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $x_compatibility_date when calling getCorporationCorporationIdMiningObservers'
-            );
-        }
-
         if ($page !== null && $page < 1) {
             throw new \InvalidArgumentException('invalid value for "$page" when calling IndustryApi.getCorporationCorporationIdMiningObservers, must be bigger than or equal to 1.');
         }
         
+
 
 
 
@@ -1469,7 +1445,7 @@ class IndustryApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -1550,10 +1526,10 @@ class IndustryApi
      *
      * @param  int $corporation_id The ID of the corporation (required)
      * @param  int $observer_id observer_id (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $page page (optional)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCorporationCorporationIdMiningObserversObserverId'] to see the possible values for this operation
      *
@@ -1561,9 +1537,9 @@ class IndustryApi
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\CorporationCorporationIdMiningObserversObserverIdGetInner[]|\Tkhamez\Eve\API\Model\Error
      */
-    public function getCorporationCorporationIdMiningObserversObserverId($corporation_id, $observer_id, $x_compatibility_date, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationCorporationIdMiningObserversObserverId'][0])
+    public function getCorporationCorporationIdMiningObserversObserverId($corporation_id, $observer_id, $page = null, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationCorporationIdMiningObserversObserverId'][0])
     {
-        list($response) = $this->getCorporationCorporationIdMiningObserversObserverIdWithHttpInfo($corporation_id, $observer_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant, $contentType);
+        list($response) = $this->getCorporationCorporationIdMiningObserversObserverIdWithHttpInfo($corporation_id, $observer_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
         return $response;
     }
 
@@ -1574,10 +1550,10 @@ class IndustryApi
      *
      * @param  int $corporation_id The ID of the corporation (required)
      * @param  int $observer_id (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $page (optional)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCorporationCorporationIdMiningObserversObserverId'] to see the possible values for this operation
      *
@@ -1585,9 +1561,9 @@ class IndustryApi
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\CorporationCorporationIdMiningObserversObserverIdGetInner[]|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCorporationCorporationIdMiningObserversObserverIdWithHttpInfo($corporation_id, $observer_id, $x_compatibility_date, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationCorporationIdMiningObserversObserverId'][0])
+    public function getCorporationCorporationIdMiningObserversObserverIdWithHttpInfo($corporation_id, $observer_id, $page = null, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationCorporationIdMiningObserversObserverId'][0])
     {
-        $request = $this->getCorporationCorporationIdMiningObserversObserverIdRequest($corporation_id, $observer_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getCorporationCorporationIdMiningObserversObserverIdRequest($corporation_id, $observer_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1679,19 +1655,19 @@ class IndustryApi
      *
      * @param  int $corporation_id The ID of the corporation (required)
      * @param  int $observer_id (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $page (optional)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCorporationCorporationIdMiningObserversObserverId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCorporationCorporationIdMiningObserversObserverIdAsync($corporation_id, $observer_id, $x_compatibility_date, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationCorporationIdMiningObserversObserverId'][0])
+    public function getCorporationCorporationIdMiningObserversObserverIdAsync($corporation_id, $observer_id, $page = null, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationCorporationIdMiningObserversObserverId'][0])
     {
-        return $this->getCorporationCorporationIdMiningObserversObserverIdAsyncWithHttpInfo($corporation_id, $observer_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant, $contentType)
+        return $this->getCorporationCorporationIdMiningObserversObserverIdAsyncWithHttpInfo($corporation_id, $observer_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1706,20 +1682,20 @@ class IndustryApi
      *
      * @param  int $corporation_id The ID of the corporation (required)
      * @param  int $observer_id (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $page (optional)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCorporationCorporationIdMiningObserversObserverId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCorporationCorporationIdMiningObserversObserverIdAsyncWithHttpInfo($corporation_id, $observer_id, $x_compatibility_date, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationCorporationIdMiningObserversObserverId'][0])
+    public function getCorporationCorporationIdMiningObserversObserverIdAsyncWithHttpInfo($corporation_id, $observer_id, $page = null, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationCorporationIdMiningObserversObserverId'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\CorporationCorporationIdMiningObserversObserverIdGetInner[]';
-        $request = $this->getCorporationCorporationIdMiningObserversObserverIdRequest($corporation_id, $observer_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getCorporationCorporationIdMiningObserversObserverIdRequest($corporation_id, $observer_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1762,17 +1738,17 @@ class IndustryApi
      *
      * @param  int $corporation_id The ID of the corporation (required)
      * @param  int $observer_id (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $page (optional)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCorporationCorporationIdMiningObserversObserverId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getCorporationCorporationIdMiningObserversObserverIdRequest($corporation_id, $observer_id, $x_compatibility_date, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationCorporationIdMiningObserversObserverId'][0])
+    public function getCorporationCorporationIdMiningObserversObserverIdRequest($corporation_id, $observer_id, $page = null, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationCorporationIdMiningObserversObserverId'][0])
     {
 
         // verify the required parameter 'corporation_id' is set
@@ -1789,17 +1765,11 @@ class IndustryApi
             );
         }
 
-        // verify the required parameter 'x_compatibility_date' is set
-        if ($x_compatibility_date === null || (is_array($x_compatibility_date) && count($x_compatibility_date) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $x_compatibility_date when calling getCorporationCorporationIdMiningObserversObserverId'
-            );
-        }
-
         if ($page !== null && $page < 1) {
             throw new \InvalidArgumentException('invalid value for "$page" when calling IndustryApi.getCorporationCorporationIdMiningObserversObserverId, must be bigger than or equal to 1.');
         }
         
+
 
 
 
@@ -1831,7 +1801,7 @@ class IndustryApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -1919,11 +1889,11 @@ class IndustryApi
      * List corporation industry jobs
      *
      * @param  int $corporation_id The ID of the corporation (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  bool|null $include_completed include_completed (optional, default to false)
      * @param  int|null $page page (optional)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCorporationsCorporationIdIndustryJobs'] to see the possible values for this operation
      *
@@ -1931,9 +1901,9 @@ class IndustryApi
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\CorporationsCorporationIdIndustryJobsGetInner[]|\Tkhamez\Eve\API\Model\Error
      */
-    public function getCorporationsCorporationIdIndustryJobs($corporation_id, $x_compatibility_date, $include_completed = false, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationsCorporationIdIndustryJobs'][0])
+    public function getCorporationsCorporationIdIndustryJobs($corporation_id, $include_completed = false, $page = null, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationsCorporationIdIndustryJobs'][0])
     {
-        list($response) = $this->getCorporationsCorporationIdIndustryJobsWithHttpInfo($corporation_id, $x_compatibility_date, $include_completed, $page, $accept_language, $if_none_match, $x_tenant, $contentType);
+        list($response) = $this->getCorporationsCorporationIdIndustryJobsWithHttpInfo($corporation_id, $include_completed, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
         return $response;
     }
 
@@ -1943,11 +1913,11 @@ class IndustryApi
      * List corporation industry jobs
      *
      * @param  int $corporation_id The ID of the corporation (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  bool|null $include_completed (optional, default to false)
      * @param  int|null $page (optional)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCorporationsCorporationIdIndustryJobs'] to see the possible values for this operation
      *
@@ -1955,9 +1925,9 @@ class IndustryApi
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\CorporationsCorporationIdIndustryJobsGetInner[]|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCorporationsCorporationIdIndustryJobsWithHttpInfo($corporation_id, $x_compatibility_date, $include_completed = false, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationsCorporationIdIndustryJobs'][0])
+    public function getCorporationsCorporationIdIndustryJobsWithHttpInfo($corporation_id, $include_completed = false, $page = null, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationsCorporationIdIndustryJobs'][0])
     {
-        $request = $this->getCorporationsCorporationIdIndustryJobsRequest($corporation_id, $x_compatibility_date, $include_completed, $page, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getCorporationsCorporationIdIndustryJobsRequest($corporation_id, $include_completed, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2048,20 +2018,20 @@ class IndustryApi
      * List corporation industry jobs
      *
      * @param  int $corporation_id The ID of the corporation (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  bool|null $include_completed (optional, default to false)
      * @param  int|null $page (optional)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCorporationsCorporationIdIndustryJobs'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCorporationsCorporationIdIndustryJobsAsync($corporation_id, $x_compatibility_date, $include_completed = false, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationsCorporationIdIndustryJobs'][0])
+    public function getCorporationsCorporationIdIndustryJobsAsync($corporation_id, $include_completed = false, $page = null, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationsCorporationIdIndustryJobs'][0])
     {
-        return $this->getCorporationsCorporationIdIndustryJobsAsyncWithHttpInfo($corporation_id, $x_compatibility_date, $include_completed, $page, $accept_language, $if_none_match, $x_tenant, $contentType)
+        return $this->getCorporationsCorporationIdIndustryJobsAsyncWithHttpInfo($corporation_id, $include_completed, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2075,21 +2045,21 @@ class IndustryApi
      * List corporation industry jobs
      *
      * @param  int $corporation_id The ID of the corporation (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  bool|null $include_completed (optional, default to false)
      * @param  int|null $page (optional)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCorporationsCorporationIdIndustryJobs'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCorporationsCorporationIdIndustryJobsAsyncWithHttpInfo($corporation_id, $x_compatibility_date, $include_completed = false, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationsCorporationIdIndustryJobs'][0])
+    public function getCorporationsCorporationIdIndustryJobsAsyncWithHttpInfo($corporation_id, $include_completed = false, $page = null, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationsCorporationIdIndustryJobs'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\CorporationsCorporationIdIndustryJobsGetInner[]';
-        $request = $this->getCorporationsCorporationIdIndustryJobsRequest($corporation_id, $x_compatibility_date, $include_completed, $page, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getCorporationsCorporationIdIndustryJobsRequest($corporation_id, $include_completed, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2131,18 +2101,18 @@ class IndustryApi
      * Create request for operation 'getCorporationsCorporationIdIndustryJobs'
      *
      * @param  int $corporation_id The ID of the corporation (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  bool|null $include_completed (optional, default to false)
      * @param  int|null $page (optional)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCorporationsCorporationIdIndustryJobs'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getCorporationsCorporationIdIndustryJobsRequest($corporation_id, $x_compatibility_date, $include_completed = false, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationsCorporationIdIndustryJobs'][0])
+    public function getCorporationsCorporationIdIndustryJobsRequest($corporation_id, $include_completed = false, $page = null, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationsCorporationIdIndustryJobs'][0])
     {
 
         // verify the required parameter 'corporation_id' is set
@@ -2152,18 +2122,12 @@ class IndustryApi
             );
         }
 
-        // verify the required parameter 'x_compatibility_date' is set
-        if ($x_compatibility_date === null || (is_array($x_compatibility_date) && count($x_compatibility_date) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $x_compatibility_date when calling getCorporationsCorporationIdIndustryJobs'
-            );
-        }
-
 
         if ($page !== null && $page < 1) {
             throw new \InvalidArgumentException('invalid value for "$page" when calling IndustryApi.getCorporationsCorporationIdIndustryJobs, must be bigger than or equal to 1.');
         }
         
+
 
 
 
@@ -2204,7 +2168,7 @@ class IndustryApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -2283,9 +2247,9 @@ class IndustryApi
      *
      * List industry facilities
      *
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getIndustryFacilities'] to see the possible values for this operation
      *
@@ -2293,9 +2257,9 @@ class IndustryApi
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\IndustryFacilitiesGetInner[]|\Tkhamez\Eve\API\Model\Error
      */
-    public function getIndustryFacilities($x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getIndustryFacilities'][0])
+    public function getIndustryFacilities($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getIndustryFacilities'][0])
     {
-        list($response) = $this->getIndustryFacilitiesWithHttpInfo($x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        list($response) = $this->getIndustryFacilitiesWithHttpInfo($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
         return $response;
     }
 
@@ -2304,9 +2268,9 @@ class IndustryApi
      *
      * List industry facilities
      *
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getIndustryFacilities'] to see the possible values for this operation
      *
@@ -2314,9 +2278,9 @@ class IndustryApi
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\IndustryFacilitiesGetInner[]|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getIndustryFacilitiesWithHttpInfo($x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getIndustryFacilities'][0])
+    public function getIndustryFacilitiesWithHttpInfo($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getIndustryFacilities'][0])
     {
-        $request = $this->getIndustryFacilitiesRequest($x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getIndustryFacilitiesRequest($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2406,18 +2370,18 @@ class IndustryApi
      *
      * List industry facilities
      *
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getIndustryFacilities'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getIndustryFacilitiesAsync($x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getIndustryFacilities'][0])
+    public function getIndustryFacilitiesAsync($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getIndustryFacilities'][0])
     {
-        return $this->getIndustryFacilitiesAsyncWithHttpInfo($x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType)
+        return $this->getIndustryFacilitiesAsyncWithHttpInfo($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2430,19 +2394,19 @@ class IndustryApi
      *
      * List industry facilities
      *
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getIndustryFacilities'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getIndustryFacilitiesAsyncWithHttpInfo($x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getIndustryFacilities'][0])
+    public function getIndustryFacilitiesAsyncWithHttpInfo($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getIndustryFacilities'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\IndustryFacilitiesGetInner[]';
-        $request = $this->getIndustryFacilitiesRequest($x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getIndustryFacilitiesRequest($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2483,24 +2447,18 @@ class IndustryApi
     /**
      * Create request for operation 'getIndustryFacilities'
      *
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getIndustryFacilities'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getIndustryFacilitiesRequest($x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getIndustryFacilities'][0])
+    public function getIndustryFacilitiesRequest($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getIndustryFacilities'][0])
     {
 
-        // verify the required parameter 'x_compatibility_date' is set
-        if ($x_compatibility_date === null || (is_array($x_compatibility_date) && count($x_compatibility_date) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $x_compatibility_date when calling getIndustryFacilities'
-            );
-        }
 
 
 
@@ -2524,7 +2482,7 @@ class IndustryApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -2591,9 +2549,9 @@ class IndustryApi
      *
      * List solar system cost indices
      *
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getIndustrySystems'] to see the possible values for this operation
      *
@@ -2601,9 +2559,9 @@ class IndustryApi
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\IndustrySystemsGetInner[]|\Tkhamez\Eve\API\Model\Error
      */
-    public function getIndustrySystems($x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getIndustrySystems'][0])
+    public function getIndustrySystems($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getIndustrySystems'][0])
     {
-        list($response) = $this->getIndustrySystemsWithHttpInfo($x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        list($response) = $this->getIndustrySystemsWithHttpInfo($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
         return $response;
     }
 
@@ -2612,9 +2570,9 @@ class IndustryApi
      *
      * List solar system cost indices
      *
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getIndustrySystems'] to see the possible values for this operation
      *
@@ -2622,9 +2580,9 @@ class IndustryApi
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\IndustrySystemsGetInner[]|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getIndustrySystemsWithHttpInfo($x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getIndustrySystems'][0])
+    public function getIndustrySystemsWithHttpInfo($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getIndustrySystems'][0])
     {
-        $request = $this->getIndustrySystemsRequest($x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getIndustrySystemsRequest($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2714,18 +2672,18 @@ class IndustryApi
      *
      * List solar system cost indices
      *
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getIndustrySystems'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getIndustrySystemsAsync($x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getIndustrySystems'][0])
+    public function getIndustrySystemsAsync($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getIndustrySystems'][0])
     {
-        return $this->getIndustrySystemsAsyncWithHttpInfo($x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType)
+        return $this->getIndustrySystemsAsyncWithHttpInfo($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2738,19 +2696,19 @@ class IndustryApi
      *
      * List solar system cost indices
      *
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getIndustrySystems'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getIndustrySystemsAsyncWithHttpInfo($x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getIndustrySystems'][0])
+    public function getIndustrySystemsAsyncWithHttpInfo($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getIndustrySystems'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\IndustrySystemsGetInner[]';
-        $request = $this->getIndustrySystemsRequest($x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getIndustrySystemsRequest($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2791,24 +2749,18 @@ class IndustryApi
     /**
      * Create request for operation 'getIndustrySystems'
      *
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getIndustrySystems'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getIndustrySystemsRequest($x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getIndustrySystems'][0])
+    public function getIndustrySystemsRequest($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getIndustrySystems'][0])
     {
 
-        // verify the required parameter 'x_compatibility_date' is set
-        if ($x_compatibility_date === null || (is_array($x_compatibility_date) && count($x_compatibility_date) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $x_compatibility_date when calling getIndustrySystems'
-            );
-        }
 
 
 
@@ -2832,7 +2784,7 @@ class IndustryApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {

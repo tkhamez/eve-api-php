@@ -18,7 +18,7 @@ All URIs are relative to https://esi.evetech.net, except if the operation define
 ## `getCharactersCharacterIdContracts()`
 
 ```php
-getCharactersCharacterIdContracts($character_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdContractsGetInner[]
+getCharactersCharacterIdContracts($character_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdContractsGetInner[]
 ```
 
 Get contracts
@@ -43,14 +43,14 @@ $apiInstance = new Tkhamez\Eve\API\Api\ContractsApi(
     $config
 );
 $character_id = 56; // int | The ID of the character
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $page = 56; // int
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->getCharactersCharacterIdContracts($character_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->getCharactersCharacterIdContracts($character_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ContractsApi->getCharactersCharacterIdContracts: ', $e->getMessage(), PHP_EOL;
@@ -62,10 +62,10 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **character_id** | **int**| The ID of the character | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **page** | **int**|  | [optional] |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -88,7 +88,7 @@ try {
 ## `getCharactersCharacterIdContractsContractIdBids()`
 
 ```php
-getCharactersCharacterIdContractsContractIdBids($character_id, $contract_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdContractsContractIdBidsGetInner[]
+getCharactersCharacterIdContractsContractIdBids($character_id, $contract_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdContractsContractIdBidsGetInner[]
 ```
 
 Get contract bids
@@ -114,13 +114,13 @@ $apiInstance = new Tkhamez\Eve\API\Api\ContractsApi(
 );
 $character_id = 56; // int | The ID of the character
 $contract_id = 56; // int
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->getCharactersCharacterIdContractsContractIdBids($character_id, $contract_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->getCharactersCharacterIdContractsContractIdBids($character_id, $contract_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ContractsApi->getCharactersCharacterIdContractsContractIdBids: ', $e->getMessage(), PHP_EOL;
@@ -133,9 +133,9 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **character_id** | **int**| The ID of the character | |
 | **contract_id** | **int**|  | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -158,7 +158,7 @@ try {
 ## `getCharactersCharacterIdContractsContractIdItems()`
 
 ```php
-getCharactersCharacterIdContractsContractIdItems($character_id, $contract_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdContractsContractIdItemsGetInner[]
+getCharactersCharacterIdContractsContractIdItems($character_id, $contract_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdContractsContractIdItemsGetInner[]
 ```
 
 Get contract items
@@ -184,13 +184,13 @@ $apiInstance = new Tkhamez\Eve\API\Api\ContractsApi(
 );
 $character_id = 56; // int | The ID of the character
 $contract_id = 56; // int
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->getCharactersCharacterIdContractsContractIdItems($character_id, $contract_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->getCharactersCharacterIdContractsContractIdItems($character_id, $contract_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ContractsApi->getCharactersCharacterIdContractsContractIdItems: ', $e->getMessage(), PHP_EOL;
@@ -203,9 +203,9 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **character_id** | **int**| The ID of the character | |
 | **contract_id** | **int**|  | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -228,7 +228,7 @@ try {
 ## `getContractsPublicBidsContractId()`
 
 ```php
-getContractsPublicBidsContractId($contract_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\ContractsPublicBidsContractIdGetInner[]
+getContractsPublicBidsContractId($contract_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\ContractsPublicBidsContractIdGetInner[]
 ```
 
 Get public contract bids
@@ -249,14 +249,14 @@ $apiInstance = new Tkhamez\Eve\API\Api\ContractsApi(
     new GuzzleHttp\Client()
 );
 $contract_id = 56; // int
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $page = 56; // int
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->getContractsPublicBidsContractId($contract_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->getContractsPublicBidsContractId($contract_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ContractsApi->getContractsPublicBidsContractId: ', $e->getMessage(), PHP_EOL;
@@ -268,10 +268,10 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **contract_id** | **int**|  | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **page** | **int**|  | [optional] |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -294,7 +294,7 @@ No authorization required
 ## `getContractsPublicItemsContractId()`
 
 ```php
-getContractsPublicItemsContractId($contract_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\ContractsPublicItemsContractIdGetInner[]
+getContractsPublicItemsContractId($contract_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\ContractsPublicItemsContractIdGetInner[]
 ```
 
 Get public contract items
@@ -315,14 +315,14 @@ $apiInstance = new Tkhamez\Eve\API\Api\ContractsApi(
     new GuzzleHttp\Client()
 );
 $contract_id = 56; // int
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $page = 56; // int
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->getContractsPublicItemsContractId($contract_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->getContractsPublicItemsContractId($contract_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ContractsApi->getContractsPublicItemsContractId: ', $e->getMessage(), PHP_EOL;
@@ -334,10 +334,10 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **contract_id** | **int**|  | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **page** | **int**|  | [optional] |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -360,7 +360,7 @@ No authorization required
 ## `getContractsPublicRegionId()`
 
 ```php
-getContractsPublicRegionId($region_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\ContractsPublicRegionIdGetInner[]
+getContractsPublicRegionId($region_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\ContractsPublicRegionIdGetInner[]
 ```
 
 Get public contracts
@@ -381,14 +381,14 @@ $apiInstance = new Tkhamez\Eve\API\Api\ContractsApi(
     new GuzzleHttp\Client()
 );
 $region_id = 56; // int
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $page = 56; // int
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->getContractsPublicRegionId($region_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->getContractsPublicRegionId($region_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ContractsApi->getContractsPublicRegionId: ', $e->getMessage(), PHP_EOL;
@@ -400,10 +400,10 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **region_id** | **int**|  | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **page** | **int**|  | [optional] |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -426,7 +426,7 @@ No authorization required
 ## `getCorporationsCorporationIdContracts()`
 
 ```php
-getCorporationsCorporationIdContracts($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdContractsGetInner[]
+getCorporationsCorporationIdContracts($corporation_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdContractsGetInner[]
 ```
 
 Get corporation contracts
@@ -451,14 +451,14 @@ $apiInstance = new Tkhamez\Eve\API\Api\ContractsApi(
     $config
 );
 $corporation_id = 56; // int | The ID of the corporation
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $page = 56; // int
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->getCorporationsCorporationIdContracts($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->getCorporationsCorporationIdContracts($corporation_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ContractsApi->getCorporationsCorporationIdContracts: ', $e->getMessage(), PHP_EOL;
@@ -470,10 +470,10 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **corporation_id** | **int**| The ID of the corporation | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **page** | **int**|  | [optional] |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -496,7 +496,7 @@ try {
 ## `getCorporationsCorporationIdContractsContractIdBids()`
 
 ```php
-getCorporationsCorporationIdContractsContractIdBids($contract_id, $corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdContractsContractIdBidsGetInner[]
+getCorporationsCorporationIdContractsContractIdBids($contract_id, $corporation_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdContractsContractIdBidsGetInner[]
 ```
 
 Get corporation contract bids
@@ -522,14 +522,14 @@ $apiInstance = new Tkhamez\Eve\API\Api\ContractsApi(
 );
 $contract_id = 56; // int
 $corporation_id = 56; // int | The ID of the corporation
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $page = 56; // int
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->getCorporationsCorporationIdContractsContractIdBids($contract_id, $corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->getCorporationsCorporationIdContractsContractIdBids($contract_id, $corporation_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ContractsApi->getCorporationsCorporationIdContractsContractIdBids: ', $e->getMessage(), PHP_EOL;
@@ -542,10 +542,10 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **contract_id** | **int**|  | |
 | **corporation_id** | **int**| The ID of the corporation | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **page** | **int**|  | [optional] |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -568,7 +568,7 @@ try {
 ## `getCorporationsCorporationIdContractsContractIdItems()`
 
 ```php
-getCorporationsCorporationIdContractsContractIdItems($contract_id, $corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdContractsContractIdItemsGetInner[]
+getCorporationsCorporationIdContractsContractIdItems($contract_id, $corporation_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdContractsContractIdItemsGetInner[]
 ```
 
 Get corporation contract items
@@ -594,13 +594,13 @@ $apiInstance = new Tkhamez\Eve\API\Api\ContractsApi(
 );
 $contract_id = 56; // int
 $corporation_id = 56; // int | The ID of the corporation
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->getCorporationsCorporationIdContractsContractIdItems($contract_id, $corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->getCorporationsCorporationIdContractsContractIdItems($contract_id, $corporation_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ContractsApi->getCorporationsCorporationIdContractsContractIdItems: ', $e->getMessage(), PHP_EOL;
@@ -613,9 +613,9 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **contract_id** | **int**|  | |
 | **corporation_id** | **int**| The ID of the corporation | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type

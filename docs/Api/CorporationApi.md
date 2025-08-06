@@ -31,7 +31,7 @@ All URIs are relative to https://esi.evetech.net, except if the operation define
 ## `getCorporationsCorporationId()`
 
 ```php
-getCorporationsCorporationId($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdGet
+getCorporationsCorporationId($corporation_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdGet
 ```
 
 Get corporation information
@@ -52,13 +52,13 @@ $apiInstance = new Tkhamez\Eve\API\Api\CorporationApi(
     new GuzzleHttp\Client()
 );
 $corporation_id = 56; // int | The ID of the corporation
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->getCorporationsCorporationId($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->getCorporationsCorporationId($corporation_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CorporationApi->getCorporationsCorporationId: ', $e->getMessage(), PHP_EOL;
@@ -70,9 +70,9 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **corporation_id** | **int**| The ID of the corporation | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -95,7 +95,7 @@ No authorization required
 ## `getCorporationsCorporationIdAlliancehistory()`
 
 ```php
-getCorporationsCorporationIdAlliancehistory($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdAlliancehistoryGetInner[]
+getCorporationsCorporationIdAlliancehistory($corporation_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdAlliancehistoryGetInner[]
 ```
 
 Get alliance history
@@ -116,13 +116,13 @@ $apiInstance = new Tkhamez\Eve\API\Api\CorporationApi(
     new GuzzleHttp\Client()
 );
 $corporation_id = 56; // int | The ID of the corporation
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->getCorporationsCorporationIdAlliancehistory($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->getCorporationsCorporationIdAlliancehistory($corporation_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CorporationApi->getCorporationsCorporationIdAlliancehistory: ', $e->getMessage(), PHP_EOL;
@@ -134,9 +134,9 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **corporation_id** | **int**| The ID of the corporation | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -159,7 +159,7 @@ No authorization required
 ## `getCorporationsCorporationIdBlueprints()`
 
 ```php
-getCorporationsCorporationIdBlueprints($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdBlueprintsGetInner[]
+getCorporationsCorporationIdBlueprints($corporation_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdBlueprintsGetInner[]
 ```
 
 Get corporation blueprints
@@ -184,14 +184,14 @@ $apiInstance = new Tkhamez\Eve\API\Api\CorporationApi(
     $config
 );
 $corporation_id = 56; // int | The ID of the corporation
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $page = 56; // int
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->getCorporationsCorporationIdBlueprints($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->getCorporationsCorporationIdBlueprints($corporation_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CorporationApi->getCorporationsCorporationIdBlueprints: ', $e->getMessage(), PHP_EOL;
@@ -203,10 +203,10 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **corporation_id** | **int**| The ID of the corporation | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **page** | **int**|  | [optional] |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -229,7 +229,7 @@ try {
 ## `getCorporationsCorporationIdContainersLogs()`
 
 ```php
-getCorporationsCorporationIdContainersLogs($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdContainersLogsGetInner[]
+getCorporationsCorporationIdContainersLogs($corporation_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdContainersLogsGetInner[]
 ```
 
 Get all corporation ALSC logs
@@ -254,14 +254,14 @@ $apiInstance = new Tkhamez\Eve\API\Api\CorporationApi(
     $config
 );
 $corporation_id = 56; // int | The ID of the corporation
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $page = 56; // int
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->getCorporationsCorporationIdContainersLogs($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->getCorporationsCorporationIdContainersLogs($corporation_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CorporationApi->getCorporationsCorporationIdContainersLogs: ', $e->getMessage(), PHP_EOL;
@@ -273,10 +273,10 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **corporation_id** | **int**| The ID of the corporation | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **page** | **int**|  | [optional] |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -299,7 +299,7 @@ try {
 ## `getCorporationsCorporationIdDivisions()`
 
 ```php
-getCorporationsCorporationIdDivisions($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdDivisionsGet
+getCorporationsCorporationIdDivisions($corporation_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdDivisionsGet
 ```
 
 Get corporation divisions
@@ -324,13 +324,13 @@ $apiInstance = new Tkhamez\Eve\API\Api\CorporationApi(
     $config
 );
 $corporation_id = 56; // int | The ID of the corporation
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->getCorporationsCorporationIdDivisions($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->getCorporationsCorporationIdDivisions($corporation_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CorporationApi->getCorporationsCorporationIdDivisions: ', $e->getMessage(), PHP_EOL;
@@ -342,9 +342,9 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **corporation_id** | **int**| The ID of the corporation | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -367,7 +367,7 @@ try {
 ## `getCorporationsCorporationIdFacilities()`
 
 ```php
-getCorporationsCorporationIdFacilities($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdFacilitiesGetInner[]
+getCorporationsCorporationIdFacilities($corporation_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdFacilitiesGetInner[]
 ```
 
 Get corporation facilities
@@ -392,13 +392,13 @@ $apiInstance = new Tkhamez\Eve\API\Api\CorporationApi(
     $config
 );
 $corporation_id = 56; // int | The ID of the corporation
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->getCorporationsCorporationIdFacilities($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->getCorporationsCorporationIdFacilities($corporation_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CorporationApi->getCorporationsCorporationIdFacilities: ', $e->getMessage(), PHP_EOL;
@@ -410,9 +410,9 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **corporation_id** | **int**| The ID of the corporation | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -435,7 +435,7 @@ try {
 ## `getCorporationsCorporationIdIcons()`
 
 ```php
-getCorporationsCorporationIdIcons($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdIconsGet
+getCorporationsCorporationIdIcons($corporation_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdIconsGet
 ```
 
 Get corporation icon
@@ -456,13 +456,13 @@ $apiInstance = new Tkhamez\Eve\API\Api\CorporationApi(
     new GuzzleHttp\Client()
 );
 $corporation_id = 56; // int | The ID of the corporation
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->getCorporationsCorporationIdIcons($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->getCorporationsCorporationIdIcons($corporation_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CorporationApi->getCorporationsCorporationIdIcons: ', $e->getMessage(), PHP_EOL;
@@ -474,9 +474,9 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **corporation_id** | **int**| The ID of the corporation | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -499,7 +499,7 @@ No authorization required
 ## `getCorporationsCorporationIdMedals()`
 
 ```php
-getCorporationsCorporationIdMedals($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdMedalsGetInner[]
+getCorporationsCorporationIdMedals($corporation_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdMedalsGetInner[]
 ```
 
 Get corporation medals
@@ -524,14 +524,14 @@ $apiInstance = new Tkhamez\Eve\API\Api\CorporationApi(
     $config
 );
 $corporation_id = 56; // int | The ID of the corporation
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $page = 56; // int
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->getCorporationsCorporationIdMedals($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->getCorporationsCorporationIdMedals($corporation_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CorporationApi->getCorporationsCorporationIdMedals: ', $e->getMessage(), PHP_EOL;
@@ -543,10 +543,10 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **corporation_id** | **int**| The ID of the corporation | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **page** | **int**|  | [optional] |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -569,7 +569,7 @@ try {
 ## `getCorporationsCorporationIdMedalsIssued()`
 
 ```php
-getCorporationsCorporationIdMedalsIssued($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdMedalsIssuedGetInner[]
+getCorporationsCorporationIdMedalsIssued($corporation_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdMedalsIssuedGetInner[]
 ```
 
 Get corporation issued medals
@@ -594,14 +594,14 @@ $apiInstance = new Tkhamez\Eve\API\Api\CorporationApi(
     $config
 );
 $corporation_id = 56; // int | The ID of the corporation
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $page = 56; // int
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->getCorporationsCorporationIdMedalsIssued($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->getCorporationsCorporationIdMedalsIssued($corporation_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CorporationApi->getCorporationsCorporationIdMedalsIssued: ', $e->getMessage(), PHP_EOL;
@@ -613,10 +613,10 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **corporation_id** | **int**| The ID of the corporation | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **page** | **int**|  | [optional] |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -639,7 +639,7 @@ try {
 ## `getCorporationsCorporationIdMembers()`
 
 ```php
-getCorporationsCorporationIdMembers($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): int[]
+getCorporationsCorporationIdMembers($corporation_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): int[]
 ```
 
 Get corporation members
@@ -664,13 +664,13 @@ $apiInstance = new Tkhamez\Eve\API\Api\CorporationApi(
     $config
 );
 $corporation_id = 56; // int | The ID of the corporation
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->getCorporationsCorporationIdMembers($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->getCorporationsCorporationIdMembers($corporation_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CorporationApi->getCorporationsCorporationIdMembers: ', $e->getMessage(), PHP_EOL;
@@ -682,9 +682,9 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **corporation_id** | **int**| The ID of the corporation | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -707,7 +707,7 @@ try {
 ## `getCorporationsCorporationIdMembersLimit()`
 
 ```php
-getCorporationsCorporationIdMembersLimit($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): int
+getCorporationsCorporationIdMembersLimit($corporation_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): int
 ```
 
 Get corporation member limit
@@ -732,13 +732,13 @@ $apiInstance = new Tkhamez\Eve\API\Api\CorporationApi(
     $config
 );
 $corporation_id = 56; // int | The ID of the corporation
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->getCorporationsCorporationIdMembersLimit($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->getCorporationsCorporationIdMembersLimit($corporation_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CorporationApi->getCorporationsCorporationIdMembersLimit: ', $e->getMessage(), PHP_EOL;
@@ -750,9 +750,9 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **corporation_id** | **int**| The ID of the corporation | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -775,7 +775,7 @@ try {
 ## `getCorporationsCorporationIdMembersTitles()`
 
 ```php
-getCorporationsCorporationIdMembersTitles($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdMembersTitlesGetInner[]
+getCorporationsCorporationIdMembersTitles($corporation_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdMembersTitlesGetInner[]
 ```
 
 Get corporation's members' titles
@@ -800,13 +800,13 @@ $apiInstance = new Tkhamez\Eve\API\Api\CorporationApi(
     $config
 );
 $corporation_id = 56; // int | The ID of the corporation
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->getCorporationsCorporationIdMembersTitles($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->getCorporationsCorporationIdMembersTitles($corporation_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CorporationApi->getCorporationsCorporationIdMembersTitles: ', $e->getMessage(), PHP_EOL;
@@ -818,9 +818,9 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **corporation_id** | **int**| The ID of the corporation | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -843,7 +843,7 @@ try {
 ## `getCorporationsCorporationIdMembertracking()`
 
 ```php
-getCorporationsCorporationIdMembertracking($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdMembertrackingGetInner[]
+getCorporationsCorporationIdMembertracking($corporation_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdMembertrackingGetInner[]
 ```
 
 Track corporation members
@@ -868,13 +868,13 @@ $apiInstance = new Tkhamez\Eve\API\Api\CorporationApi(
     $config
 );
 $corporation_id = 56; // int | The ID of the corporation
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->getCorporationsCorporationIdMembertracking($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->getCorporationsCorporationIdMembertracking($corporation_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CorporationApi->getCorporationsCorporationIdMembertracking: ', $e->getMessage(), PHP_EOL;
@@ -886,9 +886,9 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **corporation_id** | **int**| The ID of the corporation | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -911,7 +911,7 @@ try {
 ## `getCorporationsCorporationIdRoles()`
 
 ```php
-getCorporationsCorporationIdRoles($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdRolesGetInner[]
+getCorporationsCorporationIdRoles($corporation_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdRolesGetInner[]
 ```
 
 Get corporation member roles
@@ -936,13 +936,13 @@ $apiInstance = new Tkhamez\Eve\API\Api\CorporationApi(
     $config
 );
 $corporation_id = 56; // int | The ID of the corporation
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->getCorporationsCorporationIdRoles($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->getCorporationsCorporationIdRoles($corporation_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CorporationApi->getCorporationsCorporationIdRoles: ', $e->getMessage(), PHP_EOL;
@@ -954,9 +954,9 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **corporation_id** | **int**| The ID of the corporation | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -979,7 +979,7 @@ try {
 ## `getCorporationsCorporationIdRolesHistory()`
 
 ```php
-getCorporationsCorporationIdRolesHistory($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdRolesHistoryGetInner[]
+getCorporationsCorporationIdRolesHistory($corporation_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdRolesHistoryGetInner[]
 ```
 
 Get corporation member roles history
@@ -1004,14 +1004,14 @@ $apiInstance = new Tkhamez\Eve\API\Api\CorporationApi(
     $config
 );
 $corporation_id = 56; // int | The ID of the corporation
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $page = 56; // int
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->getCorporationsCorporationIdRolesHistory($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->getCorporationsCorporationIdRolesHistory($corporation_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CorporationApi->getCorporationsCorporationIdRolesHistory: ', $e->getMessage(), PHP_EOL;
@@ -1023,10 +1023,10 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **corporation_id** | **int**| The ID of the corporation | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **page** | **int**|  | [optional] |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -1049,7 +1049,7 @@ try {
 ## `getCorporationsCorporationIdShareholders()`
 
 ```php
-getCorporationsCorporationIdShareholders($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdShareholdersGetInner[]
+getCorporationsCorporationIdShareholders($corporation_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdShareholdersGetInner[]
 ```
 
 Get corporation shareholders
@@ -1074,14 +1074,14 @@ $apiInstance = new Tkhamez\Eve\API\Api\CorporationApi(
     $config
 );
 $corporation_id = 56; // int | The ID of the corporation
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $page = 56; // int
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->getCorporationsCorporationIdShareholders($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->getCorporationsCorporationIdShareholders($corporation_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CorporationApi->getCorporationsCorporationIdShareholders: ', $e->getMessage(), PHP_EOL;
@@ -1093,10 +1093,10 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **corporation_id** | **int**| The ID of the corporation | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **page** | **int**|  | [optional] |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -1119,7 +1119,7 @@ try {
 ## `getCorporationsCorporationIdStandings()`
 
 ```php
-getCorporationsCorporationIdStandings($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdStandingsGetInner[]
+getCorporationsCorporationIdStandings($corporation_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdStandingsGetInner[]
 ```
 
 Get corporation standings
@@ -1144,14 +1144,14 @@ $apiInstance = new Tkhamez\Eve\API\Api\CorporationApi(
     $config
 );
 $corporation_id = 56; // int | The ID of the corporation
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $page = 56; // int
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->getCorporationsCorporationIdStandings($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->getCorporationsCorporationIdStandings($corporation_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CorporationApi->getCorporationsCorporationIdStandings: ', $e->getMessage(), PHP_EOL;
@@ -1163,10 +1163,10 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **corporation_id** | **int**| The ID of the corporation | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **page** | **int**|  | [optional] |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -1189,7 +1189,7 @@ try {
 ## `getCorporationsCorporationIdStarbases()`
 
 ```php
-getCorporationsCorporationIdStarbases($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdStarbasesGetInner[]
+getCorporationsCorporationIdStarbases($corporation_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdStarbasesGetInner[]
 ```
 
 Get corporation starbases (POSes)
@@ -1214,14 +1214,14 @@ $apiInstance = new Tkhamez\Eve\API\Api\CorporationApi(
     $config
 );
 $corporation_id = 56; // int | The ID of the corporation
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $page = 56; // int
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->getCorporationsCorporationIdStarbases($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->getCorporationsCorporationIdStarbases($corporation_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CorporationApi->getCorporationsCorporationIdStarbases: ', $e->getMessage(), PHP_EOL;
@@ -1233,10 +1233,10 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **corporation_id** | **int**| The ID of the corporation | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **page** | **int**|  | [optional] |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -1259,7 +1259,7 @@ try {
 ## `getCorporationsCorporationIdStarbasesStarbaseId()`
 
 ```php
-getCorporationsCorporationIdStarbasesStarbaseId($corporation_id, $starbase_id, $system_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdStarbasesStarbaseIdGet
+getCorporationsCorporationIdStarbasesStarbaseId($corporation_id, $starbase_id, $system_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdStarbasesStarbaseIdGet
 ```
 
 Get starbase (POS) detail
@@ -1286,13 +1286,13 @@ $apiInstance = new Tkhamez\Eve\API\Api\CorporationApi(
 $corporation_id = 56; // int | The ID of the corporation
 $starbase_id = 56; // int
 $system_id = 56; // int
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->getCorporationsCorporationIdStarbasesStarbaseId($corporation_id, $starbase_id, $system_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->getCorporationsCorporationIdStarbasesStarbaseId($corporation_id, $starbase_id, $system_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CorporationApi->getCorporationsCorporationIdStarbasesStarbaseId: ', $e->getMessage(), PHP_EOL;
@@ -1306,9 +1306,9 @@ try {
 | **corporation_id** | **int**| The ID of the corporation | |
 | **starbase_id** | **int**|  | |
 | **system_id** | **int**|  | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -1331,7 +1331,7 @@ try {
 ## `getCorporationsCorporationIdStructures()`
 
 ```php
-getCorporationsCorporationIdStructures($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdStructuresGetInner[]
+getCorporationsCorporationIdStructures($corporation_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdStructuresGetInner[]
 ```
 
 Get corporation structures
@@ -1356,14 +1356,14 @@ $apiInstance = new Tkhamez\Eve\API\Api\CorporationApi(
     $config
 );
 $corporation_id = 56; // int | The ID of the corporation
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $page = 56; // int
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->getCorporationsCorporationIdStructures($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->getCorporationsCorporationIdStructures($corporation_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CorporationApi->getCorporationsCorporationIdStructures: ', $e->getMessage(), PHP_EOL;
@@ -1375,10 +1375,10 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **corporation_id** | **int**| The ID of the corporation | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **page** | **int**|  | [optional] |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -1401,7 +1401,7 @@ try {
 ## `getCorporationsCorporationIdTitles()`
 
 ```php
-getCorporationsCorporationIdTitles($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdTitlesGetInner[]
+getCorporationsCorporationIdTitles($corporation_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdTitlesGetInner[]
 ```
 
 Get corporation titles
@@ -1426,13 +1426,13 @@ $apiInstance = new Tkhamez\Eve\API\Api\CorporationApi(
     $config
 );
 $corporation_id = 56; // int | The ID of the corporation
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->getCorporationsCorporationIdTitles($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->getCorporationsCorporationIdTitles($corporation_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CorporationApi->getCorporationsCorporationIdTitles: ', $e->getMessage(), PHP_EOL;
@@ -1444,9 +1444,9 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **corporation_id** | **int**| The ID of the corporation | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -1469,7 +1469,7 @@ try {
 ## `getCorporationsNpccorps()`
 
 ```php
-getCorporationsNpccorps($x_compatibility_date, $accept_language, $if_none_match, $x_tenant): int[]
+getCorporationsNpccorps($accept_language, $if_none_match, $x_compatibility_date, $x_tenant): int[]
 ```
 
 Get npc corporations
@@ -1489,13 +1489,13 @@ $apiInstance = new Tkhamez\Eve\API\Api\CorporationApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->getCorporationsNpccorps($x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->getCorporationsNpccorps($accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CorporationApi->getCorporationsNpccorps: ', $e->getMessage(), PHP_EOL;
@@ -1506,9 +1506,9 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type

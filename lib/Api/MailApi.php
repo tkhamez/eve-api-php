@@ -156,9 +156,9 @@ class MailApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  int $label_id label_id (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteCharactersCharacterIdMailLabelsLabelId'] to see the possible values for this operation
      *
@@ -166,9 +166,9 @@ class MailApi
      * @throws \InvalidArgumentException
      * @return mixed|\Tkhamez\Eve\API\Model\Error
      */
-    public function deleteCharactersCharacterIdMailLabelsLabelId($character_id, $label_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteCharactersCharacterIdMailLabelsLabelId'][0])
+    public function deleteCharactersCharacterIdMailLabelsLabelId($character_id, $label_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteCharactersCharacterIdMailLabelsLabelId'][0])
     {
-        list($response) = $this->deleteCharactersCharacterIdMailLabelsLabelIdWithHttpInfo($character_id, $label_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        list($response) = $this->deleteCharactersCharacterIdMailLabelsLabelIdWithHttpInfo($character_id, $label_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
         return $response;
     }
 
@@ -179,9 +179,9 @@ class MailApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  int $label_id (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteCharactersCharacterIdMailLabelsLabelId'] to see the possible values for this operation
      *
@@ -189,9 +189,9 @@ class MailApi
      * @throws \InvalidArgumentException
      * @return array of mixed|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteCharactersCharacterIdMailLabelsLabelIdWithHttpInfo($character_id, $label_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteCharactersCharacterIdMailLabelsLabelId'][0])
+    public function deleteCharactersCharacterIdMailLabelsLabelIdWithHttpInfo($character_id, $label_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteCharactersCharacterIdMailLabelsLabelId'][0])
     {
-        $request = $this->deleteCharactersCharacterIdMailLabelsLabelIdRequest($character_id, $label_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->deleteCharactersCharacterIdMailLabelsLabelIdRequest($character_id, $label_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -283,18 +283,18 @@ class MailApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  int $label_id (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteCharactersCharacterIdMailLabelsLabelId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteCharactersCharacterIdMailLabelsLabelIdAsync($character_id, $label_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteCharactersCharacterIdMailLabelsLabelId'][0])
+    public function deleteCharactersCharacterIdMailLabelsLabelIdAsync($character_id, $label_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteCharactersCharacterIdMailLabelsLabelId'][0])
     {
-        return $this->deleteCharactersCharacterIdMailLabelsLabelIdAsyncWithHttpInfo($character_id, $label_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType)
+        return $this->deleteCharactersCharacterIdMailLabelsLabelIdAsyncWithHttpInfo($character_id, $label_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -309,19 +309,19 @@ class MailApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  int $label_id (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteCharactersCharacterIdMailLabelsLabelId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteCharactersCharacterIdMailLabelsLabelIdAsyncWithHttpInfo($character_id, $label_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteCharactersCharacterIdMailLabelsLabelId'][0])
+    public function deleteCharactersCharacterIdMailLabelsLabelIdAsyncWithHttpInfo($character_id, $label_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteCharactersCharacterIdMailLabelsLabelId'][0])
     {
         $returnType = 'mixed';
-        $request = $this->deleteCharactersCharacterIdMailLabelsLabelIdRequest($character_id, $label_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->deleteCharactersCharacterIdMailLabelsLabelIdRequest($character_id, $label_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -364,16 +364,16 @@ class MailApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  int $label_id (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteCharactersCharacterIdMailLabelsLabelId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function deleteCharactersCharacterIdMailLabelsLabelIdRequest($character_id, $label_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteCharactersCharacterIdMailLabelsLabelId'][0])
+    public function deleteCharactersCharacterIdMailLabelsLabelIdRequest($character_id, $label_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteCharactersCharacterIdMailLabelsLabelId'][0])
     {
 
         // verify the required parameter 'character_id' is set
@@ -390,12 +390,6 @@ class MailApi
             );
         }
 
-        // verify the required parameter 'x_compatibility_date' is set
-        if ($x_compatibility_date === null || (is_array($x_compatibility_date) && count($x_compatibility_date) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $x_compatibility_date when calling deleteCharactersCharacterIdMailLabelsLabelId'
-            );
-        }
 
 
 
@@ -419,7 +413,7 @@ class MailApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -508,9 +502,9 @@ class MailApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  int $mail_id mail_id (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteCharactersCharacterIdMailMailId'] to see the possible values for this operation
      *
@@ -518,9 +512,9 @@ class MailApi
      * @throws \InvalidArgumentException
      * @return mixed|\Tkhamez\Eve\API\Model\Error
      */
-    public function deleteCharactersCharacterIdMailMailId($character_id, $mail_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteCharactersCharacterIdMailMailId'][0])
+    public function deleteCharactersCharacterIdMailMailId($character_id, $mail_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteCharactersCharacterIdMailMailId'][0])
     {
-        list($response) = $this->deleteCharactersCharacterIdMailMailIdWithHttpInfo($character_id, $mail_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        list($response) = $this->deleteCharactersCharacterIdMailMailIdWithHttpInfo($character_id, $mail_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
         return $response;
     }
 
@@ -531,9 +525,9 @@ class MailApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  int $mail_id (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteCharactersCharacterIdMailMailId'] to see the possible values for this operation
      *
@@ -541,9 +535,9 @@ class MailApi
      * @throws \InvalidArgumentException
      * @return array of mixed|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteCharactersCharacterIdMailMailIdWithHttpInfo($character_id, $mail_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteCharactersCharacterIdMailMailId'][0])
+    public function deleteCharactersCharacterIdMailMailIdWithHttpInfo($character_id, $mail_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteCharactersCharacterIdMailMailId'][0])
     {
-        $request = $this->deleteCharactersCharacterIdMailMailIdRequest($character_id, $mail_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->deleteCharactersCharacterIdMailMailIdRequest($character_id, $mail_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -635,18 +629,18 @@ class MailApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  int $mail_id (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteCharactersCharacterIdMailMailId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteCharactersCharacterIdMailMailIdAsync($character_id, $mail_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteCharactersCharacterIdMailMailId'][0])
+    public function deleteCharactersCharacterIdMailMailIdAsync($character_id, $mail_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteCharactersCharacterIdMailMailId'][0])
     {
-        return $this->deleteCharactersCharacterIdMailMailIdAsyncWithHttpInfo($character_id, $mail_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType)
+        return $this->deleteCharactersCharacterIdMailMailIdAsyncWithHttpInfo($character_id, $mail_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -661,19 +655,19 @@ class MailApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  int $mail_id (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteCharactersCharacterIdMailMailId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteCharactersCharacterIdMailMailIdAsyncWithHttpInfo($character_id, $mail_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteCharactersCharacterIdMailMailId'][0])
+    public function deleteCharactersCharacterIdMailMailIdAsyncWithHttpInfo($character_id, $mail_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteCharactersCharacterIdMailMailId'][0])
     {
         $returnType = 'mixed';
-        $request = $this->deleteCharactersCharacterIdMailMailIdRequest($character_id, $mail_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->deleteCharactersCharacterIdMailMailIdRequest($character_id, $mail_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -716,16 +710,16 @@ class MailApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  int $mail_id (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteCharactersCharacterIdMailMailId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function deleteCharactersCharacterIdMailMailIdRequest($character_id, $mail_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteCharactersCharacterIdMailMailId'][0])
+    public function deleteCharactersCharacterIdMailMailIdRequest($character_id, $mail_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteCharactersCharacterIdMailMailId'][0])
     {
 
         // verify the required parameter 'character_id' is set
@@ -742,12 +736,6 @@ class MailApi
             );
         }
 
-        // verify the required parameter 'x_compatibility_date' is set
-        if ($x_compatibility_date === null || (is_array($x_compatibility_date) && count($x_compatibility_date) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $x_compatibility_date when calling deleteCharactersCharacterIdMailMailId'
-            );
-        }
 
 
 
@@ -771,7 +759,7 @@ class MailApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -859,11 +847,11 @@ class MailApi
      * Return mail headers
      *
      * @param  int $character_id The ID of the character (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int[]|null $labels labels (optional)
      * @param  int|null $last_mail_id last_mail_id (optional)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdMail'] to see the possible values for this operation
      *
@@ -871,9 +859,9 @@ class MailApi
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\CharactersCharacterIdMailGetInner[]|\Tkhamez\Eve\API\Model\Error
      */
-    public function getCharactersCharacterIdMail($character_id, $x_compatibility_date, $labels = null, $last_mail_id = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdMail'][0])
+    public function getCharactersCharacterIdMail($character_id, $labels = null, $last_mail_id = null, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdMail'][0])
     {
-        list($response) = $this->getCharactersCharacterIdMailWithHttpInfo($character_id, $x_compatibility_date, $labels, $last_mail_id, $accept_language, $if_none_match, $x_tenant, $contentType);
+        list($response) = $this->getCharactersCharacterIdMailWithHttpInfo($character_id, $labels, $last_mail_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
         return $response;
     }
 
@@ -883,11 +871,11 @@ class MailApi
      * Return mail headers
      *
      * @param  int $character_id The ID of the character (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int[]|null $labels (optional)
      * @param  int|null $last_mail_id (optional)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdMail'] to see the possible values for this operation
      *
@@ -895,9 +883,9 @@ class MailApi
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\CharactersCharacterIdMailGetInner[]|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCharactersCharacterIdMailWithHttpInfo($character_id, $x_compatibility_date, $labels = null, $last_mail_id = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdMail'][0])
+    public function getCharactersCharacterIdMailWithHttpInfo($character_id, $labels = null, $last_mail_id = null, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdMail'][0])
     {
-        $request = $this->getCharactersCharacterIdMailRequest($character_id, $x_compatibility_date, $labels, $last_mail_id, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getCharactersCharacterIdMailRequest($character_id, $labels, $last_mail_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -988,20 +976,20 @@ class MailApi
      * Return mail headers
      *
      * @param  int $character_id The ID of the character (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int[]|null $labels (optional)
      * @param  int|null $last_mail_id (optional)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdMail'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCharactersCharacterIdMailAsync($character_id, $x_compatibility_date, $labels = null, $last_mail_id = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdMail'][0])
+    public function getCharactersCharacterIdMailAsync($character_id, $labels = null, $last_mail_id = null, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdMail'][0])
     {
-        return $this->getCharactersCharacterIdMailAsyncWithHttpInfo($character_id, $x_compatibility_date, $labels, $last_mail_id, $accept_language, $if_none_match, $x_tenant, $contentType)
+        return $this->getCharactersCharacterIdMailAsyncWithHttpInfo($character_id, $labels, $last_mail_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1015,21 +1003,21 @@ class MailApi
      * Return mail headers
      *
      * @param  int $character_id The ID of the character (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int[]|null $labels (optional)
      * @param  int|null $last_mail_id (optional)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdMail'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCharactersCharacterIdMailAsyncWithHttpInfo($character_id, $x_compatibility_date, $labels = null, $last_mail_id = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdMail'][0])
+    public function getCharactersCharacterIdMailAsyncWithHttpInfo($character_id, $labels = null, $last_mail_id = null, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdMail'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\CharactersCharacterIdMailGetInner[]';
-        $request = $this->getCharactersCharacterIdMailRequest($character_id, $x_compatibility_date, $labels, $last_mail_id, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getCharactersCharacterIdMailRequest($character_id, $labels, $last_mail_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1071,31 +1059,24 @@ class MailApi
      * Create request for operation 'getCharactersCharacterIdMail'
      *
      * @param  int $character_id The ID of the character (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int[]|null $labels (optional)
      * @param  int|null $last_mail_id (optional)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdMail'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getCharactersCharacterIdMailRequest($character_id, $x_compatibility_date, $labels = null, $last_mail_id = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdMail'][0])
+    public function getCharactersCharacterIdMailRequest($character_id, $labels = null, $last_mail_id = null, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdMail'][0])
     {
 
         // verify the required parameter 'character_id' is set
         if ($character_id === null || (is_array($character_id) && count($character_id) === 0)) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $character_id when calling getCharactersCharacterIdMail'
-            );
-        }
-
-        // verify the required parameter 'x_compatibility_date' is set
-        if ($x_compatibility_date === null || (is_array($x_compatibility_date) && count($x_compatibility_date) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $x_compatibility_date when calling getCharactersCharacterIdMail'
             );
         }
 
@@ -1106,6 +1087,7 @@ class MailApi
             throw new \InvalidArgumentException('invalid value for "$labels" when calling MailApi.getCharactersCharacterIdMail, number of items must be greater than or equal to 1.');
         }
         
+
 
 
 
@@ -1147,7 +1129,7 @@ class MailApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -1227,9 +1209,9 @@ class MailApi
      * Get mail labels and unread counts
      *
      * @param  int $character_id The ID of the character (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdMailLabels'] to see the possible values for this operation
      *
@@ -1237,9 +1219,9 @@ class MailApi
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\CharactersCharacterIdMailLabelsGet|\Tkhamez\Eve\API\Model\Error
      */
-    public function getCharactersCharacterIdMailLabels($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdMailLabels'][0])
+    public function getCharactersCharacterIdMailLabels($character_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdMailLabels'][0])
     {
-        list($response) = $this->getCharactersCharacterIdMailLabelsWithHttpInfo($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        list($response) = $this->getCharactersCharacterIdMailLabelsWithHttpInfo($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
         return $response;
     }
 
@@ -1249,9 +1231,9 @@ class MailApi
      * Get mail labels and unread counts
      *
      * @param  int $character_id The ID of the character (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdMailLabels'] to see the possible values for this operation
      *
@@ -1259,9 +1241,9 @@ class MailApi
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\CharactersCharacterIdMailLabelsGet|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCharactersCharacterIdMailLabelsWithHttpInfo($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdMailLabels'][0])
+    public function getCharactersCharacterIdMailLabelsWithHttpInfo($character_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdMailLabels'][0])
     {
-        $request = $this->getCharactersCharacterIdMailLabelsRequest($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getCharactersCharacterIdMailLabelsRequest($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1352,18 +1334,18 @@ class MailApi
      * Get mail labels and unread counts
      *
      * @param  int $character_id The ID of the character (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdMailLabels'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCharactersCharacterIdMailLabelsAsync($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdMailLabels'][0])
+    public function getCharactersCharacterIdMailLabelsAsync($character_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdMailLabels'][0])
     {
-        return $this->getCharactersCharacterIdMailLabelsAsyncWithHttpInfo($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType)
+        return $this->getCharactersCharacterIdMailLabelsAsyncWithHttpInfo($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1377,19 +1359,19 @@ class MailApi
      * Get mail labels and unread counts
      *
      * @param  int $character_id The ID of the character (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdMailLabels'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCharactersCharacterIdMailLabelsAsyncWithHttpInfo($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdMailLabels'][0])
+    public function getCharactersCharacterIdMailLabelsAsyncWithHttpInfo($character_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdMailLabels'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\CharactersCharacterIdMailLabelsGet';
-        $request = $this->getCharactersCharacterIdMailLabelsRequest($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getCharactersCharacterIdMailLabelsRequest($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1431,16 +1413,16 @@ class MailApi
      * Create request for operation 'getCharactersCharacterIdMailLabels'
      *
      * @param  int $character_id The ID of the character (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdMailLabels'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getCharactersCharacterIdMailLabelsRequest($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdMailLabels'][0])
+    public function getCharactersCharacterIdMailLabelsRequest($character_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdMailLabels'][0])
     {
 
         // verify the required parameter 'character_id' is set
@@ -1450,12 +1432,6 @@ class MailApi
             );
         }
 
-        // verify the required parameter 'x_compatibility_date' is set
-        if ($x_compatibility_date === null || (is_array($x_compatibility_date) && count($x_compatibility_date) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $x_compatibility_date when calling getCharactersCharacterIdMailLabels'
-            );
-        }
 
 
 
@@ -1479,7 +1455,7 @@ class MailApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -1559,9 +1535,9 @@ class MailApi
      * Return mailing list subscriptions
      *
      * @param  int $character_id The ID of the character (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdMailLists'] to see the possible values for this operation
      *
@@ -1569,9 +1545,9 @@ class MailApi
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\CharactersCharacterIdMailListsGetInner[]|\Tkhamez\Eve\API\Model\Error
      */
-    public function getCharactersCharacterIdMailLists($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdMailLists'][0])
+    public function getCharactersCharacterIdMailLists($character_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdMailLists'][0])
     {
-        list($response) = $this->getCharactersCharacterIdMailListsWithHttpInfo($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        list($response) = $this->getCharactersCharacterIdMailListsWithHttpInfo($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
         return $response;
     }
 
@@ -1581,9 +1557,9 @@ class MailApi
      * Return mailing list subscriptions
      *
      * @param  int $character_id The ID of the character (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdMailLists'] to see the possible values for this operation
      *
@@ -1591,9 +1567,9 @@ class MailApi
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\CharactersCharacterIdMailListsGetInner[]|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCharactersCharacterIdMailListsWithHttpInfo($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdMailLists'][0])
+    public function getCharactersCharacterIdMailListsWithHttpInfo($character_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdMailLists'][0])
     {
-        $request = $this->getCharactersCharacterIdMailListsRequest($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getCharactersCharacterIdMailListsRequest($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1684,18 +1660,18 @@ class MailApi
      * Return mailing list subscriptions
      *
      * @param  int $character_id The ID of the character (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdMailLists'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCharactersCharacterIdMailListsAsync($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdMailLists'][0])
+    public function getCharactersCharacterIdMailListsAsync($character_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdMailLists'][0])
     {
-        return $this->getCharactersCharacterIdMailListsAsyncWithHttpInfo($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType)
+        return $this->getCharactersCharacterIdMailListsAsyncWithHttpInfo($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1709,19 +1685,19 @@ class MailApi
      * Return mailing list subscriptions
      *
      * @param  int $character_id The ID of the character (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdMailLists'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCharactersCharacterIdMailListsAsyncWithHttpInfo($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdMailLists'][0])
+    public function getCharactersCharacterIdMailListsAsyncWithHttpInfo($character_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdMailLists'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\CharactersCharacterIdMailListsGetInner[]';
-        $request = $this->getCharactersCharacterIdMailListsRequest($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getCharactersCharacterIdMailListsRequest($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1763,16 +1739,16 @@ class MailApi
      * Create request for operation 'getCharactersCharacterIdMailLists'
      *
      * @param  int $character_id The ID of the character (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdMailLists'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getCharactersCharacterIdMailListsRequest($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdMailLists'][0])
+    public function getCharactersCharacterIdMailListsRequest($character_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdMailLists'][0])
     {
 
         // verify the required parameter 'character_id' is set
@@ -1782,12 +1758,6 @@ class MailApi
             );
         }
 
-        // verify the required parameter 'x_compatibility_date' is set
-        if ($x_compatibility_date === null || (is_array($x_compatibility_date) && count($x_compatibility_date) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $x_compatibility_date when calling getCharactersCharacterIdMailLists'
-            );
-        }
 
 
 
@@ -1811,7 +1781,7 @@ class MailApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -1892,9 +1862,9 @@ class MailApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  int $mail_id mail_id (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdMailMailId'] to see the possible values for this operation
      *
@@ -1902,9 +1872,9 @@ class MailApi
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\CharactersCharacterIdMailMailIdGet|\Tkhamez\Eve\API\Model\Error
      */
-    public function getCharactersCharacterIdMailMailId($character_id, $mail_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdMailMailId'][0])
+    public function getCharactersCharacterIdMailMailId($character_id, $mail_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdMailMailId'][0])
     {
-        list($response) = $this->getCharactersCharacterIdMailMailIdWithHttpInfo($character_id, $mail_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        list($response) = $this->getCharactersCharacterIdMailMailIdWithHttpInfo($character_id, $mail_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
         return $response;
     }
 
@@ -1915,9 +1885,9 @@ class MailApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  int $mail_id (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdMailMailId'] to see the possible values for this operation
      *
@@ -1925,9 +1895,9 @@ class MailApi
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\CharactersCharacterIdMailMailIdGet|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCharactersCharacterIdMailMailIdWithHttpInfo($character_id, $mail_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdMailMailId'][0])
+    public function getCharactersCharacterIdMailMailIdWithHttpInfo($character_id, $mail_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdMailMailId'][0])
     {
-        $request = $this->getCharactersCharacterIdMailMailIdRequest($character_id, $mail_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getCharactersCharacterIdMailMailIdRequest($character_id, $mail_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2019,18 +1989,18 @@ class MailApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  int $mail_id (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdMailMailId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCharactersCharacterIdMailMailIdAsync($character_id, $mail_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdMailMailId'][0])
+    public function getCharactersCharacterIdMailMailIdAsync($character_id, $mail_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdMailMailId'][0])
     {
-        return $this->getCharactersCharacterIdMailMailIdAsyncWithHttpInfo($character_id, $mail_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType)
+        return $this->getCharactersCharacterIdMailMailIdAsyncWithHttpInfo($character_id, $mail_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2045,19 +2015,19 @@ class MailApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  int $mail_id (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdMailMailId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCharactersCharacterIdMailMailIdAsyncWithHttpInfo($character_id, $mail_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdMailMailId'][0])
+    public function getCharactersCharacterIdMailMailIdAsyncWithHttpInfo($character_id, $mail_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdMailMailId'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\CharactersCharacterIdMailMailIdGet';
-        $request = $this->getCharactersCharacterIdMailMailIdRequest($character_id, $mail_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getCharactersCharacterIdMailMailIdRequest($character_id, $mail_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2100,16 +2070,16 @@ class MailApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  int $mail_id (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdMailMailId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getCharactersCharacterIdMailMailIdRequest($character_id, $mail_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdMailMailId'][0])
+    public function getCharactersCharacterIdMailMailIdRequest($character_id, $mail_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdMailMailId'][0])
     {
 
         // verify the required parameter 'character_id' is set
@@ -2126,12 +2096,6 @@ class MailApi
             );
         }
 
-        // verify the required parameter 'x_compatibility_date' is set
-        if ($x_compatibility_date === null || (is_array($x_compatibility_date) && count($x_compatibility_date) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $x_compatibility_date when calling getCharactersCharacterIdMailMailId'
-            );
-        }
 
 
 
@@ -2155,7 +2119,7 @@ class MailApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -2243,9 +2207,9 @@ class MailApi
      * Send a new mail
      *
      * @param  int $character_id The ID of the character (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  \Tkhamez\Eve\API\Model\PostCharactersCharacterIdMailRequest|null $post_characters_character_id_mail_request post_characters_character_id_mail_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCharactersCharacterIdMail'] to see the possible values for this operation
@@ -2254,9 +2218,9 @@ class MailApi
      * @throws \InvalidArgumentException
      * @return int|\Tkhamez\Eve\API\Model\Error
      */
-    public function postCharactersCharacterIdMail($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $post_characters_character_id_mail_request = null, string $contentType = self::contentTypes['postCharactersCharacterIdMail'][0])
+    public function postCharactersCharacterIdMail($character_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', $post_characters_character_id_mail_request = null, string $contentType = self::contentTypes['postCharactersCharacterIdMail'][0])
     {
-        list($response) = $this->postCharactersCharacterIdMailWithHttpInfo($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $post_characters_character_id_mail_request, $contentType);
+        list($response) = $this->postCharactersCharacterIdMailWithHttpInfo($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $post_characters_character_id_mail_request, $contentType);
         return $response;
     }
 
@@ -2266,9 +2230,9 @@ class MailApi
      * Send a new mail
      *
      * @param  int $character_id The ID of the character (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  \Tkhamez\Eve\API\Model\PostCharactersCharacterIdMailRequest|null $post_characters_character_id_mail_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCharactersCharacterIdMail'] to see the possible values for this operation
@@ -2277,9 +2241,9 @@ class MailApi
      * @throws \InvalidArgumentException
      * @return array of int|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function postCharactersCharacterIdMailWithHttpInfo($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $post_characters_character_id_mail_request = null, string $contentType = self::contentTypes['postCharactersCharacterIdMail'][0])
+    public function postCharactersCharacterIdMailWithHttpInfo($character_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', $post_characters_character_id_mail_request = null, string $contentType = self::contentTypes['postCharactersCharacterIdMail'][0])
     {
-        $request = $this->postCharactersCharacterIdMailRequest($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $post_characters_character_id_mail_request, $contentType);
+        $request = $this->postCharactersCharacterIdMailRequest($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $post_characters_character_id_mail_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2370,9 +2334,9 @@ class MailApi
      * Send a new mail
      *
      * @param  int $character_id The ID of the character (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  \Tkhamez\Eve\API\Model\PostCharactersCharacterIdMailRequest|null $post_characters_character_id_mail_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCharactersCharacterIdMail'] to see the possible values for this operation
@@ -2380,9 +2344,9 @@ class MailApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postCharactersCharacterIdMailAsync($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $post_characters_character_id_mail_request = null, string $contentType = self::contentTypes['postCharactersCharacterIdMail'][0])
+    public function postCharactersCharacterIdMailAsync($character_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', $post_characters_character_id_mail_request = null, string $contentType = self::contentTypes['postCharactersCharacterIdMail'][0])
     {
-        return $this->postCharactersCharacterIdMailAsyncWithHttpInfo($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $post_characters_character_id_mail_request, $contentType)
+        return $this->postCharactersCharacterIdMailAsyncWithHttpInfo($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $post_characters_character_id_mail_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2396,9 +2360,9 @@ class MailApi
      * Send a new mail
      *
      * @param  int $character_id The ID of the character (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  \Tkhamez\Eve\API\Model\PostCharactersCharacterIdMailRequest|null $post_characters_character_id_mail_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCharactersCharacterIdMail'] to see the possible values for this operation
@@ -2406,10 +2370,10 @@ class MailApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postCharactersCharacterIdMailAsyncWithHttpInfo($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $post_characters_character_id_mail_request = null, string $contentType = self::contentTypes['postCharactersCharacterIdMail'][0])
+    public function postCharactersCharacterIdMailAsyncWithHttpInfo($character_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', $post_characters_character_id_mail_request = null, string $contentType = self::contentTypes['postCharactersCharacterIdMail'][0])
     {
         $returnType = 'int';
-        $request = $this->postCharactersCharacterIdMailRequest($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $post_characters_character_id_mail_request, $contentType);
+        $request = $this->postCharactersCharacterIdMailRequest($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $post_characters_character_id_mail_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2451,9 +2415,9 @@ class MailApi
      * Create request for operation 'postCharactersCharacterIdMail'
      *
      * @param  int $character_id The ID of the character (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  \Tkhamez\Eve\API\Model\PostCharactersCharacterIdMailRequest|null $post_characters_character_id_mail_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCharactersCharacterIdMail'] to see the possible values for this operation
@@ -2461,7 +2425,7 @@ class MailApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function postCharactersCharacterIdMailRequest($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $post_characters_character_id_mail_request = null, string $contentType = self::contentTypes['postCharactersCharacterIdMail'][0])
+    public function postCharactersCharacterIdMailRequest($character_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', $post_characters_character_id_mail_request = null, string $contentType = self::contentTypes['postCharactersCharacterIdMail'][0])
     {
 
         // verify the required parameter 'character_id' is set
@@ -2471,12 +2435,6 @@ class MailApi
             );
         }
 
-        // verify the required parameter 'x_compatibility_date' is set
-        if ($x_compatibility_date === null || (is_array($x_compatibility_date) && count($x_compatibility_date) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $x_compatibility_date when calling postCharactersCharacterIdMail'
-            );
-        }
 
 
 
@@ -2501,7 +2459,7 @@ class MailApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -2588,9 +2546,9 @@ class MailApi
      * Create a mail label
      *
      * @param  int $character_id The ID of the character (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  \Tkhamez\Eve\API\Model\PostCharactersCharacterIdMailLabelsRequest|null $post_characters_character_id_mail_labels_request post_characters_character_id_mail_labels_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCharactersCharacterIdMailLabels'] to see the possible values for this operation
@@ -2599,9 +2557,9 @@ class MailApi
      * @throws \InvalidArgumentException
      * @return int|\Tkhamez\Eve\API\Model\Error
      */
-    public function postCharactersCharacterIdMailLabels($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $post_characters_character_id_mail_labels_request = null, string $contentType = self::contentTypes['postCharactersCharacterIdMailLabels'][0])
+    public function postCharactersCharacterIdMailLabels($character_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', $post_characters_character_id_mail_labels_request = null, string $contentType = self::contentTypes['postCharactersCharacterIdMailLabels'][0])
     {
-        list($response) = $this->postCharactersCharacterIdMailLabelsWithHttpInfo($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $post_characters_character_id_mail_labels_request, $contentType);
+        list($response) = $this->postCharactersCharacterIdMailLabelsWithHttpInfo($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $post_characters_character_id_mail_labels_request, $contentType);
         return $response;
     }
 
@@ -2611,9 +2569,9 @@ class MailApi
      * Create a mail label
      *
      * @param  int $character_id The ID of the character (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  \Tkhamez\Eve\API\Model\PostCharactersCharacterIdMailLabelsRequest|null $post_characters_character_id_mail_labels_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCharactersCharacterIdMailLabels'] to see the possible values for this operation
@@ -2622,9 +2580,9 @@ class MailApi
      * @throws \InvalidArgumentException
      * @return array of int|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function postCharactersCharacterIdMailLabelsWithHttpInfo($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $post_characters_character_id_mail_labels_request = null, string $contentType = self::contentTypes['postCharactersCharacterIdMailLabels'][0])
+    public function postCharactersCharacterIdMailLabelsWithHttpInfo($character_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', $post_characters_character_id_mail_labels_request = null, string $contentType = self::contentTypes['postCharactersCharacterIdMailLabels'][0])
     {
-        $request = $this->postCharactersCharacterIdMailLabelsRequest($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $post_characters_character_id_mail_labels_request, $contentType);
+        $request = $this->postCharactersCharacterIdMailLabelsRequest($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $post_characters_character_id_mail_labels_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2715,9 +2673,9 @@ class MailApi
      * Create a mail label
      *
      * @param  int $character_id The ID of the character (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  \Tkhamez\Eve\API\Model\PostCharactersCharacterIdMailLabelsRequest|null $post_characters_character_id_mail_labels_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCharactersCharacterIdMailLabels'] to see the possible values for this operation
@@ -2725,9 +2683,9 @@ class MailApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postCharactersCharacterIdMailLabelsAsync($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $post_characters_character_id_mail_labels_request = null, string $contentType = self::contentTypes['postCharactersCharacterIdMailLabels'][0])
+    public function postCharactersCharacterIdMailLabelsAsync($character_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', $post_characters_character_id_mail_labels_request = null, string $contentType = self::contentTypes['postCharactersCharacterIdMailLabels'][0])
     {
-        return $this->postCharactersCharacterIdMailLabelsAsyncWithHttpInfo($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $post_characters_character_id_mail_labels_request, $contentType)
+        return $this->postCharactersCharacterIdMailLabelsAsyncWithHttpInfo($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $post_characters_character_id_mail_labels_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2741,9 +2699,9 @@ class MailApi
      * Create a mail label
      *
      * @param  int $character_id The ID of the character (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  \Tkhamez\Eve\API\Model\PostCharactersCharacterIdMailLabelsRequest|null $post_characters_character_id_mail_labels_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCharactersCharacterIdMailLabels'] to see the possible values for this operation
@@ -2751,10 +2709,10 @@ class MailApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postCharactersCharacterIdMailLabelsAsyncWithHttpInfo($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $post_characters_character_id_mail_labels_request = null, string $contentType = self::contentTypes['postCharactersCharacterIdMailLabels'][0])
+    public function postCharactersCharacterIdMailLabelsAsyncWithHttpInfo($character_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', $post_characters_character_id_mail_labels_request = null, string $contentType = self::contentTypes['postCharactersCharacterIdMailLabels'][0])
     {
         $returnType = 'int';
-        $request = $this->postCharactersCharacterIdMailLabelsRequest($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $post_characters_character_id_mail_labels_request, $contentType);
+        $request = $this->postCharactersCharacterIdMailLabelsRequest($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $post_characters_character_id_mail_labels_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2796,9 +2754,9 @@ class MailApi
      * Create request for operation 'postCharactersCharacterIdMailLabels'
      *
      * @param  int $character_id The ID of the character (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  \Tkhamez\Eve\API\Model\PostCharactersCharacterIdMailLabelsRequest|null $post_characters_character_id_mail_labels_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCharactersCharacterIdMailLabels'] to see the possible values for this operation
@@ -2806,7 +2764,7 @@ class MailApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function postCharactersCharacterIdMailLabelsRequest($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $post_characters_character_id_mail_labels_request = null, string $contentType = self::contentTypes['postCharactersCharacterIdMailLabels'][0])
+    public function postCharactersCharacterIdMailLabelsRequest($character_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', $post_characters_character_id_mail_labels_request = null, string $contentType = self::contentTypes['postCharactersCharacterIdMailLabels'][0])
     {
 
         // verify the required parameter 'character_id' is set
@@ -2816,12 +2774,6 @@ class MailApi
             );
         }
 
-        // verify the required parameter 'x_compatibility_date' is set
-        if ($x_compatibility_date === null || (is_array($x_compatibility_date) && count($x_compatibility_date) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $x_compatibility_date when calling postCharactersCharacterIdMailLabels'
-            );
-        }
 
 
 
@@ -2846,7 +2798,7 @@ class MailApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -2934,9 +2886,9 @@ class MailApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  int $mail_id mail_id (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  \Tkhamez\Eve\API\Model\PutCharactersCharacterIdMailMailIdRequest|null $put_characters_character_id_mail_mail_id_request put_characters_character_id_mail_mail_id_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCharactersCharacterIdMailMailId'] to see the possible values for this operation
@@ -2945,9 +2897,9 @@ class MailApi
      * @throws \InvalidArgumentException
      * @return mixed|\Tkhamez\Eve\API\Model\Error
      */
-    public function putCharactersCharacterIdMailMailId($character_id, $mail_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $put_characters_character_id_mail_mail_id_request = null, string $contentType = self::contentTypes['putCharactersCharacterIdMailMailId'][0])
+    public function putCharactersCharacterIdMailMailId($character_id, $mail_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', $put_characters_character_id_mail_mail_id_request = null, string $contentType = self::contentTypes['putCharactersCharacterIdMailMailId'][0])
     {
-        list($response) = $this->putCharactersCharacterIdMailMailIdWithHttpInfo($character_id, $mail_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $put_characters_character_id_mail_mail_id_request, $contentType);
+        list($response) = $this->putCharactersCharacterIdMailMailIdWithHttpInfo($character_id, $mail_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $put_characters_character_id_mail_mail_id_request, $contentType);
         return $response;
     }
 
@@ -2958,9 +2910,9 @@ class MailApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  int $mail_id (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  \Tkhamez\Eve\API\Model\PutCharactersCharacterIdMailMailIdRequest|null $put_characters_character_id_mail_mail_id_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCharactersCharacterIdMailMailId'] to see the possible values for this operation
@@ -2969,9 +2921,9 @@ class MailApi
      * @throws \InvalidArgumentException
      * @return array of mixed|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function putCharactersCharacterIdMailMailIdWithHttpInfo($character_id, $mail_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $put_characters_character_id_mail_mail_id_request = null, string $contentType = self::contentTypes['putCharactersCharacterIdMailMailId'][0])
+    public function putCharactersCharacterIdMailMailIdWithHttpInfo($character_id, $mail_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', $put_characters_character_id_mail_mail_id_request = null, string $contentType = self::contentTypes['putCharactersCharacterIdMailMailId'][0])
     {
-        $request = $this->putCharactersCharacterIdMailMailIdRequest($character_id, $mail_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $put_characters_character_id_mail_mail_id_request, $contentType);
+        $request = $this->putCharactersCharacterIdMailMailIdRequest($character_id, $mail_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $put_characters_character_id_mail_mail_id_request, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3063,9 +3015,9 @@ class MailApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  int $mail_id (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  \Tkhamez\Eve\API\Model\PutCharactersCharacterIdMailMailIdRequest|null $put_characters_character_id_mail_mail_id_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCharactersCharacterIdMailMailId'] to see the possible values for this operation
@@ -3073,9 +3025,9 @@ class MailApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function putCharactersCharacterIdMailMailIdAsync($character_id, $mail_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $put_characters_character_id_mail_mail_id_request = null, string $contentType = self::contentTypes['putCharactersCharacterIdMailMailId'][0])
+    public function putCharactersCharacterIdMailMailIdAsync($character_id, $mail_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', $put_characters_character_id_mail_mail_id_request = null, string $contentType = self::contentTypes['putCharactersCharacterIdMailMailId'][0])
     {
-        return $this->putCharactersCharacterIdMailMailIdAsyncWithHttpInfo($character_id, $mail_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $put_characters_character_id_mail_mail_id_request, $contentType)
+        return $this->putCharactersCharacterIdMailMailIdAsyncWithHttpInfo($character_id, $mail_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $put_characters_character_id_mail_mail_id_request, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3090,9 +3042,9 @@ class MailApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  int $mail_id (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  \Tkhamez\Eve\API\Model\PutCharactersCharacterIdMailMailIdRequest|null $put_characters_character_id_mail_mail_id_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCharactersCharacterIdMailMailId'] to see the possible values for this operation
@@ -3100,10 +3052,10 @@ class MailApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function putCharactersCharacterIdMailMailIdAsyncWithHttpInfo($character_id, $mail_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $put_characters_character_id_mail_mail_id_request = null, string $contentType = self::contentTypes['putCharactersCharacterIdMailMailId'][0])
+    public function putCharactersCharacterIdMailMailIdAsyncWithHttpInfo($character_id, $mail_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', $put_characters_character_id_mail_mail_id_request = null, string $contentType = self::contentTypes['putCharactersCharacterIdMailMailId'][0])
     {
         $returnType = 'mixed';
-        $request = $this->putCharactersCharacterIdMailMailIdRequest($character_id, $mail_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $put_characters_character_id_mail_mail_id_request, $contentType);
+        $request = $this->putCharactersCharacterIdMailMailIdRequest($character_id, $mail_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $put_characters_character_id_mail_mail_id_request, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3146,9 +3098,9 @@ class MailApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  int $mail_id (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  \Tkhamez\Eve\API\Model\PutCharactersCharacterIdMailMailIdRequest|null $put_characters_character_id_mail_mail_id_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCharactersCharacterIdMailMailId'] to see the possible values for this operation
@@ -3156,7 +3108,7 @@ class MailApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function putCharactersCharacterIdMailMailIdRequest($character_id, $mail_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $put_characters_character_id_mail_mail_id_request = null, string $contentType = self::contentTypes['putCharactersCharacterIdMailMailId'][0])
+    public function putCharactersCharacterIdMailMailIdRequest($character_id, $mail_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', $put_characters_character_id_mail_mail_id_request = null, string $contentType = self::contentTypes['putCharactersCharacterIdMailMailId'][0])
     {
 
         // verify the required parameter 'character_id' is set
@@ -3173,12 +3125,6 @@ class MailApi
             );
         }
 
-        // verify the required parameter 'x_compatibility_date' is set
-        if ($x_compatibility_date === null || (is_array($x_compatibility_date) && count($x_compatibility_date) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $x_compatibility_date when calling putCharactersCharacterIdMailMailId'
-            );
-        }
 
 
 
@@ -3203,7 +3149,7 @@ class MailApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {

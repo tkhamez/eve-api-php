@@ -132,12 +132,12 @@ class RoutesApi
      *
      * @param  int $destination destination (required)
      * @param  int $origin origin (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int[]|null $avoid avoid (optional)
      * @param  int[][]|null $connections connections (optional)
      * @param  string|null $flag flag (optional, default to 'shortest')
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getRouteOriginDestination'] to see the possible values for this operation
      *
@@ -145,9 +145,9 @@ class RoutesApi
      * @throws \InvalidArgumentException
      * @return int[]|\Tkhamez\Eve\API\Model\Error
      */
-    public function getRouteOriginDestination($destination, $origin, $x_compatibility_date, $avoid = null, $connections = null, $flag = 'shortest', $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getRouteOriginDestination'][0])
+    public function getRouteOriginDestination($destination, $origin, $avoid = null, $connections = null, $flag = 'shortest', $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getRouteOriginDestination'][0])
     {
-        list($response) = $this->getRouteOriginDestinationWithHttpInfo($destination, $origin, $x_compatibility_date, $avoid, $connections, $flag, $accept_language, $if_none_match, $x_tenant, $contentType);
+        list($response) = $this->getRouteOriginDestinationWithHttpInfo($destination, $origin, $avoid, $connections, $flag, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
         return $response;
     }
 
@@ -158,12 +158,12 @@ class RoutesApi
      *
      * @param  int $destination (required)
      * @param  int $origin (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int[]|null $avoid (optional)
      * @param  int[][]|null $connections (optional)
      * @param  string|null $flag (optional, default to 'shortest')
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getRouteOriginDestination'] to see the possible values for this operation
      *
@@ -171,9 +171,9 @@ class RoutesApi
      * @throws \InvalidArgumentException
      * @return array of int[]|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getRouteOriginDestinationWithHttpInfo($destination, $origin, $x_compatibility_date, $avoid = null, $connections = null, $flag = 'shortest', $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getRouteOriginDestination'][0])
+    public function getRouteOriginDestinationWithHttpInfo($destination, $origin, $avoid = null, $connections = null, $flag = 'shortest', $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getRouteOriginDestination'][0])
     {
-        $request = $this->getRouteOriginDestinationRequest($destination, $origin, $x_compatibility_date, $avoid, $connections, $flag, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getRouteOriginDestinationRequest($destination, $origin, $avoid, $connections, $flag, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -265,21 +265,21 @@ class RoutesApi
      *
      * @param  int $destination (required)
      * @param  int $origin (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int[]|null $avoid (optional)
      * @param  int[][]|null $connections (optional)
      * @param  string|null $flag (optional, default to 'shortest')
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getRouteOriginDestination'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getRouteOriginDestinationAsync($destination, $origin, $x_compatibility_date, $avoid = null, $connections = null, $flag = 'shortest', $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getRouteOriginDestination'][0])
+    public function getRouteOriginDestinationAsync($destination, $origin, $avoid = null, $connections = null, $flag = 'shortest', $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getRouteOriginDestination'][0])
     {
-        return $this->getRouteOriginDestinationAsyncWithHttpInfo($destination, $origin, $x_compatibility_date, $avoid, $connections, $flag, $accept_language, $if_none_match, $x_tenant, $contentType)
+        return $this->getRouteOriginDestinationAsyncWithHttpInfo($destination, $origin, $avoid, $connections, $flag, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -294,22 +294,22 @@ class RoutesApi
      *
      * @param  int $destination (required)
      * @param  int $origin (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int[]|null $avoid (optional)
      * @param  int[][]|null $connections (optional)
      * @param  string|null $flag (optional, default to 'shortest')
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getRouteOriginDestination'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getRouteOriginDestinationAsyncWithHttpInfo($destination, $origin, $x_compatibility_date, $avoid = null, $connections = null, $flag = 'shortest', $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getRouteOriginDestination'][0])
+    public function getRouteOriginDestinationAsyncWithHttpInfo($destination, $origin, $avoid = null, $connections = null, $flag = 'shortest', $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getRouteOriginDestination'][0])
     {
         $returnType = 'int[]';
-        $request = $this->getRouteOriginDestinationRequest($destination, $origin, $x_compatibility_date, $avoid, $connections, $flag, $accept_language, $if_none_match, $x_tenant, $contentType);
+        $request = $this->getRouteOriginDestinationRequest($destination, $origin, $avoid, $connections, $flag, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -352,19 +352,19 @@ class RoutesApi
      *
      * @param  int $destination (required)
      * @param  int $origin (required)
-     * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int[]|null $avoid (optional)
      * @param  int[][]|null $connections (optional)
      * @param  string|null $flag (optional, default to 'shortest')
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
+     * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2020-01-01')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getRouteOriginDestination'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getRouteOriginDestinationRequest($destination, $origin, $x_compatibility_date, $avoid = null, $connections = null, $flag = 'shortest', $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getRouteOriginDestination'][0])
+    public function getRouteOriginDestinationRequest($destination, $origin, $avoid = null, $connections = null, $flag = 'shortest', $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2020-01-01', $x_tenant = 'tranquility', string $contentType = self::contentTypes['getRouteOriginDestination'][0])
     {
 
         // verify the required parameter 'destination' is set
@@ -381,13 +381,6 @@ class RoutesApi
             );
         }
 
-        // verify the required parameter 'x_compatibility_date' is set
-        if ($x_compatibility_date === null || (is_array($x_compatibility_date) && count($x_compatibility_date) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $x_compatibility_date when calling getRouteOriginDestination'
-            );
-        }
-
         if ($avoid !== null && count($avoid) > 100) {
             throw new \InvalidArgumentException('invalid value for "$avoid" when calling RoutesApi.getRouteOriginDestination, number of items must be less than or equal to 100.');
         }
@@ -396,6 +389,7 @@ class RoutesApi
             throw new \InvalidArgumentException('invalid value for "$connections" when calling RoutesApi.getRouteOriginDestination, number of items must be less than or equal to 100.');
         }
         
+
 
 
 
@@ -446,7 +440,7 @@ class RoutesApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {

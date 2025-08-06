@@ -15,7 +15,7 @@ All URIs are relative to https://esi.evetech.net, except if the operation define
 ## `getCharactersCharacterIdWallet()`
 
 ```php
-getCharactersCharacterIdWallet($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): float
+getCharactersCharacterIdWallet($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): float
 ```
 
 Get a character's wallet balance
@@ -40,13 +40,13 @@ $apiInstance = new Tkhamez\Eve\API\Api\WalletApi(
     $config
 );
 $character_id = 56; // int | The ID of the character
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->getCharactersCharacterIdWallet($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->getCharactersCharacterIdWallet($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WalletApi->getCharactersCharacterIdWallet: ', $e->getMessage(), PHP_EOL;
@@ -58,9 +58,9 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **character_id** | **int**| The ID of the character | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -83,7 +83,7 @@ try {
 ## `getCharactersCharacterIdWalletJournal()`
 
 ```php
-getCharactersCharacterIdWalletJournal($character_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdWalletJournalGetInner[]
+getCharactersCharacterIdWalletJournal($character_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdWalletJournalGetInner[]
 ```
 
 Get character wallet journal
@@ -108,14 +108,14 @@ $apiInstance = new Tkhamez\Eve\API\Api\WalletApi(
     $config
 );
 $character_id = 56; // int | The ID of the character
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $page = 56; // int
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->getCharactersCharacterIdWalletJournal($character_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->getCharactersCharacterIdWalletJournal($character_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WalletApi->getCharactersCharacterIdWalletJournal: ', $e->getMessage(), PHP_EOL;
@@ -127,10 +127,10 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **character_id** | **int**| The ID of the character | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **page** | **int**|  | [optional] |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -153,7 +153,7 @@ try {
 ## `getCharactersCharacterIdWalletTransactions()`
 
 ```php
-getCharactersCharacterIdWalletTransactions($character_id, $x_compatibility_date, $from_id, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdWalletTransactionsGetInner[]
+getCharactersCharacterIdWalletTransactions($character_id, $from_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdWalletTransactionsGetInner[]
 ```
 
 Get wallet transactions
@@ -178,14 +178,14 @@ $apiInstance = new Tkhamez\Eve\API\Api\WalletApi(
     $config
 );
 $character_id = 56; // int | The ID of the character
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $from_id = 56; // int
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->getCharactersCharacterIdWalletTransactions($character_id, $x_compatibility_date, $from_id, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->getCharactersCharacterIdWalletTransactions($character_id, $from_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WalletApi->getCharactersCharacterIdWalletTransactions: ', $e->getMessage(), PHP_EOL;
@@ -197,10 +197,10 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **character_id** | **int**| The ID of the character | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **from_id** | **int**|  | [optional] |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -223,7 +223,7 @@ try {
 ## `getCorporationsCorporationIdWallets()`
 
 ```php
-getCorporationsCorporationIdWallets($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdWalletsGetInner[]
+getCorporationsCorporationIdWallets($corporation_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdWalletsGetInner[]
 ```
 
 Returns a corporation's wallet balance
@@ -248,13 +248,13 @@ $apiInstance = new Tkhamez\Eve\API\Api\WalletApi(
     $config
 );
 $corporation_id = 56; // int | The ID of the corporation
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->getCorporationsCorporationIdWallets($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->getCorporationsCorporationIdWallets($corporation_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WalletApi->getCorporationsCorporationIdWallets: ', $e->getMessage(), PHP_EOL;
@@ -266,9 +266,9 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **corporation_id** | **int**| The ID of the corporation | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -291,7 +291,7 @@ try {
 ## `getCorporationsCorporationIdWalletsDivisionJournal()`
 
 ```php
-getCorporationsCorporationIdWalletsDivisionJournal($corporation_id, $division, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdWalletsDivisionJournalGetInner[]
+getCorporationsCorporationIdWalletsDivisionJournal($corporation_id, $division, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdWalletsDivisionJournalGetInner[]
 ```
 
 Get corporation wallet journal
@@ -317,14 +317,14 @@ $apiInstance = new Tkhamez\Eve\API\Api\WalletApi(
 );
 $corporation_id = 56; // int | The ID of the corporation
 $division = 56; // int
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $page = 56; // int
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->getCorporationsCorporationIdWalletsDivisionJournal($corporation_id, $division, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->getCorporationsCorporationIdWalletsDivisionJournal($corporation_id, $division, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WalletApi->getCorporationsCorporationIdWalletsDivisionJournal: ', $e->getMessage(), PHP_EOL;
@@ -337,10 +337,10 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **corporation_id** | **int**| The ID of the corporation | |
 | **division** | **int**|  | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **page** | **int**|  | [optional] |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -363,7 +363,7 @@ try {
 ## `getCorporationsCorporationIdWalletsDivisionTransactions()`
 
 ```php
-getCorporationsCorporationIdWalletsDivisionTransactions($corporation_id, $division, $x_compatibility_date, $from_id, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdWalletsDivisionTransactionsGetInner[]
+getCorporationsCorporationIdWalletsDivisionTransactions($corporation_id, $division, $from_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdWalletsDivisionTransactionsGetInner[]
 ```
 
 Get corporation wallet transactions
@@ -389,14 +389,14 @@ $apiInstance = new Tkhamez\Eve\API\Api\WalletApi(
 );
 $corporation_id = 56; // int | The ID of the corporation
 $division = 56; // int
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $from_id = 56; // int
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->getCorporationsCorporationIdWalletsDivisionTransactions($corporation_id, $division, $x_compatibility_date, $from_id, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->getCorporationsCorporationIdWalletsDivisionTransactions($corporation_id, $division, $from_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WalletApi->getCorporationsCorporationIdWalletsDivisionTransactions: ', $e->getMessage(), PHP_EOL;
@@ -409,10 +409,10 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **corporation_id** | **int**| The ID of the corporation | |
 | **division** | **int**|  | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **from_id** | **int**|  | [optional] |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type

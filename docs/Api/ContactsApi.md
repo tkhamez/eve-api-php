@@ -18,7 +18,7 @@ All URIs are relative to https://esi.evetech.net, except if the operation define
 ## `deleteCharactersCharacterIdContacts()`
 
 ```php
-deleteCharactersCharacterIdContacts($character_id, $contact_ids, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): mixed
+deleteCharactersCharacterIdContacts($character_id, $contact_ids, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): mixed
 ```
 
 Delete contacts
@@ -44,13 +44,13 @@ $apiInstance = new Tkhamez\Eve\API\Api\ContactsApi(
 );
 $character_id = 56; // int | The ID of the character
 $contact_ids = array(56); // int[]
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->deleteCharactersCharacterIdContacts($character_id, $contact_ids, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->deleteCharactersCharacterIdContacts($character_id, $contact_ids, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ContactsApi->deleteCharactersCharacterIdContacts: ', $e->getMessage(), PHP_EOL;
@@ -63,9 +63,9 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **character_id** | **int**| The ID of the character | |
 | **contact_ids** | [**int[]**](../Model/int.md)|  | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -88,7 +88,7 @@ try {
 ## `getAlliancesAllianceIdContacts()`
 
 ```php
-getAlliancesAllianceIdContacts($alliance_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\AlliancesAllianceIdContactsGetInner[]
+getAlliancesAllianceIdContacts($alliance_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\AlliancesAllianceIdContactsGetInner[]
 ```
 
 Get alliance contacts
@@ -113,14 +113,14 @@ $apiInstance = new Tkhamez\Eve\API\Api\ContactsApi(
     $config
 );
 $alliance_id = 56; // int | The ID of the alliance
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $page = 56; // int
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->getAlliancesAllianceIdContacts($alliance_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->getAlliancesAllianceIdContacts($alliance_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ContactsApi->getAlliancesAllianceIdContacts: ', $e->getMessage(), PHP_EOL;
@@ -132,10 +132,10 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **alliance_id** | **int**| The ID of the alliance | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **page** | **int**|  | [optional] |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -158,7 +158,7 @@ try {
 ## `getAlliancesAllianceIdContactsLabels()`
 
 ```php
-getAlliancesAllianceIdContactsLabels($alliance_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\AlliancesAllianceIdContactsLabelsGetInner[]
+getAlliancesAllianceIdContactsLabels($alliance_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\AlliancesAllianceIdContactsLabelsGetInner[]
 ```
 
 Get alliance contact labels
@@ -183,13 +183,13 @@ $apiInstance = new Tkhamez\Eve\API\Api\ContactsApi(
     $config
 );
 $alliance_id = 56; // int | The ID of the alliance
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->getAlliancesAllianceIdContactsLabels($alliance_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->getAlliancesAllianceIdContactsLabels($alliance_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ContactsApi->getAlliancesAllianceIdContactsLabels: ', $e->getMessage(), PHP_EOL;
@@ -201,9 +201,9 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **alliance_id** | **int**| The ID of the alliance | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -226,7 +226,7 @@ try {
 ## `getCharactersCharacterIdContacts()`
 
 ```php
-getCharactersCharacterIdContacts($character_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdContactsGetInner[]
+getCharactersCharacterIdContacts($character_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdContactsGetInner[]
 ```
 
 Get contacts
@@ -251,14 +251,14 @@ $apiInstance = new Tkhamez\Eve\API\Api\ContactsApi(
     $config
 );
 $character_id = 56; // int | The ID of the character
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $page = 56; // int
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->getCharactersCharacterIdContacts($character_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->getCharactersCharacterIdContacts($character_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ContactsApi->getCharactersCharacterIdContacts: ', $e->getMessage(), PHP_EOL;
@@ -270,10 +270,10 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **character_id** | **int**| The ID of the character | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **page** | **int**|  | [optional] |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -296,7 +296,7 @@ try {
 ## `getCharactersCharacterIdContactsLabels()`
 
 ```php
-getCharactersCharacterIdContactsLabels($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\AlliancesAllianceIdContactsLabelsGetInner[]
+getCharactersCharacterIdContactsLabels($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\AlliancesAllianceIdContactsLabelsGetInner[]
 ```
 
 Get contact labels
@@ -321,13 +321,13 @@ $apiInstance = new Tkhamez\Eve\API\Api\ContactsApi(
     $config
 );
 $character_id = 56; // int | The ID of the character
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->getCharactersCharacterIdContactsLabels($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->getCharactersCharacterIdContactsLabels($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ContactsApi->getCharactersCharacterIdContactsLabels: ', $e->getMessage(), PHP_EOL;
@@ -339,9 +339,9 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **character_id** | **int**| The ID of the character | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -364,7 +364,7 @@ try {
 ## `getCorporationsCorporationIdContacts()`
 
 ```php
-getCorporationsCorporationIdContacts($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdContactsGetInner[]
+getCorporationsCorporationIdContacts($corporation_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdContactsGetInner[]
 ```
 
 Get corporation contacts
@@ -389,14 +389,14 @@ $apiInstance = new Tkhamez\Eve\API\Api\ContactsApi(
     $config
 );
 $corporation_id = 56; // int | The ID of the corporation
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $page = 56; // int
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->getCorporationsCorporationIdContacts($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->getCorporationsCorporationIdContacts($corporation_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ContactsApi->getCorporationsCorporationIdContacts: ', $e->getMessage(), PHP_EOL;
@@ -408,10 +408,10 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **corporation_id** | **int**| The ID of the corporation | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **page** | **int**|  | [optional] |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -434,7 +434,7 @@ try {
 ## `getCorporationsCorporationIdContactsLabels()`
 
 ```php
-getCorporationsCorporationIdContactsLabels($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\AlliancesAllianceIdContactsLabelsGetInner[]
+getCorporationsCorporationIdContactsLabels($corporation_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\AlliancesAllianceIdContactsLabelsGetInner[]
 ```
 
 Get corporation contact labels
@@ -459,13 +459,13 @@ $apiInstance = new Tkhamez\Eve\API\Api\ContactsApi(
     $config
 );
 $corporation_id = 56; // int | The ID of the corporation
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->getCorporationsCorporationIdContactsLabels($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->getCorporationsCorporationIdContactsLabels($corporation_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ContactsApi->getCorporationsCorporationIdContactsLabels: ', $e->getMessage(), PHP_EOL;
@@ -477,9 +477,9 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **corporation_id** | **int**| The ID of the corporation | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -502,7 +502,7 @@ try {
 ## `postCharactersCharacterIdContacts()`
 
 ```php
-postCharactersCharacterIdContacts($character_id, $standing, $x_compatibility_date, $label_ids, $watched, $accept_language, $if_none_match, $x_tenant, $request_body): int[]
+postCharactersCharacterIdContacts($character_id, $standing, $label_ids, $watched, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body): int[]
 ```
 
 Add contacts
@@ -528,16 +528,16 @@ $apiInstance = new Tkhamez\Eve\API\Api\ContactsApi(
 );
 $character_id = 56; // int | The ID of the character
 $standing = 3.4; // float
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $label_ids = array(56); // int[]
 $watched = false; // bool
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $request_body = array(56); // int[]
 
 try {
-    $result = $apiInstance->postCharactersCharacterIdContacts($character_id, $standing, $x_compatibility_date, $label_ids, $watched, $accept_language, $if_none_match, $x_tenant, $request_body);
+    $result = $apiInstance->postCharactersCharacterIdContacts($character_id, $standing, $label_ids, $watched, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ContactsApi->postCharactersCharacterIdContacts: ', $e->getMessage(), PHP_EOL;
@@ -550,11 +550,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **character_id** | **int**| The ID of the character | |
 | **standing** | **float**|  | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **label_ids** | [**int[]**](../Model/int.md)|  | [optional] |
 | **watched** | **bool**|  | [optional] [default to false] |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **request_body** | [**int[]**](../Model/int.md)|  | [optional] |
 
@@ -578,7 +578,7 @@ try {
 ## `putCharactersCharacterIdContacts()`
 
 ```php
-putCharactersCharacterIdContacts($character_id, $standing, $x_compatibility_date, $label_ids, $watched, $accept_language, $if_none_match, $x_tenant, $request_body): mixed
+putCharactersCharacterIdContacts($character_id, $standing, $label_ids, $watched, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body): mixed
 ```
 
 Edit contacts
@@ -604,16 +604,16 @@ $apiInstance = new Tkhamez\Eve\API\Api\ContactsApi(
 );
 $character_id = 56; // int | The ID of the character
 $standing = 3.4; // float
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $label_ids = array(56); // int[]
 $watched = false; // bool
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $request_body = array(56); // int[]
 
 try {
-    $result = $apiInstance->putCharactersCharacterIdContacts($character_id, $standing, $x_compatibility_date, $label_ids, $watched, $accept_language, $if_none_match, $x_tenant, $request_body);
+    $result = $apiInstance->putCharactersCharacterIdContacts($character_id, $standing, $label_ids, $watched, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ContactsApi->putCharactersCharacterIdContacts: ', $e->getMessage(), PHP_EOL;
@@ -626,11 +626,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **character_id** | **int**| The ID of the character | |
 | **standing** | **float**|  | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **label_ids** | [**int[]**](../Model/int.md)|  | [optional] |
 | **watched** | **bool**|  | [optional] [default to false] |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **request_body** | [**int[]**](../Model/int.md)|  | [optional] |
 

@@ -12,7 +12,7 @@ All URIs are relative to https://esi.evetech.net, except if the operation define
 ## `deleteCharactersCharacterIdFittingsFittingId()`
 
 ```php
-deleteCharactersCharacterIdFittingsFittingId($character_id, $fitting_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): mixed
+deleteCharactersCharacterIdFittingsFittingId($character_id, $fitting_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): mixed
 ```
 
 Delete fitting
@@ -38,13 +38,13 @@ $apiInstance = new Tkhamez\Eve\API\Api\FittingsApi(
 );
 $character_id = 56; // int | The ID of the character
 $fitting_id = 56; // int
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->deleteCharactersCharacterIdFittingsFittingId($character_id, $fitting_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->deleteCharactersCharacterIdFittingsFittingId($character_id, $fitting_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FittingsApi->deleteCharactersCharacterIdFittingsFittingId: ', $e->getMessage(), PHP_EOL;
@@ -57,9 +57,9 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **character_id** | **int**| The ID of the character | |
 | **fitting_id** | **int**|  | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -82,7 +82,7 @@ try {
 ## `getCharactersCharacterIdFittings()`
 
 ```php
-getCharactersCharacterIdFittings($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdFittingsGetInner[]
+getCharactersCharacterIdFittings($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdFittingsGetInner[]
 ```
 
 Get fittings
@@ -107,13 +107,13 @@ $apiInstance = new Tkhamez\Eve\API\Api\FittingsApi(
     $config
 );
 $character_id = 56; // int | The ID of the character
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->getCharactersCharacterIdFittings($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->getCharactersCharacterIdFittings($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FittingsApi->getCharactersCharacterIdFittings: ', $e->getMessage(), PHP_EOL;
@@ -125,9 +125,9 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **character_id** | **int**| The ID of the character | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -150,7 +150,7 @@ try {
 ## `postCharactersCharacterIdFittings()`
 
 ```php
-postCharactersCharacterIdFittings($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $post_characters_character_id_fittings_request): \Tkhamez\Eve\API\Model\CharactersCharacterIdFittingsPost
+postCharactersCharacterIdFittings($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $post_characters_character_id_fittings_request): \Tkhamez\Eve\API\Model\CharactersCharacterIdFittingsPost
 ```
 
 Create fitting
@@ -175,14 +175,14 @@ $apiInstance = new Tkhamez\Eve\API\Api\FittingsApi(
     $config
 );
 $character_id = 56; // int | The ID of the character
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $post_characters_character_id_fittings_request = new \Tkhamez\Eve\API\Model\PostCharactersCharacterIdFittingsRequest(); // \Tkhamez\Eve\API\Model\PostCharactersCharacterIdFittingsRequest
 
 try {
-    $result = $apiInstance->postCharactersCharacterIdFittings($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $post_characters_character_id_fittings_request);
+    $result = $apiInstance->postCharactersCharacterIdFittings($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $post_characters_character_id_fittings_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FittingsApi->postCharactersCharacterIdFittings: ', $e->getMessage(), PHP_EOL;
@@ -194,9 +194,9 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **character_id** | **int**| The ID of the character | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **post_characters_character_id_fittings_request** | [**\Tkhamez\Eve\API\Model\PostCharactersCharacterIdFittingsRequest**](../Model/PostCharactersCharacterIdFittingsRequest.md)|  | [optional] |
 

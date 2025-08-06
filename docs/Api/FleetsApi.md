@@ -23,7 +23,7 @@ All URIs are relative to https://esi.evetech.net, except if the operation define
 ## `deleteFleetsFleetIdMembersMemberId()`
 
 ```php
-deleteFleetsFleetIdMembersMemberId($fleet_id, $member_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): mixed
+deleteFleetsFleetIdMembersMemberId($fleet_id, $member_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): mixed
 ```
 
 Kick fleet member
@@ -49,13 +49,13 @@ $apiInstance = new Tkhamez\Eve\API\Api\FleetsApi(
 );
 $fleet_id = 56; // int
 $member_id = 56; // int
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->deleteFleetsFleetIdMembersMemberId($fleet_id, $member_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->deleteFleetsFleetIdMembersMemberId($fleet_id, $member_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->deleteFleetsFleetIdMembersMemberId: ', $e->getMessage(), PHP_EOL;
@@ -68,9 +68,9 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **fleet_id** | **int**|  | |
 | **member_id** | **int**|  | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -93,7 +93,7 @@ try {
 ## `deleteFleetsFleetIdSquadsSquadId()`
 
 ```php
-deleteFleetsFleetIdSquadsSquadId($fleet_id, $squad_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): mixed
+deleteFleetsFleetIdSquadsSquadId($fleet_id, $squad_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): mixed
 ```
 
 Delete fleet squad
@@ -119,13 +119,13 @@ $apiInstance = new Tkhamez\Eve\API\Api\FleetsApi(
 );
 $fleet_id = 56; // int
 $squad_id = 56; // int
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->deleteFleetsFleetIdSquadsSquadId($fleet_id, $squad_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->deleteFleetsFleetIdSquadsSquadId($fleet_id, $squad_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->deleteFleetsFleetIdSquadsSquadId: ', $e->getMessage(), PHP_EOL;
@@ -138,9 +138,9 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **fleet_id** | **int**|  | |
 | **squad_id** | **int**|  | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -163,7 +163,7 @@ try {
 ## `deleteFleetsFleetIdWingsWingId()`
 
 ```php
-deleteFleetsFleetIdWingsWingId($fleet_id, $wing_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): mixed
+deleteFleetsFleetIdWingsWingId($fleet_id, $wing_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): mixed
 ```
 
 Delete fleet wing
@@ -189,13 +189,13 @@ $apiInstance = new Tkhamez\Eve\API\Api\FleetsApi(
 );
 $fleet_id = 56; // int
 $wing_id = 56; // int
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->deleteFleetsFleetIdWingsWingId($fleet_id, $wing_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->deleteFleetsFleetIdWingsWingId($fleet_id, $wing_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->deleteFleetsFleetIdWingsWingId: ', $e->getMessage(), PHP_EOL;
@@ -208,9 +208,9 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **fleet_id** | **int**|  | |
 | **wing_id** | **int**|  | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -233,7 +233,7 @@ try {
 ## `getCharactersCharacterIdFleet()`
 
 ```php
-getCharactersCharacterIdFleet($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdFleetGet
+getCharactersCharacterIdFleet($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdFleetGet
 ```
 
 Get character fleet info
@@ -258,13 +258,13 @@ $apiInstance = new Tkhamez\Eve\API\Api\FleetsApi(
     $config
 );
 $character_id = 56; // int | The ID of the character
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->getCharactersCharacterIdFleet($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->getCharactersCharacterIdFleet($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->getCharactersCharacterIdFleet: ', $e->getMessage(), PHP_EOL;
@@ -276,9 +276,9 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **character_id** | **int**| The ID of the character | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -301,7 +301,7 @@ try {
 ## `getFleetsFleetId()`
 
 ```php
-getFleetsFleetId($fleet_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\FleetsFleetIdGet
+getFleetsFleetId($fleet_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\FleetsFleetIdGet
 ```
 
 Get fleet information
@@ -326,13 +326,13 @@ $apiInstance = new Tkhamez\Eve\API\Api\FleetsApi(
     $config
 );
 $fleet_id = 56; // int
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->getFleetsFleetId($fleet_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->getFleetsFleetId($fleet_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->getFleetsFleetId: ', $e->getMessage(), PHP_EOL;
@@ -344,9 +344,9 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **fleet_id** | **int**|  | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -369,7 +369,7 @@ try {
 ## `getFleetsFleetIdMembers()`
 
 ```php
-getFleetsFleetIdMembers($fleet_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\FleetsFleetIdMembersGetInner[]
+getFleetsFleetIdMembers($fleet_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\FleetsFleetIdMembersGetInner[]
 ```
 
 Get fleet members
@@ -394,13 +394,13 @@ $apiInstance = new Tkhamez\Eve\API\Api\FleetsApi(
     $config
 );
 $fleet_id = 56; // int
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->getFleetsFleetIdMembers($fleet_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->getFleetsFleetIdMembers($fleet_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->getFleetsFleetIdMembers: ', $e->getMessage(), PHP_EOL;
@@ -412,9 +412,9 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **fleet_id** | **int**|  | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -437,7 +437,7 @@ try {
 ## `getFleetsFleetIdWings()`
 
 ```php
-getFleetsFleetIdWings($fleet_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\FleetsFleetIdWingsGetInner[]
+getFleetsFleetIdWings($fleet_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\FleetsFleetIdWingsGetInner[]
 ```
 
 Get fleet wings
@@ -462,13 +462,13 @@ $apiInstance = new Tkhamez\Eve\API\Api\FleetsApi(
     $config
 );
 $fleet_id = 56; // int
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->getFleetsFleetIdWings($fleet_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->getFleetsFleetIdWings($fleet_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->getFleetsFleetIdWings: ', $e->getMessage(), PHP_EOL;
@@ -480,9 +480,9 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **fleet_id** | **int**|  | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -505,7 +505,7 @@ try {
 ## `postFleetsFleetIdMembers()`
 
 ```php
-postFleetsFleetIdMembers($fleet_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $post_fleets_fleet_id_members_request): mixed
+postFleetsFleetIdMembers($fleet_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $post_fleets_fleet_id_members_request): mixed
 ```
 
 Create fleet invitation
@@ -530,14 +530,14 @@ $apiInstance = new Tkhamez\Eve\API\Api\FleetsApi(
     $config
 );
 $fleet_id = 56; // int
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $post_fleets_fleet_id_members_request = new \Tkhamez\Eve\API\Model\PostFleetsFleetIdMembersRequest(); // \Tkhamez\Eve\API\Model\PostFleetsFleetIdMembersRequest
 
 try {
-    $result = $apiInstance->postFleetsFleetIdMembers($fleet_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $post_fleets_fleet_id_members_request);
+    $result = $apiInstance->postFleetsFleetIdMembers($fleet_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $post_fleets_fleet_id_members_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->postFleetsFleetIdMembers: ', $e->getMessage(), PHP_EOL;
@@ -549,9 +549,9 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **fleet_id** | **int**|  | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **post_fleets_fleet_id_members_request** | [**\Tkhamez\Eve\API\Model\PostFleetsFleetIdMembersRequest**](../Model/PostFleetsFleetIdMembersRequest.md)|  | [optional] |
 
@@ -575,7 +575,7 @@ try {
 ## `postFleetsFleetIdWings()`
 
 ```php
-postFleetsFleetIdWings($fleet_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\FleetsFleetIdWingsPost
+postFleetsFleetIdWings($fleet_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\FleetsFleetIdWingsPost
 ```
 
 Create fleet wing
@@ -600,13 +600,13 @@ $apiInstance = new Tkhamez\Eve\API\Api\FleetsApi(
     $config
 );
 $fleet_id = 56; // int
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->postFleetsFleetIdWings($fleet_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->postFleetsFleetIdWings($fleet_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->postFleetsFleetIdWings: ', $e->getMessage(), PHP_EOL;
@@ -618,9 +618,9 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **fleet_id** | **int**|  | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -643,7 +643,7 @@ try {
 ## `postFleetsFleetIdWingsWingIdSquads()`
 
 ```php
-postFleetsFleetIdWingsWingIdSquads($fleet_id, $wing_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant): \Tkhamez\Eve\API\Model\FleetsFleetIdWingsWingIdSquadsPost
+postFleetsFleetIdWingsWingIdSquads($fleet_id, $wing_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\FleetsFleetIdWingsWingIdSquadsPost
 ```
 
 Create fleet squad
@@ -669,13 +669,13 @@ $apiInstance = new Tkhamez\Eve\API\Api\FleetsApi(
 );
 $fleet_id = 56; // int
 $wing_id = 56; // int
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->postFleetsFleetIdWingsWingIdSquads($fleet_id, $wing_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
+    $result = $apiInstance->postFleetsFleetIdWingsWingIdSquads($fleet_id, $wing_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->postFleetsFleetIdWingsWingIdSquads: ', $e->getMessage(), PHP_EOL;
@@ -688,9 +688,9 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **fleet_id** | **int**|  | |
 | **wing_id** | **int**|  | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -713,7 +713,7 @@ try {
 ## `putFleetsFleetId()`
 
 ```php
-putFleetsFleetId($fleet_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $put_fleets_fleet_id_request): mixed
+putFleetsFleetId($fleet_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $put_fleets_fleet_id_request): mixed
 ```
 
 Update fleet
@@ -738,14 +738,14 @@ $apiInstance = new Tkhamez\Eve\API\Api\FleetsApi(
     $config
 );
 $fleet_id = 56; // int
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $put_fleets_fleet_id_request = new \Tkhamez\Eve\API\Model\PutFleetsFleetIdRequest(); // \Tkhamez\Eve\API\Model\PutFleetsFleetIdRequest
 
 try {
-    $result = $apiInstance->putFleetsFleetId($fleet_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $put_fleets_fleet_id_request);
+    $result = $apiInstance->putFleetsFleetId($fleet_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $put_fleets_fleet_id_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->putFleetsFleetId: ', $e->getMessage(), PHP_EOL;
@@ -757,9 +757,9 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **fleet_id** | **int**|  | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **put_fleets_fleet_id_request** | [**\Tkhamez\Eve\API\Model\PutFleetsFleetIdRequest**](../Model/PutFleetsFleetIdRequest.md)|  | [optional] |
 
@@ -783,7 +783,7 @@ try {
 ## `putFleetsFleetIdMembersMemberId()`
 
 ```php
-putFleetsFleetIdMembersMemberId($fleet_id, $member_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $put_fleets_fleet_id_members_member_id_request): mixed
+putFleetsFleetIdMembersMemberId($fleet_id, $member_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $put_fleets_fleet_id_members_member_id_request): mixed
 ```
 
 Move fleet member
@@ -809,14 +809,14 @@ $apiInstance = new Tkhamez\Eve\API\Api\FleetsApi(
 );
 $fleet_id = 56; // int
 $member_id = 56; // int
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $put_fleets_fleet_id_members_member_id_request = new \Tkhamez\Eve\API\Model\PutFleetsFleetIdMembersMemberIdRequest(); // \Tkhamez\Eve\API\Model\PutFleetsFleetIdMembersMemberIdRequest
 
 try {
-    $result = $apiInstance->putFleetsFleetIdMembersMemberId($fleet_id, $member_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $put_fleets_fleet_id_members_member_id_request);
+    $result = $apiInstance->putFleetsFleetIdMembersMemberId($fleet_id, $member_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $put_fleets_fleet_id_members_member_id_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->putFleetsFleetIdMembersMemberId: ', $e->getMessage(), PHP_EOL;
@@ -829,9 +829,9 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **fleet_id** | **int**|  | |
 | **member_id** | **int**|  | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **put_fleets_fleet_id_members_member_id_request** | [**\Tkhamez\Eve\API\Model\PutFleetsFleetIdMembersMemberIdRequest**](../Model/PutFleetsFleetIdMembersMemberIdRequest.md)|  | [optional] |
 
@@ -855,7 +855,7 @@ try {
 ## `putFleetsFleetIdSquadsSquadId()`
 
 ```php
-putFleetsFleetIdSquadsSquadId($fleet_id, $squad_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $put_fleets_fleet_id_squads_squad_id_request): mixed
+putFleetsFleetIdSquadsSquadId($fleet_id, $squad_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $put_fleets_fleet_id_squads_squad_id_request): mixed
 ```
 
 Rename fleet squad
@@ -881,14 +881,14 @@ $apiInstance = new Tkhamez\Eve\API\Api\FleetsApi(
 );
 $fleet_id = 56; // int
 $squad_id = 56; // int
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $put_fleets_fleet_id_squads_squad_id_request = new \Tkhamez\Eve\API\Model\PutFleetsFleetIdSquadsSquadIdRequest(); // \Tkhamez\Eve\API\Model\PutFleetsFleetIdSquadsSquadIdRequest
 
 try {
-    $result = $apiInstance->putFleetsFleetIdSquadsSquadId($fleet_id, $squad_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $put_fleets_fleet_id_squads_squad_id_request);
+    $result = $apiInstance->putFleetsFleetIdSquadsSquadId($fleet_id, $squad_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $put_fleets_fleet_id_squads_squad_id_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->putFleetsFleetIdSquadsSquadId: ', $e->getMessage(), PHP_EOL;
@@ -901,9 +901,9 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **fleet_id** | **int**|  | |
 | **squad_id** | **int**|  | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **put_fleets_fleet_id_squads_squad_id_request** | [**\Tkhamez\Eve\API\Model\PutFleetsFleetIdSquadsSquadIdRequest**](../Model/PutFleetsFleetIdSquadsSquadIdRequest.md)|  | [optional] |
 
@@ -927,7 +927,7 @@ try {
 ## `putFleetsFleetIdWingsWingId()`
 
 ```php
-putFleetsFleetIdWingsWingId($fleet_id, $wing_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $put_fleets_fleet_id_squads_squad_id_request): mixed
+putFleetsFleetIdWingsWingId($fleet_id, $wing_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $put_fleets_fleet_id_squads_squad_id_request): mixed
 ```
 
 Rename fleet wing
@@ -953,14 +953,14 @@ $apiInstance = new Tkhamez\Eve\API\Api\FleetsApi(
 );
 $fleet_id = 56; // int
 $wing_id = 56; // int
-$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $put_fleets_fleet_id_squads_squad_id_request = new \Tkhamez\Eve\API\Model\PutFleetsFleetIdSquadsSquadIdRequest(); // \Tkhamez\Eve\API\Model\PutFleetsFleetIdSquadsSquadIdRequest
 
 try {
-    $result = $apiInstance->putFleetsFleetIdWingsWingId($fleet_id, $wing_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $put_fleets_fleet_id_squads_squad_id_request);
+    $result = $apiInstance->putFleetsFleetIdWingsWingId($fleet_id, $wing_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $put_fleets_fleet_id_squads_squad_id_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->putFleetsFleetIdWingsWingId: ', $e->getMessage(), PHP_EOL;
@@ -973,9 +973,9 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **fleet_id** | **int**|  | |
 | **wing_id** | **int**|  | |
-| **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **put_fleets_fleet_id_squads_squad_id_request** | [**\Tkhamez\Eve\API\Model\PutFleetsFleetIdSquadsSquadIdRequest**](../Model/PutFleetsFleetIdSquadsSquadIdRequest.md)|  | [optional] |
 
