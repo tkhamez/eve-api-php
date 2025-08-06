@@ -17,9 +17,13 @@ for the X-Compatibility-Date header. This date is included in the version number
 
 _**Please note that the ESI OpenAPI 3 specification is still in beta status, so things can change!**_
 
-This client contains a patch to fix the format of the X-Compatibility-Date header (the generator
-ignores the specified format "date" and uses a string that includes the time, which will lead to
-400 errors from the API).
+This client contains a patch for the OpenAPI specification file that changes the X-Compatibility-Date 
+header so that it is optional and has a default value. This fixes two issues that the PHP generator 
+currently has:
+
+1. The X-Compatibility-Date header is not formatted correctly (date with time instead of date only).
+2. It does not use a constant value for the X-Compatibility-Date header, which is an enumeration with 
+   only one possible value (see also https://github.com/OpenAPITools/openapi-generator/issues/16547).
 
 ## Versioning scheme
 

@@ -46,11 +46,10 @@ components:
       description: The compatibility date for the request.
       in: header
       name: X-Compatibility-Date
-      required: true
       schema:
+        default: "2020-01-01"
         enum:
           - "2020-01-01"
-        format: date
         type: string
     IfModifiedSince:
       description: The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
