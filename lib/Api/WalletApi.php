@@ -398,7 +398,7 @@ class WalletApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
+            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
         }
         // header params
         if ($x_tenant !== null) {
@@ -748,7 +748,7 @@ class WalletApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
+            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
         }
         // header params
         if ($x_tenant !== null) {
@@ -1095,7 +1095,7 @@ class WalletApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
+            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
         }
         // header params
         if ($x_tenant !== null) {
@@ -1427,7 +1427,7 @@ class WalletApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
+            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
         }
         // header params
         if ($x_tenant !== null) {
@@ -1789,7 +1789,7 @@ class WalletApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
+            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
         }
         // header params
         if ($x_tenant !== null) {
@@ -2156,7 +2156,7 @@ class WalletApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
+            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
         }
         // header params
         if ($x_tenant !== null) {
