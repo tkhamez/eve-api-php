@@ -59,10 +59,10 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
-$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
+$accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$x_tenant = ; // string | The tenant ID for the request.
 
 try {
     $result = $apiInstance->getUniverseAncestries($x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
@@ -77,9 +77,9 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
-| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
 
@@ -122,10 +122,10 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
     new GuzzleHttp\Client()
 );
 $asteroid_belt_id = 56; // int
-$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
-$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
+$accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$x_tenant = ; // string | The tenant ID for the request.
 
 try {
     $result = $apiInstance->getUniverseAsteroidBeltsAsteroidBeltId($asteroid_belt_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
@@ -141,9 +141,9 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **asteroid_belt_id** | **int**|  | |
 | **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
-| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
 
@@ -185,10 +185,10 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
-$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
+$accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$x_tenant = ; // string | The tenant ID for the request.
 
 try {
     $result = $apiInstance->getUniverseBloodlines($x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
@@ -203,9 +203,9 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
-| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
 
@@ -247,10 +247,10 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
-$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
+$accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$x_tenant = ; // string | The tenant ID for the request.
 
 try {
     $result = $apiInstance->getUniverseCategories($x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
@@ -265,9 +265,9 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
-| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
 
@@ -310,10 +310,10 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
     new GuzzleHttp\Client()
 );
 $category_id = 56; // int
-$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
-$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
+$accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$x_tenant = ; // string | The tenant ID for the request.
 
 try {
     $result = $apiInstance->getUniverseCategoriesCategoryId($category_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
@@ -329,9 +329,9 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **category_id** | **int**|  | |
 | **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
-| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
 
@@ -373,10 +373,10 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
-$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
+$accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$x_tenant = ; // string | The tenant ID for the request.
 
 try {
     $result = $apiInstance->getUniverseConstellations($x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
@@ -391,9 +391,9 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
-| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
 
@@ -436,10 +436,10 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
     new GuzzleHttp\Client()
 );
 $constellation_id = 56; // int
-$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
-$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
+$accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$x_tenant = ; // string | The tenant ID for the request.
 
 try {
     $result = $apiInstance->getUniverseConstellationsConstellationId($constellation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
@@ -455,9 +455,9 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **constellation_id** | **int**|  | |
 | **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
-| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
 
@@ -499,10 +499,10 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
-$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
+$accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$x_tenant = ; // string | The tenant ID for the request.
 
 try {
     $result = $apiInstance->getUniverseFactions($x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
@@ -517,9 +517,9 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
-| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
 
@@ -561,10 +561,10 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
-$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
+$accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$x_tenant = ; // string | The tenant ID for the request.
 
 try {
     $result = $apiInstance->getUniverseGraphics($x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
@@ -579,9 +579,9 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
-| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
 
@@ -624,10 +624,10 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
     new GuzzleHttp\Client()
 );
 $graphic_id = 56; // int
-$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
-$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
+$accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$x_tenant = ; // string | The tenant ID for the request.
 
 try {
     $result = $apiInstance->getUniverseGraphicsGraphicId($graphic_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
@@ -643,9 +643,9 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **graphic_id** | **int**|  | |
 | **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
-| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
 
@@ -687,11 +687,11 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $page = 56; // int
-$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$x_tenant = ; // string | The tenant ID for the request.
 
 try {
     $result = $apiInstance->getUniverseGroups($x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant);
@@ -707,9 +707,9 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **page** | **int**|  | [optional] |
-| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
 
@@ -752,10 +752,10 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
     new GuzzleHttp\Client()
 );
 $group_id = 56; // int
-$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
-$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
+$accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$x_tenant = ; // string | The tenant ID for the request.
 
 try {
     $result = $apiInstance->getUniverseGroupsGroupId($group_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
@@ -771,9 +771,9 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **group_id** | **int**|  | |
 | **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
-| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
 
@@ -816,10 +816,10 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
     new GuzzleHttp\Client()
 );
 $moon_id = 56; // int
-$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
-$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
+$accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$x_tenant = ; // string | The tenant ID for the request.
 
 try {
     $result = $apiInstance->getUniverseMoonsMoonId($moon_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
@@ -835,9 +835,9 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **moon_id** | **int**|  | |
 | **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
-| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
 
@@ -880,10 +880,10 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
     new GuzzleHttp\Client()
 );
 $planet_id = 56; // int
-$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
-$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
+$accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$x_tenant = ; // string | The tenant ID for the request.
 
 try {
     $result = $apiInstance->getUniversePlanetsPlanetId($planet_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
@@ -899,9 +899,9 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **planet_id** | **int**|  | |
 | **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
-| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
 
@@ -943,10 +943,10 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
-$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
+$accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$x_tenant = ; // string | The tenant ID for the request.
 
 try {
     $result = $apiInstance->getUniverseRaces($x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
@@ -961,9 +961,9 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
-| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
 
@@ -1005,10 +1005,10 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
-$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
+$accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$x_tenant = ; // string | The tenant ID for the request.
 
 try {
     $result = $apiInstance->getUniverseRegions($x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
@@ -1023,9 +1023,9 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
-| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
 
@@ -1068,10 +1068,10 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
     new GuzzleHttp\Client()
 );
 $region_id = 56; // int
-$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
-$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
+$accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$x_tenant = ; // string | The tenant ID for the request.
 
 try {
     $result = $apiInstance->getUniverseRegionsRegionId($region_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
@@ -1087,9 +1087,9 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **region_id** | **int**|  | |
 | **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
-| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
 
@@ -1132,10 +1132,10 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
     new GuzzleHttp\Client()
 );
 $stargate_id = 56; // int
-$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
-$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
+$accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$x_tenant = ; // string | The tenant ID for the request.
 
 try {
     $result = $apiInstance->getUniverseStargatesStargateId($stargate_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
@@ -1151,9 +1151,9 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **stargate_id** | **int**|  | |
 | **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
-| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
 
@@ -1196,10 +1196,10 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
     new GuzzleHttp\Client()
 );
 $star_id = 56; // int
-$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
-$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
+$accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$x_tenant = ; // string | The tenant ID for the request.
 
 try {
     $result = $apiInstance->getUniverseStarsStarId($star_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
@@ -1215,9 +1215,9 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **star_id** | **int**|  | |
 | **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
-| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
 
@@ -1260,10 +1260,10 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
     new GuzzleHttp\Client()
 );
 $station_id = 56; // int
-$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
-$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
+$accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$x_tenant = ; // string | The tenant ID for the request.
 
 try {
     $result = $apiInstance->getUniverseStationsStationId($station_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
@@ -1279,9 +1279,9 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **station_id** | **int**|  | |
 | **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
-| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
 
@@ -1323,11 +1323,11 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $filter = 'filter_example'; // string
-$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$x_tenant = ; // string | The tenant ID for the request.
 
 try {
     $result = $apiInstance->getUniverseStructures($x_compatibility_date, $filter, $accept_language, $if_none_match, $x_tenant);
@@ -1343,9 +1343,9 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **filter** | **string**|  | [optional] |
-| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
 
@@ -1392,10 +1392,10 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
     $config
 );
 $structure_id = 56; // int
-$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
-$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
+$accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$x_tenant = ; // string | The tenant ID for the request.
 
 try {
     $result = $apiInstance->getUniverseStructuresStructureId($structure_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
@@ -1411,9 +1411,9 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **structure_id** | **int**|  | |
 | **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
-| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
 
@@ -1455,10 +1455,10 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
-$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
+$accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$x_tenant = ; // string | The tenant ID for the request.
 
 try {
     $result = $apiInstance->getUniverseSystemJumps($x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
@@ -1473,9 +1473,9 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
-| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
 
@@ -1517,10 +1517,10 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
-$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
+$accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$x_tenant = ; // string | The tenant ID for the request.
 
 try {
     $result = $apiInstance->getUniverseSystemKills($x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
@@ -1535,9 +1535,9 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
-| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
 
@@ -1579,10 +1579,10 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
-$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
+$accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$x_tenant = ; // string | The tenant ID for the request.
 
 try {
     $result = $apiInstance->getUniverseSystems($x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
@@ -1597,9 +1597,9 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
-| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
 
@@ -1642,10 +1642,10 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
     new GuzzleHttp\Client()
 );
 $system_id = 56; // int
-$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
-$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
+$accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$x_tenant = ; // string | The tenant ID for the request.
 
 try {
     $result = $apiInstance->getUniverseSystemsSystemId($system_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
@@ -1661,9 +1661,9 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **system_id** | **int**|  | |
 | **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
-| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
 
@@ -1705,11 +1705,11 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $page = 56; // int
-$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$x_tenant = ; // string | The tenant ID for the request.
 
 try {
     $result = $apiInstance->getUniverseTypes($x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant);
@@ -1725,9 +1725,9 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **page** | **int**|  | [optional] |
-| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
 
@@ -1770,10 +1770,10 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
     new GuzzleHttp\Client()
 );
 $type_id = 56; // int
-$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
-$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
+$accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$x_tenant = ; // string | The tenant ID for the request.
 
 try {
     $result = $apiInstance->getUniverseTypesTypeId($type_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
@@ -1789,9 +1789,9 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **type_id** | **int**|  | |
 | **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
-| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
 
@@ -1833,10 +1833,10 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
-$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
+$accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$x_tenant = ; // string | The tenant ID for the request.
 $request_body = array('request_body_example'); // string[]
 
 try {
@@ -1852,9 +1852,9 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
-| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **request_body** | [**string[]**](../Model/string.md)|  | [optional] |
 
 ### Return type
@@ -1897,10 +1897,10 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
-$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
+$accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$x_tenant = ; // string | The tenant ID for the request.
 $request_body = array(56); // int[]
 
 try {
@@ -1916,9 +1916,9 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
-| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **request_body** | [**int[]**](../Model/int.md)|  | [optional] |
 
 ### Return type

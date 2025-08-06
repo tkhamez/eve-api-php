@@ -147,16 +147,16 @@ class WalletApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdWallet'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return float|\Tkhamez\Eve\API\Model\Error
      */
-    public function getCharactersCharacterIdWallet($character_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCharactersCharacterIdWallet'][0])
+    public function getCharactersCharacterIdWallet($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdWallet'][0])
     {
         list($response) = $this->getCharactersCharacterIdWalletWithHttpInfo($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
         return $response;
@@ -169,16 +169,16 @@ class WalletApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdWallet'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of float|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCharactersCharacterIdWalletWithHttpInfo($character_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCharactersCharacterIdWallet'][0])
+    public function getCharactersCharacterIdWalletWithHttpInfo($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdWallet'][0])
     {
         $request = $this->getCharactersCharacterIdWalletRequest($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
 
@@ -272,15 +272,15 @@ class WalletApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdWallet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCharactersCharacterIdWalletAsync($character_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCharactersCharacterIdWallet'][0])
+    public function getCharactersCharacterIdWalletAsync($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdWallet'][0])
     {
         return $this->getCharactersCharacterIdWalletAsyncWithHttpInfo($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType)
             ->then(
@@ -297,15 +297,15 @@ class WalletApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdWallet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCharactersCharacterIdWalletAsyncWithHttpInfo($character_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCharactersCharacterIdWallet'][0])
+    public function getCharactersCharacterIdWalletAsyncWithHttpInfo($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdWallet'][0])
     {
         $returnType = 'float';
         $request = $this->getCharactersCharacterIdWalletRequest($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
@@ -351,15 +351,15 @@ class WalletApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdWallet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getCharactersCharacterIdWalletRequest($character_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCharactersCharacterIdWallet'][0])
+    public function getCharactersCharacterIdWalletRequest($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdWallet'][0])
     {
 
         // verify the required parameter 'character_id' is set
@@ -398,7 +398,7 @@ class WalletApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -480,16 +480,16 @@ class WalletApi
      * @param  int $character_id The ID of the character (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $page page (optional)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdWalletJournal'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\CharactersCharacterIdWalletJournalGetInner[]|\Tkhamez\Eve\API\Model\Error
      */
-    public function getCharactersCharacterIdWalletJournal($character_id, $x_compatibility_date, $page = null, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCharactersCharacterIdWalletJournal'][0])
+    public function getCharactersCharacterIdWalletJournal($character_id, $x_compatibility_date, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdWalletJournal'][0])
     {
         list($response) = $this->getCharactersCharacterIdWalletJournalWithHttpInfo($character_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant, $contentType);
         return $response;
@@ -503,16 +503,16 @@ class WalletApi
      * @param  int $character_id The ID of the character (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $page (optional)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdWalletJournal'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\CharactersCharacterIdWalletJournalGetInner[]|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCharactersCharacterIdWalletJournalWithHttpInfo($character_id, $x_compatibility_date, $page = null, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCharactersCharacterIdWalletJournal'][0])
+    public function getCharactersCharacterIdWalletJournalWithHttpInfo($character_id, $x_compatibility_date, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdWalletJournal'][0])
     {
         $request = $this->getCharactersCharacterIdWalletJournalRequest($character_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant, $contentType);
 
@@ -607,15 +607,15 @@ class WalletApi
      * @param  int $character_id The ID of the character (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $page (optional)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdWalletJournal'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCharactersCharacterIdWalletJournalAsync($character_id, $x_compatibility_date, $page = null, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCharactersCharacterIdWalletJournal'][0])
+    public function getCharactersCharacterIdWalletJournalAsync($character_id, $x_compatibility_date, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdWalletJournal'][0])
     {
         return $this->getCharactersCharacterIdWalletJournalAsyncWithHttpInfo($character_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant, $contentType)
             ->then(
@@ -633,15 +633,15 @@ class WalletApi
      * @param  int $character_id The ID of the character (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $page (optional)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdWalletJournal'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCharactersCharacterIdWalletJournalAsyncWithHttpInfo($character_id, $x_compatibility_date, $page = null, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCharactersCharacterIdWalletJournal'][0])
+    public function getCharactersCharacterIdWalletJournalAsyncWithHttpInfo($character_id, $x_compatibility_date, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdWalletJournal'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\CharactersCharacterIdWalletJournalGetInner[]';
         $request = $this->getCharactersCharacterIdWalletJournalRequest($character_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant, $contentType);
@@ -688,15 +688,15 @@ class WalletApi
      * @param  int $character_id The ID of the character (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $page (optional)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdWalletJournal'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getCharactersCharacterIdWalletJournalRequest($character_id, $x_compatibility_date, $page = null, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCharactersCharacterIdWalletJournal'][0])
+    public function getCharactersCharacterIdWalletJournalRequest($character_id, $x_compatibility_date, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdWalletJournal'][0])
     {
 
         // verify the required parameter 'character_id' is set
@@ -748,7 +748,7 @@ class WalletApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -830,16 +830,16 @@ class WalletApi
      * @param  int $character_id The ID of the character (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $from_id from_id (optional)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdWalletTransactions'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\CharactersCharacterIdWalletTransactionsGetInner[]|\Tkhamez\Eve\API\Model\Error
      */
-    public function getCharactersCharacterIdWalletTransactions($character_id, $x_compatibility_date, $from_id = null, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCharactersCharacterIdWalletTransactions'][0])
+    public function getCharactersCharacterIdWalletTransactions($character_id, $x_compatibility_date, $from_id = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdWalletTransactions'][0])
     {
         list($response) = $this->getCharactersCharacterIdWalletTransactionsWithHttpInfo($character_id, $x_compatibility_date, $from_id, $accept_language, $if_none_match, $x_tenant, $contentType);
         return $response;
@@ -853,16 +853,16 @@ class WalletApi
      * @param  int $character_id The ID of the character (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $from_id (optional)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdWalletTransactions'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\CharactersCharacterIdWalletTransactionsGetInner[]|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCharactersCharacterIdWalletTransactionsWithHttpInfo($character_id, $x_compatibility_date, $from_id = null, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCharactersCharacterIdWalletTransactions'][0])
+    public function getCharactersCharacterIdWalletTransactionsWithHttpInfo($character_id, $x_compatibility_date, $from_id = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdWalletTransactions'][0])
     {
         $request = $this->getCharactersCharacterIdWalletTransactionsRequest($character_id, $x_compatibility_date, $from_id, $accept_language, $if_none_match, $x_tenant, $contentType);
 
@@ -957,15 +957,15 @@ class WalletApi
      * @param  int $character_id The ID of the character (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $from_id (optional)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdWalletTransactions'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCharactersCharacterIdWalletTransactionsAsync($character_id, $x_compatibility_date, $from_id = null, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCharactersCharacterIdWalletTransactions'][0])
+    public function getCharactersCharacterIdWalletTransactionsAsync($character_id, $x_compatibility_date, $from_id = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdWalletTransactions'][0])
     {
         return $this->getCharactersCharacterIdWalletTransactionsAsyncWithHttpInfo($character_id, $x_compatibility_date, $from_id, $accept_language, $if_none_match, $x_tenant, $contentType)
             ->then(
@@ -983,15 +983,15 @@ class WalletApi
      * @param  int $character_id The ID of the character (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $from_id (optional)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdWalletTransactions'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCharactersCharacterIdWalletTransactionsAsyncWithHttpInfo($character_id, $x_compatibility_date, $from_id = null, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCharactersCharacterIdWalletTransactions'][0])
+    public function getCharactersCharacterIdWalletTransactionsAsyncWithHttpInfo($character_id, $x_compatibility_date, $from_id = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdWalletTransactions'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\CharactersCharacterIdWalletTransactionsGetInner[]';
         $request = $this->getCharactersCharacterIdWalletTransactionsRequest($character_id, $x_compatibility_date, $from_id, $accept_language, $if_none_match, $x_tenant, $contentType);
@@ -1038,15 +1038,15 @@ class WalletApi
      * @param  int $character_id The ID of the character (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $from_id (optional)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdWalletTransactions'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getCharactersCharacterIdWalletTransactionsRequest($character_id, $x_compatibility_date, $from_id = null, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCharactersCharacterIdWalletTransactions'][0])
+    public function getCharactersCharacterIdWalletTransactionsRequest($character_id, $x_compatibility_date, $from_id = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdWalletTransactions'][0])
     {
 
         // verify the required parameter 'character_id' is set
@@ -1095,7 +1095,7 @@ class WalletApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -1176,16 +1176,16 @@ class WalletApi
      *
      * @param  int $corporation_id The ID of the corporation (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCorporationsCorporationIdWallets'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\CorporationsCorporationIdWalletsGetInner[]|\Tkhamez\Eve\API\Model\Error
      */
-    public function getCorporationsCorporationIdWallets($corporation_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCorporationsCorporationIdWallets'][0])
+    public function getCorporationsCorporationIdWallets($corporation_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationsCorporationIdWallets'][0])
     {
         list($response) = $this->getCorporationsCorporationIdWalletsWithHttpInfo($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
         return $response;
@@ -1198,16 +1198,16 @@ class WalletApi
      *
      * @param  int $corporation_id The ID of the corporation (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCorporationsCorporationIdWallets'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\CorporationsCorporationIdWalletsGetInner[]|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCorporationsCorporationIdWalletsWithHttpInfo($corporation_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCorporationsCorporationIdWallets'][0])
+    public function getCorporationsCorporationIdWalletsWithHttpInfo($corporation_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationsCorporationIdWallets'][0])
     {
         $request = $this->getCorporationsCorporationIdWalletsRequest($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
 
@@ -1301,15 +1301,15 @@ class WalletApi
      *
      * @param  int $corporation_id The ID of the corporation (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCorporationsCorporationIdWallets'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCorporationsCorporationIdWalletsAsync($corporation_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCorporationsCorporationIdWallets'][0])
+    public function getCorporationsCorporationIdWalletsAsync($corporation_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationsCorporationIdWallets'][0])
     {
         return $this->getCorporationsCorporationIdWalletsAsyncWithHttpInfo($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType)
             ->then(
@@ -1326,15 +1326,15 @@ class WalletApi
      *
      * @param  int $corporation_id The ID of the corporation (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCorporationsCorporationIdWallets'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCorporationsCorporationIdWalletsAsyncWithHttpInfo($corporation_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCorporationsCorporationIdWallets'][0])
+    public function getCorporationsCorporationIdWalletsAsyncWithHttpInfo($corporation_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationsCorporationIdWallets'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\CorporationsCorporationIdWalletsGetInner[]';
         $request = $this->getCorporationsCorporationIdWalletsRequest($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
@@ -1380,15 +1380,15 @@ class WalletApi
      *
      * @param  int $corporation_id The ID of the corporation (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCorporationsCorporationIdWallets'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getCorporationsCorporationIdWalletsRequest($corporation_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCorporationsCorporationIdWallets'][0])
+    public function getCorporationsCorporationIdWalletsRequest($corporation_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationsCorporationIdWallets'][0])
     {
 
         // verify the required parameter 'corporation_id' is set
@@ -1427,7 +1427,7 @@ class WalletApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -1510,16 +1510,16 @@ class WalletApi
      * @param  int $division division (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $page page (optional)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCorporationsCorporationIdWalletsDivisionJournal'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\CorporationsCorporationIdWalletsDivisionJournalGetInner[]|\Tkhamez\Eve\API\Model\Error
      */
-    public function getCorporationsCorporationIdWalletsDivisionJournal($corporation_id, $division, $x_compatibility_date, $page = null, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCorporationsCorporationIdWalletsDivisionJournal'][0])
+    public function getCorporationsCorporationIdWalletsDivisionJournal($corporation_id, $division, $x_compatibility_date, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationsCorporationIdWalletsDivisionJournal'][0])
     {
         list($response) = $this->getCorporationsCorporationIdWalletsDivisionJournalWithHttpInfo($corporation_id, $division, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant, $contentType);
         return $response;
@@ -1534,16 +1534,16 @@ class WalletApi
      * @param  int $division (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $page (optional)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCorporationsCorporationIdWalletsDivisionJournal'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\CorporationsCorporationIdWalletsDivisionJournalGetInner[]|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCorporationsCorporationIdWalletsDivisionJournalWithHttpInfo($corporation_id, $division, $x_compatibility_date, $page = null, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCorporationsCorporationIdWalletsDivisionJournal'][0])
+    public function getCorporationsCorporationIdWalletsDivisionJournalWithHttpInfo($corporation_id, $division, $x_compatibility_date, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationsCorporationIdWalletsDivisionJournal'][0])
     {
         $request = $this->getCorporationsCorporationIdWalletsDivisionJournalRequest($corporation_id, $division, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant, $contentType);
 
@@ -1639,15 +1639,15 @@ class WalletApi
      * @param  int $division (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $page (optional)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCorporationsCorporationIdWalletsDivisionJournal'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCorporationsCorporationIdWalletsDivisionJournalAsync($corporation_id, $division, $x_compatibility_date, $page = null, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCorporationsCorporationIdWalletsDivisionJournal'][0])
+    public function getCorporationsCorporationIdWalletsDivisionJournalAsync($corporation_id, $division, $x_compatibility_date, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationsCorporationIdWalletsDivisionJournal'][0])
     {
         return $this->getCorporationsCorporationIdWalletsDivisionJournalAsyncWithHttpInfo($corporation_id, $division, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant, $contentType)
             ->then(
@@ -1666,15 +1666,15 @@ class WalletApi
      * @param  int $division (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $page (optional)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCorporationsCorporationIdWalletsDivisionJournal'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCorporationsCorporationIdWalletsDivisionJournalAsyncWithHttpInfo($corporation_id, $division, $x_compatibility_date, $page = null, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCorporationsCorporationIdWalletsDivisionJournal'][0])
+    public function getCorporationsCorporationIdWalletsDivisionJournalAsyncWithHttpInfo($corporation_id, $division, $x_compatibility_date, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationsCorporationIdWalletsDivisionJournal'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\CorporationsCorporationIdWalletsDivisionJournalGetInner[]';
         $request = $this->getCorporationsCorporationIdWalletsDivisionJournalRequest($corporation_id, $division, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant, $contentType);
@@ -1722,15 +1722,15 @@ class WalletApi
      * @param  int $division (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $page (optional)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCorporationsCorporationIdWalletsDivisionJournal'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getCorporationsCorporationIdWalletsDivisionJournalRequest($corporation_id, $division, $x_compatibility_date, $page = null, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCorporationsCorporationIdWalletsDivisionJournal'][0])
+    public function getCorporationsCorporationIdWalletsDivisionJournalRequest($corporation_id, $division, $x_compatibility_date, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationsCorporationIdWalletsDivisionJournal'][0])
     {
 
         // verify the required parameter 'corporation_id' is set
@@ -1789,7 +1789,7 @@ class WalletApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -1880,16 +1880,16 @@ class WalletApi
      * @param  int $division division (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $from_id from_id (optional)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCorporationsCorporationIdWalletsDivisionTransactions'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\CorporationsCorporationIdWalletsDivisionTransactionsGetInner[]|\Tkhamez\Eve\API\Model\Error
      */
-    public function getCorporationsCorporationIdWalletsDivisionTransactions($corporation_id, $division, $x_compatibility_date, $from_id = null, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCorporationsCorporationIdWalletsDivisionTransactions'][0])
+    public function getCorporationsCorporationIdWalletsDivisionTransactions($corporation_id, $division, $x_compatibility_date, $from_id = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationsCorporationIdWalletsDivisionTransactions'][0])
     {
         list($response) = $this->getCorporationsCorporationIdWalletsDivisionTransactionsWithHttpInfo($corporation_id, $division, $x_compatibility_date, $from_id, $accept_language, $if_none_match, $x_tenant, $contentType);
         return $response;
@@ -1904,16 +1904,16 @@ class WalletApi
      * @param  int $division (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $from_id (optional)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCorporationsCorporationIdWalletsDivisionTransactions'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\CorporationsCorporationIdWalletsDivisionTransactionsGetInner[]|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCorporationsCorporationIdWalletsDivisionTransactionsWithHttpInfo($corporation_id, $division, $x_compatibility_date, $from_id = null, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCorporationsCorporationIdWalletsDivisionTransactions'][0])
+    public function getCorporationsCorporationIdWalletsDivisionTransactionsWithHttpInfo($corporation_id, $division, $x_compatibility_date, $from_id = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationsCorporationIdWalletsDivisionTransactions'][0])
     {
         $request = $this->getCorporationsCorporationIdWalletsDivisionTransactionsRequest($corporation_id, $division, $x_compatibility_date, $from_id, $accept_language, $if_none_match, $x_tenant, $contentType);
 
@@ -2009,15 +2009,15 @@ class WalletApi
      * @param  int $division (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $from_id (optional)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCorporationsCorporationIdWalletsDivisionTransactions'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCorporationsCorporationIdWalletsDivisionTransactionsAsync($corporation_id, $division, $x_compatibility_date, $from_id = null, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCorporationsCorporationIdWalletsDivisionTransactions'][0])
+    public function getCorporationsCorporationIdWalletsDivisionTransactionsAsync($corporation_id, $division, $x_compatibility_date, $from_id = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationsCorporationIdWalletsDivisionTransactions'][0])
     {
         return $this->getCorporationsCorporationIdWalletsDivisionTransactionsAsyncWithHttpInfo($corporation_id, $division, $x_compatibility_date, $from_id, $accept_language, $if_none_match, $x_tenant, $contentType)
             ->then(
@@ -2036,15 +2036,15 @@ class WalletApi
      * @param  int $division (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $from_id (optional)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCorporationsCorporationIdWalletsDivisionTransactions'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCorporationsCorporationIdWalletsDivisionTransactionsAsyncWithHttpInfo($corporation_id, $division, $x_compatibility_date, $from_id = null, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCorporationsCorporationIdWalletsDivisionTransactions'][0])
+    public function getCorporationsCorporationIdWalletsDivisionTransactionsAsyncWithHttpInfo($corporation_id, $division, $x_compatibility_date, $from_id = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationsCorporationIdWalletsDivisionTransactions'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\CorporationsCorporationIdWalletsDivisionTransactionsGetInner[]';
         $request = $this->getCorporationsCorporationIdWalletsDivisionTransactionsRequest($corporation_id, $division, $x_compatibility_date, $from_id, $accept_language, $if_none_match, $x_tenant, $contentType);
@@ -2092,15 +2092,15 @@ class WalletApi
      * @param  int $division (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $from_id (optional)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCorporationsCorporationIdWalletsDivisionTransactions'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getCorporationsCorporationIdWalletsDivisionTransactionsRequest($corporation_id, $division, $x_compatibility_date, $from_id = null, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCorporationsCorporationIdWalletsDivisionTransactions'][0])
+    public function getCorporationsCorporationIdWalletsDivisionTransactionsRequest($corporation_id, $division, $x_compatibility_date, $from_id = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationsCorporationIdWalletsDivisionTransactions'][0])
     {
 
         // verify the required parameter 'corporation_id' is set
@@ -2156,7 +2156,7 @@ class WalletApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {

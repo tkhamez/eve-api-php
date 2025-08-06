@@ -135,16 +135,16 @@ class LoyaltyApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdLoyaltyPoints'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\CharactersCharacterIdLoyaltyPointsGetInner[]|\Tkhamez\Eve\API\Model\Error
      */
-    public function getCharactersCharacterIdLoyaltyPoints($character_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCharactersCharacterIdLoyaltyPoints'][0])
+    public function getCharactersCharacterIdLoyaltyPoints($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdLoyaltyPoints'][0])
     {
         list($response) = $this->getCharactersCharacterIdLoyaltyPointsWithHttpInfo($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
         return $response;
@@ -157,16 +157,16 @@ class LoyaltyApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdLoyaltyPoints'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\CharactersCharacterIdLoyaltyPointsGetInner[]|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCharactersCharacterIdLoyaltyPointsWithHttpInfo($character_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCharactersCharacterIdLoyaltyPoints'][0])
+    public function getCharactersCharacterIdLoyaltyPointsWithHttpInfo($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdLoyaltyPoints'][0])
     {
         $request = $this->getCharactersCharacterIdLoyaltyPointsRequest($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
 
@@ -260,15 +260,15 @@ class LoyaltyApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdLoyaltyPoints'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCharactersCharacterIdLoyaltyPointsAsync($character_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCharactersCharacterIdLoyaltyPoints'][0])
+    public function getCharactersCharacterIdLoyaltyPointsAsync($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdLoyaltyPoints'][0])
     {
         return $this->getCharactersCharacterIdLoyaltyPointsAsyncWithHttpInfo($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType)
             ->then(
@@ -285,15 +285,15 @@ class LoyaltyApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdLoyaltyPoints'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCharactersCharacterIdLoyaltyPointsAsyncWithHttpInfo($character_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCharactersCharacterIdLoyaltyPoints'][0])
+    public function getCharactersCharacterIdLoyaltyPointsAsyncWithHttpInfo($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdLoyaltyPoints'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\CharactersCharacterIdLoyaltyPointsGetInner[]';
         $request = $this->getCharactersCharacterIdLoyaltyPointsRequest($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
@@ -339,15 +339,15 @@ class LoyaltyApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdLoyaltyPoints'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getCharactersCharacterIdLoyaltyPointsRequest($character_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCharactersCharacterIdLoyaltyPoints'][0])
+    public function getCharactersCharacterIdLoyaltyPointsRequest($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdLoyaltyPoints'][0])
     {
 
         // verify the required parameter 'character_id' is set
@@ -386,7 +386,7 @@ class LoyaltyApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -467,16 +467,16 @@ class LoyaltyApi
      *
      * @param  int $corporation_id The ID of the corporation (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getLoyaltyStoresCorporationIdOffers'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\LoyaltyStoresCorporationIdOffersGetInner[]|\Tkhamez\Eve\API\Model\Error
      */
-    public function getLoyaltyStoresCorporationIdOffers($corporation_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getLoyaltyStoresCorporationIdOffers'][0])
+    public function getLoyaltyStoresCorporationIdOffers($corporation_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getLoyaltyStoresCorporationIdOffers'][0])
     {
         list($response) = $this->getLoyaltyStoresCorporationIdOffersWithHttpInfo($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
         return $response;
@@ -489,16 +489,16 @@ class LoyaltyApi
      *
      * @param  int $corporation_id The ID of the corporation (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getLoyaltyStoresCorporationIdOffers'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\LoyaltyStoresCorporationIdOffersGetInner[]|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getLoyaltyStoresCorporationIdOffersWithHttpInfo($corporation_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getLoyaltyStoresCorporationIdOffers'][0])
+    public function getLoyaltyStoresCorporationIdOffersWithHttpInfo($corporation_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getLoyaltyStoresCorporationIdOffers'][0])
     {
         $request = $this->getLoyaltyStoresCorporationIdOffersRequest($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
 
@@ -592,15 +592,15 @@ class LoyaltyApi
      *
      * @param  int $corporation_id The ID of the corporation (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getLoyaltyStoresCorporationIdOffers'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getLoyaltyStoresCorporationIdOffersAsync($corporation_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getLoyaltyStoresCorporationIdOffers'][0])
+    public function getLoyaltyStoresCorporationIdOffersAsync($corporation_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getLoyaltyStoresCorporationIdOffers'][0])
     {
         return $this->getLoyaltyStoresCorporationIdOffersAsyncWithHttpInfo($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType)
             ->then(
@@ -617,15 +617,15 @@ class LoyaltyApi
      *
      * @param  int $corporation_id The ID of the corporation (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getLoyaltyStoresCorporationIdOffers'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getLoyaltyStoresCorporationIdOffersAsyncWithHttpInfo($corporation_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getLoyaltyStoresCorporationIdOffers'][0])
+    public function getLoyaltyStoresCorporationIdOffersAsyncWithHttpInfo($corporation_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getLoyaltyStoresCorporationIdOffers'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\LoyaltyStoresCorporationIdOffersGetInner[]';
         $request = $this->getLoyaltyStoresCorporationIdOffersRequest($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
@@ -671,15 +671,15 @@ class LoyaltyApi
      *
      * @param  int $corporation_id The ID of the corporation (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getLoyaltyStoresCorporationIdOffers'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getLoyaltyStoresCorporationIdOffersRequest($corporation_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getLoyaltyStoresCorporationIdOffers'][0])
+    public function getLoyaltyStoresCorporationIdOffersRequest($corporation_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getLoyaltyStoresCorporationIdOffers'][0])
     {
 
         // verify the required parameter 'corporation_id' is set
@@ -718,7 +718,7 @@ class LoyaltyApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {

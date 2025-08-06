@@ -141,16 +141,16 @@ class PlanetaryInteractionApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdPlanets'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\CharactersCharacterIdPlanetsGetInner[]|\Tkhamez\Eve\API\Model\Error
      */
-    public function getCharactersCharacterIdPlanets($character_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCharactersCharacterIdPlanets'][0])
+    public function getCharactersCharacterIdPlanets($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdPlanets'][0])
     {
         list($response) = $this->getCharactersCharacterIdPlanetsWithHttpInfo($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
         return $response;
@@ -163,16 +163,16 @@ class PlanetaryInteractionApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdPlanets'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\CharactersCharacterIdPlanetsGetInner[]|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCharactersCharacterIdPlanetsWithHttpInfo($character_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCharactersCharacterIdPlanets'][0])
+    public function getCharactersCharacterIdPlanetsWithHttpInfo($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdPlanets'][0])
     {
         $request = $this->getCharactersCharacterIdPlanetsRequest($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
 
@@ -266,15 +266,15 @@ class PlanetaryInteractionApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdPlanets'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCharactersCharacterIdPlanetsAsync($character_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCharactersCharacterIdPlanets'][0])
+    public function getCharactersCharacterIdPlanetsAsync($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdPlanets'][0])
     {
         return $this->getCharactersCharacterIdPlanetsAsyncWithHttpInfo($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType)
             ->then(
@@ -291,15 +291,15 @@ class PlanetaryInteractionApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdPlanets'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCharactersCharacterIdPlanetsAsyncWithHttpInfo($character_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCharactersCharacterIdPlanets'][0])
+    public function getCharactersCharacterIdPlanetsAsyncWithHttpInfo($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdPlanets'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\CharactersCharacterIdPlanetsGetInner[]';
         $request = $this->getCharactersCharacterIdPlanetsRequest($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
@@ -345,15 +345,15 @@ class PlanetaryInteractionApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdPlanets'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getCharactersCharacterIdPlanetsRequest($character_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCharactersCharacterIdPlanets'][0])
+    public function getCharactersCharacterIdPlanetsRequest($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdPlanets'][0])
     {
 
         // verify the required parameter 'character_id' is set
@@ -392,7 +392,7 @@ class PlanetaryInteractionApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -474,16 +474,16 @@ class PlanetaryInteractionApi
      * @param  int $character_id The ID of the character (required)
      * @param  int $planet_id planet_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdPlanetsPlanetId'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\CharactersCharacterIdPlanetsPlanetIdGet|\Tkhamez\Eve\API\Model\Error
      */
-    public function getCharactersCharacterIdPlanetsPlanetId($character_id, $planet_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCharactersCharacterIdPlanetsPlanetId'][0])
+    public function getCharactersCharacterIdPlanetsPlanetId($character_id, $planet_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdPlanetsPlanetId'][0])
     {
         list($response) = $this->getCharactersCharacterIdPlanetsPlanetIdWithHttpInfo($character_id, $planet_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
         return $response;
@@ -497,16 +497,16 @@ class PlanetaryInteractionApi
      * @param  int $character_id The ID of the character (required)
      * @param  int $planet_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdPlanetsPlanetId'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\CharactersCharacterIdPlanetsPlanetIdGet|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCharactersCharacterIdPlanetsPlanetIdWithHttpInfo($character_id, $planet_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCharactersCharacterIdPlanetsPlanetId'][0])
+    public function getCharactersCharacterIdPlanetsPlanetIdWithHttpInfo($character_id, $planet_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdPlanetsPlanetId'][0])
     {
         $request = $this->getCharactersCharacterIdPlanetsPlanetIdRequest($character_id, $planet_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
 
@@ -601,15 +601,15 @@ class PlanetaryInteractionApi
      * @param  int $character_id The ID of the character (required)
      * @param  int $planet_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdPlanetsPlanetId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCharactersCharacterIdPlanetsPlanetIdAsync($character_id, $planet_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCharactersCharacterIdPlanetsPlanetId'][0])
+    public function getCharactersCharacterIdPlanetsPlanetIdAsync($character_id, $planet_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdPlanetsPlanetId'][0])
     {
         return $this->getCharactersCharacterIdPlanetsPlanetIdAsyncWithHttpInfo($character_id, $planet_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType)
             ->then(
@@ -627,15 +627,15 @@ class PlanetaryInteractionApi
      * @param  int $character_id The ID of the character (required)
      * @param  int $planet_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdPlanetsPlanetId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCharactersCharacterIdPlanetsPlanetIdAsyncWithHttpInfo($character_id, $planet_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCharactersCharacterIdPlanetsPlanetId'][0])
+    public function getCharactersCharacterIdPlanetsPlanetIdAsyncWithHttpInfo($character_id, $planet_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdPlanetsPlanetId'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\CharactersCharacterIdPlanetsPlanetIdGet';
         $request = $this->getCharactersCharacterIdPlanetsPlanetIdRequest($character_id, $planet_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
@@ -682,15 +682,15 @@ class PlanetaryInteractionApi
      * @param  int $character_id The ID of the character (required)
      * @param  int $planet_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdPlanetsPlanetId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getCharactersCharacterIdPlanetsPlanetIdRequest($character_id, $planet_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCharactersCharacterIdPlanetsPlanetId'][0])
+    public function getCharactersCharacterIdPlanetsPlanetIdRequest($character_id, $planet_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdPlanetsPlanetId'][0])
     {
 
         // verify the required parameter 'character_id' is set
@@ -736,7 +736,7 @@ class PlanetaryInteractionApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -826,16 +826,16 @@ class PlanetaryInteractionApi
      * @param  int $corporation_id The ID of the corporation (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $page page (optional)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCorporationsCorporationIdCustomsOffices'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\CorporationsCorporationIdCustomsOfficesGetInner[]|\Tkhamez\Eve\API\Model\Error
      */
-    public function getCorporationsCorporationIdCustomsOffices($corporation_id, $x_compatibility_date, $page = null, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCorporationsCorporationIdCustomsOffices'][0])
+    public function getCorporationsCorporationIdCustomsOffices($corporation_id, $x_compatibility_date, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationsCorporationIdCustomsOffices'][0])
     {
         list($response) = $this->getCorporationsCorporationIdCustomsOfficesWithHttpInfo($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant, $contentType);
         return $response;
@@ -849,16 +849,16 @@ class PlanetaryInteractionApi
      * @param  int $corporation_id The ID of the corporation (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $page (optional)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCorporationsCorporationIdCustomsOffices'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\CorporationsCorporationIdCustomsOfficesGetInner[]|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCorporationsCorporationIdCustomsOfficesWithHttpInfo($corporation_id, $x_compatibility_date, $page = null, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCorporationsCorporationIdCustomsOffices'][0])
+    public function getCorporationsCorporationIdCustomsOfficesWithHttpInfo($corporation_id, $x_compatibility_date, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationsCorporationIdCustomsOffices'][0])
     {
         $request = $this->getCorporationsCorporationIdCustomsOfficesRequest($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant, $contentType);
 
@@ -953,15 +953,15 @@ class PlanetaryInteractionApi
      * @param  int $corporation_id The ID of the corporation (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $page (optional)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCorporationsCorporationIdCustomsOffices'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCorporationsCorporationIdCustomsOfficesAsync($corporation_id, $x_compatibility_date, $page = null, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCorporationsCorporationIdCustomsOffices'][0])
+    public function getCorporationsCorporationIdCustomsOfficesAsync($corporation_id, $x_compatibility_date, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationsCorporationIdCustomsOffices'][0])
     {
         return $this->getCorporationsCorporationIdCustomsOfficesAsyncWithHttpInfo($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant, $contentType)
             ->then(
@@ -979,15 +979,15 @@ class PlanetaryInteractionApi
      * @param  int $corporation_id The ID of the corporation (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $page (optional)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCorporationsCorporationIdCustomsOffices'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCorporationsCorporationIdCustomsOfficesAsyncWithHttpInfo($corporation_id, $x_compatibility_date, $page = null, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCorporationsCorporationIdCustomsOffices'][0])
+    public function getCorporationsCorporationIdCustomsOfficesAsyncWithHttpInfo($corporation_id, $x_compatibility_date, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationsCorporationIdCustomsOffices'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\CorporationsCorporationIdCustomsOfficesGetInner[]';
         $request = $this->getCorporationsCorporationIdCustomsOfficesRequest($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant, $contentType);
@@ -1034,15 +1034,15 @@ class PlanetaryInteractionApi
      * @param  int $corporation_id The ID of the corporation (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $page (optional)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCorporationsCorporationIdCustomsOffices'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getCorporationsCorporationIdCustomsOfficesRequest($corporation_id, $x_compatibility_date, $page = null, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCorporationsCorporationIdCustomsOffices'][0])
+    public function getCorporationsCorporationIdCustomsOfficesRequest($corporation_id, $x_compatibility_date, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationsCorporationIdCustomsOffices'][0])
     {
 
         // verify the required parameter 'corporation_id' is set
@@ -1094,7 +1094,7 @@ class PlanetaryInteractionApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -1175,16 +1175,16 @@ class PlanetaryInteractionApi
      *
      * @param  int $schematic_id schematic_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getUniverseSchematicsSchematicId'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\UniverseSchematicsSchematicIdGet|\Tkhamez\Eve\API\Model\Error
      */
-    public function getUniverseSchematicsSchematicId($schematic_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getUniverseSchematicsSchematicId'][0])
+    public function getUniverseSchematicsSchematicId($schematic_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getUniverseSchematicsSchematicId'][0])
     {
         list($response) = $this->getUniverseSchematicsSchematicIdWithHttpInfo($schematic_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
         return $response;
@@ -1197,16 +1197,16 @@ class PlanetaryInteractionApi
      *
      * @param  int $schematic_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getUniverseSchematicsSchematicId'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\UniverseSchematicsSchematicIdGet|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getUniverseSchematicsSchematicIdWithHttpInfo($schematic_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getUniverseSchematicsSchematicId'][0])
+    public function getUniverseSchematicsSchematicIdWithHttpInfo($schematic_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getUniverseSchematicsSchematicId'][0])
     {
         $request = $this->getUniverseSchematicsSchematicIdRequest($schematic_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
 
@@ -1300,15 +1300,15 @@ class PlanetaryInteractionApi
      *
      * @param  int $schematic_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getUniverseSchematicsSchematicId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getUniverseSchematicsSchematicIdAsync($schematic_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getUniverseSchematicsSchematicId'][0])
+    public function getUniverseSchematicsSchematicIdAsync($schematic_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getUniverseSchematicsSchematicId'][0])
     {
         return $this->getUniverseSchematicsSchematicIdAsyncWithHttpInfo($schematic_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType)
             ->then(
@@ -1325,15 +1325,15 @@ class PlanetaryInteractionApi
      *
      * @param  int $schematic_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getUniverseSchematicsSchematicId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getUniverseSchematicsSchematicIdAsyncWithHttpInfo($schematic_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getUniverseSchematicsSchematicId'][0])
+    public function getUniverseSchematicsSchematicIdAsyncWithHttpInfo($schematic_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getUniverseSchematicsSchematicId'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\UniverseSchematicsSchematicIdGet';
         $request = $this->getUniverseSchematicsSchematicIdRequest($schematic_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
@@ -1379,15 +1379,15 @@ class PlanetaryInteractionApi
      *
      * @param  int $schematic_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getUniverseSchematicsSchematicId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getUniverseSchematicsSchematicIdRequest($schematic_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getUniverseSchematicsSchematicId'][0])
+    public function getUniverseSchematicsSchematicIdRequest($schematic_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getUniverseSchematicsSchematicId'][0])
     {
 
         // verify the required parameter 'schematic_id' is set
@@ -1426,7 +1426,7 @@ class PlanetaryInteractionApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {

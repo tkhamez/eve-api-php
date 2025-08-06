@@ -138,16 +138,16 @@ class WarsApi
      *
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $max_war_id max_war_id (optional)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getWars'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return int[]|\Tkhamez\Eve\API\Model\Error
      */
-    public function getWars($x_compatibility_date, $max_war_id = null, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getWars'][0])
+    public function getWars($x_compatibility_date, $max_war_id = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getWars'][0])
     {
         list($response) = $this->getWarsWithHttpInfo($x_compatibility_date, $max_war_id, $accept_language, $if_none_match, $x_tenant, $contentType);
         return $response;
@@ -160,16 +160,16 @@ class WarsApi
      *
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $max_war_id (optional)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getWars'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of int[]|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getWarsWithHttpInfo($x_compatibility_date, $max_war_id = null, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getWars'][0])
+    public function getWarsWithHttpInfo($x_compatibility_date, $max_war_id = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getWars'][0])
     {
         $request = $this->getWarsRequest($x_compatibility_date, $max_war_id, $accept_language, $if_none_match, $x_tenant, $contentType);
 
@@ -263,15 +263,15 @@ class WarsApi
      *
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $max_war_id (optional)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getWars'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getWarsAsync($x_compatibility_date, $max_war_id = null, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getWars'][0])
+    public function getWarsAsync($x_compatibility_date, $max_war_id = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getWars'][0])
     {
         return $this->getWarsAsyncWithHttpInfo($x_compatibility_date, $max_war_id, $accept_language, $if_none_match, $x_tenant, $contentType)
             ->then(
@@ -288,15 +288,15 @@ class WarsApi
      *
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $max_war_id (optional)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getWars'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getWarsAsyncWithHttpInfo($x_compatibility_date, $max_war_id = null, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getWars'][0])
+    public function getWarsAsyncWithHttpInfo($x_compatibility_date, $max_war_id = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getWars'][0])
     {
         $returnType = 'int[]';
         $request = $this->getWarsRequest($x_compatibility_date, $max_war_id, $accept_language, $if_none_match, $x_tenant, $contentType);
@@ -342,15 +342,15 @@ class WarsApi
      *
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $max_war_id (optional)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getWars'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getWarsRequest($x_compatibility_date, $max_war_id = null, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getWars'][0])
+    public function getWarsRequest($x_compatibility_date, $max_war_id = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getWars'][0])
     {
 
         // verify the required parameter 'x_compatibility_date' is set
@@ -392,7 +392,7 @@ class WarsApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -461,16 +461,16 @@ class WarsApi
      *
      * @param  int $war_id war_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getWarsWarId'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\WarsWarIdGet|\Tkhamez\Eve\API\Model\Error
      */
-    public function getWarsWarId($war_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getWarsWarId'][0])
+    public function getWarsWarId($war_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getWarsWarId'][0])
     {
         list($response) = $this->getWarsWarIdWithHttpInfo($war_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
         return $response;
@@ -483,16 +483,16 @@ class WarsApi
      *
      * @param  int $war_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getWarsWarId'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\WarsWarIdGet|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getWarsWarIdWithHttpInfo($war_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getWarsWarId'][0])
+    public function getWarsWarIdWithHttpInfo($war_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getWarsWarId'][0])
     {
         $request = $this->getWarsWarIdRequest($war_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
 
@@ -586,15 +586,15 @@ class WarsApi
      *
      * @param  int $war_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getWarsWarId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getWarsWarIdAsync($war_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getWarsWarId'][0])
+    public function getWarsWarIdAsync($war_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getWarsWarId'][0])
     {
         return $this->getWarsWarIdAsyncWithHttpInfo($war_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType)
             ->then(
@@ -611,15 +611,15 @@ class WarsApi
      *
      * @param  int $war_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getWarsWarId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getWarsWarIdAsyncWithHttpInfo($war_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getWarsWarId'][0])
+    public function getWarsWarIdAsyncWithHttpInfo($war_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getWarsWarId'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\WarsWarIdGet';
         $request = $this->getWarsWarIdRequest($war_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
@@ -665,15 +665,15 @@ class WarsApi
      *
      * @param  int $war_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getWarsWarId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getWarsWarIdRequest($war_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getWarsWarId'][0])
+    public function getWarsWarIdRequest($war_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getWarsWarId'][0])
     {
 
         // verify the required parameter 'war_id' is set
@@ -712,7 +712,7 @@ class WarsApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -790,16 +790,16 @@ class WarsApi
      * @param  int $war_id war_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $page page (optional)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getWarsWarIdKillmails'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\CharactersCharacterIdKillmailsRecentGetInner[]|\Tkhamez\Eve\API\Model\Error
      */
-    public function getWarsWarIdKillmails($war_id, $x_compatibility_date, $page = null, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getWarsWarIdKillmails'][0])
+    public function getWarsWarIdKillmails($war_id, $x_compatibility_date, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getWarsWarIdKillmails'][0])
     {
         list($response) = $this->getWarsWarIdKillmailsWithHttpInfo($war_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant, $contentType);
         return $response;
@@ -813,16 +813,16 @@ class WarsApi
      * @param  int $war_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $page (optional)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getWarsWarIdKillmails'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\CharactersCharacterIdKillmailsRecentGetInner[]|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getWarsWarIdKillmailsWithHttpInfo($war_id, $x_compatibility_date, $page = null, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getWarsWarIdKillmails'][0])
+    public function getWarsWarIdKillmailsWithHttpInfo($war_id, $x_compatibility_date, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getWarsWarIdKillmails'][0])
     {
         $request = $this->getWarsWarIdKillmailsRequest($war_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant, $contentType);
 
@@ -917,15 +917,15 @@ class WarsApi
      * @param  int $war_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $page (optional)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getWarsWarIdKillmails'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getWarsWarIdKillmailsAsync($war_id, $x_compatibility_date, $page = null, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getWarsWarIdKillmails'][0])
+    public function getWarsWarIdKillmailsAsync($war_id, $x_compatibility_date, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getWarsWarIdKillmails'][0])
     {
         return $this->getWarsWarIdKillmailsAsyncWithHttpInfo($war_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant, $contentType)
             ->then(
@@ -943,15 +943,15 @@ class WarsApi
      * @param  int $war_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $page (optional)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getWarsWarIdKillmails'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getWarsWarIdKillmailsAsyncWithHttpInfo($war_id, $x_compatibility_date, $page = null, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getWarsWarIdKillmails'][0])
+    public function getWarsWarIdKillmailsAsyncWithHttpInfo($war_id, $x_compatibility_date, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getWarsWarIdKillmails'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\CharactersCharacterIdKillmailsRecentGetInner[]';
         $request = $this->getWarsWarIdKillmailsRequest($war_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant, $contentType);
@@ -998,15 +998,15 @@ class WarsApi
      * @param  int $war_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $page (optional)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getWarsWarIdKillmails'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getWarsWarIdKillmailsRequest($war_id, $x_compatibility_date, $page = null, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getWarsWarIdKillmails'][0])
+    public function getWarsWarIdKillmailsRequest($war_id, $x_compatibility_date, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getWarsWarIdKillmails'][0])
     {
 
         // verify the required parameter 'war_id' is set
@@ -1058,7 +1058,7 @@ class WarsApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {

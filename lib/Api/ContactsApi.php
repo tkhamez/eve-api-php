@@ -157,16 +157,16 @@ class ContactsApi
      * @param  int $character_id The ID of the character (required)
      * @param  int[] $contact_ids contact_ids (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteCharactersCharacterIdContacts'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return mixed|\Tkhamez\Eve\API\Model\Error
      */
-    public function deleteCharactersCharacterIdContacts($character_id, $contact_ids, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['deleteCharactersCharacterIdContacts'][0])
+    public function deleteCharactersCharacterIdContacts($character_id, $contact_ids, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteCharactersCharacterIdContacts'][0])
     {
         list($response) = $this->deleteCharactersCharacterIdContactsWithHttpInfo($character_id, $contact_ids, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
         return $response;
@@ -180,16 +180,16 @@ class ContactsApi
      * @param  int $character_id The ID of the character (required)
      * @param  int[] $contact_ids (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteCharactersCharacterIdContacts'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of mixed|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteCharactersCharacterIdContactsWithHttpInfo($character_id, $contact_ids, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['deleteCharactersCharacterIdContacts'][0])
+    public function deleteCharactersCharacterIdContactsWithHttpInfo($character_id, $contact_ids, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteCharactersCharacterIdContacts'][0])
     {
         $request = $this->deleteCharactersCharacterIdContactsRequest($character_id, $contact_ids, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
 
@@ -284,15 +284,15 @@ class ContactsApi
      * @param  int $character_id The ID of the character (required)
      * @param  int[] $contact_ids (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteCharactersCharacterIdContacts'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteCharactersCharacterIdContactsAsync($character_id, $contact_ids, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['deleteCharactersCharacterIdContacts'][0])
+    public function deleteCharactersCharacterIdContactsAsync($character_id, $contact_ids, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteCharactersCharacterIdContacts'][0])
     {
         return $this->deleteCharactersCharacterIdContactsAsyncWithHttpInfo($character_id, $contact_ids, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType)
             ->then(
@@ -310,15 +310,15 @@ class ContactsApi
      * @param  int $character_id The ID of the character (required)
      * @param  int[] $contact_ids (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteCharactersCharacterIdContacts'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteCharactersCharacterIdContactsAsyncWithHttpInfo($character_id, $contact_ids, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['deleteCharactersCharacterIdContacts'][0])
+    public function deleteCharactersCharacterIdContactsAsyncWithHttpInfo($character_id, $contact_ids, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteCharactersCharacterIdContacts'][0])
     {
         $returnType = 'mixed';
         $request = $this->deleteCharactersCharacterIdContactsRequest($character_id, $contact_ids, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
@@ -365,15 +365,15 @@ class ContactsApi
      * @param  int $character_id The ID of the character (required)
      * @param  int[] $contact_ids (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteCharactersCharacterIdContacts'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function deleteCharactersCharacterIdContactsRequest($character_id, $contact_ids, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['deleteCharactersCharacterIdContacts'][0])
+    public function deleteCharactersCharacterIdContactsRequest($character_id, $contact_ids, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteCharactersCharacterIdContacts'][0])
     {
 
         // verify the required parameter 'character_id' is set
@@ -434,7 +434,7 @@ class ContactsApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -516,16 +516,16 @@ class ContactsApi
      * @param  int $alliance_id The ID of the alliance (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $page page (optional)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAlliancesAllianceIdContacts'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\AlliancesAllianceIdContactsGetInner[]|\Tkhamez\Eve\API\Model\Error
      */
-    public function getAlliancesAllianceIdContacts($alliance_id, $x_compatibility_date, $page = null, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getAlliancesAllianceIdContacts'][0])
+    public function getAlliancesAllianceIdContacts($alliance_id, $x_compatibility_date, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getAlliancesAllianceIdContacts'][0])
     {
         list($response) = $this->getAlliancesAllianceIdContactsWithHttpInfo($alliance_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant, $contentType);
         return $response;
@@ -539,16 +539,16 @@ class ContactsApi
      * @param  int $alliance_id The ID of the alliance (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $page (optional)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAlliancesAllianceIdContacts'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\AlliancesAllianceIdContactsGetInner[]|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getAlliancesAllianceIdContactsWithHttpInfo($alliance_id, $x_compatibility_date, $page = null, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getAlliancesAllianceIdContacts'][0])
+    public function getAlliancesAllianceIdContactsWithHttpInfo($alliance_id, $x_compatibility_date, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getAlliancesAllianceIdContacts'][0])
     {
         $request = $this->getAlliancesAllianceIdContactsRequest($alliance_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant, $contentType);
 
@@ -643,15 +643,15 @@ class ContactsApi
      * @param  int $alliance_id The ID of the alliance (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $page (optional)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAlliancesAllianceIdContacts'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAlliancesAllianceIdContactsAsync($alliance_id, $x_compatibility_date, $page = null, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getAlliancesAllianceIdContacts'][0])
+    public function getAlliancesAllianceIdContactsAsync($alliance_id, $x_compatibility_date, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getAlliancesAllianceIdContacts'][0])
     {
         return $this->getAlliancesAllianceIdContactsAsyncWithHttpInfo($alliance_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant, $contentType)
             ->then(
@@ -669,15 +669,15 @@ class ContactsApi
      * @param  int $alliance_id The ID of the alliance (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $page (optional)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAlliancesAllianceIdContacts'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAlliancesAllianceIdContactsAsyncWithHttpInfo($alliance_id, $x_compatibility_date, $page = null, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getAlliancesAllianceIdContacts'][0])
+    public function getAlliancesAllianceIdContactsAsyncWithHttpInfo($alliance_id, $x_compatibility_date, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getAlliancesAllianceIdContacts'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\AlliancesAllianceIdContactsGetInner[]';
         $request = $this->getAlliancesAllianceIdContactsRequest($alliance_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant, $contentType);
@@ -724,15 +724,15 @@ class ContactsApi
      * @param  int $alliance_id The ID of the alliance (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $page (optional)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAlliancesAllianceIdContacts'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getAlliancesAllianceIdContactsRequest($alliance_id, $x_compatibility_date, $page = null, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getAlliancesAllianceIdContacts'][0])
+    public function getAlliancesAllianceIdContactsRequest($alliance_id, $x_compatibility_date, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getAlliancesAllianceIdContacts'][0])
     {
 
         // verify the required parameter 'alliance_id' is set
@@ -784,7 +784,7 @@ class ContactsApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -865,16 +865,16 @@ class ContactsApi
      *
      * @param  int $alliance_id The ID of the alliance (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAlliancesAllianceIdContactsLabels'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\AlliancesAllianceIdContactsLabelsGetInner[]|\Tkhamez\Eve\API\Model\Error
      */
-    public function getAlliancesAllianceIdContactsLabels($alliance_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getAlliancesAllianceIdContactsLabels'][0])
+    public function getAlliancesAllianceIdContactsLabels($alliance_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getAlliancesAllianceIdContactsLabels'][0])
     {
         list($response) = $this->getAlliancesAllianceIdContactsLabelsWithHttpInfo($alliance_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
         return $response;
@@ -887,16 +887,16 @@ class ContactsApi
      *
      * @param  int $alliance_id The ID of the alliance (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAlliancesAllianceIdContactsLabels'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\AlliancesAllianceIdContactsLabelsGetInner[]|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getAlliancesAllianceIdContactsLabelsWithHttpInfo($alliance_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getAlliancesAllianceIdContactsLabels'][0])
+    public function getAlliancesAllianceIdContactsLabelsWithHttpInfo($alliance_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getAlliancesAllianceIdContactsLabels'][0])
     {
         $request = $this->getAlliancesAllianceIdContactsLabelsRequest($alliance_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
 
@@ -990,15 +990,15 @@ class ContactsApi
      *
      * @param  int $alliance_id The ID of the alliance (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAlliancesAllianceIdContactsLabels'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAlliancesAllianceIdContactsLabelsAsync($alliance_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getAlliancesAllianceIdContactsLabels'][0])
+    public function getAlliancesAllianceIdContactsLabelsAsync($alliance_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getAlliancesAllianceIdContactsLabels'][0])
     {
         return $this->getAlliancesAllianceIdContactsLabelsAsyncWithHttpInfo($alliance_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType)
             ->then(
@@ -1015,15 +1015,15 @@ class ContactsApi
      *
      * @param  int $alliance_id The ID of the alliance (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAlliancesAllianceIdContactsLabels'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAlliancesAllianceIdContactsLabelsAsyncWithHttpInfo($alliance_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getAlliancesAllianceIdContactsLabels'][0])
+    public function getAlliancesAllianceIdContactsLabelsAsyncWithHttpInfo($alliance_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getAlliancesAllianceIdContactsLabels'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\AlliancesAllianceIdContactsLabelsGetInner[]';
         $request = $this->getAlliancesAllianceIdContactsLabelsRequest($alliance_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
@@ -1069,15 +1069,15 @@ class ContactsApi
      *
      * @param  int $alliance_id The ID of the alliance (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAlliancesAllianceIdContactsLabels'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getAlliancesAllianceIdContactsLabelsRequest($alliance_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getAlliancesAllianceIdContactsLabels'][0])
+    public function getAlliancesAllianceIdContactsLabelsRequest($alliance_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getAlliancesAllianceIdContactsLabels'][0])
     {
 
         // verify the required parameter 'alliance_id' is set
@@ -1116,7 +1116,7 @@ class ContactsApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -1198,16 +1198,16 @@ class ContactsApi
      * @param  int $character_id The ID of the character (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $page page (optional)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdContacts'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\CharactersCharacterIdContactsGetInner[]|\Tkhamez\Eve\API\Model\Error
      */
-    public function getCharactersCharacterIdContacts($character_id, $x_compatibility_date, $page = null, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCharactersCharacterIdContacts'][0])
+    public function getCharactersCharacterIdContacts($character_id, $x_compatibility_date, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdContacts'][0])
     {
         list($response) = $this->getCharactersCharacterIdContactsWithHttpInfo($character_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant, $contentType);
         return $response;
@@ -1221,16 +1221,16 @@ class ContactsApi
      * @param  int $character_id The ID of the character (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $page (optional)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdContacts'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\CharactersCharacterIdContactsGetInner[]|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCharactersCharacterIdContactsWithHttpInfo($character_id, $x_compatibility_date, $page = null, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCharactersCharacterIdContacts'][0])
+    public function getCharactersCharacterIdContactsWithHttpInfo($character_id, $x_compatibility_date, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdContacts'][0])
     {
         $request = $this->getCharactersCharacterIdContactsRequest($character_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant, $contentType);
 
@@ -1325,15 +1325,15 @@ class ContactsApi
      * @param  int $character_id The ID of the character (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $page (optional)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdContacts'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCharactersCharacterIdContactsAsync($character_id, $x_compatibility_date, $page = null, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCharactersCharacterIdContacts'][0])
+    public function getCharactersCharacterIdContactsAsync($character_id, $x_compatibility_date, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdContacts'][0])
     {
         return $this->getCharactersCharacterIdContactsAsyncWithHttpInfo($character_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant, $contentType)
             ->then(
@@ -1351,15 +1351,15 @@ class ContactsApi
      * @param  int $character_id The ID of the character (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $page (optional)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdContacts'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCharactersCharacterIdContactsAsyncWithHttpInfo($character_id, $x_compatibility_date, $page = null, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCharactersCharacterIdContacts'][0])
+    public function getCharactersCharacterIdContactsAsyncWithHttpInfo($character_id, $x_compatibility_date, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdContacts'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\CharactersCharacterIdContactsGetInner[]';
         $request = $this->getCharactersCharacterIdContactsRequest($character_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant, $contentType);
@@ -1406,15 +1406,15 @@ class ContactsApi
      * @param  int $character_id The ID of the character (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $page (optional)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdContacts'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getCharactersCharacterIdContactsRequest($character_id, $x_compatibility_date, $page = null, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCharactersCharacterIdContacts'][0])
+    public function getCharactersCharacterIdContactsRequest($character_id, $x_compatibility_date, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdContacts'][0])
     {
 
         // verify the required parameter 'character_id' is set
@@ -1466,7 +1466,7 @@ class ContactsApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -1547,16 +1547,16 @@ class ContactsApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdContactsLabels'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\AlliancesAllianceIdContactsLabelsGetInner[]|\Tkhamez\Eve\API\Model\Error
      */
-    public function getCharactersCharacterIdContactsLabels($character_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCharactersCharacterIdContactsLabels'][0])
+    public function getCharactersCharacterIdContactsLabels($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdContactsLabels'][0])
     {
         list($response) = $this->getCharactersCharacterIdContactsLabelsWithHttpInfo($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
         return $response;
@@ -1569,16 +1569,16 @@ class ContactsApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdContactsLabels'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\AlliancesAllianceIdContactsLabelsGetInner[]|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCharactersCharacterIdContactsLabelsWithHttpInfo($character_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCharactersCharacterIdContactsLabels'][0])
+    public function getCharactersCharacterIdContactsLabelsWithHttpInfo($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdContactsLabels'][0])
     {
         $request = $this->getCharactersCharacterIdContactsLabelsRequest($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
 
@@ -1672,15 +1672,15 @@ class ContactsApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdContactsLabels'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCharactersCharacterIdContactsLabelsAsync($character_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCharactersCharacterIdContactsLabels'][0])
+    public function getCharactersCharacterIdContactsLabelsAsync($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdContactsLabels'][0])
     {
         return $this->getCharactersCharacterIdContactsLabelsAsyncWithHttpInfo($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType)
             ->then(
@@ -1697,15 +1697,15 @@ class ContactsApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdContactsLabels'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCharactersCharacterIdContactsLabelsAsyncWithHttpInfo($character_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCharactersCharacterIdContactsLabels'][0])
+    public function getCharactersCharacterIdContactsLabelsAsyncWithHttpInfo($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdContactsLabels'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\AlliancesAllianceIdContactsLabelsGetInner[]';
         $request = $this->getCharactersCharacterIdContactsLabelsRequest($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
@@ -1751,15 +1751,15 @@ class ContactsApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdContactsLabels'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getCharactersCharacterIdContactsLabelsRequest($character_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCharactersCharacterIdContactsLabels'][0])
+    public function getCharactersCharacterIdContactsLabelsRequest($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdContactsLabels'][0])
     {
 
         // verify the required parameter 'character_id' is set
@@ -1798,7 +1798,7 @@ class ContactsApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -1880,16 +1880,16 @@ class ContactsApi
      * @param  int $corporation_id The ID of the corporation (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $page page (optional)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCorporationsCorporationIdContacts'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\CorporationsCorporationIdContactsGetInner[]|\Tkhamez\Eve\API\Model\Error
      */
-    public function getCorporationsCorporationIdContacts($corporation_id, $x_compatibility_date, $page = null, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCorporationsCorporationIdContacts'][0])
+    public function getCorporationsCorporationIdContacts($corporation_id, $x_compatibility_date, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationsCorporationIdContacts'][0])
     {
         list($response) = $this->getCorporationsCorporationIdContactsWithHttpInfo($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant, $contentType);
         return $response;
@@ -1903,16 +1903,16 @@ class ContactsApi
      * @param  int $corporation_id The ID of the corporation (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $page (optional)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCorporationsCorporationIdContacts'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\CorporationsCorporationIdContactsGetInner[]|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCorporationsCorporationIdContactsWithHttpInfo($corporation_id, $x_compatibility_date, $page = null, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCorporationsCorporationIdContacts'][0])
+    public function getCorporationsCorporationIdContactsWithHttpInfo($corporation_id, $x_compatibility_date, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationsCorporationIdContacts'][0])
     {
         $request = $this->getCorporationsCorporationIdContactsRequest($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant, $contentType);
 
@@ -2007,15 +2007,15 @@ class ContactsApi
      * @param  int $corporation_id The ID of the corporation (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $page (optional)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCorporationsCorporationIdContacts'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCorporationsCorporationIdContactsAsync($corporation_id, $x_compatibility_date, $page = null, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCorporationsCorporationIdContacts'][0])
+    public function getCorporationsCorporationIdContactsAsync($corporation_id, $x_compatibility_date, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationsCorporationIdContacts'][0])
     {
         return $this->getCorporationsCorporationIdContactsAsyncWithHttpInfo($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant, $contentType)
             ->then(
@@ -2033,15 +2033,15 @@ class ContactsApi
      * @param  int $corporation_id The ID of the corporation (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $page (optional)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCorporationsCorporationIdContacts'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCorporationsCorporationIdContactsAsyncWithHttpInfo($corporation_id, $x_compatibility_date, $page = null, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCorporationsCorporationIdContacts'][0])
+    public function getCorporationsCorporationIdContactsAsyncWithHttpInfo($corporation_id, $x_compatibility_date, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationsCorporationIdContacts'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\CorporationsCorporationIdContactsGetInner[]';
         $request = $this->getCorporationsCorporationIdContactsRequest($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant, $contentType);
@@ -2088,15 +2088,15 @@ class ContactsApi
      * @param  int $corporation_id The ID of the corporation (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int|null $page (optional)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCorporationsCorporationIdContacts'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getCorporationsCorporationIdContactsRequest($corporation_id, $x_compatibility_date, $page = null, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCorporationsCorporationIdContacts'][0])
+    public function getCorporationsCorporationIdContactsRequest($corporation_id, $x_compatibility_date, $page = null, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationsCorporationIdContacts'][0])
     {
 
         // verify the required parameter 'corporation_id' is set
@@ -2148,7 +2148,7 @@ class ContactsApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -2229,16 +2229,16 @@ class ContactsApi
      *
      * @param  int $corporation_id The ID of the corporation (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCorporationsCorporationIdContactsLabels'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\AlliancesAllianceIdContactsLabelsGetInner[]|\Tkhamez\Eve\API\Model\Error
      */
-    public function getCorporationsCorporationIdContactsLabels($corporation_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCorporationsCorporationIdContactsLabels'][0])
+    public function getCorporationsCorporationIdContactsLabels($corporation_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationsCorporationIdContactsLabels'][0])
     {
         list($response) = $this->getCorporationsCorporationIdContactsLabelsWithHttpInfo($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
         return $response;
@@ -2251,16 +2251,16 @@ class ContactsApi
      *
      * @param  int $corporation_id The ID of the corporation (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCorporationsCorporationIdContactsLabels'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\AlliancesAllianceIdContactsLabelsGetInner[]|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCorporationsCorporationIdContactsLabelsWithHttpInfo($corporation_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCorporationsCorporationIdContactsLabels'][0])
+    public function getCorporationsCorporationIdContactsLabelsWithHttpInfo($corporation_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationsCorporationIdContactsLabels'][0])
     {
         $request = $this->getCorporationsCorporationIdContactsLabelsRequest($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
 
@@ -2354,15 +2354,15 @@ class ContactsApi
      *
      * @param  int $corporation_id The ID of the corporation (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCorporationsCorporationIdContactsLabels'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCorporationsCorporationIdContactsLabelsAsync($corporation_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCorporationsCorporationIdContactsLabels'][0])
+    public function getCorporationsCorporationIdContactsLabelsAsync($corporation_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationsCorporationIdContactsLabels'][0])
     {
         return $this->getCorporationsCorporationIdContactsLabelsAsyncWithHttpInfo($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType)
             ->then(
@@ -2379,15 +2379,15 @@ class ContactsApi
      *
      * @param  int $corporation_id The ID of the corporation (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCorporationsCorporationIdContactsLabels'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCorporationsCorporationIdContactsLabelsAsyncWithHttpInfo($corporation_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCorporationsCorporationIdContactsLabels'][0])
+    public function getCorporationsCorporationIdContactsLabelsAsyncWithHttpInfo($corporation_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationsCorporationIdContactsLabels'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\AlliancesAllianceIdContactsLabelsGetInner[]';
         $request = $this->getCorporationsCorporationIdContactsLabelsRequest($corporation_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
@@ -2433,15 +2433,15 @@ class ContactsApi
      *
      * @param  int $corporation_id The ID of the corporation (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCorporationsCorporationIdContactsLabels'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getCorporationsCorporationIdContactsLabelsRequest($corporation_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCorporationsCorporationIdContactsLabels'][0])
+    public function getCorporationsCorporationIdContactsLabelsRequest($corporation_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCorporationsCorporationIdContactsLabels'][0])
     {
 
         // verify the required parameter 'corporation_id' is set
@@ -2480,7 +2480,7 @@ class ContactsApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -2564,9 +2564,9 @@ class ContactsApi
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int[]|null $label_ids label_ids (optional)
      * @param  bool|null $watched watched (optional, default to false)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  int[]|null $request_body request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCharactersCharacterIdContacts'] to see the possible values for this operation
      *
@@ -2574,7 +2574,7 @@ class ContactsApi
      * @throws \InvalidArgumentException
      * @return int[]|\Tkhamez\Eve\API\Model\Error
      */
-    public function postCharactersCharacterIdContacts($character_id, $standing, $x_compatibility_date, $label_ids = null, $watched = false, $accept_language = null, $if_none_match = null, $x_tenant = null, $request_body = null, string $contentType = self::contentTypes['postCharactersCharacterIdContacts'][0])
+    public function postCharactersCharacterIdContacts($character_id, $standing, $x_compatibility_date, $label_ids = null, $watched = false, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['postCharactersCharacterIdContacts'][0])
     {
         list($response) = $this->postCharactersCharacterIdContactsWithHttpInfo($character_id, $standing, $x_compatibility_date, $label_ids, $watched, $accept_language, $if_none_match, $x_tenant, $request_body, $contentType);
         return $response;
@@ -2590,9 +2590,9 @@ class ContactsApi
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int[]|null $label_ids (optional)
      * @param  bool|null $watched (optional, default to false)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  int[]|null $request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCharactersCharacterIdContacts'] to see the possible values for this operation
      *
@@ -2600,7 +2600,7 @@ class ContactsApi
      * @throws \InvalidArgumentException
      * @return array of int[]|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function postCharactersCharacterIdContactsWithHttpInfo($character_id, $standing, $x_compatibility_date, $label_ids = null, $watched = false, $accept_language = null, $if_none_match = null, $x_tenant = null, $request_body = null, string $contentType = self::contentTypes['postCharactersCharacterIdContacts'][0])
+    public function postCharactersCharacterIdContactsWithHttpInfo($character_id, $standing, $x_compatibility_date, $label_ids = null, $watched = false, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['postCharactersCharacterIdContacts'][0])
     {
         $request = $this->postCharactersCharacterIdContactsRequest($character_id, $standing, $x_compatibility_date, $label_ids, $watched, $accept_language, $if_none_match, $x_tenant, $request_body, $contentType);
 
@@ -2697,16 +2697,16 @@ class ContactsApi
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int[]|null $label_ids (optional)
      * @param  bool|null $watched (optional, default to false)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  int[]|null $request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCharactersCharacterIdContacts'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postCharactersCharacterIdContactsAsync($character_id, $standing, $x_compatibility_date, $label_ids = null, $watched = false, $accept_language = null, $if_none_match = null, $x_tenant = null, $request_body = null, string $contentType = self::contentTypes['postCharactersCharacterIdContacts'][0])
+    public function postCharactersCharacterIdContactsAsync($character_id, $standing, $x_compatibility_date, $label_ids = null, $watched = false, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['postCharactersCharacterIdContacts'][0])
     {
         return $this->postCharactersCharacterIdContactsAsyncWithHttpInfo($character_id, $standing, $x_compatibility_date, $label_ids, $watched, $accept_language, $if_none_match, $x_tenant, $request_body, $contentType)
             ->then(
@@ -2726,16 +2726,16 @@ class ContactsApi
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int[]|null $label_ids (optional)
      * @param  bool|null $watched (optional, default to false)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  int[]|null $request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCharactersCharacterIdContacts'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postCharactersCharacterIdContactsAsyncWithHttpInfo($character_id, $standing, $x_compatibility_date, $label_ids = null, $watched = false, $accept_language = null, $if_none_match = null, $x_tenant = null, $request_body = null, string $contentType = self::contentTypes['postCharactersCharacterIdContacts'][0])
+    public function postCharactersCharacterIdContactsAsyncWithHttpInfo($character_id, $standing, $x_compatibility_date, $label_ids = null, $watched = false, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['postCharactersCharacterIdContacts'][0])
     {
         $returnType = 'int[]';
         $request = $this->postCharactersCharacterIdContactsRequest($character_id, $standing, $x_compatibility_date, $label_ids, $watched, $accept_language, $if_none_match, $x_tenant, $request_body, $contentType);
@@ -2784,16 +2784,16 @@ class ContactsApi
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int[]|null $label_ids (optional)
      * @param  bool|null $watched (optional, default to false)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  int[]|null $request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCharactersCharacterIdContacts'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function postCharactersCharacterIdContactsRequest($character_id, $standing, $x_compatibility_date, $label_ids = null, $watched = false, $accept_language = null, $if_none_match = null, $x_tenant = null, $request_body = null, string $contentType = self::contentTypes['postCharactersCharacterIdContacts'][0])
+    public function postCharactersCharacterIdContactsRequest($character_id, $standing, $x_compatibility_date, $label_ids = null, $watched = false, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['postCharactersCharacterIdContacts'][0])
     {
 
         // verify the required parameter 'character_id' is set
@@ -2878,7 +2878,7 @@ class ContactsApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -2969,9 +2969,9 @@ class ContactsApi
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int[]|null $label_ids label_ids (optional)
      * @param  bool|null $watched watched (optional, default to false)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  int[]|null $request_body request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCharactersCharacterIdContacts'] to see the possible values for this operation
      *
@@ -2979,7 +2979,7 @@ class ContactsApi
      * @throws \InvalidArgumentException
      * @return mixed|\Tkhamez\Eve\API\Model\Error
      */
-    public function putCharactersCharacterIdContacts($character_id, $standing, $x_compatibility_date, $label_ids = null, $watched = false, $accept_language = null, $if_none_match = null, $x_tenant = null, $request_body = null, string $contentType = self::contentTypes['putCharactersCharacterIdContacts'][0])
+    public function putCharactersCharacterIdContacts($character_id, $standing, $x_compatibility_date, $label_ids = null, $watched = false, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['putCharactersCharacterIdContacts'][0])
     {
         list($response) = $this->putCharactersCharacterIdContactsWithHttpInfo($character_id, $standing, $x_compatibility_date, $label_ids, $watched, $accept_language, $if_none_match, $x_tenant, $request_body, $contentType);
         return $response;
@@ -2995,9 +2995,9 @@ class ContactsApi
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int[]|null $label_ids (optional)
      * @param  bool|null $watched (optional, default to false)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  int[]|null $request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCharactersCharacterIdContacts'] to see the possible values for this operation
      *
@@ -3005,7 +3005,7 @@ class ContactsApi
      * @throws \InvalidArgumentException
      * @return array of mixed|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function putCharactersCharacterIdContactsWithHttpInfo($character_id, $standing, $x_compatibility_date, $label_ids = null, $watched = false, $accept_language = null, $if_none_match = null, $x_tenant = null, $request_body = null, string $contentType = self::contentTypes['putCharactersCharacterIdContacts'][0])
+    public function putCharactersCharacterIdContactsWithHttpInfo($character_id, $standing, $x_compatibility_date, $label_ids = null, $watched = false, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['putCharactersCharacterIdContacts'][0])
     {
         $request = $this->putCharactersCharacterIdContactsRequest($character_id, $standing, $x_compatibility_date, $label_ids, $watched, $accept_language, $if_none_match, $x_tenant, $request_body, $contentType);
 
@@ -3102,16 +3102,16 @@ class ContactsApi
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int[]|null $label_ids (optional)
      * @param  bool|null $watched (optional, default to false)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  int[]|null $request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCharactersCharacterIdContacts'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function putCharactersCharacterIdContactsAsync($character_id, $standing, $x_compatibility_date, $label_ids = null, $watched = false, $accept_language = null, $if_none_match = null, $x_tenant = null, $request_body = null, string $contentType = self::contentTypes['putCharactersCharacterIdContacts'][0])
+    public function putCharactersCharacterIdContactsAsync($character_id, $standing, $x_compatibility_date, $label_ids = null, $watched = false, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['putCharactersCharacterIdContacts'][0])
     {
         return $this->putCharactersCharacterIdContactsAsyncWithHttpInfo($character_id, $standing, $x_compatibility_date, $label_ids, $watched, $accept_language, $if_none_match, $x_tenant, $request_body, $contentType)
             ->then(
@@ -3131,16 +3131,16 @@ class ContactsApi
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int[]|null $label_ids (optional)
      * @param  bool|null $watched (optional, default to false)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  int[]|null $request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCharactersCharacterIdContacts'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function putCharactersCharacterIdContactsAsyncWithHttpInfo($character_id, $standing, $x_compatibility_date, $label_ids = null, $watched = false, $accept_language = null, $if_none_match = null, $x_tenant = null, $request_body = null, string $contentType = self::contentTypes['putCharactersCharacterIdContacts'][0])
+    public function putCharactersCharacterIdContactsAsyncWithHttpInfo($character_id, $standing, $x_compatibility_date, $label_ids = null, $watched = false, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['putCharactersCharacterIdContacts'][0])
     {
         $returnType = 'mixed';
         $request = $this->putCharactersCharacterIdContactsRequest($character_id, $standing, $x_compatibility_date, $label_ids, $watched, $accept_language, $if_none_match, $x_tenant, $request_body, $contentType);
@@ -3189,16 +3189,16 @@ class ContactsApi
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
      * @param  int[]|null $label_ids (optional)
      * @param  bool|null $watched (optional, default to false)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  int[]|null $request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCharactersCharacterIdContacts'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function putCharactersCharacterIdContactsRequest($character_id, $standing, $x_compatibility_date, $label_ids = null, $watched = false, $accept_language = null, $if_none_match = null, $x_tenant = null, $request_body = null, string $contentType = self::contentTypes['putCharactersCharacterIdContacts'][0])
+    public function putCharactersCharacterIdContactsRequest($character_id, $standing, $x_compatibility_date, $label_ids = null, $watched = false, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['putCharactersCharacterIdContacts'][0])
     {
 
         // verify the required parameter 'character_id' is set
@@ -3283,7 +3283,7 @@ class ContactsApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {

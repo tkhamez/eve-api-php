@@ -172,16 +172,16 @@ class FleetsApi
      * @param  int $fleet_id fleet_id (required)
      * @param  int $member_id member_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteFleetsFleetIdMembersMemberId'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return mixed|\Tkhamez\Eve\API\Model\Error
      */
-    public function deleteFleetsFleetIdMembersMemberId($fleet_id, $member_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['deleteFleetsFleetIdMembersMemberId'][0])
+    public function deleteFleetsFleetIdMembersMemberId($fleet_id, $member_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteFleetsFleetIdMembersMemberId'][0])
     {
         list($response) = $this->deleteFleetsFleetIdMembersMemberIdWithHttpInfo($fleet_id, $member_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
         return $response;
@@ -195,16 +195,16 @@ class FleetsApi
      * @param  int $fleet_id (required)
      * @param  int $member_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteFleetsFleetIdMembersMemberId'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of mixed|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteFleetsFleetIdMembersMemberIdWithHttpInfo($fleet_id, $member_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['deleteFleetsFleetIdMembersMemberId'][0])
+    public function deleteFleetsFleetIdMembersMemberIdWithHttpInfo($fleet_id, $member_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteFleetsFleetIdMembersMemberId'][0])
     {
         $request = $this->deleteFleetsFleetIdMembersMemberIdRequest($fleet_id, $member_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
 
@@ -299,15 +299,15 @@ class FleetsApi
      * @param  int $fleet_id (required)
      * @param  int $member_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteFleetsFleetIdMembersMemberId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteFleetsFleetIdMembersMemberIdAsync($fleet_id, $member_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['deleteFleetsFleetIdMembersMemberId'][0])
+    public function deleteFleetsFleetIdMembersMemberIdAsync($fleet_id, $member_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteFleetsFleetIdMembersMemberId'][0])
     {
         return $this->deleteFleetsFleetIdMembersMemberIdAsyncWithHttpInfo($fleet_id, $member_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType)
             ->then(
@@ -325,15 +325,15 @@ class FleetsApi
      * @param  int $fleet_id (required)
      * @param  int $member_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteFleetsFleetIdMembersMemberId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteFleetsFleetIdMembersMemberIdAsyncWithHttpInfo($fleet_id, $member_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['deleteFleetsFleetIdMembersMemberId'][0])
+    public function deleteFleetsFleetIdMembersMemberIdAsyncWithHttpInfo($fleet_id, $member_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteFleetsFleetIdMembersMemberId'][0])
     {
         $returnType = 'mixed';
         $request = $this->deleteFleetsFleetIdMembersMemberIdRequest($fleet_id, $member_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
@@ -380,15 +380,15 @@ class FleetsApi
      * @param  int $fleet_id (required)
      * @param  int $member_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteFleetsFleetIdMembersMemberId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function deleteFleetsFleetIdMembersMemberIdRequest($fleet_id, $member_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['deleteFleetsFleetIdMembersMemberId'][0])
+    public function deleteFleetsFleetIdMembersMemberIdRequest($fleet_id, $member_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteFleetsFleetIdMembersMemberId'][0])
     {
 
         // verify the required parameter 'fleet_id' is set
@@ -434,7 +434,7 @@ class FleetsApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -524,16 +524,16 @@ class FleetsApi
      * @param  int $fleet_id fleet_id (required)
      * @param  int $squad_id squad_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteFleetsFleetIdSquadsSquadId'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return mixed|\Tkhamez\Eve\API\Model\Error
      */
-    public function deleteFleetsFleetIdSquadsSquadId($fleet_id, $squad_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['deleteFleetsFleetIdSquadsSquadId'][0])
+    public function deleteFleetsFleetIdSquadsSquadId($fleet_id, $squad_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteFleetsFleetIdSquadsSquadId'][0])
     {
         list($response) = $this->deleteFleetsFleetIdSquadsSquadIdWithHttpInfo($fleet_id, $squad_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
         return $response;
@@ -547,16 +547,16 @@ class FleetsApi
      * @param  int $fleet_id (required)
      * @param  int $squad_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteFleetsFleetIdSquadsSquadId'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of mixed|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteFleetsFleetIdSquadsSquadIdWithHttpInfo($fleet_id, $squad_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['deleteFleetsFleetIdSquadsSquadId'][0])
+    public function deleteFleetsFleetIdSquadsSquadIdWithHttpInfo($fleet_id, $squad_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteFleetsFleetIdSquadsSquadId'][0])
     {
         $request = $this->deleteFleetsFleetIdSquadsSquadIdRequest($fleet_id, $squad_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
 
@@ -651,15 +651,15 @@ class FleetsApi
      * @param  int $fleet_id (required)
      * @param  int $squad_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteFleetsFleetIdSquadsSquadId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteFleetsFleetIdSquadsSquadIdAsync($fleet_id, $squad_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['deleteFleetsFleetIdSquadsSquadId'][0])
+    public function deleteFleetsFleetIdSquadsSquadIdAsync($fleet_id, $squad_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteFleetsFleetIdSquadsSquadId'][0])
     {
         return $this->deleteFleetsFleetIdSquadsSquadIdAsyncWithHttpInfo($fleet_id, $squad_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType)
             ->then(
@@ -677,15 +677,15 @@ class FleetsApi
      * @param  int $fleet_id (required)
      * @param  int $squad_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteFleetsFleetIdSquadsSquadId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteFleetsFleetIdSquadsSquadIdAsyncWithHttpInfo($fleet_id, $squad_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['deleteFleetsFleetIdSquadsSquadId'][0])
+    public function deleteFleetsFleetIdSquadsSquadIdAsyncWithHttpInfo($fleet_id, $squad_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteFleetsFleetIdSquadsSquadId'][0])
     {
         $returnType = 'mixed';
         $request = $this->deleteFleetsFleetIdSquadsSquadIdRequest($fleet_id, $squad_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
@@ -732,15 +732,15 @@ class FleetsApi
      * @param  int $fleet_id (required)
      * @param  int $squad_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteFleetsFleetIdSquadsSquadId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function deleteFleetsFleetIdSquadsSquadIdRequest($fleet_id, $squad_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['deleteFleetsFleetIdSquadsSquadId'][0])
+    public function deleteFleetsFleetIdSquadsSquadIdRequest($fleet_id, $squad_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteFleetsFleetIdSquadsSquadId'][0])
     {
 
         // verify the required parameter 'fleet_id' is set
@@ -786,7 +786,7 @@ class FleetsApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -876,16 +876,16 @@ class FleetsApi
      * @param  int $fleet_id fleet_id (required)
      * @param  int $wing_id wing_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteFleetsFleetIdWingsWingId'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return mixed|\Tkhamez\Eve\API\Model\Error
      */
-    public function deleteFleetsFleetIdWingsWingId($fleet_id, $wing_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['deleteFleetsFleetIdWingsWingId'][0])
+    public function deleteFleetsFleetIdWingsWingId($fleet_id, $wing_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteFleetsFleetIdWingsWingId'][0])
     {
         list($response) = $this->deleteFleetsFleetIdWingsWingIdWithHttpInfo($fleet_id, $wing_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
         return $response;
@@ -899,16 +899,16 @@ class FleetsApi
      * @param  int $fleet_id (required)
      * @param  int $wing_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteFleetsFleetIdWingsWingId'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of mixed|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteFleetsFleetIdWingsWingIdWithHttpInfo($fleet_id, $wing_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['deleteFleetsFleetIdWingsWingId'][0])
+    public function deleteFleetsFleetIdWingsWingIdWithHttpInfo($fleet_id, $wing_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteFleetsFleetIdWingsWingId'][0])
     {
         $request = $this->deleteFleetsFleetIdWingsWingIdRequest($fleet_id, $wing_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
 
@@ -1003,15 +1003,15 @@ class FleetsApi
      * @param  int $fleet_id (required)
      * @param  int $wing_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteFleetsFleetIdWingsWingId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteFleetsFleetIdWingsWingIdAsync($fleet_id, $wing_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['deleteFleetsFleetIdWingsWingId'][0])
+    public function deleteFleetsFleetIdWingsWingIdAsync($fleet_id, $wing_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteFleetsFleetIdWingsWingId'][0])
     {
         return $this->deleteFleetsFleetIdWingsWingIdAsyncWithHttpInfo($fleet_id, $wing_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType)
             ->then(
@@ -1029,15 +1029,15 @@ class FleetsApi
      * @param  int $fleet_id (required)
      * @param  int $wing_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteFleetsFleetIdWingsWingId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteFleetsFleetIdWingsWingIdAsyncWithHttpInfo($fleet_id, $wing_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['deleteFleetsFleetIdWingsWingId'][0])
+    public function deleteFleetsFleetIdWingsWingIdAsyncWithHttpInfo($fleet_id, $wing_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteFleetsFleetIdWingsWingId'][0])
     {
         $returnType = 'mixed';
         $request = $this->deleteFleetsFleetIdWingsWingIdRequest($fleet_id, $wing_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
@@ -1084,15 +1084,15 @@ class FleetsApi
      * @param  int $fleet_id (required)
      * @param  int $wing_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteFleetsFleetIdWingsWingId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function deleteFleetsFleetIdWingsWingIdRequest($fleet_id, $wing_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['deleteFleetsFleetIdWingsWingId'][0])
+    public function deleteFleetsFleetIdWingsWingIdRequest($fleet_id, $wing_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteFleetsFleetIdWingsWingId'][0])
     {
 
         // verify the required parameter 'fleet_id' is set
@@ -1138,7 +1138,7 @@ class FleetsApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -1227,16 +1227,16 @@ class FleetsApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdFleet'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\CharactersCharacterIdFleetGet|\Tkhamez\Eve\API\Model\Error
      */
-    public function getCharactersCharacterIdFleet($character_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCharactersCharacterIdFleet'][0])
+    public function getCharactersCharacterIdFleet($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdFleet'][0])
     {
         list($response) = $this->getCharactersCharacterIdFleetWithHttpInfo($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
         return $response;
@@ -1249,16 +1249,16 @@ class FleetsApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdFleet'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\CharactersCharacterIdFleetGet|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCharactersCharacterIdFleetWithHttpInfo($character_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCharactersCharacterIdFleet'][0])
+    public function getCharactersCharacterIdFleetWithHttpInfo($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdFleet'][0])
     {
         $request = $this->getCharactersCharacterIdFleetRequest($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
 
@@ -1352,15 +1352,15 @@ class FleetsApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdFleet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCharactersCharacterIdFleetAsync($character_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCharactersCharacterIdFleet'][0])
+    public function getCharactersCharacterIdFleetAsync($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdFleet'][0])
     {
         return $this->getCharactersCharacterIdFleetAsyncWithHttpInfo($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType)
             ->then(
@@ -1377,15 +1377,15 @@ class FleetsApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdFleet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCharactersCharacterIdFleetAsyncWithHttpInfo($character_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCharactersCharacterIdFleet'][0])
+    public function getCharactersCharacterIdFleetAsyncWithHttpInfo($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdFleet'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\CharactersCharacterIdFleetGet';
         $request = $this->getCharactersCharacterIdFleetRequest($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
@@ -1431,15 +1431,15 @@ class FleetsApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCharactersCharacterIdFleet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getCharactersCharacterIdFleetRequest($character_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getCharactersCharacterIdFleet'][0])
+    public function getCharactersCharacterIdFleetRequest($character_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getCharactersCharacterIdFleet'][0])
     {
 
         // verify the required parameter 'character_id' is set
@@ -1478,7 +1478,7 @@ class FleetsApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -1559,16 +1559,16 @@ class FleetsApi
      *
      * @param  int $fleet_id fleet_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFleetsFleetId'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\FleetsFleetIdGet|\Tkhamez\Eve\API\Model\Error
      */
-    public function getFleetsFleetId($fleet_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getFleetsFleetId'][0])
+    public function getFleetsFleetId($fleet_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFleetsFleetId'][0])
     {
         list($response) = $this->getFleetsFleetIdWithHttpInfo($fleet_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
         return $response;
@@ -1581,16 +1581,16 @@ class FleetsApi
      *
      * @param  int $fleet_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFleetsFleetId'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\FleetsFleetIdGet|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getFleetsFleetIdWithHttpInfo($fleet_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getFleetsFleetId'][0])
+    public function getFleetsFleetIdWithHttpInfo($fleet_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFleetsFleetId'][0])
     {
         $request = $this->getFleetsFleetIdRequest($fleet_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
 
@@ -1684,15 +1684,15 @@ class FleetsApi
      *
      * @param  int $fleet_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFleetsFleetId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getFleetsFleetIdAsync($fleet_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getFleetsFleetId'][0])
+    public function getFleetsFleetIdAsync($fleet_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFleetsFleetId'][0])
     {
         return $this->getFleetsFleetIdAsyncWithHttpInfo($fleet_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType)
             ->then(
@@ -1709,15 +1709,15 @@ class FleetsApi
      *
      * @param  int $fleet_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFleetsFleetId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getFleetsFleetIdAsyncWithHttpInfo($fleet_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getFleetsFleetId'][0])
+    public function getFleetsFleetIdAsyncWithHttpInfo($fleet_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFleetsFleetId'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\FleetsFleetIdGet';
         $request = $this->getFleetsFleetIdRequest($fleet_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
@@ -1763,15 +1763,15 @@ class FleetsApi
      *
      * @param  int $fleet_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFleetsFleetId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getFleetsFleetIdRequest($fleet_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getFleetsFleetId'][0])
+    public function getFleetsFleetIdRequest($fleet_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFleetsFleetId'][0])
     {
 
         // verify the required parameter 'fleet_id' is set
@@ -1810,7 +1810,7 @@ class FleetsApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -1891,16 +1891,16 @@ class FleetsApi
      *
      * @param  int $fleet_id fleet_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFleetsFleetIdMembers'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\FleetsFleetIdMembersGetInner[]|\Tkhamez\Eve\API\Model\Error
      */
-    public function getFleetsFleetIdMembers($fleet_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getFleetsFleetIdMembers'][0])
+    public function getFleetsFleetIdMembers($fleet_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFleetsFleetIdMembers'][0])
     {
         list($response) = $this->getFleetsFleetIdMembersWithHttpInfo($fleet_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
         return $response;
@@ -1913,16 +1913,16 @@ class FleetsApi
      *
      * @param  int $fleet_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFleetsFleetIdMembers'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\FleetsFleetIdMembersGetInner[]|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getFleetsFleetIdMembersWithHttpInfo($fleet_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getFleetsFleetIdMembers'][0])
+    public function getFleetsFleetIdMembersWithHttpInfo($fleet_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFleetsFleetIdMembers'][0])
     {
         $request = $this->getFleetsFleetIdMembersRequest($fleet_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
 
@@ -2016,15 +2016,15 @@ class FleetsApi
      *
      * @param  int $fleet_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFleetsFleetIdMembers'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getFleetsFleetIdMembersAsync($fleet_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getFleetsFleetIdMembers'][0])
+    public function getFleetsFleetIdMembersAsync($fleet_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFleetsFleetIdMembers'][0])
     {
         return $this->getFleetsFleetIdMembersAsyncWithHttpInfo($fleet_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType)
             ->then(
@@ -2041,15 +2041,15 @@ class FleetsApi
      *
      * @param  int $fleet_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFleetsFleetIdMembers'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getFleetsFleetIdMembersAsyncWithHttpInfo($fleet_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getFleetsFleetIdMembers'][0])
+    public function getFleetsFleetIdMembersAsyncWithHttpInfo($fleet_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFleetsFleetIdMembers'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\FleetsFleetIdMembersGetInner[]';
         $request = $this->getFleetsFleetIdMembersRequest($fleet_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
@@ -2095,15 +2095,15 @@ class FleetsApi
      *
      * @param  int $fleet_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFleetsFleetIdMembers'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getFleetsFleetIdMembersRequest($fleet_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getFleetsFleetIdMembers'][0])
+    public function getFleetsFleetIdMembersRequest($fleet_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFleetsFleetIdMembers'][0])
     {
 
         // verify the required parameter 'fleet_id' is set
@@ -2142,7 +2142,7 @@ class FleetsApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -2223,16 +2223,16 @@ class FleetsApi
      *
      * @param  int $fleet_id fleet_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFleetsFleetIdWings'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\FleetsFleetIdWingsGetInner[]|\Tkhamez\Eve\API\Model\Error
      */
-    public function getFleetsFleetIdWings($fleet_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getFleetsFleetIdWings'][0])
+    public function getFleetsFleetIdWings($fleet_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFleetsFleetIdWings'][0])
     {
         list($response) = $this->getFleetsFleetIdWingsWithHttpInfo($fleet_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
         return $response;
@@ -2245,16 +2245,16 @@ class FleetsApi
      *
      * @param  int $fleet_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFleetsFleetIdWings'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\FleetsFleetIdWingsGetInner[]|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getFleetsFleetIdWingsWithHttpInfo($fleet_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getFleetsFleetIdWings'][0])
+    public function getFleetsFleetIdWingsWithHttpInfo($fleet_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFleetsFleetIdWings'][0])
     {
         $request = $this->getFleetsFleetIdWingsRequest($fleet_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
 
@@ -2348,15 +2348,15 @@ class FleetsApi
      *
      * @param  int $fleet_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFleetsFleetIdWings'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getFleetsFleetIdWingsAsync($fleet_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getFleetsFleetIdWings'][0])
+    public function getFleetsFleetIdWingsAsync($fleet_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFleetsFleetIdWings'][0])
     {
         return $this->getFleetsFleetIdWingsAsyncWithHttpInfo($fleet_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType)
             ->then(
@@ -2373,15 +2373,15 @@ class FleetsApi
      *
      * @param  int $fleet_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFleetsFleetIdWings'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getFleetsFleetIdWingsAsyncWithHttpInfo($fleet_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getFleetsFleetIdWings'][0])
+    public function getFleetsFleetIdWingsAsyncWithHttpInfo($fleet_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFleetsFleetIdWings'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\FleetsFleetIdWingsGetInner[]';
         $request = $this->getFleetsFleetIdWingsRequest($fleet_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
@@ -2427,15 +2427,15 @@ class FleetsApi
      *
      * @param  int $fleet_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFleetsFleetIdWings'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getFleetsFleetIdWingsRequest($fleet_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['getFleetsFleetIdWings'][0])
+    public function getFleetsFleetIdWingsRequest($fleet_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['getFleetsFleetIdWings'][0])
     {
 
         // verify the required parameter 'fleet_id' is set
@@ -2474,7 +2474,7 @@ class FleetsApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -2555,9 +2555,9 @@ class FleetsApi
      *
      * @param  int $fleet_id fleet_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  \Tkhamez\Eve\API\Model\PostFleetsFleetIdMembersRequest|null $post_fleets_fleet_id_members_request post_fleets_fleet_id_members_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postFleetsFleetIdMembers'] to see the possible values for this operation
      *
@@ -2565,7 +2565,7 @@ class FleetsApi
      * @throws \InvalidArgumentException
      * @return mixed|\Tkhamez\Eve\API\Model\Error
      */
-    public function postFleetsFleetIdMembers($fleet_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, $post_fleets_fleet_id_members_request = null, string $contentType = self::contentTypes['postFleetsFleetIdMembers'][0])
+    public function postFleetsFleetIdMembers($fleet_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $post_fleets_fleet_id_members_request = null, string $contentType = self::contentTypes['postFleetsFleetIdMembers'][0])
     {
         list($response) = $this->postFleetsFleetIdMembersWithHttpInfo($fleet_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $post_fleets_fleet_id_members_request, $contentType);
         return $response;
@@ -2578,9 +2578,9 @@ class FleetsApi
      *
      * @param  int $fleet_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  \Tkhamez\Eve\API\Model\PostFleetsFleetIdMembersRequest|null $post_fleets_fleet_id_members_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postFleetsFleetIdMembers'] to see the possible values for this operation
      *
@@ -2588,7 +2588,7 @@ class FleetsApi
      * @throws \InvalidArgumentException
      * @return array of mixed|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function postFleetsFleetIdMembersWithHttpInfo($fleet_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, $post_fleets_fleet_id_members_request = null, string $contentType = self::contentTypes['postFleetsFleetIdMembers'][0])
+    public function postFleetsFleetIdMembersWithHttpInfo($fleet_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $post_fleets_fleet_id_members_request = null, string $contentType = self::contentTypes['postFleetsFleetIdMembers'][0])
     {
         $request = $this->postFleetsFleetIdMembersRequest($fleet_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $post_fleets_fleet_id_members_request, $contentType);
 
@@ -2682,16 +2682,16 @@ class FleetsApi
      *
      * @param  int $fleet_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  \Tkhamez\Eve\API\Model\PostFleetsFleetIdMembersRequest|null $post_fleets_fleet_id_members_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postFleetsFleetIdMembers'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postFleetsFleetIdMembersAsync($fleet_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, $post_fleets_fleet_id_members_request = null, string $contentType = self::contentTypes['postFleetsFleetIdMembers'][0])
+    public function postFleetsFleetIdMembersAsync($fleet_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $post_fleets_fleet_id_members_request = null, string $contentType = self::contentTypes['postFleetsFleetIdMembers'][0])
     {
         return $this->postFleetsFleetIdMembersAsyncWithHttpInfo($fleet_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $post_fleets_fleet_id_members_request, $contentType)
             ->then(
@@ -2708,16 +2708,16 @@ class FleetsApi
      *
      * @param  int $fleet_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  \Tkhamez\Eve\API\Model\PostFleetsFleetIdMembersRequest|null $post_fleets_fleet_id_members_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postFleetsFleetIdMembers'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postFleetsFleetIdMembersAsyncWithHttpInfo($fleet_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, $post_fleets_fleet_id_members_request = null, string $contentType = self::contentTypes['postFleetsFleetIdMembers'][0])
+    public function postFleetsFleetIdMembersAsyncWithHttpInfo($fleet_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $post_fleets_fleet_id_members_request = null, string $contentType = self::contentTypes['postFleetsFleetIdMembers'][0])
     {
         $returnType = 'mixed';
         $request = $this->postFleetsFleetIdMembersRequest($fleet_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $post_fleets_fleet_id_members_request, $contentType);
@@ -2763,16 +2763,16 @@ class FleetsApi
      *
      * @param  int $fleet_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  \Tkhamez\Eve\API\Model\PostFleetsFleetIdMembersRequest|null $post_fleets_fleet_id_members_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postFleetsFleetIdMembers'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function postFleetsFleetIdMembersRequest($fleet_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, $post_fleets_fleet_id_members_request = null, string $contentType = self::contentTypes['postFleetsFleetIdMembers'][0])
+    public function postFleetsFleetIdMembersRequest($fleet_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $post_fleets_fleet_id_members_request = null, string $contentType = self::contentTypes['postFleetsFleetIdMembers'][0])
     {
 
         // verify the required parameter 'fleet_id' is set
@@ -2812,7 +2812,7 @@ class FleetsApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -2900,16 +2900,16 @@ class FleetsApi
      *
      * @param  int $fleet_id fleet_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postFleetsFleetIdWings'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\FleetsFleetIdWingsPost|\Tkhamez\Eve\API\Model\Error
      */
-    public function postFleetsFleetIdWings($fleet_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['postFleetsFleetIdWings'][0])
+    public function postFleetsFleetIdWings($fleet_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['postFleetsFleetIdWings'][0])
     {
         list($response) = $this->postFleetsFleetIdWingsWithHttpInfo($fleet_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
         return $response;
@@ -2922,16 +2922,16 @@ class FleetsApi
      *
      * @param  int $fleet_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postFleetsFleetIdWings'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\FleetsFleetIdWingsPost|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function postFleetsFleetIdWingsWithHttpInfo($fleet_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['postFleetsFleetIdWings'][0])
+    public function postFleetsFleetIdWingsWithHttpInfo($fleet_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['postFleetsFleetIdWings'][0])
     {
         $request = $this->postFleetsFleetIdWingsRequest($fleet_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
 
@@ -3025,15 +3025,15 @@ class FleetsApi
      *
      * @param  int $fleet_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postFleetsFleetIdWings'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postFleetsFleetIdWingsAsync($fleet_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['postFleetsFleetIdWings'][0])
+    public function postFleetsFleetIdWingsAsync($fleet_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['postFleetsFleetIdWings'][0])
     {
         return $this->postFleetsFleetIdWingsAsyncWithHttpInfo($fleet_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType)
             ->then(
@@ -3050,15 +3050,15 @@ class FleetsApi
      *
      * @param  int $fleet_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postFleetsFleetIdWings'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postFleetsFleetIdWingsAsyncWithHttpInfo($fleet_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['postFleetsFleetIdWings'][0])
+    public function postFleetsFleetIdWingsAsyncWithHttpInfo($fleet_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['postFleetsFleetIdWings'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\FleetsFleetIdWingsPost';
         $request = $this->postFleetsFleetIdWingsRequest($fleet_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
@@ -3104,15 +3104,15 @@ class FleetsApi
      *
      * @param  int $fleet_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postFleetsFleetIdWings'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function postFleetsFleetIdWingsRequest($fleet_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['postFleetsFleetIdWings'][0])
+    public function postFleetsFleetIdWingsRequest($fleet_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['postFleetsFleetIdWings'][0])
     {
 
         // verify the required parameter 'fleet_id' is set
@@ -3151,7 +3151,7 @@ class FleetsApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -3233,16 +3233,16 @@ class FleetsApi
      * @param  int $fleet_id fleet_id (required)
      * @param  int $wing_id wing_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postFleetsFleetIdWingsWingIdSquads'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\FleetsFleetIdWingsWingIdSquadsPost|\Tkhamez\Eve\API\Model\Error
      */
-    public function postFleetsFleetIdWingsWingIdSquads($fleet_id, $wing_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['postFleetsFleetIdWingsWingIdSquads'][0])
+    public function postFleetsFleetIdWingsWingIdSquads($fleet_id, $wing_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['postFleetsFleetIdWingsWingIdSquads'][0])
     {
         list($response) = $this->postFleetsFleetIdWingsWingIdSquadsWithHttpInfo($fleet_id, $wing_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
         return $response;
@@ -3256,16 +3256,16 @@ class FleetsApi
      * @param  int $fleet_id (required)
      * @param  int $wing_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postFleetsFleetIdWingsWingIdSquads'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\FleetsFleetIdWingsWingIdSquadsPost|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function postFleetsFleetIdWingsWingIdSquadsWithHttpInfo($fleet_id, $wing_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['postFleetsFleetIdWingsWingIdSquads'][0])
+    public function postFleetsFleetIdWingsWingIdSquadsWithHttpInfo($fleet_id, $wing_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['postFleetsFleetIdWingsWingIdSquads'][0])
     {
         $request = $this->postFleetsFleetIdWingsWingIdSquadsRequest($fleet_id, $wing_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
 
@@ -3360,15 +3360,15 @@ class FleetsApi
      * @param  int $fleet_id (required)
      * @param  int $wing_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postFleetsFleetIdWingsWingIdSquads'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postFleetsFleetIdWingsWingIdSquadsAsync($fleet_id, $wing_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['postFleetsFleetIdWingsWingIdSquads'][0])
+    public function postFleetsFleetIdWingsWingIdSquadsAsync($fleet_id, $wing_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['postFleetsFleetIdWingsWingIdSquads'][0])
     {
         return $this->postFleetsFleetIdWingsWingIdSquadsAsyncWithHttpInfo($fleet_id, $wing_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType)
             ->then(
@@ -3386,15 +3386,15 @@ class FleetsApi
      * @param  int $fleet_id (required)
      * @param  int $wing_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postFleetsFleetIdWingsWingIdSquads'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postFleetsFleetIdWingsWingIdSquadsAsyncWithHttpInfo($fleet_id, $wing_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['postFleetsFleetIdWingsWingIdSquads'][0])
+    public function postFleetsFleetIdWingsWingIdSquadsAsyncWithHttpInfo($fleet_id, $wing_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['postFleetsFleetIdWingsWingIdSquads'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\FleetsFleetIdWingsWingIdSquadsPost';
         $request = $this->postFleetsFleetIdWingsWingIdSquadsRequest($fleet_id, $wing_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
@@ -3441,15 +3441,15 @@ class FleetsApi
      * @param  int $fleet_id (required)
      * @param  int $wing_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postFleetsFleetIdWingsWingIdSquads'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function postFleetsFleetIdWingsWingIdSquadsRequest($fleet_id, $wing_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['postFleetsFleetIdWingsWingIdSquads'][0])
+    public function postFleetsFleetIdWingsWingIdSquadsRequest($fleet_id, $wing_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['postFleetsFleetIdWingsWingIdSquads'][0])
     {
 
         // verify the required parameter 'fleet_id' is set
@@ -3495,7 +3495,7 @@ class FleetsApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -3584,9 +3584,9 @@ class FleetsApi
      *
      * @param  int $fleet_id fleet_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdRequest|null $put_fleets_fleet_id_request put_fleets_fleet_id_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putFleetsFleetId'] to see the possible values for this operation
      *
@@ -3594,7 +3594,7 @@ class FleetsApi
      * @throws \InvalidArgumentException
      * @return mixed|\Tkhamez\Eve\API\Model\Error
      */
-    public function putFleetsFleetId($fleet_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, $put_fleets_fleet_id_request = null, string $contentType = self::contentTypes['putFleetsFleetId'][0])
+    public function putFleetsFleetId($fleet_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $put_fleets_fleet_id_request = null, string $contentType = self::contentTypes['putFleetsFleetId'][0])
     {
         list($response) = $this->putFleetsFleetIdWithHttpInfo($fleet_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $put_fleets_fleet_id_request, $contentType);
         return $response;
@@ -3607,9 +3607,9 @@ class FleetsApi
      *
      * @param  int $fleet_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdRequest|null $put_fleets_fleet_id_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putFleetsFleetId'] to see the possible values for this operation
      *
@@ -3617,7 +3617,7 @@ class FleetsApi
      * @throws \InvalidArgumentException
      * @return array of mixed|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function putFleetsFleetIdWithHttpInfo($fleet_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, $put_fleets_fleet_id_request = null, string $contentType = self::contentTypes['putFleetsFleetId'][0])
+    public function putFleetsFleetIdWithHttpInfo($fleet_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $put_fleets_fleet_id_request = null, string $contentType = self::contentTypes['putFleetsFleetId'][0])
     {
         $request = $this->putFleetsFleetIdRequest($fleet_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $put_fleets_fleet_id_request, $contentType);
 
@@ -3711,16 +3711,16 @@ class FleetsApi
      *
      * @param  int $fleet_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdRequest|null $put_fleets_fleet_id_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putFleetsFleetId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function putFleetsFleetIdAsync($fleet_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, $put_fleets_fleet_id_request = null, string $contentType = self::contentTypes['putFleetsFleetId'][0])
+    public function putFleetsFleetIdAsync($fleet_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $put_fleets_fleet_id_request = null, string $contentType = self::contentTypes['putFleetsFleetId'][0])
     {
         return $this->putFleetsFleetIdAsyncWithHttpInfo($fleet_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $put_fleets_fleet_id_request, $contentType)
             ->then(
@@ -3737,16 +3737,16 @@ class FleetsApi
      *
      * @param  int $fleet_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdRequest|null $put_fleets_fleet_id_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putFleetsFleetId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function putFleetsFleetIdAsyncWithHttpInfo($fleet_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, $put_fleets_fleet_id_request = null, string $contentType = self::contentTypes['putFleetsFleetId'][0])
+    public function putFleetsFleetIdAsyncWithHttpInfo($fleet_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $put_fleets_fleet_id_request = null, string $contentType = self::contentTypes['putFleetsFleetId'][0])
     {
         $returnType = 'mixed';
         $request = $this->putFleetsFleetIdRequest($fleet_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $put_fleets_fleet_id_request, $contentType);
@@ -3792,16 +3792,16 @@ class FleetsApi
      *
      * @param  int $fleet_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdRequest|null $put_fleets_fleet_id_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putFleetsFleetId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function putFleetsFleetIdRequest($fleet_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, $put_fleets_fleet_id_request = null, string $contentType = self::contentTypes['putFleetsFleetId'][0])
+    public function putFleetsFleetIdRequest($fleet_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $put_fleets_fleet_id_request = null, string $contentType = self::contentTypes['putFleetsFleetId'][0])
     {
 
         // verify the required parameter 'fleet_id' is set
@@ -3841,7 +3841,7 @@ class FleetsApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -3930,9 +3930,9 @@ class FleetsApi
      * @param  int $fleet_id fleet_id (required)
      * @param  int $member_id member_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdMembersMemberIdRequest|null $put_fleets_fleet_id_members_member_id_request put_fleets_fleet_id_members_member_id_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putFleetsFleetIdMembersMemberId'] to see the possible values for this operation
      *
@@ -3940,7 +3940,7 @@ class FleetsApi
      * @throws \InvalidArgumentException
      * @return mixed|\Tkhamez\Eve\API\Model\Error
      */
-    public function putFleetsFleetIdMembersMemberId($fleet_id, $member_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, $put_fleets_fleet_id_members_member_id_request = null, string $contentType = self::contentTypes['putFleetsFleetIdMembersMemberId'][0])
+    public function putFleetsFleetIdMembersMemberId($fleet_id, $member_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $put_fleets_fleet_id_members_member_id_request = null, string $contentType = self::contentTypes['putFleetsFleetIdMembersMemberId'][0])
     {
         list($response) = $this->putFleetsFleetIdMembersMemberIdWithHttpInfo($fleet_id, $member_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $put_fleets_fleet_id_members_member_id_request, $contentType);
         return $response;
@@ -3954,9 +3954,9 @@ class FleetsApi
      * @param  int $fleet_id (required)
      * @param  int $member_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdMembersMemberIdRequest|null $put_fleets_fleet_id_members_member_id_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putFleetsFleetIdMembersMemberId'] to see the possible values for this operation
      *
@@ -3964,7 +3964,7 @@ class FleetsApi
      * @throws \InvalidArgumentException
      * @return array of mixed|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function putFleetsFleetIdMembersMemberIdWithHttpInfo($fleet_id, $member_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, $put_fleets_fleet_id_members_member_id_request = null, string $contentType = self::contentTypes['putFleetsFleetIdMembersMemberId'][0])
+    public function putFleetsFleetIdMembersMemberIdWithHttpInfo($fleet_id, $member_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $put_fleets_fleet_id_members_member_id_request = null, string $contentType = self::contentTypes['putFleetsFleetIdMembersMemberId'][0])
     {
         $request = $this->putFleetsFleetIdMembersMemberIdRequest($fleet_id, $member_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $put_fleets_fleet_id_members_member_id_request, $contentType);
 
@@ -4059,16 +4059,16 @@ class FleetsApi
      * @param  int $fleet_id (required)
      * @param  int $member_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdMembersMemberIdRequest|null $put_fleets_fleet_id_members_member_id_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putFleetsFleetIdMembersMemberId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function putFleetsFleetIdMembersMemberIdAsync($fleet_id, $member_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, $put_fleets_fleet_id_members_member_id_request = null, string $contentType = self::contentTypes['putFleetsFleetIdMembersMemberId'][0])
+    public function putFleetsFleetIdMembersMemberIdAsync($fleet_id, $member_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $put_fleets_fleet_id_members_member_id_request = null, string $contentType = self::contentTypes['putFleetsFleetIdMembersMemberId'][0])
     {
         return $this->putFleetsFleetIdMembersMemberIdAsyncWithHttpInfo($fleet_id, $member_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $put_fleets_fleet_id_members_member_id_request, $contentType)
             ->then(
@@ -4086,16 +4086,16 @@ class FleetsApi
      * @param  int $fleet_id (required)
      * @param  int $member_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdMembersMemberIdRequest|null $put_fleets_fleet_id_members_member_id_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putFleetsFleetIdMembersMemberId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function putFleetsFleetIdMembersMemberIdAsyncWithHttpInfo($fleet_id, $member_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, $put_fleets_fleet_id_members_member_id_request = null, string $contentType = self::contentTypes['putFleetsFleetIdMembersMemberId'][0])
+    public function putFleetsFleetIdMembersMemberIdAsyncWithHttpInfo($fleet_id, $member_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $put_fleets_fleet_id_members_member_id_request = null, string $contentType = self::contentTypes['putFleetsFleetIdMembersMemberId'][0])
     {
         $returnType = 'mixed';
         $request = $this->putFleetsFleetIdMembersMemberIdRequest($fleet_id, $member_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $put_fleets_fleet_id_members_member_id_request, $contentType);
@@ -4142,16 +4142,16 @@ class FleetsApi
      * @param  int $fleet_id (required)
      * @param  int $member_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdMembersMemberIdRequest|null $put_fleets_fleet_id_members_member_id_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putFleetsFleetIdMembersMemberId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function putFleetsFleetIdMembersMemberIdRequest($fleet_id, $member_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, $put_fleets_fleet_id_members_member_id_request = null, string $contentType = self::contentTypes['putFleetsFleetIdMembersMemberId'][0])
+    public function putFleetsFleetIdMembersMemberIdRequest($fleet_id, $member_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $put_fleets_fleet_id_members_member_id_request = null, string $contentType = self::contentTypes['putFleetsFleetIdMembersMemberId'][0])
     {
 
         // verify the required parameter 'fleet_id' is set
@@ -4198,7 +4198,7 @@ class FleetsApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -4295,9 +4295,9 @@ class FleetsApi
      * @param  int $fleet_id fleet_id (required)
      * @param  int $squad_id squad_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdSquadsSquadIdRequest|null $put_fleets_fleet_id_squads_squad_id_request put_fleets_fleet_id_squads_squad_id_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putFleetsFleetIdSquadsSquadId'] to see the possible values for this operation
      *
@@ -4305,7 +4305,7 @@ class FleetsApi
      * @throws \InvalidArgumentException
      * @return mixed|\Tkhamez\Eve\API\Model\Error
      */
-    public function putFleetsFleetIdSquadsSquadId($fleet_id, $squad_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, $put_fleets_fleet_id_squads_squad_id_request = null, string $contentType = self::contentTypes['putFleetsFleetIdSquadsSquadId'][0])
+    public function putFleetsFleetIdSquadsSquadId($fleet_id, $squad_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $put_fleets_fleet_id_squads_squad_id_request = null, string $contentType = self::contentTypes['putFleetsFleetIdSquadsSquadId'][0])
     {
         list($response) = $this->putFleetsFleetIdSquadsSquadIdWithHttpInfo($fleet_id, $squad_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $put_fleets_fleet_id_squads_squad_id_request, $contentType);
         return $response;
@@ -4319,9 +4319,9 @@ class FleetsApi
      * @param  int $fleet_id (required)
      * @param  int $squad_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdSquadsSquadIdRequest|null $put_fleets_fleet_id_squads_squad_id_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putFleetsFleetIdSquadsSquadId'] to see the possible values for this operation
      *
@@ -4329,7 +4329,7 @@ class FleetsApi
      * @throws \InvalidArgumentException
      * @return array of mixed|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function putFleetsFleetIdSquadsSquadIdWithHttpInfo($fleet_id, $squad_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, $put_fleets_fleet_id_squads_squad_id_request = null, string $contentType = self::contentTypes['putFleetsFleetIdSquadsSquadId'][0])
+    public function putFleetsFleetIdSquadsSquadIdWithHttpInfo($fleet_id, $squad_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $put_fleets_fleet_id_squads_squad_id_request = null, string $contentType = self::contentTypes['putFleetsFleetIdSquadsSquadId'][0])
     {
         $request = $this->putFleetsFleetIdSquadsSquadIdRequest($fleet_id, $squad_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $put_fleets_fleet_id_squads_squad_id_request, $contentType);
 
@@ -4424,16 +4424,16 @@ class FleetsApi
      * @param  int $fleet_id (required)
      * @param  int $squad_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdSquadsSquadIdRequest|null $put_fleets_fleet_id_squads_squad_id_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putFleetsFleetIdSquadsSquadId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function putFleetsFleetIdSquadsSquadIdAsync($fleet_id, $squad_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, $put_fleets_fleet_id_squads_squad_id_request = null, string $contentType = self::contentTypes['putFleetsFleetIdSquadsSquadId'][0])
+    public function putFleetsFleetIdSquadsSquadIdAsync($fleet_id, $squad_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $put_fleets_fleet_id_squads_squad_id_request = null, string $contentType = self::contentTypes['putFleetsFleetIdSquadsSquadId'][0])
     {
         return $this->putFleetsFleetIdSquadsSquadIdAsyncWithHttpInfo($fleet_id, $squad_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $put_fleets_fleet_id_squads_squad_id_request, $contentType)
             ->then(
@@ -4451,16 +4451,16 @@ class FleetsApi
      * @param  int $fleet_id (required)
      * @param  int $squad_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdSquadsSquadIdRequest|null $put_fleets_fleet_id_squads_squad_id_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putFleetsFleetIdSquadsSquadId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function putFleetsFleetIdSquadsSquadIdAsyncWithHttpInfo($fleet_id, $squad_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, $put_fleets_fleet_id_squads_squad_id_request = null, string $contentType = self::contentTypes['putFleetsFleetIdSquadsSquadId'][0])
+    public function putFleetsFleetIdSquadsSquadIdAsyncWithHttpInfo($fleet_id, $squad_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $put_fleets_fleet_id_squads_squad_id_request = null, string $contentType = self::contentTypes['putFleetsFleetIdSquadsSquadId'][0])
     {
         $returnType = 'mixed';
         $request = $this->putFleetsFleetIdSquadsSquadIdRequest($fleet_id, $squad_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $put_fleets_fleet_id_squads_squad_id_request, $contentType);
@@ -4507,16 +4507,16 @@ class FleetsApi
      * @param  int $fleet_id (required)
      * @param  int $squad_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdSquadsSquadIdRequest|null $put_fleets_fleet_id_squads_squad_id_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putFleetsFleetIdSquadsSquadId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function putFleetsFleetIdSquadsSquadIdRequest($fleet_id, $squad_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, $put_fleets_fleet_id_squads_squad_id_request = null, string $contentType = self::contentTypes['putFleetsFleetIdSquadsSquadId'][0])
+    public function putFleetsFleetIdSquadsSquadIdRequest($fleet_id, $squad_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $put_fleets_fleet_id_squads_squad_id_request = null, string $contentType = self::contentTypes['putFleetsFleetIdSquadsSquadId'][0])
     {
 
         // verify the required parameter 'fleet_id' is set
@@ -4563,7 +4563,7 @@ class FleetsApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -4660,9 +4660,9 @@ class FleetsApi
      * @param  int $fleet_id fleet_id (required)
      * @param  int $wing_id wing_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdSquadsSquadIdRequest|null $put_fleets_fleet_id_squads_squad_id_request put_fleets_fleet_id_squads_squad_id_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putFleetsFleetIdWingsWingId'] to see the possible values for this operation
      *
@@ -4670,7 +4670,7 @@ class FleetsApi
      * @throws \InvalidArgumentException
      * @return mixed|\Tkhamez\Eve\API\Model\Error
      */
-    public function putFleetsFleetIdWingsWingId($fleet_id, $wing_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, $put_fleets_fleet_id_squads_squad_id_request = null, string $contentType = self::contentTypes['putFleetsFleetIdWingsWingId'][0])
+    public function putFleetsFleetIdWingsWingId($fleet_id, $wing_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $put_fleets_fleet_id_squads_squad_id_request = null, string $contentType = self::contentTypes['putFleetsFleetIdWingsWingId'][0])
     {
         list($response) = $this->putFleetsFleetIdWingsWingIdWithHttpInfo($fleet_id, $wing_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $put_fleets_fleet_id_squads_squad_id_request, $contentType);
         return $response;
@@ -4684,9 +4684,9 @@ class FleetsApi
      * @param  int $fleet_id (required)
      * @param  int $wing_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdSquadsSquadIdRequest|null $put_fleets_fleet_id_squads_squad_id_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putFleetsFleetIdWingsWingId'] to see the possible values for this operation
      *
@@ -4694,7 +4694,7 @@ class FleetsApi
      * @throws \InvalidArgumentException
      * @return array of mixed|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function putFleetsFleetIdWingsWingIdWithHttpInfo($fleet_id, $wing_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, $put_fleets_fleet_id_squads_squad_id_request = null, string $contentType = self::contentTypes['putFleetsFleetIdWingsWingId'][0])
+    public function putFleetsFleetIdWingsWingIdWithHttpInfo($fleet_id, $wing_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $put_fleets_fleet_id_squads_squad_id_request = null, string $contentType = self::contentTypes['putFleetsFleetIdWingsWingId'][0])
     {
         $request = $this->putFleetsFleetIdWingsWingIdRequest($fleet_id, $wing_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $put_fleets_fleet_id_squads_squad_id_request, $contentType);
 
@@ -4789,16 +4789,16 @@ class FleetsApi
      * @param  int $fleet_id (required)
      * @param  int $wing_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdSquadsSquadIdRequest|null $put_fleets_fleet_id_squads_squad_id_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putFleetsFleetIdWingsWingId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function putFleetsFleetIdWingsWingIdAsync($fleet_id, $wing_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, $put_fleets_fleet_id_squads_squad_id_request = null, string $contentType = self::contentTypes['putFleetsFleetIdWingsWingId'][0])
+    public function putFleetsFleetIdWingsWingIdAsync($fleet_id, $wing_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $put_fleets_fleet_id_squads_squad_id_request = null, string $contentType = self::contentTypes['putFleetsFleetIdWingsWingId'][0])
     {
         return $this->putFleetsFleetIdWingsWingIdAsyncWithHttpInfo($fleet_id, $wing_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $put_fleets_fleet_id_squads_squad_id_request, $contentType)
             ->then(
@@ -4816,16 +4816,16 @@ class FleetsApi
      * @param  int $fleet_id (required)
      * @param  int $wing_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdSquadsSquadIdRequest|null $put_fleets_fleet_id_squads_squad_id_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putFleetsFleetIdWingsWingId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function putFleetsFleetIdWingsWingIdAsyncWithHttpInfo($fleet_id, $wing_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, $put_fleets_fleet_id_squads_squad_id_request = null, string $contentType = self::contentTypes['putFleetsFleetIdWingsWingId'][0])
+    public function putFleetsFleetIdWingsWingIdAsyncWithHttpInfo($fleet_id, $wing_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $put_fleets_fleet_id_squads_squad_id_request = null, string $contentType = self::contentTypes['putFleetsFleetIdWingsWingId'][0])
     {
         $returnType = 'mixed';
         $request = $this->putFleetsFleetIdWingsWingIdRequest($fleet_id, $wing_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $put_fleets_fleet_id_squads_squad_id_request, $contentType);
@@ -4872,16 +4872,16 @@ class FleetsApi
      * @param  int $fleet_id (required)
      * @param  int $wing_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdSquadsSquadIdRequest|null $put_fleets_fleet_id_squads_squad_id_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putFleetsFleetIdWingsWingId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function putFleetsFleetIdWingsWingIdRequest($fleet_id, $wing_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, $put_fleets_fleet_id_squads_squad_id_request = null, string $contentType = self::contentTypes['putFleetsFleetIdWingsWingId'][0])
+    public function putFleetsFleetIdWingsWingIdRequest($fleet_id, $wing_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $put_fleets_fleet_id_squads_squad_id_request = null, string $contentType = self::contentTypes['putFleetsFleetIdWingsWingId'][0])
     {
 
         // verify the required parameter 'fleet_id' is set
@@ -4928,7 +4928,7 @@ class FleetsApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {

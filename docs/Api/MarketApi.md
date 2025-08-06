@@ -45,10 +45,10 @@ $apiInstance = new Tkhamez\Eve\API\Api\MarketApi(
     $config
 );
 $character_id = 56; // int | The ID of the character
-$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
-$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
+$accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$x_tenant = ; // string | The tenant ID for the request.
 
 try {
     $result = $apiInstance->getCharactersCharacterIdOrders($character_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
@@ -64,9 +64,9 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **character_id** | **int**| The ID of the character | |
 | **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
-| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
 
@@ -113,11 +113,11 @@ $apiInstance = new Tkhamez\Eve\API\Api\MarketApi(
     $config
 );
 $character_id = 56; // int | The ID of the character
-$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $page = 56; // int
-$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$x_tenant = ; // string | The tenant ID for the request.
 
 try {
     $result = $apiInstance->getCharactersCharacterIdOrdersHistory($character_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant);
@@ -134,9 +134,9 @@ try {
 | **character_id** | **int**| The ID of the character | |
 | **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **page** | **int**|  | [optional] |
-| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
 
@@ -183,11 +183,11 @@ $apiInstance = new Tkhamez\Eve\API\Api\MarketApi(
     $config
 );
 $corporation_id = 56; // int | The ID of the corporation
-$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $page = 56; // int
-$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$x_tenant = ; // string | The tenant ID for the request.
 
 try {
     $result = $apiInstance->getCorporationsCorporationIdOrders($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant);
@@ -204,9 +204,9 @@ try {
 | **corporation_id** | **int**| The ID of the corporation | |
 | **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **page** | **int**|  | [optional] |
-| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
 
@@ -253,11 +253,11 @@ $apiInstance = new Tkhamez\Eve\API\Api\MarketApi(
     $config
 );
 $corporation_id = 56; // int | The ID of the corporation
-$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $page = 56; // int
-$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$x_tenant = ; // string | The tenant ID for the request.
 
 try {
     $result = $apiInstance->getCorporationsCorporationIdOrdersHistory($corporation_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant);
@@ -274,9 +274,9 @@ try {
 | **corporation_id** | **int**| The ID of the corporation | |
 | **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **page** | **int**|  | [optional] |
-| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
 
@@ -318,10 +318,10 @@ $apiInstance = new Tkhamez\Eve\API\Api\MarketApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
-$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
+$accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$x_tenant = ; // string | The tenant ID for the request.
 
 try {
     $result = $apiInstance->getMarketsGroups($x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
@@ -336,9 +336,9 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
-| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
 
@@ -381,10 +381,10 @@ $apiInstance = new Tkhamez\Eve\API\Api\MarketApi(
     new GuzzleHttp\Client()
 );
 $market_group_id = 56; // int
-$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
-$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
+$accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$x_tenant = ; // string | The tenant ID for the request.
 
 try {
     $result = $apiInstance->getMarketsGroupsMarketGroupId($market_group_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
@@ -400,9 +400,9 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **market_group_id** | **int**|  | |
 | **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
-| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
 
@@ -444,10 +444,10 @@ $apiInstance = new Tkhamez\Eve\API\Api\MarketApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
-$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
+$accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$x_tenant = ; // string | The tenant ID for the request.
 
 try {
     $result = $apiInstance->getMarketsPrices($x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
@@ -462,9 +462,9 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
-| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
 
@@ -508,10 +508,10 @@ $apiInstance = new Tkhamez\Eve\API\Api\MarketApi(
 );
 $region_id = 56; // int
 $type_id = 56; // int
-$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
-$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
+$accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$x_tenant = ; // string | The tenant ID for the request.
 
 try {
     $result = $apiInstance->getMarketsRegionIdHistory($region_id, $type_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
@@ -528,9 +528,9 @@ try {
 | **region_id** | **int**|  | |
 | **type_id** | **int**|  | |
 | **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
-| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
 
@@ -574,12 +574,12 @@ $apiInstance = new Tkhamez\Eve\API\Api\MarketApi(
 );
 $order_type = 'all'; // string
 $region_id = 56; // int
-$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $page = 56; // int
 $type_id = 56; // int
-$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$x_tenant = ; // string | The tenant ID for the request.
 
 try {
     $result = $apiInstance->getMarketsRegionIdOrders($order_type, $region_id, $x_compatibility_date, $page, $type_id, $accept_language, $if_none_match, $x_tenant);
@@ -598,9 +598,9 @@ try {
 | **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **page** | **int**|  | [optional] |
 | **type_id** | **int**|  | [optional] |
-| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
 
@@ -643,11 +643,11 @@ $apiInstance = new Tkhamez\Eve\API\Api\MarketApi(
     new GuzzleHttp\Client()
 );
 $region_id = 56; // int
-$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $page = 56; // int
-$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$x_tenant = ; // string | The tenant ID for the request.
 
 try {
     $result = $apiInstance->getMarketsRegionIdTypes($region_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant);
@@ -664,9 +664,9 @@ try {
 | **region_id** | **int**|  | |
 | **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **page** | **int**|  | [optional] |
-| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
 
@@ -713,11 +713,11 @@ $apiInstance = new Tkhamez\Eve\API\Api\MarketApi(
     $config
 );
 $structure_id = 56; // int
-$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
+$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
 $page = 56; // int
-$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$x_tenant = ; // string | The tenant ID for the request.
 
 try {
     $result = $apiInstance->getMarketsStructuresStructureId($structure_id, $x_compatibility_date, $page, $accept_language, $if_none_match, $x_tenant);
@@ -734,9 +734,9 @@ try {
 | **structure_id** | **int**|  | |
 | **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
 | **page** | **int**|  | [optional] |
-| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
 

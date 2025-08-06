@@ -146,16 +146,16 @@ class UserInterfaceApi
      * @param  bool $clear_other_waypoints clear_other_waypoints (required)
      * @param  int $destination_id destination_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postUiAutopilotWaypoint'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return mixed|\Tkhamez\Eve\API\Model\Error
      */
-    public function postUiAutopilotWaypoint($add_to_beginning, $clear_other_waypoints, $destination_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['postUiAutopilotWaypoint'][0])
+    public function postUiAutopilotWaypoint($add_to_beginning, $clear_other_waypoints, $destination_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['postUiAutopilotWaypoint'][0])
     {
         list($response) = $this->postUiAutopilotWaypointWithHttpInfo($add_to_beginning, $clear_other_waypoints, $destination_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
         return $response;
@@ -170,16 +170,16 @@ class UserInterfaceApi
      * @param  bool $clear_other_waypoints (required)
      * @param  int $destination_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postUiAutopilotWaypoint'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of mixed|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function postUiAutopilotWaypointWithHttpInfo($add_to_beginning, $clear_other_waypoints, $destination_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['postUiAutopilotWaypoint'][0])
+    public function postUiAutopilotWaypointWithHttpInfo($add_to_beginning, $clear_other_waypoints, $destination_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['postUiAutopilotWaypoint'][0])
     {
         $request = $this->postUiAutopilotWaypointRequest($add_to_beginning, $clear_other_waypoints, $destination_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
 
@@ -275,15 +275,15 @@ class UserInterfaceApi
      * @param  bool $clear_other_waypoints (required)
      * @param  int $destination_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postUiAutopilotWaypoint'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postUiAutopilotWaypointAsync($add_to_beginning, $clear_other_waypoints, $destination_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['postUiAutopilotWaypoint'][0])
+    public function postUiAutopilotWaypointAsync($add_to_beginning, $clear_other_waypoints, $destination_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['postUiAutopilotWaypoint'][0])
     {
         return $this->postUiAutopilotWaypointAsyncWithHttpInfo($add_to_beginning, $clear_other_waypoints, $destination_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType)
             ->then(
@@ -302,15 +302,15 @@ class UserInterfaceApi
      * @param  bool $clear_other_waypoints (required)
      * @param  int $destination_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postUiAutopilotWaypoint'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postUiAutopilotWaypointAsyncWithHttpInfo($add_to_beginning, $clear_other_waypoints, $destination_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['postUiAutopilotWaypoint'][0])
+    public function postUiAutopilotWaypointAsyncWithHttpInfo($add_to_beginning, $clear_other_waypoints, $destination_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['postUiAutopilotWaypoint'][0])
     {
         $returnType = 'mixed';
         $request = $this->postUiAutopilotWaypointRequest($add_to_beginning, $clear_other_waypoints, $destination_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
@@ -358,15 +358,15 @@ class UserInterfaceApi
      * @param  bool $clear_other_waypoints (required)
      * @param  int $destination_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postUiAutopilotWaypoint'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function postUiAutopilotWaypointRequest($add_to_beginning, $clear_other_waypoints, $destination_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['postUiAutopilotWaypoint'][0])
+    public function postUiAutopilotWaypointRequest($add_to_beginning, $clear_other_waypoints, $destination_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['postUiAutopilotWaypoint'][0])
     {
 
         // verify the required parameter 'add_to_beginning' is set
@@ -446,7 +446,7 @@ class UserInterfaceApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -519,16 +519,16 @@ class UserInterfaceApi
      *
      * @param  int $contract_id contract_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postUiOpenwindowContract'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return mixed|\Tkhamez\Eve\API\Model\Error
      */
-    public function postUiOpenwindowContract($contract_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['postUiOpenwindowContract'][0])
+    public function postUiOpenwindowContract($contract_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['postUiOpenwindowContract'][0])
     {
         list($response) = $this->postUiOpenwindowContractWithHttpInfo($contract_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
         return $response;
@@ -541,16 +541,16 @@ class UserInterfaceApi
      *
      * @param  int $contract_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postUiOpenwindowContract'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of mixed|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function postUiOpenwindowContractWithHttpInfo($contract_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['postUiOpenwindowContract'][0])
+    public function postUiOpenwindowContractWithHttpInfo($contract_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['postUiOpenwindowContract'][0])
     {
         $request = $this->postUiOpenwindowContractRequest($contract_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
 
@@ -644,15 +644,15 @@ class UserInterfaceApi
      *
      * @param  int $contract_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postUiOpenwindowContract'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postUiOpenwindowContractAsync($contract_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['postUiOpenwindowContract'][0])
+    public function postUiOpenwindowContractAsync($contract_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['postUiOpenwindowContract'][0])
     {
         return $this->postUiOpenwindowContractAsyncWithHttpInfo($contract_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType)
             ->then(
@@ -669,15 +669,15 @@ class UserInterfaceApi
      *
      * @param  int $contract_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postUiOpenwindowContract'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postUiOpenwindowContractAsyncWithHttpInfo($contract_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['postUiOpenwindowContract'][0])
+    public function postUiOpenwindowContractAsyncWithHttpInfo($contract_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['postUiOpenwindowContract'][0])
     {
         $returnType = 'mixed';
         $request = $this->postUiOpenwindowContractRequest($contract_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
@@ -723,15 +723,15 @@ class UserInterfaceApi
      *
      * @param  int $contract_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postUiOpenwindowContract'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function postUiOpenwindowContractRequest($contract_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['postUiOpenwindowContract'][0])
+    public function postUiOpenwindowContractRequest($contract_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['postUiOpenwindowContract'][0])
     {
 
         // verify the required parameter 'contract_id' is set
@@ -779,7 +779,7 @@ class UserInterfaceApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -852,16 +852,16 @@ class UserInterfaceApi
      *
      * @param  int $target_id target_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postUiOpenwindowInformation'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return mixed|\Tkhamez\Eve\API\Model\Error
      */
-    public function postUiOpenwindowInformation($target_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['postUiOpenwindowInformation'][0])
+    public function postUiOpenwindowInformation($target_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['postUiOpenwindowInformation'][0])
     {
         list($response) = $this->postUiOpenwindowInformationWithHttpInfo($target_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
         return $response;
@@ -874,16 +874,16 @@ class UserInterfaceApi
      *
      * @param  int $target_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postUiOpenwindowInformation'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of mixed|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function postUiOpenwindowInformationWithHttpInfo($target_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['postUiOpenwindowInformation'][0])
+    public function postUiOpenwindowInformationWithHttpInfo($target_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['postUiOpenwindowInformation'][0])
     {
         $request = $this->postUiOpenwindowInformationRequest($target_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
 
@@ -977,15 +977,15 @@ class UserInterfaceApi
      *
      * @param  int $target_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postUiOpenwindowInformation'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postUiOpenwindowInformationAsync($target_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['postUiOpenwindowInformation'][0])
+    public function postUiOpenwindowInformationAsync($target_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['postUiOpenwindowInformation'][0])
     {
         return $this->postUiOpenwindowInformationAsyncWithHttpInfo($target_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType)
             ->then(
@@ -1002,15 +1002,15 @@ class UserInterfaceApi
      *
      * @param  int $target_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postUiOpenwindowInformation'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postUiOpenwindowInformationAsyncWithHttpInfo($target_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['postUiOpenwindowInformation'][0])
+    public function postUiOpenwindowInformationAsyncWithHttpInfo($target_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['postUiOpenwindowInformation'][0])
     {
         $returnType = 'mixed';
         $request = $this->postUiOpenwindowInformationRequest($target_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
@@ -1056,15 +1056,15 @@ class UserInterfaceApi
      *
      * @param  int $target_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postUiOpenwindowInformation'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function postUiOpenwindowInformationRequest($target_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['postUiOpenwindowInformation'][0])
+    public function postUiOpenwindowInformationRequest($target_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['postUiOpenwindowInformation'][0])
     {
 
         // verify the required parameter 'target_id' is set
@@ -1112,7 +1112,7 @@ class UserInterfaceApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -1185,16 +1185,16 @@ class UserInterfaceApi
      *
      * @param  int $type_id type_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postUiOpenwindowMarketdetails'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return mixed|\Tkhamez\Eve\API\Model\Error
      */
-    public function postUiOpenwindowMarketdetails($type_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['postUiOpenwindowMarketdetails'][0])
+    public function postUiOpenwindowMarketdetails($type_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['postUiOpenwindowMarketdetails'][0])
     {
         list($response) = $this->postUiOpenwindowMarketdetailsWithHttpInfo($type_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
         return $response;
@@ -1207,16 +1207,16 @@ class UserInterfaceApi
      *
      * @param  int $type_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postUiOpenwindowMarketdetails'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of mixed|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function postUiOpenwindowMarketdetailsWithHttpInfo($type_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['postUiOpenwindowMarketdetails'][0])
+    public function postUiOpenwindowMarketdetailsWithHttpInfo($type_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['postUiOpenwindowMarketdetails'][0])
     {
         $request = $this->postUiOpenwindowMarketdetailsRequest($type_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
 
@@ -1310,15 +1310,15 @@ class UserInterfaceApi
      *
      * @param  int $type_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postUiOpenwindowMarketdetails'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postUiOpenwindowMarketdetailsAsync($type_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['postUiOpenwindowMarketdetails'][0])
+    public function postUiOpenwindowMarketdetailsAsync($type_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['postUiOpenwindowMarketdetails'][0])
     {
         return $this->postUiOpenwindowMarketdetailsAsyncWithHttpInfo($type_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType)
             ->then(
@@ -1335,15 +1335,15 @@ class UserInterfaceApi
      *
      * @param  int $type_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postUiOpenwindowMarketdetails'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postUiOpenwindowMarketdetailsAsyncWithHttpInfo($type_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['postUiOpenwindowMarketdetails'][0])
+    public function postUiOpenwindowMarketdetailsAsyncWithHttpInfo($type_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['postUiOpenwindowMarketdetails'][0])
     {
         $returnType = 'mixed';
         $request = $this->postUiOpenwindowMarketdetailsRequest($type_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $contentType);
@@ -1389,15 +1389,15 @@ class UserInterfaceApi
      *
      * @param  int $type_id (required)
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postUiOpenwindowMarketdetails'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function postUiOpenwindowMarketdetailsRequest($type_id, $x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, string $contentType = self::contentTypes['postUiOpenwindowMarketdetails'][0])
+    public function postUiOpenwindowMarketdetailsRequest($type_id, $x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', string $contentType = self::contentTypes['postUiOpenwindowMarketdetails'][0])
     {
 
         // verify the required parameter 'type_id' is set
@@ -1445,7 +1445,7 @@ class UserInterfaceApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {
@@ -1517,9 +1517,9 @@ class UserInterfaceApi
      * Open New Mail Window
      *
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  \Tkhamez\Eve\API\Model\PostUiOpenwindowNewmailRequest|null $post_ui_openwindow_newmail_request post_ui_openwindow_newmail_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postUiOpenwindowNewmail'] to see the possible values for this operation
      *
@@ -1527,7 +1527,7 @@ class UserInterfaceApi
      * @throws \InvalidArgumentException
      * @return mixed|\Tkhamez\Eve\API\Model\Error
      */
-    public function postUiOpenwindowNewmail($x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, $post_ui_openwindow_newmail_request = null, string $contentType = self::contentTypes['postUiOpenwindowNewmail'][0])
+    public function postUiOpenwindowNewmail($x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $post_ui_openwindow_newmail_request = null, string $contentType = self::contentTypes['postUiOpenwindowNewmail'][0])
     {
         list($response) = $this->postUiOpenwindowNewmailWithHttpInfo($x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $post_ui_openwindow_newmail_request, $contentType);
         return $response;
@@ -1539,9 +1539,9 @@ class UserInterfaceApi
      * Open New Mail Window
      *
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  \Tkhamez\Eve\API\Model\PostUiOpenwindowNewmailRequest|null $post_ui_openwindow_newmail_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postUiOpenwindowNewmail'] to see the possible values for this operation
      *
@@ -1549,7 +1549,7 @@ class UserInterfaceApi
      * @throws \InvalidArgumentException
      * @return array of mixed|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function postUiOpenwindowNewmailWithHttpInfo($x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, $post_ui_openwindow_newmail_request = null, string $contentType = self::contentTypes['postUiOpenwindowNewmail'][0])
+    public function postUiOpenwindowNewmailWithHttpInfo($x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $post_ui_openwindow_newmail_request = null, string $contentType = self::contentTypes['postUiOpenwindowNewmail'][0])
     {
         $request = $this->postUiOpenwindowNewmailRequest($x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $post_ui_openwindow_newmail_request, $contentType);
 
@@ -1642,16 +1642,16 @@ class UserInterfaceApi
      * Open New Mail Window
      *
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  \Tkhamez\Eve\API\Model\PostUiOpenwindowNewmailRequest|null $post_ui_openwindow_newmail_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postUiOpenwindowNewmail'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postUiOpenwindowNewmailAsync($x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, $post_ui_openwindow_newmail_request = null, string $contentType = self::contentTypes['postUiOpenwindowNewmail'][0])
+    public function postUiOpenwindowNewmailAsync($x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $post_ui_openwindow_newmail_request = null, string $contentType = self::contentTypes['postUiOpenwindowNewmail'][0])
     {
         return $this->postUiOpenwindowNewmailAsyncWithHttpInfo($x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $post_ui_openwindow_newmail_request, $contentType)
             ->then(
@@ -1667,16 +1667,16 @@ class UserInterfaceApi
      * Open New Mail Window
      *
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  \Tkhamez\Eve\API\Model\PostUiOpenwindowNewmailRequest|null $post_ui_openwindow_newmail_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postUiOpenwindowNewmail'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postUiOpenwindowNewmailAsyncWithHttpInfo($x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, $post_ui_openwindow_newmail_request = null, string $contentType = self::contentTypes['postUiOpenwindowNewmail'][0])
+    public function postUiOpenwindowNewmailAsyncWithHttpInfo($x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $post_ui_openwindow_newmail_request = null, string $contentType = self::contentTypes['postUiOpenwindowNewmail'][0])
     {
         $returnType = 'mixed';
         $request = $this->postUiOpenwindowNewmailRequest($x_compatibility_date, $accept_language, $if_none_match, $x_tenant, $post_ui_openwindow_newmail_request, $contentType);
@@ -1721,16 +1721,16 @@ class UserInterfaceApi
      * Create request for operation 'postUiOpenwindowNewmail'
      *
      * @param  \DateTime $x_compatibility_date The compatibility date for the request. (required)
-     * @param  string|null $accept_language The language to use for the response. Defaults to &#39;en&#39;. (optional)
+     * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
-     * @param  string|null $x_tenant The tenant ID for the request. Defaults to &#39;tranquility&#39;. (optional)
+     * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
      * @param  \Tkhamez\Eve\API\Model\PostUiOpenwindowNewmailRequest|null $post_ui_openwindow_newmail_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postUiOpenwindowNewmail'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function postUiOpenwindowNewmailRequest($x_compatibility_date, $accept_language = null, $if_none_match = null, $x_tenant = null, $post_ui_openwindow_newmail_request = null, string $contentType = self::contentTypes['postUiOpenwindowNewmail'][0])
+    public function postUiOpenwindowNewmailRequest($x_compatibility_date, $accept_language = 'en', $if_none_match = null, $x_tenant = 'tranquility', $post_ui_openwindow_newmail_request = null, string $contentType = self::contentTypes['postUiOpenwindowNewmail'][0])
     {
 
         // verify the required parameter 'x_compatibility_date' is set
@@ -1763,7 +1763,7 @@ class UserInterfaceApi
         }
         // header params
         if ($x_compatibility_date !== null) {
-            $headerParams['X-Compatibility-Date'] = $x_compatibility_date->format('Y-m-d');
+            $headerParams['X-Compatibility-Date'] = ObjectSerializer::toHeaderValue($x_compatibility_date);
         }
         // header params
         if ($x_tenant !== null) {

@@ -34,10 +34,10 @@ $apiInstance = new Tkhamez\Eve\API\Api\DogmaApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
-$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
+$accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$x_tenant = ; // string | The tenant ID for the request.
 
 try {
     $result = $apiInstance->getDogmaAttributes($x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
@@ -52,9 +52,9 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
-| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
 
@@ -97,10 +97,10 @@ $apiInstance = new Tkhamez\Eve\API\Api\DogmaApi(
     new GuzzleHttp\Client()
 );
 $attribute_id = 56; // int
-$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
-$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
+$accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$x_tenant = ; // string | The tenant ID for the request.
 
 try {
     $result = $apiInstance->getDogmaAttributesAttributeId($attribute_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
@@ -116,9 +116,9 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **attribute_id** | **int**|  | |
 | **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
-| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
 
@@ -162,10 +162,10 @@ $apiInstance = new Tkhamez\Eve\API\Api\DogmaApi(
 );
 $item_id = 56; // int
 $type_id = 56; // int
-$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
-$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
+$accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$x_tenant = ; // string | The tenant ID for the request.
 
 try {
     $result = $apiInstance->getDogmaDynamicItemsTypeIdItemId($item_id, $type_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
@@ -182,9 +182,9 @@ try {
 | **item_id** | **int**|  | |
 | **type_id** | **int**|  | |
 | **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
-| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
 
@@ -226,10 +226,10 @@ $apiInstance = new Tkhamez\Eve\API\Api\DogmaApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
-$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
+$accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$x_tenant = ; // string | The tenant ID for the request.
 
 try {
     $result = $apiInstance->getDogmaEffects($x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
@@ -244,9 +244,9 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
-| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
 
@@ -289,10 +289,10 @@ $apiInstance = new Tkhamez\Eve\API\Api\DogmaApi(
     new GuzzleHttp\Client()
 );
 $effect_id = 56; // int
-$x_compatibility_date = 2020-01-01; // \DateTime | The compatibility date for the request.
-$accept_language = en; // string | The language to use for the response. Defaults to 'en'.
+$x_compatibility_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | The compatibility date for the request.
+$accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_tenant = tranquility; // string | The tenant ID for the request. Defaults to 'tranquility'.
+$x_tenant = ; // string | The tenant ID for the request.
 
 try {
     $result = $apiInstance->getDogmaEffectsEffectId($effect_id, $x_compatibility_date, $accept_language, $if_none_match, $x_tenant);
@@ -308,9 +308,9 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **effect_id** | **int**|  | |
 | **x_compatibility_date** | **\DateTime**| The compatibility date for the request. | |
-| **accept_language** | **string**| The language to use for the response. Defaults to &#39;en&#39;. | [optional] |
+| **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_tenant** | **string**| The tenant ID for the request. Defaults to &#39;tranquility&#39;. | [optional] |
+| **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
 
