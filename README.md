@@ -41,6 +41,11 @@ for generator library changes see
 
 ### Notable changes other than API updates
 
+#### 4.20200101.0
+
+- The parameter $x_compatibility_date is now optional and has a default value. This also changes 
+  the order of the parameters.
+
 #### 2.20250802.0
 
 - Switched to the new versioning scheme.
