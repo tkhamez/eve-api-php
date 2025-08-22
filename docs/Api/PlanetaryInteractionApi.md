@@ -156,7 +156,7 @@ getCorporationsCorporationIdCustomsOffices($corporation_id, $page, $accept_langu
 
 List corporation customs offices
 
-List customs offices owned by a corporation  Requires one of the following EVE corporation role(s): Director
+List customs offices owned by a corporation
 
 ### Example
 

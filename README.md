@@ -16,8 +16,6 @@ found at https://developers.eveonline.com/api-explorer. It is generated for a sp
 (compatibility data), which is the only date that must be used for the X-Compatibility-Date header 
 (the client sends it automatically). This date is included in the version number.
 
-_**Please note that the ESI OpenAPI 3 definition is still in beta status, so things can change!**_
-
 See the [CHANGELOG](CHANGELOG.md) for an explanation of the versioning scheme and a list of changes.
 
 ## Installation & Usage
@@ -33,7 +31,7 @@ To install the bindings via [Composer](https://getcomposer.org/), add the follow
 ```json
 {
   "require": {
-    "tkhamez/eve-api": "^4.0.0"
+    "tkhamez/eve-api": "^5.0.0"
   }
 }
 ```
@@ -554,6 +552,7 @@ Authentication schemes defined for the API:
     - **esi-corporations.read_facilities.v1**: esi-corporations.read_facilities.v1
     - **esi-corporations.read_fw_stats.v1**: esi-corporations.read_fw_stats.v1
     - **esi-corporations.read_medals.v1**: esi-corporations.read_medals.v1
+    - **esi-corporations.read_projects.v1**: esi-corporations.read_projects.v1
     - **esi-corporations.read_standings.v1**: esi-corporations.read_standings.v1
     - **esi-corporations.read_starbases.v1**: esi-corporations.read_starbases.v1
     - **esi-corporations.read_structures.v1**: esi-corporations.read_structures.v1

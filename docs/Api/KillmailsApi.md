@@ -87,7 +87,7 @@ getCorporationsCorporationIdKillmailsRecent($corporation_id, $page, $accept_lang
 
 Get a corporation's recent kills and losses
 
-Get a list of a corporation's kills and losses going back 90 days  Requires one of the following EVE corporation role(s): Director
+Get a list of a corporation's kills and losses going back 90 days
 
 ### Example
 

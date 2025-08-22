@@ -228,7 +228,7 @@ getCorporationsCorporationIdWallets($corporation_id, $accept_language, $if_none_
 
 Returns a corporation's wallet balance
 
-Get a corporation's wallets  Requires one of the following EVE corporation role(s): Accountant, Junior_Accountant
+Get a corporation's wallets
 
 ### Example
 
@@ -296,7 +296,7 @@ getCorporationsCorporationIdWalletsDivisionJournal($corporation_id, $division, $
 
 Get corporation wallet journal
 
-Retrieve the given corporation's wallet journal for the given division going 30 days back  Requires one of the following EVE corporation role(s): Accountant, Junior_Accountant
+Retrieve the given corporation's wallet journal for the given division going 30 days back
 
 ### Example
 
@@ -368,7 +368,7 @@ getCorporationsCorporationIdWalletsDivisionTransactions($corporation_id, $divisi
 
 Get corporation wallet transactions
 
-Get wallet transactions of a corporation  Requires one of the following EVE corporation role(s): Accountant, Junior_Accountant
+Get wallet transactions of a corporation
 
 ### Example
 

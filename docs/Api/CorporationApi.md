@@ -164,7 +164,7 @@ getCorporationsCorporationIdBlueprints($corporation_id, $page, $accept_language,
 
 Get corporation blueprints
 
-Returns a list of blueprints the corporation owns  Requires one of the following EVE corporation role(s): Director
+Returns a list of blueprints the corporation owns
 
 ### Example
 
@@ -234,7 +234,7 @@ getCorporationsCorporationIdContainersLogs($corporation_id, $page, $accept_langu
 
 Get all corporation ALSC logs
 
-Returns logs recorded in the past seven days from all audit log secure containers (ALSC) owned by a given corporation  Requires one of the following EVE corporation role(s): Director
+Returns logs recorded in the past seven days from all audit log secure containers (ALSC) owned by a given corporation
 
 ### Example
 
@@ -304,7 +304,7 @@ getCorporationsCorporationIdDivisions($corporation_id, $accept_language, $if_non
 
 Get corporation divisions
 
-Return corporation hangar and wallet division names, only show if a division is not using the default name  Requires one of the following EVE corporation role(s): Director
+Return corporation hangar and wallet division names, only show if a division is not using the default name
 
 ### Example
 
@@ -372,7 +372,7 @@ getCorporationsCorporationIdFacilities($corporation_id, $accept_language, $if_no
 
 Get corporation facilities
 
-Return a corporation's facilities  Requires one of the following EVE corporation role(s): Factory_Manager
+Return a corporation's facilities
 
 ### Example
 
@@ -574,7 +574,7 @@ getCorporationsCorporationIdMedalsIssued($corporation_id, $page, $accept_languag
 
 Get corporation issued medals
 
-Returns medals issued by a corporation  Requires one of the following EVE corporation role(s): Director
+Returns medals issued by a corporation
 
 ### Example
 
@@ -712,7 +712,7 @@ getCorporationsCorporationIdMembersLimit($corporation_id, $accept_language, $if_
 
 Get corporation member limit
 
-Return a corporation's member limit, not including CEO himself  Requires one of the following EVE corporation role(s): Director
+Return a corporation's member limit, not including CEO himself
 
 ### Example
 
@@ -780,7 +780,7 @@ getCorporationsCorporationIdMembersTitles($corporation_id, $accept_language, $if
 
 Get corporation's members' titles
 
-Returns a corporation's members' titles  Requires one of the following EVE corporation role(s): Director
+Returns a corporation's members' titles
 
 ### Example
 
@@ -848,7 +848,7 @@ getCorporationsCorporationIdMembertracking($corporation_id, $accept_language, $i
 
 Track corporation members
 
-Returns additional information about a corporation's members which helps tracking their activities  Requires one of the following EVE corporation role(s): Director
+Returns additional information about a corporation's members which helps tracking their activities
 
 ### Example
 
@@ -984,7 +984,7 @@ getCorporationsCorporationIdRolesHistory($corporation_id, $page, $accept_languag
 
 Get corporation member roles history
 
-Return how roles have changed for a coporation's members, up to a month  Requires one of the following EVE corporation role(s): Director
+Return how roles have changed for a coporation's members, up to a month
 
 ### Example
 
@@ -1054,7 +1054,7 @@ getCorporationsCorporationIdShareholders($corporation_id, $page, $accept_languag
 
 Get corporation shareholders
 
-Return the current shareholders of a corporation.  Requires one of the following EVE corporation role(s): Director
+Return the current shareholders of a corporation.
 
 ### Example
 
@@ -1194,7 +1194,7 @@ getCorporationsCorporationIdStarbases($corporation_id, $page, $accept_language, 
 
 Get corporation starbases (POSes)
 
-Returns list of corporation starbases (POSes)  Requires one of the following EVE corporation role(s): Director
+Returns list of corporation starbases (POSes)
 
 ### Example
 
@@ -1264,7 +1264,7 @@ getCorporationsCorporationIdStarbasesStarbaseId($corporation_id, $starbase_id, $
 
 Get starbase (POS) detail
 
-Returns various settings and fuels of a starbase (POS)  Requires one of the following EVE corporation role(s): Director
+Returns various settings and fuels of a starbase (POS)
 
 ### Example
 
@@ -1336,7 +1336,7 @@ getCorporationsCorporationIdStructures($corporation_id, $page, $accept_language,
 
 Get corporation structures
 
-Get a list of corporation structures. This route's version includes the changes to structures detailed in this blog: https://www.eveonline.com/article/upwell-2.0-structures-changes-coming-on-february-13th  Requires one of the following EVE corporation role(s): Station_Manager
+Get a list of corporation structures. This route's version includes the changes to structures detailed in this blog: https://www.eveonline.com/article/upwell-2.0-structures-changes-coming-on-february-13th
 
 ### Example
 
@@ -1406,7 +1406,7 @@ getCorporationsCorporationIdTitles($corporation_id, $accept_language, $if_none_m
 
 Get corporation titles
 
-Returns a corporation's titles  Requires one of the following EVE corporation role(s): Director
+Returns a corporation's titles
 
 ### Example
 

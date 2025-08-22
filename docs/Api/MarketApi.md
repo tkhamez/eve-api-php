@@ -163,7 +163,7 @@ getCorporationsCorporationIdOrders($corporation_id, $page, $accept_language, $if
 
 List open orders from a corporation
 
-List open market orders placed on behalf of a corporation  Requires one of the following EVE corporation role(s): Accountant, Trader
+List open market orders placed on behalf of a corporation
 
 ### Example
 
@@ -233,7 +233,7 @@ getCorporationsCorporationIdOrdersHistory($corporation_id, $page, $accept_langua
 
 List historical orders from a corporation
 
-List cancelled and expired market orders placed on behalf of a corporation up to 90 days in the past.  Requires one of the following EVE corporation role(s): Accountant, Trader
+List cancelled and expired market orders placed on behalf of a corporation up to 90 days in the past.
 
 ### Example
 

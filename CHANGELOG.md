@@ -13,6 +13,10 @@ For generator library changes see https://github.com/OpenAPITools/openapi-genera
 
 ## Notable changes other than API updates
 
+### 5.20200101.0
+
+- The OpenAPI definition is now stable (I think).
+
 ### 4.20200101.0
 
 Beta status.

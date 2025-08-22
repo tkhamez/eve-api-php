@@ -162,7 +162,7 @@ getCorporationCorporationIdMiningExtractions($corporation_id, $page, $accept_lan
 
 Moon extraction timers
 
-Extraction timers for all moon chunks being extracted by refineries belonging to a corporation.  Requires one of the following EVE corporation role(s): Station_Manager
+Extraction timers for all moon chunks being extracted by refineries belonging to a corporation.
 
 ### Example
 
@@ -232,7 +232,7 @@ getCorporationCorporationIdMiningObservers($corporation_id, $page, $accept_langu
 
 Corporation mining observers
 
-Paginated list of all entities capable of observing and recording mining for a corporation  Requires one of the following EVE corporation role(s): Accountant
+Paginated list of all entities capable of observing and recording mining for a corporation
 
 ### Example
 
@@ -302,7 +302,7 @@ getCorporationCorporationIdMiningObserversObserverId($corporation_id, $observer_
 
 Observed corporation mining
 
-Paginated record of all mining seen by an observer  Requires one of the following EVE corporation role(s): Accountant
+Paginated record of all mining seen by an observer
 
 ### Example
 
@@ -374,7 +374,7 @@ getCorporationsCorporationIdIndustryJobs($corporation_id, $include_completed, $p
 
 List corporation industry jobs
 
-List industry jobs run by a corporation  Requires one of the following EVE corporation role(s): Factory_Manager
+List industry jobs run by a corporation
 
 ### Example
 

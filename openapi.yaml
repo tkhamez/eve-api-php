@@ -256,7 +256,6 @@ components:
               - AssetSafety
               - AutoFit
               - BoosterBay
-              - CapsuleerDeliveries
               - Cargo
               - CorporationGoalDeliveries
               - CorpseBay
@@ -2830,7 +2829,6 @@ components:
               - agent_security_services
               - agent_services_rendered
               - agents_preward
-              - air_career_program_reward
               - alliance_maintainance_fee
               - alliance_registration_fee
               - allignment_based_gate_toll
@@ -2904,14 +2902,7 @@ components:
               - flux_tax
               - flux_ticket_repayment
               - flux_ticket_sale
-              - freelance_jobs_broadcasting_fee
-              - freelance_jobs_duration_fee
-              - freelance_jobs_escrow_refund
-              - freelance_jobs_reward
-              - freelance_jobs_reward_corporation_tax
-              - freelance_jobs_reward_escrow
               - gm_cash_transfer
-              - gm_plex_fee_refund
               - industry_job_tax
               - infrastructure_hub_maintenance
               - inheritance
@@ -2960,7 +2951,6 @@ components:
               - security_processing_fee
               - shares
               - skill_purchase
-              - skyhook_claim_fee
               - sovereignity_bill
               - store_purchase
               - store_purchase_refund
@@ -3317,7 +3307,6 @@ components:
               - Booster
               - BoosterBay
               - Capsule
-              - CapsuleerDeliveries
               - Cargo
               - CorpDeliveries
               - CorpSAG1
@@ -3518,7 +3507,6 @@ components:
               - Booster
               - BoosterBay
               - Capsule
-              - CapsuleerDeliveries
               - Cargo
               - CorpDeliveries
               - CorpSAG1
@@ -3752,7 +3740,6 @@ components:
               - Booster
               - BoosterBay
               - Capsule
-              - CapsuleerDeliveries
               - Cargo
               - CorpDeliveries
               - CorpSAG1
@@ -6235,7 +6222,6 @@ components:
               - agent_security_services
               - agent_services_rendered
               - agents_preward
-              - air_career_program_reward
               - alliance_maintainance_fee
               - alliance_registration_fee
               - allignment_based_gate_toll
@@ -6309,14 +6295,7 @@ components:
               - flux_tax
               - flux_ticket_repayment
               - flux_ticket_sale
-              - freelance_jobs_broadcasting_fee
-              - freelance_jobs_duration_fee
-              - freelance_jobs_escrow_refund
-              - freelance_jobs_reward
-              - freelance_jobs_reward_corporation_tax
-              - freelance_jobs_reward_escrow
               - gm_cash_transfer
-              - gm_plex_fee_refund
               - industry_job_tax
               - infrastructure_hub_maintenance
               - inheritance
@@ -6365,7 +6344,6 @@ components:
               - security_processing_fee
               - shares
               - skill_purchase
-              - skyhook_claim_fee
               - sovereignity_bill
               - store_purchase
               - store_purchase_refund
@@ -7827,6 +7805,13 @@ components:
         format: int64
         type: integer
       type: array
+    ShipTreeGroupID:
+      description: Ship tree group identifier.
+      examples:
+        - 1559
+      format: int64
+      type: integer
+      x-common-model: "true"
     SolarSystemID:
       examples:
         - 30000001
@@ -9220,6 +9205,7 @@ components:
             esi-corporations.read_facilities.v1: esi-corporations.read_facilities.v1
             esi-corporations.read_fw_stats.v1: esi-corporations.read_fw_stats.v1
             esi-corporations.read_medals.v1: esi-corporations.read_medals.v1
+            esi-corporations.read_projects.v1: esi-corporations.read_projects.v1
             esi-corporations.read_standings.v1: esi-corporations.read_standings.v1
             esi-corporations.read_starbases.v1: esi-corporations.read_starbases.v1
             esi-corporations.read_structures.v1: esi-corporations.read_structures.v1
@@ -9264,7 +9250,7 @@ info:
     name: EVE Developer License
     url: https://developers.eveonline.com/license-agreement
   termsOfService: https://support.eveonline.com/hc/en-us/articles/8414770561948-EVE-Online-Terms-of-Service
-  title: EVE Sandbox Ingress (ESI) - tranquility
+  title: EVE Stable Infrastructure (ESI) - tranquility
   version: "2020-01-01"
 openapi: 3.1.0
 paths:
@@ -12916,10 +12902,7 @@ paths:
       x-compatibility-date: "2020-01-01"
   /corporation/{corporation_id}/mining/extractions:
     get:
-      description: |-
-        Extraction timers for all moon chunks being extracted by refineries belonging to a corporation.
-
-        Requires one of the following EVE corporation role(s): Station_Manager
+      description: Extraction timers for all moon chunks being extracted by refineries belonging to a corporation.
       operationId: GetCorporationCorporationIdMiningExtractions
       parameters:
         - description: The ID of the corporation
@@ -12976,10 +12959,7 @@ paths:
         - Station_Manager
   /corporation/{corporation_id}/mining/observers:
     get:
-      description: |-
-        Paginated list of all entities capable of observing and recording mining for a corporation
-
-        Requires one of the following EVE corporation role(s): Accountant
+      description: Paginated list of all entities capable of observing and recording mining for a corporation
       operationId: GetCorporationCorporationIdMiningObservers
       parameters:
         - description: The ID of the corporation
@@ -13036,10 +13016,7 @@ paths:
         - Accountant
   /corporation/{corporation_id}/mining/observers/{observer_id}:
     get:
-      description: |-
-        Paginated record of all mining seen by an observer
-
-        Requires one of the following EVE corporation role(s): Accountant
+      description: Paginated record of all mining seen by an observer
       operationId: GetCorporationCorporationIdMiningObserversObserverId
       parameters:
         - description: The ID of the corporation
@@ -13219,10 +13196,7 @@ paths:
       x-compatibility-date: "2020-01-01"
   /corporations/{corporation_id}/assets:
     get:
-      description: |-
-        Return a list of the corporation assets
-
-        Requires one of the following EVE corporation role(s): Director
+      description: Return a list of the corporation assets
       operationId: GetCorporationsCorporationIdAssets
       parameters:
         - description: The ID of the corporation
@@ -13279,10 +13253,7 @@ paths:
         - Director
   /corporations/{corporation_id}/assets/locations:
     post:
-      description: |-
-        Return locations for a set of item ids, which you can get from corporation assets endpoint. Coordinates for items in hangars or stations are set to (0,0,0)
-
-        Requires one of the following EVE corporation role(s): Director
+      description: Return locations for a set of item ids, which you can get from corporation assets endpoint. Coordinates for items in hangars or stations are set to (0,0,0)
       operationId: PostCorporationsCorporationIdAssetsLocations
       parameters:
         - description: The ID of the corporation
@@ -13338,10 +13309,7 @@ paths:
         - Director
   /corporations/{corporation_id}/assets/names:
     post:
-      description: |-
-        Return names for a set of item ids, which you can get from corporation assets endpoint. Only valid for items that can customize names, like containers or ships
-
-        Requires one of the following EVE corporation role(s): Director
+      description: Return names for a set of item ids, which you can get from corporation assets endpoint. Only valid for items that can customize names, like containers or ships
       operationId: PostCorporationsCorporationIdAssetsNames
       parameters:
         - description: The ID of the corporation
@@ -13397,10 +13365,7 @@ paths:
         - Director
   /corporations/{corporation_id}/blueprints:
     get:
-      description: |-
-        Returns a list of blueprints the corporation owns
-
-        Requires one of the following EVE corporation role(s): Director
+      description: Returns a list of blueprints the corporation owns
       operationId: GetCorporationsCorporationIdBlueprints
       parameters:
         - description: The ID of the corporation
@@ -13555,10 +13520,7 @@ paths:
       x-compatibility-date: "2020-01-01"
   /corporations/{corporation_id}/containers/logs:
     get:
-      description: |-
-        Returns logs recorded in the past seven days from all audit log secure containers (ALSC) owned by a given corporation
-
-        Requires one of the following EVE corporation role(s): Director
+      description: Returns logs recorded in the past seven days from all audit log secure containers (ALSC) owned by a given corporation
       operationId: GetCorporationsCorporationIdContainersLogs
       parameters:
         - description: The ID of the corporation
@@ -13782,10 +13744,7 @@ paths:
       x-compatibility-date: "2020-01-01"
   /corporations/{corporation_id}/customs_offices:
     get:
-      description: |-
-        List customs offices owned by a corporation
-
-        Requires one of the following EVE corporation role(s): Director
+      description: List customs offices owned by a corporation
       operationId: GetCorporationsCorporationIdCustomsOffices
       parameters:
         - description: The ID of the corporation
@@ -13842,10 +13801,7 @@ paths:
         - Director
   /corporations/{corporation_id}/divisions:
     get:
-      description: |-
-        Return corporation hangar and wallet division names, only show if a division is not using the default name
-
-        Requires one of the following EVE corporation role(s): Director
+      description: Return corporation hangar and wallet division names, only show if a division is not using the default name
       operationId: GetCorporationsCorporationIdDivisions
       parameters:
         - description: The ID of the corporation
@@ -13890,10 +13846,7 @@ paths:
         - Director
   /corporations/{corporation_id}/facilities:
     get:
-      description: |-
-        Return a corporation's facilities
-
-        Requires one of the following EVE corporation role(s): Factory_Manager
+      description: Return a corporation's facilities
       operationId: GetCorporationsCorporationIdFacilities
       parameters:
         - description: The ID of the corporation
@@ -14023,10 +13976,7 @@ paths:
       x-compatibility-date: "2020-01-01"
   /corporations/{corporation_id}/industry/jobs:
     get:
-      description: |-
-        List industry jobs run by a corporation
-
-        Requires one of the following EVE corporation role(s): Factory_Manager
+      description: List industry jobs run by a corporation
       operationId: GetCorporationsCorporationIdIndustryJobs
       parameters:
         - description: The ID of the corporation
@@ -14089,10 +14039,7 @@ paths:
         - Factory_Manager
   /corporations/{corporation_id}/killmails/recent:
     get:
-      description: |-
-        Get a list of a corporation's kills and losses going back 90 days
-
-        Requires one of the following EVE corporation role(s): Director
+      description: Get a list of a corporation's kills and losses going back 90 days
       operationId: GetCorporationsCorporationIdKillmailsRecent
       parameters:
         - description: The ID of the corporation
@@ -14204,10 +14151,7 @@ paths:
       x-compatibility-date: "2020-01-01"
   /corporations/{corporation_id}/medals/issued:
     get:
-      description: |-
-        Returns medals issued by a corporation
-
-        Requires one of the following EVE corporation role(s): Director
+      description: Returns medals issued by a corporation
       operationId: GetCorporationsCorporationIdMedalsIssued
       parameters:
         - description: The ID of the corporation
@@ -14307,10 +14251,7 @@ paths:
       x-compatibility-date: "2020-01-01"
   /corporations/{corporation_id}/members/limit:
     get:
-      description: |-
-        Return a corporation's member limit, not including CEO himself
-
-        Requires one of the following EVE corporation role(s): Director
+      description: Return a corporation's member limit, not including CEO himself
       operationId: GetCorporationsCorporationIdMembersLimit
       parameters:
         - description: The ID of the corporation
@@ -14355,10 +14296,7 @@ paths:
         - Director
   /corporations/{corporation_id}/members/titles:
     get:
-      description: |-
-        Returns a corporation's members' titles
-
-        Requires one of the following EVE corporation role(s): Director
+      description: Returns a corporation's members' titles
       operationId: GetCorporationsCorporationIdMembersTitles
       parameters:
         - description: The ID of the corporation
@@ -14403,10 +14341,7 @@ paths:
         - Director
   /corporations/{corporation_id}/membertracking:
     get:
-      description: |-
-        Returns additional information about a corporation's members which helps tracking their activities
-
-        Requires one of the following EVE corporation role(s): Director
+      description: Returns additional information about a corporation's members which helps tracking their activities
       operationId: GetCorporationsCorporationIdMembertracking
       parameters:
         - description: The ID of the corporation
@@ -14451,10 +14386,7 @@ paths:
         - Director
   /corporations/{corporation_id}/orders:
     get:
-      description: |-
-        List open market orders placed on behalf of a corporation
-
-        Requires one of the following EVE corporation role(s): Accountant, Trader
+      description: List open market orders placed on behalf of a corporation
       operationId: GetCorporationsCorporationIdOrders
       parameters:
         - description: The ID of the corporation
@@ -14512,10 +14444,7 @@ paths:
         - Trader
   /corporations/{corporation_id}/orders/history:
     get:
-      description: |-
-        List cancelled and expired market orders placed on behalf of a corporation up to 90 days in the past.
-
-        Requires one of the following EVE corporation role(s): Accountant, Trader
+      description: List cancelled and expired market orders placed on behalf of a corporation up to 90 days in the past.
       operationId: GetCorporationsCorporationIdOrdersHistory
       parameters:
         - description: The ID of the corporation
@@ -14616,10 +14545,7 @@ paths:
       x-compatibility-date: "2020-01-01"
   /corporations/{corporation_id}/roles/history:
     get:
-      description: |-
-        Return how roles have changed for a coporation's members, up to a month
-
-        Requires one of the following EVE corporation role(s): Director
+      description: Return how roles have changed for a coporation's members, up to a month
       operationId: GetCorporationsCorporationIdRolesHistory
       parameters:
         - description: The ID of the corporation
@@ -14676,10 +14602,7 @@ paths:
         - Director
   /corporations/{corporation_id}/shareholders:
     get:
-      description: |-
-        Return the current shareholders of a corporation.
-
-        Requires one of the following EVE corporation role(s): Director
+      description: Return the current shareholders of a corporation.
       operationId: GetCorporationsCorporationIdShareholders
       parameters:
         - description: The ID of the corporation
@@ -14791,10 +14714,7 @@ paths:
       x-compatibility-date: "2020-01-01"
   /corporations/{corporation_id}/starbases:
     get:
-      description: |-
-        Returns list of corporation starbases (POSes)
-
-        Requires one of the following EVE corporation role(s): Director
+      description: Returns list of corporation starbases (POSes)
       operationId: GetCorporationsCorporationIdStarbases
       parameters:
         - description: The ID of the corporation
@@ -14851,10 +14771,7 @@ paths:
         - Director
   /corporations/{corporation_id}/starbases/{starbase_id}:
     get:
-      description: |-
-        Returns various settings and fuels of a starbase (POS)
-
-        Requires one of the following EVE corporation role(s): Director
+      description: Returns various settings and fuels of a starbase (POS)
       operationId: GetCorporationsCorporationIdStarbasesStarbaseId
       parameters:
         - description: The ID of the corporation
@@ -14913,10 +14830,7 @@ paths:
         - Director
   /corporations/{corporation_id}/structures:
     get:
-      description: |-
-        Get a list of corporation structures. This route's version includes the changes to structures detailed in this blog: https://www.eveonline.com/article/upwell-2.0-structures-changes-coming-on-february-13th
-
-        Requires one of the following EVE corporation role(s): Station_Manager
+      description: "Get a list of corporation structures. This route's version includes the changes to structures detailed in this blog: https://www.eveonline.com/article/upwell-2.0-structures-changes-coming-on-february-13th"
       operationId: GetCorporationsCorporationIdStructures
       parameters:
         - description: The ID of the corporation
@@ -14975,10 +14889,7 @@ paths:
         - Station_Manager
   /corporations/{corporation_id}/titles:
     get:
-      description: |-
-        Returns a corporation's titles
-
-        Requires one of the following EVE corporation role(s): Director
+      description: Returns a corporation's titles
       operationId: GetCorporationsCorporationIdTitles
       parameters:
         - description: The ID of the corporation
@@ -15023,10 +14934,7 @@ paths:
         - Director
   /corporations/{corporation_id}/wallets:
     get:
-      description: |-
-        Get a corporation's wallets
-
-        Requires one of the following EVE corporation role(s): Accountant, Junior_Accountant
+      description: Get a corporation's wallets
       operationId: GetCorporationsCorporationIdWallets
       parameters:
         - description: The ID of the corporation
@@ -15072,10 +14980,7 @@ paths:
         - Junior_Accountant
   /corporations/{corporation_id}/wallets/{division}/journal:
     get:
-      description: |-
-        Retrieve the given corporation's wallet journal for the given division going 30 days back
-
-        Requires one of the following EVE corporation role(s): Accountant, Junior_Accountant
+      description: Retrieve the given corporation's wallet journal for the given division going 30 days back
       operationId: GetCorporationsCorporationIdWalletsDivisionJournal
       parameters:
         - description: The ID of the corporation
@@ -15140,10 +15045,7 @@ paths:
         - Junior_Accountant
   /corporations/{corporation_id}/wallets/{division}/transactions:
     get:
-      description: |-
-        Get wallet transactions of a corporation
-
-        Requires one of the following EVE corporation role(s): Accountant, Junior_Accountant
+      description: Get wallet transactions of a corporation
       operationId: GetCorporationsCorporationIdWalletsDivisionTransactions
       parameters:
         - description: The ID of the corporation

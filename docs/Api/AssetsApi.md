@@ -90,7 +90,7 @@ getCorporationsCorporationIdAssets($corporation_id, $page, $accept_language, $if
 
 Get corporation assets
 
-Return a list of the corporation assets  Requires one of the following EVE corporation role(s): Director
+Return a list of the corporation assets
 
 ### Example
 
@@ -300,7 +300,7 @@ postCorporationsCorporationIdAssetsLocations($corporation_id, $accept_language, 
 
 Get corporation asset locations
 
-Return locations for a set of item ids, which you can get from corporation assets endpoint. Coordinates for items in hangars or stations are set to (0,0,0)  Requires one of the following EVE corporation role(s): Director
+Return locations for a set of item ids, which you can get from corporation assets endpoint. Coordinates for items in hangars or stations are set to (0,0,0)
 
 ### Example
 
@@ -370,7 +370,7 @@ postCorporationsCorporationIdAssetsNames($corporation_id, $accept_language, $if_
 
 Get corporation asset names
 
-Return names for a set of item ids, which you can get from corporation assets endpoint. Only valid for items that can customize names, like containers or ships  Requires one of the following EVE corporation role(s): Director
+Return names for a set of item ids, which you can get from corporation assets endpoint. Only valid for items that can customize names, like containers or ships
 
 ### Example
 
