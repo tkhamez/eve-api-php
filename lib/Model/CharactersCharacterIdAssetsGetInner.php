@@ -273,6 +273,7 @@ class CharactersCharacterIdAssetsGetInner implements ModelInterface, ArrayAccess
     public const LOCATION_FLAG_ASSET_SAFETY = 'AssetSafety';
     public const LOCATION_FLAG_AUTO_FIT = 'AutoFit';
     public const LOCATION_FLAG_BOOSTER_BAY = 'BoosterBay';
+    public const LOCATION_FLAG_CAPSULEER_DELIVERIES = 'CapsuleerDeliveries';
     public const LOCATION_FLAG_CARGO = 'Cargo';
     public const LOCATION_FLAG_CORPORATION_GOAL_DELIVERIES = 'CorporationGoalDeliveries';
     public const LOCATION_FLAG_CORPSE_BAY = 'CorpseBay';
@@ -375,6 +376,7 @@ class CharactersCharacterIdAssetsGetInner implements ModelInterface, ArrayAccess
             self::LOCATION_FLAG_ASSET_SAFETY,
             self::LOCATION_FLAG_AUTO_FIT,
             self::LOCATION_FLAG_BOOSTER_BAY,
+            self::LOCATION_FLAG_CAPSULEER_DELIVERIES,
             self::LOCATION_FLAG_CARGO,
             self::LOCATION_FLAG_CORPORATION_GOAL_DELIVERIES,
             self::LOCATION_FLAG_CORPSE_BAY,

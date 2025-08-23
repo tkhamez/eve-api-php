@@ -276,6 +276,7 @@ class CorporationsCorporationIdAssetsGetInner implements ModelInterface, ArrayAc
     public const LOCATION_FLAG_BOOSTER = 'Booster';
     public const LOCATION_FLAG_BOOSTER_BAY = 'BoosterBay';
     public const LOCATION_FLAG_CAPSULE = 'Capsule';
+    public const LOCATION_FLAG_CAPSULEER_DELIVERIES = 'CapsuleerDeliveries';
     public const LOCATION_FLAG_CARGO = 'Cargo';
     public const LOCATION_FLAG_CORP_DELIVERIES = 'CorpDeliveries';
     public const LOCATION_FLAG_CORP_SAG1 = 'CorpSAG1';
@@ -414,6 +415,7 @@ class CorporationsCorporationIdAssetsGetInner implements ModelInterface, ArrayAc
             self::LOCATION_FLAG_BOOSTER,
             self::LOCATION_FLAG_BOOSTER_BAY,
             self::LOCATION_FLAG_CAPSULE,
+            self::LOCATION_FLAG_CAPSULEER_DELIVERIES,
             self::LOCATION_FLAG_CARGO,
             self::LOCATION_FLAG_CORP_DELIVERIES,
             self::LOCATION_FLAG_CORP_SAG1,

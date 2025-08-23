@@ -327,6 +327,7 @@ class CharactersCharacterIdWalletJournalGetInner implements ModelInterface, Arra
     public const REF_TYPE_AGENT_SECURITY_SERVICES = 'agent_security_services';
     public const REF_TYPE_AGENT_SERVICES_RENDERED = 'agent_services_rendered';
     public const REF_TYPE_AGENTS_PREWARD = 'agents_preward';
+    public const REF_TYPE_AIR_CAREER_PROGRAM_REWARD = 'air_career_program_reward';
     public const REF_TYPE_ALLIANCE_MAINTAINANCE_FEE = 'alliance_maintainance_fee';
     public const REF_TYPE_ALLIANCE_REGISTRATION_FEE = 'alliance_registration_fee';
     public const REF_TYPE_ALLIGNMENT_BASED_GATE_TOLL = 'allignment_based_gate_toll';
@@ -400,7 +401,14 @@ class CharactersCharacterIdWalletJournalGetInner implements ModelInterface, Arra
     public const REF_TYPE_FLUX_TAX = 'flux_tax';
     public const REF_TYPE_FLUX_TICKET_REPAYMENT = 'flux_ticket_repayment';
     public const REF_TYPE_FLUX_TICKET_SALE = 'flux_ticket_sale';
+    public const REF_TYPE_FREELANCE_JOBS_BROADCASTING_FEE = 'freelance_jobs_broadcasting_fee';
+    public const REF_TYPE_FREELANCE_JOBS_DURATION_FEE = 'freelance_jobs_duration_fee';
+    public const REF_TYPE_FREELANCE_JOBS_ESCROW_REFUND = 'freelance_jobs_escrow_refund';
+    public const REF_TYPE_FREELANCE_JOBS_REWARD = 'freelance_jobs_reward';
+    public const REF_TYPE_FREELANCE_JOBS_REWARD_CORPORATION_TAX = 'freelance_jobs_reward_corporation_tax';
+    public const REF_TYPE_FREELANCE_JOBS_REWARD_ESCROW = 'freelance_jobs_reward_escrow';
     public const REF_TYPE_GM_CASH_TRANSFER = 'gm_cash_transfer';
+    public const REF_TYPE_GM_PLEX_FEE_REFUND = 'gm_plex_fee_refund';
     public const REF_TYPE_INDUSTRY_JOB_TAX = 'industry_job_tax';
     public const REF_TYPE_INFRASTRUCTURE_HUB_MAINTENANCE = 'infrastructure_hub_maintenance';
     public const REF_TYPE_INHERITANCE = 'inheritance';
@@ -449,6 +457,7 @@ class CharactersCharacterIdWalletJournalGetInner implements ModelInterface, Arra
     public const REF_TYPE_SECURITY_PROCESSING_FEE = 'security_processing_fee';
     public const REF_TYPE_SHARES = 'shares';
     public const REF_TYPE_SKILL_PURCHASE = 'skill_purchase';
+    public const REF_TYPE_SKYHOOK_CLAIM_FEE = 'skyhook_claim_fee';
     public const REF_TYPE_SOVEREIGNITY_BILL = 'sovereignity_bill';
     public const REF_TYPE_STORE_PURCHASE = 'store_purchase';
     public const REF_TYPE_STORE_PURCHASE_REFUND = 'store_purchase_refund';
@@ -507,6 +516,7 @@ class CharactersCharacterIdWalletJournalGetInner implements ModelInterface, Arra
             self::REF_TYPE_AGENT_SECURITY_SERVICES,
             self::REF_TYPE_AGENT_SERVICES_RENDERED,
             self::REF_TYPE_AGENTS_PREWARD,
+            self::REF_TYPE_AIR_CAREER_PROGRAM_REWARD,
             self::REF_TYPE_ALLIANCE_MAINTAINANCE_FEE,
             self::REF_TYPE_ALLIANCE_REGISTRATION_FEE,
             self::REF_TYPE_ALLIGNMENT_BASED_GATE_TOLL,
@@ -580,7 +590,14 @@ class CharactersCharacterIdWalletJournalGetInner implements ModelInterface, Arra
             self::REF_TYPE_FLUX_TAX,
             self::REF_TYPE_FLUX_TICKET_REPAYMENT,
             self::REF_TYPE_FLUX_TICKET_SALE,
+            self::REF_TYPE_FREELANCE_JOBS_BROADCASTING_FEE,
+            self::REF_TYPE_FREELANCE_JOBS_DURATION_FEE,
+            self::REF_TYPE_FREELANCE_JOBS_ESCROW_REFUND,
+            self::REF_TYPE_FREELANCE_JOBS_REWARD,
+            self::REF_TYPE_FREELANCE_JOBS_REWARD_CORPORATION_TAX,
+            self::REF_TYPE_FREELANCE_JOBS_REWARD_ESCROW,
             self::REF_TYPE_GM_CASH_TRANSFER,
+            self::REF_TYPE_GM_PLEX_FEE_REFUND,
             self::REF_TYPE_INDUSTRY_JOB_TAX,
             self::REF_TYPE_INFRASTRUCTURE_HUB_MAINTENANCE,
             self::REF_TYPE_INHERITANCE,
@@ -629,6 +646,7 @@ class CharactersCharacterIdWalletJournalGetInner implements ModelInterface, Arra
             self::REF_TYPE_SECURITY_PROCESSING_FEE,
             self::REF_TYPE_SHARES,
             self::REF_TYPE_SKILL_PURCHASE,
+            self::REF_TYPE_SKYHOOK_CLAIM_FEE,
             self::REF_TYPE_SOVEREIGNITY_BILL,
             self::REF_TYPE_STORE_PURCHASE,
             self::REF_TYPE_STORE_PURCHASE_REFUND,
