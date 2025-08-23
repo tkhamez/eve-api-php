@@ -256,6 +256,7 @@ components:
               - AssetSafety
               - AutoFit
               - BoosterBay
+              - CapsuleerDeliveries
               - Cargo
               - CorporationGoalDeliveries
               - CorpseBay
@@ -2829,6 +2830,7 @@ components:
               - agent_security_services
               - agent_services_rendered
               - agents_preward
+              - air_career_program_reward
               - alliance_maintainance_fee
               - alliance_registration_fee
               - allignment_based_gate_toll
@@ -2902,7 +2904,14 @@ components:
               - flux_tax
               - flux_ticket_repayment
               - flux_ticket_sale
+              - freelance_jobs_broadcasting_fee
+              - freelance_jobs_duration_fee
+              - freelance_jobs_escrow_refund
+              - freelance_jobs_reward
+              - freelance_jobs_reward_corporation_tax
+              - freelance_jobs_reward_escrow
               - gm_cash_transfer
+              - gm_plex_fee_refund
               - industry_job_tax
               - infrastructure_hub_maintenance
               - inheritance
@@ -2951,6 +2960,7 @@ components:
               - security_processing_fee
               - shares
               - skill_purchase
+              - skyhook_claim_fee
               - sovereignity_bill
               - store_purchase
               - store_purchase_refund
@@ -3307,6 +3317,7 @@ components:
               - Booster
               - BoosterBay
               - Capsule
+              - CapsuleerDeliveries
               - Cargo
               - CorpDeliveries
               - CorpSAG1
@@ -3507,6 +3518,7 @@ components:
               - Booster
               - BoosterBay
               - Capsule
+              - CapsuleerDeliveries
               - Cargo
               - CorpDeliveries
               - CorpSAG1
@@ -3740,6 +3752,7 @@ components:
               - Booster
               - BoosterBay
               - Capsule
+              - CapsuleerDeliveries
               - Cargo
               - CorpDeliveries
               - CorpSAG1
@@ -6222,6 +6235,7 @@ components:
               - agent_security_services
               - agent_services_rendered
               - agents_preward
+              - air_career_program_reward
               - alliance_maintainance_fee
               - alliance_registration_fee
               - allignment_based_gate_toll
@@ -6295,7 +6309,14 @@ components:
               - flux_tax
               - flux_ticket_repayment
               - flux_ticket_sale
+              - freelance_jobs_broadcasting_fee
+              - freelance_jobs_duration_fee
+              - freelance_jobs_escrow_refund
+              - freelance_jobs_reward
+              - freelance_jobs_reward_corporation_tax
+              - freelance_jobs_reward_escrow
               - gm_cash_transfer
+              - gm_plex_fee_refund
               - industry_job_tax
               - infrastructure_hub_maintenance
               - inheritance
@@ -6344,6 +6365,7 @@ components:
               - security_processing_fee
               - shares
               - skill_purchase
+              - skyhook_claim_fee
               - sovereignity_bill
               - store_purchase
               - store_purchase_refund
