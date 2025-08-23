@@ -5,10 +5,11 @@ For generator library changes see https://github.com/OpenAPITools/openapi-genera
 
 ## Versioning scheme
 
-* Major: This number is increased everytime when the client was generated from an updated
+- Major: This number is increased everytime when the client was generated from an updated
   OpenAPI definition file or any other breaking change.
-* Minor: The compatibility date for which the API was generated in the format YYYYMMDD.
-* Patch: Increased when the client was regenerated with a new minor or patch version of the
+- Minor: The compatibility date (see https://developers.eveonline.com/docs/services/esi/overview/#versioning)
+  for which the client was generated in the format YYYYMMDD.
+- Patch: Increased when the client was regenerated with a new minor or patch version of the
   generator library from the same OpenAPI definition file.
 
 ## Notable changes other than API updates
@@ -35,7 +36,7 @@ Beta status.
 Beta status.
 
 - Forked from https://github.com/tkhamez/swagger-eve-php.
-- Generated from the new OpenAPI 3.1 specification.
+- Generated from the new OpenAPI 3.1 definition.
 - Added a patch for the format of the compatibility date.
 
 In addition to the change in the PHP namespace, the biggest changes between `swagger-eve-php` and
