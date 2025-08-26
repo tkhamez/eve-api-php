@@ -35,7 +35,7 @@ To install the bindings via [Composer](https://getcomposer.org/), add the follow
 ```json
 {
   "require": {
-    "tkhamez/eve-api": "^6.0.0"
+    "tkhamez/eve-api": "^7.0.0"
   }
 }
 ```
@@ -69,7 +69,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\AllianceApi(
 );
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
+$x_compatibility_date = '2025-08-26'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
@@ -157,6 +157,10 @@ Class | Method | HTTP request | Description
 *CorporationApi* | [**getCorporationsCorporationIdStructures**](docs/Api/CorporationApi.md#getcorporationscorporationidstructures) | **GET** /corporations/{corporation_id}/structures | Get corporation structures
 *CorporationApi* | [**getCorporationsCorporationIdTitles**](docs/Api/CorporationApi.md#getcorporationscorporationidtitles) | **GET** /corporations/{corporation_id}/titles | Get corporation titles
 *CorporationApi* | [**getCorporationsNpccorps**](docs/Api/CorporationApi.md#getcorporationsnpccorps) | **GET** /corporations/npccorps | Get npc corporations
+*CorporationProjectsApi* | [**getCorporationsProjectsContribution**](docs/Api/CorporationProjectsApi.md#getcorporationsprojectscontribution) | **GET** /corporations/{corporation_id}/projects/{project_id}/contribution/{character_id} | Get your project contribution
+*CorporationProjectsApi* | [**getCorporationsProjectsContributors**](docs/Api/CorporationProjectsApi.md#getcorporationsprojectscontributors) | **GET** /corporations/{corporation_id}/projects/{project_id}/contributors | List project contributors
+*CorporationProjectsApi* | [**getCorporationsProjectsDetail**](docs/Api/CorporationProjectsApi.md#getcorporationsprojectsdetail) | **GET** /corporations/{corporation_id}/projects/{project_id} | Get project details
+*CorporationProjectsApi* | [**getCorporationsProjectsListing**](docs/Api/CorporationProjectsApi.md#getcorporationsprojectslisting) | **GET** /corporations/{corporation_id}/projects | List corporation projects
 *DogmaApi* | [**getDogmaAttributes**](docs/Api/DogmaApi.md#getdogmaattributes) | **GET** /dogma/attributes | Get attributes
 *DogmaApi* | [**getDogmaAttributesAttributeId**](docs/Api/DogmaApi.md#getdogmaattributesattributeid) | **GET** /dogma/attributes/{attribute_id} | Get attribute information
 *DogmaApi* | [**getDogmaDynamicItemsTypeIdItemId**](docs/Api/DogmaApi.md#getdogmadynamicitemstypeiditemid) | **GET** /dogma/dynamic/items/{type_id}/{item_id} | Get dynamic item information
@@ -285,10 +289,13 @@ Class | Method | HTTP request | Description
 
 ## Models
 
+- [AllianceId](docs/Model/AllianceId.md)
 - [AlliancesAllianceIdContactsGetInner](docs/Model/AlliancesAllianceIdContactsGetInner.md)
 - [AlliancesAllianceIdContactsLabelsGetInner](docs/Model/AlliancesAllianceIdContactsLabelsGetInner.md)
 - [AlliancesAllianceIdGet](docs/Model/AlliancesAllianceIdGet.md)
 - [AlliancesAllianceIdIconsGet](docs/Model/AlliancesAllianceIdIconsGet.md)
+- [CaptureFwComplex](docs/Model/CaptureFwComplex.md)
+- [CharacterId](docs/Model/CharacterId.md)
 - [CharactersAffiliationPostInner](docs/Model/CharactersAffiliationPostInner.md)
 - [CharactersCharacterIdAgentsResearchGetInner](docs/Model/CharactersCharacterIdAgentsResearchGetInner.md)
 - [CharactersCharacterIdAssetsGetInner](docs/Model/CharactersCharacterIdAssetsGetInner.md)
@@ -354,12 +361,14 @@ Class | Method | HTTP request | Description
 - [CharactersCharacterIdTitlesGetInner](docs/Model/CharactersCharacterIdTitlesGetInner.md)
 - [CharactersCharacterIdWalletJournalGetInner](docs/Model/CharactersCharacterIdWalletJournalGetInner.md)
 - [CharactersCharacterIdWalletTransactionsGetInner](docs/Model/CharactersCharacterIdWalletTransactionsGetInner.md)
+- [ConstellationId](docs/Model/ConstellationId.md)
 - [ContractsPublicBidsContractIdGetInner](docs/Model/ContractsPublicBidsContractIdGetInner.md)
 - [ContractsPublicItemsContractIdGetInner](docs/Model/ContractsPublicItemsContractIdGetInner.md)
 - [ContractsPublicRegionIdGetInner](docs/Model/ContractsPublicRegionIdGetInner.md)
 - [CorporationCorporationIdMiningExtractionsGetInner](docs/Model/CorporationCorporationIdMiningExtractionsGetInner.md)
 - [CorporationCorporationIdMiningObserversGetInner](docs/Model/CorporationCorporationIdMiningObserversGetInner.md)
 - [CorporationCorporationIdMiningObserversObserverIdGetInner](docs/Model/CorporationCorporationIdMiningObserversObserverIdGetInner.md)
+- [CorporationId](docs/Model/CorporationId.md)
 - [CorporationsCorporationIdAlliancehistoryGetInner](docs/Model/CorporationsCorporationIdAlliancehistoryGetInner.md)
 - [CorporationsCorporationIdAssetsGetInner](docs/Model/CorporationsCorporationIdAssetsGetInner.md)
 - [CorporationsCorporationIdBlueprintsGetInner](docs/Model/CorporationsCorporationIdBlueprintsGetInner.md)
@@ -395,14 +404,59 @@ Class | Method | HTTP request | Description
 - [CorporationsCorporationIdWalletsDivisionJournalGetInner](docs/Model/CorporationsCorporationIdWalletsDivisionJournalGetInner.md)
 - [CorporationsCorporationIdWalletsDivisionTransactionsGetInner](docs/Model/CorporationsCorporationIdWalletsDivisionTransactionsGetInner.md)
 - [CorporationsCorporationIdWalletsGetInner](docs/Model/CorporationsCorporationIdWalletsGetInner.md)
+- [CorporationsProjectsContribution](docs/Model/CorporationsProjectsContribution.md)
+- [CorporationsProjectsContributors](docs/Model/CorporationsProjectsContributors.md)
+- [CorporationsProjectsContributorsContributor](docs/Model/CorporationsProjectsContributorsContributor.md)
+- [CorporationsProjectsDetail](docs/Model/CorporationsProjectsDetail.md)
+- [CorporationsProjectsDetailConfiguration](docs/Model/CorporationsProjectsDetailConfiguration.md)
+- [CorporationsProjectsDetailConfigurationcapturefwcomplex](docs/Model/CorporationsProjectsDetailConfigurationcapturefwcomplex.md)
+- [CorporationsProjectsDetailConfigurationcapturefwcomplexLocationsInner](docs/Model/CorporationsProjectsDetailConfigurationcapturefwcomplexLocationsInner.md)
+- [CorporationsProjectsDetailConfigurationdamageship](docs/Model/CorporationsProjectsDetailConfigurationdamageship.md)
+- [CorporationsProjectsDetailConfigurationdamageshipIdentitiesInner](docs/Model/CorporationsProjectsDetailConfigurationdamageshipIdentitiesInner.md)
+- [CorporationsProjectsDetailConfigurationdamageshipShipsInner](docs/Model/CorporationsProjectsDetailConfigurationdamageshipShipsInner.md)
+- [CorporationsProjectsDetailConfigurationdefendfwcomplex](docs/Model/CorporationsProjectsDetailConfigurationdefendfwcomplex.md)
+- [CorporationsProjectsDetailConfigurationdeliveritem](docs/Model/CorporationsProjectsDetailConfigurationdeliveritem.md)
+- [CorporationsProjectsDetailConfigurationdeliveritemDockingLocationsInner](docs/Model/CorporationsProjectsDetailConfigurationdeliveritemDockingLocationsInner.md)
+- [CorporationsProjectsDetailConfigurationdeliveritemItemsInner](docs/Model/CorporationsProjectsDetailConfigurationdeliveritemItemsInner.md)
+- [CorporationsProjectsDetailConfigurationdestroynpc](docs/Model/CorporationsProjectsDetailConfigurationdestroynpc.md)
+- [CorporationsProjectsDetailConfigurationdestroyship](docs/Model/CorporationsProjectsDetailConfigurationdestroyship.md)
+- [CorporationsProjectsDetailConfigurationearnloyaltypoints](docs/Model/CorporationsProjectsDetailConfigurationearnloyaltypoints.md)
+- [CorporationsProjectsDetailConfigurationlostship](docs/Model/CorporationsProjectsDetailConfigurationlostship.md)
+- [CorporationsProjectsDetailConfigurationmanufactureitem](docs/Model/CorporationsProjectsDetailConfigurationmanufactureitem.md)
+- [CorporationsProjectsDetailConfigurationmatcherarchetype](docs/Model/CorporationsProjectsDetailConfigurationmatcherarchetype.md)
+- [CorporationsProjectsDetailConfigurationmatchercorporation](docs/Model/CorporationsProjectsDetailConfigurationmatchercorporation.md)
+- [CorporationsProjectsDetailConfigurationmatcherfaction](docs/Model/CorporationsProjectsDetailConfigurationmatcherfaction.md)
+- [CorporationsProjectsDetailConfigurationmatchersignature](docs/Model/CorporationsProjectsDetailConfigurationmatchersignature.md)
+- [CorporationsProjectsDetailConfigurationminematerial](docs/Model/CorporationsProjectsDetailConfigurationminematerial.md)
+- [CorporationsProjectsDetailConfigurationremoteboostshield](docs/Model/CorporationsProjectsDetailConfigurationremoteboostshield.md)
+- [CorporationsProjectsDetailConfigurationremoterepairarmor](docs/Model/CorporationsProjectsDetailConfigurationremoterepairarmor.md)
+- [CorporationsProjectsDetailConfigurationsalvagewreck](docs/Model/CorporationsProjectsDetailConfigurationsalvagewreck.md)
+- [CorporationsProjectsDetailConfigurationscansignature](docs/Model/CorporationsProjectsDetailConfigurationscansignature.md)
+- [CorporationsProjectsDetailConfigurationshipinsurance](docs/Model/CorporationsProjectsDetailConfigurationshipinsurance.md)
+- [CorporationsProjectsDetailConfigurationunknown](docs/Model/CorporationsProjectsDetailConfigurationunknown.md)
+- [CorporationsProjectsDetailContribution](docs/Model/CorporationsProjectsDetailContribution.md)
+- [CorporationsProjectsDetailCreator](docs/Model/CorporationsProjectsDetailCreator.md)
+- [CorporationsProjectsDetailDetails](docs/Model/CorporationsProjectsDetailDetails.md)
+- [CorporationsProjectsDetailProgress](docs/Model/CorporationsProjectsDetailProgress.md)
+- [CorporationsProjectsDetailProject](docs/Model/CorporationsProjectsDetailProject.md)
+- [CorporationsProjectsDetailReward](docs/Model/CorporationsProjectsDetailReward.md)
+- [CorporationsProjectsListing](docs/Model/CorporationsProjectsListing.md)
+- [Cursor](docs/Model/Cursor.md)
+- [DamageShip](docs/Model/DamageShip.md)
+- [DefendFwComplex](docs/Model/DefendFwComplex.md)
+- [DeliverItem](docs/Model/DeliverItem.md)
+- [DestroyNpc](docs/Model/DestroyNpc.md)
+- [DestroyShip](docs/Model/DestroyShip.md)
 - [DogmaAttributesAttributeIdGet](docs/Model/DogmaAttributesAttributeIdGet.md)
 - [DogmaDynamicItemsTypeIdItemIdGet](docs/Model/DogmaDynamicItemsTypeIdItemIdGet.md)
 - [DogmaDynamicItemsTypeIdItemIdGetDogmaAttributesInner](docs/Model/DogmaDynamicItemsTypeIdItemIdGetDogmaAttributesInner.md)
 - [DogmaDynamicItemsTypeIdItemIdGetDogmaEffectsInner](docs/Model/DogmaDynamicItemsTypeIdItemIdGetDogmaEffectsInner.md)
 - [DogmaEffectsEffectIdGet](docs/Model/DogmaEffectsEffectIdGet.md)
 - [DogmaEffectsEffectIdGetModifiersInner](docs/Model/DogmaEffectsEffectIdGetModifiersInner.md)
+- [EarnLoyaltyPoint](docs/Model/EarnLoyaltyPoint.md)
 - [Error](docs/Model/Error.md)
 - [ErrorDetail](docs/Model/ErrorDetail.md)
+- [FactionId](docs/Model/FactionId.md)
 - [FleetsFleetIdGet](docs/Model/FleetsFleetIdGet.md)
 - [FleetsFleetIdMembersGetInner](docs/Model/FleetsFleetIdMembersGetInner.md)
 - [FleetsFleetIdWingsGetInner](docs/Model/FleetsFleetIdWingsGetInner.md)
@@ -441,6 +495,8 @@ Class | Method | HTTP request | Description
 - [FwStatsGetInnerVictoryPoints](docs/Model/FwStatsGetInnerVictoryPoints.md)
 - [FwSystemsGetInner](docs/Model/FwSystemsGetInner.md)
 - [FwWarsGetInner](docs/Model/FwWarsGetInner.md)
+- [GroupId](docs/Model/GroupId.md)
+- [GroupId1](docs/Model/GroupId1.md)
 - [IncursionsGetInner](docs/Model/IncursionsGetInner.md)
 - [IndustryFacilitiesGetInner](docs/Model/IndustryFacilitiesGetInner.md)
 - [IndustrySystemsGetInner](docs/Model/IndustrySystemsGetInner.md)
@@ -453,13 +509,17 @@ Class | Method | HTTP request | Description
 - [KillmailsKillmailIdKillmailHashGetVictimItemsInner](docs/Model/KillmailsKillmailIdKillmailHashGetVictimItemsInner.md)
 - [KillmailsKillmailIdKillmailHashGetVictimItemsInnerItemsInner](docs/Model/KillmailsKillmailIdKillmailHashGetVictimItemsInnerItemsInner.md)
 - [KillmailsKillmailIdKillmailHashGetVictimPosition](docs/Model/KillmailsKillmailIdKillmailHashGetVictimPosition.md)
+- [LostShip](docs/Model/LostShip.md)
 - [LoyaltyStoresCorporationIdOffersGetInner](docs/Model/LoyaltyStoresCorporationIdOffersGetInner.md)
 - [LoyaltyStoresCorporationIdOffersGetInnerRequiredItemsInner](docs/Model/LoyaltyStoresCorporationIdOffersGetInnerRequiredItemsInner.md)
+- [Manual](docs/Model/Manual.md)
+- [ManufactureItem](docs/Model/ManufactureItem.md)
 - [MarketsGroupsMarketGroupIdGet](docs/Model/MarketsGroupsMarketGroupIdGet.md)
 - [MarketsPricesGetInner](docs/Model/MarketsPricesGetInner.md)
 - [MarketsRegionIdHistoryGetInner](docs/Model/MarketsRegionIdHistoryGetInner.md)
 - [MarketsRegionIdOrdersGetInner](docs/Model/MarketsRegionIdOrdersGetInner.md)
 - [MarketsStructuresStructureIdGetInner](docs/Model/MarketsStructuresStructureIdGetInner.md)
+- [MineMaterial](docs/Model/MineMaterial.md)
 - [PostCharactersCharacterIdFittingsRequest](docs/Model/PostCharactersCharacterIdFittingsRequest.md)
 - [PostCharactersCharacterIdFittingsRequestItemsInner](docs/Model/PostCharactersCharacterIdFittingsRequestItemsInner.md)
 - [PostCharactersCharacterIdMailLabelsRequest](docs/Model/PostCharactersCharacterIdMailLabelsRequest.md)
@@ -472,11 +532,21 @@ Class | Method | HTTP request | Description
 - [PutFleetsFleetIdMembersMemberIdRequest](docs/Model/PutFleetsFleetIdMembersMemberIdRequest.md)
 - [PutFleetsFleetIdRequest](docs/Model/PutFleetsFleetIdRequest.md)
 - [PutFleetsFleetIdSquadsSquadIdRequest](docs/Model/PutFleetsFleetIdSquadsSquadIdRequest.md)
+- [RegionId](docs/Model/RegionId.md)
+- [RemoteBoostShield](docs/Model/RemoteBoostShield.md)
+- [RemoteRepairArmor](docs/Model/RemoteRepairArmor.md)
+- [SalvageWreck](docs/Model/SalvageWreck.md)
+- [ScanSignature](docs/Model/ScanSignature.md)
+- [ShipInsurance](docs/Model/ShipInsurance.md)
+- [SolarSystemId](docs/Model/SolarSystemId.md)
 - [SovereigntyCampaignsGetInner](docs/Model/SovereigntyCampaignsGetInner.md)
 - [SovereigntyCampaignsGetInnerParticipantsInner](docs/Model/SovereigntyCampaignsGetInnerParticipantsInner.md)
 - [SovereigntyMapGetInner](docs/Model/SovereigntyMapGetInner.md)
 - [SovereigntyStructuresGetInner](docs/Model/SovereigntyStructuresGetInner.md)
+- [StationId](docs/Model/StationId.md)
 - [StatusGet](docs/Model/StatusGet.md)
+- [StructureId](docs/Model/StructureId.md)
+- [TypeId](docs/Model/TypeId.md)
 - [UniverseAncestriesGetInner](docs/Model/UniverseAncestriesGetInner.md)
 - [UniverseAsteroidBeltsAsteroidBeltIdGet](docs/Model/UniverseAsteroidBeltsAsteroidBeltIdGet.md)
 - [UniverseBloodlinesGetInner](docs/Model/UniverseBloodlinesGetInner.md)
@@ -513,6 +583,7 @@ Class | Method | HTTP request | Description
 - [UniverseSystemsSystemIdGet](docs/Model/UniverseSystemsSystemIdGet.md)
 - [UniverseSystemsSystemIdGetPlanetsInner](docs/Model/UniverseSystemsSystemIdGetPlanetsInner.md)
 - [UniverseTypesTypeIdGet](docs/Model/UniverseTypesTypeIdGet.md)
+- [Unknown](docs/Model/Unknown.md)
 - [WarsWarIdGet](docs/Model/WarsWarIdGet.md)
 - [WarsWarIdGetAggressor](docs/Model/WarsWarIdGetAggressor.md)
 - [WarsWarIdGetAlliesInner](docs/Model/WarsWarIdGetAlliesInner.md)
@@ -609,6 +680,6 @@ vendor/bin/phpunit
 
 This PHP package is automatically generated by the [OpenAPI Generator](https://openapi-generator.tech) project:
 
-- API version: `2020-01-01`
+- API version: `2025-08-26`
     - Generator version: `7.15.0`
 - Build package: `org.openapitools.codegen.languages.PhpClientCodegen`

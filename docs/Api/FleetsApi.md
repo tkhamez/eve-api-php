@@ -51,7 +51,7 @@ $fleet_id = 56; // int
 $member_id = 56; // int
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
+$x_compatibility_date = '2025-08-26'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
@@ -70,7 +70,7 @@ try {
 | **member_id** | **int**|  | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-08-26&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -121,7 +121,7 @@ $fleet_id = 56; // int
 $squad_id = 56; // int
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
+$x_compatibility_date = '2025-08-26'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
@@ -140,7 +140,7 @@ try {
 | **squad_id** | **int**|  | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-08-26&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -191,7 +191,7 @@ $fleet_id = 56; // int
 $wing_id = 56; // int
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
+$x_compatibility_date = '2025-08-26'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
@@ -210,7 +210,7 @@ try {
 | **wing_id** | **int**|  | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-08-26&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -260,7 +260,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\FleetsApi(
 $character_id = 56; // int | The ID of the character
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
+$x_compatibility_date = '2025-08-26'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
@@ -278,7 +278,7 @@ try {
 | **character_id** | **int**| The ID of the character | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-08-26&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -328,7 +328,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\FleetsApi(
 $fleet_id = 56; // int
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
+$x_compatibility_date = '2025-08-26'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
@@ -346,7 +346,7 @@ try {
 | **fleet_id** | **int**|  | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-08-26&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -396,7 +396,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\FleetsApi(
 $fleet_id = 56; // int
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
+$x_compatibility_date = '2025-08-26'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
@@ -414,7 +414,7 @@ try {
 | **fleet_id** | **int**|  | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-08-26&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -464,7 +464,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\FleetsApi(
 $fleet_id = 56; // int
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
+$x_compatibility_date = '2025-08-26'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
@@ -482,7 +482,7 @@ try {
 | **fleet_id** | **int**|  | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-08-26&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -532,7 +532,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\FleetsApi(
 $fleet_id = 56; // int
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
+$x_compatibility_date = '2025-08-26'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $post_fleets_fleet_id_members_request = new \Tkhamez\Eve\API\Model\PostFleetsFleetIdMembersRequest(); // \Tkhamez\Eve\API\Model\PostFleetsFleetIdMembersRequest
 
@@ -551,7 +551,7 @@ try {
 | **fleet_id** | **int**|  | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-08-26&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **post_fleets_fleet_id_members_request** | [**\Tkhamez\Eve\API\Model\PostFleetsFleetIdMembersRequest**](../Model/PostFleetsFleetIdMembersRequest.md)|  | [optional] |
 
@@ -602,7 +602,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\FleetsApi(
 $fleet_id = 56; // int
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
+$x_compatibility_date = '2025-08-26'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
@@ -620,7 +620,7 @@ try {
 | **fleet_id** | **int**|  | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-08-26&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -671,7 +671,7 @@ $fleet_id = 56; // int
 $wing_id = 56; // int
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
+$x_compatibility_date = '2025-08-26'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
@@ -690,7 +690,7 @@ try {
 | **wing_id** | **int**|  | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-08-26&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -740,7 +740,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\FleetsApi(
 $fleet_id = 56; // int
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
+$x_compatibility_date = '2025-08-26'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $put_fleets_fleet_id_request = new \Tkhamez\Eve\API\Model\PutFleetsFleetIdRequest(); // \Tkhamez\Eve\API\Model\PutFleetsFleetIdRequest
 
@@ -759,7 +759,7 @@ try {
 | **fleet_id** | **int**|  | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-08-26&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **put_fleets_fleet_id_request** | [**\Tkhamez\Eve\API\Model\PutFleetsFleetIdRequest**](../Model/PutFleetsFleetIdRequest.md)|  | [optional] |
 
@@ -811,7 +811,7 @@ $fleet_id = 56; // int
 $member_id = 56; // int
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
+$x_compatibility_date = '2025-08-26'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $put_fleets_fleet_id_members_member_id_request = new \Tkhamez\Eve\API\Model\PutFleetsFleetIdMembersMemberIdRequest(); // \Tkhamez\Eve\API\Model\PutFleetsFleetIdMembersMemberIdRequest
 
@@ -831,7 +831,7 @@ try {
 | **member_id** | **int**|  | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-08-26&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **put_fleets_fleet_id_members_member_id_request** | [**\Tkhamez\Eve\API\Model\PutFleetsFleetIdMembersMemberIdRequest**](../Model/PutFleetsFleetIdMembersMemberIdRequest.md)|  | [optional] |
 
@@ -883,7 +883,7 @@ $fleet_id = 56; // int
 $squad_id = 56; // int
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
+$x_compatibility_date = '2025-08-26'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $put_fleets_fleet_id_squads_squad_id_request = new \Tkhamez\Eve\API\Model\PutFleetsFleetIdSquadsSquadIdRequest(); // \Tkhamez\Eve\API\Model\PutFleetsFleetIdSquadsSquadIdRequest
 
@@ -903,7 +903,7 @@ try {
 | **squad_id** | **int**|  | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-08-26&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **put_fleets_fleet_id_squads_squad_id_request** | [**\Tkhamez\Eve\API\Model\PutFleetsFleetIdSquadsSquadIdRequest**](../Model/PutFleetsFleetIdSquadsSquadIdRequest.md)|  | [optional] |
 
@@ -955,7 +955,7 @@ $fleet_id = 56; // int
 $wing_id = 56; // int
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2020-01-01'; // string | The compatibility date for the request.
+$x_compatibility_date = '2025-08-26'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $put_fleets_fleet_id_squads_squad_id_request = new \Tkhamez\Eve\API\Model\PutFleetsFleetIdSquadsSquadIdRequest(); // \Tkhamez\Eve\API\Model\PutFleetsFleetIdSquadsSquadIdRequest
 
@@ -975,7 +975,7 @@ try {
 | **wing_id** | **int**|  | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2020-01-01&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-08-26&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **put_fleets_fleet_id_squads_squad_id_request** | [**\Tkhamez\Eve\API\Model\PutFleetsFleetIdSquadsSquadIdRequest**](../Model/PutFleetsFleetIdSquadsSquadIdRequest.md)|  | [optional] |
 
