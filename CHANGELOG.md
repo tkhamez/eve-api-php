@@ -12,7 +12,13 @@ For generator library changes see https://github.com/OpenAPITools/openapi-genera
 - Patch: Increased when the client was regenerated with a new minor or patch version of the
   generator library from the same OpenAPI definition file.
 
-## Notable changes other than API updates
+## Notable changes
+
+### 7.20250826.0
+
+Beta status.
+
+- Updated to version 2025-08-26.
 
 ### 4.20200101.0
 
