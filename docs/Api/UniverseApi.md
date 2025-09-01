@@ -1813,7 +1813,7 @@ No authorization required
 ## `postUniverseIds()`
 
 ```php
-postUniverseIds($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body): \Tkhamez\Eve\API\Model\UniverseIdsPost
+postUniverseIds($request_body, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\UniverseIdsPost
 ```
 
 Bulk names to IDs
@@ -1833,14 +1833,14 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
+$request_body = array('request_body_example'); // string[]
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
 $x_compatibility_date = '2025-08-26'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
-$request_body = array('request_body_example'); // string[]
 
 try {
-    $result = $apiInstance->postUniverseIds($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body);
+    $result = $apiInstance->postUniverseIds($request_body, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UniverseApi->postUniverseIds: ', $e->getMessage(), PHP_EOL;
@@ -1851,11 +1851,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **request_body** | [**string[]**](../Model/string.md)|  | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
 | **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-08-26&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
-| **request_body** | [**string[]**](../Model/string.md)|  | [optional] |
 
 ### Return type
 
@@ -1877,7 +1877,7 @@ No authorization required
 ## `postUniverseNames()`
 
 ```php
-postUniverseNames($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body): \Tkhamez\Eve\API\Model\UniverseNamesPostInner[]
+postUniverseNames($request_body, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\UniverseNamesPostInner[]
 ```
 
 Get names and categories for a set of IDs
@@ -1897,14 +1897,14 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
+$request_body = array(56); // int[]
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
 $x_compatibility_date = '2025-08-26'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
-$request_body = array(56); // int[]
 
 try {
-    $result = $apiInstance->postUniverseNames($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body);
+    $result = $apiInstance->postUniverseNames($request_body, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UniverseApi->postUniverseNames: ', $e->getMessage(), PHP_EOL;
@@ -1915,11 +1915,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **request_body** | [**int[]**](../Model/int.md)|  | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
 | **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-08-26&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
-| **request_body** | [**int[]**](../Model/int.md)|  | [optional] |
 
 ### Return type
 

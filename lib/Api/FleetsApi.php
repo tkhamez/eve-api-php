@@ -179,12 +179,11 @@ class FleetsApi
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return mixed|\Tkhamez\Eve\API\Model\Error
+     * @return void
      */
     public function deleteFleetsFleetIdMembersMemberId($fleet_id, $member_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteFleetsFleetIdMembersMemberId'][0])
     {
-        list($response) = $this->deleteFleetsFleetIdMembersMemberIdWithHttpInfo($fleet_id, $member_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
-        return $response;
+        $this->deleteFleetsFleetIdMembersMemberIdWithHttpInfo($fleet_id, $member_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
     }
 
     /**
@@ -202,7 +201,7 @@ class FleetsApi
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of mixed|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteFleetsFleetIdMembersMemberIdWithHttpInfo($fleet_id, $member_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteFleetsFleetIdMembersMemberId'][0])
     {
@@ -231,51 +230,9 @@ class FleetsApi
             $statusCode = $response->getStatusCode();
 
 
-            switch($statusCode) {
-                case 204:
-                    return $this->handleResponseWithDataType(
-                        'mixed',
-                        $request,
-                        $response,
-                    );
-                default:
-                    return $this->handleResponseWithDataType(
-                        '\Tkhamez\Eve\API\Model\Error',
-                        $request,
-                        $response,
-                    );
-            }
-
-            
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            return $this->handleResponseWithDataType(
-                'mixed',
-                $request,
-                $response,
-            );
+            return [null, $statusCode, $response->getHeaders()];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
-                case 204:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        'mixed',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    throw $e;
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -335,27 +292,14 @@ class FleetsApi
      */
     public function deleteFleetsFleetIdMembersMemberIdAsyncWithHttpInfo($fleet_id, $member_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteFleetsFleetIdMembersMemberId'][0])
     {
-        $returnType = 'mixed';
+        $returnType = '';
         $request = $this->deleteFleetsFleetIdMembersMemberIdRequest($fleet_id, $member_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -525,12 +469,11 @@ class FleetsApi
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return mixed|\Tkhamez\Eve\API\Model\Error
+     * @return void
      */
     public function deleteFleetsFleetIdSquadsSquadId($fleet_id, $squad_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteFleetsFleetIdSquadsSquadId'][0])
     {
-        list($response) = $this->deleteFleetsFleetIdSquadsSquadIdWithHttpInfo($fleet_id, $squad_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
-        return $response;
+        $this->deleteFleetsFleetIdSquadsSquadIdWithHttpInfo($fleet_id, $squad_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
     }
 
     /**
@@ -548,7 +491,7 @@ class FleetsApi
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of mixed|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteFleetsFleetIdSquadsSquadIdWithHttpInfo($fleet_id, $squad_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteFleetsFleetIdSquadsSquadId'][0])
     {
@@ -577,51 +520,9 @@ class FleetsApi
             $statusCode = $response->getStatusCode();
 
 
-            switch($statusCode) {
-                case 204:
-                    return $this->handleResponseWithDataType(
-                        'mixed',
-                        $request,
-                        $response,
-                    );
-                default:
-                    return $this->handleResponseWithDataType(
-                        '\Tkhamez\Eve\API\Model\Error',
-                        $request,
-                        $response,
-                    );
-            }
-
-            
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            return $this->handleResponseWithDataType(
-                'mixed',
-                $request,
-                $response,
-            );
+            return [null, $statusCode, $response->getHeaders()];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
-                case 204:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        'mixed',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    throw $e;
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -681,27 +582,14 @@ class FleetsApi
      */
     public function deleteFleetsFleetIdSquadsSquadIdAsyncWithHttpInfo($fleet_id, $squad_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteFleetsFleetIdSquadsSquadId'][0])
     {
-        $returnType = 'mixed';
+        $returnType = '';
         $request = $this->deleteFleetsFleetIdSquadsSquadIdRequest($fleet_id, $squad_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -871,12 +759,11 @@ class FleetsApi
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return mixed|\Tkhamez\Eve\API\Model\Error
+     * @return void
      */
     public function deleteFleetsFleetIdWingsWingId($fleet_id, $wing_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteFleetsFleetIdWingsWingId'][0])
     {
-        list($response) = $this->deleteFleetsFleetIdWingsWingIdWithHttpInfo($fleet_id, $wing_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
-        return $response;
+        $this->deleteFleetsFleetIdWingsWingIdWithHttpInfo($fleet_id, $wing_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
     }
 
     /**
@@ -894,7 +781,7 @@ class FleetsApi
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of mixed|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteFleetsFleetIdWingsWingIdWithHttpInfo($fleet_id, $wing_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteFleetsFleetIdWingsWingId'][0])
     {
@@ -923,51 +810,9 @@ class FleetsApi
             $statusCode = $response->getStatusCode();
 
 
-            switch($statusCode) {
-                case 204:
-                    return $this->handleResponseWithDataType(
-                        'mixed',
-                        $request,
-                        $response,
-                    );
-                default:
-                    return $this->handleResponseWithDataType(
-                        '\Tkhamez\Eve\API\Model\Error',
-                        $request,
-                        $response,
-                    );
-            }
-
-            
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            return $this->handleResponseWithDataType(
-                'mixed',
-                $request,
-                $response,
-            );
+            return [null, $statusCode, $response->getHeaders()];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
-                case 204:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        'mixed',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    throw $e;
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -1027,27 +872,14 @@ class FleetsApi
      */
     public function deleteFleetsFleetIdWingsWingIdAsyncWithHttpInfo($fleet_id, $wing_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteFleetsFleetIdWingsWingId'][0])
     {
-        $returnType = 'mixed';
+        $returnType = '';
         $request = $this->deleteFleetsFleetIdWingsWingIdRequest($fleet_id, $wing_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -2512,21 +2344,20 @@ class FleetsApi
      * Create fleet invitation
      *
      * @param  int $fleet_id fleet_id (required)
+     * @param  \Tkhamez\Eve\API\Model\PostFleetsFleetIdMembersRequest $post_fleets_fleet_id_members_request post_fleets_fleet_id_members_request (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  \Tkhamez\Eve\API\Model\PostFleetsFleetIdMembersRequest|null $post_fleets_fleet_id_members_request post_fleets_fleet_id_members_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postFleetsFleetIdMembers'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return mixed|\Tkhamez\Eve\API\Model\Error
+     * @return void
      */
-    public function postFleetsFleetIdMembers($fleet_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $post_fleets_fleet_id_members_request = null, string $contentType = self::contentTypes['postFleetsFleetIdMembers'][0])
+    public function postFleetsFleetIdMembers($fleet_id, $post_fleets_fleet_id_members_request, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['postFleetsFleetIdMembers'][0])
     {
-        list($response) = $this->postFleetsFleetIdMembersWithHttpInfo($fleet_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $post_fleets_fleet_id_members_request, $contentType);
-        return $response;
+        $this->postFleetsFleetIdMembersWithHttpInfo($fleet_id, $post_fleets_fleet_id_members_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
     }
 
     /**
@@ -2535,20 +2366,20 @@ class FleetsApi
      * Create fleet invitation
      *
      * @param  int $fleet_id (required)
+     * @param  \Tkhamez\Eve\API\Model\PostFleetsFleetIdMembersRequest $post_fleets_fleet_id_members_request (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  \Tkhamez\Eve\API\Model\PostFleetsFleetIdMembersRequest|null $post_fleets_fleet_id_members_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postFleetsFleetIdMembers'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of mixed|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function postFleetsFleetIdMembersWithHttpInfo($fleet_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $post_fleets_fleet_id_members_request = null, string $contentType = self::contentTypes['postFleetsFleetIdMembers'][0])
+    public function postFleetsFleetIdMembersWithHttpInfo($fleet_id, $post_fleets_fleet_id_members_request, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['postFleetsFleetIdMembers'][0])
     {
-        $request = $this->postFleetsFleetIdMembersRequest($fleet_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $post_fleets_fleet_id_members_request, $contentType);
+        $request = $this->postFleetsFleetIdMembersRequest($fleet_id, $post_fleets_fleet_id_members_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2573,51 +2404,9 @@ class FleetsApi
             $statusCode = $response->getStatusCode();
 
 
-            switch($statusCode) {
-                case 204:
-                    return $this->handleResponseWithDataType(
-                        'mixed',
-                        $request,
-                        $response,
-                    );
-                default:
-                    return $this->handleResponseWithDataType(
-                        '\Tkhamez\Eve\API\Model\Error',
-                        $request,
-                        $response,
-                    );
-            }
-
-            
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            return $this->handleResponseWithDataType(
-                'mixed',
-                $request,
-                $response,
-            );
+            return [null, $statusCode, $response->getHeaders()];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
-                case 204:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        'mixed',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    throw $e;
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -2639,19 +2428,19 @@ class FleetsApi
      * Create fleet invitation
      *
      * @param  int $fleet_id (required)
+     * @param  \Tkhamez\Eve\API\Model\PostFleetsFleetIdMembersRequest $post_fleets_fleet_id_members_request (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  \Tkhamez\Eve\API\Model\PostFleetsFleetIdMembersRequest|null $post_fleets_fleet_id_members_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postFleetsFleetIdMembers'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postFleetsFleetIdMembersAsync($fleet_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $post_fleets_fleet_id_members_request = null, string $contentType = self::contentTypes['postFleetsFleetIdMembers'][0])
+    public function postFleetsFleetIdMembersAsync($fleet_id, $post_fleets_fleet_id_members_request, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['postFleetsFleetIdMembers'][0])
     {
-        return $this->postFleetsFleetIdMembersAsyncWithHttpInfo($fleet_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $post_fleets_fleet_id_members_request, $contentType)
+        return $this->postFleetsFleetIdMembersAsyncWithHttpInfo($fleet_id, $post_fleets_fleet_id_members_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2665,39 +2454,26 @@ class FleetsApi
      * Create fleet invitation
      *
      * @param  int $fleet_id (required)
+     * @param  \Tkhamez\Eve\API\Model\PostFleetsFleetIdMembersRequest $post_fleets_fleet_id_members_request (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  \Tkhamez\Eve\API\Model\PostFleetsFleetIdMembersRequest|null $post_fleets_fleet_id_members_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postFleetsFleetIdMembers'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postFleetsFleetIdMembersAsyncWithHttpInfo($fleet_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $post_fleets_fleet_id_members_request = null, string $contentType = self::contentTypes['postFleetsFleetIdMembers'][0])
+    public function postFleetsFleetIdMembersAsyncWithHttpInfo($fleet_id, $post_fleets_fleet_id_members_request, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['postFleetsFleetIdMembers'][0])
     {
-        $returnType = 'mixed';
-        $request = $this->postFleetsFleetIdMembersRequest($fleet_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $post_fleets_fleet_id_members_request, $contentType);
+        $returnType = '';
+        $request = $this->postFleetsFleetIdMembersRequest($fleet_id, $post_fleets_fleet_id_members_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -2720,17 +2496,17 @@ class FleetsApi
      * Create request for operation 'postFleetsFleetIdMembers'
      *
      * @param  int $fleet_id (required)
+     * @param  \Tkhamez\Eve\API\Model\PostFleetsFleetIdMembersRequest $post_fleets_fleet_id_members_request (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  \Tkhamez\Eve\API\Model\PostFleetsFleetIdMembersRequest|null $post_fleets_fleet_id_members_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postFleetsFleetIdMembers'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function postFleetsFleetIdMembersRequest($fleet_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $post_fleets_fleet_id_members_request = null, string $contentType = self::contentTypes['postFleetsFleetIdMembers'][0])
+    public function postFleetsFleetIdMembersRequest($fleet_id, $post_fleets_fleet_id_members_request, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['postFleetsFleetIdMembers'][0])
     {
 
         // verify the required parameter 'fleet_id' is set
@@ -2740,6 +2516,12 @@ class FleetsApi
             );
         }
 
+        // verify the required parameter 'post_fleets_fleet_id_members_request' is set
+        if ($post_fleets_fleet_id_members_request === null || (is_array($post_fleets_fleet_id_members_request) && count($post_fleets_fleet_id_members_request) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $post_fleets_fleet_id_members_request when calling postFleetsFleetIdMembers'
+            );
+        }
 
 
 
@@ -3523,21 +3305,20 @@ class FleetsApi
      * Update fleet
      *
      * @param  int $fleet_id fleet_id (required)
+     * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdRequest $put_fleets_fleet_id_request put_fleets_fleet_id_request (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdRequest|null $put_fleets_fleet_id_request put_fleets_fleet_id_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putFleetsFleetId'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return mixed|\Tkhamez\Eve\API\Model\Error
+     * @return void
      */
-    public function putFleetsFleetId($fleet_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $put_fleets_fleet_id_request = null, string $contentType = self::contentTypes['putFleetsFleetId'][0])
+    public function putFleetsFleetId($fleet_id, $put_fleets_fleet_id_request, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['putFleetsFleetId'][0])
     {
-        list($response) = $this->putFleetsFleetIdWithHttpInfo($fleet_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $put_fleets_fleet_id_request, $contentType);
-        return $response;
+        $this->putFleetsFleetIdWithHttpInfo($fleet_id, $put_fleets_fleet_id_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
     }
 
     /**
@@ -3546,20 +3327,20 @@ class FleetsApi
      * Update fleet
      *
      * @param  int $fleet_id (required)
+     * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdRequest $put_fleets_fleet_id_request (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdRequest|null $put_fleets_fleet_id_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putFleetsFleetId'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of mixed|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function putFleetsFleetIdWithHttpInfo($fleet_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $put_fleets_fleet_id_request = null, string $contentType = self::contentTypes['putFleetsFleetId'][0])
+    public function putFleetsFleetIdWithHttpInfo($fleet_id, $put_fleets_fleet_id_request, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['putFleetsFleetId'][0])
     {
-        $request = $this->putFleetsFleetIdRequest($fleet_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $put_fleets_fleet_id_request, $contentType);
+        $request = $this->putFleetsFleetIdRequest($fleet_id, $put_fleets_fleet_id_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3584,51 +3365,9 @@ class FleetsApi
             $statusCode = $response->getStatusCode();
 
 
-            switch($statusCode) {
-                case 204:
-                    return $this->handleResponseWithDataType(
-                        'mixed',
-                        $request,
-                        $response,
-                    );
-                default:
-                    return $this->handleResponseWithDataType(
-                        '\Tkhamez\Eve\API\Model\Error',
-                        $request,
-                        $response,
-                    );
-            }
-
-            
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            return $this->handleResponseWithDataType(
-                'mixed',
-                $request,
-                $response,
-            );
+            return [null, $statusCode, $response->getHeaders()];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
-                case 204:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        'mixed',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    throw $e;
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -3650,19 +3389,19 @@ class FleetsApi
      * Update fleet
      *
      * @param  int $fleet_id (required)
+     * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdRequest $put_fleets_fleet_id_request (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdRequest|null $put_fleets_fleet_id_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putFleetsFleetId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function putFleetsFleetIdAsync($fleet_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $put_fleets_fleet_id_request = null, string $contentType = self::contentTypes['putFleetsFleetId'][0])
+    public function putFleetsFleetIdAsync($fleet_id, $put_fleets_fleet_id_request, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['putFleetsFleetId'][0])
     {
-        return $this->putFleetsFleetIdAsyncWithHttpInfo($fleet_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $put_fleets_fleet_id_request, $contentType)
+        return $this->putFleetsFleetIdAsyncWithHttpInfo($fleet_id, $put_fleets_fleet_id_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3676,39 +3415,26 @@ class FleetsApi
      * Update fleet
      *
      * @param  int $fleet_id (required)
+     * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdRequest $put_fleets_fleet_id_request (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdRequest|null $put_fleets_fleet_id_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putFleetsFleetId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function putFleetsFleetIdAsyncWithHttpInfo($fleet_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $put_fleets_fleet_id_request = null, string $contentType = self::contentTypes['putFleetsFleetId'][0])
+    public function putFleetsFleetIdAsyncWithHttpInfo($fleet_id, $put_fleets_fleet_id_request, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['putFleetsFleetId'][0])
     {
-        $returnType = 'mixed';
-        $request = $this->putFleetsFleetIdRequest($fleet_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $put_fleets_fleet_id_request, $contentType);
+        $returnType = '';
+        $request = $this->putFleetsFleetIdRequest($fleet_id, $put_fleets_fleet_id_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -3731,17 +3457,17 @@ class FleetsApi
      * Create request for operation 'putFleetsFleetId'
      *
      * @param  int $fleet_id (required)
+     * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdRequest $put_fleets_fleet_id_request (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdRequest|null $put_fleets_fleet_id_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putFleetsFleetId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function putFleetsFleetIdRequest($fleet_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $put_fleets_fleet_id_request = null, string $contentType = self::contentTypes['putFleetsFleetId'][0])
+    public function putFleetsFleetIdRequest($fleet_id, $put_fleets_fleet_id_request, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['putFleetsFleetId'][0])
     {
 
         // verify the required parameter 'fleet_id' is set
@@ -3751,6 +3477,12 @@ class FleetsApi
             );
         }
 
+        // verify the required parameter 'put_fleets_fleet_id_request' is set
+        if ($put_fleets_fleet_id_request === null || (is_array($put_fleets_fleet_id_request) && count($put_fleets_fleet_id_request) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $put_fleets_fleet_id_request when calling putFleetsFleetId'
+            );
+        }
 
 
 
@@ -3863,21 +3595,20 @@ class FleetsApi
      *
      * @param  int $fleet_id fleet_id (required)
      * @param  int $member_id member_id (required)
+     * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdMembersMemberIdRequest $put_fleets_fleet_id_members_member_id_request put_fleets_fleet_id_members_member_id_request (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdMembersMemberIdRequest|null $put_fleets_fleet_id_members_member_id_request put_fleets_fleet_id_members_member_id_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putFleetsFleetIdMembersMemberId'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return mixed|\Tkhamez\Eve\API\Model\Error
+     * @return void
      */
-    public function putFleetsFleetIdMembersMemberId($fleet_id, $member_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $put_fleets_fleet_id_members_member_id_request = null, string $contentType = self::contentTypes['putFleetsFleetIdMembersMemberId'][0])
+    public function putFleetsFleetIdMembersMemberId($fleet_id, $member_id, $put_fleets_fleet_id_members_member_id_request, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['putFleetsFleetIdMembersMemberId'][0])
     {
-        list($response) = $this->putFleetsFleetIdMembersMemberIdWithHttpInfo($fleet_id, $member_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $put_fleets_fleet_id_members_member_id_request, $contentType);
-        return $response;
+        $this->putFleetsFleetIdMembersMemberIdWithHttpInfo($fleet_id, $member_id, $put_fleets_fleet_id_members_member_id_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
     }
 
     /**
@@ -3887,20 +3618,20 @@ class FleetsApi
      *
      * @param  int $fleet_id (required)
      * @param  int $member_id (required)
+     * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdMembersMemberIdRequest $put_fleets_fleet_id_members_member_id_request (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdMembersMemberIdRequest|null $put_fleets_fleet_id_members_member_id_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putFleetsFleetIdMembersMemberId'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of mixed|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function putFleetsFleetIdMembersMemberIdWithHttpInfo($fleet_id, $member_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $put_fleets_fleet_id_members_member_id_request = null, string $contentType = self::contentTypes['putFleetsFleetIdMembersMemberId'][0])
+    public function putFleetsFleetIdMembersMemberIdWithHttpInfo($fleet_id, $member_id, $put_fleets_fleet_id_members_member_id_request, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['putFleetsFleetIdMembersMemberId'][0])
     {
-        $request = $this->putFleetsFleetIdMembersMemberIdRequest($fleet_id, $member_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $put_fleets_fleet_id_members_member_id_request, $contentType);
+        $request = $this->putFleetsFleetIdMembersMemberIdRequest($fleet_id, $member_id, $put_fleets_fleet_id_members_member_id_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3925,51 +3656,9 @@ class FleetsApi
             $statusCode = $response->getStatusCode();
 
 
-            switch($statusCode) {
-                case 204:
-                    return $this->handleResponseWithDataType(
-                        'mixed',
-                        $request,
-                        $response,
-                    );
-                default:
-                    return $this->handleResponseWithDataType(
-                        '\Tkhamez\Eve\API\Model\Error',
-                        $request,
-                        $response,
-                    );
-            }
-
-            
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            return $this->handleResponseWithDataType(
-                'mixed',
-                $request,
-                $response,
-            );
+            return [null, $statusCode, $response->getHeaders()];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
-                case 204:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        'mixed',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    throw $e;
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -3992,19 +3681,19 @@ class FleetsApi
      *
      * @param  int $fleet_id (required)
      * @param  int $member_id (required)
+     * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdMembersMemberIdRequest $put_fleets_fleet_id_members_member_id_request (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdMembersMemberIdRequest|null $put_fleets_fleet_id_members_member_id_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putFleetsFleetIdMembersMemberId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function putFleetsFleetIdMembersMemberIdAsync($fleet_id, $member_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $put_fleets_fleet_id_members_member_id_request = null, string $contentType = self::contentTypes['putFleetsFleetIdMembersMemberId'][0])
+    public function putFleetsFleetIdMembersMemberIdAsync($fleet_id, $member_id, $put_fleets_fleet_id_members_member_id_request, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['putFleetsFleetIdMembersMemberId'][0])
     {
-        return $this->putFleetsFleetIdMembersMemberIdAsyncWithHttpInfo($fleet_id, $member_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $put_fleets_fleet_id_members_member_id_request, $contentType)
+        return $this->putFleetsFleetIdMembersMemberIdAsyncWithHttpInfo($fleet_id, $member_id, $put_fleets_fleet_id_members_member_id_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4019,39 +3708,26 @@ class FleetsApi
      *
      * @param  int $fleet_id (required)
      * @param  int $member_id (required)
+     * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdMembersMemberIdRequest $put_fleets_fleet_id_members_member_id_request (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdMembersMemberIdRequest|null $put_fleets_fleet_id_members_member_id_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putFleetsFleetIdMembersMemberId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function putFleetsFleetIdMembersMemberIdAsyncWithHttpInfo($fleet_id, $member_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $put_fleets_fleet_id_members_member_id_request = null, string $contentType = self::contentTypes['putFleetsFleetIdMembersMemberId'][0])
+    public function putFleetsFleetIdMembersMemberIdAsyncWithHttpInfo($fleet_id, $member_id, $put_fleets_fleet_id_members_member_id_request, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['putFleetsFleetIdMembersMemberId'][0])
     {
-        $returnType = 'mixed';
-        $request = $this->putFleetsFleetIdMembersMemberIdRequest($fleet_id, $member_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $put_fleets_fleet_id_members_member_id_request, $contentType);
+        $returnType = '';
+        $request = $this->putFleetsFleetIdMembersMemberIdRequest($fleet_id, $member_id, $put_fleets_fleet_id_members_member_id_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -4075,17 +3751,17 @@ class FleetsApi
      *
      * @param  int $fleet_id (required)
      * @param  int $member_id (required)
+     * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdMembersMemberIdRequest $put_fleets_fleet_id_members_member_id_request (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdMembersMemberIdRequest|null $put_fleets_fleet_id_members_member_id_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putFleetsFleetIdMembersMemberId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function putFleetsFleetIdMembersMemberIdRequest($fleet_id, $member_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $put_fleets_fleet_id_members_member_id_request = null, string $contentType = self::contentTypes['putFleetsFleetIdMembersMemberId'][0])
+    public function putFleetsFleetIdMembersMemberIdRequest($fleet_id, $member_id, $put_fleets_fleet_id_members_member_id_request, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['putFleetsFleetIdMembersMemberId'][0])
     {
 
         // verify the required parameter 'fleet_id' is set
@@ -4102,6 +3778,12 @@ class FleetsApi
             );
         }
 
+        // verify the required parameter 'put_fleets_fleet_id_members_member_id_request' is set
+        if ($put_fleets_fleet_id_members_member_id_request === null || (is_array($put_fleets_fleet_id_members_member_id_request) && count($put_fleets_fleet_id_members_member_id_request) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $put_fleets_fleet_id_members_member_id_request when calling putFleetsFleetIdMembersMemberId'
+            );
+        }
 
 
 
@@ -4222,21 +3904,20 @@ class FleetsApi
      *
      * @param  int $fleet_id fleet_id (required)
      * @param  int $squad_id squad_id (required)
+     * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdSquadsSquadIdRequest $put_fleets_fleet_id_squads_squad_id_request put_fleets_fleet_id_squads_squad_id_request (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdSquadsSquadIdRequest|null $put_fleets_fleet_id_squads_squad_id_request put_fleets_fleet_id_squads_squad_id_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putFleetsFleetIdSquadsSquadId'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return mixed|\Tkhamez\Eve\API\Model\Error
+     * @return void
      */
-    public function putFleetsFleetIdSquadsSquadId($fleet_id, $squad_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $put_fleets_fleet_id_squads_squad_id_request = null, string $contentType = self::contentTypes['putFleetsFleetIdSquadsSquadId'][0])
+    public function putFleetsFleetIdSquadsSquadId($fleet_id, $squad_id, $put_fleets_fleet_id_squads_squad_id_request, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['putFleetsFleetIdSquadsSquadId'][0])
     {
-        list($response) = $this->putFleetsFleetIdSquadsSquadIdWithHttpInfo($fleet_id, $squad_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $put_fleets_fleet_id_squads_squad_id_request, $contentType);
-        return $response;
+        $this->putFleetsFleetIdSquadsSquadIdWithHttpInfo($fleet_id, $squad_id, $put_fleets_fleet_id_squads_squad_id_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
     }
 
     /**
@@ -4246,20 +3927,20 @@ class FleetsApi
      *
      * @param  int $fleet_id (required)
      * @param  int $squad_id (required)
+     * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdSquadsSquadIdRequest $put_fleets_fleet_id_squads_squad_id_request (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdSquadsSquadIdRequest|null $put_fleets_fleet_id_squads_squad_id_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putFleetsFleetIdSquadsSquadId'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of mixed|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function putFleetsFleetIdSquadsSquadIdWithHttpInfo($fleet_id, $squad_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $put_fleets_fleet_id_squads_squad_id_request = null, string $contentType = self::contentTypes['putFleetsFleetIdSquadsSquadId'][0])
+    public function putFleetsFleetIdSquadsSquadIdWithHttpInfo($fleet_id, $squad_id, $put_fleets_fleet_id_squads_squad_id_request, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['putFleetsFleetIdSquadsSquadId'][0])
     {
-        $request = $this->putFleetsFleetIdSquadsSquadIdRequest($fleet_id, $squad_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $put_fleets_fleet_id_squads_squad_id_request, $contentType);
+        $request = $this->putFleetsFleetIdSquadsSquadIdRequest($fleet_id, $squad_id, $put_fleets_fleet_id_squads_squad_id_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4284,51 +3965,9 @@ class FleetsApi
             $statusCode = $response->getStatusCode();
 
 
-            switch($statusCode) {
-                case 204:
-                    return $this->handleResponseWithDataType(
-                        'mixed',
-                        $request,
-                        $response,
-                    );
-                default:
-                    return $this->handleResponseWithDataType(
-                        '\Tkhamez\Eve\API\Model\Error',
-                        $request,
-                        $response,
-                    );
-            }
-
-            
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            return $this->handleResponseWithDataType(
-                'mixed',
-                $request,
-                $response,
-            );
+            return [null, $statusCode, $response->getHeaders()];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
-                case 204:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        'mixed',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    throw $e;
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -4351,19 +3990,19 @@ class FleetsApi
      *
      * @param  int $fleet_id (required)
      * @param  int $squad_id (required)
+     * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdSquadsSquadIdRequest $put_fleets_fleet_id_squads_squad_id_request (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdSquadsSquadIdRequest|null $put_fleets_fleet_id_squads_squad_id_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putFleetsFleetIdSquadsSquadId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function putFleetsFleetIdSquadsSquadIdAsync($fleet_id, $squad_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $put_fleets_fleet_id_squads_squad_id_request = null, string $contentType = self::contentTypes['putFleetsFleetIdSquadsSquadId'][0])
+    public function putFleetsFleetIdSquadsSquadIdAsync($fleet_id, $squad_id, $put_fleets_fleet_id_squads_squad_id_request, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['putFleetsFleetIdSquadsSquadId'][0])
     {
-        return $this->putFleetsFleetIdSquadsSquadIdAsyncWithHttpInfo($fleet_id, $squad_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $put_fleets_fleet_id_squads_squad_id_request, $contentType)
+        return $this->putFleetsFleetIdSquadsSquadIdAsyncWithHttpInfo($fleet_id, $squad_id, $put_fleets_fleet_id_squads_squad_id_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4378,39 +4017,26 @@ class FleetsApi
      *
      * @param  int $fleet_id (required)
      * @param  int $squad_id (required)
+     * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdSquadsSquadIdRequest $put_fleets_fleet_id_squads_squad_id_request (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdSquadsSquadIdRequest|null $put_fleets_fleet_id_squads_squad_id_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putFleetsFleetIdSquadsSquadId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function putFleetsFleetIdSquadsSquadIdAsyncWithHttpInfo($fleet_id, $squad_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $put_fleets_fleet_id_squads_squad_id_request = null, string $contentType = self::contentTypes['putFleetsFleetIdSquadsSquadId'][0])
+    public function putFleetsFleetIdSquadsSquadIdAsyncWithHttpInfo($fleet_id, $squad_id, $put_fleets_fleet_id_squads_squad_id_request, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['putFleetsFleetIdSquadsSquadId'][0])
     {
-        $returnType = 'mixed';
-        $request = $this->putFleetsFleetIdSquadsSquadIdRequest($fleet_id, $squad_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $put_fleets_fleet_id_squads_squad_id_request, $contentType);
+        $returnType = '';
+        $request = $this->putFleetsFleetIdSquadsSquadIdRequest($fleet_id, $squad_id, $put_fleets_fleet_id_squads_squad_id_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -4434,17 +4060,17 @@ class FleetsApi
      *
      * @param  int $fleet_id (required)
      * @param  int $squad_id (required)
+     * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdSquadsSquadIdRequest $put_fleets_fleet_id_squads_squad_id_request (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdSquadsSquadIdRequest|null $put_fleets_fleet_id_squads_squad_id_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putFleetsFleetIdSquadsSquadId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function putFleetsFleetIdSquadsSquadIdRequest($fleet_id, $squad_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $put_fleets_fleet_id_squads_squad_id_request = null, string $contentType = self::contentTypes['putFleetsFleetIdSquadsSquadId'][0])
+    public function putFleetsFleetIdSquadsSquadIdRequest($fleet_id, $squad_id, $put_fleets_fleet_id_squads_squad_id_request, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['putFleetsFleetIdSquadsSquadId'][0])
     {
 
         // verify the required parameter 'fleet_id' is set
@@ -4461,6 +4087,12 @@ class FleetsApi
             );
         }
 
+        // verify the required parameter 'put_fleets_fleet_id_squads_squad_id_request' is set
+        if ($put_fleets_fleet_id_squads_squad_id_request === null || (is_array($put_fleets_fleet_id_squads_squad_id_request) && count($put_fleets_fleet_id_squads_squad_id_request) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $put_fleets_fleet_id_squads_squad_id_request when calling putFleetsFleetIdSquadsSquadId'
+            );
+        }
 
 
 
@@ -4581,21 +4213,20 @@ class FleetsApi
      *
      * @param  int $fleet_id fleet_id (required)
      * @param  int $wing_id wing_id (required)
+     * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdSquadsSquadIdRequest $put_fleets_fleet_id_squads_squad_id_request put_fleets_fleet_id_squads_squad_id_request (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdSquadsSquadIdRequest|null $put_fleets_fleet_id_squads_squad_id_request put_fleets_fleet_id_squads_squad_id_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putFleetsFleetIdWingsWingId'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return mixed|\Tkhamez\Eve\API\Model\Error
+     * @return void
      */
-    public function putFleetsFleetIdWingsWingId($fleet_id, $wing_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $put_fleets_fleet_id_squads_squad_id_request = null, string $contentType = self::contentTypes['putFleetsFleetIdWingsWingId'][0])
+    public function putFleetsFleetIdWingsWingId($fleet_id, $wing_id, $put_fleets_fleet_id_squads_squad_id_request, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['putFleetsFleetIdWingsWingId'][0])
     {
-        list($response) = $this->putFleetsFleetIdWingsWingIdWithHttpInfo($fleet_id, $wing_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $put_fleets_fleet_id_squads_squad_id_request, $contentType);
-        return $response;
+        $this->putFleetsFleetIdWingsWingIdWithHttpInfo($fleet_id, $wing_id, $put_fleets_fleet_id_squads_squad_id_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
     }
 
     /**
@@ -4605,20 +4236,20 @@ class FleetsApi
      *
      * @param  int $fleet_id (required)
      * @param  int $wing_id (required)
+     * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdSquadsSquadIdRequest $put_fleets_fleet_id_squads_squad_id_request (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdSquadsSquadIdRequest|null $put_fleets_fleet_id_squads_squad_id_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putFleetsFleetIdWingsWingId'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of mixed|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function putFleetsFleetIdWingsWingIdWithHttpInfo($fleet_id, $wing_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $put_fleets_fleet_id_squads_squad_id_request = null, string $contentType = self::contentTypes['putFleetsFleetIdWingsWingId'][0])
+    public function putFleetsFleetIdWingsWingIdWithHttpInfo($fleet_id, $wing_id, $put_fleets_fleet_id_squads_squad_id_request, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['putFleetsFleetIdWingsWingId'][0])
     {
-        $request = $this->putFleetsFleetIdWingsWingIdRequest($fleet_id, $wing_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $put_fleets_fleet_id_squads_squad_id_request, $contentType);
+        $request = $this->putFleetsFleetIdWingsWingIdRequest($fleet_id, $wing_id, $put_fleets_fleet_id_squads_squad_id_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4643,51 +4274,9 @@ class FleetsApi
             $statusCode = $response->getStatusCode();
 
 
-            switch($statusCode) {
-                case 204:
-                    return $this->handleResponseWithDataType(
-                        'mixed',
-                        $request,
-                        $response,
-                    );
-                default:
-                    return $this->handleResponseWithDataType(
-                        '\Tkhamez\Eve\API\Model\Error',
-                        $request,
-                        $response,
-                    );
-            }
-
-            
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            return $this->handleResponseWithDataType(
-                'mixed',
-                $request,
-                $response,
-            );
+            return [null, $statusCode, $response->getHeaders()];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
-                case 204:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        'mixed',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    throw $e;
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -4710,19 +4299,19 @@ class FleetsApi
      *
      * @param  int $fleet_id (required)
      * @param  int $wing_id (required)
+     * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdSquadsSquadIdRequest $put_fleets_fleet_id_squads_squad_id_request (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdSquadsSquadIdRequest|null $put_fleets_fleet_id_squads_squad_id_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putFleetsFleetIdWingsWingId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function putFleetsFleetIdWingsWingIdAsync($fleet_id, $wing_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $put_fleets_fleet_id_squads_squad_id_request = null, string $contentType = self::contentTypes['putFleetsFleetIdWingsWingId'][0])
+    public function putFleetsFleetIdWingsWingIdAsync($fleet_id, $wing_id, $put_fleets_fleet_id_squads_squad_id_request, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['putFleetsFleetIdWingsWingId'][0])
     {
-        return $this->putFleetsFleetIdWingsWingIdAsyncWithHttpInfo($fleet_id, $wing_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $put_fleets_fleet_id_squads_squad_id_request, $contentType)
+        return $this->putFleetsFleetIdWingsWingIdAsyncWithHttpInfo($fleet_id, $wing_id, $put_fleets_fleet_id_squads_squad_id_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4737,39 +4326,26 @@ class FleetsApi
      *
      * @param  int $fleet_id (required)
      * @param  int $wing_id (required)
+     * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdSquadsSquadIdRequest $put_fleets_fleet_id_squads_squad_id_request (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdSquadsSquadIdRequest|null $put_fleets_fleet_id_squads_squad_id_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putFleetsFleetIdWingsWingId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function putFleetsFleetIdWingsWingIdAsyncWithHttpInfo($fleet_id, $wing_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $put_fleets_fleet_id_squads_squad_id_request = null, string $contentType = self::contentTypes['putFleetsFleetIdWingsWingId'][0])
+    public function putFleetsFleetIdWingsWingIdAsyncWithHttpInfo($fleet_id, $wing_id, $put_fleets_fleet_id_squads_squad_id_request, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['putFleetsFleetIdWingsWingId'][0])
     {
-        $returnType = 'mixed';
-        $request = $this->putFleetsFleetIdWingsWingIdRequest($fleet_id, $wing_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $put_fleets_fleet_id_squads_squad_id_request, $contentType);
+        $returnType = '';
+        $request = $this->putFleetsFleetIdWingsWingIdRequest($fleet_id, $wing_id, $put_fleets_fleet_id_squads_squad_id_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -4793,17 +4369,17 @@ class FleetsApi
      *
      * @param  int $fleet_id (required)
      * @param  int $wing_id (required)
+     * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdSquadsSquadIdRequest $put_fleets_fleet_id_squads_squad_id_request (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  \Tkhamez\Eve\API\Model\PutFleetsFleetIdSquadsSquadIdRequest|null $put_fleets_fleet_id_squads_squad_id_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putFleetsFleetIdWingsWingId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function putFleetsFleetIdWingsWingIdRequest($fleet_id, $wing_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $put_fleets_fleet_id_squads_squad_id_request = null, string $contentType = self::contentTypes['putFleetsFleetIdWingsWingId'][0])
+    public function putFleetsFleetIdWingsWingIdRequest($fleet_id, $wing_id, $put_fleets_fleet_id_squads_squad_id_request, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['putFleetsFleetIdWingsWingId'][0])
     {
 
         // verify the required parameter 'fleet_id' is set
@@ -4820,6 +4396,12 @@ class FleetsApi
             );
         }
 
+        // verify the required parameter 'put_fleets_fleet_id_squads_squad_id_request' is set
+        if ($put_fleets_fleet_id_squads_squad_id_request === null || (is_array($put_fleets_fleet_id_squads_squad_id_request) && count($put_fleets_fleet_id_squads_squad_id_request) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $put_fleets_fleet_id_squads_squad_id_request when calling putFleetsFleetIdWingsWingId'
+            );
+        }
 
 
 

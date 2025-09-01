@@ -277,6 +277,10 @@ class PutFleetsFleetIdSquadsSquadIdRequest implements ModelInterface, ArrayAcces
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
         }
+        if ((mb_strlen($this->container['name']) > 10)) {
+            $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 10.";
+        }
+
         return $invalidProperties;
     }
 
@@ -314,6 +318,10 @@ class PutFleetsFleetIdSquadsSquadIdRequest implements ModelInterface, ArrayAcces
         if (is_null($name)) {
             throw new \InvalidArgumentException('non-nullable name cannot be null');
         }
+        if ((mb_strlen($name) > 10)) {
+            throw new \InvalidArgumentException('invalid length for $name when calling PutFleetsFleetIdSquadsSquadIdRequest., must be smaller than or equal to 10.');
+        }
+
         $this->container['name'] = $name;
 
         return $this;

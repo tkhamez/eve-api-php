@@ -298,6 +298,10 @@ class PostCharactersCharacterIdFittingsRequest implements ModelInterface, ArrayA
         if ($this->container['description'] === null) {
             $invalidProperties[] = "'description' can't be null";
         }
+        if ((mb_strlen($this->container['description']) > 500)) {
+            $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 500.";
+        }
+
         if ($this->container['items'] === null) {
             $invalidProperties[] = "'items' can't be null";
         }
@@ -312,6 +316,14 @@ class PostCharactersCharacterIdFittingsRequest implements ModelInterface, ArrayA
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
         }
+        if ((mb_strlen($this->container['name']) > 50)) {
+            $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 50.";
+        }
+
+        if ((mb_strlen($this->container['name']) < 1)) {
+            $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
+        }
+
         if ($this->container['ship_type_id'] === null) {
             $invalidProperties[] = "'ship_type_id' can't be null";
         }
@@ -352,6 +364,10 @@ class PostCharactersCharacterIdFittingsRequest implements ModelInterface, ArrayA
         if (is_null($description)) {
             throw new \InvalidArgumentException('non-nullable description cannot be null');
         }
+        if ((mb_strlen($description) > 500)) {
+            throw new \InvalidArgumentException('invalid length for $description when calling PostCharactersCharacterIdFittingsRequest., must be smaller than or equal to 500.');
+        }
+
         $this->container['description'] = $description;
 
         return $this;
@@ -413,6 +429,13 @@ class PostCharactersCharacterIdFittingsRequest implements ModelInterface, ArrayA
         if (is_null($name)) {
             throw new \InvalidArgumentException('non-nullable name cannot be null');
         }
+        if ((mb_strlen($name) > 50)) {
+            throw new \InvalidArgumentException('invalid length for $name when calling PostCharactersCharacterIdFittingsRequest., must be smaller than or equal to 50.');
+        }
+        if ((mb_strlen($name) < 1)) {
+            throw new \InvalidArgumentException('invalid length for $name when calling PostCharactersCharacterIdFittingsRequest., must be bigger than or equal to 1.');
+        }
+
         $this->container['name'] = $name;
 
         return $this;

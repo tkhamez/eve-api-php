@@ -829,7 +829,7 @@ try {
 ## `postCharactersAffiliation()`
 
 ```php
-postCharactersAffiliation($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body): \Tkhamez\Eve\API\Model\CharactersAffiliationPostInner[]
+postCharactersAffiliation($request_body, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\CharactersAffiliationPostInner[]
 ```
 
 Character affiliation
@@ -849,14 +849,14 @@ $apiInstance = new Tkhamez\Eve\API\Api\CharacterApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
+$request_body = array(56); // int[]
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
 $x_compatibility_date = '2025-08-26'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
-$request_body = array(56); // int[]
 
 try {
-    $result = $apiInstance->postCharactersAffiliation($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body);
+    $result = $apiInstance->postCharactersAffiliation($request_body, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CharacterApi->postCharactersAffiliation: ', $e->getMessage(), PHP_EOL;
@@ -867,11 +867,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **request_body** | [**int[]**](../Model/int.md)|  | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
 | **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-08-26&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
-| **request_body** | [**int[]**](../Model/int.md)|  | [optional] |
 
 ### Return type
 
@@ -893,7 +893,7 @@ No authorization required
 ## `postCharactersCharacterIdCspa()`
 
 ```php
-postCharactersCharacterIdCspa($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body): float
+postCharactersCharacterIdCspa($character_id, $request_body, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): float
 ```
 
 Calculate a CSPA charge cost
@@ -918,14 +918,14 @@ $apiInstance = new Tkhamez\Eve\API\Api\CharacterApi(
     $config
 );
 $character_id = 56; // int | The ID of the character
+$request_body = array(56); // int[]
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
 $x_compatibility_date = '2025-08-26'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
-$request_body = array(56); // int[]
 
 try {
-    $result = $apiInstance->postCharactersCharacterIdCspa($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body);
+    $result = $apiInstance->postCharactersCharacterIdCspa($character_id, $request_body, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CharacterApi->postCharactersCharacterIdCspa: ', $e->getMessage(), PHP_EOL;
@@ -937,11 +937,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **character_id** | **int**| The ID of the character | |
+| **request_body** | [**int[]**](../Model/int.md)|  | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
 | **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-08-26&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
-| **request_body** | [**int[]**](../Model/int.md)|  | [optional] |
 
 ### Return type
 

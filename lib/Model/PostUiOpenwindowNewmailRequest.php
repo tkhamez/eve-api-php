@@ -305,6 +305,10 @@ class PostUiOpenwindowNewmailRequest implements ModelInterface, ArrayAccess, \Js
         if ($this->container['body'] === null) {
             $invalidProperties[] = "'body' can't be null";
         }
+        if ((mb_strlen($this->container['body']) > 10000)) {
+            $invalidProperties[] = "invalid value for 'body', the character length must be smaller than or equal to 10000.";
+        }
+
         if ($this->container['recipients'] === null) {
             $invalidProperties[] = "'recipients' can't be null";
         }
@@ -319,6 +323,10 @@ class PostUiOpenwindowNewmailRequest implements ModelInterface, ArrayAccess, \Js
         if ($this->container['subject'] === null) {
             $invalidProperties[] = "'subject' can't be null";
         }
+        if ((mb_strlen($this->container['subject']) > 1000)) {
+            $invalidProperties[] = "invalid value for 'subject', the character length must be smaller than or equal to 1000.";
+        }
+
         return $invalidProperties;
     }
 
@@ -356,6 +364,10 @@ class PostUiOpenwindowNewmailRequest implements ModelInterface, ArrayAccess, \Js
         if (is_null($body)) {
             throw new \InvalidArgumentException('non-nullable body cannot be null');
         }
+        if ((mb_strlen($body) > 10000)) {
+            throw new \InvalidArgumentException('invalid length for $body when calling PostUiOpenwindowNewmailRequest., must be smaller than or equal to 10000.');
+        }
+
         $this->container['body'] = $body;
 
         return $this;
@@ -417,6 +429,10 @@ class PostUiOpenwindowNewmailRequest implements ModelInterface, ArrayAccess, \Js
         if (is_null($subject)) {
             throw new \InvalidArgumentException('non-nullable subject cannot be null');
         }
+        if ((mb_strlen($subject) > 1000)) {
+            throw new \InvalidArgumentException('invalid length for $subject when calling PostUiOpenwindowNewmailRequest., must be smaller than or equal to 1000.');
+        }
+
         $this->container['subject'] = $subject;
 
         return $this;

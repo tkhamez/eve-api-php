@@ -155,7 +155,7 @@ try {
 ## `postCharactersCharacterIdAssetsLocations()`
 
 ```php
-postCharactersCharacterIdAssetsLocations($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body): \Tkhamez\Eve\API\Model\CharactersCharacterIdAssetsLocationsPostInner[]
+postCharactersCharacterIdAssetsLocations($character_id, $request_body, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdAssetsLocationsPostInner[]
 ```
 
 Get character asset locations
@@ -180,14 +180,14 @@ $apiInstance = new Tkhamez\Eve\API\Api\AssetsApi(
     $config
 );
 $character_id = 56; // int | The ID of the character
+$request_body = array(56); // int[]
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
 $x_compatibility_date = '2025-08-26'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
-$request_body = array(56); // int[]
 
 try {
-    $result = $apiInstance->postCharactersCharacterIdAssetsLocations($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body);
+    $result = $apiInstance->postCharactersCharacterIdAssetsLocations($character_id, $request_body, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AssetsApi->postCharactersCharacterIdAssetsLocations: ', $e->getMessage(), PHP_EOL;
@@ -199,11 +199,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **character_id** | **int**| The ID of the character | |
+| **request_body** | [**int[]**](../Model/int.md)|  | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
 | **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-08-26&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
-| **request_body** | [**int[]**](../Model/int.md)|  | [optional] |
 
 ### Return type
 
@@ -225,7 +225,7 @@ try {
 ## `postCharactersCharacterIdAssetsNames()`
 
 ```php
-postCharactersCharacterIdAssetsNames($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body): \Tkhamez\Eve\API\Model\CharactersCharacterIdAssetsNamesPostInner[]
+postCharactersCharacterIdAssetsNames($character_id, $request_body, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdAssetsNamesPostInner[]
 ```
 
 Get character asset names
@@ -250,14 +250,14 @@ $apiInstance = new Tkhamez\Eve\API\Api\AssetsApi(
     $config
 );
 $character_id = 56; // int | The ID of the character
+$request_body = array(56); // int[]
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
 $x_compatibility_date = '2025-08-26'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
-$request_body = array(56); // int[]
 
 try {
-    $result = $apiInstance->postCharactersCharacterIdAssetsNames($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body);
+    $result = $apiInstance->postCharactersCharacterIdAssetsNames($character_id, $request_body, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AssetsApi->postCharactersCharacterIdAssetsNames: ', $e->getMessage(), PHP_EOL;
@@ -269,11 +269,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **character_id** | **int**| The ID of the character | |
+| **request_body** | [**int[]**](../Model/int.md)|  | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
 | **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-08-26&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
-| **request_body** | [**int[]**](../Model/int.md)|  | [optional] |
 
 ### Return type
 
@@ -295,7 +295,7 @@ try {
 ## `postCorporationsCorporationIdAssetsLocations()`
 
 ```php
-postCorporationsCorporationIdAssetsLocations($corporation_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body): \Tkhamez\Eve\API\Model\CharactersCharacterIdAssetsLocationsPostInner[]
+postCorporationsCorporationIdAssetsLocations($corporation_id, $request_body, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdAssetsLocationsPostInner[]
 ```
 
 Get corporation asset locations
@@ -320,14 +320,14 @@ $apiInstance = new Tkhamez\Eve\API\Api\AssetsApi(
     $config
 );
 $corporation_id = 56; // int | The ID of the corporation
+$request_body = array(56); // int[]
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
 $x_compatibility_date = '2025-08-26'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
-$request_body = array(56); // int[]
 
 try {
-    $result = $apiInstance->postCorporationsCorporationIdAssetsLocations($corporation_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body);
+    $result = $apiInstance->postCorporationsCorporationIdAssetsLocations($corporation_id, $request_body, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AssetsApi->postCorporationsCorporationIdAssetsLocations: ', $e->getMessage(), PHP_EOL;
@@ -339,11 +339,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **corporation_id** | **int**| The ID of the corporation | |
+| **request_body** | [**int[]**](../Model/int.md)|  | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
 | **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-08-26&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
-| **request_body** | [**int[]**](../Model/int.md)|  | [optional] |
 
 ### Return type
 
@@ -365,7 +365,7 @@ try {
 ## `postCorporationsCorporationIdAssetsNames()`
 
 ```php
-postCorporationsCorporationIdAssetsNames($corporation_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body): \Tkhamez\Eve\API\Model\CharactersCharacterIdAssetsNamesPostInner[]
+postCorporationsCorporationIdAssetsNames($corporation_id, $request_body, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdAssetsNamesPostInner[]
 ```
 
 Get corporation asset names
@@ -390,14 +390,14 @@ $apiInstance = new Tkhamez\Eve\API\Api\AssetsApi(
     $config
 );
 $corporation_id = 56; // int | The ID of the corporation
+$request_body = array(56); // int[]
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
 $x_compatibility_date = '2025-08-26'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
-$request_body = array(56); // int[]
 
 try {
-    $result = $apiInstance->postCorporationsCorporationIdAssetsNames($corporation_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body);
+    $result = $apiInstance->postCorporationsCorporationIdAssetsNames($corporation_id, $request_body, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AssetsApi->postCorporationsCorporationIdAssetsNames: ', $e->getMessage(), PHP_EOL;
@@ -409,11 +409,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **corporation_id** | **int**| The ID of the corporation | |
+| **request_body** | [**int[]**](../Model/int.md)|  | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
 | **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-08-26&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
-| **request_body** | [**int[]**](../Model/int.md)|  | [optional] |
 
 ### Return type
 

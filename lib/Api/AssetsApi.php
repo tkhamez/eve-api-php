@@ -834,20 +834,20 @@ class AssetsApi
      * Get character asset locations
      *
      * @param  int $character_id The ID of the character (required)
+     * @param  int[] $request_body request_body (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  int[]|null $request_body request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCharactersCharacterIdAssetsLocations'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\CharactersCharacterIdAssetsLocationsPostInner[]|\Tkhamez\Eve\API\Model\Error
      */
-    public function postCharactersCharacterIdAssetsLocations($character_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['postCharactersCharacterIdAssetsLocations'][0])
+    public function postCharactersCharacterIdAssetsLocations($character_id, $request_body, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['postCharactersCharacterIdAssetsLocations'][0])
     {
-        list($response) = $this->postCharactersCharacterIdAssetsLocationsWithHttpInfo($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body, $contentType);
+        list($response) = $this->postCharactersCharacterIdAssetsLocationsWithHttpInfo($character_id, $request_body, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
         return $response;
     }
 
@@ -857,20 +857,20 @@ class AssetsApi
      * Get character asset locations
      *
      * @param  int $character_id The ID of the character (required)
+     * @param  int[] $request_body (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  int[]|null $request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCharactersCharacterIdAssetsLocations'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\CharactersCharacterIdAssetsLocationsPostInner[]|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function postCharactersCharacterIdAssetsLocationsWithHttpInfo($character_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['postCharactersCharacterIdAssetsLocations'][0])
+    public function postCharactersCharacterIdAssetsLocationsWithHttpInfo($character_id, $request_body, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['postCharactersCharacterIdAssetsLocations'][0])
     {
-        $request = $this->postCharactersCharacterIdAssetsLocationsRequest($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body, $contentType);
+        $request = $this->postCharactersCharacterIdAssetsLocationsRequest($character_id, $request_body, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -961,19 +961,19 @@ class AssetsApi
      * Get character asset locations
      *
      * @param  int $character_id The ID of the character (required)
+     * @param  int[] $request_body (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  int[]|null $request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCharactersCharacterIdAssetsLocations'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postCharactersCharacterIdAssetsLocationsAsync($character_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['postCharactersCharacterIdAssetsLocations'][0])
+    public function postCharactersCharacterIdAssetsLocationsAsync($character_id, $request_body, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['postCharactersCharacterIdAssetsLocations'][0])
     {
-        return $this->postCharactersCharacterIdAssetsLocationsAsyncWithHttpInfo($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body, $contentType)
+        return $this->postCharactersCharacterIdAssetsLocationsAsyncWithHttpInfo($character_id, $request_body, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -987,20 +987,20 @@ class AssetsApi
      * Get character asset locations
      *
      * @param  int $character_id The ID of the character (required)
+     * @param  int[] $request_body (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  int[]|null $request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCharactersCharacterIdAssetsLocations'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postCharactersCharacterIdAssetsLocationsAsyncWithHttpInfo($character_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['postCharactersCharacterIdAssetsLocations'][0])
+    public function postCharactersCharacterIdAssetsLocationsAsyncWithHttpInfo($character_id, $request_body, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['postCharactersCharacterIdAssetsLocations'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\CharactersCharacterIdAssetsLocationsPostInner[]';
-        $request = $this->postCharactersCharacterIdAssetsLocationsRequest($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body, $contentType);
+        $request = $this->postCharactersCharacterIdAssetsLocationsRequest($character_id, $request_body, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1042,17 +1042,17 @@ class AssetsApi
      * Create request for operation 'postCharactersCharacterIdAssetsLocations'
      *
      * @param  int $character_id The ID of the character (required)
+     * @param  int[] $request_body (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  int[]|null $request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCharactersCharacterIdAssetsLocations'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function postCharactersCharacterIdAssetsLocationsRequest($character_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['postCharactersCharacterIdAssetsLocations'][0])
+    public function postCharactersCharacterIdAssetsLocationsRequest($character_id, $request_body, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['postCharactersCharacterIdAssetsLocations'][0])
     {
 
         // verify the required parameter 'character_id' is set
@@ -1062,17 +1062,23 @@ class AssetsApi
             );
         }
 
-
-
-
-
-        if ($request_body !== null && count($request_body) > 1000) {
+        // verify the required parameter 'request_body' is set
+        if ($request_body === null || (is_array($request_body) && count($request_body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $request_body when calling postCharactersCharacterIdAssetsLocations'
+            );
+        }
+        if (count($request_body) > 1000) {
             throw new \InvalidArgumentException('invalid value for "$request_body" when calling AssetsApi.postCharactersCharacterIdAssetsLocations, number of items must be less than or equal to 1000.');
         }
-        if ($request_body !== null && count($request_body) < 1) {
+        if (count($request_body) < 1) {
             throw new \InvalidArgumentException('invalid value for "$request_body" when calling AssetsApi.postCharactersCharacterIdAssetsLocations, number of items must be greater than or equal to 1.');
         }
         
+
+
+
+
 
         $resourcePath = '/characters/{character_id}/assets/locations';
         $formParams = [];
@@ -1179,20 +1185,20 @@ class AssetsApi
      * Get character asset names
      *
      * @param  int $character_id The ID of the character (required)
+     * @param  int[] $request_body request_body (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  int[]|null $request_body request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCharactersCharacterIdAssetsNames'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\CharactersCharacterIdAssetsNamesPostInner[]|\Tkhamez\Eve\API\Model\Error
      */
-    public function postCharactersCharacterIdAssetsNames($character_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['postCharactersCharacterIdAssetsNames'][0])
+    public function postCharactersCharacterIdAssetsNames($character_id, $request_body, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['postCharactersCharacterIdAssetsNames'][0])
     {
-        list($response) = $this->postCharactersCharacterIdAssetsNamesWithHttpInfo($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body, $contentType);
+        list($response) = $this->postCharactersCharacterIdAssetsNamesWithHttpInfo($character_id, $request_body, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
         return $response;
     }
 
@@ -1202,20 +1208,20 @@ class AssetsApi
      * Get character asset names
      *
      * @param  int $character_id The ID of the character (required)
+     * @param  int[] $request_body (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  int[]|null $request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCharactersCharacterIdAssetsNames'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\CharactersCharacterIdAssetsNamesPostInner[]|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function postCharactersCharacterIdAssetsNamesWithHttpInfo($character_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['postCharactersCharacterIdAssetsNames'][0])
+    public function postCharactersCharacterIdAssetsNamesWithHttpInfo($character_id, $request_body, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['postCharactersCharacterIdAssetsNames'][0])
     {
-        $request = $this->postCharactersCharacterIdAssetsNamesRequest($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body, $contentType);
+        $request = $this->postCharactersCharacterIdAssetsNamesRequest($character_id, $request_body, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1306,19 +1312,19 @@ class AssetsApi
      * Get character asset names
      *
      * @param  int $character_id The ID of the character (required)
+     * @param  int[] $request_body (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  int[]|null $request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCharactersCharacterIdAssetsNames'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postCharactersCharacterIdAssetsNamesAsync($character_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['postCharactersCharacterIdAssetsNames'][0])
+    public function postCharactersCharacterIdAssetsNamesAsync($character_id, $request_body, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['postCharactersCharacterIdAssetsNames'][0])
     {
-        return $this->postCharactersCharacterIdAssetsNamesAsyncWithHttpInfo($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body, $contentType)
+        return $this->postCharactersCharacterIdAssetsNamesAsyncWithHttpInfo($character_id, $request_body, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1332,20 +1338,20 @@ class AssetsApi
      * Get character asset names
      *
      * @param  int $character_id The ID of the character (required)
+     * @param  int[] $request_body (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  int[]|null $request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCharactersCharacterIdAssetsNames'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postCharactersCharacterIdAssetsNamesAsyncWithHttpInfo($character_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['postCharactersCharacterIdAssetsNames'][0])
+    public function postCharactersCharacterIdAssetsNamesAsyncWithHttpInfo($character_id, $request_body, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['postCharactersCharacterIdAssetsNames'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\CharactersCharacterIdAssetsNamesPostInner[]';
-        $request = $this->postCharactersCharacterIdAssetsNamesRequest($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body, $contentType);
+        $request = $this->postCharactersCharacterIdAssetsNamesRequest($character_id, $request_body, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1387,17 +1393,17 @@ class AssetsApi
      * Create request for operation 'postCharactersCharacterIdAssetsNames'
      *
      * @param  int $character_id The ID of the character (required)
+     * @param  int[] $request_body (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  int[]|null $request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCharactersCharacterIdAssetsNames'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function postCharactersCharacterIdAssetsNamesRequest($character_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['postCharactersCharacterIdAssetsNames'][0])
+    public function postCharactersCharacterIdAssetsNamesRequest($character_id, $request_body, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['postCharactersCharacterIdAssetsNames'][0])
     {
 
         // verify the required parameter 'character_id' is set
@@ -1407,17 +1413,23 @@ class AssetsApi
             );
         }
 
-
-
-
-
-        if ($request_body !== null && count($request_body) > 1000) {
+        // verify the required parameter 'request_body' is set
+        if ($request_body === null || (is_array($request_body) && count($request_body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $request_body when calling postCharactersCharacterIdAssetsNames'
+            );
+        }
+        if (count($request_body) > 1000) {
             throw new \InvalidArgumentException('invalid value for "$request_body" when calling AssetsApi.postCharactersCharacterIdAssetsNames, number of items must be less than or equal to 1000.');
         }
-        if ($request_body !== null && count($request_body) < 1) {
+        if (count($request_body) < 1) {
             throw new \InvalidArgumentException('invalid value for "$request_body" when calling AssetsApi.postCharactersCharacterIdAssetsNames, number of items must be greater than or equal to 1.');
         }
         
+
+
+
+
 
         $resourcePath = '/characters/{character_id}/assets/names';
         $formParams = [];
@@ -1524,20 +1536,20 @@ class AssetsApi
      * Get corporation asset locations
      *
      * @param  int $corporation_id The ID of the corporation (required)
+     * @param  int[] $request_body request_body (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  int[]|null $request_body request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCorporationsCorporationIdAssetsLocations'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\CharactersCharacterIdAssetsLocationsPostInner[]|\Tkhamez\Eve\API\Model\Error
      */
-    public function postCorporationsCorporationIdAssetsLocations($corporation_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['postCorporationsCorporationIdAssetsLocations'][0])
+    public function postCorporationsCorporationIdAssetsLocations($corporation_id, $request_body, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['postCorporationsCorporationIdAssetsLocations'][0])
     {
-        list($response) = $this->postCorporationsCorporationIdAssetsLocationsWithHttpInfo($corporation_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body, $contentType);
+        list($response) = $this->postCorporationsCorporationIdAssetsLocationsWithHttpInfo($corporation_id, $request_body, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
         return $response;
     }
 
@@ -1547,20 +1559,20 @@ class AssetsApi
      * Get corporation asset locations
      *
      * @param  int $corporation_id The ID of the corporation (required)
+     * @param  int[] $request_body (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  int[]|null $request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCorporationsCorporationIdAssetsLocations'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\CharactersCharacterIdAssetsLocationsPostInner[]|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function postCorporationsCorporationIdAssetsLocationsWithHttpInfo($corporation_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['postCorporationsCorporationIdAssetsLocations'][0])
+    public function postCorporationsCorporationIdAssetsLocationsWithHttpInfo($corporation_id, $request_body, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['postCorporationsCorporationIdAssetsLocations'][0])
     {
-        $request = $this->postCorporationsCorporationIdAssetsLocationsRequest($corporation_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body, $contentType);
+        $request = $this->postCorporationsCorporationIdAssetsLocationsRequest($corporation_id, $request_body, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1651,19 +1663,19 @@ class AssetsApi
      * Get corporation asset locations
      *
      * @param  int $corporation_id The ID of the corporation (required)
+     * @param  int[] $request_body (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  int[]|null $request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCorporationsCorporationIdAssetsLocations'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postCorporationsCorporationIdAssetsLocationsAsync($corporation_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['postCorporationsCorporationIdAssetsLocations'][0])
+    public function postCorporationsCorporationIdAssetsLocationsAsync($corporation_id, $request_body, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['postCorporationsCorporationIdAssetsLocations'][0])
     {
-        return $this->postCorporationsCorporationIdAssetsLocationsAsyncWithHttpInfo($corporation_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body, $contentType)
+        return $this->postCorporationsCorporationIdAssetsLocationsAsyncWithHttpInfo($corporation_id, $request_body, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1677,20 +1689,20 @@ class AssetsApi
      * Get corporation asset locations
      *
      * @param  int $corporation_id The ID of the corporation (required)
+     * @param  int[] $request_body (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  int[]|null $request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCorporationsCorporationIdAssetsLocations'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postCorporationsCorporationIdAssetsLocationsAsyncWithHttpInfo($corporation_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['postCorporationsCorporationIdAssetsLocations'][0])
+    public function postCorporationsCorporationIdAssetsLocationsAsyncWithHttpInfo($corporation_id, $request_body, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['postCorporationsCorporationIdAssetsLocations'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\CharactersCharacterIdAssetsLocationsPostInner[]';
-        $request = $this->postCorporationsCorporationIdAssetsLocationsRequest($corporation_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body, $contentType);
+        $request = $this->postCorporationsCorporationIdAssetsLocationsRequest($corporation_id, $request_body, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1732,17 +1744,17 @@ class AssetsApi
      * Create request for operation 'postCorporationsCorporationIdAssetsLocations'
      *
      * @param  int $corporation_id The ID of the corporation (required)
+     * @param  int[] $request_body (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  int[]|null $request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCorporationsCorporationIdAssetsLocations'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function postCorporationsCorporationIdAssetsLocationsRequest($corporation_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['postCorporationsCorporationIdAssetsLocations'][0])
+    public function postCorporationsCorporationIdAssetsLocationsRequest($corporation_id, $request_body, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['postCorporationsCorporationIdAssetsLocations'][0])
     {
 
         // verify the required parameter 'corporation_id' is set
@@ -1752,17 +1764,23 @@ class AssetsApi
             );
         }
 
-
-
-
-
-        if ($request_body !== null && count($request_body) > 1000) {
+        // verify the required parameter 'request_body' is set
+        if ($request_body === null || (is_array($request_body) && count($request_body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $request_body when calling postCorporationsCorporationIdAssetsLocations'
+            );
+        }
+        if (count($request_body) > 1000) {
             throw new \InvalidArgumentException('invalid value for "$request_body" when calling AssetsApi.postCorporationsCorporationIdAssetsLocations, number of items must be less than or equal to 1000.');
         }
-        if ($request_body !== null && count($request_body) < 1) {
+        if (count($request_body) < 1) {
             throw new \InvalidArgumentException('invalid value for "$request_body" when calling AssetsApi.postCorporationsCorporationIdAssetsLocations, number of items must be greater than or equal to 1.');
         }
         
+
+
+
+
 
         $resourcePath = '/corporations/{corporation_id}/assets/locations';
         $formParams = [];
@@ -1869,20 +1887,20 @@ class AssetsApi
      * Get corporation asset names
      *
      * @param  int $corporation_id The ID of the corporation (required)
+     * @param  int[] $request_body request_body (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  int[]|null $request_body request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCorporationsCorporationIdAssetsNames'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\CharactersCharacterIdAssetsNamesPostInner[]|\Tkhamez\Eve\API\Model\Error
      */
-    public function postCorporationsCorporationIdAssetsNames($corporation_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['postCorporationsCorporationIdAssetsNames'][0])
+    public function postCorporationsCorporationIdAssetsNames($corporation_id, $request_body, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['postCorporationsCorporationIdAssetsNames'][0])
     {
-        list($response) = $this->postCorporationsCorporationIdAssetsNamesWithHttpInfo($corporation_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body, $contentType);
+        list($response) = $this->postCorporationsCorporationIdAssetsNamesWithHttpInfo($corporation_id, $request_body, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
         return $response;
     }
 
@@ -1892,20 +1910,20 @@ class AssetsApi
      * Get corporation asset names
      *
      * @param  int $corporation_id The ID of the corporation (required)
+     * @param  int[] $request_body (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  int[]|null $request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCorporationsCorporationIdAssetsNames'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\CharactersCharacterIdAssetsNamesPostInner[]|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function postCorporationsCorporationIdAssetsNamesWithHttpInfo($corporation_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['postCorporationsCorporationIdAssetsNames'][0])
+    public function postCorporationsCorporationIdAssetsNamesWithHttpInfo($corporation_id, $request_body, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['postCorporationsCorporationIdAssetsNames'][0])
     {
-        $request = $this->postCorporationsCorporationIdAssetsNamesRequest($corporation_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body, $contentType);
+        $request = $this->postCorporationsCorporationIdAssetsNamesRequest($corporation_id, $request_body, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1996,19 +2014,19 @@ class AssetsApi
      * Get corporation asset names
      *
      * @param  int $corporation_id The ID of the corporation (required)
+     * @param  int[] $request_body (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  int[]|null $request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCorporationsCorporationIdAssetsNames'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postCorporationsCorporationIdAssetsNamesAsync($corporation_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['postCorporationsCorporationIdAssetsNames'][0])
+    public function postCorporationsCorporationIdAssetsNamesAsync($corporation_id, $request_body, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['postCorporationsCorporationIdAssetsNames'][0])
     {
-        return $this->postCorporationsCorporationIdAssetsNamesAsyncWithHttpInfo($corporation_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body, $contentType)
+        return $this->postCorporationsCorporationIdAssetsNamesAsyncWithHttpInfo($corporation_id, $request_body, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2022,20 +2040,20 @@ class AssetsApi
      * Get corporation asset names
      *
      * @param  int $corporation_id The ID of the corporation (required)
+     * @param  int[] $request_body (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  int[]|null $request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCorporationsCorporationIdAssetsNames'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postCorporationsCorporationIdAssetsNamesAsyncWithHttpInfo($corporation_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['postCorporationsCorporationIdAssetsNames'][0])
+    public function postCorporationsCorporationIdAssetsNamesAsyncWithHttpInfo($corporation_id, $request_body, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['postCorporationsCorporationIdAssetsNames'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\CharactersCharacterIdAssetsNamesPostInner[]';
-        $request = $this->postCorporationsCorporationIdAssetsNamesRequest($corporation_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body, $contentType);
+        $request = $this->postCorporationsCorporationIdAssetsNamesRequest($corporation_id, $request_body, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2077,17 +2095,17 @@ class AssetsApi
      * Create request for operation 'postCorporationsCorporationIdAssetsNames'
      *
      * @param  int $corporation_id The ID of the corporation (required)
+     * @param  int[] $request_body (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  int[]|null $request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCorporationsCorporationIdAssetsNames'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function postCorporationsCorporationIdAssetsNamesRequest($corporation_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['postCorporationsCorporationIdAssetsNames'][0])
+    public function postCorporationsCorporationIdAssetsNamesRequest($corporation_id, $request_body, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['postCorporationsCorporationIdAssetsNames'][0])
     {
 
         // verify the required parameter 'corporation_id' is set
@@ -2097,17 +2115,23 @@ class AssetsApi
             );
         }
 
-
-
-
-
-        if ($request_body !== null && count($request_body) > 1000) {
+        // verify the required parameter 'request_body' is set
+        if ($request_body === null || (is_array($request_body) && count($request_body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $request_body when calling postCorporationsCorporationIdAssetsNames'
+            );
+        }
+        if (count($request_body) > 1000) {
             throw new \InvalidArgumentException('invalid value for "$request_body" when calling AssetsApi.postCorporationsCorporationIdAssetsNames, number of items must be less than or equal to 1000.');
         }
-        if ($request_body !== null && count($request_body) < 1) {
+        if (count($request_body) < 1) {
             throw new \InvalidArgumentException('invalid value for "$request_body" when calling AssetsApi.postCorporationsCorporationIdAssetsNames, number of items must be greater than or equal to 1.');
         }
         
+
+
+
+
 
         $resourcePath = '/corporations/{corporation_id}/assets/names';
         $formParams = [];

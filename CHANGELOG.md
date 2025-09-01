@@ -14,6 +14,13 @@ For generator library changes see https://github.com/OpenAPITools/openapi-genera
 
 ## Notable changes
 
+### 8.20250826.0
+
+Beta status.
+
+- Some request bodies are now required. This changes the order of the parameters for the 
+  respective methods.
+
 ### 7.20250826.0
 
 Beta status.

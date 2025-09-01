@@ -1174,21 +1174,20 @@ class CalendarApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  int $event_id event_id (required)
+     * @param  \Tkhamez\Eve\API\Model\PutCharactersCharacterIdCalendarEventIdRequest $put_characters_character_id_calendar_event_id_request put_characters_character_id_calendar_event_id_request (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  \Tkhamez\Eve\API\Model\PutCharactersCharacterIdCalendarEventIdRequest|null $put_characters_character_id_calendar_event_id_request put_characters_character_id_calendar_event_id_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCharactersCharacterIdCalendarEventId'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return mixed|\Tkhamez\Eve\API\Model\Error
+     * @return void
      */
-    public function putCharactersCharacterIdCalendarEventId($character_id, $event_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $put_characters_character_id_calendar_event_id_request = null, string $contentType = self::contentTypes['putCharactersCharacterIdCalendarEventId'][0])
+    public function putCharactersCharacterIdCalendarEventId($character_id, $event_id, $put_characters_character_id_calendar_event_id_request, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['putCharactersCharacterIdCalendarEventId'][0])
     {
-        list($response) = $this->putCharactersCharacterIdCalendarEventIdWithHttpInfo($character_id, $event_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $put_characters_character_id_calendar_event_id_request, $contentType);
-        return $response;
+        $this->putCharactersCharacterIdCalendarEventIdWithHttpInfo($character_id, $event_id, $put_characters_character_id_calendar_event_id_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
     }
 
     /**
@@ -1198,20 +1197,20 @@ class CalendarApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  int $event_id (required)
+     * @param  \Tkhamez\Eve\API\Model\PutCharactersCharacterIdCalendarEventIdRequest $put_characters_character_id_calendar_event_id_request (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  \Tkhamez\Eve\API\Model\PutCharactersCharacterIdCalendarEventIdRequest|null $put_characters_character_id_calendar_event_id_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCharactersCharacterIdCalendarEventId'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of mixed|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function putCharactersCharacterIdCalendarEventIdWithHttpInfo($character_id, $event_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $put_characters_character_id_calendar_event_id_request = null, string $contentType = self::contentTypes['putCharactersCharacterIdCalendarEventId'][0])
+    public function putCharactersCharacterIdCalendarEventIdWithHttpInfo($character_id, $event_id, $put_characters_character_id_calendar_event_id_request, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['putCharactersCharacterIdCalendarEventId'][0])
     {
-        $request = $this->putCharactersCharacterIdCalendarEventIdRequest($character_id, $event_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $put_characters_character_id_calendar_event_id_request, $contentType);
+        $request = $this->putCharactersCharacterIdCalendarEventIdRequest($character_id, $event_id, $put_characters_character_id_calendar_event_id_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1236,51 +1235,9 @@ class CalendarApi
             $statusCode = $response->getStatusCode();
 
 
-            switch($statusCode) {
-                case 204:
-                    return $this->handleResponseWithDataType(
-                        'mixed',
-                        $request,
-                        $response,
-                    );
-                default:
-                    return $this->handleResponseWithDataType(
-                        '\Tkhamez\Eve\API\Model\Error',
-                        $request,
-                        $response,
-                    );
-            }
-
-            
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            return $this->handleResponseWithDataType(
-                'mixed',
-                $request,
-                $response,
-            );
+            return [null, $statusCode, $response->getHeaders()];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
-                case 204:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        'mixed',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    throw $e;
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -1303,19 +1260,19 @@ class CalendarApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  int $event_id (required)
+     * @param  \Tkhamez\Eve\API\Model\PutCharactersCharacterIdCalendarEventIdRequest $put_characters_character_id_calendar_event_id_request (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  \Tkhamez\Eve\API\Model\PutCharactersCharacterIdCalendarEventIdRequest|null $put_characters_character_id_calendar_event_id_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCharactersCharacterIdCalendarEventId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function putCharactersCharacterIdCalendarEventIdAsync($character_id, $event_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $put_characters_character_id_calendar_event_id_request = null, string $contentType = self::contentTypes['putCharactersCharacterIdCalendarEventId'][0])
+    public function putCharactersCharacterIdCalendarEventIdAsync($character_id, $event_id, $put_characters_character_id_calendar_event_id_request, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['putCharactersCharacterIdCalendarEventId'][0])
     {
-        return $this->putCharactersCharacterIdCalendarEventIdAsyncWithHttpInfo($character_id, $event_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $put_characters_character_id_calendar_event_id_request, $contentType)
+        return $this->putCharactersCharacterIdCalendarEventIdAsyncWithHttpInfo($character_id, $event_id, $put_characters_character_id_calendar_event_id_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1330,39 +1287,26 @@ class CalendarApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  int $event_id (required)
+     * @param  \Tkhamez\Eve\API\Model\PutCharactersCharacterIdCalendarEventIdRequest $put_characters_character_id_calendar_event_id_request (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  \Tkhamez\Eve\API\Model\PutCharactersCharacterIdCalendarEventIdRequest|null $put_characters_character_id_calendar_event_id_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCharactersCharacterIdCalendarEventId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function putCharactersCharacterIdCalendarEventIdAsyncWithHttpInfo($character_id, $event_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $put_characters_character_id_calendar_event_id_request = null, string $contentType = self::contentTypes['putCharactersCharacterIdCalendarEventId'][0])
+    public function putCharactersCharacterIdCalendarEventIdAsyncWithHttpInfo($character_id, $event_id, $put_characters_character_id_calendar_event_id_request, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['putCharactersCharacterIdCalendarEventId'][0])
     {
-        $returnType = 'mixed';
-        $request = $this->putCharactersCharacterIdCalendarEventIdRequest($character_id, $event_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $put_characters_character_id_calendar_event_id_request, $contentType);
+        $returnType = '';
+        $request = $this->putCharactersCharacterIdCalendarEventIdRequest($character_id, $event_id, $put_characters_character_id_calendar_event_id_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -1386,17 +1330,17 @@ class CalendarApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  int $event_id (required)
+     * @param  \Tkhamez\Eve\API\Model\PutCharactersCharacterIdCalendarEventIdRequest $put_characters_character_id_calendar_event_id_request (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  \Tkhamez\Eve\API\Model\PutCharactersCharacterIdCalendarEventIdRequest|null $put_characters_character_id_calendar_event_id_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCharactersCharacterIdCalendarEventId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function putCharactersCharacterIdCalendarEventIdRequest($character_id, $event_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $put_characters_character_id_calendar_event_id_request = null, string $contentType = self::contentTypes['putCharactersCharacterIdCalendarEventId'][0])
+    public function putCharactersCharacterIdCalendarEventIdRequest($character_id, $event_id, $put_characters_character_id_calendar_event_id_request, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['putCharactersCharacterIdCalendarEventId'][0])
     {
 
         // verify the required parameter 'character_id' is set
@@ -1413,6 +1357,12 @@ class CalendarApi
             );
         }
 
+        // verify the required parameter 'put_characters_character_id_calendar_event_id_request' is set
+        if ($put_characters_character_id_calendar_event_id_request === null || (is_array($put_characters_character_id_calendar_event_id_request) && count($put_characters_character_id_calendar_event_id_request) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $put_characters_character_id_calendar_event_id_request when calling putCharactersCharacterIdCalendarEventId'
+            );
+        }
 
 
 

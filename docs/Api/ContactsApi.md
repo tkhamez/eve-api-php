@@ -18,7 +18,7 @@ All URIs are relative to https://esi.evetech.net, except if the operation define
 ## `deleteCharactersCharacterIdContacts()`
 
 ```php
-deleteCharactersCharacterIdContacts($character_id, $contact_ids, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): mixed
+deleteCharactersCharacterIdContacts($character_id, $contact_ids, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant)
 ```
 
 Delete contacts
@@ -50,8 +50,7 @@ $x_compatibility_date = '2025-08-26'; // string | The compatibility date for the
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->deleteCharactersCharacterIdContacts($character_id, $contact_ids, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
-    print_r($result);
+    $apiInstance->deleteCharactersCharacterIdContacts($character_id, $contact_ids, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
 } catch (Exception $e) {
     echo 'Exception when calling ContactsApi->deleteCharactersCharacterIdContacts: ', $e->getMessage(), PHP_EOL;
 }
@@ -70,7 +69,7 @@ try {
 
 ### Return type
 
-**mixed**
+void (empty response body)
 
 ### Authorization
 
@@ -502,7 +501,7 @@ try {
 ## `postCharactersCharacterIdContacts()`
 
 ```php
-postCharactersCharacterIdContacts($character_id, $standing, $label_ids, $watched, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body): int[]
+postCharactersCharacterIdContacts($character_id, $standing, $request_body, $label_ids, $watched, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): int[]
 ```
 
 Add contacts
@@ -528,16 +527,16 @@ $apiInstance = new Tkhamez\Eve\API\Api\ContactsApi(
 );
 $character_id = 56; // int | The ID of the character
 $standing = 3.4; // float
+$request_body = array(56); // int[]
 $label_ids = array(56); // int[]
 $watched = false; // bool
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
 $x_compatibility_date = '2025-08-26'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
-$request_body = array(56); // int[]
 
 try {
-    $result = $apiInstance->postCharactersCharacterIdContacts($character_id, $standing, $label_ids, $watched, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body);
+    $result = $apiInstance->postCharactersCharacterIdContacts($character_id, $standing, $request_body, $label_ids, $watched, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ContactsApi->postCharactersCharacterIdContacts: ', $e->getMessage(), PHP_EOL;
@@ -550,13 +549,13 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **character_id** | **int**| The ID of the character | |
 | **standing** | **float**|  | |
+| **request_body** | [**int[]**](../Model/int.md)|  | |
 | **label_ids** | [**int[]**](../Model/int.md)|  | [optional] |
 | **watched** | **bool**|  | [optional] [default to false] |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
 | **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-08-26&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
-| **request_body** | [**int[]**](../Model/int.md)|  | [optional] |
 
 ### Return type
 
@@ -578,7 +577,7 @@ try {
 ## `putCharactersCharacterIdContacts()`
 
 ```php
-putCharactersCharacterIdContacts($character_id, $standing, $label_ids, $watched, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body): mixed
+putCharactersCharacterIdContacts($character_id, $standing, $request_body, $label_ids, $watched, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant)
 ```
 
 Edit contacts
@@ -604,17 +603,16 @@ $apiInstance = new Tkhamez\Eve\API\Api\ContactsApi(
 );
 $character_id = 56; // int | The ID of the character
 $standing = 3.4; // float
+$request_body = array(56); // int[]
 $label_ids = array(56); // int[]
 $watched = false; // bool
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
 $x_compatibility_date = '2025-08-26'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
-$request_body = array(56); // int[]
 
 try {
-    $result = $apiInstance->putCharactersCharacterIdContacts($character_id, $standing, $label_ids, $watched, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body);
-    print_r($result);
+    $apiInstance->putCharactersCharacterIdContacts($character_id, $standing, $request_body, $label_ids, $watched, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
 } catch (Exception $e) {
     echo 'Exception when calling ContactsApi->putCharactersCharacterIdContacts: ', $e->getMessage(), PHP_EOL;
 }
@@ -626,17 +624,17 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **character_id** | **int**| The ID of the character | |
 | **standing** | **float**|  | |
+| **request_body** | [**int[]**](../Model/int.md)|  | |
 | **label_ids** | [**int[]**](../Model/int.md)|  | [optional] |
 | **watched** | **bool**|  | [optional] [default to false] |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
 | **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-08-26&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
-| **request_body** | [**int[]**](../Model/int.md)|  | [optional] |
 
 ### Return type
 
-**mixed**
+void (empty response body)
 
 ### Authorization
 

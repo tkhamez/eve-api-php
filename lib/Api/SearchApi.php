@@ -388,7 +388,10 @@ class SearchApi
                 'Missing the required parameter $search when calling getCharactersCharacterIdSearch'
             );
         }
-
+        if (strlen($search) < 3) {
+            throw new \InvalidArgumentException('invalid length for "$search" when calling SearchApi.getCharactersCharacterIdSearch, must be bigger than or equal to 3.');
+        }
+        
 
 
 

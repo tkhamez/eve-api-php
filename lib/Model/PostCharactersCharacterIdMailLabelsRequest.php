@@ -342,6 +342,14 @@ class PostCharactersCharacterIdMailLabelsRequest implements ModelInterface, Arra
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
         }
+        if ((mb_strlen($this->container['name']) > 40)) {
+            $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 40.";
+        }
+
+        if ((mb_strlen($this->container['name']) < 1)) {
+            $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
+        }
+
         return $invalidProperties;
     }
 
@@ -410,6 +418,13 @@ class PostCharactersCharacterIdMailLabelsRequest implements ModelInterface, Arra
         if (is_null($name)) {
             throw new \InvalidArgumentException('non-nullable name cannot be null');
         }
+        if ((mb_strlen($name) > 40)) {
+            throw new \InvalidArgumentException('invalid length for $name when calling PostCharactersCharacterIdMailLabelsRequest., must be smaller than or equal to 40.');
+        }
+        if ((mb_strlen($name) < 1)) {
+            throw new \InvalidArgumentException('invalid length for $name when calling PostCharactersCharacterIdMailLabelsRequest., must be bigger than or equal to 1.');
+        }
+
         $this->container['name'] = $name;
 
         return $this;

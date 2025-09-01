@@ -4087,20 +4087,20 @@ class CharacterApi
      *
      * Character affiliation
      *
+     * @param  int[] $request_body request_body (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  int[]|null $request_body request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCharactersAffiliation'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\CharactersAffiliationPostInner[]|\Tkhamez\Eve\API\Model\Error
      */
-    public function postCharactersAffiliation($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['postCharactersAffiliation'][0])
+    public function postCharactersAffiliation($request_body, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['postCharactersAffiliation'][0])
     {
-        list($response) = $this->postCharactersAffiliationWithHttpInfo($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body, $contentType);
+        list($response) = $this->postCharactersAffiliationWithHttpInfo($request_body, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
         return $response;
     }
 
@@ -4109,20 +4109,20 @@ class CharacterApi
      *
      * Character affiliation
      *
+     * @param  int[] $request_body (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  int[]|null $request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCharactersAffiliation'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\CharactersAffiliationPostInner[]|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function postCharactersAffiliationWithHttpInfo($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['postCharactersAffiliation'][0])
+    public function postCharactersAffiliationWithHttpInfo($request_body, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['postCharactersAffiliation'][0])
     {
-        $request = $this->postCharactersAffiliationRequest($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body, $contentType);
+        $request = $this->postCharactersAffiliationRequest($request_body, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4212,19 +4212,19 @@ class CharacterApi
      *
      * Character affiliation
      *
+     * @param  int[] $request_body (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  int[]|null $request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCharactersAffiliation'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postCharactersAffiliationAsync($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['postCharactersAffiliation'][0])
+    public function postCharactersAffiliationAsync($request_body, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['postCharactersAffiliation'][0])
     {
-        return $this->postCharactersAffiliationAsyncWithHttpInfo($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body, $contentType)
+        return $this->postCharactersAffiliationAsyncWithHttpInfo($request_body, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4237,20 +4237,20 @@ class CharacterApi
      *
      * Character affiliation
      *
+     * @param  int[] $request_body (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  int[]|null $request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCharactersAffiliation'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postCharactersAffiliationAsyncWithHttpInfo($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['postCharactersAffiliation'][0])
+    public function postCharactersAffiliationAsyncWithHttpInfo($request_body, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['postCharactersAffiliation'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\CharactersAffiliationPostInner[]';
-        $request = $this->postCharactersAffiliationRequest($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body, $contentType);
+        $request = $this->postCharactersAffiliationRequest($request_body, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -4291,30 +4291,36 @@ class CharacterApi
     /**
      * Create request for operation 'postCharactersAffiliation'
      *
+     * @param  int[] $request_body (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  int[]|null $request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCharactersAffiliation'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function postCharactersAffiliationRequest($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['postCharactersAffiliation'][0])
+    public function postCharactersAffiliationRequest($request_body, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['postCharactersAffiliation'][0])
     {
 
-
-
-
-
-        if ($request_body !== null && count($request_body) > 1000) {
+        // verify the required parameter 'request_body' is set
+        if ($request_body === null || (is_array($request_body) && count($request_body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $request_body when calling postCharactersAffiliation'
+            );
+        }
+        if (count($request_body) > 1000) {
             throw new \InvalidArgumentException('invalid value for "$request_body" when calling CharacterApi.postCharactersAffiliation, number of items must be less than or equal to 1000.');
         }
-        if ($request_body !== null && count($request_body) < 1) {
+        if (count($request_body) < 1) {
             throw new \InvalidArgumentException('invalid value for "$request_body" when calling CharacterApi.postCharactersAffiliation, number of items must be greater than or equal to 1.');
         }
         
+
+
+
+
 
         $resourcePath = '/characters/affiliation';
         $formParams = [];
@@ -4409,20 +4415,20 @@ class CharacterApi
      * Calculate a CSPA charge cost
      *
      * @param  int $character_id The ID of the character (required)
+     * @param  int[] $request_body request_body (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  int[]|null $request_body request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCharactersCharacterIdCspa'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return float|\Tkhamez\Eve\API\Model\Error
      */
-    public function postCharactersCharacterIdCspa($character_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['postCharactersCharacterIdCspa'][0])
+    public function postCharactersCharacterIdCspa($character_id, $request_body, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['postCharactersCharacterIdCspa'][0])
     {
-        list($response) = $this->postCharactersCharacterIdCspaWithHttpInfo($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body, $contentType);
+        list($response) = $this->postCharactersCharacterIdCspaWithHttpInfo($character_id, $request_body, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
         return $response;
     }
 
@@ -4432,20 +4438,20 @@ class CharacterApi
      * Calculate a CSPA charge cost
      *
      * @param  int $character_id The ID of the character (required)
+     * @param  int[] $request_body (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  int[]|null $request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCharactersCharacterIdCspa'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of float|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function postCharactersCharacterIdCspaWithHttpInfo($character_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['postCharactersCharacterIdCspa'][0])
+    public function postCharactersCharacterIdCspaWithHttpInfo($character_id, $request_body, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['postCharactersCharacterIdCspa'][0])
     {
-        $request = $this->postCharactersCharacterIdCspaRequest($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body, $contentType);
+        $request = $this->postCharactersCharacterIdCspaRequest($character_id, $request_body, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4536,19 +4542,19 @@ class CharacterApi
      * Calculate a CSPA charge cost
      *
      * @param  int $character_id The ID of the character (required)
+     * @param  int[] $request_body (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  int[]|null $request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCharactersCharacterIdCspa'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postCharactersCharacterIdCspaAsync($character_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['postCharactersCharacterIdCspa'][0])
+    public function postCharactersCharacterIdCspaAsync($character_id, $request_body, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['postCharactersCharacterIdCspa'][0])
     {
-        return $this->postCharactersCharacterIdCspaAsyncWithHttpInfo($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body, $contentType)
+        return $this->postCharactersCharacterIdCspaAsyncWithHttpInfo($character_id, $request_body, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4562,20 +4568,20 @@ class CharacterApi
      * Calculate a CSPA charge cost
      *
      * @param  int $character_id The ID of the character (required)
+     * @param  int[] $request_body (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  int[]|null $request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCharactersCharacterIdCspa'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postCharactersCharacterIdCspaAsyncWithHttpInfo($character_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['postCharactersCharacterIdCspa'][0])
+    public function postCharactersCharacterIdCspaAsyncWithHttpInfo($character_id, $request_body, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['postCharactersCharacterIdCspa'][0])
     {
         $returnType = 'float';
-        $request = $this->postCharactersCharacterIdCspaRequest($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body, $contentType);
+        $request = $this->postCharactersCharacterIdCspaRequest($character_id, $request_body, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -4617,17 +4623,17 @@ class CharacterApi
      * Create request for operation 'postCharactersCharacterIdCspa'
      *
      * @param  int $character_id The ID of the character (required)
+     * @param  int[] $request_body (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  int[]|null $request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCharactersCharacterIdCspa'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function postCharactersCharacterIdCspaRequest($character_id, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['postCharactersCharacterIdCspa'][0])
+    public function postCharactersCharacterIdCspaRequest($character_id, $request_body, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['postCharactersCharacterIdCspa'][0])
     {
 
         // verify the required parameter 'character_id' is set
@@ -4637,17 +4643,23 @@ class CharacterApi
             );
         }
 
-
-
-
-
-        if ($request_body !== null && count($request_body) > 100) {
+        // verify the required parameter 'request_body' is set
+        if ($request_body === null || (is_array($request_body) && count($request_body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $request_body when calling postCharactersCharacterIdCspa'
+            );
+        }
+        if (count($request_body) > 100) {
             throw new \InvalidArgumentException('invalid value for "$request_body" when calling CharacterApi.postCharactersCharacterIdCspa, number of items must be less than or equal to 100.');
         }
-        if ($request_body !== null && count($request_body) < 1) {
+        if (count($request_body) < 1) {
             throw new \InvalidArgumentException('invalid value for "$request_body" when calling CharacterApi.postCharactersCharacterIdCspa, number of items must be greater than or equal to 1.');
         }
         
+
+
+
+
 
         $resourcePath = '/characters/{character_id}/cspa';
         $formParams = [];

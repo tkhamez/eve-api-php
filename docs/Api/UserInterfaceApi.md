@@ -14,7 +14,7 @@ All URIs are relative to https://esi.evetech.net, except if the operation define
 ## `postUiAutopilotWaypoint()`
 
 ```php
-postUiAutopilotWaypoint($add_to_beginning, $clear_other_waypoints, $destination_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): mixed
+postUiAutopilotWaypoint($add_to_beginning, $clear_other_waypoints, $destination_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant)
 ```
 
 Set Autopilot Waypoint
@@ -47,8 +47,7 @@ $x_compatibility_date = '2025-08-26'; // string | The compatibility date for the
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->postUiAutopilotWaypoint($add_to_beginning, $clear_other_waypoints, $destination_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
-    print_r($result);
+    $apiInstance->postUiAutopilotWaypoint($add_to_beginning, $clear_other_waypoints, $destination_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
 } catch (Exception $e) {
     echo 'Exception when calling UserInterfaceApi->postUiAutopilotWaypoint: ', $e->getMessage(), PHP_EOL;
 }
@@ -68,7 +67,7 @@ try {
 
 ### Return type
 
-**mixed**
+void (empty response body)
 
 ### Authorization
 
@@ -86,7 +85,7 @@ try {
 ## `postUiOpenwindowContract()`
 
 ```php
-postUiOpenwindowContract($contract_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): mixed
+postUiOpenwindowContract($contract_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant)
 ```
 
 Open Contract Window
@@ -117,8 +116,7 @@ $x_compatibility_date = '2025-08-26'; // string | The compatibility date for the
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->postUiOpenwindowContract($contract_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
-    print_r($result);
+    $apiInstance->postUiOpenwindowContract($contract_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
 } catch (Exception $e) {
     echo 'Exception when calling UserInterfaceApi->postUiOpenwindowContract: ', $e->getMessage(), PHP_EOL;
 }
@@ -136,7 +134,7 @@ try {
 
 ### Return type
 
-**mixed**
+void (empty response body)
 
 ### Authorization
 
@@ -154,7 +152,7 @@ try {
 ## `postUiOpenwindowInformation()`
 
 ```php
-postUiOpenwindowInformation($target_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): mixed
+postUiOpenwindowInformation($target_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant)
 ```
 
 Open Information Window
@@ -185,8 +183,7 @@ $x_compatibility_date = '2025-08-26'; // string | The compatibility date for the
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->postUiOpenwindowInformation($target_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
-    print_r($result);
+    $apiInstance->postUiOpenwindowInformation($target_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
 } catch (Exception $e) {
     echo 'Exception when calling UserInterfaceApi->postUiOpenwindowInformation: ', $e->getMessage(), PHP_EOL;
 }
@@ -204,7 +201,7 @@ try {
 
 ### Return type
 
-**mixed**
+void (empty response body)
 
 ### Authorization
 
@@ -222,7 +219,7 @@ try {
 ## `postUiOpenwindowMarketdetails()`
 
 ```php
-postUiOpenwindowMarketdetails($type_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): mixed
+postUiOpenwindowMarketdetails($type_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant)
 ```
 
 Open Market Details
@@ -253,8 +250,7 @@ $x_compatibility_date = '2025-08-26'; // string | The compatibility date for the
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->postUiOpenwindowMarketdetails($type_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
-    print_r($result);
+    $apiInstance->postUiOpenwindowMarketdetails($type_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
 } catch (Exception $e) {
     echo 'Exception when calling UserInterfaceApi->postUiOpenwindowMarketdetails: ', $e->getMessage(), PHP_EOL;
 }
@@ -272,7 +268,7 @@ try {
 
 ### Return type
 
-**mixed**
+void (empty response body)
 
 ### Authorization
 
@@ -290,7 +286,7 @@ try {
 ## `postUiOpenwindowNewmail()`
 
 ```php
-postUiOpenwindowNewmail($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $post_ui_openwindow_newmail_request): mixed
+postUiOpenwindowNewmail($post_ui_openwindow_newmail_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant)
 ```
 
 Open New Mail Window
@@ -314,15 +310,14 @@ $apiInstance = new Tkhamez\Eve\API\Api\UserInterfaceApi(
     new GuzzleHttp\Client(),
     $config
 );
+$post_ui_openwindow_newmail_request = new \Tkhamez\Eve\API\Model\PostUiOpenwindowNewmailRequest(); // \Tkhamez\Eve\API\Model\PostUiOpenwindowNewmailRequest
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
 $x_compatibility_date = '2025-08-26'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
-$post_ui_openwindow_newmail_request = new \Tkhamez\Eve\API\Model\PostUiOpenwindowNewmailRequest(); // \Tkhamez\Eve\API\Model\PostUiOpenwindowNewmailRequest
 
 try {
-    $result = $apiInstance->postUiOpenwindowNewmail($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $post_ui_openwindow_newmail_request);
-    print_r($result);
+    $apiInstance->postUiOpenwindowNewmail($post_ui_openwindow_newmail_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
 } catch (Exception $e) {
     echo 'Exception when calling UserInterfaceApi->postUiOpenwindowNewmail: ', $e->getMessage(), PHP_EOL;
 }
@@ -332,15 +327,15 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **post_ui_openwindow_newmail_request** | [**\Tkhamez\Eve\API\Model\PostUiOpenwindowNewmailRequest**](../Model/PostUiOpenwindowNewmailRequest.md)|  | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
 | **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-08-26&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
-| **post_ui_openwindow_newmail_request** | [**\Tkhamez\Eve\API\Model\PostUiOpenwindowNewmailRequest**](../Model/PostUiOpenwindowNewmailRequest.md)|  | [optional] |
 
 ### Return type
 
-**mixed**
+void (empty response body)
 
 ### Authorization
 

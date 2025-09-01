@@ -223,7 +223,7 @@ try {
 ## `putCharactersCharacterIdCalendarEventId()`
 
 ```php
-putCharactersCharacterIdCalendarEventId($character_id, $event_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $put_characters_character_id_calendar_event_id_request): mixed
+putCharactersCharacterIdCalendarEventId($character_id, $event_id, $put_characters_character_id_calendar_event_id_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant)
 ```
 
 Respond to an event
@@ -249,15 +249,14 @@ $apiInstance = new Tkhamez\Eve\API\Api\CalendarApi(
 );
 $character_id = 56; // int | The ID of the character
 $event_id = 56; // int
+$put_characters_character_id_calendar_event_id_request = new \Tkhamez\Eve\API\Model\PutCharactersCharacterIdCalendarEventIdRequest(); // \Tkhamez\Eve\API\Model\PutCharactersCharacterIdCalendarEventIdRequest
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
 $x_compatibility_date = '2025-08-26'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
-$put_characters_character_id_calendar_event_id_request = new \Tkhamez\Eve\API\Model\PutCharactersCharacterIdCalendarEventIdRequest(); // \Tkhamez\Eve\API\Model\PutCharactersCharacterIdCalendarEventIdRequest
 
 try {
-    $result = $apiInstance->putCharactersCharacterIdCalendarEventId($character_id, $event_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $put_characters_character_id_calendar_event_id_request);
-    print_r($result);
+    $apiInstance->putCharactersCharacterIdCalendarEventId($character_id, $event_id, $put_characters_character_id_calendar_event_id_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
 } catch (Exception $e) {
     echo 'Exception when calling CalendarApi->putCharactersCharacterIdCalendarEventId: ', $e->getMessage(), PHP_EOL;
 }
@@ -269,15 +268,15 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **character_id** | **int**| The ID of the character | |
 | **event_id** | **int**|  | |
+| **put_characters_character_id_calendar_event_id_request** | [**\Tkhamez\Eve\API\Model\PutCharactersCharacterIdCalendarEventIdRequest**](../Model/PutCharactersCharacterIdCalendarEventIdRequest.md)|  | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
 | **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-08-26&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
-| **put_characters_character_id_calendar_event_id_request** | [**\Tkhamez\Eve\API\Model\PutCharactersCharacterIdCalendarEventIdRequest**](../Model/PutCharactersCharacterIdCalendarEventIdRequest.md)|  | [optional] |
 
 ### Return type
 
-**mixed**
+void (empty response body)
 
 ### Authorization
 

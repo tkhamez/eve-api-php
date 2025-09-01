@@ -9008,20 +9008,20 @@ class UniverseApi
      *
      * Bulk names to IDs
      *
+     * @param  string[] $request_body request_body (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  string[]|null $request_body request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postUniverseIds'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\UniverseIdsPost|\Tkhamez\Eve\API\Model\Error
      */
-    public function postUniverseIds($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['postUniverseIds'][0])
+    public function postUniverseIds($request_body, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['postUniverseIds'][0])
     {
-        list($response) = $this->postUniverseIdsWithHttpInfo($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body, $contentType);
+        list($response) = $this->postUniverseIdsWithHttpInfo($request_body, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
         return $response;
     }
 
@@ -9030,20 +9030,20 @@ class UniverseApi
      *
      * Bulk names to IDs
      *
+     * @param  string[] $request_body (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  string[]|null $request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postUniverseIds'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\UniverseIdsPost|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function postUniverseIdsWithHttpInfo($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['postUniverseIds'][0])
+    public function postUniverseIdsWithHttpInfo($request_body, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['postUniverseIds'][0])
     {
-        $request = $this->postUniverseIdsRequest($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body, $contentType);
+        $request = $this->postUniverseIdsRequest($request_body, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -9133,19 +9133,19 @@ class UniverseApi
      *
      * Bulk names to IDs
      *
+     * @param  string[] $request_body (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  string[]|null $request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postUniverseIds'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postUniverseIdsAsync($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['postUniverseIds'][0])
+    public function postUniverseIdsAsync($request_body, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['postUniverseIds'][0])
     {
-        return $this->postUniverseIdsAsyncWithHttpInfo($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body, $contentType)
+        return $this->postUniverseIdsAsyncWithHttpInfo($request_body, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -9158,20 +9158,20 @@ class UniverseApi
      *
      * Bulk names to IDs
      *
+     * @param  string[] $request_body (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  string[]|null $request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postUniverseIds'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postUniverseIdsAsyncWithHttpInfo($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['postUniverseIds'][0])
+    public function postUniverseIdsAsyncWithHttpInfo($request_body, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['postUniverseIds'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\UniverseIdsPost';
-        $request = $this->postUniverseIdsRequest($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body, $contentType);
+        $request = $this->postUniverseIdsRequest($request_body, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -9212,30 +9212,36 @@ class UniverseApi
     /**
      * Create request for operation 'postUniverseIds'
      *
+     * @param  string[] $request_body (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  string[]|null $request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postUniverseIds'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function postUniverseIdsRequest($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['postUniverseIds'][0])
+    public function postUniverseIdsRequest($request_body, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['postUniverseIds'][0])
     {
 
-
-
-
-
-        if ($request_body !== null && count($request_body) > 500) {
+        // verify the required parameter 'request_body' is set
+        if ($request_body === null || (is_array($request_body) && count($request_body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $request_body when calling postUniverseIds'
+            );
+        }
+        if (count($request_body) > 500) {
             throw new \InvalidArgumentException('invalid value for "$request_body" when calling UniverseApi.postUniverseIds, number of items must be less than or equal to 500.');
         }
-        if ($request_body !== null && count($request_body) < 1) {
+        if (count($request_body) < 1) {
             throw new \InvalidArgumentException('invalid value for "$request_body" when calling UniverseApi.postUniverseIds, number of items must be greater than or equal to 1.');
         }
         
+
+
+
+
 
         $resourcePath = '/universe/ids';
         $formParams = [];
@@ -9329,20 +9335,20 @@ class UniverseApi
      *
      * Get names and categories for a set of IDs
      *
+     * @param  int[] $request_body request_body (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  int[]|null $request_body request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postUniverseNames'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Tkhamez\Eve\API\Model\UniverseNamesPostInner[]|\Tkhamez\Eve\API\Model\Error
      */
-    public function postUniverseNames($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['postUniverseNames'][0])
+    public function postUniverseNames($request_body, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['postUniverseNames'][0])
     {
-        list($response) = $this->postUniverseNamesWithHttpInfo($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body, $contentType);
+        list($response) = $this->postUniverseNamesWithHttpInfo($request_body, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
         return $response;
     }
 
@@ -9351,20 +9357,20 @@ class UniverseApi
      *
      * Get names and categories for a set of IDs
      *
+     * @param  int[] $request_body (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  int[]|null $request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postUniverseNames'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Tkhamez\Eve\API\Model\UniverseNamesPostInner[]|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function postUniverseNamesWithHttpInfo($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['postUniverseNames'][0])
+    public function postUniverseNamesWithHttpInfo($request_body, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['postUniverseNames'][0])
     {
-        $request = $this->postUniverseNamesRequest($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body, $contentType);
+        $request = $this->postUniverseNamesRequest($request_body, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -9454,19 +9460,19 @@ class UniverseApi
      *
      * Get names and categories for a set of IDs
      *
+     * @param  int[] $request_body (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  int[]|null $request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postUniverseNames'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postUniverseNamesAsync($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['postUniverseNames'][0])
+    public function postUniverseNamesAsync($request_body, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['postUniverseNames'][0])
     {
-        return $this->postUniverseNamesAsyncWithHttpInfo($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body, $contentType)
+        return $this->postUniverseNamesAsyncWithHttpInfo($request_body, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -9479,20 +9485,20 @@ class UniverseApi
      *
      * Get names and categories for a set of IDs
      *
+     * @param  int[] $request_body (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  int[]|null $request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postUniverseNames'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postUniverseNamesAsyncWithHttpInfo($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['postUniverseNames'][0])
+    public function postUniverseNamesAsyncWithHttpInfo($request_body, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['postUniverseNames'][0])
     {
         $returnType = '\Tkhamez\Eve\API\Model\UniverseNamesPostInner[]';
-        $request = $this->postUniverseNamesRequest($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body, $contentType);
+        $request = $this->postUniverseNamesRequest($request_body, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -9533,30 +9539,36 @@ class UniverseApi
     /**
      * Create request for operation 'postUniverseNames'
      *
+     * @param  int[] $request_body (required)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  int[]|null $request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postUniverseNames'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function postUniverseNamesRequest($accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['postUniverseNames'][0])
+    public function postUniverseNamesRequest($request_body, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['postUniverseNames'][0])
     {
 
-
-
-
-
-        if ($request_body !== null && count($request_body) > 1000) {
+        // verify the required parameter 'request_body' is set
+        if ($request_body === null || (is_array($request_body) && count($request_body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $request_body when calling postUniverseNames'
+            );
+        }
+        if (count($request_body) > 1000) {
             throw new \InvalidArgumentException('invalid value for "$request_body" when calling UniverseApi.postUniverseNames, number of items must be less than or equal to 1000.');
         }
-        if ($request_body !== null && count($request_body) < 1) {
+        if (count($request_body) < 1) {
             throw new \InvalidArgumentException('invalid value for "$request_body" when calling UniverseApi.postUniverseNames, number of items must be greater than or equal to 1.');
         }
         
+
+
+
+
 
         $resourcePath = '/universe/names';
         $formParams = [];

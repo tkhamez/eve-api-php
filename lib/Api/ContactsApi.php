@@ -164,12 +164,11 @@ class ContactsApi
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return mixed|\Tkhamez\Eve\API\Model\Error
+     * @return void
      */
     public function deleteCharactersCharacterIdContacts($character_id, $contact_ids, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteCharactersCharacterIdContacts'][0])
     {
-        list($response) = $this->deleteCharactersCharacterIdContactsWithHttpInfo($character_id, $contact_ids, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
-        return $response;
+        $this->deleteCharactersCharacterIdContactsWithHttpInfo($character_id, $contact_ids, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
     }
 
     /**
@@ -187,7 +186,7 @@ class ContactsApi
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of mixed|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteCharactersCharacterIdContactsWithHttpInfo($character_id, $contact_ids, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteCharactersCharacterIdContacts'][0])
     {
@@ -216,51 +215,9 @@ class ContactsApi
             $statusCode = $response->getStatusCode();
 
 
-            switch($statusCode) {
-                case 204:
-                    return $this->handleResponseWithDataType(
-                        'mixed',
-                        $request,
-                        $response,
-                    );
-                default:
-                    return $this->handleResponseWithDataType(
-                        '\Tkhamez\Eve\API\Model\Error',
-                        $request,
-                        $response,
-                    );
-            }
-
-            
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            return $this->handleResponseWithDataType(
-                'mixed',
-                $request,
-                $response,
-            );
+            return [null, $statusCode, $response->getHeaders()];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
-                case 204:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        'mixed',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    throw $e;
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -320,27 +277,14 @@ class ContactsApi
      */
     public function deleteCharactersCharacterIdContactsAsyncWithHttpInfo($character_id, $contact_ids, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['deleteCharactersCharacterIdContacts'][0])
     {
-        $returnType = 'mixed';
+        $returnType = '';
         $request = $this->deleteCharactersCharacterIdContactsRequest($character_id, $contact_ids, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -2519,22 +2463,22 @@ class ContactsApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  float $standing standing (required)
+     * @param  int[] $request_body request_body (required)
      * @param  int[]|null $label_ids label_ids (optional)
      * @param  bool|null $watched watched (optional, default to false)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  int[]|null $request_body request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCharactersCharacterIdContacts'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return int[]|\Tkhamez\Eve\API\Model\Error
      */
-    public function postCharactersCharacterIdContacts($character_id, $standing, $label_ids = null, $watched = false, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['postCharactersCharacterIdContacts'][0])
+    public function postCharactersCharacterIdContacts($character_id, $standing, $request_body, $label_ids = null, $watched = false, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['postCharactersCharacterIdContacts'][0])
     {
-        list($response) = $this->postCharactersCharacterIdContactsWithHttpInfo($character_id, $standing, $label_ids, $watched, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body, $contentType);
+        list($response) = $this->postCharactersCharacterIdContactsWithHttpInfo($character_id, $standing, $request_body, $label_ids, $watched, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
         return $response;
     }
 
@@ -2545,22 +2489,22 @@ class ContactsApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  float $standing (required)
+     * @param  int[] $request_body (required)
      * @param  int[]|null $label_ids (optional)
      * @param  bool|null $watched (optional, default to false)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  int[]|null $request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCharactersCharacterIdContacts'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of int[]|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
-    public function postCharactersCharacterIdContactsWithHttpInfo($character_id, $standing, $label_ids = null, $watched = false, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['postCharactersCharacterIdContacts'][0])
+    public function postCharactersCharacterIdContactsWithHttpInfo($character_id, $standing, $request_body, $label_ids = null, $watched = false, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['postCharactersCharacterIdContacts'][0])
     {
-        $request = $this->postCharactersCharacterIdContactsRequest($character_id, $standing, $label_ids, $watched, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body, $contentType);
+        $request = $this->postCharactersCharacterIdContactsRequest($character_id, $standing, $request_body, $label_ids, $watched, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2652,21 +2596,21 @@ class ContactsApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  float $standing (required)
+     * @param  int[] $request_body (required)
      * @param  int[]|null $label_ids (optional)
      * @param  bool|null $watched (optional, default to false)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  int[]|null $request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCharactersCharacterIdContacts'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postCharactersCharacterIdContactsAsync($character_id, $standing, $label_ids = null, $watched = false, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['postCharactersCharacterIdContacts'][0])
+    public function postCharactersCharacterIdContactsAsync($character_id, $standing, $request_body, $label_ids = null, $watched = false, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['postCharactersCharacterIdContacts'][0])
     {
-        return $this->postCharactersCharacterIdContactsAsyncWithHttpInfo($character_id, $standing, $label_ids, $watched, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body, $contentType)
+        return $this->postCharactersCharacterIdContactsAsyncWithHttpInfo($character_id, $standing, $request_body, $label_ids, $watched, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2681,22 +2625,22 @@ class ContactsApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  float $standing (required)
+     * @param  int[] $request_body (required)
      * @param  int[]|null $label_ids (optional)
      * @param  bool|null $watched (optional, default to false)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  int[]|null $request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCharactersCharacterIdContacts'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postCharactersCharacterIdContactsAsyncWithHttpInfo($character_id, $standing, $label_ids = null, $watched = false, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['postCharactersCharacterIdContacts'][0])
+    public function postCharactersCharacterIdContactsAsyncWithHttpInfo($character_id, $standing, $request_body, $label_ids = null, $watched = false, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['postCharactersCharacterIdContacts'][0])
     {
         $returnType = 'int[]';
-        $request = $this->postCharactersCharacterIdContactsRequest($character_id, $standing, $label_ids, $watched, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body, $contentType);
+        $request = $this->postCharactersCharacterIdContactsRequest($character_id, $standing, $request_body, $label_ids, $watched, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2739,19 +2683,19 @@ class ContactsApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  float $standing (required)
+     * @param  int[] $request_body (required)
      * @param  int[]|null $label_ids (optional)
      * @param  bool|null $watched (optional, default to false)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  int[]|null $request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postCharactersCharacterIdContacts'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function postCharactersCharacterIdContactsRequest($character_id, $standing, $label_ids = null, $watched = false, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['postCharactersCharacterIdContacts'][0])
+    public function postCharactersCharacterIdContactsRequest($character_id, $standing, $request_body, $label_ids = null, $watched = false, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['postCharactersCharacterIdContacts'][0])
     {
 
         // verify the required parameter 'character_id' is set
@@ -2768,6 +2712,19 @@ class ContactsApi
             );
         }
 
+        // verify the required parameter 'request_body' is set
+        if ($request_body === null || (is_array($request_body) && count($request_body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $request_body when calling postCharactersCharacterIdContacts'
+            );
+        }
+        if (count($request_body) > 100) {
+            throw new \InvalidArgumentException('invalid value for "$request_body" when calling ContactsApi.postCharactersCharacterIdContacts, number of items must be less than or equal to 100.');
+        }
+        if (count($request_body) < 1) {
+            throw new \InvalidArgumentException('invalid value for "$request_body" when calling ContactsApi.postCharactersCharacterIdContacts, number of items must be greater than or equal to 1.');
+        }
+        
         if ($label_ids !== null && count($label_ids) > 63) {
             throw new \InvalidArgumentException('invalid value for "$label_ids" when calling ContactsApi.postCharactersCharacterIdContacts, number of items must be less than or equal to 63.');
         }
@@ -2777,13 +2734,6 @@ class ContactsApi
 
 
 
-        if ($request_body !== null && count($request_body) > 100) {
-            throw new \InvalidArgumentException('invalid value for "$request_body" when calling ContactsApi.postCharactersCharacterIdContacts, number of items must be less than or equal to 100.');
-        }
-        if ($request_body !== null && count($request_body) < 1) {
-            throw new \InvalidArgumentException('invalid value for "$request_body" when calling ContactsApi.postCharactersCharacterIdContacts, number of items must be greater than or equal to 1.');
-        }
-        
 
         $resourcePath = '/characters/{character_id}/contacts';
         $formParams = [];
@@ -2918,23 +2868,22 @@ class ContactsApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  float $standing standing (required)
+     * @param  int[] $request_body request_body (required)
      * @param  int[]|null $label_ids label_ids (optional)
      * @param  bool|null $watched watched (optional, default to false)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  int[]|null $request_body request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCharactersCharacterIdContacts'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return mixed|\Tkhamez\Eve\API\Model\Error
+     * @return void
      */
-    public function putCharactersCharacterIdContacts($character_id, $standing, $label_ids = null, $watched = false, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['putCharactersCharacterIdContacts'][0])
+    public function putCharactersCharacterIdContacts($character_id, $standing, $request_body, $label_ids = null, $watched = false, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['putCharactersCharacterIdContacts'][0])
     {
-        list($response) = $this->putCharactersCharacterIdContactsWithHttpInfo($character_id, $standing, $label_ids, $watched, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body, $contentType);
-        return $response;
+        $this->putCharactersCharacterIdContactsWithHttpInfo($character_id, $standing, $request_body, $label_ids, $watched, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
     }
 
     /**
@@ -2944,22 +2893,22 @@ class ContactsApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  float $standing (required)
+     * @param  int[] $request_body (required)
      * @param  int[]|null $label_ids (optional)
      * @param  bool|null $watched (optional, default to false)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  int[]|null $request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCharactersCharacterIdContacts'] to see the possible values for this operation
      *
      * @throws \Tkhamez\Eve\API\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of mixed|\Tkhamez\Eve\API\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function putCharactersCharacterIdContactsWithHttpInfo($character_id, $standing, $label_ids = null, $watched = false, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['putCharactersCharacterIdContacts'][0])
+    public function putCharactersCharacterIdContactsWithHttpInfo($character_id, $standing, $request_body, $label_ids = null, $watched = false, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['putCharactersCharacterIdContacts'][0])
     {
-        $request = $this->putCharactersCharacterIdContactsRequest($character_id, $standing, $label_ids, $watched, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body, $contentType);
+        $request = $this->putCharactersCharacterIdContactsRequest($character_id, $standing, $request_body, $label_ids, $watched, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2984,51 +2933,9 @@ class ContactsApi
             $statusCode = $response->getStatusCode();
 
 
-            switch($statusCode) {
-                case 204:
-                    return $this->handleResponseWithDataType(
-                        'mixed',
-                        $request,
-                        $response,
-                    );
-                default:
-                    return $this->handleResponseWithDataType(
-                        '\Tkhamez\Eve\API\Model\Error',
-                        $request,
-                        $response,
-                    );
-            }
-
-            
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            return $this->handleResponseWithDataType(
-                'mixed',
-                $request,
-                $response,
-            );
+            return [null, $statusCode, $response->getHeaders()];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
-                case 204:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        'mixed',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    throw $e;
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -3051,21 +2958,21 @@ class ContactsApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  float $standing (required)
+     * @param  int[] $request_body (required)
      * @param  int[]|null $label_ids (optional)
      * @param  bool|null $watched (optional, default to false)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  int[]|null $request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCharactersCharacterIdContacts'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function putCharactersCharacterIdContactsAsync($character_id, $standing, $label_ids = null, $watched = false, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['putCharactersCharacterIdContacts'][0])
+    public function putCharactersCharacterIdContactsAsync($character_id, $standing, $request_body, $label_ids = null, $watched = false, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['putCharactersCharacterIdContacts'][0])
     {
-        return $this->putCharactersCharacterIdContactsAsyncWithHttpInfo($character_id, $standing, $label_ids, $watched, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body, $contentType)
+        return $this->putCharactersCharacterIdContactsAsyncWithHttpInfo($character_id, $standing, $request_body, $label_ids, $watched, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3080,41 +2987,28 @@ class ContactsApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  float $standing (required)
+     * @param  int[] $request_body (required)
      * @param  int[]|null $label_ids (optional)
      * @param  bool|null $watched (optional, default to false)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  int[]|null $request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCharactersCharacterIdContacts'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function putCharactersCharacterIdContactsAsyncWithHttpInfo($character_id, $standing, $label_ids = null, $watched = false, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['putCharactersCharacterIdContacts'][0])
+    public function putCharactersCharacterIdContactsAsyncWithHttpInfo($character_id, $standing, $request_body, $label_ids = null, $watched = false, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['putCharactersCharacterIdContacts'][0])
     {
-        $returnType = 'mixed';
-        $request = $this->putCharactersCharacterIdContactsRequest($character_id, $standing, $label_ids, $watched, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $request_body, $contentType);
+        $returnType = '';
+        $request = $this->putCharactersCharacterIdContactsRequest($character_id, $standing, $request_body, $label_ids, $watched, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -3138,19 +3032,19 @@ class ContactsApi
      *
      * @param  int $character_id The ID of the character (required)
      * @param  float $standing (required)
+     * @param  int[] $request_body (required)
      * @param  int[]|null $label_ids (optional)
      * @param  bool|null $watched (optional, default to false)
      * @param  string|null $accept_language The language to use for the response. (optional, default to 'en')
      * @param  string|null $if_none_match The ETag of the previous request. A 304 will be returned if this matches the current ETag. (optional)
      * @param  string|null $x_compatibility_date The compatibility date for the request. (optional, default to '2025-08-26')
      * @param  string|null $x_tenant The tenant ID for the request. (optional, default to 'tranquility')
-     * @param  int[]|null $request_body (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['putCharactersCharacterIdContacts'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function putCharactersCharacterIdContactsRequest($character_id, $standing, $label_ids = null, $watched = false, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', $request_body = null, string $contentType = self::contentTypes['putCharactersCharacterIdContacts'][0])
+    public function putCharactersCharacterIdContactsRequest($character_id, $standing, $request_body, $label_ids = null, $watched = false, $accept_language = 'en', $if_none_match = null, $x_compatibility_date = '2025-08-26', $x_tenant = 'tranquility', string $contentType = self::contentTypes['putCharactersCharacterIdContacts'][0])
     {
 
         // verify the required parameter 'character_id' is set
@@ -3167,6 +3061,19 @@ class ContactsApi
             );
         }
 
+        // verify the required parameter 'request_body' is set
+        if ($request_body === null || (is_array($request_body) && count($request_body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $request_body when calling putCharactersCharacterIdContacts'
+            );
+        }
+        if (count($request_body) > 100) {
+            throw new \InvalidArgumentException('invalid value for "$request_body" when calling ContactsApi.putCharactersCharacterIdContacts, number of items must be less than or equal to 100.');
+        }
+        if (count($request_body) < 1) {
+            throw new \InvalidArgumentException('invalid value for "$request_body" when calling ContactsApi.putCharactersCharacterIdContacts, number of items must be greater than or equal to 1.');
+        }
+        
         if ($label_ids !== null && count($label_ids) > 63) {
             throw new \InvalidArgumentException('invalid value for "$label_ids" when calling ContactsApi.putCharactersCharacterIdContacts, number of items must be less than or equal to 63.');
         }
@@ -3176,13 +3083,6 @@ class ContactsApi
 
 
 
-        if ($request_body !== null && count($request_body) > 100) {
-            throw new \InvalidArgumentException('invalid value for "$request_body" when calling ContactsApi.putCharactersCharacterIdContacts, number of items must be less than or equal to 100.');
-        }
-        if ($request_body !== null && count($request_body) < 1) {
-            throw new \InvalidArgumentException('invalid value for "$request_body" when calling ContactsApi.putCharactersCharacterIdContacts, number of items must be greater than or equal to 1.');
-        }
-        
 
         $resourcePath = '/characters/{character_id}/contacts';
         $formParams = [];
