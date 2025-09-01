@@ -6662,6 +6662,13 @@ components:
           examples:
             - Active
           type: string
+          x-enum-descriptions:
+            - An unspecified state
+            - Active and accepting contributions
+            - Closed by the corporation
+            - Completed
+            - Expired
+            - Deleted and the details are no longer available
       required:
         - details
         - creator
@@ -7079,6 +7086,10 @@ components:
             - Corporation
             - Character
           type: string
+          x-enum-descriptions:
+            - Either a corporation or a character
+            - A corporation
+            - A character
       required:
         - owner
       type: object
@@ -7359,6 +7370,10 @@ components:
             - Pvp
             - Pve
           type: string
+          x-enum-descriptions:
+            - Either PvP or PvE
+            - Player vs Player
+            - Player vs Environment
         identities:
           description: Identity of killer
           items:
@@ -7504,6 +7519,12 @@ components:
           examples:
             - Explorer
           type: string
+          x-enum-descriptions:
+            - An unspecified career
+            - Explorer career
+            - Industrialist career
+            - Enforcer career
+            - Soldier of Fortune career
         created:
           description: Moment this project was created
           examples:
@@ -7584,6 +7605,13 @@ components:
           examples:
             - Active
           type: string
+          x-enum-descriptions:
+            - An unspecified state
+            - Active and accepting contributions
+            - Closed by the corporation
+            - Completed
+            - Expired
+            - Deleted and the details are no longer available
       required:
         - id
         - name
@@ -10721,6 +10749,7 @@ paths:
               minItems: 1
               type: array
               uniqueItems: true
+        required: true
       responses:
         "200":
           content:
@@ -10911,6 +10940,7 @@ paths:
               minItems: 1
               type: array
               uniqueItems: true
+        required: true
       responses:
         "200":
           content:
@@ -10965,6 +10995,7 @@ paths:
               minItems: 1
               type: array
               uniqueItems: true
+        required: true
       responses:
         "200":
           content:
@@ -11224,11 +11255,9 @@ paths:
               required:
                 - response
               type: object
+        required: true
       responses:
         "204":
-          content:
-            application/json:
-              schema: {}
           description: Event updated
           headers:
             Cache-Control:
@@ -11372,9 +11401,6 @@ paths:
         - $ref: "#/components/parameters/Tenant"
       responses:
         "204":
-          content:
-            application/json:
-              schema: {}
           description: Contacts deleted
           headers:
             Cache-Control:
@@ -11497,6 +11523,7 @@ paths:
               maxItems: 100
               minItems: 1
               type: array
+        required: true
       responses:
         "201":
           content:
@@ -11571,11 +11598,9 @@ paths:
               maxItems: 100
               minItems: 1
               type: array
+        required: true
       responses:
         "204":
-          content:
-            application/json:
-              schema: {}
           description: Contacts updated
           headers:
             Cache-Control:
@@ -11862,6 +11887,7 @@ paths:
               minItems: 1
               type: array
               uniqueItems: true
+        required: true
       responses:
         "201":
           content:
@@ -11995,6 +12021,7 @@ paths:
             schema:
               properties:
                 description:
+                  maxLength: 500
                   type: string
                 items:
                   items:
@@ -12062,6 +12089,8 @@ paths:
                   minItems: 1
                   type: array
                 name:
+                  maxLength: 50
+                  minLength: 1
                   type: string
                 ship_type_id:
                   format: int64
@@ -12072,6 +12101,7 @@ paths:
                 - ship_type_id
                 - items
               type: object
+        required: true
       responses:
         "201":
           content:
@@ -12123,9 +12153,6 @@ paths:
         - $ref: "#/components/parameters/Tenant"
       responses:
         "204":
-          content:
-            application/json:
-              schema: {}
           description: Fitting deleted
           headers:
             Cache-Control:
@@ -12551,6 +12578,7 @@ paths:
                   format: int64
                   type: integer
                 body:
+                  maxLength: 10000
                   type: string
                 recipients:
                   items:
@@ -12574,12 +12602,14 @@ paths:
                   minItems: 1
                   type: array
                 subject:
+                  maxLength: 1000
                   type: string
               required:
                 - recipients
                 - subject
                 - body
               type: object
+        required: true
       responses:
         "201":
           content:
@@ -12693,10 +12723,13 @@ paths:
                     - "#ffffff"
                   type: string
                 name:
+                  maxLength: 40
+                  minLength: 1
                   type: string
               required:
                 - name
               type: object
+        required: true
       responses:
         "201":
           content:
@@ -12748,9 +12781,6 @@ paths:
         - $ref: "#/components/parameters/Tenant"
       responses:
         "204":
-          content:
-            application/json:
-              schema: {}
           description: Label deleted
           headers:
             Cache-Control:
@@ -12839,9 +12869,6 @@ paths:
         - $ref: "#/components/parameters/Tenant"
       responses:
         "204":
-          content:
-            application/json:
-              schema: {}
           description: Mail deleted
           headers:
             Cache-Control:
@@ -12951,11 +12978,9 @@ paths:
                   description: Whether the mail is flagged as read
                   type: boolean
               type: object
+        required: true
       responses:
         "204":
-          content:
-            application/json:
-              schema: {}
           description: Mail updated
           headers:
             Cache-Control:
@@ -13518,6 +13543,7 @@ paths:
           required: true
           schema:
             description: The string to search on
+            minLength: 3
             type: string
         - in: query
           name: strict
@@ -14470,6 +14496,7 @@ paths:
               minItems: 1
               type: array
               uniqueItems: true
+        required: true
       responses:
         "200":
           content:
@@ -14526,6 +14553,7 @@ paths:
               minItems: 1
               type: array
               uniqueItems: true
+        required: true
       responses:
         "200":
           content:
@@ -15740,6 +15768,9 @@ paths:
               - All
               - Active
             type: string
+            x-enum-descriptions:
+              - All states
+              - Active projects only
         - $ref: "#/components/parameters/AcceptLanguage"
         - $ref: "#/components/parameters/IfNoneMatch"
         - $ref: "#/components/parameters/CompatibilityDate"
@@ -16870,11 +16901,9 @@ paths:
                   description: New fleet MOTD in CCP flavoured HTML
                   type: string
               type: object
+        required: true
       responses:
         "204":
-          content:
-            application/json:
-              schema: {}
           description: Fleet updated
           headers:
             Cache-Control:
@@ -16984,11 +17013,9 @@ paths:
                 - character_id
                 - role
               type: object
+        required: true
       responses:
         "204":
-          content:
-            application/json:
-              schema: {}
           description: Fleet invitation sent
           headers:
             Cache-Control:
@@ -17035,9 +17062,6 @@ paths:
         - $ref: "#/components/parameters/Tenant"
       responses:
         "204":
-          content:
-            application/json:
-              schema: {}
           description: Fleet member kicked
           headers:
             Cache-Control:
@@ -17103,11 +17127,9 @@ paths:
               required:
                 - role
               type: object
+        required: true
       responses:
         "204":
-          content:
-            application/json:
-              schema: {}
           description: Fleet invitation sent
           headers:
             Cache-Control:
@@ -17154,9 +17176,6 @@ paths:
         - $ref: "#/components/parameters/Tenant"
       responses:
         "204":
-          content:
-            application/json:
-              schema: {}
           description: Squad deleted
           headers:
             Cache-Control:
@@ -17206,15 +17225,14 @@ paths:
             schema:
               properties:
                 name:
+                  maxLength: 10
                   type: string
               required:
                 - name
               type: object
+        required: true
       responses:
         "204":
-          content:
-            application/json:
-              schema: {}
           description: Squad renamed
           headers:
             Cache-Control:
@@ -17349,9 +17367,6 @@ paths:
         - $ref: "#/components/parameters/Tenant"
       responses:
         "204":
-          content:
-            application/json:
-              schema: {}
           description: Wing deleted
           headers:
             Cache-Control:
@@ -17401,15 +17416,14 @@ paths:
             schema:
               properties:
                 name:
+                  maxLength: 10
                   type: string
               required:
                 - name
               type: object
+        required: true
       responses:
         "204":
-          content:
-            application/json:
-              schema: {}
           description: Wing renamed
           headers:
             Cache-Control:
@@ -18516,9 +18530,6 @@ paths:
         - $ref: "#/components/parameters/Tenant"
       responses:
         "204":
-          content:
-            application/json:
-              schema: {}
           description: Open window request received
           headers:
             Cache-Control:
@@ -18558,9 +18569,6 @@ paths:
         - $ref: "#/components/parameters/Tenant"
       responses:
         "204":
-          content:
-            application/json:
-              schema: {}
           description: Open window request received
           headers:
             Cache-Control:
@@ -18600,9 +18608,6 @@ paths:
         - $ref: "#/components/parameters/Tenant"
       responses:
         "204":
-          content:
-            application/json:
-              schema: {}
           description: Open window request received
           headers:
             Cache-Control:
@@ -18642,9 +18647,6 @@ paths:
         - $ref: "#/components/parameters/Tenant"
       responses:
         "204":
-          content:
-            application/json:
-              schema: {}
           description: Open window request received
           headers:
             Cache-Control:
@@ -18681,6 +18683,7 @@ paths:
             schema:
               properties:
                 body:
+                  maxLength: 10000
                   type: string
                 recipients:
                   items:
@@ -18691,6 +18694,7 @@ paths:
                   minItems: 1
                   type: array
                 subject:
+                  maxLength: 1000
                   type: string
                 to_corp_or_alliance_id:
                   format: int64
@@ -18704,11 +18708,9 @@ paths:
                 - body
                 - recipients
               type: object
+        required: true
       responses:
         "204":
-          content:
-            application/json:
-              schema: {}
           description: Open window request received
           headers:
             Cache-Control:
@@ -19233,11 +19235,14 @@ paths:
             schema:
               items:
                 description: name string
+                maxLength: 100
+                minLength: 1
                 type: string
               maxItems: 500
               minItems: 1
               type: array
               uniqueItems: true
+        required: true
       responses:
         "200":
           content:
@@ -19327,6 +19332,7 @@ paths:
               minItems: 1
               type: array
               uniqueItems: true
+        required: true
       responses:
         "200":
           content:
