@@ -1,6 +1,6 @@
 # Changelog
 
-For API changes see https://github.com/esi/esi-issues/blob/master/changelog.md.  
+For API changes see the changelog at https://developers.eveonline.com/api-explorer.  
 For generator library changes see https://github.com/OpenAPITools/openapi-generator/releases.
 
 ## Versioning scheme
