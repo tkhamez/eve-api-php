@@ -43,12 +43,12 @@
   git checkout .gitignore composer.json
   ```
 
-- In `.openapi-generator/FILES`, delete any new line that starts with `test/`.
+- In `.openapi-generator/FILES`, delete any new lines that starts with `test/`.
 
 - In `README.md`, undo all changes above `### Manual Installation` and increase the version for
   `tkhamez/eve-api`.
 
-- Commit everything, adjust the commit message:
+- Commit everything, adjust the date in the commit message:
   ```shell
   git commit -a -m "Generated from the definition file dated 2025-09-21 for the compatibility date $COMPATIBILITY_DATE using OpenAPI Generator $GENERATOR_VERSION."
   ```
