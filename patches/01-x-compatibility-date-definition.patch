@@ -4,8 +4,8 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 <+>UTF-8
 ===================================================================
 diff --git a/openapi.yaml b/openapi.yaml
---- a/openapi.yaml	(revision d5464a17df158875cc3800addc0a330d68234777)
-+++ b/openapi.yaml	(date 1756224505797)
+--- a/openapi.yaml	(revision c1628fd2099b1ceec8eccf6738e9a934a96e4867)
++++ b/openapi.yaml	(date 1758480577171)
 @@ -46,11 +46,10 @@
        description: The compatibility date for the request.
        in: header
@@ -19,3 +19,11 @@ diff --git a/openapi.yaml b/openapi.yaml
          type: string
      IfModifiedSince:
        description: The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
+@@ -3045,7 +3044,6 @@
+     CompatibilityDate:
+       examples:
+         - "2025-08-26"
+-      format: date
+       type: string
+       x-common-model: "true"
+     ConstellationID:
