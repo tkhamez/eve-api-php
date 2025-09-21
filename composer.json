@@ -1,6 +1,6 @@
 {
     "name": "tkhamez/eve-api",
-    "description": "An OpenAPI Client Library for EVE Online (ESI)",
+    "description": "Client library for EVE Online API (ESI)",
     "keywords": [
         "openapitools",
         "openapi-generator",

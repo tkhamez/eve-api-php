@@ -6,7 +6,7 @@ For generator library changes see https://github.com/OpenAPITools/openapi-genera
 ## Versioning scheme
 
 - Major: This number is increased everytime when the client was generated from an updated
-  OpenAPI definition file or any other breaking change.
+  OpenAPI definition file or for any (other) breaking change.
 - Minor: The compatibility date (see https://developers.eveonline.com/docs/services/esi/overview/#versioning)
   for which the client was generated in the format YYYYMMDD.
 - Patch: Increased when the client was regenerated with a new minor or patch version of the
