@@ -35,7 +35,7 @@ To install the bindings via [Composer](https://getcomposer.org/), add the follow
 ```json
 {
   "require": {
-    "tkhamez/eve-api": "^8.0.0"
+    "tkhamez/eve-api": "^9.0.0"
   }
 }
 ```
@@ -229,6 +229,8 @@ Class | Method | HTTP request | Description
 *MarketApi* | [**getMarketsRegionIdOrders**](docs/Api/MarketApi.md#getmarketsregionidorders) | **GET** /markets/{region_id}/orders | List orders in a region
 *MarketApi* | [**getMarketsRegionIdTypes**](docs/Api/MarketApi.md#getmarketsregionidtypes) | **GET** /markets/{region_id}/types | List type IDs relevant to a market
 *MarketApi* | [**getMarketsStructuresStructureId**](docs/Api/MarketApi.md#getmarketsstructuresstructureid) | **GET** /markets/structures/{structure_id} | List orders in a structure
+*MetaApi* | [**getMetaChangelog**](docs/Api/MetaApi.md#getmetachangelog) | **GET** /meta/changelog | Get changelog
+*MetaApi* | [**getMetaCompatibilityDates**](docs/Api/MetaApi.md#getmetacompatibilitydates) | **GET** /meta/compatibility-dates | Get compatibility dates
 *PlanetaryInteractionApi* | [**getCharactersCharacterIdPlanets**](docs/Api/PlanetaryInteractionApi.md#getcharacterscharacteridplanets) | **GET** /characters/{character_id}/planets | Get colonies
 *PlanetaryInteractionApi* | [**getCharactersCharacterIdPlanetsPlanetId**](docs/Api/PlanetaryInteractionApi.md#getcharacterscharacteridplanetsplanetid) | **GET** /characters/{character_id}/planets/{planet_id} | Get colony layout
 *PlanetaryInteractionApi* | [**getCorporationsCorporationIdCustomsOffices**](docs/Api/PlanetaryInteractionApi.md#getcorporationscorporationidcustomsoffices) | **GET** /corporations/{corporation_id}/customs_offices | List corporation customs offices
@@ -519,6 +521,9 @@ Class | Method | HTTP request | Description
 - [MarketsRegionIdHistoryGetInner](docs/Model/MarketsRegionIdHistoryGetInner.md)
 - [MarketsRegionIdOrdersGetInner](docs/Model/MarketsRegionIdOrdersGetInner.md)
 - [MarketsStructuresStructureIdGetInner](docs/Model/MarketsStructuresStructureIdGetInner.md)
+- [MetaChangelog](docs/Model/MetaChangelog.md)
+- [MetaChangelogEntry](docs/Model/MetaChangelogEntry.md)
+- [MetaCompatibilityDates](docs/Model/MetaCompatibilityDates.md)
 - [MineMaterial](docs/Model/MineMaterial.md)
 - [PostCharactersCharacterIdFittingsRequest](docs/Model/PostCharactersCharacterIdFittingsRequest.md)
 - [PostCharactersCharacterIdFittingsRequestItemsInner](docs/Model/PostCharactersCharacterIdFittingsRequestItemsInner.md)

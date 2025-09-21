@@ -373,6 +373,7 @@ class CharactersCharacterIdNotificationsGetInner implements ModelInterface, Arra
     public const TYPE_FAC_WAR_CORP_JOIN_WITHDRAW_MSG = 'FacWarCorpJoinWithdrawMsg';
     public const TYPE_FAC_WAR_CORP_LEAVE_REQUEST_MSG = 'FacWarCorpLeaveRequestMsg';
     public const TYPE_FAC_WAR_CORP_LEAVE_WITHDRAW_MSG = 'FacWarCorpLeaveWithdrawMsg';
+    public const TYPE_FAC_WAR_DIRECT_ENLISTMENT_REVOKED = 'FacWarDirectEnlistmentRevoked';
     public const TYPE_FAC_WAR_LP_DISQUALIFIED_EVENT = 'FacWarLPDisqualifiedEvent';
     public const TYPE_FAC_WAR_LP_DISQUALIFIED_KILL = 'FacWarLPDisqualifiedKill';
     public const TYPE_FAC_WAR_LP_PAYOUT_EVENT = 'FacWarLPPayoutEvent';
@@ -646,6 +647,7 @@ class CharactersCharacterIdNotificationsGetInner implements ModelInterface, Arra
             self::TYPE_FAC_WAR_CORP_JOIN_WITHDRAW_MSG,
             self::TYPE_FAC_WAR_CORP_LEAVE_REQUEST_MSG,
             self::TYPE_FAC_WAR_CORP_LEAVE_WITHDRAW_MSG,
+            self::TYPE_FAC_WAR_DIRECT_ENLISTMENT_REVOKED,
             self::TYPE_FAC_WAR_LP_DISQUALIFIED_EVENT,
             self::TYPE_FAC_WAR_LP_DISQUALIFIED_KILL,
             self::TYPE_FAC_WAR_LP_PAYOUT_EVENT,

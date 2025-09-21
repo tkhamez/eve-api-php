@@ -24,6 +24,7 @@ docs/Api/LocationApi.md
 docs/Api/LoyaltyApi.md
 docs/Api/MailApi.md
 docs/Api/MarketApi.md
+docs/Api/MetaApi.md
 docs/Api/PlanetaryInteractionApi.md
 docs/Api/RoutesApi.md
 docs/Api/SearchApi.md
@@ -264,6 +265,9 @@ docs/Model/MarketsPricesGetInner.md
 docs/Model/MarketsRegionIdHistoryGetInner.md
 docs/Model/MarketsRegionIdOrdersGetInner.md
 docs/Model/MarketsStructuresStructureIdGetInner.md
+docs/Model/MetaChangelog.md
+docs/Model/MetaChangelogEntry.md
+docs/Model/MetaCompatibilityDates.md
 docs/Model/MineMaterial.md
 docs/Model/PostCharactersCharacterIdFittingsRequest.md
 docs/Model/PostCharactersCharacterIdFittingsRequestItemsInner.md
@@ -355,6 +359,7 @@ lib/Api/LocationApi.php
 lib/Api/LoyaltyApi.php
 lib/Api/MailApi.php
 lib/Api/MarketApi.php
+lib/Api/MetaApi.php
 lib/Api/PlanetaryInteractionApi.php
 lib/Api/RoutesApi.php
 lib/Api/SearchApi.php
@@ -599,6 +604,9 @@ lib/Model/MarketsPricesGetInner.php
 lib/Model/MarketsRegionIdHistoryGetInner.php
 lib/Model/MarketsRegionIdOrdersGetInner.php
 lib/Model/MarketsStructuresStructureIdGetInner.php
+lib/Model/MetaChangelog.php
+lib/Model/MetaChangelogEntry.php
+lib/Model/MetaCompatibilityDates.php
 lib/Model/MineMaterial.php
 lib/Model/ModelInterface.php
 lib/Model/PostCharactersCharacterIdFittingsRequest.php
