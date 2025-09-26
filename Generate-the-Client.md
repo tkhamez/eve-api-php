@@ -43,7 +43,7 @@
   git checkout .gitignore composer.json
   ```
 
-- In `.openapi-generator/FILES`, delete any new lines that starts with `test/`.
+- In `.openapi-generator/FILES`, delete all new lines that begin with `test/`.
 
 - In `README.md`, undo all changes above `### Manual Installation` and increase the version for
   `tkhamez/eve-api`.
