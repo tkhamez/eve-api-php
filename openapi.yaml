@@ -6491,9 +6491,7 @@ components:
           description: List of contributors
           items:
             $ref: "#/components/schemas/CorporationsProjectsContributorsContributor"
-          type:
-            - array
-            - "null"
+          type: array
         cursor:
           $ref: "#/components/schemas/Cursor"
       required:
@@ -7651,9 +7649,7 @@ components:
           description: List of projects
           items:
             $ref: "#/components/schemas/CorporationsProjectsDetailProject"
-          type:
-            - array
-            - "null"
+          type: array
       required:
         - projects
       type: object
@@ -7835,15 +7831,12 @@ components:
         type: integer
       type: array
     Error:
-      additionalProperties: false
       properties:
         details:
           description: List of individual error details.
           items:
             $ref: "#/components/schemas/ErrorDetail"
-          type:
-            - array
-            - "null"
+          type: array
         error:
           description: Error message.
           type: string
@@ -7851,7 +7844,6 @@ components:
         - error
       type: object
     ErrorDetail:
-      additionalProperties: false
       properties:
         location:
           description: Where the error occurred, e.g. 'body.items[3].tags' or 'path.thing-id'
@@ -9024,9 +9016,7 @@ components:
           additionalProperties:
             items:
               $ref: "#/components/schemas/MetaChangelogEntry"
-            type:
-              - array
-              - "null"
+            type: array
           description: Per date, list changes for that date
           type: object
       required:
@@ -9057,6 +9047,11 @@ components:
           examples:
             - GET
           type: string
+          x-enum-descriptions:
+            - ""
+            - ""
+            - ""
+            - ""
         path:
           description: Path of the route
           examples:
@@ -18387,7 +18382,6 @@ paths:
       summary: Get changelog
       tags:
         - Meta
-      x-cache-age: 0
       x-compatibility-date: "2020-01-01"
   /meta/compatibility-dates:
     get:
@@ -18428,7 +18422,6 @@ paths:
       summary: Get compatibility dates
       tags:
         - Meta
-      x-cache-age: 0
       x-compatibility-date: "2020-01-01"
   /route/{origin}/{destination}:
     get:
