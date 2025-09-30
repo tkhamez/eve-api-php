@@ -79,7 +79,7 @@ class CorporationsProjectsContributors implements ModelInterface, ArrayAccess, \
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'contributors' => true,
+        'contributors' => false,
         'cursor' => false
     ];
 
@@ -319,14 +319,7 @@ class CorporationsProjectsContributors implements ModelInterface, ArrayAccess, \
     public function setContributors($contributors)
     {
         if (is_null($contributors)) {
-            array_push($this->openAPINullablesSetToNull, 'contributors');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('contributors', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
+            throw new \InvalidArgumentException('non-nullable contributors cannot be null');
         }
         $this->container['contributors'] = $contributors;
 

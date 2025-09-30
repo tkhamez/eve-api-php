@@ -79,7 +79,7 @@ class Error implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'details' => true,
+        'details' => false,
         'error' => false
     ];
 
@@ -319,14 +319,7 @@ class Error implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setDetails($details)
     {
         if (is_null($details)) {
-            array_push($this->openAPINullablesSetToNull, 'details');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('details', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
+            throw new \InvalidArgumentException('non-nullable details cannot be null');
         }
         $this->container['details'] = $details;
 

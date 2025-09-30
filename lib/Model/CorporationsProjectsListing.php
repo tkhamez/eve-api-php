@@ -80,7 +80,7 @@ class CorporationsProjectsListing implements ModelInterface, ArrayAccess, \JsonS
       */
     protected static array $openAPINullables = [
         'cursor' => false,
-        'projects' => true
+        'projects' => false
     ];
 
     /**
@@ -346,14 +346,7 @@ class CorporationsProjectsListing implements ModelInterface, ArrayAccess, \JsonS
     public function setProjects($projects)
     {
         if (is_null($projects)) {
-            array_push($this->openAPINullablesSetToNull, 'projects');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('projects', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
+            throw new \InvalidArgumentException('non-nullable projects cannot be null');
         }
         $this->container['projects'] = $projects;
 
