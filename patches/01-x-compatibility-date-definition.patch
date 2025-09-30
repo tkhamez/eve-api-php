@@ -4,17 +4,17 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 <+>UTF-8
 ===================================================================
 diff --git a/openapi.yaml b/openapi.yaml
---- a/openapi.yaml	(revision c1628fd2099b1ceec8eccf6738e9a934a96e4867)
-+++ b/openapi.yaml	(date 1758480577171)
+--- a/openapi.yaml	(revision cdc5352a6f51d93f6dd613248f8844190d3bff32)
++++ b/openapi.yaml	(date 1759248464064)
 @@ -46,11 +46,10 @@
        description: The compatibility date for the request.
        in: header
        name: X-Compatibility-Date
 -      required: true
        schema:
-+        default: "2025-08-26"
++        default: "2025-09-30"
          enum:
-           - "2025-08-26"
+           - "2025-09-30"
 -        format: date
          type: string
      IfModifiedSince:
