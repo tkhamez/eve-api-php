@@ -7,7 +7,7 @@
 
 - Get the generator, check releases here https://github.com/OpenAPITools/openapi-generator/releases:
   ```shell
-  export GENERATOR_VERSION=7.15.0
+  export GENERATOR_VERSION=7.16.0
   wget https://repo1.maven.org/maven2/org/openapitools/openapi-generator-cli/$GENERATOR_VERSION/openapi-generator-cli-$GENERATOR_VERSION.jar
   ```
 
