@@ -53,7 +53,7 @@
 - In `README.md`, undo all changes above `### Manual Installation` and increase the version for
   `tkhamez/eve-api`.
 
-- Commit everything:
+- Commit the client:
   ```shell
   git commit -a -m "Generated from the definition file dated $GENERATED_DATE for the compatibility date $COMPATIBILITY_DATE using OpenAPI Generator $GENERATOR_VERSION."
   ```

@@ -4,18 +4,18 @@ All URIs are relative to https://esi.evetech.net, except if the operation define
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**getRouteOriginDestination()**](RoutesApi.md#getRouteOriginDestination) | **GET** /route/{origin}/{destination} | Get route |
+| [**postRoute()**](RoutesApi.md#postRoute) | **POST** /route/{origin_system_id}/{destination_system_id} | Get route between two systems |
 
 
-## `getRouteOriginDestination()`
+## `postRoute()`
 
 ```php
-getRouteOriginDestination($destination, $origin, $avoid, $connections, $flag, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): int[]
+postRoute($origin_system_id, $destination_system_id, $route_request_body, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\Route
 ```
 
-Get route
+Get route between two systems
 
-Get the systems between origin and destination
+Calculate the systems between the given origin and destination.
 
 ### Example
 
@@ -30,21 +30,19 @@ $apiInstance = new Tkhamez\Eve\API\Api\RoutesApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$destination = 56; // int
-$origin = 56; // int
-$avoid = array(56); // int[]
-$connections = array(new \Tkhamez\Eve\API\Model\int[]()); // int[][]
-$flag = 'shortest'; // string
+$origin_system_id = 56; // int | Origin system
+$destination_system_id = 56; // int | Destination system
+$route_request_body = new \Tkhamez\Eve\API\Model\RouteRequestBody(); // \Tkhamez\Eve\API\Model\RouteRequestBody
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2025-08-26'; // string | The compatibility date for the request.
+$x_compatibility_date = '2025-09-30'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
-    $result = $apiInstance->getRouteOriginDestination($destination, $origin, $avoid, $connections, $flag, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
+    $result = $apiInstance->postRoute($origin_system_id, $destination_system_id, $route_request_body, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling RoutesApi->getRouteOriginDestination: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling RoutesApi->postRoute: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -52,19 +50,17 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **destination** | **int**|  | |
-| **origin** | **int**|  | |
-| **avoid** | [**int[]**](../Model/int.md)|  | [optional] |
-| **connections** | [**int[][]**](../Model/int[].md)|  | [optional] |
-| **flag** | **string**|  | [optional] [default to &#39;shortest&#39;] |
+| **origin_system_id** | **int**| Origin system | |
+| **destination_system_id** | **int**| Destination system | |
+| **route_request_body** | [**\Tkhamez\Eve\API\Model\RouteRequestBody**](../Model/RouteRequestBody.md)|  | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-08-26&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-09-30&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
 
-**int[]**
+[**\Tkhamez\Eve\API\Model\Route**](../Model/Route.md)
 
 ### Authorization
 
@@ -72,7 +68,7 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
+- **Content-Type**: `application/json`
 - **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)

@@ -284,6 +284,9 @@ docs/Model/PutFleetsFleetIdSquadsSquadIdRequest.md
 docs/Model/RegionId.md
 docs/Model/RemoteBoostShield.md
 docs/Model/RemoteRepairArmor.md
+docs/Model/Route.md
+docs/Model/RouteConnection.md
+docs/Model/RouteRequestBody.md
 docs/Model/SalvageWreck.md
 docs/Model/ScanSignature.md
 docs/Model/ShipInsurance.md
@@ -624,6 +627,9 @@ lib/Model/PutFleetsFleetIdSquadsSquadIdRequest.php
 lib/Model/RegionId.php
 lib/Model/RemoteBoostShield.php
 lib/Model/RemoteRepairArmor.php
+lib/Model/Route.php
+lib/Model/RouteConnection.php
+lib/Model/RouteRequestBody.php
 lib/Model/SalvageWreck.php
 lib/Model/ScanSignature.php
 lib/Model/ShipInsurance.php
