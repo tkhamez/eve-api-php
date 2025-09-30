@@ -14,7 +14,7 @@
 - Get the OpenAPI definition file from https://developers.eveonline.com/api-explorer, adjust the 
   compatibility date if necessary:
   ```shell
-  export COMPATIBILITY_DATE=2025-08-26
+  export COMPATIBILITY_DATE=2025-09-30
   wget https://esi.evetech.net/meta/openapi.yaml?compatibility_date=$COMPATIBILITY_DATE -O openapi.yaml
   ```
 
