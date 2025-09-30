@@ -46,10 +46,11 @@ components:
       description: The compatibility date for the request.
       in: header
       name: X-Compatibility-Date
+      required: true
       schema:
-        default: "2025-08-26"
         enum:
-          - "2025-08-26"
+          - "2025-09-30"
+        format: date
         type: string
     IfModifiedSince:
       description: The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
@@ -3044,6 +3045,7 @@ components:
     CompatibilityDate:
       examples:
         - "2025-08-26"
+      format: date
       type: string
       x-common-model: "true"
     ConstellationID:
@@ -9032,11 +9034,6 @@ components:
           examples:
             - Updated response schema.
           type: string
-        is_breaking:
-          description: Whether this is a breaking change
-          examples:
-            - false
-          type: boolean
         method:
           description: HTTP method of the route
           enum:
@@ -9057,11 +9054,26 @@ components:
           examples:
             - /meta/changelog
           type: string
+        type:
+          description: Type of the change
+          enum:
+            - breaking
+            - changed
+            - new
+            - removed
+          examples:
+            - breaking
+          type: string
+          x-enum-descriptions:
+            - Breaking change
+            - Non-breaking change
+            - New route
+            - Removed route
       required:
         - method
         - path
         - compatibility_date
-        - is_breaking
+        - type
         - description
       type: object
     MetaCompatibilityDates:
@@ -9080,13 +9092,63 @@ components:
       format: int64
       type: integer
       x-common-model: "true"
-    RouteOriginDestinationGet:
-      description: Solar systems in route
-      items:
-        description: Solar system in route
-        format: int64
-        type: integer
-      type: array
+    Route:
+      properties:
+        route:
+          description: The route between the origin and destination systems
+          items:
+            $ref: "#/components/schemas/SolarSystemID"
+          type: array
+      required:
+        - route
+      type: object
+    RouteConnection:
+      properties:
+        from:
+          $ref: "#/components/schemas/SolarSystemID"
+          description: From which system
+        to:
+          $ref: "#/components/schemas/SolarSystemID"
+          description: To which system
+      required:
+        - from
+        - to
+      type: object
+    RouteRequestBody:
+      properties:
+        avoid_systems:
+          description: Systems to avoid
+          items:
+            $ref: "#/components/schemas/SolarSystemID"
+          maxItems: 1000
+          type: array
+          uniqueItems: true
+        connections:
+          description: Additional one-way connections (like Jump Bridges) between systems
+          items:
+            $ref: "#/components/schemas/RouteConnection"
+          maxItems: 1000
+          type: array
+        preference:
+          default: Shorter
+          description: Preference for the route
+          enum:
+            - Shorter
+            - Safer
+            - LessSecure
+          type: string
+          x-enum-descriptions:
+            - Shorter routes
+            - Safer routes
+            - Less secure routes
+        security_penalty:
+          default: 50
+          description: Strictness of the path preference
+          format: int64
+          maximum: 100
+          minimum: 0
+          type: integer
+      type: object
     ShipTreeGroupID:
       description: Ship tree group identifier.
       examples:
@@ -10533,7 +10595,7 @@ info:
     url: https://developers.eveonline.com/license-agreement
   termsOfService: https://support.eveonline.com/hc/en-us/articles/8414770561948-EVE-Online-Terms-of-Service
   title: EVE Stable Infrastructure (ESI) - tranquility
-  version: "2025-08-26"
+  version: "2025-09-30"
 openapi: 3.1.0
 paths:
   /alliances:
@@ -18382,7 +18444,7 @@ paths:
       summary: Get changelog
       tags:
         - Meta
-      x-compatibility-date: "2020-01-01"
+      x-compatibility-date: "2025-09-26"
   /meta/compatibility-dates:
     get:
       description: Get a list of compatibility dates.
@@ -18423,69 +18485,41 @@ paths:
       tags:
         - Meta
       x-compatibility-date: "2020-01-01"
-  /route/{origin}/{destination}:
-    get:
-      description: Get the systems between origin and destination
-      operationId: GetRouteOriginDestination
+  /route/{origin_system_id}/{destination_system_id}:
+    post:
+      description: Calculate the systems between the given origin and destination.
+      operationId: PostRoute
       parameters:
-        - in: query
-          name: avoid
-          schema:
-            description: avoid solar system ID(s)
-            items:
-              format: int64
-              type: integer
-            maxItems: 100
-            type: array
-            uniqueItems: true
-        - in: query
-          name: connections
-          schema:
-            description: connected solar system pairs
-            items:
-              items:
-                format: int64
-                type: integer
-              maxItems: 2
-              minItems: 2
-              type: array
-            maxItems: 100
-            type: array
-            uniqueItems: true
-        - in: path
-          name: destination
+        - description: Origin system
+          in: path
+          name: origin_system_id
           required: true
           schema:
-            description: destination solar system ID
-            format: int64
-            type: integer
-        - in: query
-          name: flag
-          schema:
-            default: shortest
-            description: route security preference
-            enum:
-              - shortest
-              - secure
-              - insecure
-            type: string
-        - in: path
-          name: origin
+            $ref: "#/components/schemas/SolarSystemID"
+            description: Origin system
+        - description: Destination system
+          in: path
+          name: destination_system_id
           required: true
           schema:
-            description: origin solar system ID
-            format: int64
-            type: integer
+            $ref: "#/components/schemas/SolarSystemID"
+            description: Destination system
         - $ref: "#/components/parameters/AcceptLanguage"
         - $ref: "#/components/parameters/IfNoneMatch"
         - $ref: "#/components/parameters/CompatibilityDate"
         - $ref: "#/components/parameters/Tenant"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RouteRequestBody"
+        required: true
       responses:
         "200":
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/RouteOriginDestinationGet"
+                $ref: "#/components/schemas/Route"
           description: OK
           headers:
             Cache-Control:
@@ -18500,11 +18534,17 @@ paths:
               schema:
                 $ref: "#/components/schemas/Error"
           description: Error
-      summary: Get route
+          headers:
+            Cache-Control:
+              $ref: "#/components/headers/CacheControl"
+            ETag:
+              $ref: "#/components/headers/ETag"
+            Last-Modified:
+              $ref: "#/components/headers/LastModified"
+      summary: Get route between two systems
       tags:
         - Routes
-      x-cache-age: 86400
-      x-compatibility-date: "2020-01-01"
+      x-compatibility-date: "2025-09-30"
   /sovereignty/campaigns:
     get:
       description: Shows sovereignty data for campaigns.
