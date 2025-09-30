@@ -35,7 +35,7 @@ To install the bindings via [Composer](https://getcomposer.org/), add the follow
 ```json
 {
   "require": {
-    "tkhamez/eve-api": "^9.0.0"
+    "tkhamez/eve-api": "^10.0.0"
   }
 }
 ```
