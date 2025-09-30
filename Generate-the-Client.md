@@ -1,5 +1,10 @@
 # Generate the Client
 
+- Set the date for commit messages:
+  ```shell
+  export GENERATED_DATE=`date +"%Y-%m-%d"`
+  ```
+
 - Get the generator, check releases here https://github.com/OpenAPITools/openapi-generator/releases:
   ```shell
   export GENERATOR_VERSION=7.15.0
@@ -20,7 +25,7 @@
 
 - Commit `openapi.yaml`:
   ```shell
-  git commit openapi.yaml -m "Update openapi.yaml"
+  git commit openapi.yaml -m "Update openapi.yaml on $GENERATED_DATE with compatibility date $COMPATIBILITY_DATE"
   ```
 
 - Delete the directories `lib` and `docs`:
@@ -48,7 +53,7 @@
 - In `README.md`, undo all changes above `### Manual Installation` and increase the version for
   `tkhamez/eve-api`.
 
-- Commit everything, adjust the date in the commit message:
+- Commit everything:
   ```shell
-  git commit -a -m "Generated from the definition file dated 2025-09-21 for the compatibility date $COMPATIBILITY_DATE using OpenAPI Generator $GENERATOR_VERSION."
+  git commit -a -m "Generated from the definition file dated $GENERATED_DATE for the compatibility date $COMPATIBILITY_DATE using OpenAPI Generator $GENERATOR_VERSION."
   ```
