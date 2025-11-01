@@ -1,5 +1,7 @@
 # Tkhamez\Eve\API\ContactsApi
 
+
+
 All URIs are relative to https://esi.evetech.net, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
