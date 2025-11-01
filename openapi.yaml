@@ -12123,6 +12123,10 @@ paths:
         - Fittings
       x-cache-age: 300
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: fitting
+        max-tokens: 150
+        window-size: 15m
     post:
       description: Save a new fitting for a character
       operationId: PostCharactersCharacterIdFittings
@@ -12251,6 +12255,10 @@ paths:
       tags:
         - Fittings
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: fitting
+        max-tokens: 150
+        window-size: 15m
   /characters/{character_id}/fittings/{fitting_id}:
     delete:
       description: Delete a fitting from a character
@@ -12296,6 +12304,10 @@ paths:
       tags:
         - Fittings
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: fitting
+        max-tokens: 150
+        window-size: 15m
   /characters/{character_id}/fleet:
     get:
       description: Return the fleet ID the character is in, if any.
@@ -12339,6 +12351,10 @@ paths:
         - Fleets
       x-cache-age: 60
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: fleet
+        max-tokens: 1800
+        window-size: 15m
   /characters/{character_id}/fw/stats:
     get:
       description: |-
@@ -12384,6 +12400,10 @@ paths:
       tags:
         - Faction Warfare
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: factional-warfare
+        max-tokens: 150
+        window-size: 15m
   /characters/{character_id}/implants:
     get:
       description: Return implants on the active clone of a character
@@ -13265,6 +13285,10 @@ paths:
         - Character
       x-cache-age: 600
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: char-notification
+        max-tokens: 15
+        window-size: 15m
   /characters/{character_id}/notifications/contacts:
     get:
       description: Return notifications about having been added to someone's contact list
@@ -15277,6 +15301,10 @@ paths:
       tags:
         - Faction Warfare
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: factional-warfare
+        max-tokens: 150
+        window-size: 15m
   /corporations/{corporation_id}/icons:
     get:
       description: Get the icon urls for a corporation
@@ -16997,6 +17025,10 @@ paths:
         - Fleets
       x-cache-age: 5
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: fleet
+        max-tokens: 1800
+        window-size: 15m
     put:
       description: Update settings about a fleet
       operationId: PutFleetsFleetId
@@ -17048,6 +17080,10 @@ paths:
       tags:
         - Fleets
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: fleet
+        max-tokens: 1800
+        window-size: 15m
   /fleets/{fleet_id}/members:
     get:
       description: Return information about fleet members
@@ -17094,6 +17130,10 @@ paths:
         - Fleets
       x-cache-age: 5
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: fleet
+        max-tokens: 1800
+        window-size: 15m
     post:
       description: Invite a character into the fleet. If a character has a CSPA charge set it is not possible to invite them to the fleet using ESI
       operationId: PostFleetsFleetIdMembers
@@ -17160,6 +17200,10 @@ paths:
       tags:
         - Fleets
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: fleet
+        max-tokens: 1800
+        window-size: 15m
   /fleets/{fleet_id}/members/{member_id}:
     delete:
       description: Kick a fleet member
@@ -17206,6 +17250,10 @@ paths:
       tags:
         - Fleets
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: fleet
+        max-tokens: 1800
+        window-size: 15m
     put:
       description: Move a fleet member around
       operationId: PutFleetsFleetIdMembersMemberId
@@ -17274,6 +17322,10 @@ paths:
       tags:
         - Fleets
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: fleet
+        max-tokens: 1800
+        window-size: 15m
   /fleets/{fleet_id}/squads/{squad_id}:
     delete:
       description: Delete a fleet squad, only empty squads can be deleted
@@ -17320,6 +17372,10 @@ paths:
       tags:
         - Fleets
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: fleet
+        max-tokens: 1800
+        window-size: 15m
     put:
       description: Rename a fleet squad
       operationId: PutFleetsFleetIdSquadsSquadId
@@ -17377,6 +17433,10 @@ paths:
       tags:
         - Fleets
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: fleet
+        max-tokens: 1800
+        window-size: 15m
   /fleets/{fleet_id}/wings:
     get:
       description: Return information about wings in a fleet
@@ -17423,6 +17483,10 @@ paths:
         - Fleets
       x-cache-age: 5
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: fleet
+        max-tokens: 1800
+        window-size: 15m
     post:
       description: Create a new wing in a fleet
       operationId: PostFleetsFleetIdWings
@@ -17465,6 +17529,10 @@ paths:
       tags:
         - Fleets
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: fleet
+        max-tokens: 1800
+        window-size: 15m
   /fleets/{fleet_id}/wings/{wing_id}:
     delete:
       description: Delete a fleet wing, only empty wings can be deleted. The wing may contain squads, but the squads must be empty
@@ -17511,6 +17579,10 @@ paths:
       tags:
         - Fleets
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: fleet
+        max-tokens: 1800
+        window-size: 15m
     put:
       description: Rename a fleet wing
       operationId: PutFleetsFleetIdWingsWingId
@@ -17568,6 +17640,10 @@ paths:
       tags:
         - Fleets
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: fleet
+        max-tokens: 1800
+        window-size: 15m
   /fleets/{fleet_id}/wings/{wing_id}/squads:
     post:
       description: Create a new squad in a fleet
@@ -17618,6 +17694,10 @@ paths:
       tags:
         - Fleets
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: fleet
+        max-tokens: 1800
+        window-size: 15m
   /fw/leaderboards:
     get:
       description: |-
@@ -17654,6 +17734,10 @@ paths:
       tags:
         - Faction Warfare
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: factional-warfare
+        max-tokens: 150
+        window-size: 15m
   /fw/leaderboards/characters:
     get:
       description: |-
@@ -17690,6 +17774,10 @@ paths:
       tags:
         - Faction Warfare
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: factional-warfare
+        max-tokens: 150
+        window-size: 15m
   /fw/leaderboards/corporations:
     get:
       description: |-
@@ -17726,6 +17814,10 @@ paths:
       tags:
         - Faction Warfare
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: factional-warfare
+        max-tokens: 150
+        window-size: 15m
   /fw/stats:
     get:
       description: |-
@@ -17762,6 +17854,10 @@ paths:
       tags:
         - Faction Warfare
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: factional-warfare
+        max-tokens: 150
+        window-size: 15m
   /fw/systems:
     get:
       description: An overview of the current ownership of faction warfare solar systems
@@ -17796,6 +17892,10 @@ paths:
         - Faction Warfare
       x-cache-age: 1800
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: factional-warfare
+        max-tokens: 150
+        window-size: 15m
   /fw/wars:
     get:
       description: |-
@@ -17832,6 +17932,10 @@ paths:
       tags:
         - Faction Warfare
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: factional-warfare
+        max-tokens: 150
+        window-size: 15m
   /incursions:
     get:
       description: Return a list of current incursions
@@ -17866,6 +17970,10 @@ paths:
         - Incursions
       x-cache-age: 300
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: incursion
+        max-tokens: 150
+        window-size: 15m
   /industry/facilities:
     get:
       description: Return a list of industry facilities
@@ -17900,6 +18008,10 @@ paths:
         - Industry
       x-cache-age: 3600
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: industry
+        max-tokens: 150
+        window-size: 15m
   /industry/systems:
     get:
       description: Return cost indices for solar systems
@@ -17934,6 +18046,10 @@ paths:
         - Industry
       x-cache-age: 3600
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: industry
+        max-tokens: 150
+        window-size: 15m
   /insurance/prices:
     get:
       description: Return available insurance levels for all ship types
@@ -17970,6 +18086,10 @@ paths:
         - Insurance
       x-cache-age: 3600
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: insurance
+        max-tokens: 150
+        window-size: 15m
   /killmails/{killmail_id}/{killmail_hash}:
     get:
       description: Return a single killmail from its ID and hash
@@ -18577,6 +18697,10 @@ paths:
         - Sovereignty
       x-cache-age: 5
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: sovereignty
+        max-tokens: 600
+        window-size: 15m
   /sovereignty/map:
     get:
       description: Shows sovereignty information for solar systems
@@ -18611,6 +18735,10 @@ paths:
         - Sovereignty
       x-cache-age: 3600
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: sovereignty
+        max-tokens: 600
+        window-size: 15m
   /sovereignty/structures:
     get:
       description: Shows sovereignty data for structures.
@@ -18645,6 +18773,10 @@ paths:
         - Sovereignty
       x-cache-age: 120
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: sovereignty
+        max-tokens: 600
+        window-size: 15m
   /status:
     get:
       description: EVE Server status
@@ -18679,6 +18811,10 @@ paths:
         - Status
       x-cache-age: 30
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: status
+        max-tokens: 600
+        window-size: 15m
   /ui/autopilot/waypoint:
     post:
       description: Set a solar system as autopilot waypoint
@@ -18732,6 +18868,10 @@ paths:
       tags:
         - User Interface
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: ui
+        max-tokens: 900
+        window-size: 15m
   /ui/openwindow/contract:
     post:
       description: Open the contract window inside the client
@@ -18771,6 +18911,10 @@ paths:
       tags:
         - User Interface
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: ui
+        max-tokens: 900
+        window-size: 15m
   /ui/openwindow/information:
     post:
       description: Open the information window for a character, corporation or alliance inside the client
@@ -18810,6 +18954,10 @@ paths:
       tags:
         - User Interface
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: ui
+        max-tokens: 900
+        window-size: 15m
   /ui/openwindow/marketdetails:
     post:
       description: Open the market details window for a specific typeID inside the client
@@ -18849,6 +18997,10 @@ paths:
       tags:
         - User Interface
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: ui
+        max-tokens: 900
+        window-size: 15m
   /ui/openwindow/newmail:
     post:
       description: Open the New Mail window, according to settings from the request if applicable
@@ -18913,6 +19065,10 @@ paths:
       tags:
         - User Interface
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: ui
+        max-tokens: 900
+        window-size: 15m
   /universe/ancestries:
     get:
       description: |-
