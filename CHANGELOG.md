@@ -43,7 +43,8 @@ Beta status.
 
 ### 1.0.0
 
-Beta status.
+Beta status (not the routes themselves, but how the definition is written, which could create 
+breaking changes in the generated client).
 
 - Forked from https://github.com/tkhamez/swagger-eve-php.
 - Generated from the new OpenAPI 3.1 definition.

@@ -17,9 +17,6 @@ found at https://developers.eveonline.com/api-explorer. It is generated for a sp
 which is the only date that must be used for the `X-Compatibility-Date` header (which this client
 sends automatically). This date is included in the version number.
 
-_**Please note that the ESI OpenAPI 3 definition is still in beta status, not the routes themselves,
-but how the definition is written, which could create breaking changes in the generated client.**_
-
 See the [CHANGELOG](CHANGELOG.md) for an explanation of the versioning scheme and a list of changes.
 
 ## Installation & Usage
