@@ -46,10 +46,11 @@ components:
       description: The compatibility date for the request.
       in: header
       name: X-Compatibility-Date
+      required: true
       schema:
-        default: "2025-09-30"
         enum:
-          - "2025-09-30"
+          - "2025-11-06"
+        format: date
         type: string
     IfModifiedSince:
       description: The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
@@ -262,6 +263,7 @@ components:
               - CorpseBay
               - Deliveries
               - DroneBay
+              - ExpeditionHold
               - FighterBay
               - FighterTube0
               - FighterTube1
@@ -3044,6 +3046,7 @@ components:
     CompatibilityDate:
       examples:
         - "2025-08-26"
+      format: date
       type: string
       x-common-model: "true"
     ConstellationID:
@@ -3339,6 +3342,7 @@ components:
               - DroneBay
               - DustBattle
               - DustDatabank
+              - ExpeditionHold
               - FighterBay
               - FighterTube0
               - FighterTube1
@@ -3540,6 +3544,7 @@ components:
               - DroneBay
               - DustBattle
               - DustDatabank
+              - ExpeditionHold
               - FighterBay
               - FighterTube0
               - FighterTube1
@@ -3774,6 +3779,7 @@ components:
               - DroneBay
               - DustBattle
               - DustDatabank
+              - ExpeditionHold
               - FighterBay
               - FighterTube0
               - FighterTube1
@@ -9084,6 +9090,54 @@ components:
       required:
         - compatibility_dates
       type: object
+    MetaStatus:
+      properties:
+        routes:
+          description: List of all API routes and their health status
+          items:
+            $ref: "#/components/schemas/MetaStatusRoutestatus"
+          type: array
+      required:
+        - routes
+      type: object
+    MetaStatusRoutestatus:
+      properties:
+        method:
+          description: Route's HTTP method
+          enum:
+            - GET
+            - POST
+            - PUT
+            - DELETE
+          type: string
+          x-enum-descriptions:
+            - ""
+            - ""
+            - ""
+            - ""
+        path:
+          description: Route's HTTP path
+          type: string
+        status:
+          description: Route's health status
+          enum:
+            - Unknown
+            - OK
+            - Degraded
+            - Down
+            - Recovering
+          type: string
+          x-enum-descriptions:
+            - Unknown status
+            - Route is working as expected
+            - Route is working, but with degraded performance
+            - Route is not working
+            - Route is recovering
+      required:
+        - method
+        - path
+        - status
+      type: object
     RegionID:
       examples:
         - 10000001
@@ -10593,7 +10647,7 @@ info:
     url: https://developers.eveonline.com/license-agreement
   termsOfService: https://support.eveonline.com/hc/en-us/articles/8414770561948-EVE-Online-Terms-of-Service
   title: EVE Stable Infrastructure (ESI) - tranquility
-  version: "2025-09-30"
+  version: "2025-11-06"
 openapi: 3.1.0
 paths:
   /alliances:
@@ -10725,6 +10779,10 @@ paths:
         - Contacts
       x-cache-age: 300
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: alliance-social
+        max-tokens: 300
+        window-size: 15m
   /alliances/{alliance_id}/contacts/labels:
     get:
       description: Return custom labels for an alliance's contacts
@@ -10768,6 +10826,10 @@ paths:
         - Contacts
       x-cache-age: 300
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: alliance-social
+        max-tokens: 300
+        window-size: 15m
   /alliances/{alliance_id}/corporations:
     get:
       description: List all current member corporations of an alliance
@@ -10980,6 +11042,10 @@ paths:
         - Character
       x-cache-age: 3600
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: char-industry
+        max-tokens: 600
+        window-size: 15m
   /characters/{character_id}/assets:
     get:
       description: Return a list of the characters assets
@@ -11188,6 +11254,10 @@ paths:
         - Skills
       x-cache-age: 120
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: char-detail
+        max-tokens: 600
+        window-size: 15m
   /characters/{character_id}/blueprints:
     get:
       description: Return a list of blueprints the character owns
@@ -11243,6 +11313,10 @@ paths:
         - Character
       x-cache-age: 3600
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: char-industry
+        max-tokens: 600
+        window-size: 15m
   /characters/{character_id}/calendar:
     get:
       description: Get 50 event summaries from the calendar. If no from_event ID is given, the resource will return the next 50 chronological event summaries from now. If a from_event ID is specified, it will return the next 50 chronological event summaries from after that event
@@ -11292,6 +11366,10 @@ paths:
         - Calendar
       x-cache-age: 5
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: char-social
+        max-tokens: 600
+        window-size: 15m
   /characters/{character_id}/calendar/{event_id}:
     get:
       description: Get all the information for a specific event
@@ -11342,6 +11420,10 @@ paths:
         - Calendar
       x-cache-age: 5
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: char-social
+        max-tokens: 600
+        window-size: 15m
     put:
       description: Set your response status to an event
       operationId: PutCharactersCharacterIdCalendarEventId
@@ -11402,6 +11484,10 @@ paths:
         - Calendar
       x-cache-age: 5
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: char-social
+        max-tokens: 600
+        window-size: 15m
   /characters/{character_id}/calendar/{event_id}/attendees:
     get:
       description: Get all invited attendees for a given event
@@ -11452,6 +11538,10 @@ paths:
         - Calendar
       x-cache-age: 600
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: char-social
+        max-tokens: 600
+        window-size: 15m
   /characters/{character_id}/clones:
     get:
       description: A list of the character's clones
@@ -11495,6 +11585,10 @@ paths:
         - Clones
       x-cache-age: 120
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: char-location
+        max-tokens: 1200
+        window-size: 15m
   /characters/{character_id}/contacts:
     delete:
       description: Bulk delete contacts
@@ -11544,6 +11638,10 @@ paths:
       tags:
         - Contacts
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: char-social
+        max-tokens: 600
+        window-size: 15m
     get:
       description: Return contacts of a character
       operationId: GetCharactersCharacterIdContacts
@@ -11598,6 +11696,10 @@ paths:
         - Contacts
       x-cache-age: 300
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: char-social
+        max-tokens: 600
+        window-size: 15m
     post:
       description: Bulk add contacts with same settings
       operationId: PostCharactersCharacterIdContacts
@@ -11673,6 +11775,10 @@ paths:
       tags:
         - Contacts
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: char-social
+        max-tokens: 600
+        window-size: 15m
     put:
       description: Bulk edit contacts with same settings
       operationId: PutCharactersCharacterIdContacts
@@ -11744,6 +11850,10 @@ paths:
       tags:
         - Contacts
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: char-social
+        max-tokens: 600
+        window-size: 15m
   /characters/{character_id}/contacts/labels:
     get:
       description: Return custom labels for a character's contacts
@@ -11787,6 +11897,10 @@ paths:
         - Contacts
       x-cache-age: 300
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: char-social
+        max-tokens: 600
+        window-size: 15m
   /characters/{character_id}/contracts:
     get:
       description: Returns contracts available to a character, only if the character is issuer, acceptor or assignee. Only returns contracts no older than 30 days, or if the status is "in_progress".
@@ -11842,6 +11956,10 @@ paths:
         - Contracts
       x-cache-age: 300
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: char-contract
+        max-tokens: 600
+        window-size: 15m
   /characters/{character_id}/contracts/{contract_id}/bids:
     get:
       description: Lists bids on a particular auction contract
@@ -11892,6 +12010,10 @@ paths:
         - Contracts
       x-cache-age: 300
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: char-contract
+        max-tokens: 600
+        window-size: 15m
   /characters/{character_id}/contracts/{contract_id}/items:
     get:
       description: Lists items of a particular contract
@@ -11942,6 +12064,10 @@ paths:
         - Contracts
       x-cache-age: 3600
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: char-contract
+        max-tokens: 600
+        window-size: 15m
   /characters/{character_id}/corporationhistory:
     get:
       description: Get a list of all the corporations a character has been a member of
@@ -12037,6 +12163,10 @@ paths:
       tags:
         - Character
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: char-detail
+        max-tokens: 600
+        window-size: 15m
   /characters/{character_id}/fatigue:
     get:
       description: Return a character's jump activation and fatigue information
@@ -12080,6 +12210,10 @@ paths:
         - Character
       x-cache-age: 300
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: char-location
+        max-tokens: 1200
+        window-size: 15m
   /characters/{character_id}/fittings:
     get:
       description: Return fittings of a character
@@ -12447,6 +12581,10 @@ paths:
         - Clones
       x-cache-age: 120
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: char-detail
+        max-tokens: 600
+        window-size: 15m
   /characters/{character_id}/industry/jobs:
     get:
       description: List industry jobs placed by a character
@@ -12495,6 +12633,10 @@ paths:
         - Industry
       x-cache-age: 300
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: char-industry
+        max-tokens: 600
+        window-size: 15m
   /characters/{character_id}/killmails/recent:
     get:
       description: Return a list of a character's kills and losses going back 90 days
@@ -12550,6 +12692,10 @@ paths:
         - Killmails
       x-cache-age: 300
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: char-killmail
+        max-tokens: 30
+        window-size: 15m
   /characters/{character_id}/location:
     get:
       description: Information about the characters current location. Returns the current solar system id, and also the current station or structure ID if applicable
@@ -12593,6 +12739,10 @@ paths:
         - Location
       x-cache-age: 5
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: char-location
+        max-tokens: 1200
+        window-size: 15m
   /characters/{character_id}/loyalty/points:
     get:
       description: Return a list of loyalty points for all corporations the character has worked for
@@ -12636,6 +12786,10 @@ paths:
         - Loyalty
       x-cache-age: 3600
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: char-wallet
+        max-tokens: 150
+        window-size: 15m
   /characters/{character_id}/mail:
     get:
       description: Return the 50 most recent mail headers belonging to the character that match the query criteria. Queries can be filtered by label, and last_mail_id can be used to paginate backwards
@@ -12696,6 +12850,10 @@ paths:
         - Mail
       x-cache-age: 30
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: char-social
+        max-tokens: 600
+        window-size: 15m
     post:
       description: Create and send a new mail
       operationId: PostCharactersCharacterIdMail
@@ -12779,6 +12937,10 @@ paths:
       tags:
         - Mail
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: char-social
+        max-tokens: 600
+        window-size: 15m
   /characters/{character_id}/mail/labels:
     get:
       description: Return a list of the users mail labels, unread counts for each label and a total unread count.
@@ -12822,6 +12984,10 @@ paths:
         - Mail
       x-cache-age: 30
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: char-social
+        max-tokens: 600
+        window-size: 15m
     post:
       description: Create a mail label
       operationId: PostCharactersCharacterIdMailLabels
@@ -12899,6 +13065,10 @@ paths:
       tags:
         - Mail
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: char-social
+        max-tokens: 600
+        window-size: 15m
   /characters/{character_id}/mail/labels/{label_id}:
     delete:
       description: Delete a mail label
@@ -12944,6 +13114,10 @@ paths:
       tags:
         - Mail
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: char-social
+        max-tokens: 600
+        window-size: 15m
   /characters/{character_id}/mail/lists:
     get:
       description: Return all mailing lists that the character is subscribed to
@@ -12987,6 +13161,10 @@ paths:
         - Mail
       x-cache-age: 120
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: char-social
+        max-tokens: 600
+        window-size: 15m
   /characters/{character_id}/mail/{mail_id}:
     delete:
       description: Delete a mail
@@ -13032,6 +13210,10 @@ paths:
       tags:
         - Mail
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: char-social
+        max-tokens: 600
+        window-size: 15m
     get:
       description: Return the contents of an EVE mail
       operationId: GetCharactersCharacterIdMailMailId
@@ -13081,6 +13263,10 @@ paths:
         - Mail
       x-cache-age: 30
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: char-social
+        max-tokens: 600
+        window-size: 15m
     put:
       description: Update metadata about a mail
       operationId: PutCharactersCharacterIdMailMailId
@@ -13144,6 +13330,10 @@ paths:
       tags:
         - Mail
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: char-social
+        max-tokens: 600
+        window-size: 15m
   /characters/{character_id}/medals:
     get:
       description: Return a list of medals the character has
@@ -13187,6 +13377,10 @@ paths:
         - Character
       x-cache-age: 3600
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: char-detail
+        max-tokens: 600
+        window-size: 15m
   /characters/{character_id}/mining:
     get:
       description: Paginated record of all mining done by a character for the past 30 days
@@ -13242,6 +13436,10 @@ paths:
         - Industry
       x-cache-age: 600
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: char-industry
+        max-tokens: 600
+        window-size: 15m
   /characters/{character_id}/notifications:
     get:
       description: Return character notifications
@@ -13332,6 +13530,10 @@ paths:
         - Character
       x-cache-age: 600
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: char-social
+        max-tokens: 600
+        window-size: 15m
   /characters/{character_id}/online:
     get:
       description: Checks if the character is currently online
@@ -13375,6 +13577,10 @@ paths:
         - Location
       x-cache-age: 60
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: char-location
+        max-tokens: 1200
+        window-size: 15m
   /characters/{character_id}/orders:
     get:
       description: List open market orders placed by a character
@@ -13516,6 +13722,10 @@ paths:
         - Planetary Interaction
       x-cache-age: 600
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: char-industry
+        max-tokens: 600
+        window-size: 15m
   /characters/{character_id}/planets/{planet_id}:
     get:
       description: "Returns full details on the layout of a single planetary colony, including links, pins and routes. Note: Planetary information is only recalculated when the colony is viewed through the client. Information will not update until this criteria is met."
@@ -13566,6 +13776,10 @@ paths:
         - Planetary Interaction
       x-cache-age: 600
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: char-industry
+        max-tokens: 600
+        window-size: 15m
   /characters/{character_id}/portrait:
     get:
       description: |-
@@ -13608,6 +13822,10 @@ paths:
       tags:
         - Character
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: char-detail
+        max-tokens: 600
+        window-size: 15m
   /characters/{character_id}/roles:
     get:
       description: Returns a character's corporation roles
@@ -13651,6 +13869,10 @@ paths:
         - Character
       x-cache-age: 3600
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: char-detail
+        max-tokens: 600
+        window-size: 15m
   /characters/{character_id}/search:
     get:
       description: Search for entities that match a given sub-string.
@@ -13775,6 +13997,10 @@ paths:
         - Location
       x-cache-age: 5
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: char-location
+        max-tokens: 1200
+        window-size: 15m
   /characters/{character_id}/skillqueue:
     get:
       description: List the configured skill queue for the given character
@@ -13818,6 +14044,10 @@ paths:
         - Skills
       x-cache-age: 120
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: char-detail
+        max-tokens: 600
+        window-size: 15m
   /characters/{character_id}/skills:
     get:
       description: List all trained skills for the given character
@@ -13861,6 +14091,10 @@ paths:
         - Skills
       x-cache-age: 120
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: char-detail
+        max-tokens: 600
+        window-size: 15m
   /characters/{character_id}/standings:
     get:
       description: Return character standings from agents, NPC corporations, and factions
@@ -13904,6 +14138,10 @@ paths:
         - Character
       x-cache-age: 3600
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: char-social
+        max-tokens: 600
+        window-size: 15m
   /characters/{character_id}/titles:
     get:
       description: Returns a character's titles
@@ -13947,6 +14185,10 @@ paths:
         - Character
       x-cache-age: 3600
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: char-detail
+        max-tokens: 600
+        window-size: 15m
   /characters/{character_id}/wallet:
     get:
       description: Returns a character's wallet balance
@@ -13990,6 +14232,10 @@ paths:
         - Wallet
       x-cache-age: 120
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: char-wallet
+        max-tokens: 150
+        window-size: 15m
   /characters/{character_id}/wallet/journal:
     get:
       description: Retrieve the given character's wallet journal going 30 days back
@@ -14045,6 +14291,10 @@ paths:
         - Wallet
       x-cache-age: 3600
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: char-wallet
+        max-tokens: 150
+        window-size: 15m
   /characters/{character_id}/wallet/transactions:
     get:
       description: Get wallet transactions of a character
@@ -14094,6 +14344,10 @@ paths:
         - Wallet
       x-cache-age: 3600
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: char-wallet
+        max-tokens: 150
+        window-size: 15m
   /contracts/public/bids/{contract_id}:
     get:
       description: Lists bids on a public auction contract
@@ -14320,6 +14574,10 @@ paths:
         - Industry
       x-cache-age: 1800
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: corp-industry
+        max-tokens: 600
+        window-size: 15m
       x-required-roles:
         - Station_Manager
   /corporation/{corporation_id}/mining/observers:
@@ -14377,6 +14635,10 @@ paths:
         - Industry
       x-cache-age: 3600
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: corp-industry
+        max-tokens: 600
+        window-size: 15m
       x-required-roles:
         - Accountant
   /corporation/{corporation_id}/mining/observers/{observer_id}:
@@ -14441,6 +14703,10 @@ paths:
         - Industry
       x-cache-age: 3600
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: corp-industry
+        max-tokens: 600
+        window-size: 15m
       x-required-roles:
         - Accountant
   /corporations/npccorps:
@@ -14785,6 +15051,10 @@ paths:
         - Corporation
       x-cache-age: 3600
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: corp-industry
+        max-tokens: 600
+        window-size: 15m
       x-required-roles:
         - Director
   /corporations/{corporation_id}/contacts:
@@ -14842,6 +15112,10 @@ paths:
         - Contacts
       x-cache-age: 300
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: corp-social
+        max-tokens: 300
+        window-size: 15m
   /corporations/{corporation_id}/contacts/labels:
     get:
       description: Return custom labels for a corporation's contacts
@@ -14885,6 +15159,10 @@ paths:
         - Contacts
       x-cache-age: 300
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: corp-social
+        max-tokens: 300
+        window-size: 15m
   /corporations/{corporation_id}/containers/logs:
     get:
       description: Returns logs recorded in the past seven days from all audit log secure containers (ALSC) owned by a given corporation
@@ -14997,6 +15275,10 @@ paths:
         - Contracts
       x-cache-age: 300
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: corp-contract
+        max-tokens: 600
+        window-size: 15m
   /corporations/{corporation_id}/contracts/{contract_id}/bids:
     get:
       description: Lists bids on a particular auction contract
@@ -15059,6 +15341,10 @@ paths:
         - Contracts
       x-cache-age: 3600
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: corp-contract
+        max-tokens: 600
+        window-size: 15m
   /corporations/{corporation_id}/contracts/{contract_id}/items:
     get:
       description: Lists items of a particular contract
@@ -15109,6 +15395,10 @@ paths:
         - Contracts
       x-cache-age: 3600
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: corp-contract
+        max-tokens: 600
+        window-size: 15m
   /corporations/{corporation_id}/customs_offices:
     get:
       description: List customs offices owned by a corporation
@@ -15164,6 +15454,10 @@ paths:
         - Planetary Interaction
       x-cache-age: 3600
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: corp-industry
+        max-tokens: 600
+        window-size: 15m
       x-required-roles:
         - Director
   /corporations/{corporation_id}/divisions:
@@ -15209,6 +15503,10 @@ paths:
         - Corporation
       x-cache-age: 3600
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: corp-wallet
+        max-tokens: 300
+        window-size: 15m
       x-required-roles:
         - Director
   /corporations/{corporation_id}/facilities:
@@ -15406,6 +15704,10 @@ paths:
         - Industry
       x-cache-age: 300
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: corp-industry
+        max-tokens: 600
+        window-size: 15m
       x-required-roles:
         - Factory_Manager
   /corporations/{corporation_id}/killmails/recent:
@@ -15463,6 +15765,10 @@ paths:
         - Killmails
       x-cache-age: 300
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: corp-killmail
+        max-tokens: 30
+        window-size: 15m
       x-required-roles:
         - Director
   /corporations/{corporation_id}/medals:
@@ -15520,6 +15826,10 @@ paths:
         - Corporation
       x-cache-age: 3600
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: corp-detail
+        max-tokens: 300
+        window-size: 15m
   /corporations/{corporation_id}/medals/issued:
     get:
       description: Returns medals issued by a corporation
@@ -15575,6 +15885,10 @@ paths:
         - Corporation
       x-cache-age: 3600
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: corp-detail
+        max-tokens: 300
+        window-size: 15m
       x-required-roles:
         - Director
   /corporations/{corporation_id}/members:
@@ -15620,6 +15934,10 @@ paths:
         - Corporation
       x-cache-age: 3600
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: corp-member
+        max-tokens: 300
+        window-size: 15m
   /corporations/{corporation_id}/members/limit:
     get:
       description: Return a corporation's member limit, not including CEO himself
@@ -15663,6 +15981,10 @@ paths:
         - Corporation
       x-cache-age: 3600
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: corp-member
+        max-tokens: 300
+        window-size: 15m
       x-required-roles:
         - Director
   /corporations/{corporation_id}/members/titles:
@@ -15708,6 +16030,10 @@ paths:
         - Corporation
       x-cache-age: 3600
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: corp-member
+        max-tokens: 300
+        window-size: 15m
       x-required-roles:
         - Director
   /corporations/{corporation_id}/membertracking:
@@ -15753,6 +16079,10 @@ paths:
         - Corporation
       x-cache-age: 3600
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: corp-member
+        max-tokens: 300
+        window-size: 15m
       x-required-roles:
         - Director
   /corporations/{corporation_id}/orders:
@@ -16216,6 +16546,10 @@ paths:
         - Corporation
       x-cache-age: 3600
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: corp-member
+        max-tokens: 300
+        window-size: 15m
   /corporations/{corporation_id}/roles/history:
     get:
       description: Return how roles have changed for a coporation's members, up to a month
@@ -16271,6 +16605,10 @@ paths:
         - Corporation
       x-cache-age: 3600
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: corp-member
+        max-tokens: 300
+        window-size: 15m
       x-required-roles:
         - Director
   /corporations/{corporation_id}/shareholders:
@@ -16328,6 +16666,10 @@ paths:
         - Corporation
       x-cache-age: 3600
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: corp-detail
+        max-tokens: 300
+        window-size: 15m
       x-required-roles:
         - Director
   /corporations/{corporation_id}/standings:
@@ -16385,6 +16727,10 @@ paths:
         - Corporation
       x-cache-age: 3600
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: corp-member
+        max-tokens: 300
+        window-size: 15m
   /corporations/{corporation_id}/starbases:
     get:
       description: Returns list of corporation starbases (POSes)
@@ -16603,6 +16949,10 @@ paths:
         - Corporation
       x-cache-age: 3600
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: corp-detail
+        max-tokens: 300
+        window-size: 15m
       x-required-roles:
         - Director
   /corporations/{corporation_id}/wallets:
@@ -16648,6 +16998,10 @@ paths:
         - Wallet
       x-cache-age: 300
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: corp-wallet
+        max-tokens: 300
+        window-size: 15m
       x-required-roles:
         - Accountant
         - Junior_Accountant
@@ -16713,6 +17067,10 @@ paths:
         - Wallet
       x-cache-age: 3600
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: corp-wallet
+        max-tokens: 300
+        window-size: 15m
       x-required-roles:
         - Accountant
         - Junior_Accountant
@@ -16772,6 +17130,10 @@ paths:
         - Wallet
       x-cache-age: 3600
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: corp-wallet
+        max-tokens: 300
+        window-size: 15m
       x-required-roles:
         - Accountant
         - Junior_Accountant
@@ -18137,6 +18499,10 @@ paths:
         - Killmails
       x-cache-age: 2592000
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: killmail
+        max-tokens: 3600
+        window-size: 15m
   /loyalty/stores/{corporation_id}/offers:
     get:
       description: |-
@@ -18603,6 +18969,46 @@ paths:
       tags:
         - Meta
       x-compatibility-date: "2020-01-01"
+  /meta/status:
+    get:
+      description: Get the health status of each API route.
+      operationId: GetMetaStatus
+      parameters:
+        - $ref: "#/components/parameters/AcceptLanguage"
+        - $ref: "#/components/parameters/IfNoneMatch"
+        - $ref: "#/components/parameters/CompatibilityDate"
+        - $ref: "#/components/parameters/Tenant"
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MetaStatus"
+          description: OK
+          headers:
+            Cache-Control:
+              $ref: "#/components/headers/CacheControl"
+            ETag:
+              $ref: "#/components/headers/ETag"
+            Last-Modified:
+              $ref: "#/components/headers/LastModified"
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+          description: Error
+          headers:
+            Cache-Control:
+              $ref: "#/components/headers/CacheControl"
+            ETag:
+              $ref: "#/components/headers/ETag"
+            Last-Modified:
+              $ref: "#/components/headers/LastModified"
+      summary: Get health status
+      tags:
+        - Meta
+      x-compatibility-date: "2025-11-06"
   /route/{origin_system_id}/{destination_system_id}:
     post:
       description: Calculate the systems between the given origin and destination.
@@ -18663,6 +19069,10 @@ paths:
       tags:
         - Routes
       x-compatibility-date: "2025-09-30"
+      x-rate-limit:
+        group: routes
+        max-tokens: 3600
+        window-size: 15m
   /sovereignty/campaigns:
     get:
       description: Shows sovereignty data for campaigns.
@@ -20388,6 +20798,10 @@ paths:
         - Wars
       x-cache-age: 3600
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: killmail
+        max-tokens: 3600
+        window-size: 15m
   /wars/{war_id}:
     get:
       description: Return details about a war
@@ -20429,6 +20843,10 @@ paths:
         - Wars
       x-cache-age: 3600
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: killmail
+        max-tokens: 3600
+        window-size: 15m
   /wars/{war_id}/killmails:
     get:
       description: Return a list of kills related to a war
@@ -20482,6 +20900,10 @@ paths:
         - Wars
       x-cache-age: 3600
       x-compatibility-date: "2020-01-01"
+      x-rate-limit:
+        group: killmail
+        max-tokens: 3600
+        window-size: 15m
 servers:
   - url: "https://esi.evetech.net"
 tags:

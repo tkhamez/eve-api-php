@@ -14,7 +14,7 @@
 - Get the OpenAPI definition file from https://developers.eveonline.com/api-explorer, adjust the 
   compatibility date if necessary:
   ```shell
-  export COMPATIBILITY_DATE=2025-09-30
+  export COMPATIBILITY_DATE=2025-11-06
   wget https://esi.evetech.net/meta/openapi.yaml?compatibility_date=$COMPATIBILITY_DATE -O openapi.yaml
   ```
 
@@ -25,7 +25,7 @@
 
 - Commit `openapi.yaml`:
   ```shell
-  git commit openapi.yaml -m "Update openapi.yaml on $GENERATED_DATE with compatibility date $COMPATIBILITY_DATE"
+  git commit openapi.yaml -m "Update openapi.yaml on $GENERATED_DATE with the compatibility date $COMPATIBILITY_DATE."
   ```
 
 - Delete the directories `lib` and `docs`:
