@@ -268,6 +268,8 @@ docs/Model/MarketsStructuresStructureIdGetInner.md
 docs/Model/MetaChangelog.md
 docs/Model/MetaChangelogEntry.md
 docs/Model/MetaCompatibilityDates.md
+docs/Model/MetaStatus.md
+docs/Model/MetaStatusRoutestatus.md
 docs/Model/MineMaterial.md
 docs/Model/PostCharactersCharacterIdFittingsRequest.md
 docs/Model/PostCharactersCharacterIdFittingsRequestItemsInner.md
@@ -610,6 +612,8 @@ lib/Model/MarketsStructuresStructureIdGetInner.php
 lib/Model/MetaChangelog.php
 lib/Model/MetaChangelogEntry.php
 lib/Model/MetaCompatibilityDates.php
+lib/Model/MetaStatus.php
+lib/Model/MetaStatusRoutestatus.php
 lib/Model/MineMaterial.php
 lib/Model/ModelInterface.php
 lib/Model/PostCharactersCharacterIdFittingsRequest.php

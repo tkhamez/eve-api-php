@@ -48,7 +48,7 @@ $character_id = 56; // int | The ID of the character
 $contact_ids = array(56); // int[]
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2025-09-30'; // string | The compatibility date for the request.
+$x_compatibility_date = '2025-11-06'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
@@ -66,7 +66,7 @@ try {
 | **contact_ids** | [**int[]**](../Model/int.md)|  | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-09-30&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-11-06&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -117,7 +117,7 @@ $alliance_id = 56; // int | The ID of the alliance
 $page = 56; // int
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2025-09-30'; // string | The compatibility date for the request.
+$x_compatibility_date = '2025-11-06'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
@@ -136,7 +136,7 @@ try {
 | **page** | **int**|  | [optional] |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-09-30&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-11-06&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -186,7 +186,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\ContactsApi(
 $alliance_id = 56; // int | The ID of the alliance
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2025-09-30'; // string | The compatibility date for the request.
+$x_compatibility_date = '2025-11-06'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
@@ -204,7 +204,7 @@ try {
 | **alliance_id** | **int**| The ID of the alliance | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-09-30&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-11-06&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -255,7 +255,7 @@ $character_id = 56; // int | The ID of the character
 $page = 56; // int
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2025-09-30'; // string | The compatibility date for the request.
+$x_compatibility_date = '2025-11-06'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
@@ -274,7 +274,7 @@ try {
 | **page** | **int**|  | [optional] |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-09-30&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-11-06&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -324,7 +324,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\ContactsApi(
 $character_id = 56; // int | The ID of the character
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2025-09-30'; // string | The compatibility date for the request.
+$x_compatibility_date = '2025-11-06'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
@@ -342,7 +342,7 @@ try {
 | **character_id** | **int**| The ID of the character | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-09-30&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-11-06&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -393,7 +393,7 @@ $corporation_id = 56; // int | The ID of the corporation
 $page = 56; // int
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2025-09-30'; // string | The compatibility date for the request.
+$x_compatibility_date = '2025-11-06'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
@@ -412,7 +412,7 @@ try {
 | **page** | **int**|  | [optional] |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-09-30&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-11-06&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -462,7 +462,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\ContactsApi(
 $corporation_id = 56; // int | The ID of the corporation
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2025-09-30'; // string | The compatibility date for the request.
+$x_compatibility_date = '2025-11-06'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
@@ -480,7 +480,7 @@ try {
 | **corporation_id** | **int**| The ID of the corporation | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-09-30&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-11-06&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -534,7 +534,7 @@ $label_ids = array(56); // int[]
 $watched = false; // bool
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2025-09-30'; // string | The compatibility date for the request.
+$x_compatibility_date = '2025-11-06'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
@@ -556,7 +556,7 @@ try {
 | **watched** | **bool**|  | [optional] [default to false] |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-09-30&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-11-06&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
@@ -610,7 +610,7 @@ $label_ids = array(56); // int[]
 $watched = false; // bool
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2025-09-30'; // string | The compatibility date for the request.
+$x_compatibility_date = '2025-11-06'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
@@ -631,7 +631,7 @@ try {
 | **watched** | **bool**|  | [optional] [default to false] |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-09-30&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-11-06&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 
 ### Return type
