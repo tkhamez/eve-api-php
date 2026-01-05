@@ -32,7 +32,7 @@ To install the bindings via [Composer](https://getcomposer.org/), add the follow
 ```json
 {
   "require": {
-    "tkhamez/eve-api": "^11"
+    "tkhamez/eve-api": "^12"
   }
 }
 ```
@@ -66,7 +66,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\AllianceApi(
 );
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2025-11-06'; // string | The compatibility date for the request.
+$x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 
 try {
@@ -188,6 +188,12 @@ Class | Method | HTTP request | Description
 *FleetsApi* | [**putFleetsFleetIdMembersMemberId**](docs/Api/FleetsApi.md#putfleetsfleetidmembersmemberid) | **PUT** /fleets/{fleet_id}/members/{member_id} | Move fleet member
 *FleetsApi* | [**putFleetsFleetIdSquadsSquadId**](docs/Api/FleetsApi.md#putfleetsfleetidsquadssquadid) | **PUT** /fleets/{fleet_id}/squads/{squad_id} | Rename fleet squad
 *FleetsApi* | [**putFleetsFleetIdWingsWingId**](docs/Api/FleetsApi.md#putfleetsfleetidwingswingid) | **PUT** /fleets/{fleet_id}/wings/{wing_id} | Rename fleet wing
+*FreelanceJobsApi* | [**getCharactersFreelanceJobsListing**](docs/Api/FreelanceJobsApi.md#getcharactersfreelancejobslisting) | **GET** /characters/{character_id}/freelance-jobs | List character freelance jobs
+*FreelanceJobsApi* | [**getCharactersFreelanceJobsParticipation**](docs/Api/FreelanceJobsApi.md#getcharactersfreelancejobsparticipation) | **GET** /characters/{character_id}/freelance-jobs/{job_id}/participation | Get character freelance job participation
+*FreelanceJobsApi* | [**getCorporationsFreelanceJobsListing**](docs/Api/FreelanceJobsApi.md#getcorporationsfreelancejobslisting) | **GET** /corporations/{corporation_id}/freelance-jobs | List corporation freelance jobs
+*FreelanceJobsApi* | [**getCorporationsFreelanceJobsParticipants**](docs/Api/FreelanceJobsApi.md#getcorporationsfreelancejobsparticipants) | **GET** /corporations/{corporation_id}/freelance-jobs/{job_id}/participants | List participants of a freelance job
+*FreelanceJobsApi* | [**getFreelanceJobsDetail**](docs/Api/FreelanceJobsApi.md#getfreelancejobsdetail) | **GET** /freelance-jobs/{job_id} | Get freelance job details
+*FreelanceJobsApi* | [**getFreelanceJobsListing**](docs/Api/FreelanceJobsApi.md#getfreelancejobslisting) | **GET** /freelance-jobs | List freelance jobs
 *IncursionsApi* | [**getIncursions**](docs/Api/IncursionsApi.md#getincursions) | **GET** /incursions | List incursions
 *IndustryApi* | [**getCharactersCharacterIdIndustryJobs**](docs/Api/IndustryApi.md#getcharacterscharacteridindustryjobs) | **GET** /characters/{character_id}/industry/jobs | List character industry jobs
 *IndustryApi* | [**getCharactersCharacterIdMining**](docs/Api/IndustryApi.md#getcharacterscharacteridmining) | **GET** /characters/{character_id}/mining | Character mining ledger
@@ -294,6 +300,7 @@ Class | Method | HTTP request | Description
 - [AlliancesAllianceIdContactsLabelsGetInner](docs/Model/AlliancesAllianceIdContactsLabelsGetInner.md)
 - [AlliancesAllianceIdGet](docs/Model/AlliancesAllianceIdGet.md)
 - [AlliancesAllianceIdIconsGet](docs/Model/AlliancesAllianceIdIconsGet.md)
+- [Boolean](docs/Model/Boolean.md)
 - [CaptureFwComplex](docs/Model/CaptureFwComplex.md)
 - [CharacterId](docs/Model/CharacterId.md)
 - [CharactersAffiliationPostInner](docs/Model/CharactersAffiliationPostInner.md)
@@ -361,6 +368,8 @@ Class | Method | HTTP request | Description
 - [CharactersCharacterIdTitlesGetInner](docs/Model/CharactersCharacterIdTitlesGetInner.md)
 - [CharactersCharacterIdWalletJournalGetInner](docs/Model/CharactersCharacterIdWalletJournalGetInner.md)
 - [CharactersCharacterIdWalletTransactionsGetInner](docs/Model/CharactersCharacterIdWalletTransactionsGetInner.md)
+- [CharactersFreelanceJobsListing](docs/Model/CharactersFreelanceJobsListing.md)
+- [CharactersFreelanceJobsParticipation](docs/Model/CharactersFreelanceJobsParticipation.md)
 - [ConstellationId](docs/Model/ConstellationId.md)
 - [ContractsPublicBidsContractIdGetInner](docs/Model/ContractsPublicBidsContractIdGetInner.md)
 - [ContractsPublicItemsContractIdGetInner](docs/Model/ContractsPublicItemsContractIdGetInner.md)
@@ -369,6 +378,7 @@ Class | Method | HTTP request | Description
 - [CorporationCorporationIdMiningObserversGetInner](docs/Model/CorporationCorporationIdMiningObserversGetInner.md)
 - [CorporationCorporationIdMiningObserversObserverIdGetInner](docs/Model/CorporationCorporationIdMiningObserversObserverIdGetInner.md)
 - [CorporationId](docs/Model/CorporationId.md)
+- [CorporationItemDelivery](docs/Model/CorporationItemDelivery.md)
 - [CorporationsCorporationIdAlliancehistoryGetInner](docs/Model/CorporationsCorporationIdAlliancehistoryGetInner.md)
 - [CorporationsCorporationIdAssetsGetInner](docs/Model/CorporationsCorporationIdAssetsGetInner.md)
 - [CorporationsCorporationIdBlueprintsGetInner](docs/Model/CorporationsCorporationIdBlueprintsGetInner.md)
@@ -404,6 +414,9 @@ Class | Method | HTTP request | Description
 - [CorporationsCorporationIdWalletsDivisionJournalGetInner](docs/Model/CorporationsCorporationIdWalletsDivisionJournalGetInner.md)
 - [CorporationsCorporationIdWalletsDivisionTransactionsGetInner](docs/Model/CorporationsCorporationIdWalletsDivisionTransactionsGetInner.md)
 - [CorporationsCorporationIdWalletsGetInner](docs/Model/CorporationsCorporationIdWalletsGetInner.md)
+- [CorporationsFreelanceJobsListing](docs/Model/CorporationsFreelanceJobsListing.md)
+- [CorporationsFreelanceJobsParticipants](docs/Model/CorporationsFreelanceJobsParticipants.md)
+- [CorporationsFreelanceJobsParticipantsParticipant](docs/Model/CorporationsFreelanceJobsParticipantsParticipant.md)
 - [CorporationsProjectsContribution](docs/Model/CorporationsProjectsContribution.md)
 - [CorporationsProjectsContributors](docs/Model/CorporationsProjectsContributors.md)
 - [CorporationsProjectsContributorsContributor](docs/Model/CorporationsProjectsContributorsContributor.md)
@@ -463,6 +476,26 @@ Class | Method | HTTP request | Description
 - [FleetsFleetIdWingsGetInnerSquadsInner](docs/Model/FleetsFleetIdWingsGetInnerSquadsInner.md)
 - [FleetsFleetIdWingsPost](docs/Model/FleetsFleetIdWingsPost.md)
 - [FleetsFleetIdWingsWingIdSquadsPost](docs/Model/FleetsFleetIdWingsWingIdSquadsPost.md)
+- [FreelanceJobsDetail](docs/Model/FreelanceJobsDetail.md)
+- [FreelanceJobsDetailAccessandvisibility](docs/Model/FreelanceJobsDetailAccessandvisibility.md)
+- [FreelanceJobsDetailBroadcastlocations](docs/Model/FreelanceJobsDetailBroadcastlocations.md)
+- [FreelanceJobsDetailConfiguration](docs/Model/FreelanceJobsDetailConfiguration.md)
+- [FreelanceJobsDetailConfigurationParametersValue](docs/Model/FreelanceJobsDetailConfigurationParametersValue.md)
+- [FreelanceJobsDetailContribution](docs/Model/FreelanceJobsDetailContribution.md)
+- [FreelanceJobsDetailCreator](docs/Model/FreelanceJobsDetailCreator.md)
+- [FreelanceJobsDetailCreatorcharacter](docs/Model/FreelanceJobsDetailCreatorcharacter.md)
+- [FreelanceJobsDetailCreatorcorporation](docs/Model/FreelanceJobsDetailCreatorcorporation.md)
+- [FreelanceJobsDetailDetails](docs/Model/FreelanceJobsDetailDetails.md)
+- [FreelanceJobsDetailFreelancejob](docs/Model/FreelanceJobsDetailFreelancejob.md)
+- [FreelanceJobsDetailParameterboolean](docs/Model/FreelanceJobsDetailParameterboolean.md)
+- [FreelanceJobsDetailParametercorporationitemdelivery](docs/Model/FreelanceJobsDetailParametercorporationitemdelivery.md)
+- [FreelanceJobsDetailParametermatcher](docs/Model/FreelanceJobsDetailParametermatcher.md)
+- [FreelanceJobsDetailParametermatchervalue](docs/Model/FreelanceJobsDetailParametermatchervalue.md)
+- [FreelanceJobsDetailParameteroptions](docs/Model/FreelanceJobsDetailParameteroptions.md)
+- [FreelanceJobsDetailProgress](docs/Model/FreelanceJobsDetailProgress.md)
+- [FreelanceJobsDetailRestrictions](docs/Model/FreelanceJobsDetailRestrictions.md)
+- [FreelanceJobsDetailReward](docs/Model/FreelanceJobsDetailReward.md)
+- [FreelanceJobsListing](docs/Model/FreelanceJobsListing.md)
 - [FwLeaderboardsCharactersGet](docs/Model/FwLeaderboardsCharactersGet.md)
 - [FwLeaderboardsCharactersGetKills](docs/Model/FwLeaderboardsCharactersGetKills.md)
 - [FwLeaderboardsCharactersGetKillsActiveTotalInner](docs/Model/FwLeaderboardsCharactersGetKillsActiveTotalInner.md)
@@ -519,12 +552,14 @@ Class | Method | HTTP request | Description
 - [MarketsRegionIdHistoryGetInner](docs/Model/MarketsRegionIdHistoryGetInner.md)
 - [MarketsRegionIdOrdersGetInner](docs/Model/MarketsRegionIdOrdersGetInner.md)
 - [MarketsStructuresStructureIdGetInner](docs/Model/MarketsStructuresStructureIdGetInner.md)
+- [Matcher](docs/Model/Matcher.md)
 - [MetaChangelog](docs/Model/MetaChangelog.md)
 - [MetaChangelogEntry](docs/Model/MetaChangelogEntry.md)
 - [MetaCompatibilityDates](docs/Model/MetaCompatibilityDates.md)
 - [MetaStatus](docs/Model/MetaStatus.md)
 - [MetaStatusRoutestatus](docs/Model/MetaStatusRoutestatus.md)
 - [MineMaterial](docs/Model/MineMaterial.md)
+- [Options](docs/Model/Options.md)
 - [PostCharactersCharacterIdFittingsRequest](docs/Model/PostCharactersCharacterIdFittingsRequest.md)
 - [PostCharactersCharacterIdFittingsRequestItemsInner](docs/Model/PostCharactersCharacterIdFittingsRequestItemsInner.md)
 - [PostCharactersCharacterIdMailLabelsRequest](docs/Model/PostCharactersCharacterIdMailLabelsRequest.md)
@@ -690,6 +725,6 @@ vendor/bin/phpunit
 
 This PHP package is automatically generated by the [OpenAPI Generator](https://openapi-generator.tech) project:
 
-- API version: `2025-11-06`
+- API version: `2025-12-16`
     - Generator version: `7.18.0`
 - Build package: `org.openapitools.codegen.languages.PhpClientCodegen`
