@@ -46,10 +46,11 @@ components:
       description: The compatibility date for the request.
       in: header
       name: X-Compatibility-Date
+      required: true
       schema:
-        default: "2025-11-06"
         enum:
-          - "2025-11-06"
+          - "2025-12-16"
+        format: date
         type: string
     IfModifiedSince:
       description: The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
@@ -3042,9 +3043,54 @@ components:
           - journal_ref_id
         type: object
       type: array
+    CharactersFreelanceJobsListing:
+      properties:
+        freelance_jobs:
+          description: List of freelance jobs
+          items:
+            $ref: "#/components/schemas/FreelanceJobsDetailFreelancejob"
+          type: array
+      required:
+        - freelance_jobs
+      type: object
+    CharactersFreelanceJobsParticipation:
+      properties:
+        contributed:
+          description: Your contribution
+          examples:
+            - 100
+          format: int64
+          type: integer
+        last_modified:
+          description: Moment this information was last modified
+          examples:
+            - "2025-11-01T00:00:00Z"
+          format: date-time
+          type: string
+        state:
+          description: Your participation status
+          enum:
+            - Unspecified
+            - Committed
+            - Kicked
+            - Resigned
+          examples:
+            - Committed
+          type: string
+          x-enum-descriptions:
+            - An unspecified state
+            - Active and accepting contributions
+            - Kicked from the project
+            - Resigned from the project
+      required:
+        - state
+        - contributed
+        - last_modified
+      type: object
     CompatibilityDate:
       examples:
         - "2025-08-26"
+      format: date
       type: string
       x-common-model: "true"
     ConstellationID:
@@ -6467,6 +6513,67 @@ components:
           - balance
         type: object
       type: array
+    CorporationsFreelanceJobsListing:
+      properties:
+        cursor:
+          $ref: "#/components/schemas/Cursor"
+        freelance_jobs:
+          description: List of freelance jobs
+          items:
+            $ref: "#/components/schemas/FreelanceJobsDetailFreelancejob"
+          type: array
+      required:
+        - freelance_jobs
+      type: object
+    CorporationsFreelanceJobsParticipants:
+      properties:
+        cursor:
+          $ref: "#/components/schemas/Cursor"
+        participants:
+          description: List of participants
+          items:
+            $ref: "#/components/schemas/CorporationsFreelanceJobsParticipantsParticipant"
+          type: array
+      required:
+        - participants
+      type: object
+    CorporationsFreelanceJobsParticipantsParticipant:
+      properties:
+        contributed:
+          description: Participant's contributed progress
+          examples:
+            - 100
+          format: int64
+          type: integer
+        id:
+          $ref: "#/components/schemas/CharacterID"
+          description: Participant's character ID
+        name:
+          description: Participant's name
+          examples:
+            - Participant Name
+          type: string
+        state:
+          description: Participant's state
+          enum:
+            - Unspecified
+            - Committed
+            - Kicked
+            - Resigned
+          examples:
+            - Committed
+          type: string
+          x-enum-descriptions:
+            - An unspecified state
+            - Active and accepting contributions
+            - Kicked from the project
+            - Resigned from the project
+      required:
+        - id
+        - name
+        - state
+        - contributed
+      type: object
     CorporationsNpccorpsGet:
       items:
         format: int64
@@ -7985,6 +8092,448 @@ components:
           type: integer
       required:
         - squad_id
+      type: object
+    FreelanceJobsDetail:
+      properties:
+        access_and_visibility:
+          $ref: "#/components/schemas/FreelanceJobsDetailAccessandvisibility"
+          description: Job's access and visibility
+        configuration:
+          $ref: "#/components/schemas/FreelanceJobsDetailConfiguration"
+          description: Job's configuration
+        contribution:
+          $ref: "#/components/schemas/FreelanceJobsDetailContribution"
+          description: Job's contribution settings
+        details:
+          $ref: "#/components/schemas/FreelanceJobsDetailDetails"
+          description: Job's details
+        id:
+          $ref: "#/components/schemas/UUID"
+          description: Job's ID
+        last_modified:
+          description: Job's last modified
+          examples:
+            - "2025-11-01T00:00:00Z"
+          format: date-time
+          type: string
+        name:
+          description: Job's name
+          examples:
+            - Freelance Job Name
+          type: string
+        progress:
+          $ref: "#/components/schemas/FreelanceJobsDetailProgress"
+          description: Job's progress
+        reward:
+          $ref: "#/components/schemas/FreelanceJobsDetailReward"
+          description: Job's reward
+        state:
+          description: Job's state
+          enum:
+            - Unspecified
+            - Active
+            - Closed
+            - Completed
+            - Expired
+            - Deleted
+          examples:
+            - Active
+          type: string
+          x-enum-descriptions:
+            - An unspecified state
+            - Active and accepting contributions
+            - Closed
+            - Completed
+            - Expired
+            - Deleted and the details are no longer available
+      required:
+        - details
+        - configuration
+        - access_and_visibility
+        - id
+        - name
+        - state
+        - last_modified
+        - progress
+      type: object
+    FreelanceJobsDetailAccessandvisibility:
+      properties:
+        acl_protected:
+          description: Whether the job is protected by an ACL
+          examples:
+            - false
+          type: boolean
+        broadcast_locations:
+          description: Solar systems where the job is broadcast
+          items:
+            $ref: "#/components/schemas/FreelanceJobsDetailBroadcastlocations"
+          type: array
+        restrictions:
+          $ref: "#/components/schemas/FreelanceJobsDetailRestrictions"
+          description: Restrictions on who can participate
+      required:
+        - acl_protected
+      type: object
+    FreelanceJobsDetailBroadcastlocations:
+      properties:
+        id:
+          $ref: "#/components/schemas/SolarSystemID"
+          description: Solar system ID
+        name:
+          description: Solar system name
+          examples:
+            - Jita
+          type: string
+      required:
+        - id
+        - name
+      type: object
+    FreelanceJobsDetailConfiguration:
+      properties:
+        method:
+          description: Contribution method (see SDE for valid values)
+          examples:
+            - BoostShield
+          type: string
+        parameters:
+          additionalProperties:
+            oneOf:
+              - properties:
+                  matcher:
+                    $ref: "#/components/schemas/FreelanceJobsDetailParametermatcher"
+                    description: Parameter that matches a type
+                title: matcher
+                type: object
+              - properties:
+                  options:
+                    $ref: "#/components/schemas/FreelanceJobsDetailParameteroptions"
+                    description: Parameter that has one or more selected values
+                title: options
+                type: object
+              - properties:
+                  boolean:
+                    $ref: "#/components/schemas/FreelanceJobsDetailParameterboolean"
+                    description: Parameter that can be toggled
+                title: boolean
+                type: object
+              - properties:
+                  corporation_item_delivery:
+                    $ref: "#/components/schemas/FreelanceJobsDetailParametercorporationitemdelivery"
+                    description: Parameter for delivering items to a corporation
+                title: corporation_item_delivery
+                type: object
+          description: Parameter values (see SDE for parameter definition)
+          type: object
+        version:
+          description: Version of parameter definition used
+          examples:
+            - 1
+          format: int64
+          type: integer
+      required:
+        - version
+        - parameters
+        - method
+      type: object
+    FreelanceJobsDetailContribution:
+      properties:
+        contribution_per_participant_limit:
+          description: Limit on the contribution of the individual participant
+          examples:
+            - 1000
+          format: int64
+          type: integer
+        max_committed_participants:
+          description: Maximum number of participants that can commit to this job
+          examples:
+            - 10000
+          format: int64
+          type: integer
+        reward_per_contribution:
+          description: ISK reward per contribution
+          examples:
+            - 123.5
+          format: double
+          type: number
+        submission_limit:
+          description: Limit on amount of contribution per submission
+          examples:
+            - 100
+          format: int64
+          type: integer
+        submission_multiplier:
+          description: Multiplier towards progress per contribution
+          examples:
+            - 1.5
+          format: double
+          type: number
+      required:
+        - max_committed_participants
+      type: object
+    FreelanceJobsDetailCreator:
+      properties:
+        character:
+          $ref: "#/components/schemas/FreelanceJobsDetailCreatorcharacter"
+          description: Character that created the job
+        corporation:
+          $ref: "#/components/schemas/FreelanceJobsDetailCreatorcorporation"
+          description: Corporation that created the job
+      required:
+        - character
+        - corporation
+      type: object
+    FreelanceJobsDetailCreatorcharacter:
+      properties:
+        id:
+          $ref: "#/components/schemas/CharacterID"
+          description: Character ID
+        name:
+          description: Character name
+          examples:
+            - Creator Name
+          type: string
+      required:
+        - id
+        - name
+      type: object
+    FreelanceJobsDetailCreatorcorporation:
+      properties:
+        id:
+          $ref: "#/components/schemas/CorporationID"
+          description: Corporation ID
+        name:
+          description: Corporation name
+          examples:
+            - Creator Corporation
+          type: string
+      required:
+        - id
+        - name
+      type: object
+    FreelanceJobsDetailDetails:
+      properties:
+        career:
+          description: Assigned career path
+          enum:
+            - Unspecified
+            - Explorer
+            - Industrialist
+            - Enforcer
+            - Soldier of Fortune
+          examples:
+            - Explorer
+          type: string
+          x-enum-descriptions:
+            - An unspecified career
+            - Explorer career
+            - Industrialist career
+            - Enforcer career
+            - Soldier of Fortune career
+        created:
+          description: Moment this freelance job was created
+          examples:
+            - "2025-11-01T00:00:00Z"
+          format: date-time
+          type: string
+        creator:
+          $ref: "#/components/schemas/FreelanceJobsDetailCreator"
+          description: Creator
+        description:
+          description: Description
+          examples:
+            - Freelance Job Description
+          type: string
+        expires:
+          description: Moment this freelance job expires
+          examples:
+            - "2025-11-01T00:01:00Z"
+          format: date-time
+          type: string
+        finished:
+          description: Moment this freelance job transitioned to a non-active state
+          examples:
+            - "2025-11-01T00:00:00Z"
+          format: date-time
+          type: string
+      required:
+        - description
+        - career
+        - created
+        - creator
+      type: object
+    FreelanceJobsDetailFreelancejob:
+      properties:
+        id:
+          $ref: "#/components/schemas/UUID"
+          description: Job's ID
+        last_modified:
+          description: Job's last modified
+          examples:
+            - "2025-11-01T00:00:00Z"
+          format: date-time
+          type: string
+        name:
+          description: Job's name
+          examples:
+            - Freelance Job Name
+          type: string
+        progress:
+          $ref: "#/components/schemas/FreelanceJobsDetailProgress"
+          description: Job's progress
+        reward:
+          $ref: "#/components/schemas/FreelanceJobsDetailReward"
+          description: Job's reward
+        state:
+          description: Job's state
+          enum:
+            - Unspecified
+            - Active
+            - Closed
+            - Completed
+            - Expired
+            - Deleted
+          examples:
+            - Active
+          type: string
+          x-enum-descriptions:
+            - An unspecified state
+            - Active and accepting contributions
+            - Closed
+            - Completed
+            - Expired
+            - Deleted and the details are no longer available
+      required:
+        - id
+        - name
+        - state
+        - last_modified
+        - progress
+      type: object
+    FreelanceJobsDetailParameterboolean:
+      properties:
+        value:
+          description: Boolean value
+          examples:
+            - true
+          type: boolean
+      required:
+        - value
+      type: object
+    FreelanceJobsDetailParametercorporationitemdelivery:
+      properties:
+        corporation_office_location:
+          $ref: "#/components/schemas/FreelanceJobsDetailParametermatcher"
+          description: Location for delivery
+        item_type:
+          $ref: "#/components/schemas/FreelanceJobsDetailParametermatcher"
+          description: Item(s) to be delivered
+      required:
+        - item_type
+        - corporation_office_location
+      type: object
+    FreelanceJobsDetailParametermatcher:
+      properties:
+        values:
+          description: Value type(s) and their value(s)
+          items:
+            $ref: "#/components/schemas/FreelanceJobsDetailParametermatchervalue"
+          type: array
+      required:
+        - values
+      type: object
+    FreelanceJobsDetailParametermatchervalue:
+      properties:
+        value_type:
+          description: Type of the value(s)
+          examples:
+            - solarsystem
+          type: string
+        values:
+          description: Value(s) of this type
+          examples:
+            - - "30001401"
+          items:
+            type: string
+          type: array
+      required:
+        - value_type
+        - values
+      type: object
+    FreelanceJobsDetailParameteroptions:
+      properties:
+        selected:
+          description: Selected value(s)
+          examples:
+            - - self
+              - corporation
+          items:
+            type: string
+          type: array
+      required:
+        - selected
+      type: object
+    FreelanceJobsDetailProgress:
+      properties:
+        current:
+          description: Current progress
+          examples:
+            - 50
+          format: int64
+          type: integer
+        desired:
+          description: Desired progress
+          examples:
+            - 100
+          format: int64
+          type: integer
+      required:
+        - current
+        - desired
+      type: object
+    FreelanceJobsDetailRestrictions:
+      properties:
+        maximum_age:
+          description: Maximum age of the participant, in days
+          examples:
+            - 100
+          format: int64
+          type: integer
+        minimum_age:
+          description: Minimum age of the participant, in days
+          examples:
+            - 10
+          format: int64
+          type: integer
+      type: object
+    FreelanceJobsDetailReward:
+      properties:
+        initial:
+          description: Original amount of ISK that was reserved for this freelance job
+          examples:
+            - 12345.5
+          format: double
+          type: number
+        remaining:
+          description: Remaining ISK to be awarded
+          examples:
+            - 5432.1
+          format: double
+          type: number
+      required:
+        - initial
+        - remaining
+      type: object
+    FreelanceJobsListing:
+      properties:
+        cursor:
+          $ref: "#/components/schemas/Cursor"
+        freelance_jobs:
+          description: List of freelance jobs
+          items:
+            $ref: "#/components/schemas/FreelanceJobsDetailFreelancejob"
+          type: array
+      required:
+        - freelance_jobs
       type: object
     FwLeaderboardsCharactersGet:
       properties:
@@ -10647,7 +11196,7 @@ info:
     url: https://developers.eveonline.com/license-agreement
   termsOfService: https://support.eveonline.com/hc/en-us/articles/8414770561948-EVE-Online-Terms-of-Service
   title: EVE Stable Infrastructure (ESI) - tranquility
-  version: "2025-11-06"
+  version: "2025-12-16"
 openapi: 3.1.0
 paths:
   /alliances:
@@ -12500,6 +13049,121 @@ paths:
       x-rate-limit:
         group: fleet
         max-tokens: 1800
+        window-size: 15m
+  /characters/{character_id}/freelance-jobs:
+    get:
+      description: Listing of all freelance jobs you are actively participating in.
+      operationId: GetCharactersFreelanceJobsListing
+      parameters:
+        - description: The ID of the character
+          in: path
+          name: character_id
+          required: true
+          schema:
+            $ref: "#/components/schemas/CharacterID"
+            description: The ID of the character
+        - $ref: "#/components/parameters/AcceptLanguage"
+        - $ref: "#/components/parameters/IfNoneMatch"
+        - $ref: "#/components/parameters/CompatibilityDate"
+        - $ref: "#/components/parameters/Tenant"
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CharactersFreelanceJobsListing"
+          description: OK
+          headers:
+            Cache-Control:
+              $ref: "#/components/headers/CacheControl"
+            ETag:
+              $ref: "#/components/headers/ETag"
+            Last-Modified:
+              $ref: "#/components/headers/LastModified"
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+          description: Error
+          headers:
+            Cache-Control:
+              $ref: "#/components/headers/CacheControl"
+            ETag:
+              $ref: "#/components/headers/ETag"
+            Last-Modified:
+              $ref: "#/components/headers/LastModified"
+      security:
+        - OAuth2:
+            - esi-characters.read_freelance_jobs.v1
+      summary: List character freelance jobs
+      tags:
+        - Freelance Jobs
+      x-compatibility-date: "2025-12-16"
+      x-rate-limit:
+        group: char-freelance-job
+        max-tokens: 300
+        window-size: 15m
+  /characters/{character_id}/freelance-jobs/{job_id}/participation:
+    get:
+      description: Show your participation in a freelance job.
+      operationId: GetCharactersFreelanceJobsParticipation
+      parameters:
+        - description: The ID of the character
+          in: path
+          name: character_id
+          required: true
+          schema:
+            $ref: "#/components/schemas/CharacterID"
+            description: The ID of the character
+        - description: The ID of the freelance job
+          in: path
+          name: job_id
+          required: true
+          schema:
+            $ref: "#/components/schemas/UUID"
+            description: The ID of the freelance job
+        - $ref: "#/components/parameters/AcceptLanguage"
+        - $ref: "#/components/parameters/IfNoneMatch"
+        - $ref: "#/components/parameters/CompatibilityDate"
+        - $ref: "#/components/parameters/Tenant"
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CharactersFreelanceJobsParticipation"
+          description: OK
+          headers:
+            Cache-Control:
+              $ref: "#/components/headers/CacheControl"
+            ETag:
+              $ref: "#/components/headers/ETag"
+            Last-Modified:
+              $ref: "#/components/headers/LastModified"
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+          description: Error
+          headers:
+            Cache-Control:
+              $ref: "#/components/headers/CacheControl"
+            ETag:
+              $ref: "#/components/headers/ETag"
+            Last-Modified:
+              $ref: "#/components/headers/LastModified"
+      security:
+        - OAuth2:
+            - esi-characters.read_freelance_jobs.v1
+      summary: Get character freelance job participation
+      tags:
+        - Freelance Jobs
+      x-compatibility-date: "2025-12-16"
+      x-rate-limit:
+        group: char-freelance-job
+        max-tokens: 300
         window-size: 15m
   /characters/{character_id}/fw/stats:
     get:
@@ -15578,6 +16242,179 @@ paths:
       x-compatibility-date: "2020-01-01"
       x-required-roles:
         - Factory_Manager
+  /corporations/{corporation_id}/freelance-jobs:
+    get:
+      description: Listing of all freelance jobs for your corporation.
+      operationId: GetCorporationsFreelanceJobsListing
+      parameters:
+        - description: Return records from after this cursor (mutual exclusive with 'before'). '0' to start from the beginning.
+          explode: false
+          in: query
+          name: after
+          schema:
+            description: Return records from after this cursor (mutual exclusive with 'before'). '0' to start from the beginning.
+            type: string
+        - description: Return records from before this cursor (mutual exclusive with 'after'). '0' to start from the end.
+          explode: false
+          in: query
+          name: before
+          schema:
+            description: Return records from before this cursor (mutual exclusive with 'after'). '0' to start from the end.
+            type: string
+        - description: The amount of records to retrieve per request.
+          explode: false
+          in: query
+          name: limit
+          schema:
+            default: 10
+            description: The amount of records to retrieve per request.
+            format: int64
+            maximum: 100
+            minimum: 10
+            type: integer
+        - description: The ID of the corporation
+          in: path
+          name: corporation_id
+          required: true
+          schema:
+            $ref: "#/components/schemas/CorporationID"
+            description: The ID of the corporation
+        - $ref: "#/components/parameters/AcceptLanguage"
+        - $ref: "#/components/parameters/IfNoneMatch"
+        - $ref: "#/components/parameters/CompatibilityDate"
+        - $ref: "#/components/parameters/Tenant"
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CorporationsFreelanceJobsListing"
+          description: OK
+          headers:
+            Cache-Control:
+              $ref: "#/components/headers/CacheControl"
+            ETag:
+              $ref: "#/components/headers/ETag"
+            Last-Modified:
+              $ref: "#/components/headers/LastModified"
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+          description: Error
+          headers:
+            Cache-Control:
+              $ref: "#/components/headers/CacheControl"
+            ETag:
+              $ref: "#/components/headers/ETag"
+            Last-Modified:
+              $ref: "#/components/headers/LastModified"
+      security:
+        - OAuth2:
+            - esi-corporations.read_freelance_jobs.v1
+      summary: List corporation freelance jobs
+      tags:
+        - Freelance Jobs
+      x-cache-age: 31536000
+      x-compatibility-date: "2025-12-16"
+      x-pagination: cursor
+      x-rate-limit:
+        group: corp-freelance-job
+        max-tokens: 300
+        window-size: 15m
+      x-required-roles:
+        - Project_Manager
+  /corporations/{corporation_id}/freelance-jobs/{job_id}/participants:
+    get:
+      description: Listing of all participants of a freelance job.
+      operationId: GetCorporationsFreelanceJobsParticipants
+      parameters:
+        - description: Return records from after this cursor (mutual exclusive with 'before'). '0' to start from the beginning.
+          explode: false
+          in: query
+          name: after
+          schema:
+            description: Return records from after this cursor (mutual exclusive with 'before'). '0' to start from the beginning.
+            type: string
+        - description: Return records from before this cursor (mutual exclusive with 'after'). '0' to start from the end.
+          explode: false
+          in: query
+          name: before
+          schema:
+            description: Return records from before this cursor (mutual exclusive with 'after'). '0' to start from the end.
+            type: string
+        - description: The amount of records to retrieve per request.
+          explode: false
+          in: query
+          name: limit
+          schema:
+            default: 10
+            description: The amount of records to retrieve per request.
+            format: int64
+            maximum: 100
+            minimum: 10
+            type: integer
+        - description: The ID of the corporation
+          in: path
+          name: corporation_id
+          required: true
+          schema:
+            $ref: "#/components/schemas/CorporationID"
+            description: The ID of the corporation
+        - description: The ID of the job
+          in: path
+          name: job_id
+          required: true
+          schema:
+            $ref: "#/components/schemas/UUID"
+            description: The ID of the job
+        - $ref: "#/components/parameters/AcceptLanguage"
+        - $ref: "#/components/parameters/IfNoneMatch"
+        - $ref: "#/components/parameters/CompatibilityDate"
+        - $ref: "#/components/parameters/Tenant"
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CorporationsFreelanceJobsParticipants"
+          description: OK
+          headers:
+            Cache-Control:
+              $ref: "#/components/headers/CacheControl"
+            ETag:
+              $ref: "#/components/headers/ETag"
+            Last-Modified:
+              $ref: "#/components/headers/LastModified"
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+          description: Error
+          headers:
+            Cache-Control:
+              $ref: "#/components/headers/CacheControl"
+            ETag:
+              $ref: "#/components/headers/ETag"
+            Last-Modified:
+              $ref: "#/components/headers/LastModified"
+      security:
+        - OAuth2:
+            - esi-corporations.read_freelance_jobs.v1
+      summary: List participants of a freelance job
+      tags:
+        - Freelance Jobs
+      x-cache-age: 31536000
+      x-compatibility-date: "2025-12-16"
+      x-pagination: cursor
+      x-rate-limit:
+        group: corp-freelance-job
+        max-tokens: 300
+        window-size: 15m
+      x-required-roles:
+        - Project_Manager
   /corporations/{corporation_id}/fw/stats:
     get:
       description: |-
@@ -18099,6 +18936,144 @@ paths:
       x-rate-limit:
         group: fleet
         max-tokens: 1800
+        window-size: 15m
+  /freelance-jobs:
+    get:
+      description: Listing of all public freelance jobs.
+      operationId: GetFreelanceJobsListing
+      parameters:
+        - description: Return records from after this cursor (mutual exclusive with 'before'). '0' to start from the beginning.
+          explode: false
+          in: query
+          name: after
+          schema:
+            description: Return records from after this cursor (mutual exclusive with 'before'). '0' to start from the beginning.
+            type: string
+        - description: Return records from before this cursor (mutual exclusive with 'after'). '0' to start from the end.
+          explode: false
+          in: query
+          name: before
+          schema:
+            description: Return records from before this cursor (mutual exclusive with 'after'). '0' to start from the end.
+            type: string
+        - description: The amount of records to retrieve per request.
+          explode: false
+          in: query
+          name: limit
+          schema:
+            default: 10
+            description: The amount of records to retrieve per request.
+            format: int64
+            maximum: 100
+            minimum: 10
+            type: integer
+        - description: Filter on corporation ID
+          explode: false
+          in: query
+          name: corporation_id
+          schema:
+            $ref: "#/components/schemas/CorporationID"
+            description: Filter on corporation ID
+        - $ref: "#/components/parameters/AcceptLanguage"
+        - $ref: "#/components/parameters/IfNoneMatch"
+        - $ref: "#/components/parameters/CompatibilityDate"
+        - $ref: "#/components/parameters/Tenant"
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FreelanceJobsListing"
+          description: OK
+          headers:
+            Cache-Control:
+              $ref: "#/components/headers/CacheControl"
+            ETag:
+              $ref: "#/components/headers/ETag"
+            Last-Modified:
+              $ref: "#/components/headers/LastModified"
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+          description: Error
+          headers:
+            Cache-Control:
+              $ref: "#/components/headers/CacheControl"
+            ETag:
+              $ref: "#/components/headers/ETag"
+            Last-Modified:
+              $ref: "#/components/headers/LastModified"
+      summary: List freelance jobs
+      tags:
+        - Freelance Jobs
+      x-cache-age: 31536000
+      x-compatibility-date: "2025-12-16"
+      x-pagination: cursor
+      x-rate-limit:
+        group: freelance-job
+        max-tokens: 900
+        window-size: 15m
+  /freelance-jobs/{job_id}:
+    get:
+      description: |-
+        Get the details of a freelance job.
+
+        Jobs without an ACL (public jobs) does not require authentication.
+
+        Jobs with an ACL requires authentication, and requires that the character is:
+        - An active participant of the job, or
+        - A freelance job manager for the corporation that owns the job.
+      operationId: GetFreelanceJobsDetail
+      parameters:
+        - $ref: "#/components/parameters/IfModifiedSince"
+        - description: The ID of the freelance job
+          in: path
+          name: job_id
+          required: true
+          schema:
+            $ref: "#/components/schemas/UUID"
+            description: The ID of the freelance job
+        - $ref: "#/components/parameters/AcceptLanguage"
+        - $ref: "#/components/parameters/IfNoneMatch"
+        - $ref: "#/components/parameters/CompatibilityDate"
+        - $ref: "#/components/parameters/Tenant"
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FreelanceJobsDetail"
+          description: OK
+          headers:
+            Cache-Control:
+              $ref: "#/components/headers/CacheControl"
+            ETag:
+              $ref: "#/components/headers/ETag"
+            Last-Modified:
+              $ref: "#/components/headers/LastModified"
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+          description: Error
+          headers:
+            Cache-Control:
+              $ref: "#/components/headers/CacheControl"
+            ETag:
+              $ref: "#/components/headers/ETag"
+            Last-Modified:
+              $ref: "#/components/headers/LastModified"
+      summary: Get freelance job details
+      tags:
+        - Freelance Jobs
+      x-cache-age: 600
+      x-compatibility-date: "2025-12-16"
+      x-rate-limit:
+        group: freelance-job
+        max-tokens: 900
         window-size: 15m
   /fw/leaderboards:
     get:
@@ -20972,6 +21947,7 @@ tags:
   - name: Faction Warfare
   - name: Fittings
   - name: Fleets
+  - name: Freelance Jobs
   - name: Incursions
   - name: Industry
   - name: Insurance
