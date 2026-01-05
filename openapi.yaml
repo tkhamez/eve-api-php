@@ -46,11 +46,10 @@ components:
       description: The compatibility date for the request.
       in: header
       name: X-Compatibility-Date
-      required: true
       schema:
+        default: "2025-12-16"
         enum:
           - "2025-12-16"
-        format: date
         type: string
     IfModifiedSince:
       description: The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
@@ -3090,7 +3089,6 @@ components:
     CompatibilityDate:
       examples:
         - "2025-08-26"
-      format: date
       type: string
       x-common-model: "true"
     ConstellationID:
