@@ -55,5 +55,6 @@
 
 - Commit the client:
   ```shell
+  git add .
   git commit -a -m "Generated from the definition file dated $GENERATED_DATE for the compatibility date $COMPATIBILITY_DATE using OpenAPI Generator $GENERATOR_VERSION."
   ```
