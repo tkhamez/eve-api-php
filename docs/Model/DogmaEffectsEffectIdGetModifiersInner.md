@@ -1,4 +1,4 @@
-# # DogmaEffectsEffectIdGetModifiersInner
+# DogmaEffectsEffectIdGetModifiersInner
 
 ## Properties
 

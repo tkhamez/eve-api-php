@@ -1,4 +1,4 @@
-# # CorporationsCorporationIdContainersLogsGetInner
+# CorporationsCorporationIdContainersLogsGetInner
 
 ## Properties
 

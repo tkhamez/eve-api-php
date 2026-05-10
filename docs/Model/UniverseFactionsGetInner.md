@@ -1,4 +1,4 @@
-# # UniverseFactionsGetInner
+# UniverseFactionsGetInner
 
 ## Properties
 

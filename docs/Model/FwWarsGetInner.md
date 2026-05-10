@@ -1,4 +1,4 @@
-# # FwWarsGetInner
+# FwWarsGetInner
 
 ## Properties
 

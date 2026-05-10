@@ -1,4 +1,4 @@
-# # CorporationsProjectsDetailConfigurationmanufactureitem
+# CorporationsProjectsDetailConfigurationmanufactureitem
 
 ## Properties
 

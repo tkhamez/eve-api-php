@@ -1,4 +1,4 @@
-# # FwLeaderboardsGetKills
+# FwLeaderboardsGetKills
 
 ## Properties
 

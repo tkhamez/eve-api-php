@@ -1,4 +1,4 @@
-# # FwLeaderboardsCharactersGet
+# FwLeaderboardsCharactersGet
 
 ## Properties
 

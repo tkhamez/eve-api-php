@@ -1,4 +1,4 @@
-# # CharactersCharacterIdFatigueGet
+# CharactersCharacterIdFatigueGet
 
 ## Properties
 

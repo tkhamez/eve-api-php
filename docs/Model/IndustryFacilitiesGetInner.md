@@ -1,4 +1,4 @@
-# # IndustryFacilitiesGetInner
+# IndustryFacilitiesGetInner
 
 ## Properties
 

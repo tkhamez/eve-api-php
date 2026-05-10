@@ -1,4 +1,4 @@
-# # CorporationsCorporationIdStarbasesStarbaseIdGet
+# CorporationsCorporationIdStarbasesStarbaseIdGet
 
 ## Properties
 

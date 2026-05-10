@@ -1,4 +1,4 @@
-# # PostCharactersCharacterIdFittingsRequest
+# PostCharactersCharacterIdFittingsRequest
 
 ## Properties
 

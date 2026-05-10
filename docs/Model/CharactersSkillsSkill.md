@@ -1,4 +1,4 @@
-# # CharactersSkillsSkill
+# CharactersSkillsSkill
 
 ## Properties
 

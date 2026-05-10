@@ -1,4 +1,4 @@
-# # LostShip
+# LostShip
 
 ## Properties
 

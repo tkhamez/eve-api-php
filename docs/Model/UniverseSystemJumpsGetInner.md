@@ -1,4 +1,4 @@
-# # UniverseSystemJumpsGetInner
+# UniverseSystemJumpsGetInner
 
 ## Properties
 

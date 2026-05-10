@@ -1,4 +1,4 @@
-# # CharactersCharacterIdPlanetsPlanetIdGet
+# CharactersCharacterIdPlanetsPlanetIdGet
 
 ## Properties
 

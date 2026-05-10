@@ -1,4 +1,4 @@
-# # UniverseStarsStarIdGet
+# UniverseStarsStarIdGet
 
 ## Properties
 

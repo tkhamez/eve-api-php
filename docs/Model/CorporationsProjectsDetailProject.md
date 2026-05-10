@@ -1,10 +1,10 @@
-# # CorporationsProjectsDetailProject
+# CorporationsProjectsDetailProject
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **string** |  |
+**id** | **string** | Project&#39;s ID |
 **last_modified** | **\DateTime** | Moment this project was last modified. Project contributions also count as a modification |
 **name** | **string** | Project&#39;s name |
 **progress** | [**\Tkhamez\Eve\API\Model\CorporationsProjectsDetailProgress**](CorporationsProjectsDetailProgress.md) | Project&#39;s progress |

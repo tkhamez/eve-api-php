@@ -1,4 +1,4 @@
-# # ContractsPublicBidsContractIdGetInner
+# ContractsPublicBidsContractIdGetInner
 
 ## Properties
 

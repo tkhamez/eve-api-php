@@ -1,4 +1,4 @@
-# # CharactersCharacterIdMedalsGetInner
+# CharactersCharacterIdMedalsGetInner
 
 ## Properties
 

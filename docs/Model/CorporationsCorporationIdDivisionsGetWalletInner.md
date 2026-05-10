@@ -1,4 +1,4 @@
-# # CorporationsCorporationIdDivisionsGetWalletInner
+# CorporationsCorporationIdDivisionsGetWalletInner
 
 ## Properties
 

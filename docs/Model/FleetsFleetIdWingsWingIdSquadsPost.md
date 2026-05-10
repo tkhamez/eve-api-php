@@ -1,4 +1,4 @@
-# # FleetsFleetIdWingsWingIdSquadsPost
+# FleetsFleetIdWingsWingIdSquadsPost
 
 ## Properties
 

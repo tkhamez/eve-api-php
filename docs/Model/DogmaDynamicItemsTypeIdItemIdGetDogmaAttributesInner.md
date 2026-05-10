@@ -1,4 +1,4 @@
-# # DogmaDynamicItemsTypeIdItemIdGetDogmaAttributesInner
+# DogmaDynamicItemsTypeIdItemIdGetDogmaAttributesInner
 
 ## Properties
 

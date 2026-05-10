@@ -1,4 +1,4 @@
-# # FreelanceJobsDetailParametercorporationitemdelivery
+# FreelanceJobsDetailParametercorporationitemdelivery
 
 ## Properties
 

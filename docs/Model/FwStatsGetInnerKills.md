@@ -1,4 +1,4 @@
-# # FwStatsGetInnerKills
+# FwStatsGetInnerKills
 
 ## Properties
 

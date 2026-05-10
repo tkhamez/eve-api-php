@@ -1,4 +1,4 @@
-# # MarketsRegionIdHistoryGetInner
+# MarketsRegionIdHistoryGetInner
 
 ## Properties
 

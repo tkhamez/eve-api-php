@@ -1,4 +1,4 @@
-# # CorporationsCorporationIdDivisionsGet
+# CorporationsCorporationIdDivisionsGet
 
 ## Properties
 

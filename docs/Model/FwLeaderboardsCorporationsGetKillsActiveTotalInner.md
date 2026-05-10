@@ -1,4 +1,4 @@
-# # FwLeaderboardsCorporationsGetKillsActiveTotalInner
+# FwLeaderboardsCorporationsGetKillsActiveTotalInner
 
 ## Properties
 

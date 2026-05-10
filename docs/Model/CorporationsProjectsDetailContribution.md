@@ -1,4 +1,4 @@
-# # CorporationsProjectsDetailContribution
+# CorporationsProjectsDetailContribution
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# # MetaChangelog
+# MetaChangelog
 
 ## Properties
 

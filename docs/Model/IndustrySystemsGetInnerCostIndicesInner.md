@@ -1,4 +1,4 @@
-# # IndustrySystemsGetInnerCostIndicesInner
+# IndustrySystemsGetInnerCostIndicesInner
 
 ## Properties
 

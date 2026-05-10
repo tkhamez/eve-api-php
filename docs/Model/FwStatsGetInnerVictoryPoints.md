@@ -1,4 +1,4 @@
-# # FwStatsGetInnerVictoryPoints
+# FwStatsGetInnerVictoryPoints
 
 ## Properties
 

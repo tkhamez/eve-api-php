@@ -1,4 +1,4 @@
-# # CorporationsCorporationIdIconsGet
+# CorporationsCorporationIdIconsGet
 
 ## Properties
 

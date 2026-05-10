@@ -1,16 +1,16 @@
-# # CorporationsDetail
+# CorporationsDetail
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**alliance_id** | **int** |  | [optional]
-**ceo_id** | **int** |  |
-**creator_id** | **int** |  |
+**alliance_id** | **int** | Corporation&#39;s alliance ID | [optional]
+**ceo_id** | **int** | Corporation&#39;s CEO ID |
+**creator_id** | **int** | Corporation&#39;s creator ID |
 **date_founded** | **\DateTime** | Corporation&#39;s founding date | [optional]
 **description** | **string** | Corporation&#39;s description | [optional]
-**faction_id** | **int** |  | [optional]
-**home_station_id** | **int** |  | [optional]
+**faction_id** | **int** | Corporation&#39;s faction ID | [optional]
+**home_station_id** | **int** | Corporation&#39;s home station ID | [optional]
 **member_count** | **int** | Corporation&#39;s member count |
 **name** | **string** | Corporation&#39;s name |
 **shares** | **int** | Corporation&#39;s shares | [optional]

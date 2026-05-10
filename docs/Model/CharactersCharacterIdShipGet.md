@@ -1,4 +1,4 @@
-# # CharactersCharacterIdShipGet
+# CharactersCharacterIdShipGet
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# # CharactersCharacterIdClonesGetHomeLocation
+# CharactersCharacterIdClonesGetHomeLocation
 
 ## Properties
 

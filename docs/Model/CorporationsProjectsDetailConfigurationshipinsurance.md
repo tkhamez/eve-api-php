@@ -1,4 +1,4 @@
-# # CorporationsProjectsDetailConfigurationshipinsurance
+# CorporationsProjectsDetailConfigurationshipinsurance
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# # UniverseIdsPost
+# UniverseIdsPost
 
 ## Properties
 

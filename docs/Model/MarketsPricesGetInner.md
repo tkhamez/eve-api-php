@@ -1,4 +1,4 @@
-# # MarketsPricesGetInner
+# MarketsPricesGetInner
 
 ## Properties
 

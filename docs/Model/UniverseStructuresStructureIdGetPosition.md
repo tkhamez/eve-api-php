@@ -1,4 +1,4 @@
-# # UniverseStructuresStructureIdGetPosition
+# UniverseStructuresStructureIdGetPosition
 
 ## Properties
 

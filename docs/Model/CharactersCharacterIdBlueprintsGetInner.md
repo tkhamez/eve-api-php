@@ -1,4 +1,4 @@
-# # CharactersCharacterIdBlueprintsGetInner
+# CharactersCharacterIdBlueprintsGetInner
 
 ## Properties
 

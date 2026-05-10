@@ -1,4 +1,4 @@
-# # CorporationsCorporationIdIndustryJobsGetInner
+# CorporationsCorporationIdIndustryJobsGetInner
 
 ## Properties
 

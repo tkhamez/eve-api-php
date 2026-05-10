@@ -1,4 +1,4 @@
-# # CharactersCharacterIdCorporationhistoryGetInner
+# CharactersCharacterIdCorporationhistoryGetInner
 
 ## Properties
 

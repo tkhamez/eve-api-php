@@ -1,4 +1,4 @@
-# # FwLeaderboardsCharactersGetVictoryPointsActiveTotalInner
+# FwLeaderboardsCharactersGetVictoryPointsActiveTotalInner
 
 ## Properties
 

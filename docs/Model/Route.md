@@ -1,4 +1,4 @@
-# # Route
+# Route
 
 ## Properties
 

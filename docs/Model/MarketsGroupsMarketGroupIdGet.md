@@ -1,4 +1,4 @@
-# # MarketsGroupsMarketGroupIdGet
+# MarketsGroupsMarketGroupIdGet
 
 ## Properties
 

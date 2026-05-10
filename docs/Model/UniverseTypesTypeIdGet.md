@@ -1,4 +1,4 @@
-# # UniverseTypesTypeIdGet
+# UniverseTypesTypeIdGet
 
 ## Properties
 

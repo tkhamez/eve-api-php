@@ -1,4 +1,4 @@
-# # CharactersCharacterIdFwStatsGetKills
+# CharactersCharacterIdFwStatsGetKills
 
 ## Properties
 

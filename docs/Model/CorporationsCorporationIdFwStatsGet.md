@@ -1,4 +1,4 @@
-# # CorporationsCorporationIdFwStatsGet
+# CorporationsCorporationIdFwStatsGet
 
 ## Properties
 

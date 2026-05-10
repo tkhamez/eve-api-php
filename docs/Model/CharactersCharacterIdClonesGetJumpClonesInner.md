@@ -1,4 +1,4 @@
-# # CharactersCharacterIdClonesGetJumpClonesInner
+# CharactersCharacterIdClonesGetJumpClonesInner
 
 ## Properties
 

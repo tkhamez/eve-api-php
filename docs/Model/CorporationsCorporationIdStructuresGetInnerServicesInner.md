@@ -1,4 +1,4 @@
-# # CorporationsCorporationIdStructuresGetInnerServicesInner
+# CorporationsCorporationIdStructuresGetInnerServicesInner
 
 ## Properties
 

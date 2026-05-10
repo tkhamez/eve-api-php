@@ -1,4 +1,4 @@
-# # PutFleetsFleetIdSquadsSquadIdRequest
+# PutFleetsFleetIdSquadsSquadIdRequest
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# # FreelanceJobsDetail
+# FreelanceJobsDetail
 
 ## Properties
 
@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **configuration** | [**\Tkhamez\Eve\API\Model\FreelanceJobsDetailConfiguration**](FreelanceJobsDetailConfiguration.md) | Job&#39;s configuration |
 **contribution** | [**\Tkhamez\Eve\API\Model\FreelanceJobsDetailContribution**](FreelanceJobsDetailContribution.md) | Job&#39;s contribution settings | [optional]
 **details** | [**\Tkhamez\Eve\API\Model\FreelanceJobsDetailDetails**](FreelanceJobsDetailDetails.md) | Job&#39;s details |
-**id** | **string** |  |
+**id** | **string** | Job&#39;s ID |
 **last_modified** | **\DateTime** | Job&#39;s last modified |
 **name** | **string** | Job&#39;s name |
 **progress** | [**\Tkhamez\Eve\API\Model\FreelanceJobsDetailProgress**](FreelanceJobsDetailProgress.md) | Job&#39;s progress |

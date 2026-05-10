@@ -1,4 +1,4 @@
-# # FwLeaderboardsCharactersGetVictoryPointsLastWeekInner
+# FwLeaderboardsCharactersGetVictoryPointsLastWeekInner
 
 ## Properties
 

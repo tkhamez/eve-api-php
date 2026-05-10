@@ -1,4 +1,4 @@
-# # CorporationsCorporationIdFwStatsGetVictoryPoints
+# CorporationsCorporationIdFwStatsGetVictoryPoints
 
 ## Properties
 

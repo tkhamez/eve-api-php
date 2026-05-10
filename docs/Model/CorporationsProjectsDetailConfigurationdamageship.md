@@ -1,4 +1,4 @@
-# # CorporationsProjectsDetailConfigurationdamageship
+# CorporationsProjectsDetailConfigurationdamageship
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# # PostCharactersCharacterIdMailRequestRecipientsInner
+# PostCharactersCharacterIdMailRequestRecipientsInner
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# # ScanSignature
+# ScanSignature
 
 ## Properties
 

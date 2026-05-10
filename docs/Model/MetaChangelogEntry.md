@@ -1,10 +1,10 @@
-# # MetaChangelogEntry
+# MetaChangelogEntry
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**compatibility_date** | **string** |  |
+**compatibility_date** | **string** | Compatibility date of the route |
 **description** | **string** | Description |
 **method** | **string** | HTTP method of the route |
 **path** | **string** | Path of the route |

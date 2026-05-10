@@ -1,4 +1,4 @@
-# # CorporationsProjectsDetailConfigurationearnloyaltypoints
+# CorporationsProjectsDetailConfigurationearnloyaltypoints
 
 ## Properties
 

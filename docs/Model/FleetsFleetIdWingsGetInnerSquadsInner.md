@@ -1,4 +1,4 @@
-# # FleetsFleetIdWingsGetInnerSquadsInner
+# FleetsFleetIdWingsGetInnerSquadsInner
 
 ## Properties
 

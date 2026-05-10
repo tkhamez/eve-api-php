@@ -1,4 +1,4 @@
-# # CharactersCharacterIdLocationGet
+# CharactersCharacterIdLocationGet
 
 ## Properties
 

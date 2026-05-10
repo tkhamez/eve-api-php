@@ -1,4 +1,4 @@
-# # CharactersCharacterIdMailLabelsGetLabelsInner
+# CharactersCharacterIdMailLabelsGetLabelsInner
 
 ## Properties
 

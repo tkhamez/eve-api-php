@@ -1,4 +1,4 @@
-# # CharactersCharacterIdMiningGetInner
+# CharactersCharacterIdMiningGetInner
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# # CharactersCharacterIdMailMailIdGet
+# CharactersCharacterIdMailMailIdGet
 
 ## Properties
 

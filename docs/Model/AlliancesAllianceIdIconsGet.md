@@ -1,4 +1,4 @@
-# # AlliancesAllianceIdIconsGet
+# AlliancesAllianceIdIconsGet
 
 ## Properties
 

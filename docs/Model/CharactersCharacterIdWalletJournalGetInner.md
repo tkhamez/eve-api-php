@@ -1,4 +1,4 @@
-# # CharactersCharacterIdWalletJournalGetInner
+# CharactersCharacterIdWalletJournalGetInner
 
 ## Properties
 

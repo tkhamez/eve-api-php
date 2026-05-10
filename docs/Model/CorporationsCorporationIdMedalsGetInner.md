@@ -1,4 +1,4 @@
-# # CorporationsCorporationIdMedalsGetInner
+# CorporationsCorporationIdMedalsGetInner
 
 ## Properties
 

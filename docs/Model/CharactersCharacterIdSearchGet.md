@@ -1,4 +1,4 @@
-# # CharactersCharacterIdSearchGet
+# CharactersCharacterIdSearchGet
 
 ## Properties
 

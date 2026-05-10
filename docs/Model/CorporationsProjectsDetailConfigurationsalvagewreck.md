@@ -1,4 +1,4 @@
-# # CorporationsProjectsDetailConfigurationsalvagewreck
+# CorporationsProjectsDetailConfigurationsalvagewreck
 
 ## Properties
 

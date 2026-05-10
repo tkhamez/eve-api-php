@@ -1,4 +1,4 @@
-# # FwLeaderboardsCorporationsGetKills
+# FwLeaderboardsCorporationsGetKills
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# # UniverseAsteroidBeltsAsteroidBeltIdGet
+# UniverseAsteroidBeltsAsteroidBeltIdGet
 
 ## Properties
 

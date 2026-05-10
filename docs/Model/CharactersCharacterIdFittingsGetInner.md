@@ -1,4 +1,4 @@
-# # CharactersCharacterIdFittingsGetInner
+# CharactersCharacterIdFittingsGetInner
 
 ## Properties
 

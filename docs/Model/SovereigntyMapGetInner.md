@@ -1,4 +1,4 @@
-# # SovereigntyMapGetInner
+# SovereigntyMapGetInner
 
 ## Properties
 

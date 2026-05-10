@@ -1,4 +1,4 @@
-# # UniverseStargatesStargateIdGetDestination
+# UniverseStargatesStargateIdGetDestination
 
 ## Properties
 

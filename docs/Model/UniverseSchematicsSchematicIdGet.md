@@ -1,4 +1,4 @@
-# # UniverseSchematicsSchematicIdGet
+# UniverseSchematicsSchematicIdGet
 
 ## Properties
 

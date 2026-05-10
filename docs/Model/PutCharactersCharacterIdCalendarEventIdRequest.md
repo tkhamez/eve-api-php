@@ -1,4 +1,4 @@
-# # PutCharactersCharacterIdCalendarEventIdRequest
+# PutCharactersCharacterIdCalendarEventIdRequest
 
 ## Properties
 

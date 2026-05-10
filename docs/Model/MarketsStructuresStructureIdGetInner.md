@@ -1,4 +1,4 @@
-# # MarketsStructuresStructureIdGetInner
+# MarketsStructuresStructureIdGetInner
 
 ## Properties
 

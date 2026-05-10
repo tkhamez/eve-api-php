@@ -1,4 +1,4 @@
-# # UniverseConstellationsConstellationIdGet
+# UniverseConstellationsConstellationIdGet
 
 ## Properties
 

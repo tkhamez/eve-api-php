@@ -1,4 +1,4 @@
-# # CharactersAffiliationPostInner
+# CharactersAffiliationPostInner
 
 ## Properties
 

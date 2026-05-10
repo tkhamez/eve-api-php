@@ -1,4 +1,4 @@
-# # ManufactureItem
+# ManufactureItem
 
 ## Properties
 

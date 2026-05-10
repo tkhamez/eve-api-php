@@ -1,4 +1,4 @@
-# # CharactersCharacterIdNotificationsGetInner
+# CharactersCharacterIdNotificationsGetInner
 
 ## Properties
 

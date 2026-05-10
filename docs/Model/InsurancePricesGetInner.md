@@ -1,4 +1,4 @@
-# # InsurancePricesGetInner
+# InsurancePricesGetInner
 
 ## Properties
 

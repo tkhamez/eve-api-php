@@ -1,4 +1,4 @@
-# # DestroyNpc
+# DestroyNpc
 
 ## Properties
 

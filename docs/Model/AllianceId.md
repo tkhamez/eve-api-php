@@ -1,9 +1,9 @@
-# # AllianceId
+# AllianceId
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**alliance_id** | **int** |  | [optional]
+**alliance_id** | **int** | Alliance&#39;s ID | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

@@ -1,4 +1,4 @@
-# # UniverseIdsPostCharactersInner
+# UniverseIdsPostCharactersInner
 
 ## Properties
 

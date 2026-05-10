@@ -1,4 +1,4 @@
-# # CharactersCharacterIdMailListsGetInner
+# CharactersCharacterIdMailListsGetInner
 
 ## Properties
 

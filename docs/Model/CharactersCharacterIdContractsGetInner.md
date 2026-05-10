@@ -1,4 +1,4 @@
-# # CharactersCharacterIdContractsGetInner
+# CharactersCharacterIdContractsGetInner
 
 ## Properties
 

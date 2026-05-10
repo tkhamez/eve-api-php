@@ -1,4 +1,4 @@
-# # UniverseCategoriesCategoryIdGet
+# UniverseCategoriesCategoryIdGet
 
 ## Properties
 

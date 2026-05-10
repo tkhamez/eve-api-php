@@ -1,4 +1,4 @@
-# # FreelanceJobsDetailConfiguration
+# FreelanceJobsDetailConfiguration
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# # LoyaltyStoresCorporationIdOffersGetInnerRequiredItemsInner
+# LoyaltyStoresCorporationIdOffersGetInnerRequiredItemsInner
 
 ## Properties
 

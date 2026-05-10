@@ -1,4 +1,4 @@
-# # FleetsFleetIdWingsPost
+# FleetsFleetIdWingsPost
 
 ## Properties
 

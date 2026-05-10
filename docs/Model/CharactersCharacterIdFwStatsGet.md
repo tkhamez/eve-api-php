@@ -1,4 +1,4 @@
-# # CharactersCharacterIdFwStatsGet
+# CharactersCharacterIdFwStatsGet
 
 ## Properties
 

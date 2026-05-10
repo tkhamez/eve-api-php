@@ -1,4 +1,4 @@
-# # FwLeaderboardsCorporationsGetVictoryPointsLastWeekInner
+# FwLeaderboardsCorporationsGetVictoryPointsLastWeekInner
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# # CharactersCharacterIdContactsGetInner
+# CharactersCharacterIdContactsGetInner
 
 ## Properties
 

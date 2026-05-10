@@ -32,8 +32,8 @@ $apiInstance = new Tkhamez\Eve\API\Api\RoutesApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$origin_system_id = 56; // int | Origin system
-$destination_system_id = 56; // int | Destination system
+$origin_system_id = new \Tkhamez\Eve\API\Model\Int(); // Int | Origin system
+$destination_system_id = new \Tkhamez\Eve\API\Model\Int(); // Int | Destination system
 $route_request_body = new \Tkhamez\Eve\API\Model\RouteRequestBody(); // \Tkhamez\Eve\API\Model\RouteRequestBody
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
@@ -53,8 +53,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **origin_system_id** | **int**| Origin system | |
-| **destination_system_id** | **int**| Destination system | |
+| **origin_system_id** | [**Int**](../Model/.md)| Origin system | |
+| **destination_system_id** | [**Int**](../Model/.md)| Destination system | |
 | **route_request_body** | [**\Tkhamez\Eve\API\Model\RouteRequestBody**](../Model/RouteRequestBody.md)|  | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |

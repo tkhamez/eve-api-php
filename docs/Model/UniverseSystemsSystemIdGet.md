@@ -1,4 +1,4 @@
-# # UniverseSystemsSystemIdGet
+# UniverseSystemsSystemIdGet
 
 ## Properties
 

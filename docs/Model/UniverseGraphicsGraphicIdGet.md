@@ -1,4 +1,4 @@
-# # UniverseGraphicsGraphicIdGet
+# UniverseGraphicsGraphicIdGet
 
 ## Properties
 

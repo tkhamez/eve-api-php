@@ -1,4 +1,4 @@
-# # UniverseGroupsGroupIdGet
+# UniverseGroupsGroupIdGet
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# # CorporationsProjectsDetailConfigurationdestroynpc
+# CorporationsProjectsDetailConfigurationdestroynpc
 
 ## Properties
 

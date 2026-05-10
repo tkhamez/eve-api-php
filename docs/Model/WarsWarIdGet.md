@@ -1,4 +1,4 @@
-# # WarsWarIdGet
+# WarsWarIdGet
 
 ## Properties
 

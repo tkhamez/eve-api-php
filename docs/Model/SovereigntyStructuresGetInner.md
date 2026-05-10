@@ -1,4 +1,4 @@
-# # SovereigntyStructuresGetInner
+# SovereigntyStructuresGetInner
 
 ## Properties
 

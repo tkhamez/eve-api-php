@@ -1,4 +1,4 @@
-# # SovereigntyCampaignsGetInnerParticipantsInner
+# SovereigntyCampaignsGetInnerParticipantsInner
 
 ## Properties
 

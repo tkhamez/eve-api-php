@@ -1,4 +1,4 @@
-# # CharactersCharacterIdCalendarEventIdGet
+# CharactersCharacterIdCalendarEventIdGet
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# # RouteRequestBody
+# RouteRequestBody
 
 ## Properties
 

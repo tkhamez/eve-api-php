@@ -1,4 +1,4 @@
-# # CorporationsProjectsDetailConfiguration
+# CorporationsProjectsDetailConfiguration
 
 ## Properties
 
@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **destroy_ship** | [**\Tkhamez\Eve\API\Model\CorporationsProjectsDetailConfigurationdestroyship**](CorporationsProjectsDetailConfigurationdestroyship.md) | Destroy ship | [optional]
 **earn_loyalty_point** | [**\Tkhamez\Eve\API\Model\CorporationsProjectsDetailConfigurationearnloyaltypoints**](CorporationsProjectsDetailConfigurationearnloyaltypoints.md) | Earn loyalty point | [optional]
 **lost_ship** | [**\Tkhamez\Eve\API\Model\CorporationsProjectsDetailConfigurationlostship**](CorporationsProjectsDetailConfigurationlostship.md) | Lost ship | [optional]
-**manual** | **object** |  | [optional]
+**manual** | **object** | Manual contribution | [optional]
 **manufacture_item** | [**\Tkhamez\Eve\API\Model\CorporationsProjectsDetailConfigurationmanufactureitem**](CorporationsProjectsDetailConfigurationmanufactureitem.md) | Manufacture item | [optional]
 **mine_material** | [**\Tkhamez\Eve\API\Model\CorporationsProjectsDetailConfigurationminematerial**](CorporationsProjectsDetailConfigurationminematerial.md) | Mine material | [optional]
 **remote_boost_shield** | [**\Tkhamez\Eve\API\Model\CorporationsProjectsDetailConfigurationremoteboostshield**](CorporationsProjectsDetailConfigurationremoteboostshield.md) | Remote boost shield | [optional]

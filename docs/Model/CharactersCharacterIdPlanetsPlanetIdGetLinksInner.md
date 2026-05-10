@@ -1,4 +1,4 @@
-# # CharactersCharacterIdPlanetsPlanetIdGetLinksInner
+# CharactersCharacterIdPlanetsPlanetIdGetLinksInner
 
 ## Properties
 

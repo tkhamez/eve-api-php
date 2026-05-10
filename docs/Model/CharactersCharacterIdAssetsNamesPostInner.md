@@ -1,4 +1,4 @@
-# # CharactersCharacterIdAssetsNamesPostInner
+# CharactersCharacterIdAssetsNamesPostInner
 
 ## Properties
 

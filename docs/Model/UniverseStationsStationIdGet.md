@@ -1,4 +1,4 @@
-# # UniverseStationsStationIdGet
+# UniverseStationsStationIdGet
 
 ## Properties
 

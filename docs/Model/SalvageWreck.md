@@ -1,4 +1,4 @@
-# # SalvageWreck
+# SalvageWreck
 
 ## Properties
 

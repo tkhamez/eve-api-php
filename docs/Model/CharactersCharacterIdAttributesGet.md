@@ -1,4 +1,4 @@
-# # CharactersCharacterIdAttributesGet
+# CharactersCharacterIdAttributesGet
 
 ## Properties
 

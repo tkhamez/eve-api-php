@@ -1,4 +1,4 @@
-# # CorporationsCorporationIdDivisionsGetHangarInner
+# CorporationsCorporationIdDivisionsGetHangarInner
 
 ## Properties
 

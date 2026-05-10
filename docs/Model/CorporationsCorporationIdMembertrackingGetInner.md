@@ -1,4 +1,4 @@
-# # CorporationsCorporationIdMembertrackingGetInner
+# CorporationsCorporationIdMembertrackingGetInner
 
 ## Properties
 

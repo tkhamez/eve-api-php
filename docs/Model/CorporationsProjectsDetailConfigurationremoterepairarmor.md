@@ -1,4 +1,4 @@
-# # CorporationsProjectsDetailConfigurationremoterepairarmor
+# CorporationsProjectsDetailConfigurationremoterepairarmor
 
 ## Properties
 

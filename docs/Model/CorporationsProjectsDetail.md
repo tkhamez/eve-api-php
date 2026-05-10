@@ -1,4 +1,4 @@
-# # CorporationsProjectsDetail
+# CorporationsProjectsDetail
 
 ## Properties
 
@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **contribution** | [**\Tkhamez\Eve\API\Model\CorporationsProjectsDetailContribution**](CorporationsProjectsDetailContribution.md) | Project&#39;s contribution settings | [optional]
 **creator** | [**\Tkhamez\Eve\API\Model\CorporationsProjectsDetailCreator**](CorporationsProjectsDetailCreator.md) | Project&#39;s creator |
 **details** | [**\Tkhamez\Eve\API\Model\CorporationsProjectsDetailDetails**](CorporationsProjectsDetailDetails.md) | Project&#39;s details |
-**id** | **string** |  |
+**id** | **string** | Project&#39;s ID |
 **last_modified** | **\DateTime** | Moment this project was last modified. Project contributions also count as a modification |
 **name** | **string** | Project&#39;s name |
 **progress** | [**\Tkhamez\Eve\API\Model\CorporationsProjectsDetailProgress**](CorporationsProjectsDetailProgress.md) | Project&#39;s progress |

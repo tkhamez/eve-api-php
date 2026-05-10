@@ -1,4 +1,4 @@
-# # AlliancesAllianceIdContactsGetInner
+# AlliancesAllianceIdContactsGetInner
 
 ## Properties
 

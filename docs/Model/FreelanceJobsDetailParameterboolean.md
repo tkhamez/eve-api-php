@@ -1,4 +1,4 @@
-# # FreelanceJobsDetailParameterboolean
+# FreelanceJobsDetailParameterboolean
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# # CharactersCharacterIdPlanetsPlanetIdGetRoutesInner
+# CharactersCharacterIdPlanetsPlanetIdGetRoutesInner
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# # UniverseIdsPostRegionsInner
+# UniverseIdsPostRegionsInner
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# # CharactersCharacterIdCalendarGetInner
+# CharactersCharacterIdCalendarGetInner
 
 ## Properties
 

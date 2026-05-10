@@ -1,4 +1,4 @@
-# # PostUiOpenwindowNewmailRequest
+# PostUiOpenwindowNewmailRequest
 
 ## Properties
 

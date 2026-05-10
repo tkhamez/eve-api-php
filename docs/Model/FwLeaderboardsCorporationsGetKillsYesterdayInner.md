@@ -1,4 +1,4 @@
-# # FwLeaderboardsCorporationsGetKillsYesterdayInner
+# FwLeaderboardsCorporationsGetKillsYesterdayInner
 
 ## Properties
 

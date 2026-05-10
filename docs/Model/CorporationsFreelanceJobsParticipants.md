@@ -1,4 +1,4 @@
-# # CorporationsFreelanceJobsParticipants
+# CorporationsFreelanceJobsParticipants
 
 ## Properties
 

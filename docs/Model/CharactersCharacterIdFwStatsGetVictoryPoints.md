@@ -1,4 +1,4 @@
-# # CharactersCharacterIdFwStatsGetVictoryPoints
+# CharactersCharacterIdFwStatsGetVictoryPoints
 
 ## Properties
 

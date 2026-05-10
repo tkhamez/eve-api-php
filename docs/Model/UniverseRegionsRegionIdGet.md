@@ -1,4 +1,4 @@
-# # UniverseRegionsRegionIdGet
+# UniverseRegionsRegionIdGet
 
 ## Properties
 

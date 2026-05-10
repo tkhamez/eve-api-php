@@ -1,4 +1,4 @@
-# # FwLeaderboardsCorporationsGet
+# FwLeaderboardsCorporationsGet
 
 ## Properties
 

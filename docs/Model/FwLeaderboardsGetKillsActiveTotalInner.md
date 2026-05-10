@@ -1,4 +1,4 @@
-# # FwLeaderboardsGetKillsActiveTotalInner
+# FwLeaderboardsGetKillsActiveTotalInner
 
 ## Properties
 

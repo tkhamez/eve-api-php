@@ -1,4 +1,4 @@
-# # CorporationsProjectsDetailConfigurationscansignature
+# CorporationsProjectsDetailConfigurationscansignature
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# # UniverseSystemKillsGetInner
+# UniverseSystemKillsGetInner
 
 ## Properties
 

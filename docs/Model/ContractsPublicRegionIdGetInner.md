@@ -1,4 +1,4 @@
-# # ContractsPublicRegionIdGetInner
+# ContractsPublicRegionIdGetInner
 
 ## Properties
 

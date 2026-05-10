@@ -1,4 +1,4 @@
-# # CorporationsCorporationIdFwStatsGetKills
+# CorporationsCorporationIdFwStatsGetKills
 
 ## Properties
 

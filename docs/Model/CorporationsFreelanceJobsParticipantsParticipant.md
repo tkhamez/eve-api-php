@@ -1,11 +1,11 @@
-# # CorporationsFreelanceJobsParticipantsParticipant
+# CorporationsFreelanceJobsParticipantsParticipant
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **contributed** | **int** | Participant&#39;s contributed progress |
-**id** | **int** |  |
+**id** | **int** | Participant&#39;s character ID |
 **name** | **string** | Participant&#39;s name |
 **state** | **string** | Participant&#39;s state |
 

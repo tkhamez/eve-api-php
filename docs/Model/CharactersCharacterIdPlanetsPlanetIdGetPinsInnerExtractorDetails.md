@@ -1,4 +1,4 @@
-# # CharactersCharacterIdPlanetsPlanetIdGetPinsInnerExtractorDetails
+# CharactersCharacterIdPlanetsPlanetIdGetPinsInnerExtractorDetails
 
 ## Properties
 

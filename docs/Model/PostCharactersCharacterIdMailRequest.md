@@ -1,4 +1,4 @@
-# # PostCharactersCharacterIdMailRequest
+# PostCharactersCharacterIdMailRequest
 
 ## Properties
 

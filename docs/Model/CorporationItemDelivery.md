@@ -1,4 +1,4 @@
-# # CorporationItemDelivery
+# CorporationItemDelivery
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# # DamageShip
+# DamageShip
 
 ## Properties
 

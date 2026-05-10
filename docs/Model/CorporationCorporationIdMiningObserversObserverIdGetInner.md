@@ -1,4 +1,4 @@
-# # CorporationCorporationIdMiningObserversObserverIdGetInner
+# CorporationCorporationIdMiningObserversObserverIdGetInner
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# # CharactersCharacterIdClonesGet
+# CharactersCharacterIdClonesGet
 
 ## Properties
 

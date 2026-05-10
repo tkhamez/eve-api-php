@@ -1,4 +1,4 @@
-# # MetaStatus
+# MetaStatus
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# # EarnLoyaltyPoint
+# EarnLoyaltyPoint
 
 ## Properties
 

@@ -1,10 +1,10 @@
-# # FreelanceJobsDetailFreelancejob
+# FreelanceJobsDetailFreelancejob
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **string** |  |
+**id** | **string** | Job&#39;s ID |
 **last_modified** | **\DateTime** | Job&#39;s last modified |
 **name** | **string** | Job&#39;s name |
 **progress** | [**\Tkhamez\Eve\API\Model\FreelanceJobsDetailProgress**](FreelanceJobsDetailProgress.md) | Job&#39;s progress |

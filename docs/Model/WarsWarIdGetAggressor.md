@@ -1,4 +1,4 @@
-# # WarsWarIdGetAggressor
+# WarsWarIdGetAggressor
 
 ## Properties
 

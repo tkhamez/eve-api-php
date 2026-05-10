@@ -1,4 +1,4 @@
-# # FwLeaderboardsCharactersGetKillsLastWeekInner
+# FwLeaderboardsCharactersGetKillsLastWeekInner
 
 ## Properties
 

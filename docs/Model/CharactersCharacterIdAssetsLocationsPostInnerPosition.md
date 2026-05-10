@@ -1,4 +1,4 @@
-# # CharactersCharacterIdAssetsLocationsPostInnerPosition
+# CharactersCharacterIdAssetsLocationsPostInnerPosition
 
 ## Properties
 

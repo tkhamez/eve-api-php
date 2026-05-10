@@ -1,4 +1,4 @@
-# # FreelanceJobsDetailCreator
+# FreelanceJobsDetailCreator
 
 ## Properties
 

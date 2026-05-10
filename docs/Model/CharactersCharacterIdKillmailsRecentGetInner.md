@@ -1,4 +1,4 @@
-# # CharactersCharacterIdKillmailsRecentGetInner
+# CharactersCharacterIdKillmailsRecentGetInner
 
 ## Properties
 

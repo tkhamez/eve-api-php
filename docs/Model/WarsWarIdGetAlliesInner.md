@@ -1,4 +1,4 @@
-# # WarsWarIdGetAlliesInner
+# WarsWarIdGetAlliesInner
 
 ## Properties
 

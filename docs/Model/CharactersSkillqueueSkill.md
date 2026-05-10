@@ -1,4 +1,4 @@
-# # CharactersSkillqueueSkill
+# CharactersSkillqueueSkill
 
 ## Properties
 
@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **level_end_sp** | **int** | The Skill Points at the end of the level | [optional]
 **level_start_sp** | **int** | The Skill Points at the start of the level | [optional]
 **queue_position** | **int** | The position of the skill in the queue |
-**skill_id** | **int** |  |
+**skill_id** | **int** | The TypeID of the skill |
 **start_date** | **\DateTime** | The date the skill training will start/continue | [optional]
 **training_start_sp** | **int** | The Skill Points at the start of training | [optional]
 

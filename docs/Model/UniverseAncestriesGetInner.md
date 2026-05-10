@@ -1,4 +1,4 @@
-# # UniverseAncestriesGetInner
+# UniverseAncestriesGetInner
 
 ## Properties
 

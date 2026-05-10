@@ -1,4 +1,4 @@
-# # CorporationsCorporationIdBlueprintsGetInner
+# CorporationsCorporationIdBlueprintsGetInner
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# # PostCharactersCharacterIdMailLabelsRequest
+# PostCharactersCharacterIdMailLabelsRequest
 
 ## Properties
 

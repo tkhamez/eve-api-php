@@ -1,4 +1,4 @@
-# # FreelanceJobsDetailAccessandvisibility
+# FreelanceJobsDetailAccessandvisibility
 
 ## Properties
 

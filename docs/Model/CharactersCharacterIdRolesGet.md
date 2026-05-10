@@ -1,4 +1,4 @@
-# # CharactersCharacterIdRolesGet
+# CharactersCharacterIdRolesGet
 
 ## Properties
 

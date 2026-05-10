@@ -1,4 +1,4 @@
-# # UniversePlanetsPlanetIdGet
+# UniversePlanetsPlanetIdGet
 
 ## Properties
 

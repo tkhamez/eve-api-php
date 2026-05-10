@@ -1,4 +1,4 @@
-# # CorporationsProjectsDetailConfigurationcapturefwcomplex
+# CorporationsProjectsDetailConfigurationcapturefwcomplex
 
 ## Properties
 

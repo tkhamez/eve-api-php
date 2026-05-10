@@ -1,4 +1,4 @@
-# # FreelanceJobsDetailParameteroptions
+# FreelanceJobsDetailParameteroptions
 
 ## Properties
 

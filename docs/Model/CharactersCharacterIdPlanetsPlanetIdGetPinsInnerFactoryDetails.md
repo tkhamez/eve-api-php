@@ -1,4 +1,4 @@
-# # CharactersCharacterIdPlanetsPlanetIdGetPinsInnerFactoryDetails
+# CharactersCharacterIdPlanetsPlanetIdGetPinsInnerFactoryDetails
 
 ## Properties
 

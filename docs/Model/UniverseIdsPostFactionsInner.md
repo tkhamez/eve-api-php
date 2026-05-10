@@ -1,4 +1,4 @@
-# # UniverseIdsPostFactionsInner
+# UniverseIdsPostFactionsInner
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# # CharactersFreelanceJobsParticipation
+# CharactersFreelanceJobsParticipation
 
 ## Properties
 

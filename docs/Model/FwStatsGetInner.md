@@ -1,4 +1,4 @@
-# # FwStatsGetInner
+# FwStatsGetInner
 
 ## Properties
 

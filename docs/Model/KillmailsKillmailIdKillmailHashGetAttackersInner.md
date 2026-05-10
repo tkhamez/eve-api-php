@@ -1,4 +1,4 @@
-# # KillmailsKillmailIdKillmailHashGetAttackersInner
+# KillmailsKillmailIdKillmailHashGetAttackersInner
 
 ## Properties
 
