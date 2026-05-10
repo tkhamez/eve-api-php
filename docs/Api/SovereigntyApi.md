@@ -14,7 +14,7 @@ All URIs are relative to https://esi.evetech.net, except if the operation define
 ## `getSovereigntyCampaigns()`
 
 ```php
-getSovereigntyCampaigns($accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\SovereigntyCampaignsGetInner[]
+getSovereigntyCampaigns($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since): \Tkhamez\Eve\API\Model\SovereigntyCampaignsGetInner[]
 ```
 
 List sovereignty campaigns
@@ -38,9 +38,10 @@ $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
 $x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
+$if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
 try {
-    $result = $apiInstance->getSovereigntyCampaigns($accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
+    $result = $apiInstance->getSovereigntyCampaigns($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SovereigntyApi->getSovereigntyCampaigns: ', $e->getMessage(), PHP_EOL;
@@ -55,6 +56,7 @@ try {
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
 | **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
+| **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
 ### Return type
 
@@ -76,7 +78,7 @@ No authorization required
 ## `getSovereigntyMap()`
 
 ```php
-getSovereigntyMap($accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\SovereigntyMapGetInner[]
+getSovereigntyMap($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since): \Tkhamez\Eve\API\Model\SovereigntyMapGetInner[]
 ```
 
 List sovereignty of systems
@@ -100,9 +102,10 @@ $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
 $x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
+$if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
 try {
-    $result = $apiInstance->getSovereigntyMap($accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
+    $result = $apiInstance->getSovereigntyMap($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SovereigntyApi->getSovereigntyMap: ', $e->getMessage(), PHP_EOL;
@@ -117,6 +120,7 @@ try {
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
 | **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
+| **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
 ### Return type
 
@@ -138,7 +142,7 @@ No authorization required
 ## `getSovereigntyStructures()`
 
 ```php
-getSovereigntyStructures($accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\SovereigntyStructuresGetInner[]
+getSovereigntyStructures($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since): \Tkhamez\Eve\API\Model\SovereigntyStructuresGetInner[]
 ```
 
 List sovereignty structures
@@ -162,9 +166,10 @@ $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
 $x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
+$if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
 try {
-    $result = $apiInstance->getSovereigntyStructures($accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
+    $result = $apiInstance->getSovereigntyStructures($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SovereigntyApi->getSovereigntyStructures: ', $e->getMessage(), PHP_EOL;
@@ -179,6 +184,7 @@ try {
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
 | **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
+| **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
 ### Return type
 

@@ -22,7 +22,7 @@ All URIs are relative to https://esi.evetech.net, except if the operation define
 ## `getCharactersCharacterIdOrders()`
 
 ```php
-getCharactersCharacterIdOrders($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdOrdersGetInner[]
+getCharactersCharacterIdOrders($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since): \Tkhamez\Eve\API\Model\CharactersCharacterIdOrdersGetInner[]
 ```
 
 List open orders from a character
@@ -51,9 +51,10 @@ $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
 $x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
+$if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
 try {
-    $result = $apiInstance->getCharactersCharacterIdOrders($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
+    $result = $apiInstance->getCharactersCharacterIdOrders($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MarketApi->getCharactersCharacterIdOrders: ', $e->getMessage(), PHP_EOL;
@@ -69,6 +70,7 @@ try {
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
 | **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
+| **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
 ### Return type
 
@@ -90,7 +92,7 @@ try {
 ## `getCharactersCharacterIdOrdersHistory()`
 
 ```php
-getCharactersCharacterIdOrdersHistory($character_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdOrdersHistoryGetInner[]
+getCharactersCharacterIdOrdersHistory($character_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since): \Tkhamez\Eve\API\Model\CharactersCharacterIdOrdersHistoryGetInner[]
 ```
 
 List historical orders by a character
@@ -120,9 +122,10 @@ $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
 $x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
+$if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
 try {
-    $result = $apiInstance->getCharactersCharacterIdOrdersHistory($character_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
+    $result = $apiInstance->getCharactersCharacterIdOrdersHistory($character_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MarketApi->getCharactersCharacterIdOrdersHistory: ', $e->getMessage(), PHP_EOL;
@@ -139,6 +142,7 @@ try {
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
 | **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
+| **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
 ### Return type
 
@@ -160,7 +164,7 @@ try {
 ## `getCorporationsCorporationIdOrders()`
 
 ```php
-getCorporationsCorporationIdOrders($corporation_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdOrdersGetInner[]
+getCorporationsCorporationIdOrders($corporation_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since): \Tkhamez\Eve\API\Model\CorporationsCorporationIdOrdersGetInner[]
 ```
 
 List open orders from a corporation
@@ -190,9 +194,10 @@ $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
 $x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
+$if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
 try {
-    $result = $apiInstance->getCorporationsCorporationIdOrders($corporation_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
+    $result = $apiInstance->getCorporationsCorporationIdOrders($corporation_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MarketApi->getCorporationsCorporationIdOrders: ', $e->getMessage(), PHP_EOL;
@@ -209,6 +214,7 @@ try {
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
 | **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
+| **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
 ### Return type
 
@@ -230,7 +236,7 @@ try {
 ## `getCorporationsCorporationIdOrdersHistory()`
 
 ```php
-getCorporationsCorporationIdOrdersHistory($corporation_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsCorporationIdOrdersHistoryGetInner[]
+getCorporationsCorporationIdOrdersHistory($corporation_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since): \Tkhamez\Eve\API\Model\CorporationsCorporationIdOrdersHistoryGetInner[]
 ```
 
 List historical orders from a corporation
@@ -260,9 +266,10 @@ $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
 $x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
+$if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
 try {
-    $result = $apiInstance->getCorporationsCorporationIdOrdersHistory($corporation_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
+    $result = $apiInstance->getCorporationsCorporationIdOrdersHistory($corporation_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MarketApi->getCorporationsCorporationIdOrdersHistory: ', $e->getMessage(), PHP_EOL;
@@ -279,6 +286,7 @@ try {
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
 | **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
+| **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
 ### Return type
 
@@ -300,7 +308,7 @@ try {
 ## `getMarketsGroups()`
 
 ```php
-getMarketsGroups($accept_language, $if_none_match, $x_compatibility_date, $x_tenant): int[]
+getMarketsGroups($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since): int[]
 ```
 
 Get item groups
@@ -324,9 +332,10 @@ $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
 $x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
+$if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
 try {
-    $result = $apiInstance->getMarketsGroups($accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
+    $result = $apiInstance->getMarketsGroups($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MarketApi->getMarketsGroups: ', $e->getMessage(), PHP_EOL;
@@ -341,6 +350,7 @@ try {
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
 | **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
+| **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
 ### Return type
 
@@ -362,7 +372,7 @@ No authorization required
 ## `getMarketsGroupsMarketGroupId()`
 
 ```php
-getMarketsGroupsMarketGroupId($market_group_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\MarketsGroupsMarketGroupIdGet
+getMarketsGroupsMarketGroupId($market_group_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since): \Tkhamez\Eve\API\Model\MarketsGroupsMarketGroupIdGet
 ```
 
 Get item group information
@@ -387,9 +397,10 @@ $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
 $x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
+$if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
 try {
-    $result = $apiInstance->getMarketsGroupsMarketGroupId($market_group_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
+    $result = $apiInstance->getMarketsGroupsMarketGroupId($market_group_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MarketApi->getMarketsGroupsMarketGroupId: ', $e->getMessage(), PHP_EOL;
@@ -405,6 +416,7 @@ try {
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
 | **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
+| **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
 ### Return type
 
@@ -426,7 +438,7 @@ No authorization required
 ## `getMarketsPrices()`
 
 ```php
-getMarketsPrices($accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\MarketsPricesGetInner[]
+getMarketsPrices($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since): \Tkhamez\Eve\API\Model\MarketsPricesGetInner[]
 ```
 
 List market prices
@@ -450,9 +462,10 @@ $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
 $x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
+$if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
 try {
-    $result = $apiInstance->getMarketsPrices($accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
+    $result = $apiInstance->getMarketsPrices($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MarketApi->getMarketsPrices: ', $e->getMessage(), PHP_EOL;
@@ -467,6 +480,7 @@ try {
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
 | **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
+| **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
 ### Return type
 
@@ -488,7 +502,7 @@ No authorization required
 ## `getMarketsRegionIdHistory()`
 
 ```php
-getMarketsRegionIdHistory($region_id, $type_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\MarketsRegionIdHistoryGetInner[]
+getMarketsRegionIdHistory($region_id, $type_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since): \Tkhamez\Eve\API\Model\MarketsRegionIdHistoryGetInner[]
 ```
 
 List historical market statistics in a region
@@ -514,9 +528,10 @@ $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
 $x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
+$if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
 try {
-    $result = $apiInstance->getMarketsRegionIdHistory($region_id, $type_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
+    $result = $apiInstance->getMarketsRegionIdHistory($region_id, $type_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MarketApi->getMarketsRegionIdHistory: ', $e->getMessage(), PHP_EOL;
@@ -533,6 +548,7 @@ try {
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
 | **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
+| **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
 ### Return type
 
@@ -554,7 +570,7 @@ No authorization required
 ## `getMarketsRegionIdOrders()`
 
 ```php
-getMarketsRegionIdOrders($order_type, $region_id, $page, $type_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\MarketsRegionIdOrdersGetInner[]
+getMarketsRegionIdOrders($order_type, $region_id, $page, $type_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since): \Tkhamez\Eve\API\Model\MarketsRegionIdOrdersGetInner[]
 ```
 
 List orders in a region
@@ -582,9 +598,10 @@ $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
 $x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
+$if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
 try {
-    $result = $apiInstance->getMarketsRegionIdOrders($order_type, $region_id, $page, $type_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
+    $result = $apiInstance->getMarketsRegionIdOrders($order_type, $region_id, $page, $type_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MarketApi->getMarketsRegionIdOrders: ', $e->getMessage(), PHP_EOL;
@@ -603,6 +620,7 @@ try {
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
 | **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
+| **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
 ### Return type
 
@@ -624,7 +642,7 @@ No authorization required
 ## `getMarketsRegionIdTypes()`
 
 ```php
-getMarketsRegionIdTypes($region_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): int[]
+getMarketsRegionIdTypes($region_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since): int[]
 ```
 
 List type IDs relevant to a market
@@ -650,9 +668,10 @@ $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
 $x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
+$if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
 try {
-    $result = $apiInstance->getMarketsRegionIdTypes($region_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
+    $result = $apiInstance->getMarketsRegionIdTypes($region_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MarketApi->getMarketsRegionIdTypes: ', $e->getMessage(), PHP_EOL;
@@ -669,6 +688,7 @@ try {
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
 | **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
+| **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
 ### Return type
 
@@ -690,7 +710,7 @@ No authorization required
 ## `getMarketsStructuresStructureId()`
 
 ```php
-getMarketsStructuresStructureId($structure_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\MarketsStructuresStructureIdGetInner[]
+getMarketsStructuresStructureId($structure_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since): \Tkhamez\Eve\API\Model\MarketsStructuresStructureIdGetInner[]
 ```
 
 List orders in a structure
@@ -720,9 +740,10 @@ $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
 $x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
+$if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
 try {
-    $result = $apiInstance->getMarketsStructuresStructureId($structure_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
+    $result = $apiInstance->getMarketsStructuresStructureId($structure_id, $page, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MarketApi->getMarketsStructuresStructureId: ', $e->getMessage(), PHP_EOL;
@@ -739,6 +760,7 @@ try {
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
 | **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
+| **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
 ### Return type
 

@@ -20,7 +20,7 @@ All URIs are relative to https://esi.evetech.net, except if the operation define
 ## `deleteCharactersCharacterIdMailLabelsLabelId()`
 
 ```php
-deleteCharactersCharacterIdMailLabelsLabelId($character_id, $label_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant)
+deleteCharactersCharacterIdMailLabelsLabelId($character_id, $label_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since)
 ```
 
 Delete a mail label
@@ -50,9 +50,10 @@ $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
 $x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
+$if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
 try {
-    $apiInstance->deleteCharactersCharacterIdMailLabelsLabelId($character_id, $label_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
+    $apiInstance->deleteCharactersCharacterIdMailLabelsLabelId($character_id, $label_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since);
 } catch (Exception $e) {
     echo 'Exception when calling MailApi->deleteCharactersCharacterIdMailLabelsLabelId: ', $e->getMessage(), PHP_EOL;
 }
@@ -68,6 +69,7 @@ try {
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
 | **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
+| **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
 ### Return type
 
@@ -89,7 +91,7 @@ void (empty response body)
 ## `deleteCharactersCharacterIdMailMailId()`
 
 ```php
-deleteCharactersCharacterIdMailMailId($character_id, $mail_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant)
+deleteCharactersCharacterIdMailMailId($character_id, $mail_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since)
 ```
 
 Delete a mail
@@ -119,9 +121,10 @@ $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
 $x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
+$if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
 try {
-    $apiInstance->deleteCharactersCharacterIdMailMailId($character_id, $mail_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
+    $apiInstance->deleteCharactersCharacterIdMailMailId($character_id, $mail_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since);
 } catch (Exception $e) {
     echo 'Exception when calling MailApi->deleteCharactersCharacterIdMailMailId: ', $e->getMessage(), PHP_EOL;
 }
@@ -137,6 +140,7 @@ try {
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
 | **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
+| **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
 ### Return type
 
@@ -158,7 +162,7 @@ void (empty response body)
 ## `getCharactersCharacterIdMail()`
 
 ```php
-getCharactersCharacterIdMail($character_id, $labels, $last_mail_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdMailGetInner[]
+getCharactersCharacterIdMail($character_id, $labels, $last_mail_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since): \Tkhamez\Eve\API\Model\CharactersCharacterIdMailGetInner[]
 ```
 
 Return mail headers
@@ -189,9 +193,10 @@ $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
 $x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
+$if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
 try {
-    $result = $apiInstance->getCharactersCharacterIdMail($character_id, $labels, $last_mail_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
+    $result = $apiInstance->getCharactersCharacterIdMail($character_id, $labels, $last_mail_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MailApi->getCharactersCharacterIdMail: ', $e->getMessage(), PHP_EOL;
@@ -209,6 +214,7 @@ try {
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
 | **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
+| **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
 ### Return type
 
@@ -230,7 +236,7 @@ try {
 ## `getCharactersCharacterIdMailLabels()`
 
 ```php
-getCharactersCharacterIdMailLabels($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdMailLabelsGet
+getCharactersCharacterIdMailLabels($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since): \Tkhamez\Eve\API\Model\CharactersCharacterIdMailLabelsGet
 ```
 
 Get mail labels and unread counts
@@ -259,9 +265,10 @@ $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
 $x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
+$if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
 try {
-    $result = $apiInstance->getCharactersCharacterIdMailLabels($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
+    $result = $apiInstance->getCharactersCharacterIdMailLabels($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MailApi->getCharactersCharacterIdMailLabels: ', $e->getMessage(), PHP_EOL;
@@ -277,6 +284,7 @@ try {
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
 | **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
+| **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
 ### Return type
 
@@ -298,7 +306,7 @@ try {
 ## `getCharactersCharacterIdMailLists()`
 
 ```php
-getCharactersCharacterIdMailLists($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdMailListsGetInner[]
+getCharactersCharacterIdMailLists($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since): \Tkhamez\Eve\API\Model\CharactersCharacterIdMailListsGetInner[]
 ```
 
 Return mailing list subscriptions
@@ -327,9 +335,10 @@ $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
 $x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
+$if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
 try {
-    $result = $apiInstance->getCharactersCharacterIdMailLists($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
+    $result = $apiInstance->getCharactersCharacterIdMailLists($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MailApi->getCharactersCharacterIdMailLists: ', $e->getMessage(), PHP_EOL;
@@ -345,6 +354,7 @@ try {
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
 | **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
+| **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
 ### Return type
 
@@ -366,7 +376,7 @@ try {
 ## `getCharactersCharacterIdMailMailId()`
 
 ```php
-getCharactersCharacterIdMailMailId($character_id, $mail_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdMailMailIdGet
+getCharactersCharacterIdMailMailId($character_id, $mail_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since): \Tkhamez\Eve\API\Model\CharactersCharacterIdMailMailIdGet
 ```
 
 Return a mail
@@ -396,9 +406,10 @@ $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
 $x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
+$if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
 try {
-    $result = $apiInstance->getCharactersCharacterIdMailMailId($character_id, $mail_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
+    $result = $apiInstance->getCharactersCharacterIdMailMailId($character_id, $mail_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MailApi->getCharactersCharacterIdMailMailId: ', $e->getMessage(), PHP_EOL;
@@ -415,6 +426,7 @@ try {
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
 | **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
+| **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
 ### Return type
 
@@ -436,7 +448,7 @@ try {
 ## `postCharactersCharacterIdMail()`
 
 ```php
-postCharactersCharacterIdMail($character_id, $post_characters_character_id_mail_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): int
+postCharactersCharacterIdMail($character_id, $post_characters_character_id_mail_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since): int
 ```
 
 Send a new mail
@@ -466,9 +478,10 @@ $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
 $x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
+$if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
 try {
-    $result = $apiInstance->postCharactersCharacterIdMail($character_id, $post_characters_character_id_mail_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
+    $result = $apiInstance->postCharactersCharacterIdMail($character_id, $post_characters_character_id_mail_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MailApi->postCharactersCharacterIdMail: ', $e->getMessage(), PHP_EOL;
@@ -485,6 +498,7 @@ try {
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
 | **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
+| **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
 ### Return type
 
@@ -506,7 +520,7 @@ try {
 ## `postCharactersCharacterIdMailLabels()`
 
 ```php
-postCharactersCharacterIdMailLabels($character_id, $post_characters_character_id_mail_labels_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): int
+postCharactersCharacterIdMailLabels($character_id, $post_characters_character_id_mail_labels_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since): int
 ```
 
 Create a mail label
@@ -536,9 +550,10 @@ $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
 $x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
+$if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
 try {
-    $result = $apiInstance->postCharactersCharacterIdMailLabels($character_id, $post_characters_character_id_mail_labels_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
+    $result = $apiInstance->postCharactersCharacterIdMailLabels($character_id, $post_characters_character_id_mail_labels_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MailApi->postCharactersCharacterIdMailLabels: ', $e->getMessage(), PHP_EOL;
@@ -555,6 +570,7 @@ try {
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
 | **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
+| **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
 ### Return type
 
@@ -576,7 +592,7 @@ try {
 ## `putCharactersCharacterIdMailMailId()`
 
 ```php
-putCharactersCharacterIdMailMailId($character_id, $mail_id, $put_characters_character_id_mail_mail_id_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant)
+putCharactersCharacterIdMailMailId($character_id, $mail_id, $put_characters_character_id_mail_mail_id_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since)
 ```
 
 Update metadata about a mail
@@ -607,9 +623,10 @@ $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
 $x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
+$if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
 try {
-    $apiInstance->putCharactersCharacterIdMailMailId($character_id, $mail_id, $put_characters_character_id_mail_mail_id_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
+    $apiInstance->putCharactersCharacterIdMailMailId($character_id, $mail_id, $put_characters_character_id_mail_mail_id_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since);
 } catch (Exception $e) {
     echo 'Exception when calling MailApi->putCharactersCharacterIdMailMailId: ', $e->getMessage(), PHP_EOL;
 }
@@ -626,6 +643,7 @@ try {
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
 | **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
+| **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
 ### Return type
 

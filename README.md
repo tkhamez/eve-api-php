@@ -32,7 +32,7 @@ To install the bindings via [Composer](https://getcomposer.org/), add the follow
 ```json
 {
   "require": {
-    "tkhamez/eve-api": "^12"
+    "tkhamez/eve-api": "^13"
   }
 }
 ```
@@ -68,9 +68,10 @@ $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
 $x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
+$if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
 try {
-    $result = $apiInstance->getAlliances($accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
+    $result = $apiInstance->getAlliances($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AllianceApi->getAlliances: ', $e->getMessage(), PHP_EOL;
@@ -85,7 +86,7 @@ All URIs are relative to *https://esi.evetech.net*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *AllianceApi* | [**getAlliances**](docs/Api/AllianceApi.md#getalliances) | **GET** /alliances | List all alliances
-*AllianceApi* | [**getAlliancesAllianceId**](docs/Api/AllianceApi.md#getalliancesallianceid) | **GET** /alliances/{alliance_id} | Get alliance information
+*AllianceApi* | [**getAlliancesAllianceId**](docs/Api/AllianceApi.md#getalliancesallianceid) | **GET** /alliances/{alliance_id} | Get alliance&#39;s public information
 *AllianceApi* | [**getAlliancesAllianceIdCorporations**](docs/Api/AllianceApi.md#getalliancesallianceidcorporations) | **GET** /alliances/{alliance_id}/corporations | List alliance&#39;s corporations
 *AllianceApi* | [**getAlliancesAllianceIdIcons**](docs/Api/AllianceApi.md#getalliancesallianceidicons) | **GET** /alliances/{alliance_id}/icons | Get alliance icon
 *AssetsApi* | [**getCharactersCharacterIdAssets**](docs/Api/AssetsApi.md#getcharacterscharacteridassets) | **GET** /characters/{character_id}/assets | Get character assets
@@ -132,7 +133,7 @@ Class | Method | HTTP request | Description
 *ContractsApi* | [**getCorporationsCorporationIdContracts**](docs/Api/ContractsApi.md#getcorporationscorporationidcontracts) | **GET** /corporations/{corporation_id}/contracts | Get corporation contracts
 *ContractsApi* | [**getCorporationsCorporationIdContractsContractIdBids**](docs/Api/ContractsApi.md#getcorporationscorporationidcontractscontractidbids) | **GET** /corporations/{corporation_id}/contracts/{contract_id}/bids | Get corporation contract bids
 *ContractsApi* | [**getCorporationsCorporationIdContractsContractIdItems**](docs/Api/ContractsApi.md#getcorporationscorporationidcontractscontractiditems) | **GET** /corporations/{corporation_id}/contracts/{contract_id}/items | Get corporation contract items
-*CorporationApi* | [**getCorporationsCorporationId**](docs/Api/CorporationApi.md#getcorporationscorporationid) | **GET** /corporations/{corporation_id} | Get corporation information
+*CorporationApi* | [**getCorporationsCorporationId**](docs/Api/CorporationApi.md#getcorporationscorporationid) | **GET** /corporations/{corporation_id} | Get corporation&#39;s public information
 *CorporationApi* | [**getCorporationsCorporationIdAlliancehistory**](docs/Api/CorporationApi.md#getcorporationscorporationidalliancehistory) | **GET** /corporations/{corporation_id}/alliancehistory | Get alliance history
 *CorporationApi* | [**getCorporationsCorporationIdBlueprints**](docs/Api/CorporationApi.md#getcorporationscorporationidblueprints) | **GET** /corporations/{corporation_id}/blueprints | Get corporation blueprints
 *CorporationApi* | [**getCorporationsCorporationIdContainersLogs**](docs/Api/CorporationApi.md#getcorporationscorporationidcontainerslogs) | **GET** /corporations/{corporation_id}/containers/logs | Get all corporation ALSC logs
@@ -295,10 +296,10 @@ Class | Method | HTTP request | Description
 
 ## Models
 
+- [AllianceDetail](docs/Model/AllianceDetail.md)
 - [AllianceId](docs/Model/AllianceId.md)
 - [AlliancesAllianceIdContactsGetInner](docs/Model/AlliancesAllianceIdContactsGetInner.md)
 - [AlliancesAllianceIdContactsLabelsGetInner](docs/Model/AlliancesAllianceIdContactsLabelsGetInner.md)
-- [AlliancesAllianceIdGet](docs/Model/AlliancesAllianceIdGet.md)
 - [AlliancesAllianceIdIconsGet](docs/Model/AlliancesAllianceIdIconsGet.md)
 - [Boolean](docs/Model/Boolean.md)
 - [CaptureFwComplex](docs/Model/CaptureFwComplex.md)
@@ -330,7 +331,6 @@ Class | Method | HTTP request | Description
 - [CharactersCharacterIdFwStatsGet](docs/Model/CharactersCharacterIdFwStatsGet.md)
 - [CharactersCharacterIdFwStatsGetKills](docs/Model/CharactersCharacterIdFwStatsGetKills.md)
 - [CharactersCharacterIdFwStatsGetVictoryPoints](docs/Model/CharactersCharacterIdFwStatsGetVictoryPoints.md)
-- [CharactersCharacterIdGet](docs/Model/CharactersCharacterIdGet.md)
 - [CharactersCharacterIdIndustryJobsGetInner](docs/Model/CharactersCharacterIdIndustryJobsGetInner.md)
 - [CharactersCharacterIdKillmailsRecentGetInner](docs/Model/CharactersCharacterIdKillmailsRecentGetInner.md)
 - [CharactersCharacterIdLocationGet](docs/Model/CharactersCharacterIdLocationGet.md)
@@ -361,15 +361,16 @@ Class | Method | HTTP request | Description
 - [CharactersCharacterIdRolesGet](docs/Model/CharactersCharacterIdRolesGet.md)
 - [CharactersCharacterIdSearchGet](docs/Model/CharactersCharacterIdSearchGet.md)
 - [CharactersCharacterIdShipGet](docs/Model/CharactersCharacterIdShipGet.md)
-- [CharactersCharacterIdSkillqueueGetInner](docs/Model/CharactersCharacterIdSkillqueueGetInner.md)
-- [CharactersCharacterIdSkillsGet](docs/Model/CharactersCharacterIdSkillsGet.md)
-- [CharactersCharacterIdSkillsGetSkillsInner](docs/Model/CharactersCharacterIdSkillsGetSkillsInner.md)
 - [CharactersCharacterIdStandingsGetInner](docs/Model/CharactersCharacterIdStandingsGetInner.md)
 - [CharactersCharacterIdTitlesGetInner](docs/Model/CharactersCharacterIdTitlesGetInner.md)
 - [CharactersCharacterIdWalletJournalGetInner](docs/Model/CharactersCharacterIdWalletJournalGetInner.md)
 - [CharactersCharacterIdWalletTransactionsGetInner](docs/Model/CharactersCharacterIdWalletTransactionsGetInner.md)
+- [CharactersDetail](docs/Model/CharactersDetail.md)
 - [CharactersFreelanceJobsListing](docs/Model/CharactersFreelanceJobsListing.md)
 - [CharactersFreelanceJobsParticipation](docs/Model/CharactersFreelanceJobsParticipation.md)
+- [CharactersSkillqueueSkill](docs/Model/CharactersSkillqueueSkill.md)
+- [CharactersSkills](docs/Model/CharactersSkills.md)
+- [CharactersSkillsSkill](docs/Model/CharactersSkillsSkill.md)
 - [ConstellationId](docs/Model/ConstellationId.md)
 - [ContractsPublicBidsContractIdGetInner](docs/Model/ContractsPublicBidsContractIdGetInner.md)
 - [ContractsPublicItemsContractIdGetInner](docs/Model/ContractsPublicItemsContractIdGetInner.md)
@@ -393,7 +394,6 @@ Class | Method | HTTP request | Description
 - [CorporationsCorporationIdFwStatsGet](docs/Model/CorporationsCorporationIdFwStatsGet.md)
 - [CorporationsCorporationIdFwStatsGetKills](docs/Model/CorporationsCorporationIdFwStatsGetKills.md)
 - [CorporationsCorporationIdFwStatsGetVictoryPoints](docs/Model/CorporationsCorporationIdFwStatsGetVictoryPoints.md)
-- [CorporationsCorporationIdGet](docs/Model/CorporationsCorporationIdGet.md)
 - [CorporationsCorporationIdIconsGet](docs/Model/CorporationsCorporationIdIconsGet.md)
 - [CorporationsCorporationIdIndustryJobsGetInner](docs/Model/CorporationsCorporationIdIndustryJobsGetInner.md)
 - [CorporationsCorporationIdMedalsGetInner](docs/Model/CorporationsCorporationIdMedalsGetInner.md)
@@ -414,6 +414,7 @@ Class | Method | HTTP request | Description
 - [CorporationsCorporationIdWalletsDivisionJournalGetInner](docs/Model/CorporationsCorporationIdWalletsDivisionJournalGetInner.md)
 - [CorporationsCorporationIdWalletsDivisionTransactionsGetInner](docs/Model/CorporationsCorporationIdWalletsDivisionTransactionsGetInner.md)
 - [CorporationsCorporationIdWalletsGetInner](docs/Model/CorporationsCorporationIdWalletsGetInner.md)
+- [CorporationsDetail](docs/Model/CorporationsDetail.md)
 - [CorporationsFreelanceJobsListing](docs/Model/CorporationsFreelanceJobsListing.md)
 - [CorporationsFreelanceJobsParticipants](docs/Model/CorporationsFreelanceJobsParticipants.md)
 - [CorporationsFreelanceJobsParticipantsParticipant](docs/Model/CorporationsFreelanceJobsParticipantsParticipant.md)
@@ -641,6 +642,8 @@ Authentication schemes defined for the API:
 - **Flow**: `accessCode`
 - **Authorization URL**: `https://login.eveonline.com/v2/oauth/authorize`
 - **Scopes**: 
+    - **esi-access.read_lists.v1**: esi-access.read_lists.v1
+    - **esi-activities.read_character.v1**: esi-activities.read_character.v1
     - **esi-alliances.read_contacts.v1**: esi-alliances.read_contacts.v1
     - **esi-assets.read_assets.v1**: esi-assets.read_assets.v1
     - **esi-assets.read_corporation_assets.v1**: esi-assets.read_corporation_assets.v1
@@ -702,6 +705,8 @@ Authentication schemes defined for the API:
     - **esi-search.search_structures.v1**: esi-search.search_structures.v1
     - **esi-skills.read_skillqueue.v1**: esi-skills.read_skillqueue.v1
     - **esi-skills.read_skills.v1**: esi-skills.read_skills.v1
+    - **esi-structures.read_character.v1**: esi-structures.read_character.v1
+    - **esi-structures.read_corporation.v1**: esi-structures.read_corporation.v1
     - **esi-ui.open_window.v1**: esi-ui.open_window.v1
     - **esi-ui.write_waypoint.v1**: esi-ui.write_waypoint.v1
     - **esi-universe.read_structures.v1**: esi-universe.read_structures.v1

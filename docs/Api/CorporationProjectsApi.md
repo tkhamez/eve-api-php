@@ -15,7 +15,7 @@ All URIs are relative to https://esi.evetech.net, except if the operation define
 ## `getCorporationsProjectsContribution()`
 
 ```php
-getCorporationsProjectsContribution($corporation_id, $project_id, $character_id, $if_modified_since, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsProjectsContribution
+getCorporationsProjectsContribution($corporation_id, $project_id, $character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since): \Tkhamez\Eve\API\Model\CorporationsProjectsContribution
 ```
 
 Get your project contribution
@@ -42,14 +42,14 @@ $apiInstance = new Tkhamez\Eve\API\Api\CorporationProjectsApi(
 $corporation_id = 56; // int | The ID of the corporation
 $project_id = 'project_id_example'; // string | The ID of the project
 $character_id = 56; // int | The ID of the character
-$if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
 $x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
+$if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
 try {
-    $result = $apiInstance->getCorporationsProjectsContribution($corporation_id, $project_id, $character_id, $if_modified_since, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
+    $result = $apiInstance->getCorporationsProjectsContribution($corporation_id, $project_id, $character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CorporationProjectsApi->getCorporationsProjectsContribution: ', $e->getMessage(), PHP_EOL;
@@ -63,11 +63,11 @@ try {
 | **corporation_id** | **int**| The ID of the corporation | |
 | **project_id** | **string**| The ID of the project | |
 | **character_id** | **int**| The ID of the character | |
-| **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
 | **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
+| **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
 ### Return type
 
@@ -89,7 +89,7 @@ try {
 ## `getCorporationsProjectsContributors()`
 
 ```php
-getCorporationsProjectsContributors($corporation_id, $project_id, $after, $before, $limit, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsProjectsContributors
+getCorporationsProjectsContributors($corporation_id, $project_id, $after, $before, $limit, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since): \Tkhamez\Eve\API\Model\CorporationsProjectsContributors
 ```
 
 List project contributors
@@ -122,9 +122,10 @@ $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
 $x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
+$if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
 try {
-    $result = $apiInstance->getCorporationsProjectsContributors($corporation_id, $project_id, $after, $before, $limit, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
+    $result = $apiInstance->getCorporationsProjectsContributors($corporation_id, $project_id, $after, $before, $limit, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CorporationProjectsApi->getCorporationsProjectsContributors: ', $e->getMessage(), PHP_EOL;
@@ -144,6 +145,7 @@ try {
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
 | **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
+| **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
 ### Return type
 
@@ -165,7 +167,7 @@ try {
 ## `getCorporationsProjectsDetail()`
 
 ```php
-getCorporationsProjectsDetail($corporation_id, $project_id, $if_modified_since, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsProjectsDetail
+getCorporationsProjectsDetail($corporation_id, $project_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since): \Tkhamez\Eve\API\Model\CorporationsProjectsDetail
 ```
 
 Get project details
@@ -191,14 +193,14 @@ $apiInstance = new Tkhamez\Eve\API\Api\CorporationProjectsApi(
 );
 $corporation_id = 56; // int | The ID of the corporation
 $project_id = 'project_id_example'; // string | The ID of the project
-$if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
 $x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
+$if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
 try {
-    $result = $apiInstance->getCorporationsProjectsDetail($corporation_id, $project_id, $if_modified_since, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
+    $result = $apiInstance->getCorporationsProjectsDetail($corporation_id, $project_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CorporationProjectsApi->getCorporationsProjectsDetail: ', $e->getMessage(), PHP_EOL;
@@ -211,11 +213,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **corporation_id** | **int**| The ID of the corporation | |
 | **project_id** | **string**| The ID of the project | |
-| **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
 | **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
+| **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
 ### Return type
 
@@ -237,7 +239,7 @@ try {
 ## `getCorporationsProjectsListing()`
 
 ```php
-getCorporationsProjectsListing($corporation_id, $after, $before, $limit, $state, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\CorporationsProjectsListing
+getCorporationsProjectsListing($corporation_id, $after, $before, $limit, $state, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since): \Tkhamez\Eve\API\Model\CorporationsProjectsListing
 ```
 
 List corporation projects
@@ -270,9 +272,10 @@ $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
 $x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
+$if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
 try {
-    $result = $apiInstance->getCorporationsProjectsListing($corporation_id, $after, $before, $limit, $state, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
+    $result = $apiInstance->getCorporationsProjectsListing($corporation_id, $after, $before, $limit, $state, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CorporationProjectsApi->getCorporationsProjectsListing: ', $e->getMessage(), PHP_EOL;
@@ -292,6 +295,7 @@ try {
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
 | **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
+| **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
 ### Return type
 

@@ -25,7 +25,7 @@ All URIs are relative to https://esi.evetech.net, except if the operation define
 ## `deleteFleetsFleetIdMembersMemberId()`
 
 ```php
-deleteFleetsFleetIdMembersMemberId($fleet_id, $member_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant)
+deleteFleetsFleetIdMembersMemberId($fleet_id, $member_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since)
 ```
 
 Kick fleet member
@@ -55,9 +55,10 @@ $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
 $x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
+$if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
 try {
-    $apiInstance->deleteFleetsFleetIdMembersMemberId($fleet_id, $member_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
+    $apiInstance->deleteFleetsFleetIdMembersMemberId($fleet_id, $member_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->deleteFleetsFleetIdMembersMemberId: ', $e->getMessage(), PHP_EOL;
 }
@@ -73,6 +74,7 @@ try {
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
 | **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
+| **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
 ### Return type
 
@@ -94,7 +96,7 @@ void (empty response body)
 ## `deleteFleetsFleetIdSquadsSquadId()`
 
 ```php
-deleteFleetsFleetIdSquadsSquadId($fleet_id, $squad_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant)
+deleteFleetsFleetIdSquadsSquadId($fleet_id, $squad_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since)
 ```
 
 Delete fleet squad
@@ -124,9 +126,10 @@ $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
 $x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
+$if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
 try {
-    $apiInstance->deleteFleetsFleetIdSquadsSquadId($fleet_id, $squad_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
+    $apiInstance->deleteFleetsFleetIdSquadsSquadId($fleet_id, $squad_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->deleteFleetsFleetIdSquadsSquadId: ', $e->getMessage(), PHP_EOL;
 }
@@ -142,6 +145,7 @@ try {
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
 | **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
+| **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
 ### Return type
 
@@ -163,7 +167,7 @@ void (empty response body)
 ## `deleteFleetsFleetIdWingsWingId()`
 
 ```php
-deleteFleetsFleetIdWingsWingId($fleet_id, $wing_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant)
+deleteFleetsFleetIdWingsWingId($fleet_id, $wing_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since)
 ```
 
 Delete fleet wing
@@ -193,9 +197,10 @@ $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
 $x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
+$if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
 try {
-    $apiInstance->deleteFleetsFleetIdWingsWingId($fleet_id, $wing_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
+    $apiInstance->deleteFleetsFleetIdWingsWingId($fleet_id, $wing_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->deleteFleetsFleetIdWingsWingId: ', $e->getMessage(), PHP_EOL;
 }
@@ -211,6 +216,7 @@ try {
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
 | **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
+| **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
 ### Return type
 
@@ -232,7 +238,7 @@ void (empty response body)
 ## `getCharactersCharacterIdFleet()`
 
 ```php
-getCharactersCharacterIdFleet($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\CharactersCharacterIdFleetGet
+getCharactersCharacterIdFleet($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since): \Tkhamez\Eve\API\Model\CharactersCharacterIdFleetGet
 ```
 
 Get character fleet info
@@ -261,9 +267,10 @@ $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
 $x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
+$if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
 try {
-    $result = $apiInstance->getCharactersCharacterIdFleet($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
+    $result = $apiInstance->getCharactersCharacterIdFleet($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->getCharactersCharacterIdFleet: ', $e->getMessage(), PHP_EOL;
@@ -279,6 +286,7 @@ try {
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
 | **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
+| **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
 ### Return type
 
@@ -300,7 +308,7 @@ try {
 ## `getFleetsFleetId()`
 
 ```php
-getFleetsFleetId($fleet_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\FleetsFleetIdGet
+getFleetsFleetId($fleet_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since): \Tkhamez\Eve\API\Model\FleetsFleetIdGet
 ```
 
 Get fleet information
@@ -329,9 +337,10 @@ $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
 $x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
+$if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
 try {
-    $result = $apiInstance->getFleetsFleetId($fleet_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
+    $result = $apiInstance->getFleetsFleetId($fleet_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->getFleetsFleetId: ', $e->getMessage(), PHP_EOL;
@@ -347,6 +356,7 @@ try {
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
 | **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
+| **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
 ### Return type
 
@@ -368,7 +378,7 @@ try {
 ## `getFleetsFleetIdMembers()`
 
 ```php
-getFleetsFleetIdMembers($fleet_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\FleetsFleetIdMembersGetInner[]
+getFleetsFleetIdMembers($fleet_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since): \Tkhamez\Eve\API\Model\FleetsFleetIdMembersGetInner[]
 ```
 
 Get fleet members
@@ -397,9 +407,10 @@ $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
 $x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
+$if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
 try {
-    $result = $apiInstance->getFleetsFleetIdMembers($fleet_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
+    $result = $apiInstance->getFleetsFleetIdMembers($fleet_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->getFleetsFleetIdMembers: ', $e->getMessage(), PHP_EOL;
@@ -415,6 +426,7 @@ try {
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
 | **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
+| **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
 ### Return type
 
@@ -436,7 +448,7 @@ try {
 ## `getFleetsFleetIdWings()`
 
 ```php
-getFleetsFleetIdWings($fleet_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\FleetsFleetIdWingsGetInner[]
+getFleetsFleetIdWings($fleet_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since): \Tkhamez\Eve\API\Model\FleetsFleetIdWingsGetInner[]
 ```
 
 Get fleet wings
@@ -465,9 +477,10 @@ $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
 $x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
+$if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
 try {
-    $result = $apiInstance->getFleetsFleetIdWings($fleet_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
+    $result = $apiInstance->getFleetsFleetIdWings($fleet_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->getFleetsFleetIdWings: ', $e->getMessage(), PHP_EOL;
@@ -483,6 +496,7 @@ try {
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
 | **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
+| **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
 ### Return type
 
@@ -504,7 +518,7 @@ try {
 ## `postFleetsFleetIdMembers()`
 
 ```php
-postFleetsFleetIdMembers($fleet_id, $post_fleets_fleet_id_members_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant)
+postFleetsFleetIdMembers($fleet_id, $post_fleets_fleet_id_members_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since)
 ```
 
 Create fleet invitation
@@ -534,9 +548,10 @@ $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
 $x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
+$if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
 try {
-    $apiInstance->postFleetsFleetIdMembers($fleet_id, $post_fleets_fleet_id_members_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
+    $apiInstance->postFleetsFleetIdMembers($fleet_id, $post_fleets_fleet_id_members_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->postFleetsFleetIdMembers: ', $e->getMessage(), PHP_EOL;
 }
@@ -552,6 +567,7 @@ try {
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
 | **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
+| **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
 ### Return type
 
@@ -573,7 +589,7 @@ void (empty response body)
 ## `postFleetsFleetIdWings()`
 
 ```php
-postFleetsFleetIdWings($fleet_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\FleetsFleetIdWingsPost
+postFleetsFleetIdWings($fleet_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since): \Tkhamez\Eve\API\Model\FleetsFleetIdWingsPost
 ```
 
 Create fleet wing
@@ -602,9 +618,10 @@ $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
 $x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
+$if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
 try {
-    $result = $apiInstance->postFleetsFleetIdWings($fleet_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
+    $result = $apiInstance->postFleetsFleetIdWings($fleet_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->postFleetsFleetIdWings: ', $e->getMessage(), PHP_EOL;
@@ -620,6 +637,7 @@ try {
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
 | **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
+| **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
 ### Return type
 
@@ -641,7 +659,7 @@ try {
 ## `postFleetsFleetIdWingsWingIdSquads()`
 
 ```php
-postFleetsFleetIdWingsWingIdSquads($fleet_id, $wing_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant): \Tkhamez\Eve\API\Model\FleetsFleetIdWingsWingIdSquadsPost
+postFleetsFleetIdWingsWingIdSquads($fleet_id, $wing_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since): \Tkhamez\Eve\API\Model\FleetsFleetIdWingsWingIdSquadsPost
 ```
 
 Create fleet squad
@@ -671,9 +689,10 @@ $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
 $x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
+$if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
 try {
-    $result = $apiInstance->postFleetsFleetIdWingsWingIdSquads($fleet_id, $wing_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
+    $result = $apiInstance->postFleetsFleetIdWingsWingIdSquads($fleet_id, $wing_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->postFleetsFleetIdWingsWingIdSquads: ', $e->getMessage(), PHP_EOL;
@@ -690,6 +709,7 @@ try {
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
 | **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
+| **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
 ### Return type
 
@@ -711,7 +731,7 @@ try {
 ## `putFleetsFleetId()`
 
 ```php
-putFleetsFleetId($fleet_id, $put_fleets_fleet_id_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant)
+putFleetsFleetId($fleet_id, $put_fleets_fleet_id_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since)
 ```
 
 Update fleet
@@ -741,9 +761,10 @@ $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
 $x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
+$if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
 try {
-    $apiInstance->putFleetsFleetId($fleet_id, $put_fleets_fleet_id_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
+    $apiInstance->putFleetsFleetId($fleet_id, $put_fleets_fleet_id_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->putFleetsFleetId: ', $e->getMessage(), PHP_EOL;
 }
@@ -759,6 +780,7 @@ try {
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
 | **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
+| **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
 ### Return type
 
@@ -780,7 +802,7 @@ void (empty response body)
 ## `putFleetsFleetIdMembersMemberId()`
 
 ```php
-putFleetsFleetIdMembersMemberId($fleet_id, $member_id, $put_fleets_fleet_id_members_member_id_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant)
+putFleetsFleetIdMembersMemberId($fleet_id, $member_id, $put_fleets_fleet_id_members_member_id_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since)
 ```
 
 Move fleet member
@@ -811,9 +833,10 @@ $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
 $x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
+$if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
 try {
-    $apiInstance->putFleetsFleetIdMembersMemberId($fleet_id, $member_id, $put_fleets_fleet_id_members_member_id_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
+    $apiInstance->putFleetsFleetIdMembersMemberId($fleet_id, $member_id, $put_fleets_fleet_id_members_member_id_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->putFleetsFleetIdMembersMemberId: ', $e->getMessage(), PHP_EOL;
 }
@@ -830,6 +853,7 @@ try {
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
 | **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
+| **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
 ### Return type
 
@@ -851,7 +875,7 @@ void (empty response body)
 ## `putFleetsFleetIdSquadsSquadId()`
 
 ```php
-putFleetsFleetIdSquadsSquadId($fleet_id, $squad_id, $put_fleets_fleet_id_squads_squad_id_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant)
+putFleetsFleetIdSquadsSquadId($fleet_id, $squad_id, $put_fleets_fleet_id_squads_squad_id_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since)
 ```
 
 Rename fleet squad
@@ -882,9 +906,10 @@ $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
 $x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
+$if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
 try {
-    $apiInstance->putFleetsFleetIdSquadsSquadId($fleet_id, $squad_id, $put_fleets_fleet_id_squads_squad_id_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
+    $apiInstance->putFleetsFleetIdSquadsSquadId($fleet_id, $squad_id, $put_fleets_fleet_id_squads_squad_id_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->putFleetsFleetIdSquadsSquadId: ', $e->getMessage(), PHP_EOL;
 }
@@ -901,6 +926,7 @@ try {
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
 | **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
+| **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
 ### Return type
 
@@ -922,7 +948,7 @@ void (empty response body)
 ## `putFleetsFleetIdWingsWingId()`
 
 ```php
-putFleetsFleetIdWingsWingId($fleet_id, $wing_id, $put_fleets_fleet_id_squads_squad_id_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant)
+putFleetsFleetIdWingsWingId($fleet_id, $wing_id, $put_fleets_fleet_id_squads_squad_id_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since)
 ```
 
 Rename fleet wing
@@ -953,9 +979,10 @@ $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
 $x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
+$if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
 try {
-    $apiInstance->putFleetsFleetIdWingsWingId($fleet_id, $wing_id, $put_fleets_fleet_id_squads_squad_id_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant);
+    $apiInstance->putFleetsFleetIdWingsWingId($fleet_id, $wing_id, $put_fleets_fleet_id_squads_squad_id_request, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->putFleetsFleetIdWingsWingId: ', $e->getMessage(), PHP_EOL;
 }
@@ -972,6 +999,7 @@ try {
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
 | **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
+| **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
 ### Return type
 

@@ -14,9 +14,10 @@ Name | Type | Description | Notes
 **neutral_standing_tax_rate** | **float** |  | [optional]
 **office_id** | **int** | unique ID of this customs office |
 **reinforce_exit_end** | **int** |  |
-**reinforce_exit_start** | **int** | Together with reinforce_exit_end, marks a 2-hour period where this customs office could exit reinforcement mode during the day after initial attack |
+**reinforce_exit_start** | **int** | Together with reinforce_exit_end, marks a 2-hour or 6-hour (depending on the office type) period where this customs office could exit reinforcement mode during the day after initial attack |
 **standing_level** | **string** | Access is allowed only for entities with this level of standing or better | [optional]
 **system_id** | **int** | ID of the solar system this customs office is located in |
 **terrible_standing_tax_rate** | **float** |  | [optional]
+**type_id** | **int** | ID of the type of this customs office | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

@@ -15,6 +15,12 @@ For generator library changes see https://github.com/OpenAPITools/openapi-genera
 
 ## Notable changes
 
+### 13.20251216.0
+
+- Some model classes have been renamed, e.g. `CorporationsCorporationIdGet` is now `CorporationsDetail`.
+- Some methods have a new optional parameter, `$if_modified_since`, but it is not always the
+  last parameter.
+
 ### 8.20250826.0
 
 Beta status.
