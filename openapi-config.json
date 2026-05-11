@@ -1,7 +1,7 @@
 {
     "invokerPackage" : "Tkhamez\\Eve\\API",
     "gitUserId" : "tkhamez",
-    "gitRepoId" : "eve-api-php",
+    "gitRepoId" : "eve-api",
     "disallowAdditionalPropertiesIfNotPresent" : false,
     "enumUnknownDefaultCase" : true,
     "licenseName" : "MIT"

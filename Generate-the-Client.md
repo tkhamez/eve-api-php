@@ -43,10 +43,12 @@
   git add lib docs
   ```
 
-- Revert changes in `.gitignore` and `composer.json`:
+- Revert changes in `.gitignore` and `git_push.sh`:
   ```shell
-  git checkout .gitignore composer.json
+  git checkout .gitignore git_push.sh
   ```
+
+- Check `composer.json`, usually all changes can be reverted.
 
 - In `.openapi-generator/FILES`, delete all new lines that begin with `test/`.
 
