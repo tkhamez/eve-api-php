@@ -15,6 +15,12 @@ For generator library changes see https://github.com/OpenAPITools/openapi-genera
 
 ## Notable changes
 
+### 14.20260519.0
+
+- Update to compatibility date 2026-05-19.
+- Some model classes have been renamed, e.g. `SovereigntyMapGetInner` 
+  to `CharactersStructuresMercenaryDensDetailSkyhook`
+
 ### 13.20251216.0
 
 - Some model classes have been renamed, e.g. `CorporationsCorporationIdGet` is now `CorporationsDetail`.
