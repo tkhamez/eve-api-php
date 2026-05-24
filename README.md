@@ -32,7 +32,7 @@ To install the bindings via [Composer](https://getcomposer.org/), add the follow
 ```json
 {
   "require": {
-    "tkhamez/eve-api": "^13"
+    "tkhamez/eve-api": "^14"
   }
 }
 ```
@@ -58,23 +58,29 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Tkhamez\Eve\API\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Tkhamez\Eve\API\Api\AllianceApi(
+
+$apiInstance = new Tkhamez\Eve\API\Api\AccessListApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
+$access_list_id = new \Tkhamez\Eve\API\Model\Int(); // Int | The ID of the Access List
+$character_id = new \Tkhamez\Eve\API\Model\Int(); // Int | The ID of the character
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
+$x_compatibility_date = '2026-05-19'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
 try {
-    $result = $apiInstance->getAlliances($accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since);
+    $result = $apiInstance->getCharactersAccessListsDetail($access_list_id, $character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling AllianceApi->getAlliances: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling AccessListApi->getCharactersAccessListsDetail: ', $e->getMessage(), PHP_EOL;
 }
 
 ```
@@ -85,6 +91,11 @@ All URIs are relative to *https://esi.evetech.net*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*AccessListApi* | [**getCharactersAccessListsDetail**](docs/Api/AccessListApi.md#getcharactersaccesslistsdetail) | **GET** /characters/{character_id}/access-lists/{access_list_id} | Get Access List details
+*AccessListApi* | [**getCharactersAccessListsListing**](docs/Api/AccessListApi.md#getcharactersaccesslistslisting) | **GET** /characters/{character_id}/access-lists | List Access Lists
+*ActivitiesApi* | [**getCharactersMercenaryTacticalOperationsDetail**](docs/Api/ActivitiesApi.md#getcharactersmercenarytacticaloperationsdetail) | **GET** /characters/{character_id}/mercenary-tactical-operations/{operation_id} | Get Mercenary Tactical Operation details
+*ActivitiesApi* | [**getCharactersMercenaryTacticalOperationsListing**](docs/Api/ActivitiesApi.md#getcharactersmercenarytacticaloperationslisting) | **GET** /characters/{character_id}/mercenary-tactical-operations | List Mercenary Tactical Operations
+*ActivitiesApi* | [**getSkyhooksRaidable**](docs/Api/ActivitiesApi.md#getskyhooksraidable) | **GET** /skyhooks/raidable | List (upcoming) raidable Skyhooks
 *AllianceApi* | [**getAlliances**](docs/Api/AllianceApi.md#getalliances) | **GET** /alliances | List all alliances
 *AllianceApi* | [**getAlliancesAllianceId**](docs/Api/AllianceApi.md#getalliancesallianceid) | **GET** /alliances/{alliance_id} | Get alliance&#39;s public information
 *AllianceApi* | [**getAlliancesAllianceIdCorporations**](docs/Api/AllianceApi.md#getalliancesallianceidcorporations) | **GET** /alliances/{alliance_id}/corporations | List alliance&#39;s corporations
@@ -246,9 +257,14 @@ Class | Method | HTTP request | Description
 *SkillsApi* | [**getCharactersCharacterIdSkillqueue**](docs/Api/SkillsApi.md#getcharacterscharacteridskillqueue) | **GET** /characters/{character_id}/skillqueue | Get character&#39;s skill queue
 *SkillsApi* | [**getCharactersCharacterIdSkills**](docs/Api/SkillsApi.md#getcharacterscharacteridskills) | **GET** /characters/{character_id}/skills | Get character skills
 *SovereigntyApi* | [**getSovereigntyCampaigns**](docs/Api/SovereigntyApi.md#getsovereigntycampaigns) | **GET** /sovereignty/campaigns | List sovereignty campaigns
-*SovereigntyApi* | [**getSovereigntyMap**](docs/Api/SovereigntyApi.md#getsovereigntymap) | **GET** /sovereignty/map | List sovereignty of systems
-*SovereigntyApi* | [**getSovereigntyStructures**](docs/Api/SovereigntyApi.md#getsovereigntystructures) | **GET** /sovereignty/structures | List sovereignty structures
+*SovereigntyApi* | [**getSovereigntySystems**](docs/Api/SovereigntyApi.md#getsovereigntysystems) | **GET** /sovereignty/systems | List sovereignty details for K-space systems
 *StatusApi* | [**getStatus**](docs/Api/StatusApi.md#getstatus) | **GET** /status | Retrieve the uptime and player counts
+*StructuresApi* | [**getCharactersStructuresMercenaryDensDetail**](docs/Api/StructuresApi.md#getcharactersstructuresmercenarydensdetail) | **GET** /characters/{character_id}/structures/mercenary-dens/{mercenary_den_id} | Get Mercenary Den details
+*StructuresApi* | [**getCharactersStructuresMercenaryDensListing**](docs/Api/StructuresApi.md#getcharactersstructuresmercenarydenslisting) | **GET** /characters/{character_id}/structures/mercenary-dens | List Mercenary Dens
+*StructuresApi* | [**getCorporationsStructuresSkyhooksDetail**](docs/Api/StructuresApi.md#getcorporationsstructuresskyhooksdetail) | **GET** /corporations/{corporation_id}/structures/skyhooks/{skyhook_id} | Get Skyhook details
+*StructuresApi* | [**getCorporationsStructuresSkyhooksListing**](docs/Api/StructuresApi.md#getcorporationsstructuresskyhookslisting) | **GET** /corporations/{corporation_id}/structures/skyhooks | List Skyhooks
+*StructuresApi* | [**getCorporationsStructuresSovereigntyHubsDetail**](docs/Api/StructuresApi.md#getcorporationsstructuressovereigntyhubsdetail) | **GET** /corporations/{corporation_id}/structures/sovereignty-hubs/{sovereignty_hub_id} | Get Sovereignty Hub details
+*StructuresApi* | [**getCorporationsStructuresSovereigntyHubsListing**](docs/Api/StructuresApi.md#getcorporationsstructuressovereigntyhubslisting) | **GET** /corporations/{corporation_id}/structures/sovereignty-hubs | List Sovereignty Hubs
 *UniverseApi* | [**getUniverseAncestries**](docs/Api/UniverseApi.md#getuniverseancestries) | **GET** /universe/ancestries | Get ancestries
 *UniverseApi* | [**getUniverseAsteroidBeltsAsteroidBeltId**](docs/Api/UniverseApi.md#getuniverseasteroidbeltsasteroidbeltid) | **GET** /universe/asteroid_belts/{asteroid_belt_id} | Get asteroid belt information
 *UniverseApi* | [**getUniverseBloodlines**](docs/Api/UniverseApi.md#getuniversebloodlines) | **GET** /universe/bloodlines | Get bloodlines
@@ -296,6 +312,7 @@ Class | Method | HTTP request | Description
 
 ## Models
 
+- [Alliance](docs/Model/Alliance.md)
 - [AllianceDetail](docs/Model/AllianceDetail.md)
 - [AllianceId](docs/Model/AllianceId.md)
 - [AlliancesAllianceIdContactsGetInner](docs/Model/AlliancesAllianceIdContactsGetInner.md)
@@ -304,6 +321,13 @@ Class | Method | HTTP request | Description
 - [Boolean](docs/Model/Boolean.md)
 - [CaptureFwComplex](docs/Model/CaptureFwComplex.md)
 - [CharacterId](docs/Model/CharacterId.md)
+- [CharactersAccessListsDetail](docs/Model/CharactersAccessListsDetail.md)
+- [CharactersAccessListsDetailAllianceentry](docs/Model/CharactersAccessListsDetailAllianceentry.md)
+- [CharactersAccessListsDetailCharacterentry](docs/Model/CharactersAccessListsDetailCharacterentry.md)
+- [CharactersAccessListsDetailCorporationentry](docs/Model/CharactersAccessListsDetailCorporationentry.md)
+- [CharactersAccessListsDetailMembership](docs/Model/CharactersAccessListsDetailMembership.md)
+- [CharactersAccessListsListing](docs/Model/CharactersAccessListsListing.md)
+- [CharactersAccessListsListingAccesslist](docs/Model/CharactersAccessListsListingAccesslist.md)
 - [CharactersAffiliationPostInner](docs/Model/CharactersAffiliationPostInner.md)
 - [CharactersCharacterIdAgentsResearchGetInner](docs/Model/CharactersCharacterIdAgentsResearchGetInner.md)
 - [CharactersCharacterIdAssetsGetInner](docs/Model/CharactersCharacterIdAssetsGetInner.md)
@@ -368,9 +392,21 @@ Class | Method | HTTP request | Description
 - [CharactersDetail](docs/Model/CharactersDetail.md)
 - [CharactersFreelanceJobsListing](docs/Model/CharactersFreelanceJobsListing.md)
 - [CharactersFreelanceJobsParticipation](docs/Model/CharactersFreelanceJobsParticipation.md)
+- [CharactersMercenaryTacticalOperationsDetail](docs/Model/CharactersMercenaryTacticalOperationsDetail.md)
+- [CharactersMercenaryTacticalOperationsListing](docs/Model/CharactersMercenaryTacticalOperationsListing.md)
+- [CharactersMercenaryTacticalOperationsListingOperation](docs/Model/CharactersMercenaryTacticalOperationsListingOperation.md)
 - [CharactersSkillqueueSkill](docs/Model/CharactersSkillqueueSkill.md)
 - [CharactersSkills](docs/Model/CharactersSkills.md)
 - [CharactersSkillsSkill](docs/Model/CharactersSkillsSkill.md)
+- [CharactersStructuresMercenaryDensDetail](docs/Model/CharactersStructuresMercenaryDensDetail.md)
+- [CharactersStructuresMercenaryDensDetailEvolution](docs/Model/CharactersStructuresMercenaryDensDetailEvolution.md)
+- [CharactersStructuresMercenaryDensDetailEvolutionanarchy](docs/Model/CharactersStructuresMercenaryDensDetailEvolutionanarchy.md)
+- [CharactersStructuresMercenaryDensDetailEvolutiondevelopment](docs/Model/CharactersStructuresMercenaryDensDetailEvolutiondevelopment.md)
+- [CharactersStructuresMercenaryDensDetailInfomorphs](docs/Model/CharactersStructuresMercenaryDensDetailInfomorphs.md)
+- [CharactersStructuresMercenaryDensDetailReinforcementtimer](docs/Model/CharactersStructuresMercenaryDensDetailReinforcementtimer.md)
+- [CharactersStructuresMercenaryDensDetailSkyhook](docs/Model/CharactersStructuresMercenaryDensDetailSkyhook.md)
+- [CharactersStructuresMercenaryDensListing](docs/Model/CharactersStructuresMercenaryDensListing.md)
+- [CharactersStructuresMercenaryDensListingMercenaryden](docs/Model/CharactersStructuresMercenaryDensListingMercenaryden.md)
 - [ConstellationId](docs/Model/ConstellationId.md)
 - [ContractsPublicBidsContractIdGetInner](docs/Model/ContractsPublicBidsContractIdGetInner.md)
 - [ContractsPublicItemsContractIdGetInner](docs/Model/ContractsPublicItemsContractIdGetInner.md)
@@ -456,6 +492,31 @@ Class | Method | HTTP request | Description
 - [CorporationsProjectsDetailProject](docs/Model/CorporationsProjectsDetailProject.md)
 - [CorporationsProjectsDetailReward](docs/Model/CorporationsProjectsDetailReward.md)
 - [CorporationsProjectsListing](docs/Model/CorporationsProjectsListing.md)
+- [CorporationsStructuresSkyhooksDetail](docs/Model/CorporationsStructuresSkyhooksDetail.md)
+- [CorporationsStructuresSkyhooksDetailReagent](docs/Model/CorporationsStructuresSkyhooksDetailReagent.md)
+- [CorporationsStructuresSkyhooksDetailReinforcementtimer](docs/Model/CorporationsStructuresSkyhooksDetailReinforcementtimer.md)
+- [CorporationsStructuresSkyhooksDetailTheftvulnerability](docs/Model/CorporationsStructuresSkyhooksDetailTheftvulnerability.md)
+- [CorporationsStructuresSkyhooksListing](docs/Model/CorporationsStructuresSkyhooksListing.md)
+- [CorporationsStructuresSkyhooksListingSkyhook](docs/Model/CorporationsStructuresSkyhooksListingSkyhook.md)
+- [CorporationsStructuresSovereigntyHubsDetail](docs/Model/CorporationsStructuresSovereigntyHubsDetail.md)
+- [CorporationsStructuresSovereigntyHubsDetailReagent](docs/Model/CorporationsStructuresSovereigntyHubsDetailReagent.md)
+- [CorporationsStructuresSovereigntyHubsDetailReagentbay](docs/Model/CorporationsStructuresSovereigntyHubsDetailReagentbay.md)
+- [CorporationsStructuresSovereigntyHubsDetailResourcepower](docs/Model/CorporationsStructuresSovereigntyHubsDetailResourcepower.md)
+- [CorporationsStructuresSovereigntyHubsDetailResources](docs/Model/CorporationsStructuresSovereigntyHubsDetailResources.md)
+- [CorporationsStructuresSovereigntyHubsDetailResourceworkforce](docs/Model/CorporationsStructuresSovereigntyHubsDetailResourceworkforce.md)
+- [CorporationsStructuresSovereigntyHubsDetailTransport](docs/Model/CorporationsStructuresSovereigntyHubsDetailTransport.md)
+- [CorporationsStructuresSovereigntyHubsDetailTransportConfiguration](docs/Model/CorporationsStructuresSovereigntyHubsDetailTransportConfiguration.md)
+- [CorporationsStructuresSovereigntyHubsDetailTransportState](docs/Model/CorporationsStructuresSovereigntyHubsDetailTransportState.md)
+- [CorporationsStructuresSovereigntyHubsDetailTransportconfigurationexport](docs/Model/CorporationsStructuresSovereigntyHubsDetailTransportconfigurationexport.md)
+- [CorporationsStructuresSovereigntyHubsDetailTransportconfigurationimport](docs/Model/CorporationsStructuresSovereigntyHubsDetailTransportconfigurationimport.md)
+- [CorporationsStructuresSovereigntyHubsDetailTransportconfigurationsource](docs/Model/CorporationsStructuresSovereigntyHubsDetailTransportconfigurationsource.md)
+- [CorporationsStructuresSovereigntyHubsDetailTransportstateexport](docs/Model/CorporationsStructuresSovereigntyHubsDetailTransportstateexport.md)
+- [CorporationsStructuresSovereigntyHubsDetailTransportstateimport](docs/Model/CorporationsStructuresSovereigntyHubsDetailTransportstateimport.md)
+- [CorporationsStructuresSovereigntyHubsDetailTransportstateimportsource](docs/Model/CorporationsStructuresSovereigntyHubsDetailTransportstateimportsource.md)
+- [CorporationsStructuresSovereigntyHubsDetailUpgrade](docs/Model/CorporationsStructuresSovereigntyHubsDetailUpgrade.md)
+- [CorporationsStructuresSovereigntyHubsDetailVulnerabilitywindow](docs/Model/CorporationsStructuresSovereigntyHubsDetailVulnerabilitywindow.md)
+- [CorporationsStructuresSovereigntyHubsListing](docs/Model/CorporationsStructuresSovereigntyHubsListing.md)
+- [CorporationsStructuresSovereigntyHubsListingSovereigntyhub](docs/Model/CorporationsStructuresSovereigntyHubsListingSovereigntyhub.md)
 - [Cursor](docs/Model/Cursor.md)
 - [DamageShip](docs/Model/DamageShip.md)
 - [DefendFwComplex](docs/Model/DefendFwComplex.md)
@@ -471,6 +532,9 @@ Class | Method | HTTP request | Description
 - [EarnLoyaltyPoint](docs/Model/EarnLoyaltyPoint.md)
 - [Error](docs/Model/Error.md)
 - [ErrorDetail](docs/Model/ErrorDetail.md)
+- [Export](docs/Model/Export.md)
+- [Export1](docs/Model/Export1.md)
+- [Faction](docs/Model/Faction.md)
 - [FactionId](docs/Model/FactionId.md)
 - [FleetsFleetIdGet](docs/Model/FleetsFleetIdGet.md)
 - [FleetsFleetIdMembersGetInner](docs/Model/FleetsFleetIdMembersGetInner.md)
@@ -533,6 +597,8 @@ Class | Method | HTTP request | Description
 - [GroupId](docs/Model/GroupId.md)
 - [GroupId1](docs/Model/GroupId1.md)
 - [GroupId2](docs/Model/GroupId2.md)
+- [Import](docs/Model/Import.md)
+- [Import1](docs/Model/Import1.md)
 - [IncursionsGetInner](docs/Model/IncursionsGetInner.md)
 - [IndustryFacilitiesGetInner](docs/Model/IndustryFacilitiesGetInner.md)
 - [IndustrySystemsGetInner](docs/Model/IndustrySystemsGetInner.md)
@@ -584,17 +650,29 @@ Class | Method | HTTP request | Description
 - [SalvageWreck](docs/Model/SalvageWreck.md)
 - [ScanSignature](docs/Model/ScanSignature.md)
 - [ShipInsurance](docs/Model/ShipInsurance.md)
+- [SkyhooksRaidable](docs/Model/SkyhooksRaidable.md)
+- [SkyhooksRaidableTheftvulnerability](docs/Model/SkyhooksRaidableTheftvulnerability.md)
+- [SkyhooksRaidableVulnerableskyhook](docs/Model/SkyhooksRaidableVulnerableskyhook.md)
 - [SolarSystemId](docs/Model/SolarSystemId.md)
 - [SovereigntyCampaignsGetInner](docs/Model/SovereigntyCampaignsGetInner.md)
 - [SovereigntyCampaignsGetInnerParticipantsInner](docs/Model/SovereigntyCampaignsGetInnerParticipantsInner.md)
-- [SovereigntyMapGetInner](docs/Model/SovereigntyMapGetInner.md)
-- [SovereigntyStructuresGetInner](docs/Model/SovereigntyStructuresGetInner.md)
+- [SovereigntySystems](docs/Model/SovereigntySystems.md)
+- [SovereigntySystemsAlliance](docs/Model/SovereigntySystemsAlliance.md)
+- [SovereigntySystemsDevelopment](docs/Model/SovereigntySystemsDevelopment.md)
+- [SovereigntySystemsFaction](docs/Model/SovereigntySystemsFaction.md)
+- [SovereigntySystemsSolarsystem](docs/Model/SovereigntySystemsSolarsystem.md)
+- [SovereigntySystemsSolarsystemClaim](docs/Model/SovereigntySystemsSolarsystemClaim.md)
+- [SovereigntySystemsSovereigntyhub](docs/Model/SovereigntySystemsSovereigntyhub.md)
+- [SovereigntySystemsVulnerabilitywindow](docs/Model/SovereigntySystemsVulnerabilitywindow.md)
 - [StationId](docs/Model/StationId.md)
 - [StatusGet](docs/Model/StatusGet.md)
 - [StructureId](docs/Model/StructureId.md)
+- [Transit](docs/Model/Transit.md)
+- [Transit1](docs/Model/Transit1.md)
 - [TypeId](docs/Model/TypeId.md)
 - [TypeId1](docs/Model/TypeId1.md)
 - [TypeId2](docs/Model/TypeId2.md)
+- [Unclaimed](docs/Model/Unclaimed.md)
 - [UniverseAncestriesGetInner](docs/Model/UniverseAncestriesGetInner.md)
 - [UniverseAsteroidBeltsAsteroidBeltIdGet](docs/Model/UniverseAsteroidBeltsAsteroidBeltIdGet.md)
 - [UniverseBloodlinesGetInner](docs/Model/UniverseBloodlinesGetInner.md)
@@ -734,6 +812,6 @@ vendor/bin/phpunit
 
 This PHP package is automatically generated by the [OpenAPI Generator](https://openapi-generator.tech) project:
 
-- API version: `2025-12-16`
+- API version: `2026-05-19`
     - Generator version: `7.22.0`
 - Build package: `org.openapitools.codegen.languages.PhpClientCodegen`

@@ -63,7 +63,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
 );
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
+$x_compatibility_date = '2026-05-19'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
@@ -81,7 +81,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-05-19&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
@@ -128,7 +128,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
 $asteroid_belt_id = 56; // int
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
+$x_compatibility_date = '2026-05-19'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
@@ -147,7 +147,7 @@ try {
 | **asteroid_belt_id** | **int**|  | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-05-19&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
@@ -193,7 +193,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
 );
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
+$x_compatibility_date = '2026-05-19'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
@@ -211,7 +211,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-05-19&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
@@ -257,7 +257,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
 );
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
+$x_compatibility_date = '2026-05-19'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
@@ -275,7 +275,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-05-19&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
@@ -322,7 +322,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
 $category_id = 56; // int
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
+$x_compatibility_date = '2026-05-19'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
@@ -341,7 +341,7 @@ try {
 | **category_id** | **int**|  | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-05-19&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
@@ -387,7 +387,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
 );
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
+$x_compatibility_date = '2026-05-19'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
@@ -405,7 +405,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-05-19&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
@@ -452,7 +452,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
 $constellation_id = 56; // int
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
+$x_compatibility_date = '2026-05-19'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
@@ -471,7 +471,7 @@ try {
 | **constellation_id** | **int**|  | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-05-19&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
@@ -517,7 +517,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
 );
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
+$x_compatibility_date = '2026-05-19'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
@@ -535,7 +535,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-05-19&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
@@ -581,7 +581,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
 );
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
+$x_compatibility_date = '2026-05-19'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
@@ -599,7 +599,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-05-19&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
@@ -646,7 +646,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
 $graphic_id = 56; // int
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
+$x_compatibility_date = '2026-05-19'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
@@ -665,7 +665,7 @@ try {
 | **graphic_id** | **int**|  | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-05-19&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
@@ -712,7 +712,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
 $page = 56; // int
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
+$x_compatibility_date = '2026-05-19'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
@@ -731,7 +731,7 @@ try {
 | **page** | **int**|  | [optional] |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-05-19&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
@@ -778,7 +778,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
 $group_id = 56; // int
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
+$x_compatibility_date = '2026-05-19'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
@@ -797,7 +797,7 @@ try {
 | **group_id** | **int**|  | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-05-19&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
@@ -844,7 +844,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
 $moon_id = 56; // int
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
+$x_compatibility_date = '2026-05-19'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
@@ -863,7 +863,7 @@ try {
 | **moon_id** | **int**|  | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-05-19&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
@@ -910,7 +910,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
 $planet_id = 56; // int
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
+$x_compatibility_date = '2026-05-19'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
@@ -929,7 +929,7 @@ try {
 | **planet_id** | **int**|  | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-05-19&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
@@ -975,7 +975,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
 );
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
+$x_compatibility_date = '2026-05-19'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
@@ -993,7 +993,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-05-19&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
@@ -1039,7 +1039,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
 );
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
+$x_compatibility_date = '2026-05-19'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
@@ -1057,7 +1057,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-05-19&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
@@ -1104,7 +1104,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
 $region_id = 56; // int
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
+$x_compatibility_date = '2026-05-19'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
@@ -1123,7 +1123,7 @@ try {
 | **region_id** | **int**|  | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-05-19&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
@@ -1170,7 +1170,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
 $stargate_id = 56; // int
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
+$x_compatibility_date = '2026-05-19'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
@@ -1189,7 +1189,7 @@ try {
 | **stargate_id** | **int**|  | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-05-19&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
@@ -1236,7 +1236,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
 $star_id = 56; // int
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
+$x_compatibility_date = '2026-05-19'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
@@ -1255,7 +1255,7 @@ try {
 | **star_id** | **int**|  | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-05-19&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
@@ -1302,7 +1302,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
 $station_id = 56; // int
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
+$x_compatibility_date = '2026-05-19'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
@@ -1321,7 +1321,7 @@ try {
 | **station_id** | **int**|  | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-05-19&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
@@ -1368,7 +1368,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
 $filter = 'filter_example'; // string
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
+$x_compatibility_date = '2026-05-19'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
@@ -1387,7 +1387,7 @@ try {
 | **filter** | **string**|  | [optional] |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-05-19&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
@@ -1438,7 +1438,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
 $structure_id = 56; // int
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
+$x_compatibility_date = '2026-05-19'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
@@ -1457,7 +1457,7 @@ try {
 | **structure_id** | **int**|  | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-05-19&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
@@ -1503,7 +1503,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
 );
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
+$x_compatibility_date = '2026-05-19'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
@@ -1521,7 +1521,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-05-19&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
@@ -1567,7 +1567,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
 );
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
+$x_compatibility_date = '2026-05-19'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
@@ -1585,7 +1585,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-05-19&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
@@ -1631,7 +1631,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
 );
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
+$x_compatibility_date = '2026-05-19'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
@@ -1649,7 +1649,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-05-19&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
@@ -1696,7 +1696,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
 $system_id = 56; // int
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
+$x_compatibility_date = '2026-05-19'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
@@ -1715,7 +1715,7 @@ try {
 | **system_id** | **int**|  | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-05-19&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
@@ -1762,7 +1762,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
 $page = 56; // int
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
+$x_compatibility_date = '2026-05-19'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
@@ -1781,7 +1781,7 @@ try {
 | **page** | **int**|  | [optional] |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-05-19&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
@@ -1828,7 +1828,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
 $type_id = 56; // int
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
+$x_compatibility_date = '2026-05-19'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
@@ -1847,7 +1847,7 @@ try {
 | **type_id** | **int**|  | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-05-19&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
@@ -1894,7 +1894,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
 $request_body = array('request_body_example'); // string[]
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
+$x_compatibility_date = '2026-05-19'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
@@ -1913,7 +1913,7 @@ try {
 | **request_body** | [**string[]**](../Model/string.md)|  | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-05-19&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
@@ -1960,7 +1960,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\UniverseApi(
 $request_body = array(56); // int[]
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2025-12-16'; // string | The compatibility date for the request.
+$x_compatibility_date = '2026-05-19'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
@@ -1979,7 +1979,7 @@ try {
 | **request_body** | [**int[]**](../Model/int.md)|  | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2025-12-16&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-05-19&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
