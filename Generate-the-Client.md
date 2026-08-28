@@ -52,8 +52,9 @@
 
 - In `.openapi-generator/FILES`, delete all new lines that begin with `test/`.
 
-- In `README.md`, undo all changes above `### Manual Installation` and increase the version for
-  `tkhamez/eve-api`.
+- In `README.md`, undo all changes above `## Getting Started` and increase the version for
+  `tkhamez/eve-api`. Note that the installation instructions are maintained by hand, the generator
+  emits its own boilerplate for them that does not apply to this repository.
 
 - Commit the client:
   ```shell
