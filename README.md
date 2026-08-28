@@ -27,7 +27,15 @@ PHP 8.1 and later.
 
 ### Composer
 
-To install the bindings via [Composer](https://getcomposer.org/), add the following to `composer.json`:
+This library is distributed via [Composer](https://getcomposer.org/) and published on
+[Packagist](https://packagist.org/packages/tkhamez/eve-api). Install it from within your project
+with:
+
+```shell
+composer require tkhamez/eve-api
+```
+
+Alternatively, add it to your `composer.json` and run `composer install`:
 
 ```json
 {
@@ -37,16 +45,17 @@ To install the bindings via [Composer](https://getcomposer.org/), add the follow
 }
 ```
 
-Then run `composer install`
-
-### Manual Installation
-
-Download the files and include `autoload.php`:
+Composer generates the autoloader in your project, include it as usual:
 
 ```php
 <?php
-require_once('/path/to/OpenAPIClient-php/vendor/autoload.php');
+require_once(__DIR__ . '/vendor/autoload.php');
 ```
+
+Note that this repository does not contain a `vendor` directory or an `autoload.php` file. Both are
+created by Composer in the project that requires this library. This library also has runtime
+dependencies (see [composer.json](composer.json)), so it cannot be installed by downloading the
+source files on their own.
 
 ## Getting Started
 
