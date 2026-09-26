@@ -205,7 +205,6 @@ docs/Model/CorporationsProjectsDetailConfigurationmatchercorporation.md
 docs/Model/CorporationsProjectsDetailConfigurationmatcherfaction.md
 docs/Model/CorporationsProjectsDetailConfigurationmatchersignature.md
 docs/Model/CorporationsProjectsDetailConfigurationminematerial.md
-docs/Model/CorporationsProjectsDetailConfigurationminematerialMaterialsInner.md
 docs/Model/CorporationsProjectsDetailConfigurationremoteboostshield.md
 docs/Model/CorporationsProjectsDetailConfigurationremoterepairarmor.md
 docs/Model/CorporationsProjectsDetailConfigurationsalvagewreck.md
@@ -323,7 +322,6 @@ docs/Model/FwSystemsGetInner.md
 docs/Model/FwWarsGetInner.md
 docs/Model/GroupId.md
 docs/Model/GroupId1.md
-docs/Model/GroupId2.md
 docs/Model/Import.md
 docs/Model/Import1.md
 docs/Model/IncursionsGetInner.md
@@ -395,10 +393,7 @@ docs/Model/StationId.md
 docs/Model/StatusGet.md
 docs/Model/StructureId.md
 docs/Model/Transit.md
-docs/Model/Transit1.md
 docs/Model/TypeId.md
-docs/Model/TypeId1.md
-docs/Model/TypeId2.md
 docs/Model/Unclaimed.md
 docs/Model/UniverseAncestriesGetInner.md
 docs/Model/UniverseAsteroidBeltsAsteroidBeltIdGet.md
@@ -648,7 +643,6 @@ lib/Model/CorporationsProjectsDetailConfigurationmatchercorporation.php
 lib/Model/CorporationsProjectsDetailConfigurationmatcherfaction.php
 lib/Model/CorporationsProjectsDetailConfigurationmatchersignature.php
 lib/Model/CorporationsProjectsDetailConfigurationminematerial.php
-lib/Model/CorporationsProjectsDetailConfigurationminematerialMaterialsInner.php
 lib/Model/CorporationsProjectsDetailConfigurationremoteboostshield.php
 lib/Model/CorporationsProjectsDetailConfigurationremoterepairarmor.php
 lib/Model/CorporationsProjectsDetailConfigurationsalvagewreck.php
@@ -766,7 +760,6 @@ lib/Model/FwSystemsGetInner.php
 lib/Model/FwWarsGetInner.php
 lib/Model/GroupId.php
 lib/Model/GroupId1.php
-lib/Model/GroupId2.php
 lib/Model/Import.php
 lib/Model/Import1.php
 lib/Model/IncursionsGetInner.php
@@ -839,10 +832,7 @@ lib/Model/StationId.php
 lib/Model/StatusGet.php
 lib/Model/StructureId.php
 lib/Model/Transit.php
-lib/Model/Transit1.php
 lib/Model/TypeId.php
-lib/Model/TypeId1.php
-lib/Model/TypeId2.php
 lib/Model/Unclaimed.php
 lib/Model/UniverseAncestriesGetInner.php
 lib/Model/UniverseAsteroidBeltsAsteroidBeltIdGet.php
