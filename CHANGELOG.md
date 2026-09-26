@@ -15,6 +15,10 @@ For generator library changes see https://github.com/OpenAPITools/openapi-genera
 
 ## Notable changes
 
+### 15.20260818.0
+
+- Some models have been renamed, deleted and added.
+
 ### 14.20260519.0
 
 - Update to compatibility date 2026-05-19.
