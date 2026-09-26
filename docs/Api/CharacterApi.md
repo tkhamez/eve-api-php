@@ -6,7 +6,6 @@ All URIs are relative to https://esi.evetech.net, except if the operation define
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**getCharactersCharacterId()**](CharacterApi.md#getCharactersCharacterId) | **GET** /characters/{character_id} | Get character&#39;s public information |
 | [**getCharactersCharacterIdAgentsResearch()**](CharacterApi.md#getCharactersCharacterIdAgentsResearch) | **GET** /characters/{character_id}/agents_research | Get agents research |
 | [**getCharactersCharacterIdBlueprints()**](CharacterApi.md#getCharactersCharacterIdBlueprints) | **GET** /characters/{character_id}/blueprints | Get blueprints |
 | [**getCharactersCharacterIdCorporationhistory()**](CharacterApi.md#getCharactersCharacterIdCorporationhistory) | **GET** /characters/{character_id}/corporationhistory | Get corporation history |
@@ -18,75 +17,10 @@ All URIs are relative to https://esi.evetech.net, except if the operation define
 | [**getCharactersCharacterIdRoles()**](CharacterApi.md#getCharactersCharacterIdRoles) | **GET** /characters/{character_id}/roles | Get character corporation roles |
 | [**getCharactersCharacterIdStandings()**](CharacterApi.md#getCharactersCharacterIdStandings) | **GET** /characters/{character_id}/standings | Get standings |
 | [**getCharactersCharacterIdTitles()**](CharacterApi.md#getCharactersCharacterIdTitles) | **GET** /characters/{character_id}/titles | Get character corporation titles |
+| [**getCharactersDetail()**](CharacterApi.md#getCharactersDetail) | **GET** /characters/{character_id} | Get character&#39;s public information |
 | [**postCharactersAffiliation()**](CharacterApi.md#postCharactersAffiliation) | **POST** /characters/affiliation | Character affiliation |
 | [**postCharactersCharacterIdCspa()**](CharacterApi.md#postCharactersCharacterIdCspa) | **POST** /characters/{character_id}/cspa | Calculate a CSPA charge cost |
 
-
-## `getCharactersCharacterId()`
-
-```php
-getCharactersCharacterId($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since): \Tkhamez\Eve\API\Model\CharactersDetail
-```
-
-Get character's public information
-
-Public information about a character
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-
-$apiInstance = new Tkhamez\Eve\API\Api\CharacterApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
-$character_id = new \Tkhamez\Eve\API\Model\Int(); // Int | The ID of the character
-$accept_language = 'en'; // string | The language to use for the response.
-$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2026-05-19'; // string | The compatibility date for the request.
-$x_tenant = ; // string | The tenant ID for the request.
-$if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
-
-try {
-    $result = $apiInstance->getCharactersCharacterId($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling CharacterApi->getCharactersCharacterId: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **character_id** | [**Int**](../Model/.md)| The ID of the character | |
-| **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
-| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-05-19&#39;] |
-| **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
-| **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
-
-### Return type
-
-[**\Tkhamez\Eve\API\Model\CharactersDetail**](../Model/CharactersDetail.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: `application/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
 
 ## `getCharactersCharacterIdAgentsResearch()`
 
@@ -118,7 +52,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\CharacterApi(
 $character_id = 56; // int | The ID of the character
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2026-05-19'; // string | The compatibility date for the request.
+$x_compatibility_date = '2026-08-18'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
@@ -137,7 +71,7 @@ try {
 | **character_id** | **int**| The ID of the character | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-05-19&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-08-18&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
@@ -189,7 +123,7 @@ $character_id = 56; // int | The ID of the character
 $page = 56; // int
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2026-05-19'; // string | The compatibility date for the request.
+$x_compatibility_date = '2026-08-18'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
@@ -209,7 +143,7 @@ try {
 | **page** | **int**|  | [optional] |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-05-19&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-08-18&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
@@ -256,7 +190,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\CharacterApi(
 $character_id = 56; // int | The ID of the character
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2026-05-19'; // string | The compatibility date for the request.
+$x_compatibility_date = '2026-08-18'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
@@ -275,7 +209,7 @@ try {
 | **character_id** | **int**| The ID of the character | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-05-19&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-08-18&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
@@ -326,7 +260,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\CharacterApi(
 $character_id = 56; // int | The ID of the character
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2026-05-19'; // string | The compatibility date for the request.
+$x_compatibility_date = '2026-08-18'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
@@ -345,7 +279,7 @@ try {
 | **character_id** | **int**| The ID of the character | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-05-19&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-08-18&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
@@ -396,7 +330,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\CharacterApi(
 $character_id = 56; // int | The ID of the character
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2026-05-19'; // string | The compatibility date for the request.
+$x_compatibility_date = '2026-08-18'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
@@ -415,7 +349,7 @@ try {
 | **character_id** | **int**| The ID of the character | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-05-19&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-08-18&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
@@ -466,7 +400,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\CharacterApi(
 $character_id = 56; // int | The ID of the character
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2026-05-19'; // string | The compatibility date for the request.
+$x_compatibility_date = '2026-08-18'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
@@ -485,7 +419,7 @@ try {
 | **character_id** | **int**| The ID of the character | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-05-19&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-08-18&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
@@ -536,7 +470,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\CharacterApi(
 $character_id = 56; // int | The ID of the character
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2026-05-19'; // string | The compatibility date for the request.
+$x_compatibility_date = '2026-08-18'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
@@ -555,7 +489,7 @@ try {
 | **character_id** | **int**| The ID of the character | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-05-19&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-08-18&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
@@ -602,7 +536,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\CharacterApi(
 $character_id = 56; // int | The ID of the character
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2026-05-19'; // string | The compatibility date for the request.
+$x_compatibility_date = '2026-08-18'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
@@ -621,7 +555,7 @@ try {
 | **character_id** | **int**| The ID of the character | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-05-19&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-08-18&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
@@ -672,7 +606,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\CharacterApi(
 $character_id = 56; // int | The ID of the character
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2026-05-19'; // string | The compatibility date for the request.
+$x_compatibility_date = '2026-08-18'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
@@ -691,7 +625,7 @@ try {
 | **character_id** | **int**| The ID of the character | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-05-19&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-08-18&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
@@ -742,7 +676,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\CharacterApi(
 $character_id = 56; // int | The ID of the character
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2026-05-19'; // string | The compatibility date for the request.
+$x_compatibility_date = '2026-08-18'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
@@ -761,7 +695,7 @@ try {
 | **character_id** | **int**| The ID of the character | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-05-19&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-08-18&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
@@ -812,7 +746,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\CharacterApi(
 $character_id = 56; // int | The ID of the character
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2026-05-19'; // string | The compatibility date for the request.
+$x_compatibility_date = '2026-08-18'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
@@ -831,7 +765,7 @@ try {
 | **character_id** | **int**| The ID of the character | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-05-19&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-08-18&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
@@ -842,6 +776,72 @@ try {
 ### Authorization
 
 [OAuth2](../../README.md#OAuth2)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `getCharactersDetail()`
+
+```php
+getCharactersDetail($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since): \Tkhamez\Eve\API\Model\CharactersDetail
+```
+
+Get character's public information
+
+Public information about a character
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new Tkhamez\Eve\API\Api\CharacterApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$character_id = new \Tkhamez\Eve\API\Model\Int(); // Int | The ID of the character
+$accept_language = 'en'; // string | The language to use for the response.
+$if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
+$x_compatibility_date = '2026-08-18'; // string | The compatibility date for the request.
+$x_tenant = ; // string | The tenant ID for the request.
+$if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
+
+try {
+    $result = $apiInstance->getCharactersDetail($character_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CharacterApi->getCharactersDetail: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **character_id** | [**Int**](../Model/.md)| The ID of the character | |
+| **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
+| **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-08-18&#39;] |
+| **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
+| **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
+
+### Return type
+
+[**\Tkhamez\Eve\API\Model\CharactersDetail**](../Model/CharactersDetail.md)
+
+### Authorization
+
+No authorization required
 
 ### HTTP request headers
 
@@ -878,7 +878,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\CharacterApi(
 $request_body = array(56); // int[]
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2026-05-19'; // string | The compatibility date for the request.
+$x_compatibility_date = '2026-08-18'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
@@ -897,7 +897,7 @@ try {
 | **request_body** | [**int[]**](../Model/int.md)|  | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-05-19&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-08-18&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
@@ -949,7 +949,7 @@ $character_id = 56; // int | The ID of the character
 $request_body = array(56); // int[]
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2026-05-19'; // string | The compatibility date for the request.
+$x_compatibility_date = '2026-08-18'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
@@ -969,7 +969,7 @@ try {
 | **request_body** | [**int[]**](../Model/int.md)|  | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-05-19&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-08-18&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 

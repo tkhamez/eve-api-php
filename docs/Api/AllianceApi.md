@@ -37,7 +37,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\AllianceApi(
 );
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2026-05-19'; // string | The compatibility date for the request.
+$x_compatibility_date = '2026-08-18'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
@@ -55,7 +55,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-05-19&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-08-18&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
@@ -79,7 +79,7 @@ No authorization required
 ## `getAlliancesAllianceId()`
 
 ```php
-getAlliancesAllianceId($alliance_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since): \Tkhamez\Eve\API\Model\AllianceDetail
+getAlliancesAllianceId($alliance_id, $accept_language, $if_none_match, $x_compatibility_date, $x_tenant, $if_modified_since): \Tkhamez\Eve\API\Model\AlliancesDetail
 ```
 
 Get alliance's public information
@@ -102,7 +102,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\AllianceApi(
 $alliance_id = new \Tkhamez\Eve\API\Model\Int(); // Int | The ID of the alliance
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2026-05-19'; // string | The compatibility date for the request.
+$x_compatibility_date = '2026-08-18'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
@@ -121,13 +121,13 @@ try {
 | **alliance_id** | [**Int**](../Model/.md)| The ID of the alliance | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-05-19&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-08-18&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
 ### Return type
 
-[**\Tkhamez\Eve\API\Model\AllianceDetail**](../Model/AllianceDetail.md)
+[**\Tkhamez\Eve\API\Model\AlliancesDetail**](../Model/AlliancesDetail.md)
 
 ### Authorization
 
@@ -168,7 +168,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\AllianceApi(
 $alliance_id = 56; // int | The ID of the alliance
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2026-05-19'; // string | The compatibility date for the request.
+$x_compatibility_date = '2026-08-18'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
@@ -187,7 +187,7 @@ try {
 | **alliance_id** | **int**| The ID of the alliance | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-05-19&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-08-18&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
@@ -234,7 +234,7 @@ $apiInstance = new Tkhamez\Eve\API\Api\AllianceApi(
 $alliance_id = 56; // int | The ID of the alliance
 $accept_language = 'en'; // string | The language to use for the response.
 $if_none_match = 'if_none_match_example'; // string | The ETag of the previous request. A 304 will be returned if this matches the current ETag.
-$x_compatibility_date = '2026-05-19'; // string | The compatibility date for the request.
+$x_compatibility_date = '2026-08-18'; // string | The compatibility date for the request.
 $x_tenant = ; // string | The tenant ID for the request.
 $if_modified_since = 'if_modified_since_example'; // string | The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date.
 
@@ -253,7 +253,7 @@ try {
 | **alliance_id** | **int**| The ID of the alliance | |
 | **accept_language** | **string**| The language to use for the response. | [optional] [default to &#39;en&#39;] |
 | **if_none_match** | **string**| The ETag of the previous request. A 304 will be returned if this matches the current ETag. | [optional] |
-| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-05-19&#39;] |
+| **x_compatibility_date** | **string**| The compatibility date for the request. | [optional] [default to &#39;2026-08-18&#39;] |
 | **x_tenant** | **string**| The tenant ID for the request. | [optional] [default to &#39;tranquility&#39;] |
 | **if_modified_since** | **string**| The date the resource was last modified. A 304 will be returned if the resource has not been modified since this date. | [optional] |
 
